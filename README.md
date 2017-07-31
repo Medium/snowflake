@@ -4,3 +4,4 @@
 
 `script.js` is a good code entry point. 
 
+![hamilton example](http://i.imgur.com/qHBsFGW.png)
