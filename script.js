@@ -2,6 +2,7 @@ var config = {
   w: 500,
   h: 500,
   levels: 5,
+  maxValue: 5,
   showLevelsLabels: false,
   translateX: 150,
   polygonPointSize: 6,
@@ -18,6 +19,10 @@ $(document).ready(function(){
   $.get('hamilton.csv', function(data) {
     RadarChart.draw('#hamilton', csv2json(data), config);
   }, 'text');
+
+  // $.get('emmalyra.csv', function(data) {
+  //   RadarChart.draw('#emmalyra', csv2json(data), config);
+  // }, 'text');
 })
 
 
