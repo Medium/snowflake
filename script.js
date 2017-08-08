@@ -23,6 +23,8 @@ var config = {
 $(document).ready(function() {
   $.get('emma.csv', function(data) {
     jsonData = csv2json(data);
+    $('#name').text(jsonData[0].group);
+
     render();
   }, 'text');
 
