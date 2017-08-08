@@ -15,9 +15,13 @@ var RadarChart = {
       h: h,
       levels: 5,
       levelScale: 1.0,
+      levelVertexOpacity: 0.3,
+      levelVertexOpacityOnHover: 0.8,
       labelScale: 1.0,
       maxValue: 0,
-      radians: 2 * Math.PI,
+      radians: -2 * Math.PI,
+      quadrantOpacity: 0.5,
+      quadrantColors: ["red", "yellow", "green", "blue"],
       polygonAreaOpacity: 0.3,
       polygonStrokeOpacity: 1,
       polygonPointSize: 4,
@@ -27,8 +31,8 @@ var RadarChart = {
       paddingX: w,
       paddingY: h,
       colors: d3.scale.category10(),
+      baseColor: "white",
       showLevels: true,
-      showLevelsLabels: true,
       showAxesLabels: true,
       showAxes: true,
       showLegend: true,
@@ -46,7 +50,9 @@ var RadarChart = {
       legend: null,
       allAxis: null,
       total: null,
-      radius: null
+      radius: null,
+      quadrants: null,
+      transQuadrants: null,
     };
 
     // feed user configuration options
@@ -67,8 +73,8 @@ var RadarChart = {
      * @function: updateConfig
      * @function: buildVis: call remaining helper functions
      * @function: buildVisComponents: build main vis components
+     * @function: buildQuadrants: build colored backgrounds for each quadrant
      * @function: buildLevels: build "spiderweb" levels
-     * @function: buildLevelLabels: build level labels
      * @function: buildAxes: build axes
      * @function: buildAxesLabels: build axes labels
      * @function: buildPolygonCoordinates: build [x, y] coordinates of polygon vertices
@@ -92,18 +98,18 @@ var RadarChart = {
       }));
       config.w *= config.levelScale;
       config.h *= config.levelScale;
-      config.paddingX = config.w * config.levelScale;
-      config.paddingY = config.h * config.levelScale;
+      config.paddingX = config.paddingX * config.levelScale;
+      config.paddingY = config.paddingY * config.levelScale;
     }
 
     function buildVis(data) {
       buildVisComponents();
       buildPolygonCoordinates(data);
+      if (vis.totalAxes === 16 && data.length === 1) buildQuadrants();
       if (config.showLevels) buildLevels();
-      if (config.showLevelsLabels) buildLevelLabels();
       if (config.showAxes) buildAxes();
       if (config.showAxesLabels) buildAxesLabels();
-      if (config.showLegend) buildLegend(data);
+      if (data.length > 1) buildLegend(data);
       if (config.showVertices) buildPolygonVertices(data);
       if (config.showPolygons) buildPolygons(data);
       if (data.length === 1) buildLevelVertices();
@@ -123,6 +129,14 @@ var RadarChart = {
         .append("svg:g")
         .attr("transform", "translate(" + config.translateX + "," + config.translateY + ")");
 
+      // create quadrants
+      vis.quadrants = vis.svg.selectAll(".quadrants")
+        .append("svg:g").classed("quadrants", true)
+
+      // create quadrant transitions
+      vis.transQuadrants = vis.svg.selectAll(".quadrant-transitions")
+        .append("svg:g").classed(".quadrant-transitions", true)
+
       // create levels
       vis.levels = vis.svg.selectAll(".levels")
         .append("svg:g").classed("levels", true);
@@ -141,6 +155,98 @@ var RadarChart = {
         .attr("transform", "translate(" + 0 + ", " + 1.1 * config.h + ")");
     }
 
+    function buildQuadrants() {
+      // TODO(emma): this is hacky af and only works with exactly 16 axes 😭
+      function getCoordinates(i) {
+        return {
+          x: config.w / 2 * (1 - Math.sin((i + .5) * config.radians / vis.totalAxes)),
+          y: config.h / 2 * (1 - Math.cos((i + .5) * config.radians / vis.totalAxes)),
+        }
+      }
+
+      function getCenterCoordinates() {
+        return {x: config.w / 2, y: config.h / 2}
+      }
+
+      function buildVerticesString(data) {
+        var verticesString = "";
+        data.coordinates.forEach(function(v) {
+          verticesString += v.x + "," + v.y + " ";
+        });
+        return verticesString;
+      }
+
+      function buildGradient(id, color1, color2, isVertical) {
+        var svg = d3.select("body").append("svg")
+            .attr("width", 1)
+            .attr("height", 1);
+
+        var gradient = svg.append("defs")
+          .append("linearGradient")
+            .attr("id", id)
+            .attr("x1", "0%")
+            .attr("x2", isVertical ? "0%" : "100%")
+            .attr("y1", "0%")
+            .attr("y2", isVertical ? "100%" : "0%")
+            .attr("spreadMethod", "pad");
+
+        gradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", color1)
+            .attr("stop-opacity", config.quadrantOpacity);
+
+        gradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", color2)
+            .attr("stop-opacity", config.quadrantOpacity);
+      }
+
+      var quadrants = []
+      var transQuadrants = []
+
+      for (var q = 0; q < 4; q++) {
+        var coordinates = [getCenterCoordinates()]
+        for (var i = 0; i < 4; i++) {
+          coordinates.push(getCoordinates(4 * q + i))
+        }
+
+        quadrants.push({
+          coordinates: coordinates,
+          color: config.quadrantColors[q],
+        })
+
+        var transCoordinates = [
+          getCenterCoordinates(),
+          getCoordinates(4 * q - 1),
+          getCoordinates(4 * q),
+        ]
+
+        var gradientId = "gradient" + q;
+        var color1 = q == 0 ? config.quadrantColors[3] : config.quadrantColors[q - 1];
+        var color2 = config.quadrantColors[q];
+        if (q > 1) { color2 = [color1, color1 = color2][0]; }
+
+        buildGradient(gradientId, color1, color2, q % 2 != 0)
+        transQuadrants.push({
+          coordinates: transCoordinates,
+          gradientId: gradientId,
+        })
+      }
+
+      vis.quadrants
+        .data(quadrants).enter()
+        .append("svg:polygon").classed("quadrants", true)
+        .attr("points", function(q) { return buildVerticesString(q); })
+        .attr("fill", function(q) { return q.color; })
+        .attr("fill-opacity", config.quadrantOpacity);
+
+      vis.transQuadrants
+        .data(transQuadrants).enter()
+        .append("svg:polygon").classed("quadrant-transitions", true)
+        .attr("points", function(q) { return buildVerticesString(q); })
+        .style("fill", function(q) { return "url(#" + q.gradientId + ")"; });
+    }
+
     function buildLevels() {
       for (var level = 0; level < config.levels; level++) {
         var levelFactor = vis.radius * ((level + 1) / config.levels);
@@ -149,30 +255,13 @@ var RadarChart = {
         vis.levels
           .data(vis.allAxis).enter()
           .append("svg:line").classed("level-lines", true)
-          .attr("x1", function(d, i) { return levelFactor * (1 - Math.sin(i * config.radians / vis.totalAxes)); })
-          .attr("y1", function(d, i) { return levelFactor * (1 - Math.cos(i * config.radians / vis.totalAxes)); })
-          .attr("x2", function(d, i) { return levelFactor * (1 - Math.sin((i + 1) * config.radians / vis.totalAxes)); })
-          .attr("y2", function(d, i) { return levelFactor * (1 - Math.cos((i + 1) * config.radians / vis.totalAxes)); })
+          .attr("x1", function(d, i) { return levelFactor * (1 - Math.sin((i + .5) * config.radians / vis.totalAxes)); })
+          .attr("y1", function(d, i) { return levelFactor * (1 - Math.cos((i + .5) * config.radians / vis.totalAxes)); })
+          .attr("x2", function(d, i) { return levelFactor * (1 - Math.sin((i + 1.5) * config.radians / vis.totalAxes)); })
+          .attr("y2", function(d, i) { return levelFactor * (1 - Math.cos((i + 1.5) * config.radians / vis.totalAxes)); })
           .attr("transform", "translate(" + (config.w / 2 - levelFactor) + ", " + (config.h / 2 - levelFactor) + ")")
-          .attr("stroke", "gray")
-          .attr("stroke-width", "0.5px");
-      }
-    }
-
-    function buildLevelLabels() {
-      for (var level = 0; level < config.levels; level++) {
-        var levelFactor = vis.radius * ((level + 1) / config.levels);
-
-        vis.levels
-          .data([1]).enter()
-          .append("svg:text").classed("level-labels", true)
-          .text((config.maxValue * (level + 1) / config.levels).toFixed(2))
-          .attr("x", function(d) { return levelFactor * (1 - Math.sin(0)); })
-          .attr("y", function(d) { return levelFactor * (1 - Math.cos(0)); })
-          .attr("transform", "translate(" + (config.w / 2 - levelFactor + 5) + ", " + (config.h / 2 - levelFactor) + ")")
-          .attr("fill", "gray")
-          .attr("font-family", "sans-serif")
-          .attr("font-size", 10 * config.labelScale + "px");
+          .attr("stroke", config.baseColor)
+          .attr("stroke-width", "1px");
       }
     }
 
@@ -182,9 +271,9 @@ var RadarChart = {
         .append("svg:line").classed("axis-lines", true)
         .attr("x1", config.w / 2)
         .attr("y1", config.h / 2)
-        .attr("x2", function(d, i) { return config.w / 2 * (1 - Math.sin(i * config.radians / vis.totalAxes)); })
-        .attr("y2", function(d, i) { return config.h / 2 * (1 - Math.cos(i * config.radians / vis.totalAxes)); })
-        .attr("stroke", "grey")
+        .attr("x2", function(d, i) { return config.w / 2 * (1 - Math.sin((i + .5) * config.radians / vis.totalAxes)); })
+        .attr("y2", function(d, i) { return config.h / 2 * (1 - Math.cos((i + .5) * config.radians / vis.totalAxes)); })
+        .attr("stroke", config.baseColor)
         .attr("stroke-width", "1px");
     }
 
@@ -193,19 +282,30 @@ var RadarChart = {
         .data(vis.allAxis).enter()
         .append("svg:text").classed("axis-labels", true)
         .text(function(d) { return d; })
-        .attr("text-anchor", "middle")
-        .attr("x", function(d, i) { return config.w / 2 * (1 - 1.3 * Math.sin(i * config.radians / vis.totalAxes)); })
-        .attr("y", function(d, i) { return config.h / 2 * (1 - 1.1 * Math.cos(i * config.radians / vis.totalAxes)); })
+        .attr("dominant-baseline", "central")
+        .attr("text-anchor", function(d, i) {
+          var circlePercent = (i + .5) / vis.totalAxes
+          if (circlePercent > .0625 && circlePercent < .4375) {
+            return "start";
+          } else if (circlePercent > .5625 && circlePercent < .9375) {
+            return "end";
+          } else {
+            return "middle";
+          }
+        })
+        .attr("x", function(d, i) { return config.w / 2 * (1 - 1.1 * Math.sin((i + .5) * config.radians / vis.totalAxes)); })
+        .attr("y", function(d, i) { return config.h / 2 * (1 - 1.13 * Math.cos((i + .5) * config.radians / vis.totalAxes)); })
         .attr("font-family", "sans-serif")
-        .attr("font-size", 11 * config.labelScale + "px");
+        .attr("font-size", 14 * config.labelScale + "px")
+        .attr("fill", config.baseColor);
     }
 
     function buildPolygonCoordinates(data) {
       data.forEach(function(group) {
         group.axes.forEach(function(d, i) {
           d.coordinates = { // [x, y] coordinates
-            x: config.w / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.sin(i * config.radians / vis.totalAxes)),
-            y: config.h / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.cos(i * config.radians / vis.totalAxes))
+            x: config.w / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.sin((i + .5) * config.radians / vis.totalAxes)),
+            y: config.h / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.cos((i + .5) * config.radians / vis.totalAxes))
           };
         });
       });
@@ -219,7 +319,7 @@ var RadarChart = {
           .attr("r", config.polygonPointSize)
           .attr("cx", function(d, i) { return d.coordinates.x; })
           .attr("cy", function(d, i) { return d.coordinates.y; })
-          .attr("fill", config.colors(g))
+          .attr("fill", data.length > 1 ? config.colors(g) : "white")
       });
     }
 
@@ -232,9 +332,9 @@ var RadarChart = {
           group.axes.forEach(function(d) { verticesString += d.coordinates.x + "," + d.coordinates.y + " "; });
           return verticesString;
         })
-        .attr("stroke-width", "2px")
-        .attr("stroke", function(d, i) { return config.colors(i); })
-        .attr("fill", function(d, i) { return config.colors(i); })
+        .attr("stroke-width", "3px")
+        .attr("stroke", function(d, i) { return data.length > 1 ? config.colors(i) : "white"; })
+        .attr("fill", function(d, i) { return data.length > 1 ? config.colors(i) : "white"; })
         .attr("fill-opacity", config.polygonAreaOpacity)
         .attr("stroke-opacity", config.polygonStrokeOpacity)
     }
@@ -258,7 +358,7 @@ var RadarChart = {
         .attr("y", function(d, i) { return i * 2 * config.legendBoxSize; })
         .attr("dy", 0.07 * config.legendBoxSize + "em")
         .attr("font-size", 11 * config.labelScale + "px")
-        .attr("fill", "gray")
+        .attr("fill", config.baseColor)
         .text(function(d) {
           return d.group;
         });
@@ -272,23 +372,24 @@ var RadarChart = {
           .data(vis.allAxis).enter()
           .append("svg:circle").classed("level-vertices", true)
           .attr("r", config.polygonPointSize)
-          .attr("cx", function(d, i) { return levelFactor * (1 - Math.sin(i * config.radians / vis.totalAxes)); })
-          .attr("cy", function(d, i) { return levelFactor * (1 - Math.cos(i * config.radians / vis.totalAxes)); })
+          .attr("cx", function(d, i) { return levelFactor * (1 - Math.sin((i + .5) * config.radians / vis.totalAxes)); })
+          .attr("cy", function(d, i) { return levelFactor * (1 - Math.cos((i + .5) * config.radians / vis.totalAxes)); })
           .attr("transform", "translate(" + (config.w / 2 - levelFactor) + ", " + (config.h / 2 - levelFactor) + ")")
-          .attr("fill", config.colors(0))
-          .attr("fill-opacity", 0.2)
+          .attr("fill", "white")
+          .attr("fill-opacity", config.levelVertexOpacity)
           .attr("stroke", "transparent") // make hover + click targets bigger
-          .attr("stroke-width", "20px")
+          .attr("stroke-width", 3 * config.polygonPointSize + "px")
           .attr("level", level + 1)
 
+          // add interaction functions
           .on("mouseover", function(d) {
             d3.select(this)
-              .attr("fill-opacity", 0.7);
+              .attr("fill-opacity", config.levelVertexOpacityOnHover);
           })
           .on("mouseout", function(d) {
             d3.select(this)
               .transition(250)
-                .attr("fill-opacity", 0.2);
+                .attr("fill-opacity", config.levelVertexOpacity);
           })
           .on('click', function(d) {
             var newLevel = d3.select(this).attr("level")

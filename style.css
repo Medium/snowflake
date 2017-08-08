@@ -1,0 +1,59 @@
+body {
+  background-color: #444;
+  color: #ddd;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+.container {
+  width: 1100px;
+  margin: auto;
+  padding-left: 100px;
+}
+
+.meta-info {
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #aaa;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+td {
+  width: 64px;
+  text-align: center;
+}
+
+#axes td {
+  font-size: 10px;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+#points td {
+  font-size: 24px;
+  font-weight: bold;
+  height: 64px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#points td.selected {
+  background-color: #eee !important;
+  color: #333;
+}
+
+table {
+  margin-bottom: 50px;
+}
+
+#radar {
+  margin-left: -100px;
+  width: 600px;
+}
