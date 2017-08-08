@@ -16,15 +16,17 @@ var config = {
   quadrantColors: colorScheme,
   baseColor: "#ddd",
   labelScale: 0.9,
-  onChange: onRadarChange,
+  onChange: updateAndRender,
   // lots more config options in radar.js
 };
 
 $(document).ready(function() {
   $.get('emma.csv', function(data) {
     jsonData = csv2json(data);
-    render(jsonData);
+    render();
   }, 'text');
+
+  attachArrowKeyListeners();
 });
 
 
@@ -52,25 +54,57 @@ function render() {
     }).appendTo("#points");
   };
 
-  // attach listeners
+  // attach click listeners
   $('#points td').click(function(el) {
-    selectAxisAndRender($(this).data('name'));
+    updateAndRender($(this).data('name'));
   });
 }
 
-
-function onRadarChange(name, newValue) {
+function updateAndRender(axisName, opt_newValue) {
   jsonData[0].axes.forEach(function(axis) {
-    if (axis.axis == name) { axis.value = newValue; }
-  });
-  selectAxisAndRender(name);
-}
-
-function selectAxisAndRender(name) {
-  jsonData[0].axes.forEach(function(axis) {
-    axis.selected = axis.axis == name;
+    if ((opt_newValue || opt_newValue === 0) && axis.axis == axisName) {
+      axis.value = opt_newValue;
+    }
+    axis.selected = axis.axis == axisName;
   });
   render();
+}
+
+function attachArrowKeyListeners() {
+  $(document).keydown(function(e) {
+    switch(e.which) {
+      case 37: // left
+        var selection = $('.selected');
+        if (selection.prev().length) {
+          selection.prev().addClass('selected');
+          selection.removeClass('selected');
+        }
+        break;
+
+      case 38: // up
+        updateAndRender(
+          $('.selected').data('name'),
+          Math.min(parseInt($('.selected').text()) + 1, 5));
+        break;
+
+      case 39: // right
+        var selection = $('.selected');
+        if (selection.next().length) {
+          selection.next().addClass('selected');
+          selection.removeClass('selected');
+        }
+        break;
+
+      case 40: // down
+        updateAndRender(
+          $('.selected').data('name'),
+          Math.max(parseInt($('.selected').text()) - 1, 0));
+        break;
+
+      default: return; // exit this handler for other keys
+    }
+    e.preventDefault();
+  });
 }
 
 function csv2json(csv) {
