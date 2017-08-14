@@ -4,25 +4,48 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="meta-info">
-        <h1 id="name"></h1>
-        <h2>Software Engineer</h2>
+    <div class="wrapper">
+      <div class="container">
+        <div class="summary">
+          <div class="meta-info">
+            <h1 id="name"></h1>
+            <h2>Software Engineer</h2>
+          </div>
+
+          <div id="radar"></div>
+          <div class="clearfix"></div>
+        </div>
+
+        <table class="horizontal">
+          <tbody>
+            <tr id="axes"></tr>
+            <tr id="points"></tr>
+          </tbody>
+        </table>
+
+        <div id="axis-description">
+          <h3></h3>
+        </div>
+
+        <table class="vertical">
+          <tbody id="level-descriptions"></tbody>
+        </table>
+
+        <div class="list">
+          <h4>Examples:</h4>
+          <ul id="examples"></ul>
+        </div>
+
+        <div class="clearfix"></div>
+
       </div>
-
-      <table>
-        <tbody>
-          <tr id="axes"></tr>
-          <tr id="points"></tr>
-        </tbody>
-      </table>
-
-      <div id="radar"></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="radar.js"></script>
+    <script src="data.js"></script>
+    <script src="strings.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

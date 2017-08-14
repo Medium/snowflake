@@ -4,19 +4,34 @@ body {
   font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 }
 
-.container {
-  width: 1100px;
+.wrapper {
+  width: 1200px;
   margin: auto;
-  padding-left: 100px;
 }
 
-.meta-info {
+.container {
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.summary {
+  padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px dashed #aaa;
 }
 
+.meta-info {
+  float: left;
+  width: 400px;
+}
+
+#radar {
+  float: right;
+  margin-right: -40px;
+  width: 520px;
+}
+
 h1 {
-  margin-top: 50px;
   margin-bottom: 0;
 }
 
@@ -25,18 +40,22 @@ h2 {
   font-weight: 200;
 }
 
-td {
-  width: 64px;
+table.horizontal {
+  margin-bottom: 40px;
+}
+
+table.horizontal td {
+  width: 67px;
   text-align: center;
 }
 
-#axes td {
+table.horizontal #axes td {
   font-size: 10px;
   height: 40px;
   vertical-align: bottom;
 }
 
-#points td {
+table.horizontal #points td {
   font-size: 24px;
   font-weight: bold;
   height: 64px;
@@ -44,16 +63,75 @@ td {
   cursor: pointer;
 }
 
-#points td.selected {
+table.horizontal #points td.selected {
   background-color: #eee !important;
   color: #333;
 }
 
-table {
-  margin-bottom: 50px;
+#axis-description {
+  background-color: #333;
+  margin: 0 2px;
 }
 
-#radar {
-  margin-left: -100px;
-  width: 600px;
+#axis-description.active {
+  background-color: #ccc;
+  color: #333;
+}
+
+h3 {
+  margin: 0;
+  padding: 30px;
+  font-style: italic;
+}
+
+table.vertical {
+  float: left;
+  width: 400px;
+  color: #ccc;
+}
+
+table.vertical td {
+  font-size: 14px;
+  height: 88px;
+  padding: 20px;
+  background-color: #333;
+}
+
+table.vertical td.level-number {
+  width: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table.vertical td.active {
+  background-color: #ccc;
+  color: #333;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.list {
+  float: left;
+  height: 409px;
+  width: 598px;
+  margin-top: 1px;
+  padding: 20px 50px;
+  background-color: #333;
+}
+
+.list ul {
+  list-style-type: square;
+}
+
+.list li {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.clearfix {
+  clear: both;
 }
