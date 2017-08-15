@@ -1,12 +1,12 @@
 todo list:
 
-- firebase integration
 - bar graph / thermometer for overall level
 - bar graph for points-to-next-level
 - finish adding level strings
 - click events on description table
 - job title selection
-- two-person comparison radar chart
-- entire team overlap radar chart
 - fix radar chart label collision
 - nudge radar chart level 0 out slightly so there aren't spikes
+- real data integration
+- two-person comparison radar chart
+- entire team overlap radar chart
