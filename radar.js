@@ -15,6 +15,7 @@ var RadarChart = {
       h: h,
       levels: 5,
       levelScale: 1.0,
+      axisColor: "white",
       levelVertexOpacity: 0.3,
       levelVertexOpacityOnHover: 0.8,
       labelScale: 1.0,
@@ -260,7 +261,7 @@ var RadarChart = {
           .attr("x2", function(d, i) { return levelFactor * (1 - Math.sin((i + 1.5) * config.radians / vis.totalAxes)); })
           .attr("y2", function(d, i) { return levelFactor * (1 - Math.cos((i + 1.5) * config.radians / vis.totalAxes)); })
           .attr("transform", "translate(" + (config.w / 2 - levelFactor) + ", " + (config.h / 2 - levelFactor) + ")")
-          .attr("stroke", config.baseColor)
+          .attr("stroke", config.axisColor)
           .attr("stroke-width", "1px");
       }
     }
@@ -273,7 +274,7 @@ var RadarChart = {
         .attr("y1", config.h / 2)
         .attr("x2", function(d, i) { return config.w / 2 * (1 - Math.sin((i + .5) * config.radians / vis.totalAxes)); })
         .attr("y2", function(d, i) { return config.h / 2 * (1 - Math.cos((i + .5) * config.radians / vis.totalAxes)); })
-        .attr("stroke", config.baseColor)
+        .attr("stroke", config.axisColor)
         .attr("stroke-width", "1px");
     }
 
@@ -285,7 +286,7 @@ var RadarChart = {
         .attr("dominant-baseline", "central")
         .attr("text-anchor", function(d, i) {
           var circlePercent = (i + .5) / vis.totalAxes
-          if (circlePercent > .0625 && circlePercent < .4375) {
+          if (circlePercent > .0625 && circlePercent < .5) {
             return "start";
           } else if (circlePercent > .5625 && circlePercent < .9375) {
             return "end";

@@ -20,15 +20,19 @@ body {
   border-bottom: 1px dashed #aaa;
 }
 
-.meta-info {
+.left {
   float: left;
-  width: 400px;
+  width: 600px;
 }
 
-#radar {
-  float: right;
-  margin-right: -40px;
-  width: 520px;
+.photo img {
+  width: 190px;
+  float: left;
+  margin-right: 20px;
+}
+
+.meta-info {
+  width: 600px;
 }
 
 h1 {
@@ -40,6 +44,23 @@ h2 {
   font-weight: 200;
 }
 
+.summary-numbers {
+  float: left;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+#bar .axis path, #bar .axis line {
+  fill: none;
+  stroke: #ddd;
+}
+
+#radar {
+  float: right;
+  margin-right: -40px;
+  width: 520px;
+}
+
 table.horizontal {
   margin-bottom: 40px;
 }
@@ -49,10 +70,30 @@ table.horizontal td {
   text-align: center;
 }
 
+table.giant {
+  border-spacing: 20px 0;
+}
+
+table.horizontal tr.labels td {
+  width: 90px;
+  font-size: 11px;
+  font-weight: 200;
+  padding-bottom: 5px;
+}
+
+table.horizontal tr.numbers td {
+  background-color: #ccc;
+  color: #444;
+  font-size: 30px;
+  font-weight: bold;
+  height: 50px;
+}
+
 table.horizontal #axes td {
   font-size: 10px;
   height: 40px;
   vertical-align: bottom;
+  padding-bottom: 5px;
 }
 
 table.horizontal #points td {
@@ -82,6 +123,7 @@ h3 {
   margin: 0;
   padding: 30px;
   font-style: italic;
+  font-size: 20px;
 }
 
 table.vertical {
@@ -109,6 +151,10 @@ table.vertical td.active {
   color: #333;
 }
 
+#level-descriptions td, #axis-description {
+  cursor: pointer;
+}
+
 h4 {
   font-size: 20px;
   font-weight: normal;
@@ -128,7 +174,7 @@ h4 {
 }
 
 .list li {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
 }
 
