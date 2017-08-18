@@ -50,7 +50,7 @@ var radarConfig = {
 
 
 $(document).ready(function() {
-  $.get('cersei.csv', function(data) {
+  $.get('data/cersei.csv', function(data) {
     jsonData = csv2json(data);
     $('#name').text(jsonData[0].group);
 
