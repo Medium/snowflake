@@ -3,5 +3,6 @@ todo list:
 - job title selection
 - nudge radar chart level 0 out slightly so there aren't spikes
 - real data integration
+- support numeric key press to set values
 - two-person comparison radar chart
 - entire team overlap radar chart
