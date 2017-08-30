@@ -209,15 +209,15 @@ function renderLevelDescriptions() {
 }
 
 function attachClickListeners() {
-  $('#points td').click(function(el) {
+  $('#points td').off("click").on("click", function(el) {
     updateAndRender($(this).data('name'));
   });
 
-  $('#level-descriptions td').click(function(el) {
+  $('#level-descriptions td').off("click").on("click", function(el) {
     updateAndRender($(this).data('name'), $(this).data('value'));
   });
 
-  $('#axis-description').click(function() {
+  $('#axis-description').off("click").on("click", function() {
     updateAndRender(getSelectedAxisName(), 0);
   });
 }
@@ -268,4 +268,3 @@ function attachArrowKeyListeners() {
     e.preventDefault();
   });
 }
-
