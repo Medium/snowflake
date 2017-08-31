@@ -54,11 +54,34 @@ $(document).ready(function() {
     jsonData = csv2json(data);
     $('#name').text(jsonData[0].group);
 
+    if (window.location.hash) {
+      updateValuesFromHash()
+    }
+
     updateAndRender('Mobile');
   }, 'text');
 
   attachArrowKeyListeners();
 });
+
+function updateValuesFromHash() {
+  if (!window.location.hash) return
+  var hashLevels = window.location.hash.split('#')[1].split(',');
+  if (!hashLevels) return;
+  var didAnythingChange = false;
+  jsonData[0].axes.forEach((axis, i) => {
+    var number = Number(hashLevels[i]);
+    if (axis.value !== hashLevels[i]) {
+      axis.value = hashLevels[i];
+      didAnythingChange = true;
+    }
+  })
+  if (didAnythingChange) { // without this check we'd have an infinite loop
+    updateAndRender(getSelectedAxisName() || 'Mobile');    
+  }
+}
+
+window.addEventListener('hashchange', updateValuesFromHash)
 
 function updateAndRender(axisName, opt_newValue) {
   // update axis with new value
@@ -66,6 +89,9 @@ function updateAndRender(axisName, opt_newValue) {
     if ((opt_newValue || opt_newValue === 0) && axis.axis == axisName) {
       axis.value = opt_newValue;
     }
+    // push all values to the fragment:
+    var encodedValues = jsonData[0].axes.map((axis) => axis.value).join(',')
+    window.location.replace(`#${encodedValues}`)
     axis.selected = axis.axis == axisName;
   });
 
