@@ -1,6 +1,5 @@
 var jsonData = {};
-var colorScheme = ['#02A9C0', '#7E88C1', '#F478C1', '#F67C87'];
-// var colorScheme = ['#6D9EEB', '#F6B26B', '#93C47D', '#E06666']
+var colorScheme = ['#00abc2', '#428af6', '#e1439f', '#e54552'];
 
 var pointConversion = [0, 1, 3, 6, 12, 20];
 var pointsToLevels = {
