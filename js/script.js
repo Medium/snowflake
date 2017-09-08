@@ -54,7 +54,7 @@ $(document).ready(function() {
     $('#name').text(jsonData[0].group);
 
     if (window.location.hash) {
-      updateValuesFromHash()
+      //updateValuesFromHash()
     }
 
     updateAndRender('Mobile');
@@ -75,8 +75,11 @@ function updateValuesFromHash() {
       didAnythingChange = true;
     }
   })
+  if (hashLevels.length > 16) $('#name').html(hashLevels[16])
+  if (hashLevels.length > 17) setTitle(hashLevels[17])
+
   if (didAnythingChange) { // without this check we'd have an infinite loop
-    updateAndRender(getSelectedAxisName() || 'Mobile');    
+    updateAndRender(getSelectedAxisName() || 'Mobile');
   }
 }
 
@@ -90,11 +93,17 @@ function updateAndRender(axisName, opt_newValue) {
     }
     // push all values to the fragment:
     var encodedValues = jsonData[0].axes.map((axis) => axis.value).join(',')
+    encodedValues += `,${$('#name').html()},${$('#title').html()}`
     window.location.replace(`#${encodedValues}`)
     axis.selected = axis.axis == axisName;
   });
 
   render();
+}
+
+function setTitle(title) {
+  // TODO(jamie) Confirm it's a valid title.
+  $('#title').html(title)
 }
 
 function render() {

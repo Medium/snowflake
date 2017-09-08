@@ -28,7 +28,8 @@ body {
 .photo img {
   width: 190px;
   float: left;
-  margin-right: 20px;
+  margin: 12px 20px 0 10px;
+  border: 1px solid #000;
 }
 
 .meta-info {
