@@ -54,7 +54,7 @@ $(document).ready(function() {
     $('#name').text(jsonData[0].group);
 
     if (window.location.hash) {
-      //updateValuesFromHash()
+      updateValuesFromHash()
     }
 
     updateAndRender('Mobile');
