@@ -1,8 +1,10 @@
 todo list:
 
-- job title selection
+- job title selection and validation
 - nudge radar chart level 0 out slightly so there aren't spikes
-- real data integration
+- avoid re-rendering and re-binding everything for every change
+- reset text when moving to track with zero
 - support numeric key press to set values
+- support data persistence
 - two-person comparison radar chart
 - entire team overlap radar chart
