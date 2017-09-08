@@ -1,7 +1,6 @@
 todo list:
 
 - job title selection and validation
-- nudge radar chart level 0 out slightly so there aren't spikes
 - avoid re-rendering and re-binding everything for every change
 - reset text when moving to track with zero
 - support numeric key press to set values
