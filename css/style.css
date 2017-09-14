@@ -110,6 +110,10 @@ table.horizontal #points td.selected {
   color: #333;
 }
 
+.level-vertices {
+  cursor: pointer;
+}
+
 #axis-description {
   background-color: #333;
   margin: 0 2px;

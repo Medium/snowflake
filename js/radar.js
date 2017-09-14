@@ -65,6 +65,8 @@ var RadarChart = {
       }
     }
 
+    config.levels += 1
+
     // render the visualization
     render(data);
 
@@ -96,7 +98,7 @@ var RadarChart = {
     function updateConfig() {
       config.maxValue = Math.max(config.maxValue, d3.max(data, function(d) {
         return d3.max(d.axes, function(o) { return o.value; });
-      }));
+      })) + 1;
       config.w *= config.levelScale;
       config.h *= config.levelScale;
       config.paddingX = config.paddingX * config.levelScale;
@@ -305,8 +307,8 @@ var RadarChart = {
       data.forEach(function(group) {
         group.axes.forEach(function(d, i) {
           d.coordinates = { // [x, y] coordinates
-            x: config.w / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.sin((i + .5) * config.radians / vis.totalAxes)),
-            y: config.h / 2 * (1 - (parseFloat(Math.max(d.value, 0)) / config.maxValue) * Math.cos((i + .5) * config.radians / vis.totalAxes))
+            x: config.w / 2 * (1 - (parseFloat(Math.max(d.value, 0) + 1) / config.maxValue) * Math.sin((i + .5) * config.radians / vis.totalAxes)),
+            y: config.h / 2 * (1 - (parseFloat(Math.max(d.value, 0) + 1) / config.maxValue) * Math.cos((i + .5) * config.radians / vis.totalAxes))
           };
         });
       });
@@ -380,7 +382,7 @@ var RadarChart = {
           .attr("fill-opacity", config.levelVertexOpacity)
           .attr("stroke", "transparent") // make hover + click targets bigger
           .attr("stroke-width", 3 * config.polygonPointSize + "px")
-          .attr("level", level + 1)
+          .attr("level", level)
 
           // add interaction functions
           .on("mouseover", function(d) {
