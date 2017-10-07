@@ -1,0 +1,12 @@
+[ignore]
+.*/.next/.*
+.*/node_modules/.*
+.*/out/.*
+
+[include]
+
+[libs]
+types/
+
+[options]
+

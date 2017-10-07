@@ -1,7 +1,100 @@
-var levelStrings = {
-  "Mobile": {
+// @flow
+import * as d3 from 'd3'
+
+export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
+  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
+  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+
+export type MilestoneMap = {
+  'MOBILE': Milestone,
+  'WEB_CLIENT': Milestone,
+  'FOUNDATIONS': Milestone,
+  'SERVERS': Milestone,
+  'PROJECT_MANAGEMENT': Milestone,
+  'COMMUNICATION': Milestone,
+  'CRAFT': Milestone,
+  'INITIATIVE': Milestone,
+  'CAREER_DEVELOPMENT': Milestone,
+  'ORG_DESIGN': Milestone,
+  'WELLBEING': Milestone,
+  'ACCOMPLISHMENT': Milestone,
+  'MENTORSHIP': Milestone,
+  'EVANGELISM': Milestone,
+  'RECRUITING': Milestone,
+  'COMMUNITY': Milestone
+}
+export const milestones = [0, 1, 2, 3, 4, 5]
+
+export const milestoneToPoints = (milestone: Milestone): number => {
+  switch (milestone) {
+    case 0: return 0
+    case 1: return 1
+    case 2: return 3
+    case 3: return 6
+    case 4: return 12
+    case 5: return 20
+    default: return 0
+  }
+}
+
+export const pointsToLevels = {
+  '0': '1.1',
+  '5': '1.2',
+  '11': '1.3',
+  '17': '2.1',
+  '23': '2.2',
+  '29': '2.3',
+  '36': '3.1',
+  '43': '3.2',
+  '50': '3.3',
+  '58': '4.1',
+  '66': '4.2',
+  '74': '4.3',
+  '90': '5.1',
+  '110': '5.2',
+  '135': '5.3',
+}
+
+export const maxLevel = 135
+
+export type Track = {
+  displayName: string,
+  category: string, // TK categoryId type?
+  description: string,
+  milestones: {
+    summary: string,
+    signals: string[],
+    examples: string[]
+  }[]
+}
+
+type Tracks = {|
+  'MOBILE': Track,
+  'WEB_CLIENT': Track,
+  'FOUNDATIONS': Track,
+  'SERVERS': Track,
+  'PROJECT_MANAGEMENT': Track,
+  'COMMUNICATION': Track,
+  'CRAFT': Track,
+  'INITIATIVE': Track,
+  'CAREER_DEVELOPMENT': Track,
+  'ORG_DESIGN': Track,
+  'WELLBEING': Track,
+  'ACCOMPLISHMENT': Track,
+  'MENTORSHIP': Track,
+  'EVANGELISM': Track,
+  'RECRUITING': Track,
+  'COMMUNITY': Track
+|}
+
+export const tracks: Tracks = {
+  "MOBILE": {
+    "displayName": "Mobile",
+    "category": "A",
     "description": "Develops capability in native mobile platform development, such as iOS or Android",
-    "levels": [{
+    "milestones": [{
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
       "signals": [
         "Delivers features requiring simple local modifications",
@@ -64,9 +157,11 @@ var levelStrings = {
     }],
   },
 
-  "Web Client": {
+  "WEB_CLIENT": {
+    "displayName": "Web client",
+    "category": "A",
     "description": "Develops capability in web client development technologies, such as HTML, CSS, and JavaScript",
-    "levels": [{
+    "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
         "Makes minor modifications to existing screens",
@@ -129,9 +224,11 @@ var levelStrings = {
     }],
   },
 
-  "Foundations": {
+  "FOUNDATIONS": {
+    "displayName": "Foundations",
+    "category": "A",
     "description": "Develops capability in foundational systems, such as deployments, pipelines and databases",
-    "levels": [{
+    "milestones": [{
       "summary": "Works effectively within established structures, following current best practices",
       "signals": [
         "Writes thorough postmortems for service outages",
@@ -194,9 +291,11 @@ var levelStrings = {
     }],
   },
 
-  "Servers": {
+  "SERVERS": {
+    "displayName": "Servers",
+    "category": "A",
     "description": "Develops capability in server side development technologies, such as Go, NodeJS, or Scala",
-    "levels": [{
+    "milestones": [{
       "summary": "Works effectively within established server side frameworks, following current best practices",
       "signals": [
         "Adds NodeJS endpoints using layers architecture",
@@ -259,9 +358,11 @@ var levelStrings = {
     }],
   },
 
-  "Project Management": {
+  "PROJECT_MANAGEMENT": {
+    "displayName": "Project management",
+    "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
-    "levels": [{
+    "milestones": [{
       "summary": "Effectively delivers individual tasks",
       "signals": [
         "Estimates small tasks accurately",
@@ -324,9 +425,11 @@ var levelStrings = {
     }],
   },
 
-  "Communication": {
+  "COMMUNICATION": {
+    "displayName": "Communication",
+    "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
-    "levels": [{
+    "milestones": [{
       "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
       "signals": [
         "Communicates project status clearly and effectively",
@@ -389,9 +492,11 @@ var levelStrings = {
     }],
   },
 
-  "Craft": {
+  "CRAFT": {
+    "displayName": "Craft",
+    "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
-    "levels": [{
+    "milestones": [{
       "summary": "Delivers consistently good quality work",
       "signals": [
         "Tests new code thoroughly, both locally and in production once shipped",
@@ -454,9 +559,11 @@ var levelStrings = {
     }],
   },
 
-  "Initiative": {
+  "INITIATIVE": {
+    "displayName": "Initiative",
+    "category": "B",
     "description": "Challenges the status quo and effects positive organisational change outside of mandated work",
-    "levels": [{
+    "milestones": [{
       "summary": "Identifies opportunities for organisational change or product improvements",
       "signals": [
         "Writes Hatch posts about improvement opportunities",
@@ -519,9 +626,11 @@ var levelStrings = {
     }],
   },
 
-  "Career Development": {
+  "CAREER_DEVELOPMENT": {
+    "displayName": "Career development",
+    "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
-    "levels": [{
+    "milestones": [{
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
       "signals": [
         "Advocates on behalf and in defense of a group member",
@@ -584,9 +693,11 @@ var levelStrings = {
     }],
   },
 
-  "Org Design": {
+  "ORG_DESIGN": {
+    "displayName": "Org design",
+    "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
-    "levels": [{
+    "milestones": [{
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
       "signals": [
         "Reflects on meetings that leave them inspired or frustrated",
@@ -649,9 +760,11 @@ var levelStrings = {
     }],
   },
 
-  "Wellbeing": {
+  "WELLBEING": {
+    "displayName": "Wellbeing",
+    "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
-    "levels": [{
+    "milestones": [{
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
       "signals": [
         "Keeps confidences unless legally or morally obliged to do otherwise",
@@ -714,9 +827,11 @@ var levelStrings = {
     }],
   },
 
-  "Accomplishment": {
+  "ACCOMPLISHMENT": {
+    "displayName": "Accomplishment",
+    "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
-    "levels": [{
+    "milestones": [{
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
       "signals": [
         "Notices when someone is stuck and reaches out",
@@ -779,9 +894,11 @@ var levelStrings = {
     }],
   },
 
-  "Mentorship": {
+  "MENTORSHIP": {
+    "displayName": "Mentorship",
+    "category": "D",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
-    "levels": [{
+    "milestones": [{
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires and conveys institutional knowledge",
       "signals": [
         "Makes themself available for informal support and advice",
@@ -844,9 +961,11 @@ var levelStrings = {
     }],
   },
 
-  "Evangelism": {
+  "EVANGELISM": {
+    "displayName": "Evangelism",
+    "category": "D",
     "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
-    "levels": [{
+    "milestones": [{
       "summary": "Represents Medium well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
@@ -909,9 +1028,11 @@ var levelStrings = {
     }],
   },
 
-  "Recruiting": {
+  "RECRUITING": {
+    "displayName": "Recruiting",
+    "category": "D",
     "description": "Strengthens Medium's team by bringing in excellent staff members",
-    "levels": [{
+    "milestones": [{
       "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
       "signals": [
         "Reviews existing network for hiring leads regularly",
@@ -974,9 +1095,11 @@ var levelStrings = {
     }],
   },
 
-  "Community": {
+  "COMMUNITY": {
+    "displayName": "Community",
+    "category": "D",
     "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
-    "levels": [{
+    "milestones": [{
       "summary": "Is available and present on current teams, and works to contribute positively to company culture",
       "signals": [
         "Participates in team activities and offsites",
@@ -1039,3 +1162,28 @@ var levelStrings = {
     }],
   },
 }
+
+export const trackIds: TrackId[] = Object.keys(tracks)
+
+export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
+  set.add(tracks[trackId].category)
+  return set
+}, new Set())
+
+export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
+  let pointsByCategory = new Map()
+  trackIds.forEach((trackId) => {
+    const milestone = milestoneMap[trackId]
+    const categoryId = tracks[trackId].category
+    let currentPoints = pointsByCategory.get(categoryId) || 0
+    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+  })
+  return Array.from(categoryIds.values()).map(categoryId => {
+    const points = pointsByCategory.get(categoryId)
+    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
+  })
+}
+
+export const categoryColorScale = d3.scaleOrdinal()
+  .domain(categoryIds)
+  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
