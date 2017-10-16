@@ -43,6 +43,32 @@ const coerceMilestone = (value: number): Milestone => {
   }
 }
 
+const emptyState = (): SnowflakeAppState => {
+  return {
+    name: '',
+    title: '',
+    milestoneByTrack: {
+      'MOBILE': 0,
+      'WEB_CLIENT': 0,
+      'FOUNDATIONS': 0,
+      'SERVERS': 0,
+      'PROJECT_MANAGEMENT': 0,
+      'COMMUNICATION': 0,
+      'CRAFT': 0,
+      'INITIATIVE': 0,
+      'CAREER_DEVELOPMENT': 0,
+      'ORG_DESIGN': 0,
+      'WELLBEING': 0,
+      'ACCOMPLISHMENT': 0,
+      'MENTORSHIP': 0,
+      'EVANGELISM': 0,
+      'RECRUITING': 0,
+      'COMMUNITY': 0
+    },
+    focusedTrackId: 'MOBILE'
+  }
+}
+
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
@@ -80,7 +106,7 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = defaultState()
+    this.state = emptyState()
   }
 
   componentDidUpdate() {
@@ -92,6 +118,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const state = hashToState(window.location.hash)
     if (state) {
       this.setState(state)
+    } else {
+      this.setState(defaultState())
     }
   }
 
@@ -127,7 +155,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{display: 'flex'}}>
-          <div style={{flex: 1, marginRight: 50}}>
+          <div style={{flex: 1}}>
             <form>
               <input
                   type="text"
@@ -149,6 +177,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           <div style={{flex: 0}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
+                focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>

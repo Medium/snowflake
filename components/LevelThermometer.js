@@ -9,10 +9,10 @@ const margins = {
   top: 30,
   right: 20,
   bottom: 30,
-  left: 0
+  left: 10
 }
-const height = 100
-const width = 500
+const height = 150
+const width = 550
 
 type Props = {
   milestoneByTrack: MilestoneMap,
@@ -29,7 +29,7 @@ class LevelThermometer extends React.Component<Props> {
     super(props)
 
     this.pointScale = d3.scaleLinear()
-      .domain([0, 135]) // TK magic number
+      .domain([0, 135])
       .rangeRound([0, width - margins.left - margins.right]);
 
     this.topAxisFn = d3.axisTop()
@@ -45,47 +45,76 @@ class LevelThermometer extends React.Component<Props> {
   componentDidMount() {
     d3.select(this.topAxis).call(this.topAxisFn)
       .selectAll('text')
+      .attr("y", 0)
+      .attr("x", -25)
+      .attr("transform", "rotate(90)")
+      .attr("dy", ".35em")
+      .style('font-size', '12px')
       .style('text-anchor', 'start')
     d3.select(this.bottomAxis).call(this.bottomAxisFn)
       .selectAll('text')
+      .attr("y", 0)
+      .attr("x", 10)
+      .attr("transform", "rotate(90)")
+      .attr("dy", ".35em")
+      .style('font-size', '12px')
       .style('text-anchor', 'start')
   }
 
+  rightRoundedRect(x, y, width, height, radius) {
+    return "M" + x + "," + y
+         + "h" + (width - radius)
+         + "a" + radius + "," + radius + " 0 0 1 " + radius + "," + radius
+         + "v" + (height - 2 * radius)
+         + "a" + radius + "," + radius + " 0 0 1 " + -radius + "," + radius
+         + "h" + (radius - width)
+         + "z";
+  }
   render() {
     let categoryPoints = categoryPointsFromMilestoneMap(this.props.milestoneByTrack)
+    let lastCategoryIndex = 0
+    categoryPoints.forEach((categoryPoint, i) => {
+      if (categoryPoint.points) lastCategoryIndex = i
+    })
     let cumulativePoints = 0
     return (
       <figure>
         <style jsx>{`
           figure {
-            margin: 0;
+            margin: 0 0 0 -10px;
           }
           svg {
             width: ${width}px;
-            height: ${height}px;
+            height: ${height + 10}px;
           }
         `}</style>
         <svg>
           <g transform={`translate(${margins.left},${margins.top})`}>
-            {categoryPoints.map((categoryPoint) => {
+            {categoryPoints.map((categoryPoint, i) => {
               const x = this.pointScale(cumulativePoints)
               const width = this.pointScale(cumulativePoints + categoryPoint.points) - x
               cumulativePoints += categoryPoint.points
-              return <rect
-                  key={categoryPoint.categoryId}
-                  x={x}
-                  y={0}
-                  width={width}
-                  height={height - margins.top - margins.bottom}
-                  style={{fill: categoryColorScale(categoryPoint.categoryId)}}
-                  rx={3}
-                  ry={3}
-                  />
+              return (i != lastCategoryIndex ?
+                <rect
+                    key={categoryPoint.categoryId}
+                    x={x}
+                    y={0}
+                    width={width}
+                    height={height - margins.top - margins.bottom}
+                    style={{fill: categoryColorScale(categoryPoint.categoryId), borderRight: "1px solid #000"}}
+                    /> :
+                <path
+                    d={this.rightRoundedRect(x, 0, width, height - margins.top - margins.bottom, 3)}
+                    style={{fill: categoryColorScale(categoryPoint.categoryId)}}
+                    />
+              )
             })}
             <g ref={ref => this.topAxis = ref} className="top-axis"
-                transform={`translate(0, -4)`}/>
+                transform={`translate(0, -4)`}
+                />
             <g ref={ref => this.bottomAxis = ref} className="bottom-axis"
-                transform={`translate(0,${height - margins.top - margins.bottom + 3})`}/>
+                transform={`translate(0,${height - margins.top - margins.bottom + 3})`}
+                />
           </g>
         </svg>
       </figure>
