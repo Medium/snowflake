@@ -22,7 +22,7 @@ class Track extends React.Component<Props> {
             margin: 0;
           }
           h2 {
-            margin: 0;
+            margin: 0 0 10px 0;
           }
           p.track-description {
             margin-top: 0;
@@ -66,7 +66,7 @@ class Track extends React.Component<Props> {
           </table>
           {currentMilestone ? (
             <div style={{flex: 1}}>
-              <p>{currentMilestone.summary}</p>
+              <h3>{currentMilestone.summary}</h3>
               <h4>Example behaviors:</h4>
               <ul>
                 {currentMilestone.signals.map((signal, i) => (

@@ -19,8 +19,8 @@ class TrackSelector extends React.Component<Props> {
             width: 100%;
             border-spacing: 3px;
             border-bottom: 2px solid #ccc;
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
             margin-left: -3px;
           }
           .track-selector-value {

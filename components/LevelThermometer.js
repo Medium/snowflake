@@ -110,10 +110,10 @@ class LevelThermometer extends React.Component<Props> {
               )
             })}
             <g ref={ref => this.topAxis = ref} className="top-axis"
-                transform={`translate(0, -4)`}
+                transform={`translate(0, -2)`}
                 />
             <g ref={ref => this.bottomAxis = ref} className="bottom-axis"
-                transform={`translate(0,${height - margins.top - margins.bottom + 3})`}
+                transform={`translate(0,${height - margins.top - margins.bottom + 1})`}
                 />
           </g>
         </svg>

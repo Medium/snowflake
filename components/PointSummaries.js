@@ -30,12 +30,12 @@ class PointSummaries extends React.Component<Props> {
 
     const blocks = [
       {
-        label: 'Total points',
-        value: totalPoints
-      },
-      {
         label: 'Current level',
         value: currentLevel
+      },
+      {
+        label: 'Total points',
+        value: totalPoints
       },
       {
         label: 'Points to next level',
@@ -52,7 +52,7 @@ class PointSummaries extends React.Component<Props> {
             margin-left: -3px;
           }
           .point-summary-label {
-            font-size: 14px;
+            font-size: 12px;
             text-align: center;
             font-weight: normal;
             width: 120px;
@@ -62,7 +62,7 @@ class PointSummaries extends React.Component<Props> {
             background: #eee;
             font-size: 24px;
             font-weight: bold;
-            line-height: 40px;
+            line-height: 50px;
             border-radius: 2px;
             text-align: center;
           }
