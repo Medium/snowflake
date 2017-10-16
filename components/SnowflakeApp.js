@@ -106,17 +106,43 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             width: 960px;
             margin: 0 auto;
           }
-          h1 {
-            margin-bottom: 3px;
+          .name-input {
+            border: none;
+            border-bottom: 2px solid #ccc;
+            display: block;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: bold;
+            width: 100%;
           }
-          h2 {
-            margin-top: 0
+          .title-input {
+            border: none;
+            border-bottom: 2px solid #ccc;
+            display: block;
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: bold;
+            width: 100%;
+            margin-bottom: 30px;
           }
         `}</style>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1, marginRight: 50}}>
-            <h1>{this.state.name}</h1>
-            <h2>{this.state.title}</h2>
+            <form>
+              <input
+                  type="text"
+                  className="name-input"
+                  value={this.state.name}
+                  onChange={e => this.setState({name: e.target.value})}
+                  placeholder="Name"
+                  />
+              <input
+                  type="text"
+                  className="title-input"
+                  value={this.state.title}
+                  onChange={e => this.setState({title: e.target.value})}
+                  placeholder="Title" />
+            </form>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>

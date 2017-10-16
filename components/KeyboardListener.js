@@ -18,18 +18,21 @@ class KeyboardListener extends React.Component<Props> {
     switch(e.code) {
       case 'ArrowUp':
         this.props.increaseFocusedMilestoneFn()
+        e.preventDefault()
         break
       case 'ArrowRight':
         this.props.selectNextTrackFn()
+        e.preventDefault()
         break
       case 'ArrowDown':
         this.props.decreaseFocusedMilestoneFn()
+        e.preventDefault()
         break
       case 'ArrowLeft':
         this.props.selectPrevTrackFn()
+        e.preventDefault()
         break
     }
-    e.preventDefault()
   }
 
   render() {
