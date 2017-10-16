@@ -19,7 +19,7 @@ type SnowflakeAppState = {
 
 const hashToState = (hash: String): ?SnowflakeAppState => {
   if (!hash) return null
-  const result = defaultState()
+  const result = emptyState()
   const hashValues = hash.split('#')[1].split(',')
   if (!hashValues) return null
   trackIds.forEach((trackId, i) => {
@@ -43,7 +43,33 @@ const coerceMilestone = (value: number): Milestone => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
+const emptyState = (): SnowflakeAppState => {
+  return {
+    name: '',
+    title: '',
+    milestoneByTrack: {
+      'MOBILE': 0,
+      'WEB_CLIENT': 0,
+      'FOUNDATIONS': 0,
+      'SERVERS': 0,
+      'PROJECT_MANAGEMENT': 0,
+      'COMMUNICATION': 0,
+      'CRAFT': 0,
+      'INITIATIVE': 0,
+      'CAREER_DEVELOPMENT': 0,
+      'ORG_DESIGN': 0,
+      'WELLBEING': 0,
+      'ACCOMPLISHMENT': 0,
+      'MENTORSHIP': 0,
+      'EVANGELISM': 0,
+      'RECRUITING': 0,
+      'COMMUNITY': 0
+    },
+    focusedTrackId: 'MOBILE'
+  }
+}
+
+const cerseiState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
     title: 'Software Engineer',
@@ -80,7 +106,7 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = defaultState()
+    this.state = emptyState()
   }
 
   componentDidUpdate() {
@@ -89,10 +115,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    }
+    this.setState(hashToState(window.location.hash) || cerseiState())
   }
 
   render() {
