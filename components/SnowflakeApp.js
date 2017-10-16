@@ -19,7 +19,7 @@ type SnowflakeAppState = {
 
 const hashToState = (hash: String): ?SnowflakeAppState => {
   if (!hash) return null
-  const result = defaultState()
+  const result = emptyState()
   const hashValues = hash.split('#')[1].split(',')
   if (!hashValues) return null
   trackIds.forEach((trackId, i) => {
@@ -115,12 +115,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
+    this.setState(hashToState(window.location.hash) || defaultState())
   }
 
   render() {
@@ -154,6 +149,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             margin-bottom: 30px;
           }
         `}</style>
+        <a href="https://github.com/Medium/eng-growth">
+          <img
+              style={{position: 'absolute', top: 0, right: 0, border: 0}}
+              src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"
+              />
+        </a>
+
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
@@ -162,8 +164,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   className="name-input"
                   value={this.state.name}
                   onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  />
+                  placeholder="Name" />
               <input
                   type="text"
                   className="title-input"
