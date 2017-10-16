@@ -5,7 +5,7 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import LevelThermometer from '../components/LevelThermometer'
-import { trackIds, milestones } from '../constants'
+import { trackIds, milestones, milestoneToPoints, pointsToTitles } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
@@ -72,7 +72,7 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: 'Software Engineer',
+    title: 'Staff Engineer',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
@@ -173,7 +173,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
               <input
                   type="text"
                   className="title-input"
-                  value={this.state.title}
+                  value={this.state.name ? this.state.title : undefined}
                   onChange={e => this.setState({title: e.target.value})}
                   placeholder="Title" />
             </form>
@@ -205,9 +205,17 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
-    const milestoneByTrack = this.state.milestoneByTrack // TK should this be a copy?
+    const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
-    this.setState({ milestoneByTrack, focusedTrackId: trackId })
+
+    let currentTitles
+    let pointsForCurrentTitle = trackIds.map(trackId => milestoneToPoints(milestoneByTrack[trackId])).reduce((sum, addend) => (sum + addend), 0)
+    while (!(currentTitles = pointsToTitles[pointsForCurrentTitle])) {
+      pointsForCurrentTitle--
+    }
+    const title = currentTitles[0] || ''
+
+    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
   }
 
   shiftFocusedTrack(delta: number) {
@@ -224,13 +232,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   shiftFocusedTrackMilestoneByDelta(delta: number) {
-    let milestoneByTrack = this.state.milestoneByTrack // TK should this be a copy?
-    let prevMilestone = milestoneByTrack[this.state.focusedTrackId]
+    let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
-    milestoneByTrack[this.state.focusedTrackId] = coerceMilestone(milestone)
-    this.setState({ milestoneByTrack })
+    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
   }
 }
 
