@@ -136,22 +136,28 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
           .name-input {
             border: none;
-            border-bottom: 2px solid #ccc;
             display: block;
+            border-bottom: 2px solid #fff;
             font-size: 30px;
             line-height: 40px;
             font-weight: bold;
-            width: 100%;
+            width: 380px;
+          }
+          .name-input:hover, .name-input:focus {
+            border-bottom: 2px solid #ccc;
           }
           .title-input {
             border: none;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #fff;
             display: block;
-            font-size: 20px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 100%;
-            margin-bottom: 30px;
+            color: #888
+            font-size: 24px;
+            line-height: 30px;
+            width: 380px;
+            margin-bottom: 20px;
+          }
+          .title-input:hover, .title-input:focus {
+            border-bottom: 2px solid #ccc;
           }
         `}</style>
         <div style={{display: 'flex'}}>
