@@ -49,11 +49,13 @@ class PointSummaries extends React.Component<Props> {
           table {
             border-spacing: 3px;
             margin-bottom: 20px;
+            margin-left: -3px;
           }
           .point-summary-label {
-            font-size: 12px;
+            font-size: 14px;
             text-align: center;
             font-weight: normal;
+            width: 120px;
           }
           .point-summary-value {
             width: 120px;
