@@ -146,7 +146,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
     const milestoneByTrack = this.state.milestoneByTrack // TK should this be a copy?
     milestoneByTrack[trackId] = milestone
-    this.setState({ milestoneByTrack })
+    this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   shiftFocusedTrack(delta: number) {
