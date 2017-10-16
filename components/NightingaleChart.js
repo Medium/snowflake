@@ -6,6 +6,7 @@ import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 400
+const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
 
 type Props = {
   milestoneByTrack: MilestoneMap,
@@ -24,15 +25,15 @@ class NightingaleChart extends React.Component<Props> {
       .domain([0, 5])
 
     this.radiusScale = d3.scaleBand()
-      .domain(milestones)
-      .range([.1 * width, .45 * width])
+      .domain(arcMilestones)
+      .range([.15 * width, .45 * width])
       .paddingInner(0.1)
 
     this.arcFn = d3.arc()
       .innerRadius(milestone => this.radiusScale(milestone))
       .outerRadius(milestone => this.radiusScale(milestone) + this.radiusScale.bandwidth())
-      .startAngle(0)
-      .endAngle(2 * Math.PI / trackIds.length)
+      .startAngle(- Math.PI / trackIds.length)
+      .endAngle(Math.PI / trackIds.length)
       .padAngle(Math.PI / 200)
       .padRadius(.45 * width)
       .cornerRadius(2)
@@ -49,24 +50,21 @@ class NightingaleChart extends React.Component<Props> {
             width: ${width}px;
             height: ${width}px;
           }
-          path.track-milestone {
+          .track-milestone {
             fill: #eee;
             cursor: pointer;
           }
-          path.track-milestone.is-met {
-            fill: #F9F;
-          }
-          path.track-milestone:hover {
+          .track-milestone:hover {
             stroke: #000;
             stroke-width: 4px;
             stroke-linejoin: round;
           }
         `}</style>
         <svg>
-          <g transform={`translate(${width/2},${width/2}) rotate(-45)`}>
+          <g transform={`translate(${width/2},${width/2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => (
               <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
-                {milestones.map((milestone) => {
+                {arcMilestones.map((milestone) => {
                   const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
                   return (
                     <path
@@ -77,6 +75,13 @@ class NightingaleChart extends React.Component<Props> {
                         style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
                   )
                 })}
+                <circle
+                    r="8"
+                    cx="0"
+                    cy="-50"
+                    style={{fill: categoryColorScale(tracks[trackId].category)}}
+                    className="track-milestone"
+                    onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
               </g>
             ))}
           </g>
