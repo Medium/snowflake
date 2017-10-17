@@ -4,6 +4,7 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
+import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
 import { trackIds, milestones, milestoneToPoints, pointsToTitles } from '../constants'
 import PointSummaries from '../components/PointSummaries'
@@ -164,6 +165,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
+        <div style={{margin: '19px auto 0', width: 142}}>
+          <a href="https://medium.com/" target="_blank">
+            <Wordmark />
+          </a>
+        </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
@@ -209,7 +215,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
             Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
             Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">Terms of service</a>.
+            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
           </div>
         </div>
       </main>
