@@ -144,9 +144,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             line-height: 40px;
             font-weight: bold;
             width: 380px;
+            margin-bottom: 10px;
           }
           .name-input:hover, .name-input:focus {
             border-bottom: 2px solid #ccc;
+            outline: 0;
           }
           a {
             color: #888;
