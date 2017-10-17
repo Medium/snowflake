@@ -104,6 +104,7 @@ class LevelThermometer extends React.Component<Props> {
                     style={{fill: categoryColorScale(categoryPoint.categoryId), borderRight: "1px solid #000"}}
                     /> :
                 <path
+                    key={categoryPoint.categoryId}
                     d={this.rightRoundedRect(x, 0, width, height - margins.top - margins.bottom, 3)}
                     style={{fill: categoryColorScale(categoryPoint.categoryId)}}
                     />

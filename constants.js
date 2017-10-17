@@ -57,14 +57,6 @@ export const pointsToLevels = {
   '135': '5.3',
 }
 
-export const pointsToTitles = {
-  '0': ['Engineer I'],
-  '17': ['Engineer II'],
-  '36': ['Senior Engineer'],
-  '58': ['Staff Engineer', 'Engineering Manager'],
-  '90': ['Principal Engineer', 'Director of Engineering'],
-}
-
 export const maxLevel = 135
 
 export type Track = {
@@ -1192,6 +1184,29 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   })
 }
 
+export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
+    .reduce((sum, addend) => (sum + addend), 0)
+
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+
+export const titles = [
+  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
+  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
+  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
+  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
+  {label: 'Engineering Manager', minPoints: 58, maxPoints: 89},
+  {label: 'Principal Engineer', minPoints: 90},
+  {label: 'Director of Engineering', minPoints: 90}
+]
+
+export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
+  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
+
+  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
+                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
+    .map(title => title.label)
+}
+
