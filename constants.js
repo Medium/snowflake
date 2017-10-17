@@ -57,6 +57,14 @@ export const pointsToLevels = {
   '135': '5.3',
 }
 
+export const pointsToTitles = {
+  '0': ['Engineer I'],
+  '17': ['Engineer II'],
+  '36': ['Senior Engineer'],
+  '58': ['Staff Engineer', 'Engineering Manager'],
+  '90': ['Principal Engineer', 'Director of Engineering'],
+}
+
 export const maxLevel = 135
 
 export type Track = {
