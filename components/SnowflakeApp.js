@@ -159,6 +159,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           .title-input:hover, .title-input:focus {
             border-bottom: 2px solid #ccc;
           }
+          a {
+            color: #888;
+            text-decoration: none;
+          }
         `}</style>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
@@ -200,6 +204,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+        <div style={{display: 'flex', paddingBottom: '20px'}}>
+          <div style={{flex: 1}}>
+            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
+            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
+            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
+            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">Terms of service</a>.
+          </div>
+        </div>
       </main>
     )
   }

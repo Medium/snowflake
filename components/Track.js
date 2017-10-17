@@ -19,7 +19,9 @@ class Track extends React.Component<Props> {
       <div className="track">
         <style jsx>{`
           div.track {
-            margin: 0;
+            margin: 0 0 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ccc;
           }
           h2 {
             margin: 0 0 10px 0;
