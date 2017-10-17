@@ -5,10 +5,11 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import LevelThermometer from '../components/LevelThermometer'
-import { trackIds, milestones, milestoneToPoints, pointsToTitles } from '../constants'
+import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
+import TitleSelector from '../components/TitleSelector'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -146,19 +147,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           .name-input:hover, .name-input:focus {
             border-bottom: 2px solid #ccc;
           }
-          .title-input {
-            border: none;
-            border-bottom: 2px solid #fff;
-            display: block;
-            color: #888
-            font-size: 24px;
-            line-height: 30px;
-            width: 380px;
-            margin-bottom: 20px;
-          }
-          .title-input:hover, .title-input:focus {
-            border-bottom: 2px solid #ccc;
-          }
           a {
             color: #888;
             text-decoration: none;
@@ -174,12 +162,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              <input
-                  type="text"
-                  className="title-input"
-                  value={this.state.name ? this.state.title : undefined}
-                  onChange={e => this.setState({title: e.target.value})}
-                  placeholder="Title" />
+              <TitleSelector
+                  milestoneByTrack={this.state.milestoneByTrack}
+                  currentTitle={this.state.title}
+                  setTitleFn={(title) => this.setTitle(title)} />
             </form>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
@@ -220,12 +206,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
 
-    let currentTitles
-    let pointsForCurrentTitle = trackIds.map(trackId => milestoneToPoints(milestoneByTrack[trackId])).reduce((sum, addend) => (sum + addend), 0)
-    while (!(currentTitles = pointsToTitles[pointsForCurrentTitle])) {
-      pointsForCurrentTitle--
-    }
-    const title = currentTitles[0] || ''
+    const titles = eligibleTitles(milestoneByTrack)
+    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
 
     this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
   }
@@ -249,6 +231,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+  }
+
+  setTitle(title: string) {
+    let titles = eligibleTitles(this.state.milestoneByTrack)
+    title = titles.indexOf(title) == -1 ? titles[0] : title
+    this.setState({ title })
   }
 }
 
