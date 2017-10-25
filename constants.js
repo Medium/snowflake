@@ -629,13 +629,13 @@ export const tracks: Tracks = {
       {
         summary: "Identifies opportunities for organizational change or product improvements",
         signals: [
-          "Writes Hatch posts about improvement opportunities",
+          "Writes Confluence page about improvement opportunities",
           "Raises meaningful tensions in tactical meetings",
-          "Asks leadership team probing questions at FAM"
+          "Asks leadership team insightful questions at AMA "
         ],
         examples: [
-          "Wrote about problems with TTR on Hatch",
-          "Wrote about content policy problems on Hatch",
+          "Wrote about problems with ECS on Confluence",
+          "",
           "Reported a site issue in Github"
         ]
       },
@@ -648,7 +648,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Advocated on own behalf for a change in role",
-          "Implemented flow typing for promises",
+          "Implemented feature service API in Go Common",
           "Audited web client performance in Chrome and proposed fixes"
         ]
       },
@@ -662,7 +662,7 @@ export const tracks: Tracks = {
         examples: [
           "Defined style guide to resolve style arguments",
           "Proposed and implemented at-mentions prototype",
-          "Implemented video for Android independently, unprompted"
+          "Made significant improvments to Monoliph Jenkins pipeline, unprompted"
         ]
       },
       {
@@ -674,8 +674,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Created the interviewing rubric and booklet",
-          "Implemented and secured support for native login",
-          "Migrated medium2 to mono repo and bazel"
+          "Implemented and secured support for 2FA login",
+          "Migrated go-common to individual repos for maintainability"
         ]
       },
       {
@@ -686,9 +686,9 @@ export const tracks: Tracks = {
           "Changes complex organizational processes"
         ],
         examples: [
-          "Migrated the organization from Holacracy",
-          "Built Medium Android prototype and convinced execs to fund it",
-          "Convinced leadership and engineering org to move to Medium Lite architecture"
+          "Migrated team structure from Solutions to Product+Engineering",
+          "Built Scanner prototype and convinced company to launch it",
+          "Convinced leadership and engineering org to move from Rackspace to AWS"
         ]
       }
     ]
