@@ -47,7 +47,7 @@ const coerceMilestone = (value: number): Milestone => {
 
 const emptyState = (): SnowflakeAppState => {
   return {
-    name: '',
+    name: 'Enter Your Name Here',
     title: '',
     milestoneByTrack: {
       'MOBILE': 0,
@@ -200,6 +200,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
+            <a href="#" onClick={() => this.setState(emptyState())}>Reset</a>
+          </div>
+          <div style={{flex: 5}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
             Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
             Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
