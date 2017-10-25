@@ -709,20 +709,20 @@ export const tracks: Tracks = {
         examples: [
           "Collected and delivered feedback",
           "Discussed career options and areas of interest informally",
-          "Hosted a Floodgate Academy intern"
+          "Mentored an Intern"
         ]
       },
       {
         summary: "Formally supports and advocates for one person and provides tools to help them solve career problems",
         signals: [
-          "Ensure a group member has an appropriate role on their team",
-          "Offers effective career advice to group members, without being prescriptive",
+          "Ensure a team member has an appropriate role on their team",
+          "Offers effective career advice to team members, without being prescriptive",
           "Creates space for people to talk through challenges"
         ],
         examples: [
-          "Set up and attended regular, constructive 1:1s",
+          "Set up and attended regular, constructive 1:1s ",
           "Provided coaching on how to have difficult conversations",
-          "Taught group members the GROW model"
+          "Taught team members the GROW model"
         ]
       },
       {
@@ -733,8 +733,8 @@ export const tracks: Tracks = {
           "Works with team leads to elevate emerging leaders"
         ],
         examples: [
-          "Reviewed individual group member progression every 6 weeks",
-          "Suggested appropriate group member for Tech Lead position",
+          "Reviewed individual team progression regularly",
+          "Suggested appropriate team member for a new position",
           "Arranged a requested switch of discipline for a group member"
         ]
       },
@@ -746,7 +746,7 @@ export const tracks: Tracks = {
           "Ensures all group members' roles are meeting their career needs"
         ],
         examples: [
-          "Completed training on situational leadership",
+          "Completed leadership training",
           "Built a resourcing plan based on company, team, and individual goals",
           "Prevented regretted attrition with intentional, targeted intervention"
         ]
@@ -759,8 +759,8 @@ export const tracks: Tracks = {
           "Pushes everyone to be as good as they can be, with empathy"
         ],
         examples: [
-          "Provided coaching to group leads",
-          "Devised Pathwise curriculum for group leads",
+          "Provided coaching to team leads",
+          "Devised growth plan for team leads",
           "Advocated to execs for engineer development resources and programs"
         ]
       }
@@ -780,8 +780,8 @@ export const tracks: Tracks = {
           "Actively participates and makes contributions within organizational processes"
         ],
         examples: [
-          "Facilitated effective tactical meeting with empathy",
-          "Explained tactical meeting format to a new hire",
+          "Facilitated effective meetings with empathy",
+          "Explained sprint planning format to a new hire",
           "Provided feedback on sprint planning meeting"
         ]
       },
@@ -793,22 +793,22 @@ export const tracks: Tracks = {
           "Advocates for improved diversity and inclusion, and proposes ideas to help"
         ],
         examples: [
-          "Defined Frankenmeeting structure for small team",
-          "Improved Watch on-call rotation scheduling",
+          "Defined sprint planning structure for small team",
+          "Improved on-call rotation scheduling",
           "Defined standard channels for inter-team communication"
         ]
       },
       {
-        summary: "Develops processes to solve ongoing organizational problems",
+        summary: "Develops processes and programs to solve ongoing organizational problems",
         signals: [
           "Creates programs that meaningfully improve organizational diversity",
           "Solves long-standing organizational problems",
           "Reallocates resources to meet organizational needs"
         ],
         examples: [
-          "Developed baseline team templates for consistency",
+          "Developed 90-day plan template",
           "Created bug-rotation program to address ongoing quality issues",
-          "Defined Guilds manifesto and charter"
+          "Defined Frontend Guild manifesto"
         ]
       },
       {
@@ -820,8 +820,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Connected mobile recruiting difficulties to focus on excellence",
-          "Raised leadership level change discrepancies",
-          "Analyzed the hiring rubric for false negative potential"
+          "Raised leadership level discrepancies",
+          "Analyzed the hiring process for false negative potential"
         ]
       },
       {
@@ -832,9 +832,9 @@ export const tracks: Tracks = {
           "Leads planning and communication for reorgs"
         ],
         examples: [
-          "Lead efforts to increase number of mobile engineers",
+          "Lead efforts to increase investment in Engineering",
           "Directed resources to meaningfully improve diversity at all levels",
-          "Built the growth framework rubric"
+          "Reviewed and aligned salaries across similar levels."
         ]
       }
     ]
@@ -940,7 +940,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Completed training on decision making",
-          "Convinced a group member to solve a problem directly, rather than doing it for them",
+          "Convinced a team member to solve a problem directly, rather than doing it for them",
           "Gave honest feedback about poor performance, with compassion"
         ]
       },
