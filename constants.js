@@ -561,9 +561,9 @@ export const tracks: Tracks = {
           "Writes clear comments and documentation"
         ],
         examples: [
-          "Caught a bug on Hatch before it went live",
+          "Caught a bug while playing with a feature before it went live",
           "Landed non-trivial PR with no caretaker comments",
-          "Wrote hermetic tests for the happy and sad cases"
+          "Wrote good hermetic tests for a microservice"
         ]
       },
       {
@@ -575,7 +575,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Requested tests for a PR when acting as reviewer",
-          "Reduced the number of zelda fitzgerald exceptions",
+          "Removed unused feature flags in the monoliph",
           "Fixed a TODO for someone else in the codebase"
         ]
       },
@@ -587,9 +587,9 @@ export const tracks: Tracks = {
           "Adds tooling to improve code quality"
         ],
         examples: [
-          "Improved PRB to run the same volume of tests faster",
-          "Simplified hermetic test data modification",
-          "Created fixture system for visual quality"
+          "Improved build pipeline to run the same volume of tests faster",
+          "Improved dev container build speed and moved all containers from Quay to ECR",
+          "Created a shared library after seeing multiple projects doing the same thing "
         ]
       },
       {
@@ -597,10 +597,10 @@ export const tracks: Tracks = {
         signals: [
           "Builds systems so as to eliminate entire classes of programmer error",
           "Focuses the team on quality with regular reminders",
-          "Coordinates Watch priorities and projects"
+          "Coordinates support team ticket volume meetings and prioritises findings"
         ],
         examples: [
-          "Added code coverage reporting to iOS CI pipeline",
+          "Implemented a strategy to attack flakey build pipelines",
           "Iterated repeatedly to develop Medium's underlines solution",
           "Defined and oversaw plan for closing Heartbleed vulnerability"
         ]
@@ -613,9 +613,9 @@ export const tracks: Tracks = {
           "Secures time and resources from execs to support great quality"
         ],
         examples: [
-          "Negotiated resources for Fix-It week with exec team",
-          "Instituted and ensured success of a 20% time policy",
-          "Started The Watch"
+          "Negotiated resources for Standardisation Sprints",
+          "",
+          "Implemented compensation for on-call rotation"
         ]
       }
     ]
