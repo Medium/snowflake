@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "next",
     "export": "next build && next export",
-    "flow": "flow"
+    "flow": "flow",
+    "postinstall": "export"
   },
   "devDependencies": {
     "flow-bin": "^0.57.2"

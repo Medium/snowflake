@@ -1018,16 +1018,16 @@ export const tracks: Tracks = {
         ]
       },
       {
-        summary: "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+        summary: "Teaches small groups of engineers and contributes to Vend's shared knowledge base",
         signals: [
           "Avoids siloing information when it can be usefully shared with others",
           "Works to increase the bus factor of systems",
           "Finds tools that work best for a team member's personality"
         ],
         examples: [
-          "Gave a brown bag presentation on payments",
-          "Wrote Hatch post on avoiding RDS backfill issues",
-          "Wrote Medium-U content module"
+          "Gave a lunch'n'learn presentation on Go",
+          "Wrote Wiki page on how to run a complex db migration",
+          "Answered multiple Confluence Questions with clarity"
         ]
       },
       {
@@ -1035,16 +1035,16 @@ export const tracks: Tracks = {
         signals: [
           "Defines an entire curriculum for a discipline",
           "Draws positive attention to well-modeled mentor and teaching behaviours",
-          "Creates brown bag series and lines up speakers"
+          "Creates lunch-n-learn series and lines up speakers"
         ],
         examples: [
-          "Created and lead Medium's Women in Eng group",
+          "Created and lead Vend's Frontend platform group",
           "Organized an Eng All Hands with an outside speaker",
-          "Designed and taught web client guild curriculum"
+          "Designed and taught Go microservices curriculum"
         ]
       },
       {
-        summary: "Instills and promotes a culture of learning and development within the team",
+        summary: "Instills and promotes a culture of learning and development within the entire engineering team",
         signals: [
           "Sets incentive structures to recognise and reward mentorship",
           "Empowers team members to develop themselves",
@@ -1053,7 +1053,7 @@ export const tracks: Tracks = {
         examples: [
           "Instituted the professional education budget for engineers",
           "Mentored mentors",
-          "Started the eng advisor program and lined up external mentors"
+          "Took team members on visits to SF tech leaders"
         ]
       }
     ]
@@ -1062,17 +1062,17 @@ export const tracks: Tracks = {
   EVANGELISM: {
     displayName: "Evangelism",
     category: "D",
-    description: "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    description: "Promotes Vend to the outside world and establishes it as an attractive and thoughtful place to work",
     milestones: [
       {
-        summary: "Represents Medium well externally, and influences individuals positively",
+        summary: "Represents Vend well externally, and influences individuals positively",
         signals: [
           "Shares personal and organizational successes with their network",
-          "Attends Medium-hosted events and talks with guests",
+          "Attends Vend-hosted events and talks with guests",
           "Communicates genuine and honest excitement about their work externally"
         ],
         examples: [
-          "Shared a Medium product launch post on Facebook",
+          "Shared a Vend product launch post on Facebook",
           "Acted as a guide for a non-friend visitor to the office",
           "Supported PR efforts by giving a quote or having a photo taken"
         ]
@@ -1080,53 +1080,53 @@ export const tracks: Tracks = {
       {
         summary: "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
         signals: [
-          "Takes meaningful action to introduce people to Medium",
-          "Joined public Slack group and represented Medium appropriately, and well",
-          "Organizes positive small- or medium-sized events that bring people to Medium"
+          "Takes meaningful action to introduce people to Vend",
+          "Joined public Slack group and represented Vend appropriately, and well",
+          "Organizes positive small- or medium-sized events that bring people to Vend"
         ],
         examples: [
-          "Volunteered as a helper for CODE2040 writing workshop",
+          "Volunteered as a helper for Summer of Tech workshops",
           "Organized a short tour of the office by college students",
-          "Talked at a Women Who Code event hosted at Medium"
+          "Talked at a Women Who Code event hosted at Vend"
         ]
       },
       {
-        summary: "Works hard to positively influence large groups of people on their views of Medium",
+        summary: "Works hard to positively influence large groups of people on their views of Vend",
         signals: [
           "Mentors or participates in a high visibility way in an external organization",
           "Builds fruitful partnerships with external organizations",
-          "Writes blog posts about Medium that receive moderate traffic"
+          "Writes blog posts about Vend that receive moderate traffic"
         ],
         examples: [
-          "Represented Medium on a panel at a conference of industry experts",
-          "Established close ties with Creative Commons",
-          "Built a durable, long-standing relationship with Code2040"
+          "Represented Vend on a panel at a conference of industry experts",
+          "Established close ties with Callaghan",
+          "Built a durable, long-standing org relationship with industry bodies"
         ]
       },
       {
-        summary: "Establishes Medium as an great, innovative company and workplace to the whole industry",
+        summary: "Establishes Vend as an great, innovative company and workplace to the whole industry",
         signals: [
           "Establishes themself as an industry thought leader who attracts talent",
-          "Publishes material about Medium's organizational or technical innovations",
-          "Leverages significant following to evangelise Medium"
+          "Publishes material about Vend's organizational or technical innovations",
+          "Leverages significant following to evangelise Vend"
         ],
         examples: [
-          "Published a paper on Medium technology in a peer-reviewed journal",
-          "Authored joint-press release with EFF on DNT",
-          "Published “Why Content Editable Is Terrible” on the Medium engineering blog"
+          "Published a paper on Vend technology in a peer-reviewed journal",
+          "Authored press release on HTTPoxy",
+          "Published a great technical post on the Vend engineering blog"
         ]
       },
       {
-        summary: "Introduces Medium in a positive light to a wider audience outside the industry",
+        summary: "Introduces Vend in a positive light to a wider audience outside the industry",
         signals: [
           "Delivers key messages to broad, mainstream audiences",
-          "Influences people with large audiences to talk about Medium positively",
-          "Drives recognition and adoption of Medium in significant numbers"
+          "Influences people with large audiences to talk about Vend positively",
+          "Drives recognition and adoption of Vend in significant numbers"
         ],
         examples: [
           "Published or interviewed in a mainstream newspaper or website outside tech",
           "Keynoted a conference with international attention",
-          "Represented Medium in national televised media"
+          "Represented Vend in national televised media"
         ]
       }
     ]
@@ -1135,10 +1135,10 @@ export const tracks: Tracks = {
   RECRUITING: {
     displayName: "Recruiting",
     category: "D",
-    description: "Strengthens Medium's team by bringing in excellent staff members",
+    description: "Strengthens Vend's team by bringing in excellent staff members",
     milestones: [
       {
-        summary: "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+        summary: "Brings new candidates into the pipeline and understands how to evaluate candidates at Vend",
         signals: [
           "Reviews existing network for hiring leads regularly",
           "Shadows interviews to gain familiarity with process",
@@ -1153,14 +1153,14 @@ export const tracks: Tracks = {
       {
         summary: "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
         signals: [
-          "Uses interview rubric to provide clear, objective feedback on candidates",
+          "Provides clear, objective feedback on candidates (we should have an interview rubric)",
           "Interviews candidates with empathy and treats them all with equal respect",
           "Researches approaches for sourcing candidates and diversifying hiring"
         ],
         examples: [
-          "Added observable evidence for every rating",
-          "Started a monthly brunch for candidates to meet Medium employees",
-          "Tested a new service for quality and diversity of candidates"
+          "Added observable evidence for interview feedback",
+          "Started a monthly brunch for candidates to meet Vend employees",
+          ""
         ]
       },
       {
@@ -1171,7 +1171,7 @@ export const tracks: Tracks = {
           "Reverse shadows trainees and helps calibrate their feedback"
         ],
         examples: [
-          "Wrote new interview question which meets our question quality criteria",
+          "Wrote fantastic new interview questions that are measurable and insightful",
           "Brought candidates into our pipeline proactively, with a high conversion rate",
           "Proposed useful, tangible improvements to the interview process"
         ]
@@ -1185,8 +1185,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Planned engineering summit on interview process and training",
-          "Organized and lead Medium's presence at a recruitment fair",
-          "Started CODE2040 internship program"
+          "Organized and lead Vend's presence at a recruitment fair",
+          "Started internship program"
         ]
       },
       {
@@ -1218,9 +1218,9 @@ export const tracks: Tracks = {
           "Joins groups or committees outside regular duties"
         ],
         examples: [
-          "Joined and actively participated in the web client guild",
+          "Joined and actively participated in the Frontend platform group",
           "Brought a small gift back from vacation for the team",
-          "Wrote entertaining and informative Prod Ops writeups on Hatch"
+          "Wrote entertaining and informative incident review updates on Confluence"
         ]
       },
       {
@@ -1231,21 +1231,21 @@ export const tracks: Tracks = {
           "Finds ways to ramp up and engage new hires quickly"
         ],
         examples: [
-          "Created onboarding bingo",
+          "Created Fuck Yeah Fridays",
           "Brought shy and introverted people into a dominant conversation",
-          "Volunteered as secretary for a team"
+          ""
         ]
       },
       {
         summary: "Contributes to improving team relatedness, and helps build a culture of lending support",
         signals: [
-          "Takes on additional Watch shifts at short notice",
+          "Takes on additional on-call shifts at short notice",
           "Pitches in to help other teams hit deadlines, without missing own deadlines",
           "Uses position to raise difficult issues on someone's behalf"
         ],
         examples: [
-          "Lead Watch cycles with little support while still contributing to projects",
-          "Started and drove the LGBTQIA ERG",
+          "Handles on-call with little support while still contributing to projects",
+          "Started and drove the diversity and ally skills training",
           "Stayed positive and improved team morale during period after layoffs"
         ]
       },
@@ -1258,20 +1258,20 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Devoted large amount of time to helping outside direct responsibilities",
-          "Refactored hundreds of legacy Shepherd nodes",
-          "Acted as sole maintainer of Boxen for years"
+          "Refactored a multitude of legacy PHP issues",
+          "Acted as sole maintainer of Jenkins for years"
         ]
       },
       {
         summary: "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
         signals: [
           "Brings separate teams together to build relatedness",
-          "Holds individuals, teams, and leadership accountable to Medium's values",
+          "Holds individuals, teams, and leadership accountable to Vend's values",
           "Sets the tone, policy, and goals around maintaining an inclusive company"
         ],
         examples: [
-          "Organized wine and olive tasting offsite to Napa for the whole engineering org",
-          "Devised, delivered and acted on findings from an engineer happiness survey",
+          "Organized summer BBQ for the whole engineering org",
+          "Devised, delivered and acted on findings from a CultureAmp survey",
           "Challenged and corrected exclusionary behaviour or policies"
         ]
       }
