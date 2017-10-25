@@ -488,9 +488,9 @@ export const tracks: Tracks = {
           "Asks for help at the appropriate juncture"
         ],
         examples: [
-          "Updated The Watch before running a backfill",
-          "Updated project status changes in Asana promptly",
-          "Gave thoughtful check-in and check-out comments"
+          "Updated oncall-engineers before running a resource-intensive task.",
+          "Updated issue status changes in Jira promptly",
+          "Gave thoughtful meeting check-in and check-out comments"
         ]
       },
       {
@@ -515,8 +515,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Directed team response effectively during outages",
-          "Gave a substantial Eng All Hands presentation on React",
-          "Gave notice of upcoming related work in Eng Briefing"
+          "Gave a substantial Eng All Hands presentation on Redux",
+          "Gave notice of upcoming related work in Band Practise"
         ]
       },
       {
@@ -528,8 +528,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Lead off-site workshop on interviewing",
-          "Wrote Medium's growth framework and rationale",
-          "Aligned the entire organization around claps"
+          "Implemented Vend's engineering growth framework",
+          "Aligned the entire organization around the release of Promotions"
         ]
       },
       {
