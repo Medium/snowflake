@@ -14,7 +14,7 @@
     "dev": "next",
     "export": "next build && next export",
     "flow": "flow",
-    "postinstall": "export"
+    "postinstall": "next build && next export"
   },
   "devDependencies": {
     "flow-bin": "^0.57.2"

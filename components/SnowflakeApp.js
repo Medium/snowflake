@@ -1,16 +1,17 @@
 // @flow
 
-import TrackSelector from '../components/TrackSelector'
-import NightingaleChart from '../components/NightingaleChart'
-import KeyboardListener from '../components/KeyboardListener'
-import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
-import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import { eligibleTitles, milestoneToPoints, milestones, trackIds } from '../constants'
+
+import KeyboardListener from '../components/KeyboardListener'
+import LevelThermometer from '../components/LevelThermometer'
+import NightingaleChart from '../components/NightingaleChart'
+import PointSummaries from '../components/PointSummaries'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
+import Track from '../components/Track'
+import TrackSelector from '../components/TrackSelector'
+import Wordmark from '../components/Wordmark'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
