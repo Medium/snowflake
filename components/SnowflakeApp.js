@@ -201,6 +201,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
           </div>
         </div>
+        <div style={{display: 'flex', paddingBottom: '20px'}}>
+          <div style={{flex: 1}}>
+            Customized by <a href="https://promptworks.com">PromptWorks</a>.  Get the <a href="https://github.com/promptworks/snowflake">source code</a> from our Branch.
+          </div>
+        </div>
       </main>
     )
   }
