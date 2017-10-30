@@ -171,10 +171,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              <TitleSelector
+              {/* <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
+                  setTitleFn={(title) => this.setTitle(title)} /> */}
             </form>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
