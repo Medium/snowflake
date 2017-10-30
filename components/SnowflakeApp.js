@@ -73,7 +73,7 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    title: 'Senior Software Engineer',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
