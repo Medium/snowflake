@@ -236,6 +236,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   shiftFocusedTrackMilestoneByDelta(delta: number) {
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
+    // Violates the union type 0 | 1 | 2 | 3 | 4 | 5 for Milestone...
+    // Consider using an enum instead?  Going with number for now
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
