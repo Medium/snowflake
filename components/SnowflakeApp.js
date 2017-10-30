@@ -173,7 +173,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
           </div>
-          <div style={{flex: 0}}>
+          <div>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
