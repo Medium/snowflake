@@ -137,7 +137,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Upgraded SDWebImage to a new major version",
-          "Added support for rendering a new type of stream item",
+          "Added support for a new type of promotion",
           "Prototyped a simple new feature quickly"
         ]
       },
@@ -149,7 +149,7 @@ export const tracks: Tracks = {
           "Adds support for new iOS features after a major iOS version upgrade"
         ],
         examples: [
-          "Designed iOS caching strategy for offline reading",
+          "Designed iOS caching strategy for product search",
           "Built series reader on Android",
           "Informed the team about recent best practice changes and deprecations"
         ]
@@ -163,8 +163,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Upgraded CocoaPods to a new major version",
-          "Designed architecture for fetching and rendering stream items",
-          "Migrated Android persistance layer to reactive programming"
+          "Designed architecture for storing and synchronising sales",
+          "Removed all Singletons in iOS app"
         ]
       },
       {
@@ -175,7 +175,7 @@ export const tracks: Tracks = {
           "Invents new techniques to responsibly stretch limits of the Android platform"
         ],
         examples: [
-          "Defined and drove complete migration plan to Swift or Kotlin",
+          "Defined and drove complete migration plan to Swift",
           "Implemented Android recycler views before platform support existed",
           "Pioneered application-level abstractions for multi-app environment"
         ]
@@ -196,9 +196,9 @@ export const tracks: Tracks = {
           "Uses CSS appropriately, following style guide"
         ],
         examples: [
-          "Implemented sticky footer on the post page",
-          "Hooked up the action to dismiss a post from a stream",
-          "Built PaymentHistory screen using ResponseScreen"
+          "Implemented new Houston confirmation banner in the Monoliph",
+          "Hooked up the action to dismiss a card from the dashboard",
+          "Reskinned customer list using existing customer badge"
         ]
       },
       {
@@ -210,7 +210,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Built credit card input component",
-          "Created shared buttons template",
+          "Created shared datepicker template in Houston",
           "Built modal system"
         ]
       },
@@ -223,8 +223,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Designed font loading strategy for Medium",
-          "Researched utility of service workers for Medium",
-          "Designed and implemented ResponseScreen"
+          "Researched utility of HTTP/2 for Vend",
+          "Designed and implemented Add/Edit Product screen"
         ]
       },
       {
@@ -235,9 +235,9 @@ export const tracks: Tracks = {
           "Makes architectural decisions that eliminate entire classes of bugs"
         ],
         examples: [
-          "Designed Medium's post morpher and delta system",
+          "Designed Vend's frontend entity storage and syncronisation system",
           "Implemented Medium's scrolling text over image blur",
-          "Designed and pioneered proto-based model storage"
+          "Defined and drove migration strategy from Angular 1.6 to 2"
         ]
       },
       {
@@ -266,11 +266,11 @@ export const tracks: Tracks = {
         signals: [
           "Writes thorough postmortems for service outages",
           "Makes simple configuration changes to services",
-          "Performs backfills safely and effectively, without causing pages"
+          "Sits in on-call rotation at level 1"
         ],
         examples: [
-          "Made safe and effective Ansible changes",
-          "Implemented new ETL pipelines based on existing ones",
+          "Made safe and effective changes to app-gulp",
+          "Added a new server role using Puppet and Terraform",
           "Resolved out of disk errors independently"
         ]
       },
@@ -278,13 +278,13 @@ export const tracks: Tracks = {
         summary: "Develops new instances of existing architecture, or minor improvements to existing architecture",
         signals: [
           "Made minor version upgrades to technologies",
-          "Builds machine learning jobs within the ML framework",
+          "Creates re-usable components for developers",
           "Triages service issues correctly and independently"
         ],
         examples: [
-          "Upgraded NodeJS from 8.0 to 8.1.1",
-          "Built custom packages for RPMs",
-          "Improved ETL efficiency by improving Dynamo to S3 loading"
+          "Upgraded a project from NPM to Yarn",
+          "Created Go consumer package (river)",
+          "Identified source of slow requests in a single service from the edge in"
         ]
       },
       {
@@ -295,8 +295,8 @@ export const tracks: Tracks = {
           "Makes major version upgrades to libraries"
         ],
         examples: [
-          "Designed Ansible configuration management",
-          "Built Medium's realtime stats pipeline",
+          "Designed ENVS3 configuration management",
+          "Built Vend log processing and storage pipeline",
           "Designed flexible framework for writing machine learning jobs"
         ]
       },
@@ -308,9 +308,9 @@ export const tracks: Tracks = {
           "Introduces new databases and technologies to meet underserved needs"
         ],
         examples: [
-          "Designed and built BBFD",
+          "Designed and built Duke",
           "Designed AWS configuration management",
-          "Introduced Kinesis and pioneered streaming events pipeline"
+          "Introduced stream processing with Maxwell and Hydrant"
         ]
       },
       {
@@ -323,7 +323,7 @@ export const tracks: Tracks = {
         examples: [
           "Invented a novel ML technique that advanced the state of the art",
           "Defined and developed Medium's continuous delivery strategy",
-          "Developed and implemented HA strategy"
+          "Developed and implemented DR strategy"
         ]
       }
     ]
@@ -332,19 +332,19 @@ export const tracks: Tracks = {
   SERVERS: {
     displayName: "Servers",
     category: "A",
-    description: "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+    description: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",
     milestones: [
       {
         summary: "Works effectively within established server side frameworks, following current best practices",
         signals: [
-          "Adds NodeJS endpoints using layers architecture",
-          "Adds golang endpoints using Gotham architecture",
+          "Adds PHP endpoints using Symfony",
+          "Adds Go endpoints to a service",
           "Makes minor server changes to support client needs"
         ],
         examples: [
-          "Added IFTTT trigger for new bookmark to medium2",
-          "Added delete audio route to Buggle",
-          "Queried a Dynamo LSI appropriately"
+          "Fixed a small bug in the monoliph Shopify API client",
+          "Created a backend tool to version entities",
+          "Wrote a MySQL query that made good use of indexes"
         ]
       },
       {
@@ -356,8 +356,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Identified need for new index on Dynamo",
-          "Acted as caretaker for routes protos",
-          "Updated Facebook API version and codebase dependencies"
+          "Re-worked ElasticSearch analyzers for better autocompletion results",
+          "Added a new report type to the reporting service"
         ]
       },
       {
@@ -368,9 +368,9 @@ export const tracks: Tracks = {
           "Writes playbooks for new service maintenance"
         ],
         examples: [
-          "Implemented Google Auth login to Medium",
-          "Implemented payments integration with Stripe",
-          "Built Textshots server"
+          "Re-work reporting to use date-based indexes",
+          "Implemented promotions service",
+          "Built Xendo consumer"
         ]
       },
       {
@@ -382,8 +382,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Designed Medium's ranked feed architecture",
-          "Designed custom domains architecture",
-          "Created Gotham framework for creating Go services"
+          "Designed historical inventory system",
+          "Created standards and tools for writing Go microservices"
         ]
       },
       {
@@ -394,8 +394,8 @@ export const tracks: Tracks = {
           "Identifies and solves systemic problems with current architecture"
         ],
         examples: [
-          "Researched, vetted, and selected Go as Medium's statically typed language",
-          "Defined microservices architecture and medium2 migration plan",
+          "Researched, vetted, and selected Go as Vend's statically typed language",
+          "Defined microservices architecture and how services communicate",
           "Defined and implemented proprietary IP core to the company's success"
         ]
       }
