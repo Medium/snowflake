@@ -4,10 +4,7 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
-import LevelThermometer from '../components/LevelThermometer'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
@@ -74,7 +71,7 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    title: 'Senior Software Engineer',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
@@ -155,9 +152,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
+        <div>
+          <a href="https://promptworks.com/" target="_blank">
+            <h1>PromptWorks</h1>
           </a>
         </div>
         <div style={{display: 'flex'}}>
@@ -175,10 +172,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   currentTitle={this.state.title}
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
-          <div style={{flex: 0}}>
+          <div>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
@@ -204,6 +199,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
             Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
             Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+          </div>
+        </div>
+        <div style={{display: 'flex', paddingBottom: '20px'}}>
+          <div style={{flex: 1}}>
+            Customized by <a href="https://promptworks.com">PromptWorks</a>.  Get the <a href="https://github.com/promptworks/snowflake">source code</a> from our Branch.
           </div>
         </div>
       </main>
@@ -238,6 +238,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     let milestone = prevMilestone + delta
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
+    milestone = coerceMilestone(milestone)
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
   }
 
