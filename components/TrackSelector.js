@@ -26,7 +26,12 @@ function TrackSelector(props) {
       let rowLength = displayRow.length
 
       if (rowLength === 2) {
-        displayArray.push(displayRow)
+        displayArray.push(
+          <tr>
+            {displayRow[0]}
+            {displayRow[1]}
+          </tr>
+        )
         displayRow = []
       } else if (rowLength > 2) {
         row.splice(0, 2)
@@ -35,8 +40,6 @@ function TrackSelector(props) {
     console.log(displayArray);
     return displayArray
   }
-
-  buildDisplayArray(trackIds)
 
   return (
     <table>
@@ -63,34 +66,31 @@ function TrackSelector(props) {
         }
       `}</style>
       <tbody>
-      <tr>
-      {
-
-      }
-      </tr>
-        <tr>
-          {trackIds.map(trackId => (
-            <td key={trackId} className="track-selector-label" onClick={() => props.setFocusedTrackIdFn(trackId)}>
-              {tracks[trackId].displayName}
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {trackIds.map(trackId =>
-            {
-              return (
-                <td key={trackId} className="track-selector-value"
-                style={{border: '4px solid ' + (trackId == props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
-                onClick={() => props.setFocusedTrackIdFn(trackId)}>
-                {props.milestoneByTrack[trackId]}
-                </td>
-              )
-            }
-          )}
-        </tr>
+        {buildDisplayArray(trackIds).map(row => (
+          row
+        ))}
       </tbody>
     </table>
   )
 }
 
+// <tr>
+// {trackIds.map(trackId => (
+//   <td key={trackId} className="track-selector-label" onClick={() => props.setFocusedTrackIdFn(trackId)}>
+//   {tracks[trackId].displayName}
+//   </td>
+// ))}
+// </tr>
+// <tr>
+// {trackIds.map(trackId =>
+//   {
+//     return (
+//       <td key={trackId} className="track-selector-value"
+//       >
+//       {props.milestoneByTrack[trackId]}
+//       </td>
+//     )
+//   }
+// )}
+// </tr>
 export default TrackSelector
