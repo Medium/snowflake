@@ -4,7 +4,6 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import TrackDetail from '../components/TrackDetail'
-import Wordmark from '../components/Wordmark'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
@@ -153,10 +152,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
+        <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
+          <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3em', fontFamily:'serif', fontWeight:'bold'}}>Manager Companion</h1>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
