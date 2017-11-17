@@ -173,6 +173,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   currentTitle={this.state.title}
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
+            <TrackSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            focusedTrackId={this.state.focusedTrackId}
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
@@ -181,10 +185,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
