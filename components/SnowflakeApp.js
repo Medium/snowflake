@@ -6,7 +6,6 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
@@ -174,7 +173,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   currentTitle={this.state.title}
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
