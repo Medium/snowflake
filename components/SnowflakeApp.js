@@ -5,7 +5,6 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
-import LevelThermometer from '../components/LevelThermometer'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
@@ -176,7 +175,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
