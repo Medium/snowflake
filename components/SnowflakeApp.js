@@ -3,7 +3,7 @@
 import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
-import Track from '../components/Track'
+import TrackDetail from '../components/TrackDetail'
 import Wordmark from '../components/Wordmark'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
@@ -190,7 +190,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
             increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
-        <Track
+        <TrackDetail
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />

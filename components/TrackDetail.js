@@ -10,7 +10,7 @@ type Props = {
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-class Track extends React.Component<Props> {
+class TrackDetail extends React.Component<Props> {
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
@@ -89,4 +89,4 @@ class Track extends React.Component<Props> {
   }
 }
 
-export default Track
+export default TrackDetail
