@@ -18,11 +18,6 @@ function TrackSelector(props) {
     let displayArray = [];
 
     trackIds.map(trackId => {
-      // let track = (<td key={trackId} className="track-selector-value"
-      // style={{border: '4px solid ' + (trackId == props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
-      // onClick={() => props.setFocusedTrackIdFn(trackId)}>
-      // {props.milestoneByTrack[trackId]}
-      // </td>)
       displayRow.push(
         <TrackTile
            trackId = {trackId}
@@ -30,11 +25,7 @@ function TrackSelector(props) {
            milestoneByTrack = {props.milestoneByTrack}
            setFocusedTrackIdFn = {props.setFocusedTrackIdFn}/>
       )
-
-      // displayRow.push(track)
-      let rowLength = displayRow.length
-
-      if (rowLength === 2) {
+      if (displayRow.length === 2) {
         displayArray.push(
           <tr>
             {displayRow[0]}
@@ -42,7 +33,7 @@ function TrackSelector(props) {
           </tr>
         )
         displayRow = []
-      } else if (rowLength > 2) {
+      } else if (displayRow.length > 2) {
         row.splice(0, 2)
       }
     })
@@ -59,20 +50,6 @@ function TrackSelector(props) {
           margin-left: -10px;
           margin-top: -10px;
         }
-        .track-selector-value {
-          line-height: 50px;
-          width: 50px;
-          text-align: center;
-          background: #eee;
-          font-weight: bold;
-          font-size: 24px;
-          border-radius: 3px;
-          cursor: pointer;
-        }
-        .track-selector-label {
-          text-align: center;
-          font-size: 9px;
-        }
       `}</style>
       <tbody>
         {buildDisplayArray(trackIds)}
@@ -81,23 +58,4 @@ function TrackSelector(props) {
   )
 }
 
-// <tr>
-// {trackIds.map(trackId => (
-//   <td key={trackId} className="track-selector-label" onClick={() => props.setFocusedTrackIdFn(trackId)}>
-//   {tracks[trackId].displayName}
-//   </td>
-// ))}
-// </tr>
-// <tr>
-// {trackIds.map(trackId =>
-//   {
-//     return (
-//       <td key={trackId} className="track-selector-value"
-//       >
-//       {props.milestoneByTrack[trackId]}
-//       </td>
-//     )
-//   }
-// )}
-// </tr>
 export default TrackSelector
