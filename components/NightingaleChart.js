@@ -63,7 +63,7 @@ class NightingaleChart extends React.Component<Props> {
           }
         `}</style>
         <svg>
-          <g transform={`translate(${width/2},${width/2}) rotate(-33.75)`}>
+          <g transform={`translate(${width/2},${width/2})`}>
             {trackIds.map((trackId, i) => {
               const isCurrentTrack = trackId == this.props.focusedTrackId
               return (
