@@ -1,18 +1,21 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION'
+export type TrackId = 'SELF' | 'TEAM' | 'PEERS' | 'SUPERIORS' |
+  'BUSINESS' | 'HEALTH'
+
+  // 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+  //   'PROJECT_MANAGEMENT' | 'COMMUNICATION'
 
 export type Milestone = 0 | 1 | 2 | 3
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone
+  'SELF': Milestone,
+  'TEAM': Milestone,
+  'PEERS': Milestone,
+  'SUPERIORS': Milestone,
+  'BUSINESS': Milestone,
+  'HEALTH': Milestone
 }
 export const milestones = [0, 1, 2, 3]
 
@@ -33,7 +36,7 @@ export const pointsToLevels = {
   '17': '2.1',
   '23': '2.2',
   '29': '2.3',
-  '36': '3.0'
+  '36': '3.1'
 }
 
 export const maxLevel = 36
@@ -50,16 +53,16 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
-  'PROJECT_MANAGEMENT': Track,
-  'COMMUNICATION': Track,
+  'SELF': Track,
+  'TEAM': Track,
+  'PEERS': Track,
+  'SUPERIORS': Track,
+  'BUSINESS': Track,
+  'HEALTH': Track,
 |}
 
 export const tracks: Tracks = {
-  "MOBILE": {
+  "SELF": {
     "displayName": "Mobile",
     "category": "A",
     "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
@@ -126,9 +129,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WEB_CLIENT": {
+  "TEAM": {
     "displayName": "Web client",
-    "category": "A",
+    "category": "B",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
@@ -193,9 +196,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "FOUNDATIONS": {
+  "PEERS": {
     "displayName": "Foundations",
-    "category": "A",
+    "category": "C",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
       "summary": "Works effectively within established structures, following current best practices",
@@ -260,9 +263,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "SERVERS": {
+  "SUPERIORS": {
     "displayName": "Servers",
-    "category": "A",
+    "category": "D",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "milestones": [{
       "summary": "Works effectively within established server side frameworks, following current best practices",
@@ -327,9 +330,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "PROJECT_MANAGEMENT": {
+  "BUSINESS": {
     "displayName": "Project management",
-    "category": "B",
+    "category": "E",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
       "summary": "Effectively delivers individual tasks",
@@ -394,9 +397,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "COMMUNICATION": {
+  "HEALTH": {
     "displayName": "Communication",
-    "category": "B",
+    "category": "F",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "milestones": [{
       "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
@@ -489,7 +492,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#E18132', '#454E52', '#E53332', '#2BC237', '#327DF6', '#4B2366'])
 
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
