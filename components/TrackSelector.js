@@ -66,9 +66,7 @@ function TrackSelector(props) {
         }
       `}</style>
       <tbody>
-        {buildDisplayArray(trackIds).map(row => (
-          row
-        ))}
+        {buildDisplayArray(trackIds)}
       </tbody>
     </table>
   )
