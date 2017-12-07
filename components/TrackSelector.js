@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import TrackTile from '../components/TrackTile'
 import { trackIds, tracks, categoryColorScale } from '../constants'
 import type { MilestoneMap, TrackId } from '../constants'
 
@@ -17,12 +18,20 @@ function TrackSelector(props) {
     let displayArray = [];
 
     trackIds.map(trackId => {
-      let track = (<td key={trackId} className="track-selector-value"
-      style={{border: '4px solid ' + (trackId == props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
-      onClick={() => props.setFocusedTrackIdFn(trackId)}>
-      {props.milestoneByTrack[trackId]}
-      </td>)
-      displayRow.push(track)
+      // let track = (<td key={trackId} className="track-selector-value"
+      // style={{border: '4px solid ' + (trackId == props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
+      // onClick={() => props.setFocusedTrackIdFn(trackId)}>
+      // {props.milestoneByTrack[trackId]}
+      // </td>)
+      displayRow.push(
+        <TrackTile
+           trackId = {trackId}
+           focusedTrackId = {props.focusedTrackId}
+           milestoneByTrack = {props.milestoneByTrack}
+           setFocusedTrackIdFn = {props.setFocusedTrackIdFn}/>
+      )
+
+      // displayRow.push(track)
       let rowLength = displayRow.length
 
       if (rowLength === 2) {
