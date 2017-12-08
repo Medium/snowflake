@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
-const width = 400
+const width = 450
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
 
 type Props = {
@@ -80,7 +80,6 @@ class NightingaleChart extends React.Component<Props> {
                           style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
                     )
                   })}
-                  
                 </g>
             )})}
           </g>
