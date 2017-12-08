@@ -112,7 +112,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             width: 960px;
             margin: 0 auto;
           }
-          .name-input {
+          .user-name {
             border: none;
             display: block;
             border-bottom: 2px solid #fff;
@@ -121,10 +121,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             font-weight: bold;
             width: 380px;
             margin-bottom: 10px;
-          }
-          .name-input:hover, .name-input:focus {
-            border-bottom: 2px solid #ccc;
-            outline: 0;
           }
           a {
             color: #888;
@@ -136,15 +132,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            <form>
-              <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  />
-            </form>
+            <h1 className="user-name">{ this.state.name || <pre style={{margin:'0'}}> </pre> }</h1>
             <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
