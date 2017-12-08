@@ -46,12 +46,12 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'SELF': 0,
-      'TEAM': 0,
-      'PEERS': 0,
-      'SUPERIORS': 0,
-      'BUSINESS': 0,
-      'HEALTH': 0
+      'SELF': undefined,
+      'TEAM': undefined,
+      'PEERS': undefined,
+      'SUPERIORS': undefined,
+      'BUSINESS': undefined,
+      'HEALTH': undefined
     },
     focusedTrackId: 'SELF'
   }
