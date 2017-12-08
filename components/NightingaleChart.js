@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
-const width = 450
+const width = 475
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
 
 type Props = {
@@ -27,7 +27,7 @@ class NightingaleChart extends React.Component<Props> {
 
     this.radiusScale = d3.scaleBand()
       .domain(arcMilestones)
-      .range([.15 * width, .45 * width])
+      .range([.1 * width, .5 * width])
       .paddingInner(0.1)
 
     this.arcFn = d3.arc()
@@ -36,8 +36,8 @@ class NightingaleChart extends React.Component<Props> {
       .startAngle(- Math.PI / trackIds.length)
       .endAngle(Math.PI / trackIds.length)
       .padAngle(Math.PI / 200)
-      .padRadius(.45 * width)
-      // .cornerRadius(2)
+      .padRadius(.5 * width)
+      .cornerRadius(2)
   }
 
   render() {
@@ -49,8 +49,9 @@ class NightingaleChart extends React.Component<Props> {
             margin: 0;
           }
           svg {
-            width: ${width}px;
-            height: ${width}px;
+            width: ${width + 20}px;
+            height: ${width + 20}px;
+            margin-top: -10px;
           }
           .track-milestone {
             fill: #eee;
@@ -63,7 +64,7 @@ class NightingaleChart extends React.Component<Props> {
           }
         `}</style>
         <svg>
-          <g transform={`translate(${width/2},${width/2})`}>
+          <g transform={`translate(${(width/2) + 10},${(width/2) + 10})`}>
             {trackIds.map((trackId, i) => {
               const isCurrentTrack = trackId == this.props.focusedTrackId
               return (

@@ -112,16 +112,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             width: 960px;
             margin: 0 auto;
           }
-          .user-name {
-            border: none;
-            display: block;
-            border-bottom: 2px solid #fff;
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 380px;
-            margin-bottom: 10px;
-          }
           a {
             color: #888;
             text-decoration: none;
@@ -130,15 +120,32 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
           <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3em', fontFamily:'serif', fontWeight:'bold'}}>Manager Companion</h1>
         </div>
-        <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
-            <h1 className="user-name">{ this.state.name || <pre style={{margin:'0'}}> </pre> }</h1>
+        <div>
+          </div>
+        <div style={{display: 'flex',
+          borderBottom: '2px solid #ccc',
+          paddingBottom: '20px'
+          }}>
+          <div style={{flex: 1,
+            maxWidth:'45%'}}>
+            <h1 style={{
+              fontSize: '40px',
+              lineHeight: '40px',
+              fontWeight: 'bold',
+              borderBottom: '2px solid #ccc',
+              paddingBottom: '10px',
+              // margin: '10px auto',
+              width:'350px'}}>
+              { this.state.name || <pre style={{margin:'0'}}> </pre> }</h1>
             <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
           </div>
-          <div style={{flex: 0}}>
+          <div style={{flex: 0, display:'flex',
+            justifyContent:'flex-end',
+            alignItems:'center',
+            minWidth: '55%'}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}

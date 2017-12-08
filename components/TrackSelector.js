@@ -37,7 +37,6 @@ function TrackSelector(props) {
         row.splice(0, 2)
       }
     })
-    console.log(displayArray);
     return displayArray
   }
 
@@ -45,10 +44,10 @@ function TrackSelector(props) {
     <table>
       <style jsx>{`
         table {
-          width: 100%;
-          border-spacing: 10px;
-          margin-left: -10px;
-          margin-top: -10px;
+          width: 80%;
+          border-spacing: 5px;
+          margin-left: -5px;
+          margin-top: -5px;
         }
       `}</style>
       <tbody>
