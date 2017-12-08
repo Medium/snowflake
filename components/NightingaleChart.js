@@ -37,7 +37,7 @@ class NightingaleChart extends React.Component<Props> {
       .endAngle(Math.PI / trackIds.length)
       .padAngle(Math.PI / 200)
       .padRadius(.45 * width)
-      .cornerRadius(2)
+      // .cornerRadius(2)
   }
 
   render() {
@@ -80,13 +80,7 @@ class NightingaleChart extends React.Component<Props> {
                           style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
                     )
                   })}
-                  <circle
-                      r="8"
-                      cx="0"
-                      cy="-50"
-                      style={{fill: categoryColorScale(tracks[trackId].category)}}
-                      className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
-                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
+                  
                 </g>
             )})}
           </g>
