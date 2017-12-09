@@ -2,6 +2,8 @@
 
 Manager companion is an app created by Sean Conner and Tyler Suderman using [Medium's open source growth framework visualizer](https://snowflake.medium.com).
 
+![](http://g.recordit.co/rSW4WOijn7.gif)
+
 ## Spin it up to take a look!
 
 The following instructions require that you have NodeJS installed on your machine. If you don't have NodeJS yet follow along with [this resource](https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js).
