@@ -9,7 +9,7 @@ type CompanionQuizState = {
   name: string
 }
 
-const hashToState = (hash: String): ?SnowflakeAppState => {
+const hashToState = (hash: String): ?CompanionQuizState => {
   if (!hash) return null
   const result = defaultState()
   const hashValues = hash.split('#')[1].split(',')
@@ -35,9 +35,10 @@ const coerceMilestone = (value: number): Milestone => {
   }
 }
 
-const emptyState = (): SnowflakeAppState => {
+const emptyState = (): CompanionQuizState => {
   return {
-    name: '',
+    name: undefined,
+    nameInputted: false,
     milestoneByTrack: {
       'SELF': undefined,
       'TEAM': undefined,
@@ -49,9 +50,10 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
+const defaultState = (): CompanionQuizState => {
   return {
-    name: '',
+    name: undefined,
+    nameInputted: false,
     milestoneByTrack: {
       'SELF': 0,
       'TEAM': 0,
@@ -63,7 +65,7 @@ const defaultState = (): SnowflakeAppState => {
   }
 }
 
-const stateToHash = (state: SnowflakeAppState) => {
+const stateToHash = (state: CompanionQuizState) => {
   if (!state || !state.milestoneByTrack) return null
   const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
   return values.join(',')
@@ -122,22 +124,131 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             border-bottom: 2px solid #ccc;
             outline: 0;
           }
+          .box {
+            border-radius: 5px;
+            font-size: 150%;
+          }
+          .question-text {
+            font-size: 1em;
+          }
+          .answer-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+          }
+          .radio-answer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .radio-border {
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            border: 4px solid #000;
+          }
+          input.radio-button {
+            position: absolute;
+            visibility: hidden;
+          }
         `}</style>
         <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
           <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3em', fontFamily:'serif', fontWeight:'bold'}}>Manager Companion</h1>
         </div>
-        <div>
-          <input
+        <div style={{}}>
+          <div style={{
+            width: '45%'
+            }}>
+            <input
             type="text"
             className="name-input h1"
             placeHolder='Your Name'
             autofocus='autofocus'
             value={this.state.name}
-            onChange={e => this.setState({name: e.target.value})}
+            onChange={e => this.setState({
+              name: e.target.value,
+              nameInputted: true,
+            })}
             />
-        </div>
-        <div className='quiz-content'>
-          
+          </div>
+          <div className='instructions-text'>
+            {
+              // TODO: this is super hacky right now rewrite this section and use a cursor position library to delay appreance of instructions until cursor-reengagement
+              this.state.name ? <div className='quiz-content'>
+              <h2>For each of the following sections, use the scale to indicate how each statement applies to your current situation as a manager. It is important to evaluate the statements honestly and without over-thinking your answers.</h2>
+              </div>: ''
+            }
+          </div>
+          {
+            // TODO: add transitions and movement in quiz a la this example: jhttps://github.com/mitchgavan/react-multi-choice-quiz/tree/master/src
+          }
+          <div className='quiz-content'>
+            <div className='quiz-section'>
+              <h1 className='quiz-section-heading'>Managing Yourself</h1>
+              <div
+                className='quiz-questions'
+                style={{
+                  display:'grid',
+                  gridTemplateColumns: '35% 5% 20% 20% 20%'
+                }}>
+
+                <div className='box'></div>
+                <div className='box'></div>
+                <div className='box answer-text'><p>rarely</p></div>
+                <div className='box answer-text'><p>sometimes</p></div>
+                <div className='box answer-text'><p>usually</p></div>
+                <div className='box question-text'>
+                  <p>
+                    The manager team in my department works effectively together to accomplish the needs of the business
+                  </p>
+                </div>
+                <div className='box'></div>
+                <div className='box radio-answer'>
+                  <div className='radio-border'>
+                    <input
+                    type="radio"
+                    className="radio-button"
+                    name="radioGroup1">
+                      
+                    </input>
+                  </div>
+                </div>
+                <div className='box radio-answer'>
+                  <input
+                    type="radio"
+                    className="radio-button"
+                    name="radioGroup1"
+                  />
+                </div>
+                <div className='box radio-answer'>
+                  <input
+                    type="radio"
+                    className="radio-button"
+                    name="radioGroup1"
+                  />
+                </div>
+                <div className='box question-text'>
+                  <p>
+                    I regularly connect with managers outside my department and understand how my work impacts them
+                  </p>
+                </div>
+                <div className='box'></div>
+                <div className='box radio-answer'>block</div>
+                <div className='box radio-answer'>block</div>
+                <div className='box radio-answer'>block</div>
+                <div className='box question-text'>
+                  <p>
+                    I am able to put the needs of the business and my department ahead of the needs of my team
+                  </p>
+                </div>
+                <div className='box'></div>
+                <div className='box radio-answer'>block</div>
+                <div className='box radio-answer'>block</div>
+                <div className='box radio-answer'>block</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div style={{display: 'flex', paddingBottom: '20px'}}>
@@ -150,41 +261,12 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
     )
   }
 
-  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
-    const milestoneByTrack = this.state.milestoneByTrack
-    milestoneByTrack[trackId] = milestone
-
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
-  }
-
-  shiftFocusedTrack(delta: number) {
-    let index = trackIds.indexOf(this.state.focusedTrackId)
-    index = (index + delta + trackIds.length) % trackIds.length
-    const focusedTrackId = trackIds[index]
-    this.setState({ focusedTrackId })
-  }
-
-  setFocusedTrackId(trackId: TrackId) {
-    let index = trackIds.indexOf(trackId)
-    const focusedTrackId = trackIds[index]
-    this.setState({ focusedTrackId })
-  }
-
-  shiftFocusedTrackMilestoneByDelta(delta: number) {
-    let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
-    let milestone = prevMilestone + delta
-    if (milestone < 0) milestone = 0
-    if (milestone > 5) milestone = 5
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
-  }
-
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
+  hideShowQuizContent() {
+    if (this.state.nameInputted) {
+      return (
+        <p>this seems hella hacky</p>
+      )
+    }
   }
 }
 
