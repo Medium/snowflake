@@ -7,6 +7,7 @@ import TrackDetail from '../components/TrackDetail'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
+import Link from 'next/link'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -116,33 +117,50 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             color: #888;
             text-decoration: none;
           }
+          .title-text {
+            margin-top: 0;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            font-size: 3em;
+            font-family: serif;
+            font-weight: bold;
+          }
+          .title-text:hover {
+            cursor: pointer;
+          }
+          .name-display {
+            font-size: 40px;
+            height: 40px;
+            width: 350px;
+            line-height: 40px;
+            font-weight: bold;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+          }
         `}</style>
         <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
-          <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3em', fontFamily:'serif', fontWeight:'bold'}}>Manager Companion</h1>
+        <Link href={{ pathname: '/quiz' }}>
+            <h1 className='title-text'>
+              Manager Companion
+            </h1>
+          </Link>
         </div>
-        <div>
-          </div>
         <div style={{display: 'flex',
           borderBottom: '2px solid #ccc',
           paddingBottom: '20px'
           }}>
           <div style={{flex: 1,
             maxWidth:'45%'}}>
-            <h1 style={{
-              fontSize: '40px',
-              lineHeight: '40px',
-              fontWeight: 'bold',
-              borderBottom: '2px solid #ccc',
-              paddingBottom: '10px',
-              // margin: '10px auto',
-              width:'350px'}}>
-              { this.state.name || <pre style={{margin:'0'}}> </pre> }</h1>
+            <h1 className='name-display'>
+              { this.state.name || <pre style={{margin:'0'}}> </pre> }
+            </h1>
             <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
           </div>
-          <div style={{flex: 0, display:'flex',
+          <div style={{flex: 0,
+            display:'flex',
             justifyContent:'flex-end',
             alignItems:'center',
             minWidth: '55%'}}>
