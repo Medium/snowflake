@@ -52,7 +52,7 @@ const emptyState = (): SnowflakeAppState => {
       'PEERS': undefined,
       'SUPERIORS': undefined,
       'BUSINESS': undefined,
-      'HEALTH': undefined
+      'WORK/LIFE': undefined
     },
     focusedTrackId: 'SELF'
   }
@@ -68,7 +68,7 @@ const defaultState = (): SnowflakeAppState => {
       'PEERS': 2,
       'SUPERIORS': 1,
       'BUSINESS': 3,
-      'HEALTH': 2
+      'WORK/LIFE': 2
     },
     focusedTrackId: 'SELF'
   }

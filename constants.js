@@ -2,7 +2,7 @@
 import * as d3 from 'd3'
 
 export type TrackId = 'SELF' | 'TEAM' | 'PEERS' | 'SUPERIORS' |
-  'BUSINESS' | 'HEALTH'
+  'BUSINESS' | 'WORK/LIFE'
 
   // 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   //   'PROJECT_MANAGEMENT' | 'COMMUNICATION'
@@ -15,7 +15,7 @@ export type MilestoneMap = {
   'PEERS': Milestone,
   'SUPERIORS': Milestone,
   'BUSINESS': Milestone,
-  'HEALTH': Milestone
+  'WORK/LIFE': Milestone
 }
 export const milestones = [0, 1, 2, 3]
 
@@ -58,7 +58,7 @@ type Tracks = {|
   'PEERS': Track,
   'SUPERIORS': Track,
   'BUSINESS': Track,
-  'HEALTH': Track,
+  'WORK/LIFE': Track,
 |}
 
 export const tracks: Tracks = {
@@ -401,8 +401,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "HEALTH": {
-    "displayName": "Health",
+  "WORK/LIFE": {
+    "displayName": "Work/Life",
     "category": "F",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
