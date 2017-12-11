@@ -375,32 +375,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-a'>
+                  <label htmlFor='input-jjj'>
                     <input
-                    id='input-a'
+                    id='input-jjj'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup4"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-b'>
+                  <label htmlFor='input-k'>
                     <input
-                    id='input-b'
+                    id='input-k'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup4"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-c'>
+                  <label htmlFor='input-l'>
                     <input
-                    id='input-c'
+                    id='input-l'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup4"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -411,32 +411,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-d'>
+                  <label htmlFor='input-m'>
                     <input
-                    id='input-d'
+                    id='input-m'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup5"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-e'>
+                  <label htmlFor='input-n'>
                     <input
-                    id='input-e'
+                    id='input-n'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup5"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-f'>
+                  <label htmlFor='input-o'>
                     <input
-                    id='input-f'
+                    id='input-o'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup5"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -447,32 +447,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-g'>
+                  <label htmlFor='input-p'>
                     <input
-                    id='input-g'
+                    id='input-p'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup6"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-h'>
+                  <label htmlFor='input-q'>
                     <input
-                    id='input-h'
+                    id='input-q'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup6"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-i'>
+                  <label htmlFor='input-r'>
                     <input
-                    id='input-i'
+                    id='input-r'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup6"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -503,32 +503,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-a'>
+                  <label htmlFor='input-s'>
                     <input
-                    id='input-a'
+                    id='input-s'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup7"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-b'>
+                  <label htmlFor='input-t'>
                     <input
-                    id='input-b'
+                    id='input-t'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup7"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-c'>
+                  <label htmlFor='input-u'>
                     <input
-                    id='input-c'
+                    id='input-u'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup7"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -539,32 +539,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-d'>
+                  <label htmlFor='input-v'>
                     <input
-                    id='input-d'
+                    id='input-v'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup8"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-e'>
+                  <label htmlFor='input-w'>
                     <input
-                    id='input-e'
+                    id='input-w'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup8"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-f'>
+                  <label htmlFor='input-x'>
                     <input
-                    id='input-f'
+                    id='input-x'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup8"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -575,32 +575,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-g'>
+                  <label htmlFor='input-y'>
                     <input
-                    id='input-g'
+                    id='input-y'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup9"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-h'>
+                  <label htmlFor='input-z'>
                     <input
-                    id='input-h'
+                    id='input-z'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup9"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-i'>
+                  <label htmlFor='input-aa'>
                     <input
-                    id='input-i'
+                    id='input-aa'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup9"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -631,32 +631,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-a'>
+                  <label htmlFor='input-bb'>
                     <input
-                    id='input-a'
+                    id='input-bb'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup10"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-b'>
+                  <label htmlFor='input-cc'>
                     <input
-                    id='input-b'
+                    id='input-cc'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup10"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-c'>
+                  <label htmlFor='input-dd'>
                     <input
-                    id='input-c'
+                    id='input-dd'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup10"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -667,32 +667,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-d'>
+                  <label htmlFor='input-ee'>
                     <input
-                    id='input-d'
+                    id='input-ee'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup11"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-e'>
+                  <label htmlFor='input-ff'>
                     <input
-                    id='input-e'
+                    id='input-ff'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup11"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-f'>
+                  <label htmlFor='input-gg'>
                     <input
-                    id='input-f'
+                    id='input-gg'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup11"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -703,32 +703,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-g'>
+                  <label htmlFor='input-hh'>
                     <input
-                    id='input-g'
+                    id='input-hh'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup12"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-h'>
+                  <label htmlFor='input-hhh'>
                     <input
-                    id='input-h'
+                    id='input-hhh'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup12"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-i'>
+                  <label htmlFor='input-ii'>
                     <input
-                    id='input-i'
+                    id='input-ii'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup12"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -759,32 +759,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-a'>
+                  <label htmlFor='input-aaa'>
                     <input
-                    id='input-a'
+                    id='input-aaa'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup13"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-b'>
+                  <label htmlFor='input-bbb'>
                     <input
-                    id='input-b'
+                    id='input-bbb'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup13"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-c'>
+                  <label htmlFor='input-ccc'>
                     <input
-                    id='input-c'
+                    id='input-ccc'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup13"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -795,32 +795,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-d'>
+                  <label htmlFor='input-ddd'>
                     <input
-                    id='input-d'
+                    id='input-ddd'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup14"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-e'>
+                  <label htmlFor='input-eee'>
                     <input
-                    id='input-e'
+                    id='input-eee'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup14"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-f'>
+                  <label htmlFor='input-fff'>
                     <input
-                    id='input-f'
+                    id='input-fff'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup14"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -831,32 +831,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-g'>
+                  <label htmlFor='input-hhhh'>
                     <input
-                    id='input-g'
+                    id='input-hhhh'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup15"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-h'>
+                  <label htmlFor='input-iii'>
                     <input
-                    id='input-h'
+                    id='input-iii'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup15"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-i'>
+                  <label htmlFor='input-jj'>
                     <input
-                    id='input-i'
+                    id='input-jj'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup15"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -887,32 +887,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-a'>
+                  <label htmlFor='input-kk'>
                     <input
-                    id='input-a'
+                    id='input-kk'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup16"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-b'>
+                  <label htmlFor='input-ll'>
                     <input
-                    id='input-b'
+                    id='input-ll'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup16"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-c'>
+                  <label htmlFor='input-mm'>
                     <input
-                    id='input-c'
+                    id='input-mm'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup1"/>
+                    name="radioGroup16"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -923,32 +923,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-d'>
+                  <label htmlFor='input-nn'>
                     <input
-                    id='input-d'
+                    id='input-nn'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup17"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-e'>
+                  <label htmlFor='input-oo'>
                     <input
-                    id='input-e'
+                    id='input-oo'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup17"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-f'>
+                  <label htmlFor='input-pp'>
                     <input
-                    id='input-f'
+                    id='input-pp'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup2"/>
+                    name="radioGroup17"/>
                     <div className="check"></div>
                   </label>
                 </div>
@@ -959,32 +959,32 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
                 <div className='box'></div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-g'>
+                  <label htmlFor='input-qq'>
                     <input
-                    id='input-g'
+                    id='input-qq'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup18"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-h'>
+                  <label htmlFor='input-rr'>
                     <input
-                    id='input-h'
+                    id='input-rr'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup18"/>
                     <div className="check"></div>
                   </label>
                 </div>
                 <div className='box radio-answer'>
-                  <label htmlFor='input-i'>
+                  <label htmlFor='input-ss'>
                     <input
-                    id='input-i'
+                    id='input-ss'
                     type="radio"
                     className="radio-button"
-                    name="radioGroup3"/>
+                    name="radioGroup18"/>
                     <div className="check"></div>
                   </label>
                 </div>
