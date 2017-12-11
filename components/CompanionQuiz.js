@@ -3,6 +3,7 @@
 import { trackIds } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
+import Link from 'next/link'
 
 type CompanionQuizState = {
   milestoneByTrack: MilestoneMap,
@@ -153,11 +154,29 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             cursor: pointer;
             border-radius: 100%;
             border: 4px solid #000;
-          	transition: border .25s linear;
-          	-webkit-transition: border .25s linear;
+          	transition: border .5s linear;
           }
           input[type=radio]:checked ~ .check {
             background-color: #000;
+          }
+          div.submit-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px;
+            font-size: 40px;
+            width: 150px;
+            min-height: 50px;
+            border: 5px solid #000;
+            padding: 10px 20px;
+            transition: background-color .2s ease, color .5s linear;
+            margin: 50px auto;
+          }
+          div.submit-button:hover {
+            background-color: #202020;
+            color: #fff;
+            cursor: pointer;
           }
 
         `}</style>
@@ -971,6 +990,10 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                 </div>
               </div>
             </div>
+
+            <Link href={{ pathname: '/' }}>
+              <div className='submit-button'>SUBMIT</div>
+            </Link>
 
           </div>
         </div>
