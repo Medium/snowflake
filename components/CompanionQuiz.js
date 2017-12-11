@@ -170,7 +170,7 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             min-height: 50px;
             border: 5px solid #000;
             padding: 10px 20px;
-            transition: background-color .2s ease, color .5s linear;
+            transition: background-color .5s ease;
             margin: 50px auto;
           }
           div.submit-button:hover {

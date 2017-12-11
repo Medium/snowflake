@@ -2,7 +2,7 @@
 
 Manager companion is an app created by Sean Conner and Tyler Suderman using [Medium's open source growth framework visualizer](https://snowflake.medium.com).
 
-![](http://g.recordit.co/n4nYskXz4D.gif)
+![](http://g.recordit.co/4O6lyQJn1N.gif)
 
 ## Spin it up to take a look!
 
