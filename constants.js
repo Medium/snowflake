@@ -42,7 +42,8 @@ export const pointsToLevels = {
 export const maxLevel = 36
 
 export type Track = {
-  displayName: string,
+  shortDisplayName: string,
+  longDisplayName: string,
   category: string, // TK categoryId type?
   description: string,
   milestones: {
@@ -63,7 +64,8 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "SELF": {
-    "displayName": "Self",
+    "shortDisplayName": "Self",
+    "longDisplayName": "Managing Yourself",
     "category": "A",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
     "milestones": [{
@@ -130,7 +132,8 @@ export const tracks: Tracks = {
   },
 
   "TEAM": {
-    "displayName": "Team",
+    "shortDisplayName": "Team",
+    "longDisplayName": "Managing Your Team",
     "category": "B",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
@@ -198,7 +201,8 @@ export const tracks: Tracks = {
   },
 
   "PEERS": {
-    "displayName": "Peers",
+    "shortDisplayName": "Peers",
+    "longDisplayName": "Managing Your Peers",
     "category": "C",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
@@ -266,7 +270,8 @@ export const tracks: Tracks = {
   },
 
   "SUPERIORS": {
-    "displayName": "Superiors",
+    "shortDisplayName": "Superiors",
+    "longDisplayName": "Managing Up",
     "category": "D",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
@@ -334,7 +339,8 @@ export const tracks: Tracks = {
   },
 
   "BUSINESS": {
-    "displayName": "Business",
+    "shortDisplayName": "Business",
+    "longDisplayName": "Managing Your Business",
     "category": "E",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
@@ -402,7 +408,8 @@ export const tracks: Tracks = {
   },
 
   "WORK/LIFE": {
-    "displayName": "Work/Life",
+    "shortDisplayName": "Work/Life",
+    "longDisplayName": "Managing Work & Life",
     "category": "F",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",

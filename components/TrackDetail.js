@@ -48,7 +48,7 @@ class TrackDetail extends React.Component<Props> {
             line-height: 1.5em;
           }
         `}</style>
-        <h2>{track.displayName}</h2>
+        <h2>{track.shortDisplayName}</h2>
         <p className="track-description">{track.description}</p>
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>

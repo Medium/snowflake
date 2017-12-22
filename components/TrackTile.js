@@ -17,7 +17,7 @@ function TrackTile(props) {
             height: '175px',
             width: '175px'
           }}>
-        <p style={{margin:'0', paddingBottom:'10px'}}>{tracks[props.trackId].displayName}</p>
+        <p style={{margin:'0', paddingBottom:'10px'}}>{tracks[props.trackId].shortDisplayName}</p>
         <div style={{
           border: '4px solid ' + (props.trackId == props.focusedTrackId ? '#000': categoryColorScale(tracks[props.trackId].category)),
           background: categoryColorScale(tracks[props.trackId].category),
