@@ -17,7 +17,17 @@ export type MilestoneMap = {
   'BUSINESS': Milestone,
   'WORK/LIFE': Milestone
 }
+
 export const milestones = [0, 1, 2, 3]
+
+export type QuestionMap = {
+  'SELF': QuestionGroup,
+  'TEAM': QuestionGroup,
+  'PEERS': QuestionGroup,
+  'SUPERIORS': QuestionGroup,
+  'BUSINESS': QuestionGroup,
+  'WORK/LIFE': QuestionGroup
+}
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -50,7 +60,19 @@ export type Track = {
     summary: string,
     signals: string[],
     examples: string[]
-  }[]
+  }
+}
+
+export type QuestionGroup = {
+  shortDisplayName: string,
+  longDisplayName: string,
+  category: string, // TK categoryId type?
+  description: string,
+  milestones: {
+    summary: string,
+    signals: string[],
+    examples: string[]
+  }
 }
 
 type Tracks = {|
