@@ -20,15 +20,6 @@ export type MilestoneMap = {
 
 export const milestones = [0, 1, 2, 3]
 
-export type QuestionMap = {
-  'SELF': QuestionGroup,
-  'TEAM': QuestionGroup,
-  'PEERS': QuestionGroup,
-  'SUPERIORS': QuestionGroup,
-  'BUSINESS': QuestionGroup,
-  'WORK/LIFE': QuestionGroup
-}
-
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
     case 0: return 0
@@ -56,6 +47,7 @@ export type Track = {
   longDisplayName: string,
   category: string, // TK categoryId type?
   description: string,
+  questions: QuestionsList,
   milestones: {
     summary: string,
     signals: string[],
@@ -63,17 +55,7 @@ export type Track = {
   }
 }
 
-export type QuestionGroup = {
-  shortDisplayName: string,
-  longDisplayName: string,
-  category: string, // TK categoryId type?
-  description: string,
-  milestones: {
-    summary: string,
-    signals: string[],
-    examples: string[]
-  }
-}
+export type QuestionsList = [string, string, string];
 
 type Tracks = {|
   'SELF': Track,
@@ -90,6 +72,11 @@ export const tracks: Tracks = {
     "longDisplayName": "Managing Yourself",
     "category": "A",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "I take time to prioritize what I need to get done and always work on the most important things first.",
+      "I control my calendar, and regularly weed out meetings and other demands on my time if I don't know their importance.",
+      "I take time away from the day-to-day needs of my job to focus on the big picture."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
@@ -157,8 +144,12 @@ export const tracks: Tracks = {
     "shortDisplayName": "Team",
     "longDisplayName": "Managing Your Team",
     "category": "B",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "My team comes to me with solutions, not just problems.",
+      "I know what each of my team members hope to do with their career and what keeps them up at night.",
+      "My team works effectively together—they help each other with their work even if they have different roles."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
@@ -226,8 +217,12 @@ export const tracks: Tracks = {
     "shortDisplayName": "Peers",
     "longDisplayName": "Managing Your Peers",
     "category": "C",
-    "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "The manager team in my department works effectively together to accomplish the needs of the business.",
+      "I regularly connect with managers outside my department and understand how my work impacts them.",
+      "I am able to put the needs of the business and my department ahead of the needs of my team."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
@@ -295,8 +290,12 @@ export const tracks: Tracks = {
     "shortDisplayName": "Superiors",
     "longDisplayName": "Managing Up",
     "category": "D",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "I am able to approach my boss when I'm facing a difficult situation.",
+      "I know what I can do to help my boss without having to ask.",
+      "I know my boss's top three priorities at any given time."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
@@ -364,8 +363,12 @@ export const tracks: Tracks = {
     "shortDisplayName": "Business",
     "longDisplayName": "Managing Your Business",
     "category": "E",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "I know the major objectives of the company and how I contribute to their success.",
+      "My team understands how their work impacts the bigger picture.",
+      "I understand the how the business works—how a dollar enters, moves through, and leaves the organization."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
@@ -433,8 +436,12 @@ export const tracks: Tracks = {
     "shortDisplayName": "Work/Life",
     "longDisplayName": "Managing Work & Life",
     "category": "F",
-    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "description": "Manages their own time and Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    "questions": [
+      "I am happy with the amount of hours I work each week.",
+      "My friends and family would say I have a full life outside of work.",
+      "My coworkers know and respect my life outside of work."
+    ],
     "milestones": [{
       "summary": "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
       "signals": [
