@@ -265,7 +265,8 @@ export const tracks: Tracks = {
         summary: "Works effectively within established structures, following current best practices",
         signals: [
           "Writes thorough postmortems for service outages",
-          "Makes simple configuration changes to services"
+          "Makes simple configuration changes to services",
+          "Has knowledge necessary to be level 1 on-call"
         ],
         examples: [
           "Made safe and effective changes to app-gulp",
