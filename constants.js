@@ -257,7 +257,7 @@ export const tracks: Tracks = {
   },
 
   FOUNDATIONS: {
-    displayName: "Foundations",
+    displayName: "Platform",
     category: "A",
     description: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     milestones: [
@@ -330,7 +330,7 @@ export const tracks: Tracks = {
   },
 
   SERVERS: {
-    displayName: "Servers",
+    displayName: "Services & APIs",
     category: "A",
     description: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",
     milestones: [
