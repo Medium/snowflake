@@ -514,7 +514,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Directed team response effectively during outages",
-          "Gave a substantial Eng All Hands presentation on Redux",
+          "Gathered multiple stakeholders together to communicate a priority change",
           "Gave notice of upcoming related work in Band Practise"
         ]
       },
