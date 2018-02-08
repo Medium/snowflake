@@ -257,7 +257,7 @@ export const tracks: Tracks = {
   },
 
   FOUNDATIONS: {
-    displayName: "Platform",
+    displayName: "Platform & Data",
     category: "A",
     description: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     milestones: [
@@ -281,8 +281,6 @@ export const tracks: Tracks = {
           "Triages service issues correctly and independently"
         ],
         examples: [
-          "Upgraded a project from NPM to Yarn",
-          "Created Go consumer package (river)",
           "Identified source of slow requests in a single service from the edge in"
         ]
       },
