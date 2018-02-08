@@ -265,8 +265,7 @@ export const tracks: Tracks = {
         summary: "Works effectively within established structures, following current best practices",
         signals: [
           "Writes thorough postmortems for service outages",
-          "Makes simple configuration changes to services",
-          "Sits in on-call rotation at level 1"
+          "Makes simple configuration changes to services"
         ],
         examples: [
           "Made safe and effective changes to app-gulp",
@@ -700,16 +699,16 @@ export const tracks: Tracks = {
     description: "Provides strategic support to engineers to help them build the career they want",
     milestones: [
       {
-        summary: "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
+        summary: "Engages in the Engineering career development process",
         signals: [
-          "Advocates on behalf and in defense of a group member",
+          "Has a career plan or some form of growth plan in place",
           "Shares opportunities for improvements and recognises achievements",
-          "Explains appropriate available industry paths"
+          "Understands growth opportunities available to them"
         ],
         examples: [
-          "Collected and delivered feedback",
+          "Engaged in career development conversation with their manager",
           "Discussed career options and areas of interest informally",
-          "Mentored an Intern"
+          "Provided informal ideas for a team member's career growth"
         ]
       },
       {
