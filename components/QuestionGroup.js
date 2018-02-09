@@ -1,11 +1,15 @@
 import type { QuestionsList } from '../constants'
+import QuestionLine from './QuestionLine'
+import BreakLine from './BreakLine'
+import RadioInputLine from './RadioInputLine'
 
 type Props = {
   questions: QuestionsList,
+  trackIndex: Number,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-function QuestionGroup({questions}) {
+function QuestionGroup({questions, trackIndex}) {
   const questionGroupSections = [
     (<div className='box question-text'>
       <p>{questions[0]}</p>
@@ -44,6 +48,7 @@ function QuestionGroup({questions}) {
   ]
   return (
     <div
+      key={trackIndex}
       className='quiz-questions'
       style={{
         display:'grid',
@@ -59,15 +64,33 @@ function QuestionGroup({questions}) {
       <div className='box answer-text'><p>sometimes</p></div>
       <div className='box answer-text'><p>usually</p></div>
       {questions.map((question, questionIndex) => {
+        console.log("NEW QUESTION SECTION:");
+        console.log(question);
         return (
-          questionGroupSections.map((section, sectionIndex) => {
-            console.log(question);
-            return (
-              section
-            )
+          questionGroupSections.map((section, lineIndex) => {
+            if (lineIndex === 0) {
+              return (
+                <QuestionLine
+                  key={lineIndex}
+                  lineIndex={lineIndex}
+                  question={question}/>
+              )
+            } else if (lineIndex === 1) {
+              return (
+                <BreakLine
+                  key={lineIndex}/>
+              )
+            } else {
+              return (
+                <RadioInputLine
+                  key={lineIndex}
+                  lineIndex={lineIndex}
+                  trackIndex={trackIndex}
+                  questionIndex={questionIndex}/>
+              )
+            }
           })
         )
-        console.log(question);
       })}
 
 

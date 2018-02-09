@@ -70,7 +70,6 @@ const defaultState = (): CompanionQuizState => {
 const stateToHash = (state: CompanionQuizState) => {
   if (!state || !state.milestoneByTrack) return null
   const values = trackIds.map((trackId) => {
-    console.log(trackId);
     return state.milestoneByTrack[trackId]
   }).concat(encodeURI(state.name))
   return values.join(',')
@@ -226,14 +225,19 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
           }
         <div className='quiz-content'>
 
-          {trackIds.map(trackId => (
-            <div key={trackId} className='quiz-section'>
-              <h1 className='quiz-section-heading'>{tracks[trackId].longDisplayName}</h1>
-              <QuestionGroup
-                  questions={tracks[trackId].questions}
+          {trackIds.map((trackKey, trackIndex) => {
+            return (
+              <div key={trackIndex} className='quiz-section'>
+                <h1 className='quiz-section-heading'>{tracks[trackKey].longDisplayName}</h1>
+                <QuestionGroup
+                  trackIndex={trackIndex}
+                  questions={tracks[trackKey].questions}
                   handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-            </div>
-          ))}
+                </div>
+              )
+          }
+
+          )}
 
         </div>
 
