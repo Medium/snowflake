@@ -69,7 +69,10 @@ const defaultState = (): CompanionQuizState => {
 
 const stateToHash = (state: CompanionQuizState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name))
+  const values = trackIds.map((trackId) => {
+    console.log(trackId);
+    return state.milestoneByTrack[trackId]
+  }).concat(encodeURI(state.name))
   return values.join(',')
 }
 
@@ -227,8 +230,8 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             <div key={trackId} className='quiz-section'>
               <h1 className='quiz-section-heading'>{tracks[trackId].longDisplayName}</h1>
               <QuestionGroup
-                questions={tracks[trackId].questions}
-              />
+                  questions={tracks[trackId].questions}
+                  handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
             </div>
           ))}
 
@@ -247,6 +250,16 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
         </div>
       </main>
     )
+  }
+
+  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+    const milestoneByTrack = this.state.milestoneByTrack
+    milestoneByTrack[trackId] = milestone
+
+    const titles = eligibleTitles(milestoneByTrack)
+    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
+
+    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
   }
 
   hideShowQuizContent() {
