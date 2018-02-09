@@ -20,7 +20,7 @@ const hashToState = (hash: String): ?CompanionQuizState => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
   if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  // if (hashValues[17]) result.title = decodeURI(hashValues[17])
   return result
 }
 
@@ -69,7 +69,7 @@ const defaultState = (): CompanionQuizState => {
 
 const stateToHash = (state: CompanionQuizState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name))
   return values.join(',')
 }
 
@@ -233,8 +233,6 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
           ))}
 
         </div>
-
-
 
         <Link href={{ pathname: '/' }}>
           <div className='submit-button'>SUBMIT</div>
