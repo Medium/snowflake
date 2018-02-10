@@ -15,7 +15,7 @@ function QuestionGroup({questions, trackIndex}) {
       <p>{questions[0]}</p>
     </div>),
     (<div className='box'></div>),
-    (<div className='box radio-answer'>
+    (<div className='box radio-input'>
       <label htmlFor='input-a'>
         <input
           id='input-a'
@@ -25,7 +25,7 @@ function QuestionGroup({questions, trackIndex}) {
         <div className="check"></div>
       </label>
     </div>),
-    (<div className='box radio-answer'>
+    (<div className='box radio-input'>
       <label htmlFor='input-b'>
         <input
           id='input-b'
@@ -35,7 +35,7 @@ function QuestionGroup({questions, trackIndex}) {
         <div className="check"></div>
       </label>
     </div>),
-    (<div className='box radio-answer'>
+    (<div className='box radio-input'>
       <label htmlFor='input-c'>
         <input
           id='input-c'
@@ -60,9 +60,9 @@ function QuestionGroup({questions, trackIndex}) {
 
       <div className='box'></div>
       <div className='box'></div>
-      <div className='box answer-text'><p>rarely</p></div>
-      <div className='box answer-text'><p>sometimes</p></div>
-      <div className='box answer-text'><p>usually</p></div>
+      <div className='box answer-option'><p>rarely</p></div>
+      <div className='box answer-option'><p>sometimes</p></div>
+      <div className='box answer-option'><p>usually</p></div>
       {questions.map((question, questionIndex) => {
         console.log("NEW QUESTION SECTION:");
         console.log(question);

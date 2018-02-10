@@ -135,13 +135,13 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
           .question-text {
             font-size: 1em;
           }
-          .answer-text {
+          .answer-option {
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 1em;
           }
-          .radio-answer {
+          .radio-input {
             display: flex;
             justify-content: center;
             align-items: center;

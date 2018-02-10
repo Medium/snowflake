@@ -8,18 +8,18 @@ type Props = {
 
 function RadioInputLine({questionIndex, lineIndex, trackIndex}) {
   const lineId = `input-${questionIndex}-${lineIndex}`
-  const questionId = `radioGroup${trackIndex}`
-  console.log(lineIndex);
-  console.log(lineId);
-  console.log(questionId);
+  const questionId = `radioGroup${questionIndex}`
+  // console.log(lineIndex);
+  // console.log(lineIndex);
+  console.log(`input-${trackIndex}${questionIndex}`);
   return (
-    <div className='box radio-answer'>
-      <label htmlFor={`input-${questionIndex}-${lineIndex}`}>
+    <div className='box radio-input'>
+      <label htmlFor={`input-${trackIndex}${questionIndex}`}>
         <input
-          id={`input-${questionIndex}-${lineIndex}`}
+          id={`input-${trackIndex}${questionIndex}`}
           type="radio"
           className="radio-button"
-          name={`radioGroup${trackIndex}`}/>
+          name={`radioGroup-${questionIndex}`}/>
         <div className="check"></div>
       </label>
     </div>
