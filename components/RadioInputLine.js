@@ -14,12 +14,12 @@ function RadioInputLine({questionIndex, lineIndex, trackIndex}) {
   console.log(`input-${trackIndex}${questionIndex}`);
   return (
     <div className='box radio-input'>
-      <label htmlFor={`input-${trackIndex}${questionIndex}`}>
+      <label htmlFor={`input-${trackIndex}${questionIndex}${lineIndex}`}>
         <input
-          id={`input-${trackIndex}${questionIndex}`}
+          id={`input-${trackIndex}${questionIndex}${lineIndex}`}
           type="radio"
           className="radio-button"
-          name={`radioGroup-${questionIndex}`}/>
+          name={`radioGroup-${trackIndex}${questionIndex}`}/>
         <div className="check"></div>
       </label>
     </div>
