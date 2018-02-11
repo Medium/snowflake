@@ -260,11 +260,8 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
-
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    console.log(milestoneByTrack);
+    this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   hideShowQuizContent() {
