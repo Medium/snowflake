@@ -6,46 +6,11 @@ import RadioInputLine from './RadioInputLine'
 type Props = {
   questions: QuestionsList,
   trackIndex: Number,
+  trackId: String,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-function QuestionGroup({questions, trackIndex}) {
-  const questionGroupSections = [
-    (<div className='box question-text'>
-      <p>{questions[0]}</p>
-    </div>),
-    (<div className='box'></div>),
-    (<div className='box radio-input'>
-      <label htmlFor='input-a'>
-        <input
-          id='input-a'
-          type="radio"
-          className="radio-button"
-          name="radioGroup1"/>
-        <div className="check"></div>
-      </label>
-    </div>),
-    (<div className='box radio-input'>
-      <label htmlFor='input-b'>
-        <input
-          id='input-b'
-          type="radio"
-          className="radio-button"
-          name="radioGroup1"/>
-        <div className="check"></div>
-      </label>
-    </div>),
-    (<div className='box radio-input'>
-      <label htmlFor='input-c'>
-        <input
-          id='input-c'
-          type="radio"
-          className="radio-button"
-          name="radioGroup1"/>
-        <div className="check"></div>
-      </label>
-    </div>)
-  ]
+function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneChangeFn}) {
   return (
     <div
       key={trackIndex}
@@ -64,10 +29,13 @@ function QuestionGroup({questions, trackIndex}) {
       <div className='box answer-option'><p>sometimes</p></div>
       <div className='box answer-option'><p>usually</p></div>
       {questions.map((question, questionIndex) => {
-        console.log("NEW QUESTION SECTION:");
-        console.log(question);
         return (
-          questionGroupSections.map((section, lineIndex) => {
+          // THIS .map() CALL ON A FAKE ARRAY IS SUPER HACKY TOO... ANY THOUGHTS ON HOW TO MAKE THIS SITUATION BETTER?
+          ['questionLine',
+            'BreakLine',
+            'RadioInputLine',
+            'RadioInputLine',
+            'RadioInputLine'].map((section, lineIndex) => {
             if (lineIndex === 0) {
               return (
                 <QuestionLine
@@ -84,9 +52,11 @@ function QuestionGroup({questions, trackIndex}) {
               return (
                 <RadioInputLine
                   key={lineIndex}
+                  trackId={trackId}
                   lineIndex={lineIndex}
                   trackIndex={trackIndex}
-                  questionIndex={questionIndex}/>
+                  questionIndex={questionIndex}
+                  handleTrackMilestoneChangeFn={handleTrackMilestoneChangeFn}/>
               )
             }
           })
@@ -98,4 +68,4 @@ function QuestionGroup({questions, trackIndex}) {
   )
 }
 
-export default QuestionGroup
+export default TrackQuestions

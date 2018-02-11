@@ -2,7 +2,7 @@
 
 import { tracks, trackIds, } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
-import QuestionGroup from '../components/QuestionGroup'
+import TrackQuestions from '../components/TrackQuestions'
 import React from 'react'
 import Link from 'next/link'
 
@@ -225,13 +225,14 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
           }
         <div className='quiz-content'>
 
-          {trackIds.map((trackKey, trackIndex) => {
+          {trackIds.map((trackId, trackIndex) => {
             return (
               <div key={trackIndex} className='quiz-section'>
-                <h1 className='quiz-section-heading'>{tracks[trackKey].longDisplayName}</h1>
-                <QuestionGroup
+                <h1 className='quiz-section-heading'>{tracks[trackId].longDisplayName}</h1>
+                <TrackQuestions
+                  trackId={trackId}
                   trackIndex={trackIndex}
-                  questions={tracks[trackKey].questions}
+                  questions={tracks[trackId].questions}
                   handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
                 </div>
               )
