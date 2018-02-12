@@ -41,6 +41,38 @@ const emptyState = (): CompanionQuizState => {
   return {
     name: undefined,
     nameInputted: false,
+    milestoneMatrix: {
+      'SELF': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'TEAM': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'PEERS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'SUPERIORS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'BUSINESS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'WORK/LIFE': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      }
+    },
     milestoneByTrack: {
       'SELF': undefined,
       'TEAM': undefined,
@@ -56,6 +88,38 @@ const defaultState = (): CompanionQuizState => {
   return {
     name: undefined,
     nameInputted: false,
+    milestoneMatrix: {
+      'SELF': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'TEAM': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'PEERS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'SUPERIORS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'BUSINESS': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      },
+      'WORK/LIFE': {
+        '0': 0,
+        '1': 0,
+        '2': 0,
+      }
+    },
     milestoneByTrack: {
       'SELF': 0,
       'TEAM': 0,
@@ -191,6 +255,9 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
         <div style={{
           width: '45%'
           }}>
+          {
+            // Def can't figure out why this input is throwing an error on change
+          }
           <input
             type="text"
             className="name-input h1"
@@ -233,7 +300,7 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
                   trackId={trackId}
                   trackIndex={trackIndex}
                   questions={tracks[trackId].questions}
-                  handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+                  handleTrackMilestoneChangeFn={(track, question, milestone) => this.handleTrackMilestoneChange(track, question, milestone)} />
                 </div>
               )
           }
@@ -257,11 +324,17 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
     )
   }
 
-  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+  handleTrackMilestoneChange(trackId: TrackId, questionIndex: Number, milestone: Milestone) {
+    const milestoneMatrix = this.state.milestoneMatrix
+    milestoneMatrix[trackId][questionIndex] = milestone
+    this.setState({ milestoneMatrix})
     const milestoneByTrack = this.state.milestoneByTrack
-    milestoneByTrack[trackId] = milestone
-    console.log(milestoneByTrack);
-    this.setState({ milestoneByTrack, focusedTrackId: trackId })
+    let newMilestone = 0;
+    for(var key in milestoneMatrix[trackId]) {
+      newMilestone += milestoneMatrix[trackId][key]
+    }
+    milestoneByTrack[trackId] = newMilestone
+    this.setState({ milestoneByTrack })
   }
 
   hideShowQuizContent() {

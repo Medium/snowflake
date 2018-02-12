@@ -63,7 +63,6 @@ function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneCha
         )
       })}
 
-
     </div>
   )
 }
