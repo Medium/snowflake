@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import TrackTile from '../components/TrackTile'
 import { trackIds, tracks, categoryColorScale } from '../constants'
 import type { MilestoneMap, TrackId } from '../constants'
 
@@ -10,55 +11,50 @@ type Props = {
   setFocusedTrackIdFn: (TrackId) => void
 }
 
-class TrackSelector extends React.Component<Props> {
-  render() {
-    return (
-      <table>
-        <style jsx>{`
-          table {
-            width: 100%;
-            border-spacing: 3px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            margin-left: -3px;
-          }
-          .track-selector-value {
-            line-height: 50px;
-            width: 50px;
-            text-align: center;
-            background: #eee;
-            font-weight: bold;
-            font-size: 24px;
-            border-radius: 3px;
-            cursor: pointer;
-          }
-          .track-selector-label {
-            text-align: center;
-            font-size: 9px;
-          }
-        `}</style>
-        <tbody>
+function TrackSelector(props) {
+
+  function buildDisplayArray(trackIds) {
+    let displayRow = [];
+    let displayArray = [];
+
+    trackIds.map(trackId => {
+      displayRow.push(
+        <TrackTile
+           trackId = {trackId}
+           focusedTrackId = {props.focusedTrackId}
+           milestoneByTrack = {props.milestoneByTrack}
+           setFocusedTrackIdFn = {props.setFocusedTrackIdFn}/>
+      )
+      if (displayRow.length === 2) {
+        displayArray.push(
           <tr>
-            {trackIds.map(trackId => (
-              <td key={trackId} className="track-selector-label" onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
-                {tracks[trackId].displayName}
-              </td>
-            ))}
+            {displayRow[0]}
+            {displayRow[1]}
           </tr>
-          <tr>
-            {trackIds.map(trackId => (
-              <td key={trackId} className="track-selector-value"
-                  style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
-                  onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
-                {this.props.milestoneByTrack[trackId]}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
-    )
+        )
+        displayRow = []
+      } else if (displayRow.length > 2) {
+        row.splice(0, 2)
+      }
+    })
+    return displayArray
   }
+
+  return (
+    <table>
+      <style jsx>{`
+        table {
+          width: 80%;
+          border-spacing: 5px;
+          margin-left: -5px;
+          margin-top: -5px;
+        }
+      `}</style>
+      <tbody>
+        {buildDisplayArray(trackIds)}
+      </tbody>
+    </table>
+  )
 }
 
 export default TrackSelector

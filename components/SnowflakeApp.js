@@ -3,14 +3,11 @@
 import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
-import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
-import LevelThermometer from '../components/LevelThermometer'
+import TrackDetail from '../components/TrackDetail'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
+import Link from 'next/link'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -50,56 +47,36 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      'SELF': undefined,
+      'TEAM': undefined,
+      'PEERS': undefined,
+      'SUPERIORS': undefined,
+      'BUSINESS': undefined,
+      'WORK/LIFE': undefined
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'SELF'
   }
 }
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
+    name: 'Tyler Suderman',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'SELF': 3,
+      'TEAM': 1,
+      'PEERS': 2,
+      'SUPERIORS': 1,
+      'BUSINESS': 3,
+      'WORK/LIFE': 2
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'SELF'
   }
 }
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name))
   return values.join(',')
 }
 
@@ -136,74 +113,76 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             width: 960px;
             margin: 0 auto;
           }
-          .name-input {
-            border: none;
-            display: block;
-            border-bottom: 2px solid #fff;
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 380px;
-            margin-bottom: 10px;
-          }
-          .name-input:hover, .name-input:focus {
-            border-bottom: 2px solid #ccc;
-            outline: 0;
-          }
           a {
             color: #888;
             text-decoration: none;
           }
+          .title-text {
+            margin-top: 0;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            font-size: 3em;
+            font-family: serif;
+            font-weight: bold;
+          }
+          .title-text:hover {
+            cursor: pointer;
+          }
+          .name-display {
+            font-size: 40px;
+            height: 40px;
+            width: 350px;
+            line-height: 40px;
+            font-weight: bold;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+          }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
+        <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
+        <Link href={{ pathname: '/quiz' }}>
+            <h1 className='title-text'>
+              Manager Companion
+            </h1>
+          </Link>
         </div>
-        <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
-            <form>
-              <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  />
-              <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
-            </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+        <div style={{display: 'flex',
+          borderBottom: '2px solid #ccc',
+          paddingBottom: '20px'
+          }}>
+          <div style={{flex: 1,
+            maxWidth:'45%'}}>
+            <h1 className='name-display'>
+              { this.state.name || <pre style={{margin:'0'}}> </pre> }
+            </h1>
+            <TrackSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            focusedTrackId={this.state.focusedTrackId}
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
           </div>
-          <div style={{flex: 0}}>
+          <div style={{flex: 0,
+            display:'flex',
+            justifyContent:'flex-end',
+            alignItems:'center',
+            minWidth: '55%'}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
             increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
-        <Track
+        <TrackDetail
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+            Made with ❤️ by <a href="" target="_blank"> Tyler</a> from the amazing open source work of <a href="https://medium.engineering" target="_blank">Medium Engineering</a>.
+            Get the <a href="https://github.com/Medium/snowflake" target="_blank">original code</a>.
           </div>
         </div>
       </main>
