@@ -89,8 +89,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidUpdate() {
-    const hash = stateToHash(this.state)
-    if (hash) window.location.replace(`#${hash}`)
+    // const hash = stateToHash(this.state)
+    // if (hash) window.location.replace(`#${hash}`)
   }
 
   componentDidMount() {

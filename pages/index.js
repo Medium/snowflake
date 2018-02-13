@@ -1,8 +1,9 @@
 import SnowflakeApp from '../components/SnowflakeApp'
 
-export default ({ url: { query } }) => {
-  console.log(query);
+export default ({ url: { query: { name, quizResults} } }) => {
   return (
-    <SnowflakeApp />
+    <SnowflakeApp
+        name={name}
+        quizResults={quizResults} />
   )
 }

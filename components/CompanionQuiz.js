@@ -11,17 +11,12 @@ type CompanionQuizState = {
   name: string
 }
 
-const hashToState = (hash: String): ?CompanionQuizState => {
-  if (!hash) return null
-  const result = defaultState()
-  const hashValues = hash.split('#')[1].split(',')
-  if (!hashValues) return null
-  trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
+const stateToPath = (state: CompanionQuizState) => {
+  if (!state || !state.milestoneByTrack) return null
+  const values = trackIds.map((trackId) => {
+    return state.milestoneByTrack[trackId]
   })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  // if (hashValues[17]) result.title = decodeURI(hashValues[17])
-  return result
+  return { pathname: '/', query: { quizResults: values.join(''), name: state.name} }
 }
 
 const coerceMilestone = (value: number): Milestone => {
@@ -131,14 +126,6 @@ const defaultState = (): CompanionQuizState => {
   }
 }
 
-const stateToHash = (state: CompanionQuizState) => {
-  if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map((trackId) => {
-    return state.milestoneByTrack[trackId]
-  }).concat(encodeURI(state.name))
-  return values.join(',')
-}
-
 type Props = {}
 
 class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
@@ -147,18 +134,8 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
     this.state = emptyState()
   }
 
-  componentDidUpdate() {
-    const hash = stateToHash(this.state)
-    if (hash) window.location.replace(`#${hash}`)
-  }
-
   componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
+    this.setState(defaultState())
   }
 
   render() {
@@ -309,7 +286,7 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
 
         </div>
 
-        <Link href={{ pathname: '/' }}>
+        <Link href={stateToPath(this.state)}>
           <div className='submit-button'>SUBMIT</div>
         </Link>
 
