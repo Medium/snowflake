@@ -5,7 +5,7 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import TrackDetail from '../components/TrackDetail'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import type { Milestone, MilestoneMap, TrackId, QuizResults } from '../constants'
 import React from 'react'
 import Link from 'next/link'
 
@@ -16,36 +16,22 @@ type SnowflakeAppState = {
   focusedTrackId: TrackId,
 }
 
-const hashToState = (hash: String): ?SnowflakeAppState => {
-  if (!hash) return null
+const quizResultToState = (props: QuizResults): ?SnowflakeAppState => {
+  if (!props) return null
   const result = defaultState()
-  const hashValues = hash.split('#')[1].split(',')
-  if (!hashValues) return null
-  trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
-  })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
-  return result
-}
-
-const coerceMilestone = (value: number): Milestone => {
-  // HACK I know this is goofy but i'm dealing with flow typing
-  switch(value) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 2
-    case 3: return 3
-    case 4: return 4
-    case 5: return 5
-    default: return 0
-  }
+  // const hashValues = hash.split('#')[1].split(',')
+  // if (!hashValues) return null
+  // trackIds.forEach((trackId, i) => {
+  //   result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
+  // })
+  // if (hashValues[16]) result.name = decodeURI(hashValues[16])
+  // if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  // return result
 }
 
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
-    title: '',
     milestoneByTrack: {
       'SELF': undefined,
       'TEAM': undefined,
@@ -58,48 +44,16 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
-  return {
-    name: 'Tyler Suderman',
-    title: 'Staff Engineer',
-    milestoneByTrack: {
-      'SELF': 3,
-      'TEAM': 1,
-      'PEERS': 2,
-      'SUPERIORS': 1,
-      'BUSINESS': 3,
-      'WORK/LIFE': 2
-    },
-    focusedTrackId: 'SELF'
-  }
-}
-
-const stateToHash = (state: SnowflakeAppState) => {
-  if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name))
-  return values.join(',')
-}
-
 type Props = {}
 
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = emptyState()
-  }
+    this.state = quizResultToState(this.props)
 
-  componentDidUpdate() {
-    // const hash = stateToHash(this.state)
-    // if (hash) window.location.replace(`#${hash}`)
-  }
-
-  componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
+    this.state = Object.assign(emptyState(), {
+      name: "test"
+    })
   }
 
   render() {

@@ -16,7 +16,7 @@ const stateToPath = (state: CompanionQuizState) => {
   const values = trackIds.map((trackId) => {
     return state.milestoneByTrack[trackId]
   })
-  return { pathname: '/', query: { quizResults: values.join(''), name: state.name} }
+  return { pathname: '/', query: { answerValues: values.join(''), name: state.name} }
 }
 
 const coerceMilestone = (value: number): Milestone => {
