@@ -17,17 +17,17 @@ function TrackSelector(props) {
     let displayRow = [];
     let displayArray = [];
 
-    trackIds.map(trackId => {
+    trackIds.map((trackId, i) => {
       displayRow.push(
         <TrackTile
-           trackId = {trackId}
-           focusedTrackId = {props.focusedTrackId}
-           milestoneByTrack = {props.milestoneByTrack}
-           setFocusedTrackIdFn = {props.setFocusedTrackIdFn}/>
+          trackId = {trackId}
+          focusedTrackId = {props.focusedTrackId}
+          milestoneByTrack = {props.milestoneByTrack}
+          setFocusedTrackIdFn = {props.setFocusedTrackIdFn}/>
       )
       if (displayRow.length === 2) {
         displayArray.push(
-          <tr>
+          <tr key={i}>
             {displayRow[0]}
             {displayRow[1]}
           </tr>

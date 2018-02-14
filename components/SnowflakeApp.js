@@ -19,14 +19,17 @@ type SnowflakeAppState = {
 const quizResultToState = (props: QuizResults): ?SnowflakeAppState => {
   if (!props) return null
   const result = defaultState()
-  // const hashValues = hash.split('#')[1].split(',')
-  // if (!hashValues) return null
-  // trackIds.forEach((trackId, i) => {
-  //   result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
-  // })
-  // if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  // if (hashValues[17]) result.title = decodeURI(hashValues[17])
-  // return result
+  // set answer values into returned state object
+  const milestoneValues = Array.from(props.answerValues.toString()).map(Number);
+  if (!milestoneValues) return null
+  trackIds.forEach((trackId, i) => {
+    result.milestoneByTrack[trackId] = milestoneValues[i]
+  })
+  // set inputted name into returned state object
+  if (!props.name) return null
+  result.name = props.name
+
+  return result
 }
 
 const emptyState = (): SnowflakeAppState => {
@@ -44,6 +47,22 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
+const defaultState = (): SnowflakeAppState => {
+  return {
+    name: 'Name Not Found',
+    title: '',
+    milestoneByTrack: {
+      'SELF': 2,
+      'TEAM': 2,
+      'PEERS': 2,
+      'SUPERIORS': 2,
+      'BUSINESS': 2,
+      'WORK/LIFE': 2
+    },
+    focusedTrackId: 'SELF'
+  }
+}
+
 type Props = {}
 
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
@@ -51,9 +70,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     super(props)
     this.state = quizResultToState(this.props)
 
-    this.state = Object.assign(emptyState(), {
-      name: "test"
-    })
+
   }
 
   render() {
@@ -120,7 +137,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             minWidth: '55%'}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
