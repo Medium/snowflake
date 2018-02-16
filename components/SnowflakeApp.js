@@ -17,18 +17,18 @@ type SnowflakeAppState = {
 }
 
 const quizResultToState = (props: QuizResults): ?SnowflakeAppState => {
-  if (!props) return null
   const result = defaultState()
+  if (!props || !props.answerValues || !props.name) return result
+
+  console.log(typeof Array.from(props.answerValues.toString()))
   // set answer values into returned state object
   const milestoneValues = Array.from(props.answerValues.toString()).map(Number);
-  if (!milestoneValues) return null
+  if (!milestoneValues) return result
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = milestoneValues[i]
   })
   // set inputted name into returned state object
-  if (!props.name) return null
   result.name = props.name
-
   return result
 }
 
@@ -49,15 +49,15 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Name Not Found',
+    name: 'Results Not Found',
     title: '',
     milestoneByTrack: {
-      'SELF': 2,
-      'TEAM': 2,
-      'PEERS': 2,
-      'SUPERIORS': 2,
-      'BUSINESS': 2,
-      'WORK/LIFE': 2
+      'SELF': undefined,
+      'TEAM': undefined,
+      'PEERS': undefined,
+      'SUPERIORS': undefined,
+      'BUSINESS': undefined,
+      'WORK/LIFE': undefined
     },
     focusedTrackId: 'SELF'
   }
@@ -102,7 +102,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           .name-display {
             font-size: 40px;
             height: 40px;
-            width: 350px;
+            width: 375px;
             line-height: 40px;
             font-weight: bold;
             border-bottom: 2px solid #ccc;
