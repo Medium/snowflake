@@ -18,6 +18,11 @@ export type MilestoneMap = {
   'WORK/LIFE': Milestone
 }
 
+export type QuizResults = {
+  'name': string,
+  'answerValues': number 
+}
+
 export const milestones = [0, 1, 2, 3]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
