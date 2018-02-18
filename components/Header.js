@@ -22,6 +22,7 @@ function Header(props: Props) {
       justifyContent: 'center'
     },
     title: {
+      zIndex:'-1',
       fontSize:'3.5em',
       fontFamily:'serif',
       fontWeight:'bold',
@@ -29,11 +30,20 @@ function Header(props: Props) {
       transitionTimingFunction: 'ease',
       transitionDuration : '.2s',
       color: `${ props.menuOpen ? '#fafafa' : '#000'}`,
+    },
+    openStyles: {
+      width:'920px',
+      marginLeft:'40px',
+      display:'flex',
+      justifyContent:'space-around',
+      'fontSize':'2.5em',
+      fontWeight:'bold'
     }
   }
   {
     // TODO: I need to get the Manager Companion line to tranition color as the other text slides right
   }
+
 	return (
     <div style={styles.headerContainer}>
       <Hamburger
@@ -42,7 +52,14 @@ function Header(props: Props) {
       </Hamburger>
       <div>
         <ul style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
-          <div style={{width:'920px', marginLeft:'40px', display:'flex', justifyContent:'space-around', 'fontSize':'2.5em', fontWeight:'bold'}}>
+          <div style={{width:'920px',
+              display:'flex',
+              justifyContent:'space-around',
+              'fontSize':'2.5em',
+              fontWeight:'bold',
+              transitionTimingFunction: 'ease',
+              transitionDuration : '.4s',
+              marginLeft:`${props.menuOpen ? '0px' : '-960px'}`}}>
             <li>Take Quiz</li>
             <li>Print Results</li>
           </div>
