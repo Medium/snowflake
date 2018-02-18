@@ -7,22 +7,45 @@ import Link from 'next/link'
 
 
 function Header(props: Props) {
-  const open = false;
-
-	const styles = {}
-
+	const styles = {
+    headerContainer: {
+      borderBottom: '2px solid #ccc',
+      borderTop: '2px solid #ccc',
+      margin: '20px auto',
+      display: 'flex',
+      alignItems: 'center'
+    },
+    titleContainer: {
+      width: '100%',
+      marginLeft: '-40px',
+      display:'flex',
+      justifyContent: 'center'
+    },
+    title: {
+      fontSize:'3.5em',
+      fontFamily:'serif',
+      fontWeight:'bold',
+      textAlign: 'center',
+      transitionTimingFunction: 'ease',
+      transitionDuration : '.2s',
+      color: `${ props.menuOpen ? '#fafafa' : '#000'}`,
+    }
+  }
+  {
+    // TODO: I need to get the Manager Companion line to tranition color as the other text slides right
+  }
 	return (
-    <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
-
+    <div style={styles.headerContainer}>
+      {props.menuOpen}
       <Hamburger
         isOpen={props.menuOpen}
         hamburgerClick={props.hamburgerClick}>
       </Hamburger>
-      <Link href={{ pathname: '/quiz' }}>
-        <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>
+      <div style={styles.titleContainer}>
+        <h1 style={styles.title}>
           Manager Companion
         </h1>
-      </Link>
+      </div>
     </div>
 	);
 };
