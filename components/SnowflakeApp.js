@@ -109,9 +109,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             padding-bottom: 5px;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
-        <Link href={{ pathname: '/quiz' }}>
-            <h1 className='title-text'>
+        <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
+          <Link href={{ pathname: '/quiz' }}>
+            <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>
               Manager Companion
             </h1>
           </Link>

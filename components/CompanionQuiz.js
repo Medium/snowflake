@@ -226,8 +226,8 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
         `}</style>
 
 
-        <div style={{margin: '19px auto 0', textAlign: 'center', width: '100%'}}>
-          <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3em', fontFamily:'serif', fontWeight:'bold'}}>Manager Companion</h1>
+        <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
+          <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>Manager Companion</h1>
         </div>
         <div style={{
           width: '45%'
@@ -238,13 +238,19 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
           <input
             type="text"
             className="name-input h1"
+            style={{borderBottom: `2px solid ${ this.state.nameInputted ? '#ccc' : '#000' }`}}
             placeholder='Your Name'
             autoFocus='autofocus'
             value={this.state.name}
-            onChange={e => this.setState({
-              name: e.target.value,
-              nameInputted: true,
-            })}
+            onChange={e => {
+              let newNameInputted = true
+              if (e.target.value === "") newNameInputted = false
+              console.log(newNameInputted)
+              this.setState({
+                name: e.target.value,
+                nameInputted: newNameInputted,
+              })
+            }}
           />
         </div>
         <div style={{
