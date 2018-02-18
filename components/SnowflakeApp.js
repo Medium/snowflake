@@ -1,7 +1,7 @@
 // @flow
 
-import Hamburger from '../components/Hamburger'
 import TrackSelector from '../components/TrackSelector'
+import Header from '../components/Header'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import TrackDetail from '../components/TrackDetail'
@@ -69,7 +69,7 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = Object.assign(quizResultToState(this.props), {open:false})
+    this.state = Object.assign(quizResultToState(this.props), {menuOpen:false})
   }
 
   render() {
@@ -108,21 +108,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             padding-bottom: 5px;
           }
         `}</style>
-        <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
-          <Hamburger
-              isOpen={this.state.open}
-              menuClicked={() => {
-                this.setState({
-                    open: !this.state.open
-                });
-              }}>
-          </Hamburger>
-          <Link href={{ pathname: '/quiz' }}>
-            <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>
-              Manager Companion
-            </h1>
-          </Link>
-        </div>
+        <Header
+          menuOpen={this.state.menuOpen}
+          hamburgerClick={this.handleHamburgerMenuClick.bind(this)}/>
         <div style={{display: 'flex',
           borderBottom: '2px solid #ccc',
           paddingBottom: '20px'
@@ -164,6 +152,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
       </main>
     )
+  }
+
+  handleHamburgerMenuClick() {
+    console.log("click");
+    this.setState({
+      menuOpen : !this.state.menuOpen
+    })
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {

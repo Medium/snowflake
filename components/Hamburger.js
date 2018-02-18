@@ -52,7 +52,7 @@ function HamburgerMenu(props: Props) {
 	};
 
 	return (
-		<div style={styles.container} onClick={props.menuClicked}>
+		<div style={styles.container} onClick={props.hamburgerClick}>
 		  <span style={Object.assign({}, styles.lineBase, styles.firstLine)}></span>
 		  <span style={Object.assign({}, styles.lineBase, styles.secondLine)}></span>
 		  <span style={Object.assign({}, styles.lineBase, styles.thirdLine)}></span>
