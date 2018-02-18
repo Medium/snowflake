@@ -36,11 +36,18 @@ function Header(props: Props) {
   }
 	return (
     <div style={styles.headerContainer}>
-      {props.menuOpen}
       <Hamburger
         isOpen={props.menuOpen}
         hamburgerClick={props.hamburgerClick}>
       </Hamburger>
+      <div>
+        <ul style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
+          <div style={{width:'920px', marginLeft:'40px', display:'flex', justifyContent:'space-around', 'fontSize':'2.5em', fontWeight:'bold'}}>
+            <li>Take Quiz</li>
+            <li>Print Results</li>
+          </div>
+        </ul>
+      </div>
       <div style={styles.titleContainer}>
         <h1 style={styles.title}>
           Manager Companion
