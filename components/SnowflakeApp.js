@@ -1,5 +1,6 @@
 // @flow
 
+import Hamburger from '../components/Hamburger'
 import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
@@ -68,9 +69,7 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = quizResultToState(this.props)
-
-
+    this.state = Object.assign(quizResultToState(this.props), {open:false})
   }
 
   render() {
@@ -110,6 +109,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
+          <Hamburger
+              isOpen={this.state.open}
+              menuClicked={() => {
+                this.setState({
+                    open: !this.state.open
+                });
+              }}>
+          </Hamburger>
           <Link href={{ pathname: '/quiz' }}>
             <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>
               Manager Companion
