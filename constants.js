@@ -370,9 +370,9 @@ export const tracks: Tracks = {
         "Writes effective technical specs outlining approach",
       ],
       "examples": [
-        "Wrote the technical spec for featured post images",
-        "Delivered stream item support for email digests",
-        "Delivered payment history dashboard",
+        "??? Wrote the technical spec for featured post images",
+        "Implemented rate an entry in the frontend",
+        "Delivered backend service to save user search history",
       ],
     }, {
       "summary": "Effectively delivers small personal projects",
@@ -382,9 +382,9 @@ export const tracks: Tracks = {
         "Defines and hits interim milestones",
       ],
       "examples": [
-        "Delivered promo editor",
-        "Delivered audio uploading for web client",
-        "Executed the recommends to claps backfill",
+        "??? Delivered promo editor",
+        "??? Delivered audio uploading for web client",
+        "??? Executed the recommends to claps backfill",
       ],
     }, {
       "summary": "Effectively delivers projects through a small team",
@@ -406,8 +406,8 @@ export const tracks: Tracks = {
         "Leverages recognition of repeated project patterns",
       ],
       "examples": [
-        "Oversaw technical delivery of Hightower",
-        "Managed infrastructure migration to VPC",
+        "??? Oversaw technical delivery of Hightower",
+        "??? Managed infrastructure migration to VPC",
         "Involved marketing, legal, and appropriate functions at project start",
       ],
     }, {
@@ -418,8 +418,8 @@ export const tracks: Tracks = {
         "Owns a key company metric",
       ],
       "examples": [
-        "Managed technical migration to SOA",
-        "Lead technical delivery of 10/7",
+        "Managed technical migration to microservice architecture",
+        "Lead technical integration of a feature affecting backend as well as mobile and web frontends",
         "Delivered multi-month engineering project on time",
       ],
     }],
@@ -437,9 +437,9 @@ export const tracks: Tracks = {
         "Asks for help at the appropriate juncture",
       ],
       "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
-        "Gave thoughtful check-in and check-out comments",
+        "??? Updated The Watch before running a backfill",
+        "Updated task status changes in Jira promptly",
+        "??? Gave thoughtful check-in and check-out comments",
       ],
     }, {
       "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
@@ -450,8 +450,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
-        "Spoke to domain experts before writing spec",
+        "Created cross-team Slack channel for telemarketing topic",
+        "Spoke to domain experts before writing code",
       ],
     }, {
       "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
@@ -462,8 +462,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
-        "Gave notice of upcoming related work in Eng Briefing",
+        "Gave a tech talk on React for engineers",
+        "Gave notice of upcoming related work in guild meeting",
       ],
     }, {
       "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
@@ -474,8 +474,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
+        "??? Wrote Medium's growth framework and rationale",
+        "Aligned the entire organization around ratings & reviews",
       ],
     }, {
       "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
@@ -485,7 +485,7 @@ export const tracks: Tracks = {
         "Develops and delivers plans to execs, the board, and outside investors",
       ],
       "examples": [
-        "Organized half year check-in company offsite",
+        "??? Organized half year check-in company offsite",
         "Created the communication plan for a large organizational change",
         "Presented to the board about key company metrics and projects",
       ],
@@ -504,8 +504,8 @@ export const tracks: Tracks = {
         "Writes clear comments and documentation",
       ],
       "examples": [
-        "Caught a bug on Hatch before it went live",
-        "Landed non-trivial PR with no caretaker comments",
+        "Caught a bug in the Android app before it got published",
+        "??? Landed non-trivial PR with no caretaker comments",
         "Wrote hermetic tests for the happy and sad cases",
       ],
     }, {
@@ -517,7 +517,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Requested tests for a PR when acting as reviewer",
-        "Reduced the number of zelda fitzgerald exceptions",
+        "Caught a bug in someone's PR",
         "Fixed a TODO for someone else in the codebase",
       ],
     }, {
@@ -528,9 +528,9 @@ export const tracks: Tracks = {
         "Adds tooling to improve code quality",
       ],
       "examples": [
-        "Improved PRB to run the same volume of tests faster",
-        "Simplified hermetic test data modification",
-        "Created fixture system for visual quality",
+        "??? Improved PRB to run the same volume of tests faster",
+        "??? Simplified hermetic test data modification",
+        "??? Created fixture system for visual quality",
       ],
     }, {
       "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
@@ -541,8 +541,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
-        "Defined and oversaw plan for closing Heartbleed vulnerability",
+        "??? Iterated repeatedly to develop Medium's underlines solution",
+        "??? Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
       "summary": "Enables and encourages the entire organization to make quality a central part of the development process",
@@ -552,9 +552,9 @@ export const tracks: Tracks = {
         "Secures time and resources from execs to support great quality",
       ],
       "examples": [
-        "Negotiated resources for Fix-It week with exec team",
-        "Instituted and ensured success of a 20% time policy",
-        "Started The Watch",
+        "??? Negotiated resources for Fix-It week with exec team",
+        "??? Instituted and ensured success of a 20% time policy",
+        "??? Started The Watch",
       ],
     }],
   },
@@ -566,14 +566,14 @@ export const tracks: Tracks = {
     "milestones": [{
       "summary": "Identifies opportunities for organizational change or product improvements",
       "signals": [
-        "Writes Hatch posts about improvement opportunities",
-        "Raises meaningful tensions in tactical meetings",
-        "Asks leadership team probing questions at FAM",
+        "??? Writes Hatch posts about improvement opportunities",
+        "??? Raises meaningful tensions in tactical meetings",
+        "??? Asks leadership team probing questions at FAM",
       ],
       "examples": [
-        "Wrote about problems with TTR on Hatch",
-        "Wrote about content policy problems on Hatch",
-        "Reported a site issue in Github",
+        "??? Wrote about problems with TTR on Hatch",
+        "??? Wrote about content policy problems on Hatch",
+        "??? Reported a site issue in Github",
       ],
     }, {
       "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
@@ -584,7 +584,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Advocated on own behalf for a change in role",
-        "Implemented flow typing for promises",
+        "??? Implemented flow typing for promises",
         "Audited web client performance in Chrome and proposed fixes",
       ],
     }, {
@@ -596,8 +596,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Defined style guide to resolve style arguments",
-        "Proposed and implemented at-mentions prototype",
-        "Implemented video for Android independently, unprompted",
+        "Submitted a PR to location-app as a backend engineer",
+        "Proposed and implemented a small improvement on search.ch, unprompted",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
@@ -607,9 +607,9 @@ export const tracks: Tracks = {
         "Instigates major new features, services, or architectures",
       ],
       "examples": [
-        "Created the interviewing rubric and booklet",
+        "Created the interviewing process and guidelines",
         "Implemented and secured support for native login",
-        "Migrated medium2 to mono repo and bazel",
+        "??? Migrated medium2 to mono repo and bazel",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the whole company",
@@ -619,9 +619,9 @@ export const tracks: Tracks = {
         "Changes complex organizational processes",
       ],
       "examples": [
-        "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "??? Migrated the organization from Holacracy",
+        "Built Android prototype and convinced execs to fund it",
+        "Convinced leadership and engineering org to move to kubernetes",
       ],
     }],
   },
