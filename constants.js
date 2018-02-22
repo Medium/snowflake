@@ -717,7 +717,7 @@ export const tracks: Tracks = {
         "Advocates for improved diversity and inclusion, and proposes ideas to help",
       ],
       "examples": [
-        "Defined Frankenmeeting structure for small team",
+        "Defined meeting structure for small team",
         "Improved Watch on-call rotation scheduling",
         "Defined standard channels for inter-team communication",
       ],
