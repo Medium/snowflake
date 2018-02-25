@@ -13,16 +13,16 @@ function Header(props: Props) {
       borderTop: '2px solid #ccc',
       margin: '20px auto',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+			height: '150px'
     },
     titleContainer: {
       width: '100%',
-      paddingRight: '-40px',
+      marginRight: '-40px',
       display:'flex',
       justifyContent: 'center'
     },
     title: {
-      zIndex:`${ props.menuOpen ? '-1' : 'auto'}`,
       fontSize:'3.5em',
       fontFamily:'serif',
       fontWeight:'bold',
@@ -46,6 +46,9 @@ function Header(props: Props) {
 
 			{ props.menuOpen ?
 				<style jsx>{`
+					li:hover {
+						cursor: pointer;
+					}
 					.navMenu div {
 						transition-timing-funciton: ease;
 						transition: color .4s;
@@ -53,37 +56,41 @@ function Header(props: Props) {
 					}
 					.titleContainer h1 {
 						z-index: -1;
-						color: #fcfcfc;
+						color: #fdfdfd;
 					}
 				`}</style>
 			:
-			<style jsx>{`
-				.navMenu div {
-					z-index: -1;
-					color: #fff;
-				}
-				.titleContainer h1 {
-					transition-timing-function: ease;
-					transition: .4s;
-					color: #000:
-				}
-			`}</style>
+				<style jsx>{`
+					.navMenu div {
+						z-index: -1;
+						color: #fff;
+					}
+					.titleContainer h1 {
+						transition-timing-function: ease;
+						transition: .4s;
+						color: #000:
+					}
+				`}</style>
 			}
-      <div>
-        <ul className='navMenu' style={{width: '0px', padding:'0px', margin:'0px', listStyle:'none'}}>
-          <div style={{width:'920px',
-              display:'flex',
-							flexDirection:'column',
-              justifyContent:'space-around',
-              'fontSize':'2.5em',
-              fontWeight:'bold',
-							textAlign:'right',
-							marginLeft:'-40px'}}>
-            <li className='navOption'>Take Quiz</li>
-            <li className='navOption'>Print Results</li>
-          </div>
-        </ul>
-      </div>
+			<ul className='navMenu' style={{width: '0px',
+				padding:'0px',
+				margin:'0px',
+				listStyle:'none',
+				height:'100%'}}>
+				<div style={{width:'920px',
+					minHeight:'100%',
+					display:'flex',
+					flexDirection:'column',
+					justifyContent:'space-evenly',
+					'fontSize':'2.5em',
+					fontWeight:'bold',
+					textAlign:'right',
+					marginLeft:'-40px'}}>
+
+					<Link Link href={{ pathname: '/quiz' }}><li className='navOption'>Take Quiz</li></Link>
+					<li className='navOption'>Print Results</li>
+				</div>
+			</ul>
       <div className='titleContainer' style={styles.titleContainer}>
         <h1 style={styles.title}>
           Manager Companion

@@ -53,10 +53,23 @@ function HamburgerMenu(props: Props) {
 	};
 
 	return (
-		<div style={styles.container} onClick={props.hamburgerClick}>
-		  <span style={Object.assign({}, styles.lineBase, styles.firstLine)}></span>
-		  <span style={Object.assign({}, styles.lineBase, styles.secondLine)}></span>
-		  <span style={Object.assign({}, styles.lineBase, styles.thirdLine)}></span>
+		<div className='hamWrapper' style={{
+			height:'60%',
+			width: '60px',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'flex-end'
+		}}>
+		<style jsx>{`
+			div.hamWrapper:hover {
+				cursor: pointer;
+			}
+			`}</style>
+			<div style={styles.container} onClick={props.hamburgerClick}>
+					<span style={Object.assign({}, styles.lineBase, styles.firstLine)}></span>
+					<span style={Object.assign({}, styles.lineBase, styles.secondLine)}></span>
+					<span style={Object.assign({}, styles.lineBase, styles.thirdLine)}></span>
+				</div>
 		</div>
 	);
 };
