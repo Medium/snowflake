@@ -22,14 +22,14 @@ function Header(props: Props) {
       justifyContent: 'center'
     },
     title: {
-      zIndex:'-1',
+      zIndex:`${ props.menuOpen ? '-1' : 'auto'}`,
       fontSize:'3.5em',
       fontFamily:'serif',
       fontWeight:'bold',
       textAlign: 'center',
       transitionTimingFunction: 'ease',
-      transitionDuration : '.2s',
-      color: `${ props.menuOpen ? '#fafafa' : '#000'}`,
+			transitionDuration: '.4s',
+      color: `${ props.menuOpen ? '#fff' : '#000'}`,
     },
     openStyles: {
       width:'920px',
@@ -46,22 +46,40 @@ function Header(props: Props) {
 
 	return (
     <div style={styles.headerContainer}>
+
+			{ props.menuOpen ?
+				<style jsx>{`
+					.navMenu div {
+						transition-timing-funciton: ease;
+						transition: color 1s;
+						color: #000;
+					}
+				`}</style>
+			:
+			<style jsx>{`
+				.navMenu div {
+					z-index: -1;
+					color: #fff;
+				}
+			`}</style>
+			}
+
       <Hamburger
         isOpen={props.menuOpen}
         hamburgerClick={props.hamburgerClick}>
+
       </Hamburger>
       <div>
-        <ul style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
-          <div style={{width:'920px',
+        <ul className='navMenu' style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
+          <div className='navMenuOveride' style={{width:'920px',
               display:'flex',
+							flexDirection:'column',
               justifyContent:'space-around',
               'fontSize':'2.5em',
               fontWeight:'bold',
-              transitionTimingFunction: 'ease',
-              transitionDuration : '.4s',
-              marginLeft:`${props.menuOpen ? '0px' : '-960px'}`}}>
-            <li>Take Quiz</li>
-            <li>Print Results</li>
+              marginLeft:'60px'}}>
+            <li className='navOption'>Take Quiz</li>
+            <li className='navOption'>Print Results</li>
           </div>
         </ul>
       </div>
