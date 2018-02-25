@@ -26,10 +26,7 @@ function Header(props: Props) {
       fontSize:'3.5em',
       fontFamily:'serif',
       fontWeight:'bold',
-      textAlign: 'center',
-      transitionTimingFunction: 'ease',
-			transitionDuration: '.4s',
-      color: `${ props.menuOpen ? '#fff' : '#000'}`,
+      textAlign: 'center'
     },
     openStyles: {
       width:'920px',
@@ -51,8 +48,12 @@ function Header(props: Props) {
 				<style jsx>{`
 					.navMenu div {
 						transition-timing-funciton: ease;
-						transition: color 1s;
+						transition: color .4s;
 						color: #000;
+					}
+					.titleContainer h1 {
+						z-index: -1;
+						color: #fff;
 					}
 				`}</style>
 			:
@@ -60,6 +61,11 @@ function Header(props: Props) {
 				.navMenu div {
 					z-index: -1;
 					color: #fff;
+				}
+				.titleContainer h1 {
+					transition-timing-function: ease;
+					transition: .4s;
+					color: #000:
 				}
 			`}</style>
 			}
@@ -71,7 +77,7 @@ function Header(props: Props) {
       </Hamburger>
       <div>
         <ul className='navMenu' style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
-          <div className='navMenuOveride' style={{width:'920px',
+          <div style={{width:'920px',
               display:'flex',
 							flexDirection:'column',
               justifyContent:'space-around',
@@ -83,7 +89,7 @@ function Header(props: Props) {
           </div>
         </ul>
       </div>
-      <div style={styles.titleContainer}>
+      <div className='titleContainer' style={styles.titleContainer}>
         <h1 style={styles.title}>
           Manager Companion
         </h1>
