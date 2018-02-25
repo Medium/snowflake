@@ -17,7 +17,7 @@ function Header(props: Props) {
     },
     titleContainer: {
       width: '100%',
-      marginLeft: '-40px',
+      paddingRight: '-40px',
       display:'flex',
       justifyContent: 'center'
     },
@@ -53,7 +53,7 @@ function Header(props: Props) {
 					}
 					.titleContainer h1 {
 						z-index: -1;
-						color: #fff;
+						color: #fcfcfc;
 					}
 				`}</style>
 			:
@@ -69,21 +69,16 @@ function Header(props: Props) {
 				}
 			`}</style>
 			}
-
-      <Hamburger
-        isOpen={props.menuOpen}
-        hamburgerClick={props.hamburgerClick}>
-
-      </Hamburger>
       <div>
-        <ul className='navMenu' style={{width: '0px', padding:'0px', margin:'0px', marginLeft:'-40px', listStyle:'none'}}>
+        <ul className='navMenu' style={{width: '0px', padding:'0px', margin:'0px', listStyle:'none'}}>
           <div style={{width:'920px',
               display:'flex',
 							flexDirection:'column',
               justifyContent:'space-around',
               'fontSize':'2.5em',
               fontWeight:'bold',
-              marginLeft:'60px'}}>
+							textAlign:'right',
+							marginLeft:'-40px'}}>
             <li className='navOption'>Take Quiz</li>
             <li className='navOption'>Print Results</li>
           </div>
@@ -94,6 +89,10 @@ function Header(props: Props) {
           Manager Companion
         </h1>
       </div>
+			<Hamburger
+        isOpen={props.menuOpen}
+        hamburgerClick={props.hamburgerClick}>
+      </Hamburger>
     </div>
 	);
 };

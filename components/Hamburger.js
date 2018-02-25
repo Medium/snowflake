@@ -11,7 +11,7 @@ function HamburgerMenu(props: Props) {
   const halfStrokeWidth = `-${strokeWidth / 2}px`
   const animationDuration = props.animationDuration || '0.4'
   const borderRadius = `2px`
-  const color = `${ isOpen ? '#ccc' : '#000' }`
+  const color = `#000`
 
 	const getTransformValue = (isOpen, defaultPos, rotateVal) => (
 		`translate3d(0,${isOpen ? halfHeight : defaultPos},0) rotate(${isOpen ? `${rotateVal}deg` : '0'})`
