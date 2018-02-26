@@ -96,10 +96,12 @@ function Header(props: Props) {
           Manager Companion
         </h1>
       </div>
-			<Hamburger
-        isOpen={props.menuOpen}
-        hamburgerClick={props.hamburgerClick}>
-      </Hamburger>
+			{props.menuOpen !== null &&
+				<Hamburger
+					isOpen={props.menuOpen}
+					hamburgerClick={props.hamburgerClick}>
+				</Hamburger>
+			}
     </div>
 	);
 };
