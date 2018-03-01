@@ -15,7 +15,6 @@ function QuestionsGrid({trackIds, tracks, handleMileStoneChangeFn}) {
         <div key={trackIndex} className='quiz-section'>
           <h1 className='quiz-section-heading'>{tracks[trackId].longDisplayName}</h1>
           <QuestionGroup
-
             trackId={trackId}
             trackIndex={trackIndex}
             questions={tracks[trackId].questions}

@@ -18,19 +18,6 @@ const stateToPath = (state: CompanionQuizState) => {
   return { pathname: '/', query: { answerValues: values.join(''), name: state.name} }
 }
 
-const coerceMilestone = (value: number): Milestone => {
-  // HACK I know this is goofy but i'm dealing with flow typing
-  switch(value) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 2
-    case 3: return 3
-    case 4: return 4
-    case 5: return 5
-    default: return 0
-  }
-}
-
 const emptyState = (): CompanionQuizState => {
   return {
     name: undefined,
@@ -242,13 +229,15 @@ class CompanionQuizApp extends React.Component<Props, CompanionQuizState> {
     return { pathname: '/', query: { answerValues: values.join(''), name: this.state.name} }
   }
 
-  hideShowQuizContent() {
-    if (this.state.nameInputted) {
-      return (
-        <p>this seems hella hacky</p>
-      )
-    }
-  }
+  // I want a method to be able to toggle quiz content after a name has been inputted
+
+  // hideShowQuizContent() {
+  //   if (this.state.nameInputted) {
+  //     return (
+  //       <p>this seems hella hacky</p>
+  //     )
+  //   }
+  // }
 }
 
 export default CompanionQuizApp

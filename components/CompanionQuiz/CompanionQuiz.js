@@ -3,10 +3,11 @@ import type { Tracks, Milestone, MilestoneMap, TrackId } from '../../constants'
 import Link from 'next/link'
 
 type Props = {
-  trackIds: Array,
   tracks: Array,
+  trackIds: Array,
   name: String,
   nameInputted: Boolean,
+  handleQuizSubmitFn: () => Object,
   handleNameChangeFn: () => void,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
@@ -17,7 +18,7 @@ function CompanionQuiz({trackIds, tracks, handleQuizSubmitFn, name, nameInputted
   function onNameChange() {
     handleNameChangeFn(_name.value)
   }
-  
+
   return (
     <div>
 
