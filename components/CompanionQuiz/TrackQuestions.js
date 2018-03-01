@@ -23,6 +23,15 @@ function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneCha
         borderBottom: '2px solid #ccc'
       }}>
 
+      <style jsx>{`
+        .answer-option {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1em;
+        }
+      `}</style>
+
       <div className='box'></div>
       <div className='box answer-option'><p>rarely</p></div>
       <div className='box answer-option'><p>sometimes</p></div>

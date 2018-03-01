@@ -169,40 +169,7 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             border-bottom: 2px solid #ccc;
             outline: 0;
           }
-          .box {
-            border-radius: 5px;
-            font-size: 150%;
-          }
-          .question-text {
-            font-size: 1em;
-          }
-          .answer-option {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1em;
-          }
-          .radio-input {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          input.radio-button {
-            position: absolute;
-            left: -9999px;
-            visibility :hidden;
-          }
-          input.radio-button + .check {
-            height: 22px;
-            width: 22px;
-            cursor: pointer;
-            border-radius: 100%;
-            border: 4px solid #000;
-          	transition: border .5s linear;
-          }
-          input[type=radio]:checked ~ .check {
-            background-color: #000;
-          }
+
           div.submit-button {
             display: flex;
             justify-content: center;
