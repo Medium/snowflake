@@ -14,7 +14,6 @@ function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneCha
   return (
     <div
       key={trackIndex}
-      className='quiz-questions'
       style={{
         display:'grid',
         gridTemplateColumns: '40% 20% 20% 20%',

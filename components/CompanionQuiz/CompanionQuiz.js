@@ -1,8 +1,8 @@
 // @flow
 
 import { tracks, trackIds, } from '../../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../../constants'
-import TrackQuestions from './TrackQuestions'
+import type { Tracks, Milestone, MilestoneMap, TrackId } from '../../constants'
+import QuestionsGrid from './QuestionsGrid'
 import React from 'react'
 import Link from 'next/link'
 
@@ -241,22 +241,9 @@ class CompanionQuiz extends React.Component<Props, CompanionQuizState> {
             // TODO: get rarely sometimes and usually to take on a fixed position on scroll
           }
         <div className='quiz-content'>
-
-          {trackIds.map((trackId, trackIndex) => {
-            return (
-              <div key={trackIndex} className='quiz-section'>
-                <h1 className='quiz-section-heading'>{tracks[trackId].longDisplayName}</h1>
-                <TrackQuestions
-                  trackId={trackId}
-                  trackIndex={trackIndex}
-                  questions={tracks[trackId].questions}
-                  handleTrackMilestoneChangeFn={(track, question, milestone) => this.handleTrackMilestoneChange(track, question, milestone)} />
-                </div>
-              )
-          }
-
-          )}
-
+          <QuestionsGrid
+              trackIds={trackIds}
+              tracks={tracks}/>
         </div>
 
         <Link href={stateToPath(this.state)}>
