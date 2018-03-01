@@ -1,11 +1,11 @@
 // @flow
 
-import TrackSelector from '../components/TrackSelector'
-import NightingaleChart from '../components/NightingaleChart'
-import KeyboardListener from '../components/KeyboardListener'
-import TrackDetail from '../components/TrackDetail'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import type { Milestone, MilestoneMap, TrackId, QuizResults } from '../constants'
+import TrackSelector from './TrackSelector'
+import NightingaleChart from './NightingaleChart'
+import KeyboardListener from './KeyboardListener'
+import TrackDetail from './TrackDetail'
+import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../../constants'
+import type { Milestone, MilestoneMap, TrackId, QuizResults } from '../../constants'
 import React from 'react'
 import Link from 'next/link'
 

@@ -1,4 +1,4 @@
-import type { QuestionsList, TrackId, Milestone } from '../constants'
+import type { QuestionsList, TrackId, Milestone } from '../../constants'
 
 type Props = {
   questionIndex: Number,

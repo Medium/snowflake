@@ -1,5 +1,3 @@
-import type { QuestionsList } from '../constants'
-
 type Props = {
   question: String,
 }

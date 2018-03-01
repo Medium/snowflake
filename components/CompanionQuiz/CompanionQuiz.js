@@ -1,8 +1,8 @@
 // @flow
 
-import { tracks, trackIds, } from '../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
-import TrackQuestions from '../components/TrackQuestions'
+import { tracks, trackIds, } from '../../constants'
+import type { Milestone, MilestoneMap, TrackId } from '../../constants'
+import TrackQuestions from './TrackQuestions'
 import React from 'react'
 import Link from 'next/link'
 

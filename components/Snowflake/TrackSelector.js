@@ -1,9 +1,9 @@
 // @flow
 
 import React from 'react'
-import TrackTile from '../components/TrackTile'
-import { trackIds, tracks, categoryColorScale } from '../constants'
-import type { MilestoneMap, TrackId } from '../constants'
+import TrackTile from './TrackTile'
+import { trackIds, tracks, categoryColorScale } from '../../constants'
+import type { MilestoneMap, TrackId } from '../../constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
