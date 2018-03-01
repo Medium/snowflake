@@ -6,10 +6,10 @@ type Props = {
   questions: QuestionsList,
   trackIndex: Number,
   trackId: String,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  handleMileStoneChangeFn: (TrackId, Milestone) => void
 }
 
-function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneChangeFn}) {
+function TrackQuestions({questions, trackIndex, trackId, handleMileStoneChangeFn}) {
   return (
     <div
       key={trackIndex}
@@ -56,7 +56,7 @@ function TrackQuestions({questions, trackIndex, trackId, handleTrackMilestoneCha
                   lineIndex={lineIndex}
                   trackIndex={trackIndex}
                   questionIndex={questionIndex}
-                  handleTrackMilestoneChangeFn={handleTrackMilestoneChangeFn}/>
+                  handleMileStoneChangeFn={handleMileStoneChangeFn}/>
               )
             }
           })

@@ -4,10 +4,11 @@ import QuestionGroup from './QuestionGroup'
 
 type Props = {
   trackIds: Array,
-  tracks: Tracks
+  tracks: Tracks,
+  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-function QuestionsGrid({trackIds, tracks}) {
+function QuestionsGrid({trackIds, tracks, handleMileStoneChangeFn}) {
   return (
     trackIds.map((trackId, trackIndex) => {
       return (
@@ -18,7 +19,7 @@ function QuestionsGrid({trackIds, tracks}) {
             trackId={trackId}
             trackIndex={trackIndex}
             questions={tracks[trackId].questions}
-            handleTrackMilestoneChangeFn={(track, question, milestone) => this.handleTrackMilestoneChange(track, question, milestone)} />
+            handleMileStoneChangeFn={(track, question, milestone) => handleMileStoneChangeFn(track, question, milestone)} />
           </div>
         )
       }
