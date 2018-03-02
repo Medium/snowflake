@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
+import { trackIds, milestones, tracks, categoryColorScale, milestoneToPoints } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 475
@@ -71,7 +71,7 @@ class NightingaleChart extends React.Component<Props> {
                 <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
                   {arcMilestones.map((milestone) => {
                     const isCurrentMilestone = isCurrentTrack && milestone == currentMilestoneId
-                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+                    const isMet = (milestoneToPoints(this.props.milestoneByTrack[trackId])) >= milestone || milestone == 0
                     return (
                       <path
                           key={milestone}
