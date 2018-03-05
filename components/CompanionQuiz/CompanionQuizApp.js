@@ -1,7 +1,7 @@
 // @flow
 
 import { tracks, trackIds, } from '../../constants'
-import type { Tracks, Milestone, MilestoneMap, TrackId } from '../../constants'
+import type { Tracks, Milestone, MilestoneMap, TrackId, answerValue } from '../../constants'
 import CompanionQuiz from './CompanionQuiz'
 import React from 'react'
 
@@ -16,53 +16,6 @@ const stateToPath = (state: CompanionQuizState) => {
     return state.milestoneByTrack[trackId]
   })
   return { pathname: '/', query: { answerValues: values.join(''), name: state.name} }
-}
-
-const emptyState = (): CompanionQuizState => {
-  return {
-    name: undefined,
-    nameInputted: false,
-    milestoneMatrix: {
-      'SELF': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      },
-      'TEAM': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      },
-      'PEERS': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      },
-      'SUPERIORS': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      },
-      'BUSINESS': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      },
-      'WORK/LIFE': {
-        '0': 0,
-        '1': 0,
-        '2': 0,
-      }
-    },
-    milestoneByTrack: {
-      'SELF': undefined,
-      'TEAM': undefined,
-      'PEERS': undefined,
-      'SUPERIORS': undefined,
-      'BUSINESS': undefined,
-      'WORK/LIFE': undefined
-    }
-  }
 }
 
 const defaultState = (): CompanionQuizState => {
@@ -117,11 +70,7 @@ type Props = {}
 class CompanionQuizApp extends React.Component<Props, CompanionQuizState> {
   constructor(props: Props) {
     super(props)
-    this.state = emptyState()
-  }
-
-  componentDidMount() {
-    this.setState(defaultState())
+    this.state = defaultState()
   }
 
   render() {

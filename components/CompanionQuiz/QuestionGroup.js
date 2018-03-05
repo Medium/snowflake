@@ -10,6 +10,9 @@ type Props = {
 }
 
 function TrackQuestions({questions, trackIndex, trackId, handleMileStoneChangeFn}) {
+
+  const answerOptions = ['rarely', 'sometimes', 'usually'];
+
   return (
     <div
       key={trackIndex}

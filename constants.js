@@ -20,7 +20,7 @@ export type MilestoneMap = {
 
 export type QuizResults = {
   'name': string,
-  'answerValues': number 
+  'answerValues': number
 }
 
 export const milestones = [0, 1, 2, 3]
