@@ -1,4 +1,4 @@
-import type { Tracks, TrackId } from '../../constants'
+import type { Tracks, TrackId } from '../constants'
 import QuestionGroup from './QuestionGroup'
 
 

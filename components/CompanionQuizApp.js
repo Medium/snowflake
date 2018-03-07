@@ -1,7 +1,7 @@
 // @flow
 
-import { tracks, trackIds, } from '../../constants'
-import type { Tracks, Milestone, MilestoneMap, TrackId, answerValue } from '../../constants'
+import { tracks, trackIds, } from '../constants'
+import type { Tracks, Milestone, MilestoneMap, TrackId, answerValue } from '../constants'
 import CompanionQuiz from './CompanionQuiz'
 import React from 'react'
 

@@ -1,4 +1,4 @@
-import CompanionQuizApp from '../components/CompanionQuiz/CompanionQuizApp'
+import CompanionQuizApp from '../components/CompanionQuizApp'
 
 export default () => <div>
   <CompanionQuizApp />

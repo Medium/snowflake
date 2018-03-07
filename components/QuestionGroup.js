@@ -1,4 +1,4 @@
-import type { QuestionsList, TrackId, Milestone } from '../../constants'
+import type { QuestionsList, TrackId, Milestone } from '../constants'
 import QuestionLine from './QuestionLine'
 import RadioInputLine from './RadioInputLine'
 

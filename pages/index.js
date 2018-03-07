@@ -1,4 +1,4 @@
-import SnowflakeApp from '../components/Snowflake/SnowflakeApp'
+import SnowflakeApp from '../components/SnowflakeApp'
 
 export default ({ url: { query: { name, answerValues} } }) => {
   return (

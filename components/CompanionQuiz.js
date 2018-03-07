@@ -1,5 +1,5 @@
 import QuestionsGrid from './QuestionsGrid'
-import type { Tracks, Milestone, MilestoneMap, TrackId } from '../../constants'
+import type { Tracks, Milestone, MilestoneMap, TrackId } from '../constants'
 import Link from 'next/link'
 
 type Props = {
