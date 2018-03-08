@@ -9,7 +9,7 @@ type Props = {
   handleMileStoneChangeFn: (TrackId, Milestone) => void
 }
 
-function TrackQuestions({questions, trackIndex, trackId, handleMileStoneChangeFn}) {
+function QuestionGroup({questions, trackIndex, trackId, handleMileStoneChangeFn}) {
 
   const answerOptions = ['rarely', 'sometimes', 'usually'];
 
@@ -70,4 +70,4 @@ function TrackQuestions({questions, trackIndex, trackId, handleMileStoneChangeFn
   )
 }
 
-export default TrackQuestions
+export default QuestionGroup

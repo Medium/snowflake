@@ -1,10 +1,11 @@
 // @flow
 
-import TrackSelector from './TrackSelector'
-import NightingaleChart from './NightingaleChart'
-import KeyboardListener from './KeyboardListener'
-import TrackDetail from './TrackDetail'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import TrackSelector from '../components/TrackSelector'
+import Header from '../components/Header'
+import NightingaleChart from '../components/NightingaleChart'
+import KeyboardListener from '../components/KeyboardListener'
+import TrackDetail from '../components/TrackDetail'
+import { eligibleTitles, trackIds } from '../constants'
 import type { Milestone, MilestoneMap, TrackId, QuizResults } from '../constants'
 import React from 'react'
 import Link from 'next/link'
@@ -68,9 +69,7 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
-    this.state = quizResultToState(this.props)
-
-
+    this.state = Object.assign(quizResultToState(this.props), {menuOpen:false})
   }
 
   render() {
@@ -109,13 +108,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             padding-bottom: 5px;
           }
         `}</style>
-        <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
-          <Link href={{ pathname: '/quiz' }}>
-            <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>
-              Manager Companion
-            </h1>
-          </Link>
-        </div>
+        <Header
+          menuOpen={this.state.menuOpen}
+          hamburgerClick={this.handleHamburgerMenuClick.bind(this)}/>
         <div style={{display: 'flex',
           borderBottom: '2px solid #ccc',
           paddingBottom: '20px'
@@ -159,14 +154,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     )
   }
 
+  handleHamburgerMenuClick() {
+    console.log("click");
+    this.setState({
+      menuOpen : !this.state.menuOpen
+    })
+  }
+
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
 
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   shiftFocusedTrack(delta: number) {
@@ -188,12 +187,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
-  }
-
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
   }
 }
 

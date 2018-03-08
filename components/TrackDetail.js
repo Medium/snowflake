@@ -11,6 +11,7 @@ type Props = {
 }
 
 class TrackDetail extends React.Component<Props> {
+
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
@@ -53,7 +54,7 @@ class TrackDetail extends React.Component<Props> {
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
-              {milestones.slice().reverse().map((milestone) => {
+              {milestones.slice(1).reverse().map((milestone) => {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>

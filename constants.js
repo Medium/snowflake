@@ -26,26 +26,20 @@ export type QuizResults = {
 export const milestones = [0, 1, 2, 3]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 6
-    default: return 0
-  }
+  return Math.floor(milestone/3);
 }
 
-export const pointsToLevels = {
-  '0': '1.1',
-  '5': '1.2',
-  '11': '1.3',
-  '17': '2.1',
-  '23': '2.2',
-  '29': '2.3',
-  '36': '3.1'
-}
+// export const pointsToLevels = {
+//   '0': '1.1',
+//   '5': '1.2',
+//   '11': '1.3',
+//   '17': '2.1',
+//   '23': '2.2',
+//   '29': '2.3',
+//   '36': '3.1'
+// }
 
-export const maxLevel = 36
+// export const maxLevel = 36
 
 export type Track = {
   shortDisplayName: string,
@@ -518,23 +512,23 @@ export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
   return set
 }, new Set())
 
-export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
-  let pointsByCategory = new Map()
-  trackIds.forEach((trackId) => {
-    const milestone = milestoneMap[trackId]
-    const categoryId = tracks[trackId].category
-    let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
-  })
-  return Array.from(categoryIds.values()).map(categoryId => {
-    const points = pointsByCategory.get(categoryId)
-    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
-  })
-}
+// export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
+//   let pointsByCategory = new Map()
+//   trackIds.forEach((trackId) => {
+//     const milestone = milestoneMap[trackId]
+//     const categoryId = tracks[trackId].category
+//     let currentPoints = pointsByCategory.get(categoryId) || 0
+//     pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+//   })
+//   return Array.from(categoryIds.values()).map(categoryId => {
+//     const points = pointsByCategory.get(categoryId)
+//     return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
+//   })
+// }
 
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
-    .reduce((sum, addend) => (sum + addend), 0)
+// export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+//   trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
+//     .reduce((sum, addend) => (sum + addend), 0)
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
