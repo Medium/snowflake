@@ -26,6 +26,42 @@ function CompanionQuiz({trackIds, tracks, handleQuizSubmitFn, name, nameInputted
 
   return (
     <div>
+      <style jsx>{`
+        .name-input {
+          border: none;
+          display: block;
+          font-size: 40px;
+          height: 40px;
+          width: 350px;
+          line-height: 40px;
+          font-weight: bold;
+          padding-top: .67em;
+          padding-bottom: 5px;
+        }
+        .name-input:hover, .name-input:focus {
+          outline: 0;
+        }
+
+        div.submit-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 5px;
+          font-size: 40px;
+          width: 150px;
+          min-height: 50px;
+          border: 5px solid #000;
+          padding: 10px 20px;
+          transition: background-color .5s ease;
+          margin: 50px auto;
+        }
+        div.submit-button:hover {
+          background-color: #202020;
+          color: #fff;
+          cursor: pointer;
+        }
+      `}</style>
       <div style={{
         width: '45%'
         }}>
