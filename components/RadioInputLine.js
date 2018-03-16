@@ -38,7 +38,7 @@ function RadioInputLine({questionIndex, lineIndex, trackIndex, trackId, handleMi
       `}</style>
       <label
           htmlFor={`input-${trackIndex}${questionIndex}${lineIndex}`}
-          onClick={() => handleMileStoneChangeFn(trackId, questionIndex, lineIndex-1)}>
+          onClick={() => handleMileStoneChangeFn(trackId, questionIndex, lineIndex)}>
         <input
             id={`input-${trackIndex}${questionIndex}${lineIndex}`}
             type="radio"
