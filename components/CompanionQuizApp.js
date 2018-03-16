@@ -3,6 +3,7 @@
 import { tracks, trackIds, } from '../constants'
 import type { Tracks, Milestone, MilestoneMap, TrackId, answerValue } from '../constants'
 import CompanionQuiz from './CompanionQuiz'
+import Header from '../components/Header'
 import React from 'react'
 
 type CompanionQuizState = {
@@ -128,9 +129,7 @@ class CompanionQuizApp extends React.Component<Props, CompanionQuizState> {
         `}</style>
 
 
-        <div style={{margin: '25px auto 0', textAlign: 'center', width: '100%'}}>
-          <h1 style={{marginTop: 0, paddingBottom: 20, borderBottom: '2px solid #ccc', fontSize:'3.5em', fontFamily:'serif', fontWeight:'bold', height:'80px'}}>Manager Companion</h1>
-        </div>
+        <Header menuOpen={null}/>
 
         <CompanionQuiz
           tracks={tracks}
