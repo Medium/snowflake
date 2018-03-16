@@ -1,37 +1,20 @@
-# Snowflake
+# Manager Companion
 
-Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
-about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
-Our growth tool is hosted [publicly](https://snowflake.medium.com).
+Manager companion is an app created by Sean Conner and Tyler Suderman using [Medium's open source growth framework visualizer](https://snowflake.medium.com).
 
-![The Lannisters send their regards](https://i.imgur.com/e9DYLBr.png)
+![](http://g.recordit.co/4O6lyQJn1N.gif)
 
-## Contributions
+## Spin it up to take a look!
 
-You are free to use, change and build on this work to make it useful for your organisation. We will happily consider
-unencumbered code contributions to improve functionality, but as this is the actual tool we use within Medium, acceptance is likely to be intentional, and deliberate. Meaning, slow. As such, you may prefer to fork the codebase for your own needs. We will not accept any contributions that modify the text of the application (but, thank you in advance for pointing out any typos).
+The following instructions require that you have NodeJS installed on your machine. If you don't have NodeJS yet follow along with [this resource](https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js).
 
-## Installation
-
-Get yarn if you don’t have it already:
-
-`npm install -g yarn`
-
-Install dependencies:
-
-`yarn`
-
-### Running the dev server
-
-`yarn dev`
-
-### Building
-
-`yarn export`
-
-This will put a static version of the site in `out/`.
-
-## Future work
-
-* Load initial data from a file, to improve flexibility.
-* Add restricted job title selection and validation.
+1. Open the terminal on your computer
+2. On a mac, run the following commands:
+```
+cd ~/Desktop
+git clone https://github.com/tcsuder/snowflake manager-companion
+cd manager-companion
+npm install
+npm run dev
+```
+3. In your chrome browser navigate to `http://localhost:3000/`

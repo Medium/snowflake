@@ -10,7 +10,8 @@ type Props = {
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 }
 
-class Track extends React.Component<Props> {
+class TrackDetail extends React.Component<Props> {
+
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
@@ -48,12 +49,12 @@ class Track extends React.Component<Props> {
             line-height: 1.5em;
           }
         `}</style>
-        <h2>{track.displayName}</h2>
+        <h2>{track.shortDisplayName}</h2>
         <p className="track-description">{track.description}</p>
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
-              {milestones.slice().reverse().map((milestone) => {
+              {milestones.slice(1).reverse().map((milestone) => {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>
@@ -89,4 +90,4 @@ class Track extends React.Component<Props> {
   }
 }
 
-export default Track
+export default TrackDetail
