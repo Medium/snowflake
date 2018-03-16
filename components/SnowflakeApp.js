@@ -21,8 +21,7 @@ const quizResultToState = (props: QuizResults): ?SnowflakeAppState => {
   const result = defaultState()
   if (!props || !props.answerValues || !props.name) return result
 
-  console.log(typeof Array.from(props.answerValues.toString()))
-  // set answer values into returned state object
+   // set answer values into returned state object
   const milestoneValues = Array.from(props.answerValues.toString()).map(Number);
   if (!milestoneValues) return result
   trackIds.forEach((trackId, i) => {
@@ -155,7 +154,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   handleHamburgerMenuClick() {
-    console.log("click");
     this.setState({
       menuOpen : !this.state.menuOpen
     })

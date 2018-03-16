@@ -10,7 +10,6 @@ type Props = {
 }
 
 function Box(props) {
-  console.log(props);
 
   if(props.quesion) {
     return (
