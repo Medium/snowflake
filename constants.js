@@ -93,135 +93,90 @@ export const tracks: Tracks = {
   "MOBILE": {
     "displayName": "Mobile",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
-    "milestones": [{
-      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
-      "signals": [
-        "Delivers features requiring simple local modifications",
-        "Adds simple actions that call server endpoints",
-        "Reuses existing components appropriately",
-      ],
-      "examples": [
-        "Added existing button to a different iOS surface",
-        "Add follow button for publications on Android",
-        "Fetched and displayed a new stream, using existing stream item styles",
-      ],
-    }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
-      "signals": [
-        "Defines new useful and appropriate proto-generated objects",
-        "Creates simple new activities on Android",
-        "Migrates code from old patterns to new patterns",
-      ],
-      "examples": [
-        "Upgraded SDWebImage to a new major version",
-        "Added support for rendering a new type of stream item",
-        "Prototyped a simple new feature quickly",
-      ],
-    }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
-      "signals": [
-        "Implements complex features with a large product surface area",
-        "Works effectively with  Android reactive programming framework",
-        "Adds support for new iOS features after a major iOS version upgrade",
-      ],
-      "examples": [
-        "Designed iOS caching strategy for offline reading",
-        "Built series reader on Android",
-        "Informed the team about recent best practice changes and deprecations",
-      ],
-    }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
-      "signals": [
-        "Pioneers architecture migration strategies that reduce programmer burden",
-        "Fixes subtle memory management issues",
-        "Implements interactive dismissals that bring delight",
-      ],
-      "examples": [
-        "Upgraded CocoaPods to a new major version",
-        "Designed architecture for fetching and rendering stream items",
-        "Migrated Android persistance layer to reactive programming",
-      ],
-    }, {
-      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
-      "signals": [
-        "Defines long-term goals and ensures active projects are in service of them",
-        "Designs and builds innovative, industry-leading UI interactions",
-        "Invents new techniques to responsibly stretch limits of the Android platform",
-      ],
-      "examples": [
-        "Defined and drove complete migration plan to Swift or Kotlin",
-        "Implemented Android recycler views before platform support existed",
-        "Pioneered application-level abstractions for multi-app environment",
-      ],
-    }],
-  },
-
-  "WEB_CLIENT": {
-    "displayName": "Web client",
-    "category": "A",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
-    "milestones": [{
-      "summary": "Works effectively within established web client architectures, following current best practices",
-      "signals": [
-        "Makes minor modifications to existing screens",
-        "Fixes simple design quality issues",
-        "Uses CSS appropriately, following style guide",
-      ],
-      "examples": [
-        "Implemented sticky footer on the post page",
-        "Hooked up the action to dismiss a post from a stream",
-        "Built PaymentHistory screen using ResponseScreen",
-      ],
-    }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
-      "signals": [
-        "Makes sensible abstractions based on template and code patterns",
-        "Specs and builds interactive components independently",
-        "Prototypes simple new features quickly",
-      ],
-      "examples": [
-        "Built credit card input component",
-        "Created shared buttons template",
-        "Built modal system",
-      ],
-    }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
-      "signals": [
-        "Provides useful design feedback and suggests feasible alternatives",
-        "Performs systemic tasks to significantly minimise bundle size",
-        "Acts a caretaker for all of web client code",
-      ],
-      "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
-        "Designed and implemented ResponseScreen",
-      ],
-    }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
-      "signals": [
-        "Pioneers architecture migrations that reduce programmer burden",
-        "Implements complex UI transitions that bring delight",
-        "Makes architectural decisions that eliminate entire classes of bugs",
-      ],
-      "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
-        "Designed and pioneered proto-based model storage",
-      ],
-    }, {
-      "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
-      "signals": [
-        "Invents new techniques to innovate and overcome browser constraints",
-        "Identifies and solved systemic problems with current architecture",
-        "Defines a long-term vision for web client and ensures projects are in service of it",
-      ],
-      "examples": [
-        "Invented CSS in JS",
-        "Defined and drove migration strategy to Lite",
-        "Implemented unidirectional data flow to completion",
-      ],
-    }],
+    "description": "Executes assigned responsibilities in an effective and timely manner. Finds balance between what is ideal and what is optimal under present constraints.",
+    "milestones": [
+      {
+        "summary": "Works effectively within established iOS, Android or Hybrid architectures, adding minor improvements and following current best practices.",
+        "signals": [
+          "Understands the basics of UI components and their hierarchy for at least one platform, efficiently distinguishes which UI component should be used at the right time",
+          "Delivers simple features that don't require major changes in the UI and app flow",
+          "Understands the basics of UI thread and avoids blocking operations",
+          "Reuses existing UI components appropriately",
+          "Follows project architecture and doesn't reinvent the wheel",
+          "Follows projects best practices",
+          "Tests code before sending pull requests and avoids breaking the CI unit tests",
+          "Understands algorithms and data structure concepts"
+        ],
+        "examples": [
+          "Creates simple new Activities on Android",
+          "Adds a field to a form in the UI",
+          "Changes the color of a button",
+          "Knows and uses HTTP clients framemworks",
+          "Replicates the like UI component in other areas of the app",
+          "Follows source formatting patterns",
+          "Follows project structure organization",
+          "Makes HTTP requests to web services in an asynchronous way"
+        ]
+      },
+      {
+        "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints and their architectures.",
+        "signals": [
+          "Applies and refactors to existing code patterns and architectures ",
+          "Understands each platform's lifecycle and uses it efficiently ",
+          "Delivers complex features that require major changes in the UI or app architecture",
+          "Is aware of platform new version updates and can apply changes to projects",
+          "Delivers changes that require few modifications by the reviewer",
+          "Is able to monitor performance analysis and can find memory leaks",
+          "Uses components that performs better than others in different contexts"
+        ],
+        "examples": [
+          "Sends a pull request that only requires source formatting and no major change in the code or architecture",
+          "Changes a project to use MVVM in replacement of MVC",
+          "Applies a new library to several parts of a project",
+          "Saves and restores Activities states in the right lifecycle methods",
+          "Adds support for new Swift language features after a major iOS version upgrade",
+          "Uses iOS Instruments to detect memory leaks",
+          "Knows the different RecyclerView and ListView and their impact in the app's performance"
+        ]
+      },
+      {
+        "summary": "Builds complex, reusable architectures that bring best practices and enable engineers to work more effectively.",
+        "signals": [
+          "Works effectively with Reactive Programming paradigm",
+          "Pioneers architecture migration strategies that reduce programmer burden",
+          "Has deep knowledge of memory and thread management",
+          "Creates reusable cross-project libraries",
+          "Creates patterns and best practices that can be applied to several projects",
+          "Creates delightful UIs, interactions, animations that blow up the designer's minds"
+        ],
+        "examples": [
+          "Creates source formatting  and project structure conventions",
+          "Uses RxJava effectively",
+          "Benchmarks dependency injection frameworks and decides which one should be used by all mobile projects",
+          "Creates the Mobile SDK",
+          "Creates the Screens project"
+        ]
+      },
+      {
+        "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team.",
+        "signals": [
+          "Defines long-term goals and ensures active projects are in service of them",
+          "Designs and builds innovative, industry-leading UI interactions that can used by projects outside the compahy",
+          "Invents new techniques to responsibly stretch limits of a mobile platform",
+          "Be a committer to a large mobile platform, language or library",
+          "Participates on standards definition committees ",
+          "Is a technical reference to the open source community"
+        ],
+        "examples": [
+          "Defined and drove complete migration plan to Swift or Kotlin",
+          "Implemented Android recycler views before platform support existed",
+          "Sends a pull request to Retrofit",
+          "Is a member of Kotlin Language Committee",
+          "Has many points in Stackoverflow",
+          "Is the maintainer of a GitHub project that has hundreds of stars"
+        ]
+      }
+    ]
   },
 
   "FOUNDATIONS": {
