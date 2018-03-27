@@ -178,70 +178,76 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Web client",
+    "displayName": "Frontend",
     "category": "A",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
-        "Makes minor modifications to existing screens",
-        "Fixes simple design quality issues",
-        "Uses CSS appropriately, following style guide",
+        "Understand the basics of the HTTP protocol and RESTful services",
+        "Can fix simple bugs",
+        "Use effectively 3rd party frameworks",
+        "Eager to learn new things and apply this knowledge on day by day",
+        "Analyze performance issues",
+        "Keep code maintanable",
+        "Practice Test Driven Development",
+        "Follow project's best practices",
+        "Fix minor visual issues",
+        "Run quality assurance tools before sending pull requests",
+        "Know how to use developer tools and tasks automation",
+        "Find the root cause of bug by debugging the code",
+        "Has a good knowledge of Object Oriented and Functional Programming",
+        "Use version control tools",
+        "Follow UI patterns established by designers"
       ],
       "examples": [
-        "Implemented sticky footer on the post page",
-        "Hooked up the action to dismiss a post from a stream",
-        "Built PaymentHistory screen using ResponseScreen",
-      ],
-    }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+        "Choose the correct HTTP method to use depending on the circumstances",
+        "Fix wrong UI colors, elements alignment, font size, etc",
+        "Can debug Liferay",
+        "Can debug Liferay",
+        "Follow patterns defined in Lexicon and Clay, reuse their components"
+      ]
+    },
+    {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture\n",
       "signals": [
-        "Makes sensible abstractions based on template and code patterns",
-        "Specs and builds interactive components independently",
-        "Prototypes simple new features quickly",
+        "Implement new features from scratch",
+        "Comfortable with the pattern and structure of projects",
+        "Care about user experience and usability when creating views and APIs",
+        "Has good knowledge of browser rendering, render tree, CSS inheritance",
+        "Have some sense of performance issues",
+        "Implement UIs with high fidelity to what has been created by designers",
+        "Write code that is easy to understand and with quality",
+        "Create UI components that can be reused in other places by extending existing components",
+        "Review code from others, suggesting changes and improvements",
+        "Make changes that require few corrections during code review by reviewer",
+        "Write code with good test coverage",
+        "Automate day to day tasks",
+        "Make changes that have noticeable impact in products",
+        "Care about end-users when implementing features",
+        "Understand the needs of the product owner and translate them to code",
+        "Work side by side with designers",
+        "Have a good knowledge of the stack used by projects",
+        "Create unit tests"
       ],
       "examples": [
-        "Built credit card input component",
-        "Created shared buttons template",
-        "Built modal system",
-      ],
-    }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
-      "signals": [
-        "Provides useful design feedback and suggests feasible alternatives",
-        "Performs systemic tasks to significantly minimise bundle size",
-        "Acts a caretaker for all of web client code",
-      ],
-      "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
-        "Designed and implemented ResponseScreen",
-      ],
-    }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
-      "signals": [
-        "Pioneers architecture migrations that reduce programmer burden",
-        "Implements complex UI transitions that bring delight",
-        "Makes architectural decisions that eliminate entire classes of bugs",
-      ],
-      "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
-        "Designed and pioneered proto-based model storage",
-      ],
-    }, {
-      "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
-      "signals": [
-        "Invents new techniques to innovate and overcome browser constraints",
-        "Identifies and solved systemic problems with current architecture",
-        "Defines a long-term vision for web client and ensures projects are in service of it",
-      ],
-      "examples": [
-        "Invented CSS in JS",
-        "Defined and drove migration strategy to Lite",
-        "Implemented unidirectional data flow to completion",
-      ],
-    }],
+        "Implement the drag and drop feature for Forms",
+        "Create a new class based on a well known pattern",
+        "Create reusable UI components like buttons, modals, dropdowns, etc, avoiding duplication of code",
+        "Implement a view that doesn't require many changes after reviewed by the designer",
+        "Send pull request that doesn't require major changes from the reviewer"
+      ]
+    },
+    {
+      "summary": "",
+      "signals": [],
+      "examples": []
+    },
+    {
+      "summary": "",
+      "signals": [],
+      "examples": []
+    }]
   },
 
   "FOUNDATIONS": {
