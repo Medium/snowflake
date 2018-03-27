@@ -1,20 +1,20 @@
 // @flow
 export default () => (
-  <div class="aui">
+  <div className="aui">
     <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <symbol id="caret" viewBox="0 0 7 12">
-        <polyline fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="1.211,1 6.07,5.86 0.93,11 "></polyline>
+        <polyline fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" points="1.211,1 6.07,5.86 0.93,11 "></polyline>
       </symbol>
       <symbol id="closeIcon" viewBox="0 0 25.102 25.145">
-        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" d="M24.573 24.614L.53.572M.53 24.572L24.573.53"></path>
+        <path fill="none" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" d="M24.573 24.614L.53.572M.53 24.572L24.573.53"></path>
       </symbol>
       <symbol id="defaultUserIcon" viewBox="0 0 31.5 31.5">
-        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" d="M7.65 28.183c.47-2.558 2.126-4.7 4.377-5.84l-.09-.627c-2.383-1.33-3.993-3.877-3.993-6.798 0-4.297 3.483-7.78 7.78-7.78 4.294 0 7.776 3.483 7.776 7.78 0 2.888-1.573 5.408-3.91 6.75l-.157.677c2.317 1.17 4.008 3.41 4.416 6.074"></path>
-        <circle fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" cx="15.75" cy="15.75" r="15"></circle>
+        <path fill="none" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" d="M7.65 28.183c.47-2.558 2.126-4.7 4.377-5.84l-.09-.627c-2.383-1.33-3.993-3.877-3.993-6.798 0-4.297 3.483-7.78 7.78-7.78 4.294 0 7.776 3.483 7.776 7.78 0 2.888-1.573 5.408-3.91 6.75l-.157.677c2.317 1.17 4.008 3.41 4.416 6.074"></path>
+        <circle fill="none" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" cx="15.75" cy="15.75" r="15"></circle>
         <path fill="none" d="M0 0h31.5v31.5H0z"></path>
       </symbol>
       <symbol id="externalLinkIcon" viewBox="0 0 10 10">
-        <path stroke="currentColor" stroke-width="1.5" fill="none" d="M8.5 1.5l-8 8M8.996 6.997V1H3"></path>
+        <path stroke="currentColor" strokeWidth="1.5" fill="none" d="M8.5 1.5l-8 8M8.996 6.997V1H3"></path>
       </symbol>
       <symbol id="facebookSocialIcon" viewBox="0 0 20 20">
         <path d="M18.9 0H1.1C.5 0 0 .5 0 1.1v17.8c0 .6.5 1.1 1.1 1.1h9.6v-7.7H8.1v-3h2.6V7c0-2.6 1.6-4 3.9-4 1.1 0 2.1.1 2.3.1v2.7h-1.6c-1.3 0-1.5.6-1.5 1.5v1.9h3l-.4 3h-2.6V20h5.1c.6 0 1.1-.5 1.1-1.1V1.1c0-.6-.5-1.1-1.1-1.1z"></path>
@@ -61,12 +61,12 @@ export default () => (
         <circle fill="currentColor" cx="-70.935" cy="41.563" r="2"></circle>
       </symbol>
       <symbol id="searchIcon" viewBox="0 0 36 36">
-        <circle fill="transparent" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" cx="15" cy="15" r="8"></circle>
-        <path fill="transparent" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" d="M23.3 23.3L29 29"></path>
+        <circle fill="transparent" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" cx="15" cy="15" r="8"></circle>
+        <path fill="transparent" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" d="M23.3 23.3L29 29"></path>
       </symbol>
       <symbol id="toggleCircle" viewBox="8 8 20 20">
-        <ellipse fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" cx="18" cy="18" rx="8" ry="8"></ellipse>
-        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M14 18h8M18 22v-8"></path>
+        <ellipse fill="none" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" cx="18" cy="18" rx="8" ry="8"></ellipse>
+        <path fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeMiterlimit="10" d="M14 18h8M18 22v-8"></path>
       </symbol>
       <symbol id="twitterSocialIcon" viewBox="0 0 20 20">
         <path d="M20 3.8c-.7.3-1.5.5-2.4.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1-.7-.8-1.8-1.3-3-1.3-2.3 0-4.1 1.8-4.1 4.1 0 .3 0 .6.1.9-3.4-.1-6.4-1.7-8.4-4.2C1 3.2.8 3.9.8 4.7c0 1.4.7 2.7 1.8 3.4-.6 0-1.2-.2-1.8-.5v.1c0 2 1.4 3.6 3.3 4-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8-1.4 1.1-3.2 1.8-5.1 1.8-.3 0-.7 0-1-.1 1.8 1.2 4 1.8 6.3 1.8 7.5 0 11.7-6.3 11.7-11.7v-.5c.9-.5 1.5-1.2 2.1-2z"></path>
@@ -77,11 +77,11 @@ export default () => (
     </svg>
     <svg viewBox="0 0 160 37">
       <use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-liferay"></use>
-      <use class="light-fill" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientLightest"></use>
-      <use class="logo-border" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-logoBorder"></use>
-      <use class="logo-gradient-light" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientLight"></use>
-      <use class="logo-gradient-dark" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientDark"></use>
-      <use class="logo-gradient-darkest" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientDarkest"></use>
+      <use className="light-fill" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientLightest"></use>
+      <use className="logo-border" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-logoBorder"></use>
+      <use className="logo-gradient-light" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientLight"></use>
+      <use className="logo-gradient-dark" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientDark"></use>
+      <use className="logo-gradient-darkest" xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#liferayLogo-gradientDarkest"></use>
     </svg> 
   </div>
 );
