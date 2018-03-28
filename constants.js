@@ -5,7 +5,7 @@ export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+export type Milestone = 0 | 1 | 2 | 3 | 4
 
 export type MilestoneMap = {
   'MOBILE': Milestone,
@@ -25,7 +25,7 @@ export type MilestoneMap = {
   'RECRUITING': Milestone,
   'COMMUNITY': Milestone
 }
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = [0, 1, 2, 3, 4]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -34,7 +34,6 @@ export const milestoneToPoints = (milestone: Milestone): number => {
     case 2: return 3
     case 3: return 6
     case 4: return 12
-    case 5: return 20
     default: return 0
   }
 }
