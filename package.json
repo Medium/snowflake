@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "next",
     "export": "next build && next export",
-    "flow": "flow"
+    "flow": "flow",
+    "deploy": "yarn run export && we deploy -p snowflake"
   },
   "devDependencies": {
     "flow-bin": "^0.57.2"

@@ -129,6 +129,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     return (
       <main>
         <style jsx global>{`
+          .aui .light-fill { fill: #FFF; }
+          .aui .logo-border { fill: transparent; stroke: #939598; }
+          .aui .logo-gradient-dark { fill: #1D396B; }
+          .aui .logo-gradient-darkest { fill: #051E3C; }
+          .aui .logo-gradient-light { fill: #79B3E1; }
           body {
             font-family: Helvetica;
           }
@@ -156,9 +161,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
             <Wordmark />
-          </a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
@@ -201,9 +204,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+            Improvements by Liferay
           </div>
         </div>
       </main>
