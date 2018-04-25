@@ -78,7 +78,7 @@ const emptyState = (): SnowflakeAppState => {
       RECRUITING: 0,
       COMMUNITY: 0
     },
-    focusedTrackId: "WEB_CLIENT"
+    focusedTrackId: "FOUNDATIONS"
   };
 };
 
