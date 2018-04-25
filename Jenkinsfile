@@ -15,7 +15,7 @@ if (env.BRANCH_NAME == 'master') {
             echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
             apk update
             apk add -U aws-cli
-            aws s3 --acl public-read sync out s3://oneup.stratasan.com/
+            aws s3 sync --acl public-read out s3://oneup.stratasan.com/
             '''
           }
         }

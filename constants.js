@@ -122,9 +122,9 @@ export const tracks: Tracks = {
           "Uses CSS appropriately, following style guide"
         ],
         examples: [
-          "Implemented sticky footer on the post page",
-          "Hooked up the action to dismiss a post from a stream",
-          "Built PaymentHistory screen using ResponseScreen"
+          "Fixed typos in templates",
+          "Add simple jQuery to bind click events in Analytics",
+          "Edited simple UI components in Pathways"
         ]
       },
       {
@@ -136,9 +136,9 @@ export const tracks: Tracks = {
           "Prototypes simple new features quickly"
         ],
         examples: [
-          "Built credit card input component",
-          "Created shared buttons template",
-          "Built modal system"
+          "Built a specific Card component to describe a user-facing resource, e.g. SliceCard",
+          "Created new UI component to improve UI consistency",
+          "Added templates to drive screen in Analytics"
         ]
       },
       {
@@ -150,9 +150,9 @@ export const tracks: Tracks = {
           "Acts a caretaker for all of web client code"
         ],
         examples: [
-          "Designed font loading strategy for Medium",
-          "Researched utility of service workers for Medium",
-          "Designed and implemented ResponseScreen"
+          "Improved bundle code to improve webpack bundling process",
+          "Pioneered new CSS techniques such as flexbox and grid",
+          "Effectively ported legacy javascript to new and modern paradigms"
         ]
       },
       {
@@ -164,9 +164,9 @@ export const tracks: Tracks = {
           "Makes architectural decisions that eliminate entire classes of bugs"
         ],
         examples: [
-          "Designed Medium's post morpher and delta system",
-          "Implemented Medium's scrolling text over image blur",
-          "Designed and pioneered proto-based model storage"
+          "Added type-checking library to improve compile-time verification",
+          "Abstracted all XHR requests into single code path",
+          "Designed and implemented new architectures for data storage"
         ]
       },
       {
@@ -179,7 +179,6 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Invented CSS in JS",
-          "Defined and drove migration strategy to Lite",
           "Implemented unidirectional data flow to completion"
         ]
       }
@@ -190,7 +189,7 @@ export const tracks: Tracks = {
     displayName: "Foundations",
     category: "A",
     description:
-      "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+      "Develops expertise in foundational systems, such as deployments, pipelines and databases",
     milestones: [
       {
         summary:
@@ -201,7 +200,7 @@ export const tracks: Tracks = {
           "Performs backfills safely and effectively, without causing pages"
         ],
         examples: [
-          "Made safe and effective Ansible changes",
+          "Made safe and effective Terraform changes",
           "Implemented new ETL pipelines based on existing ones",
           "Resolved out of disk errors independently"
         ]
