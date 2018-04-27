@@ -200,7 +200,7 @@ export const tracks: Tracks = {
           "Performs backfills safely and effectively, without causing pages"
         ],
         examples: [
-          "Made safe and effective Terraform changes",
+          "Made safe and effective terraform changes",
           "Implemented new ETL pipelines based on existing ones",
           "Resolved out of disk errors independently"
         ]
@@ -210,13 +210,13 @@ export const tracks: Tracks = {
           "Develops new instances of existing architecture, or minor improvements to existing architecture",
         signals: [
           "Made minor version upgrades to technologies",
-          "Builds machine learning jobs within the ML framework",
-          "Triages service issues correctly and independently"
+          "Builds new ETL within Peach",
+          "Understands how to monitor resources within AWS"
         ],
         examples: [
-          "Upgraded NodeJS from 8.0 to 8.1.1",
-          "Built custom packages for RPMs",
-          "Improved ETL efficiency by improving Dynamo to S3 loading"
+          "Developed and tested new CMS data extraction with peach",
+          "Developed and applied new terraform modules to create new resources",
+          "Improved ETL efficiency by moving health ETL to peach"
         ]
       },
       {
@@ -228,9 +228,8 @@ export const tracks: Tracks = {
           "Makes major version upgrades to libraries"
         ],
         examples: [
-          "Designed Ansible configuration management",
-          "Built Medium's realtime stats pipeline",
-          "Designed flexible framework for writing machine learning jobs"
+          "Introduced terraform as de-facto resource management system",
+          "Built and maintain significant health infrastructure"
         ]
       },
       {
@@ -242,7 +241,7 @@ export const tracks: Tracks = {
           "Introduces new databases and technologies to meet underserved needs"
         ],
         examples: [
-          "Designed and built BBFD",
+          "Pioneered staging-daily resurrect/teardown",
           "Designed AWS configuration management",
           "Introduced Kinesis and pioneered streaming events pipeline"
         ]
@@ -256,7 +255,6 @@ export const tracks: Tracks = {
           "Invents industry-leading techniques to solve complex problems"
         ],
         examples: [
-          "Invented a novel ML technique that advanced the state of the art",
           "Defined and developed Medium's continuous delivery strategy",
           "Developed and implemented HA strategy"
         ]
@@ -268,20 +266,18 @@ export const tracks: Tracks = {
     displayName: "Servers",
     category: "A",
     description:
-      "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+      "Develops expertise in server side engineering, using Python & Django",
     milestones: [
       {
         summary:
           "Works effectively within established server side frameworks, following current best practices",
         signals: [
-          "Adds NodeJS endpoints using layers architecture",
-          "Adds golang endpoints using Gotham architecture",
-          "Makes minor server changes to support client needs"
+          "Edits pathways endpoints using DRF",
+          "Edits and adds analytics views & templates using standard methods"
         ],
         examples: [
-          "Added IFTTT trigger for new bookmark to medium2",
-          "Added delete audio route to Buggle",
-          "Queried a Dynamo LSI appropriately"
+          "Modified pathways serializers to improve API structure",
+          "Added backoffice templates and views to provide new reports"
         ]
       },
       {
@@ -293,9 +289,9 @@ export const tracks: Tracks = {
           "Determines data needs from product requirements"
         ],
         examples: [
-          "Identified need for new index on Dynamo",
-          "Acted as caretaker for routes protos",
-          "Updated Facebook API version and codebase dependencies"
+          "Wrote migrations, verifying on staging and planned rollout to production",
+          "Improved endpoint performance through caching and wrote jobs to maintain cache",
+          "Wrote new features for AlchemyBuilder, explorer.py, canvas reports, etc"
         ]
       },
       {
@@ -303,13 +299,12 @@ export const tracks: Tracks = {
           "Designs standalone systems of moderate complexity, or major new features in existing systems",
         signals: [
           "Acts as primary maintainer for existing critical systems",
-          "Integrates third party services effectively",
-          "Writes playbooks for new service maintenance"
+          "Writes new Canvas reports and Pathways aggregation schemes"
         ],
         examples: [
-          "Implemented Google Auth login to Medium",
-          "Implemented payments integration with Stripe",
-          "Built Textshots server"
+          "Developed new Loyalty Slices",
+          "Added caching layer to slices",
+          "Ported demographics to Esri API"
         ]
       },
       {
@@ -321,9 +316,9 @@ export const tracks: Tracks = {
           "Makes appropriate buy vs build choices"
         ],
         examples: [
-          "Designed Medium's ranked feed architecture",
-          "Designed custom domains architecture",
-          "Created Gotham framework for creating Go services"
+          "Introduced Peach to improve event-driven ETL",
+          "Ported background processing from Pyres to RQ",
+          "Introduced docker to health"
         ]
       },
       {
@@ -335,9 +330,8 @@ export const tracks: Tracks = {
           "Identifies and solves systemic problems with current architecture"
         ],
         examples: [
-          "Researched, vetted, and selected Go as Medium's statically typed language",
-          "Defined microservices architecture and medium2 migration plan",
-          "Defined and implemented proprietary IP core to the company's success"
+          "Wrote significant parts of Django, pandas and/or sqlalchemy",
+          "Defined curated view structure in health"
         ]
       }
     ]
@@ -357,9 +351,9 @@ export const tracks: Tracks = {
           "Writes effective technical specs outlining approach"
         ],
         examples: [
-          "Wrote the technical spec for featured post images",
-          "Delivered stream item support for email digests",
-          "Delivered payment history dashboard"
+          "Wrote the technical spec to backoffice gallery improvements",
+          "Delivered email template updates",
+          "Built new account templates"
         ]
       },
       {
@@ -397,8 +391,8 @@ export const tracks: Tracks = {
           "Leverages recognition of repeated project patterns"
         ],
         examples: [
-          "Oversaw technical delivery of Hightower",
-          "Managed infrastructure migration to VPC",
+          "Oversaw technical delivery of Stylish update",
+          "Managed postgres migration from heroku to RDS",
           "Involved marketing, legal, and appropriate functions at project start"
         ]
       },
@@ -410,8 +404,8 @@ export const tracks: Tracks = {
           "Owns a key company metric"
         ],
         examples: [
-          "Managed technical migration to SOA",
-          "Lead technical delivery of 10/7",
+          "Managed technical introduction of Peach",
+          "Oversaw migration to python 3",
           "Delivered multi-month engineering project on time"
         ]
       }
@@ -433,9 +427,9 @@ export const tracks: Tracks = {
           "Asks for help at the appropriate juncture"
         ],
         examples: [
-          "Updated The Watch before running a backfill",
-          "Updated project status changes in Asana promptly",
-          "Gave thoughtful check-in and check-out comments"
+          "Updated slack before running a long peach job",
+          "Updated project status changes in GitHub",
+          "Appropriately sought clarification in Github Issues"
         ]
       },
       {
@@ -448,7 +442,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Received and integrated critical feedback positively",
-          "Created cross-team Slack channel for payments work",
+          "Used geekbot appropriately to notify of blockers on reviews",
           "Spoke to domain experts before writing spec"
         ]
       },
@@ -461,9 +455,9 @@ export const tracks: Tracks = {
           "Manages project stakeholder expectations effectively"
         ],
         examples: [
-          "Directed team response effectively during outages",
-          "Gave a substantial Eng All Hands presentation on React",
-          "Gave notice of upcoming related work in Eng Briefing"
+          "Provides ongoing updates in #support during 🚒",
+          "Gave a substantial Dev L&L presentation on React",
+          "Helped Product craft marketing around new product or feature"
         ]
       },
       {
@@ -475,9 +469,8 @@ export const tracks: Tracks = {
           "Negotiates resourcing compromises with other teams"
         ],
         examples: [
-          "Lead off-site workshop on interviewing",
-          "Wrote Medium's growth framework and rationale",
-          "Aligned the entire organization around claps"
+          "Introduced Slack emoji reactions like 🌲 an 🚒",
+          "Effectively communicated data dependencies for certain products to non-engineering colleagues"
         ]
       },
       {
@@ -489,7 +482,7 @@ export const tracks: Tracks = {
           "Develops and delivers plans to execs, the board, and outside investors"
         ],
         examples: [
-          "Organized half year check-in company offsite",
+          "Organized company town-hall",
           "Created the communication plan for a large organizational change",
           "Presented to the board about key company metrics and projects"
         ]
@@ -506,14 +499,14 @@ export const tracks: Tracks = {
       {
         summary: "Delivers consistently good quality work",
         signals: [
-          "Tests new code thoroughly, both locally, and in production once shipped",
-          "Writes tests for every new feature and bug fix",
-          "Writes clear comments and documentation"
+          "Tests new code thoroughly, both locally, staging when necessary and in production once shipped",
+          "Writes tests for new feature and bug fixes",
+          "Writes clear Pull-Requests"
         ],
         examples: [
-          "Caught a bug on Hatch before it went live",
+          "Caught a bug on staging before review",
           "Landed non-trivial PR with no caretaker comments",
-          "Wrote hermetic tests for the happy and sad cases"
+          "Wrote front-end unittests for immutable models"
         ]
       },
       {
@@ -526,21 +519,20 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Requested tests for a PR when acting as reviewer",
-          "Reduced the number of zelda fitzgerald exceptions",
+          "Requested improved logging when reviewing a PR",
           "Fixed a TODO for someone else in the codebase"
         ]
       },
       {
         summary: "Improves others' ability to deliver great quality work",
         signals: [
-          "Implements systems that enable better testing",
+          "Improves CI tests and introduces linters/formatters",
           "Gives thoughtful code reviews as a domain expert",
           "Adds tooling to improve code quality"
         ],
         examples: [
-          "Improved PRB to run the same volume of tests faster",
-          "Simplified hermetic test data modification",
-          "Created fixture system for visual quality"
+          "Added tox in CI to test by py2 and py3",
+          "Improved Jenkinsfile to run the same volume of tests faster"
         ]
       },
       {
@@ -549,12 +541,11 @@ export const tracks: Tracks = {
         signals: [
           "Builds systems so as to eliminate entire classes of programmer error",
           "Focuses the team on quality with regular reminders",
-          "Coordinates Watch priorities and projects"
+          "Addresses fire engines and explores methods to eradicate certain types"
         ],
         examples: [
-          "Added code coverage reporting to iOS CI pipeline",
-          "Iterated repeatedly to develop Medium's underlines solution",
-          "Defined and oversaw plan for closing Heartbleed vulnerability"
+          "Added prettier formatting in JS",
+          "Prototyped and led migration to event-driven workers"
         ]
       },
       {
@@ -566,9 +557,8 @@ export const tracks: Tracks = {
           "Secures time and resources from execs to support great quality"
         ],
         examples: [
-          "Negotiated resources for Fix-It week with exec team",
-          "Instituted and ensured success of a 20% time policy",
-          "Started The Watch"
+          "Introduced stratabot and advocated to product/management for its continued development",
+          "Instituted and ensured success of a 10% new product policy"
         ]
       }
     ]
@@ -584,14 +574,11 @@ export const tracks: Tracks = {
         summary:
           "Identifies opportunities for organizational change or product improvements",
         signals: [
-          "Writes Hatch posts about improvement opportunities",
-          "Raises meaningful tensions in tactical meetings",
-          "Asks leadership team probing questions at FAM"
+          "Sparks meaningful conversations in iteration meetings",
+          "Asks leadership team probing questions at all-hands"
         ],
         examples: [
-          "Wrote about problems with TTR on Hatch",
-          "Wrote about content policy problems on Hatch",
-          "Reported a site issue in Github"
+          "Reported a production issue in Github before clients hit #support"
         ]
       },
       {
@@ -605,7 +592,7 @@ export const tracks: Tracks = {
         examples: [
           "Advocated on own behalf for a change in role",
           "Implemented flow typing for promises",
-          "Audited web client performance in Chrome and proposed fixes"
+          "Audited pandas performance issues and proposed fixes"
         ]
       },
       {
@@ -618,8 +605,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Defined style guide to resolve style arguments",
-          "Proposed and implemented at-mentions prototype",
-          "Implemented video for Android independently, unprompted"
+          "Proposed and implemented improvements to spectrum around internal patient data"
         ]
       },
       {
@@ -630,11 +616,7 @@ export const tracks: Tracks = {
           "Exemplifies grit and determination in the face of persistent obstacles",
           "Instigates major new features, services, or architectures"
         ],
-        examples: [
-          "Created the interviewing rubric and booklet",
-          "Implemented and secured support for native login",
-          "Migrated medium2 to mono repo and bazel"
-        ]
+        examples: ["Implemented and secured support for native login", "???"]
       },
       {
         summary:
@@ -644,11 +626,7 @@ export const tracks: Tracks = {
           "Galvanizes the entire company and garners buy in for a new strategy",
           "Changes complex organizational processes"
         ],
-        examples: [
-          "Migrated the organization from Holacracy",
-          "Built Medium Android prototype and convinced execs to fund it",
-          "Convinced leadership and engineering org to move to Medium Lite architecture"
-        ]
+        examples: ["???", "???", "???"]
       }
     ]
   },
