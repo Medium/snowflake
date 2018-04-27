@@ -168,9 +168,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{ margin: "19px auto 0", width: 142 }}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
+        <div>
+          <a href="https://engineering.stratasan.com/" target="_blank">
+            <h1>One up!</h1>
           </a>
         </div>
         <div style={{ display: "flex" }}>
@@ -228,7 +228,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         />
         <div style={{ display: "flex", paddingBottom: "20px" }}>
           <div style={{ flex: 1 }}>
-            Made with ❤️ by{" "}
+            Made by and for{" "}
             <a href="https://engineering.stratasan.com" target="_blank">
               Stratasan Developers
             </a>{" "}
