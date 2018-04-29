@@ -1162,7 +1162,7 @@ export const tracks: Tracks = {
         ]
       },
       {
-        summary: "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
+        summary: "Maintains and strengthens the integrity of the current process, and/or regularly brings in great candidates",
         signals: [
           "Teaches new interviewers how to interview with empathy",
           "Models great interview technique and feedback when shadowed",
