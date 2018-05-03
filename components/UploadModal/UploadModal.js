@@ -96,7 +96,7 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
 
   render() {
     return (
-      <Modal isOpen={this.props.isModalOpen} style={{ content: { margin: '0 auto', maxHeight: '60vh', maxWidth: '40vw'}}}>
+      <Modal isOpen={this.props.isModalOpen} style={{ content: { margin: '0 auto', maxHeight: '80vh', maxWidth: '40vw'}}}>
         <ProgressBarContainer>
           <ProgressBar
             numBuckets={totalSteps}
