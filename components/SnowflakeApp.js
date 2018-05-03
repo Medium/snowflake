@@ -130,7 +130,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   toggleUploadModal = () => {
-    console.log('called');
     
     this.setState({
       isUploadModalOpen: !this.state.isUploadModalOpen
