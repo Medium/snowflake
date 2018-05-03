@@ -1,5 +1,6 @@
 // @flow
 import type { Api, Files } from './apiType';
+import { tracks } from '../constants'
 
 const wait = () => {
     return new Promise((resolve, reject) => {
@@ -12,7 +13,10 @@ const apiDev: Api = {
         // does some stuff
         await wait();
         return;
+    },
+    async getMasterConfig(department: string) {
+        return tracks;
     }
 }
 
-
+export default apiDev;

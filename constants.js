@@ -1,29 +1,11 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+export type TrackId = string;
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
-  'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
+  [categoryName: string]: Milestone
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
@@ -70,24 +52,9 @@ export type Track = {
   }[]
 }
 
-type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
-  'PROJECT_MANAGEMENT': Track,
-  'COMMUNICATION': Track,
-  'CRAFT': Track,
-  'INITIATIVE': Track,
-  'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
-  'WELLBEING': Track,
-  'ACCOMPLISHMENT': Track,
-  'MENTORSHIP': Track,
-  'EVANGELISM': Track,
-  'RECRUITING': Track,
-  'COMMUNITY': Track
-|}
+export type Tracks = {
+  [trackName: string]: Track
+}
 
 export const tracks: Tracks = {
   "MOBILE": {
@@ -1210,3 +1177,5 @@ export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
     .map(title => title.label)
 }
+
+export const departments = ['ENGINEERING', 'PRODUCT', 'DESIGN', 'CUSTOMER_INSIGHTS']

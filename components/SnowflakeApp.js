@@ -6,19 +6,22 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { eligibleTitles, trackIds, milestones, milestoneToPoints, departments } from '../constants'
+import type { Tracks } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import Modal from 'react-modal'
 import UploadModal from './UploadModal/UploadModal'
+import api from '../api/api'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
   focusedTrackId: TrackId,
-  isUploadModalOpen: boolean
+  isUploadModalOpen: boolean,
+  tracks?: Tracks
 }
 
 const hashToState = (hash: String): ?SnowflakeAppState => {
@@ -121,6 +124,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidMount() {
+    // request for the the initial constants - the defualt will be engineering masterconfig
+    api.getMasterConfig(departments[0])
+      .then(tracks => {
+        this.setState({
+          tracks
+        })
+      })
+
     const state = hashToState(window.location.hash)
     if (state) {
       this.setState(state)
@@ -137,6 +148,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   render() {
+    if (!this.state.tracks) return null;
+
     return (
       <main>
         <style jsx global>{`
@@ -184,10 +197,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
-            <NightingaleChart
-                milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+          <NightingaleChart
+              tracks={this.state.tracks}
+              trackIds={Object.keys(this.state.tracks)}
+              milestoneByTrack={this.state.milestoneByTrack}
+              focusedTrackId={this.state.focusedTrackId}
+              handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
         <TrackSelector

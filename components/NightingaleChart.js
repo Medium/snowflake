@@ -2,16 +2,19 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
+import { milestones, categoryColorScale } from '../constants'
+import type { Tracks } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 400
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
 
 type Props = {
+  tracks: Tracks,
   milestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void,
+  trackIds: Array<string>
 }
 
 class NightingaleChart extends React.Component<Props> {
@@ -33,14 +36,15 @@ class NightingaleChart extends React.Component<Props> {
     this.arcFn = d3.arc()
       .innerRadius(milestone => this.radiusScale(milestone))
       .outerRadius(milestone => this.radiusScale(milestone) + this.radiusScale.bandwidth())
-      .startAngle(- Math.PI / trackIds.length)
-      .endAngle(Math.PI / trackIds.length)
+      .startAngle(- Math.PI / this.props.trackIds.length)
+      .endAngle(Math.PI / this.props.trackIds.length)
       .padAngle(Math.PI / 200)
       .padRadius(.45 * width)
       .cornerRadius(2)
   }
 
   render() {
+    const { trackIds, tracks } = this.props;
     const currentMilestoneId = this.props.milestoneByTrack[this.props.focusedTrackId]
     return (
       <figure>
