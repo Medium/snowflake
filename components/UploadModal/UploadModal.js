@@ -30,8 +30,10 @@ type UploadModalProps = {
   isModalOpen: boolean
 }
 type UploadModalState = {
-  currentStep: number
+  currentStep: number,
+  files: { matrixFile?: File, thresholdFile?: File }
 }
+
 
 const totalSteps = 3;
 
@@ -40,13 +42,23 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
     super(props)
 
     this.state = {
-      currentStep: 1
+      currentStep: 1,
+      files: {}
     }
   }
 
   incStep = () => {
     this.setState({ currentStep: Math.min(this.state.currentStep + 1, totalSteps) })
   }
+
+  saveFile = (file: File, name: string) => {
+    this.setState(
+      { files: {
+        ...this.state.files,
+        [name]: file 
+      } }
+    );
+}
 
   changeStep = (step: number) => {
     this.setState({
@@ -65,15 +77,20 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
     }
   }
 
-  onUploadMatrix = (e) => {
+  onUploadMatrix = (e: any) => {
     e.preventDefault();
-    
+
+    const matrixFile = e.target.files[0];
+    this.saveFile(matrixFile, "matrixFile");
     this.incStep();
   }
 
-  onUploadThreshold = (e) => {
+  onUploadThreshold = (e: any) => {
+    debugger;
     e.preventDefault();
-    
+
+    const thresholdFile = e.target.files[0];
+    this.saveFile(thresholdFile, "thresholdFile");
     this.incStep();
   }
 
