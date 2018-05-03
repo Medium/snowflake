@@ -11,7 +11,6 @@ import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import Modal from 'react-modal'
-import FileUpload from './FileUpload'
 import UploadModal from './UploadModal/UploadModal'
 
 type SnowflakeAppState = {
@@ -192,7 +191,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
-        <FileUpload />
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
