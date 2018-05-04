@@ -10,13 +10,15 @@ import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../cons
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
+import Modal from 'react-modal'
+import UploadModal from './UploadModal/UploadModal'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
   focusedTrackId: TrackId,
+  isUploadModalOpen: boolean
 }
 
 const hashToState = (hash: String): ?SnowflakeAppState => {
@@ -67,7 +69,8 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'MOBILE',
+    isUploadModalOpen: false
   }
 }
 
@@ -93,7 +96,8 @@ const defaultState = (): SnowflakeAppState => {
       'RECRUITING': 3,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'MOBILE',
+    isUploadModalOpen: false
   }
 }
 
@@ -123,6 +127,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     } else {
       this.setState(defaultState())
     }
+  }
+
+  toggleUploadModal = () => {
+    console.log('called');
+    
+    this.setState({
+      isUploadModalOpen: !this.state.isUploadModalOpen
+    })
   }
 
   render() {
@@ -155,11 +167,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
-        </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
@@ -170,11 +177,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
             </form>
+            <button onClick={() => this.toggleUploadModal()}>
+              upload a new matrix
+            </button>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
@@ -198,14 +204,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
-          <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
-          </div>
-        </div>
+        <UploadModal
+          isModalOpen={this.state.isUploadModalOpen}
+          toggleModal={this.toggleUploadModal} />
       </main>
     )
   }

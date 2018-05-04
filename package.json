@@ -6,9 +6,13 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.12.5",
     "next": "^4.0.0-beta.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "papaparse": "^4.4.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-modal": "^3.4.4"
   },
   "scripts": {
     "dev": "next",
@@ -16,6 +20,6 @@
     "flow": "flow"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.2"
+    "flow-bin": "^0.59.0"
   }
 }
