@@ -59,6 +59,7 @@ class NightingaleChart extends React.Component<Props> {
         <style jsx>{`
           figure {
             margin: 0;
+            padding: 7.5px;
           }
           svg {
             width: ${width}px;
@@ -95,7 +96,7 @@ class NightingaleChart extends React.Component<Props> {
                     return (
                       <path
                           key={milestone}
-                          className={outOfRange ? 'track-milestone-disabled' : 'track-milestone ' + (isMet ? 'is-met ' : ' ') + (isCurrentMilestone ? 'track-milestone-current' : '')}
+                          className={outOfRange ? 'track-milestone-disabled' : 'track-milestone ' + (isMet ? 'is-met ' : ' ')}
                           onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, milestone)}
                           d={this.arcFn(milestone)}
                           style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
@@ -106,7 +107,7 @@ class NightingaleChart extends React.Component<Props> {
                       cx="0"
                       cy="-50"
                       style={{fill: categoryColorScale(tracks[trackId].category)}}
-                      className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
+                      className={"track-milestone " + (isCurrentTrack ? "track-milestone-current" : "")}
                       onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
                 </g>
             )})}

@@ -5,6 +5,7 @@ import type { Track, Tracks } from '../constants'
 import React from 'react'
 import type { MilestoneMap, Milestone } from '../constants'
 import coerceMilestone from '../utils/coerceMilestone'
+import { H3 } from 'glamorous'
 
 type Props = {
   tracks: Tracks,
@@ -76,7 +77,7 @@ class TrackComponent extends React.Component<Props> {
           </table>
           {currentMilestone ? (
             <div style={{flex: 1}}>
-              <h3>{currentMilestone.summary}</h3>
+              <H3 wordBreak="break-word">{currentMilestone.summary}</H3>
               <h4>Example behaviors:</h4>
               <ul>
                 {_.map(currentMilestone.signals, (signal, i) => (

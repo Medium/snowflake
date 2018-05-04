@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import glamorous from 'glamorous';
+import glamorous, { Div } from 'glamorous';
 import { departments }  from './../constants';
 
 
@@ -30,11 +30,11 @@ class DepartmentDropDown extends React.Component<{}, DropDownStates> {
         )
     });
       return (
-        <label>
+        <Div marginBottom="25px">
           <select value={this.state.value} onChange={this.handleChange}>
           {departmentOptions} 
           </select>
-        </label>
+        </Div>
       )
   }
 

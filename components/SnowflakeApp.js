@@ -96,10 +96,28 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         })
       })
       .catch(() => {
-        this.setState(defaultState())
+        this.setState({
+          ...defaultState(),
+          loadingData: false
+        })
       })
 
       this.setState(defaultState())
+  }
+
+  fetchConfig = () => {
+    Promise.all([api.getMasterConfig(departments[0]), api.fetchUsers()])
+      .then(([{ role, rating}, users]) => {
+        this.setState({
+          roleToLevel: role,
+          tracks: rating,
+          trackIds: Object.keys(rating),
+          milestoneByTrack: mapValues(rating, _ => 0),
+          focusedTrackId: Object.keys(rating)[0],
+          loadingData: false,
+          users
+        })
+      })
   }
 
   toggleUploadModal = () => {
@@ -132,7 +150,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   saveUser = () => {
     api.saveUser(
       this.state.milestoneByTrack,
-      this.state.selectedUserData.currentRole,
+      this.state.selectedUserData.ladder[0], // hack
       this.state.selectedUser)
   }
 
@@ -151,9 +169,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
     return ladder.map(role => {
       const levels = roleToLevel[role];
-        
-      console.log(roleToLevel)
-      console.log(levels)
 
       return <NightingaleChart
           label={`Min Thresholds for ${role}`}
@@ -187,7 +202,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             label={`Current Score as a ${this.state.selectedUserData.currentRole}`}
             tracks={this.state.tracks}
             milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId - 1}
+            focusedTrackId={this.state.focusedTrackId}
             trackIds={trackIds}
             handleTrackMilestoneChangeFn={() => {}} />
         {this.renderProjectedThresholds()}
@@ -237,6 +252,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         {this.renderVisualiations()}
         <UploadModal
           isModalOpen={this.state.isUploadModalOpen}
+          fetchConfig={this.fetchConfig}
           toggleModal={this.toggleUploadModal} />
       </Div>
     )

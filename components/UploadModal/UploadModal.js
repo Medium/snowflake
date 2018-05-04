@@ -29,7 +29,8 @@ const ProgressBarContainer = glamorous.div({
 
 type UploadModalProps = {
   toggleModal: () => void,
-  isModalOpen: boolean
+  isModalOpen: boolean,
+  fetchConfig: () => void
 }
 type UploadModalState = {
   currentStep: number,
@@ -74,6 +75,7 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
     .then(() => {
       this.resetModal()
       this.props.toggleModal()
+      this.props.fetchConfig()
     });
   }
 
