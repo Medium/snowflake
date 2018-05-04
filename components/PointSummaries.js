@@ -11,10 +11,11 @@ import _ from 'lodash'
 type Props = {
   milestoneByTrack: MilestoneMap,
   user?: string,
-  saveUser: (ratings: MilestoneMap,  currentRole: string, username: string) => void,
+  saveUser: (withPromotion: boolean) => void,
   nextRoleToLevel: {
     [category: string]: number
-  }
+  },
+  openPromotionModal: () => void
 }
 
 
@@ -40,7 +41,12 @@ class PointSummaries extends React.Component<Props> {
       return score >= nextRoleToLevel[categoryName];
     })
 
-    const deservesPromition = meetsMinReqForAllFields && totalPoints >= minCumScore;
+    const deservesPromotion = meetsMinReqForAllFields && totalPoints >= minCumScore;
+
+    const promoteUser = () => {
+      this.props.saveUser(true)
+      this.props.openPromotionModal()
+    }
 
     if (!user) return null;
 
@@ -89,8 +95,8 @@ class PointSummaries extends React.Component<Props> {
             </tr>
           </tbody>
         </table>
-        <FunButton width="150px" onClick={this.props.saveUser}>
-          {deservesPromition ? 'Promote Employee' : 'Save Information' } 
+        <FunButton width="150px" onClick={() => {deservesPromotion ? promoteUser() : this.props.saveUser(false)}}>
+          {deservesPromotion ? 'Promote Employee' : 'Save Information' } 
           </FunButton>
       </Div>
     )

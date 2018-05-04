@@ -22,6 +22,7 @@ import Spinner from './Spinner'
 import { teal2 } from '../palette'
 import type { UserData } from '../models/UserData'
 import UserSelect from './UserSelect'
+import PromotionModal from './PromotionModal'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -36,7 +37,7 @@ type SnowflakeAppState = {
   users: Array<string>,
   selectedUser: string,
   selectedUserData?: UserData,
-  promotionModalOpen: boolean
+  promotionModalOpen: boolean,
 }
 
 const emptyState = (): SnowflakeAppState => {
@@ -147,11 +148,20 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     ) 
   }
 
-  saveUser = () => {
-    api.saveUser(
+  saveUser = async (withPromotion: boolean) => {
+    debugger
+    await api.saveUser(
       this.state.milestoneByTrack,
-      this.state.selectedUserData.ladder[0], // hack
-      this.state.selectedUser)
+      withPromotion ? this.state.selectedUserData.ladder[0] : this.state.selectedUserData.currentRole,
+      this.state.selectedUser
+    )
+
+    const userData = await api.fetchUser(this.state.selectedUser)
+
+    this.setState({
+      selectedUserData: userData,
+      milestoneByTrack: isEmpty(userData.ratings) ? defaultMilestoneByTrack(this.state.tracks) : userData.ratings
+    })
   }
 
   togglePromotionModal = () => {
@@ -181,6 +191,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     }) 
   }
 
+  togglePromotionModal = () => {
+    this.setState({
+      promotionModalOpen: !this.state.promotionModalOpen
+    })
+  }
+
   renderVisualiations = () => {
     if (!this.state.roleToLevel || !this.state.selectedUserData || !this.state.selectedUser || !this.state.tracks || typeof this.state.focusedTrackId === 'undefined') return null;
     const trackIds = Object.keys(this.state.tracks);
@@ -194,10 +210,16 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           <PointSummaries
               user={this.state.selectedUser}
               milestoneByTrack={this.state.milestoneByTrack}
+              openPromotionModal={this.togglePromotionModal}
               saveUser={this.saveUser}
               nextRoleToLevel={nextRoleToLevel} />
         </div>
         <div style={{flex: 0, display: 'flex'}}>
+        <PromotionModal
+          isModalOpen={this.state.promotionModalOpen}
+          userName={this.state.selectedUser}
+          nextRole={this.state.selectedUserData.currentRole}
+          onClose={this.togglePromotionModal} />
         <NightingaleChart
             label={`Current Score as a ${this.state.selectedUserData.currentRole}`}
             tracks={this.state.tracks}
