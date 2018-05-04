@@ -103,7 +103,6 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
   }
 
   onUploadThreshold = (e: any) => {
-    debugger;
     e.preventDefault();
 
     const thresholdFile = e.target.files[0];
