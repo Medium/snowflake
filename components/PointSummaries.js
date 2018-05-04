@@ -5,41 +5,23 @@ import type { MilestoneMap } from '../constants'
 import React from 'react'
 
 type Props = {
-  milestoneByTrack: MilestoneMap
+  milestoneByTrack: MilestoneMap,
+  minimumForNextLevel: number
 }
 
 class PointSummaries extends React.Component<Props> {
   render() {
-    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
-
-    let currentLevel, nextLevel
-
-    let pointsForCurrentLevel = totalPoints
-    while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
-      pointsForCurrentLevel--
-    }
-
-    let pointsToNextLevel = 1
-    while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
-      pointsToNextLevel++
-      if (pointsToNextLevel > 135) {
-        pointsToNextLevel = 'N/A'
-        break
-      }
-    }
+    const { milestoneByTrack, minimumForNextLevel } = this.props;
+    const totalPoints = totalPointsFromMilestoneMap(milestoneByTrack)
 
     const blocks = [
-      {
-        label: 'Current level',
-        value: currentLevel
-      },
       {
         label: 'Total points',
         value: totalPoints
       },
       {
-        label: 'Points to next level',
-        value: pointsToNextLevel
+        label: 'Points needed for next level',
+        value: minimumForNextLevel
       }
     ]
 

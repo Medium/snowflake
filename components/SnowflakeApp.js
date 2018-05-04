@@ -150,6 +150,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   render() {
     if (!this.state.tracks) return null;
 
+    const trackIds = Object.keys(this.state.tracks);
+
     return (
       <main>
         <style jsx global>{`
@@ -193,22 +195,27 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <button onClick={() => this.toggleUploadModal()}>
               upload a new matrix
             </button>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+            <PointSummaries
+                milestoneByTrack={this.state.milestoneByTrack}
+                // THIS IS  HARD CODED -- FIX THIS
+                minimumForNextLevel={44} />
+            {/* <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} /> */}
           </div>
           <div style={{flex: 0}}>
           <NightingaleChart
               tracks={this.state.tracks}
-              trackIds={Object.keys(this.state.tracks)}
+              trackIds={trackIds}
               milestoneByTrack={this.state.milestoneByTrack}
               focusedTrackId={this.state.focusedTrackId}
               handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
         </div>
         <TrackSelector
+            tracks={this.state.tracks}
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
+            trackIds={trackIds} />
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}

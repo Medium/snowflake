@@ -1170,12 +1170,12 @@ export const titles = [
   {label: 'Director of Engineering', minPoints: 90}
 ]
 
-export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
+// export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
+//   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
 
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-    .map(title => title.label)
-}
+//   return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
+//                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
+//     .map(title => title.label)
+// }
 
 export const departments = ['ENGINEERING', 'PRODUCT', 'DESIGN', 'CUSTOMER_INSIGHTS']
