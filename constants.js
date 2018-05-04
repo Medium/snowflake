@@ -2,6 +2,8 @@
 import * as d3 from 'd3'
 
 export type TrackId = string;
+export const departments = ['ENGINEERING', 'PRODUCT', 'DESIGN', 'CUSTOMER_INSIGHTS'];
+
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
@@ -47,8 +49,8 @@ export type Track = {
   description: string,
   milestones: {
     summary: string,
-    signals: string[],
-    examples: string[]
+    signals: ?string[], // nullable - not good..
+    examples: ?string[] // nullable - not good..
   }[]
 }
 
@@ -1157,7 +1159,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#00abc2', '#428af6', '#e1439f', '#e54552', '#ffc371', '#e6e6fa'])
 
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
@@ -1170,12 +1172,251 @@ export const titles = [
   {label: 'Director of Engineering', minPoints: 90}
 ]
 
-// export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-//   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
+export type RoleToLevel = {
+  [role: string]: {
+    [category: string]: string // level
+  }
+}
 
-//   return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-//                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-//     .map(title => title.label)
-// }
-
-export const departments = ['ENGINEERING', 'PRODUCT', 'DESIGN', 'CUSTOMER_INSIGHTS']
+export const mockRoleToLevel = {
+    "Architect" : {
+      "TeamBuilding" : "6",
+      "Ownership" : "6",
+      "Competence" : "6",
+      "CultureandValues" : "6",
+      "Min Cumulative Scores" : "134",
+      "Hiring" : "1",
+      "Process" : "6",
+      "Process&Measurement" : "6",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "6",
+      "Requirements&Design" : "6",
+      "Carreer Coaching" : "1",
+      "Operations" : "6",
+      "Supervision" : "6",
+      "ErrorHandling" : "6",
+      "CodeReview" : "6",
+      "Title" : "Architect",
+      "ProblemDecomposition" : "6",
+      "GeneralProgramming" : "6",
+      "Performance,DataStructuresandAlgorithms" : "6",
+      "Capacity Planning" : "0",
+      "Collaboration" : "6",
+      "KnowledgeTransfer" : "6",
+      "Accountability" : "6",
+      "Strategy" : "6",
+      "DefensiveCoding" : "6",
+      "Planning" : "6",
+      "Delivery" : "6"
+    },
+    "Senior Engineering Manager" : {
+      "TeamBuilding" : "6",
+      "Ownership" : "6",
+      "Competence" : "6",
+      "CultureandValues" : "6",
+      "Min Cumulative Scores" : "143",
+      "Hiring" : "4",
+      "Process" : "6",
+      "Process&Measurement" : "6",
+      "Team Health" : "2",
+      "Risks and Dependencies" : "6",
+      "Requirements&Design" : "6",
+      "Carreer Coaching" : "3",
+      "Operations" : "6",
+      "Supervision" : "6",
+      "ErrorHandling" : "6",
+      "CodeReview" : "6",
+      "Title" : "Senior Engineering Manager",
+      "ProblemDecomposition" : "6",
+      "GeneralProgramming" : "6",
+      "Performance,DataStructuresandAlgorithms" : "6",
+      "Capacity Planning" : "2",
+      "Collaboration" : "6",
+      "KnowledgeTransfer" : "6",
+      "Accountability" : "6",
+      "Strategy" : "6",
+      "DefensiveCoding" : "6",
+      "Planning" : "6",
+      "Delivery" : "6"
+    },
+    "Senior Software Engineer" : {
+      "TeamBuilding" : "3",
+      "Ownership" : "3",
+      "Competence" : "3",
+      "CultureandValues" : "3",
+      "Min Cumulative Scores" : "67",
+      "Hiring" : "1",
+      "Process" : "3",
+      "Process&Measurement" : "3",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "3",
+      "Requirements&Design" : "3",
+      "Carreer Coaching" : "0",
+      "Operations" : "3",
+      "Supervision" : "3",
+      "ErrorHandling" : "3",
+      "CodeReview" : "3",
+      "Title" : "Senior Software Engineer",
+      "ProblemDecomposition" : "3",
+      "GeneralProgramming" : "3",
+      "Performance,DataStructuresandAlgorithms" : "3",
+      "Capacity Planning" : "0",
+      "Collaboration" : "3",
+      "KnowledgeTransfer" : "3",
+      "Accountability" : "3",
+      "Strategy" : "3",
+      "DefensiveCoding" : "3",
+      "Planning" : "3",
+      "Delivery" : "3"
+    },
+    "Senior Principal Software Engineer" : {
+      "TeamBuilding" : "5",
+      "Ownership" : "5",
+      "Competence" : "5",
+      "CultureandValues" : "5",
+      "Min Cumulative Scores" : "112",
+      "Hiring" : "1",
+      "Process" : "5",
+      "Process&Measurement" : "5",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "5",
+      "Requirements&Design" : "5",
+      "Carreer Coaching" : "1",
+      "Operations" : "5",
+      "Supervision" : "5",
+      "ErrorHandling" : "5",
+      "CodeReview" : "5",
+      "Title" : "Senior Principal Software Engineer",
+      "ProblemDecomposition" : "5",
+      "GeneralProgramming" : "5",
+      "Performance,DataStructuresandAlgorithms" : "5",
+      "Capacity Planning" : "0",
+      "Collaboration" : "5",
+      "KnowledgeTransfer" : "5",
+      "Accountability" : "5",
+      "Strategy" : "5",
+      "DefensiveCoding" : "5",
+      "Planning" : "5",
+      "Delivery" : "5"
+    },
+    "Software Engineer" : {
+      "TeamBuilding" : "2",
+      "Ownership" : "2",
+      "Competence" : "2",
+      "CultureandValues" : "2",
+      "Min Cumulative Scores" : "44",
+      "Hiring" : "0",
+      "Process" : "2",
+      "Process&Measurement" : "2",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "2",
+      "Requirements&Design" : "2",
+      "Carreer Coaching" : "0",
+      "Operations" : "2",
+      "Supervision" : "2",
+      "ErrorHandling" : "2",
+      "CodeReview" : "2",
+      "Title" : "Software Engineer",
+      "ProblemDecomposition" : "2",
+      "GeneralProgramming" : "2",
+      "Performance,DataStructuresandAlgorithms" : "2",
+      "Capacity Planning" : "0",
+      "Collaboration" : "2",
+      "KnowledgeTransfer" : "2",
+      "Accountability" : "2",
+      "Strategy" : "2",
+      "DefensiveCoding" : "2",
+      "Planning" : "2",
+      "Delivery" : "2"
+    },
+    "Engineering Manager" : {
+      "TeamBuilding" : "5",
+      "Ownership" : "5",
+      "Competence" : "5",
+      "CultureandValues" : "5",
+      "Min Cumulative Scores" : "117",
+      "Hiring" : "3",
+      "Process" : "5",
+      "Process&Measurement" : "5",
+      "Team Health" : "1",
+      "Risks and Dependencies" : "5",
+      "Requirements&Design" : "5",
+      "Carreer Coaching" : "2",
+      "Operations" : "5",
+      "Supervision" : "5",
+      "ErrorHandling" : "5",
+      "CodeReview" : "5",
+      "Title" : "Engineering Manager",
+      "ProblemDecomposition" : "5",
+      "GeneralProgramming" : "5",
+      "Performance,DataStructuresandAlgorithms" : "5",
+      "Capacity Planning" : "1",
+      "Collaboration" : "5",
+      "KnowledgeTransfer" : "5",
+      "Accountability" : "5",
+      "Strategy" : "5",
+      "DefensiveCoding" : "5",
+      "Planning" : "5",
+      "Delivery" : "5"
+    },
+    "Associate Software Engineer" : {
+      "TeamBuilding" : "1",
+      "Ownership" : "1",
+      "Competence" : "1",
+      "CultureandValues" : "1",
+      "Min Cumulative Scores" : "22",
+      "Hiring" : "0",
+      "Process" : "1",
+      "Process&Measurement" : "1",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "1",
+      "Requirements&Design" : "1",
+      "Carreer Coaching" : "0",
+      "Operations" : "1",
+      "Supervision" : "1",
+      "ErrorHandling" : "1",
+      "CodeReview" : "1",
+      "Title" : "Associate Software Engineer",
+      "ProblemDecomposition" : "1",
+      "GeneralProgramming" : "1",
+      "Performance,DataStructuresandAlgorithms" : "1",
+      "Capacity Planning" : "0",
+      "Collaboration" : "1",
+      "KnowledgeTransfer" : "1",
+      "Accountability" : "1",
+      "Strategy" : "1",
+      "DefensiveCoding" : "1",
+      "Planning" : "1",
+      "Delivery" : "1"
+    },
+    "Principal Software Engineer" : {
+      "TeamBuilding" : "4",
+      "Ownership" : "4",
+      "Competence" : "4",
+      "CultureandValues" : "4",
+      "Min Cumulative Scores" : "90",
+      "Hiring" : "1",
+      "Process" : "4",
+      "Process&Measurement" : "4",
+      "Team Health" : "0",
+      "Risks and Dependencies" : "4",
+      "Requirements&Design" : "4",
+      "Carreer Coaching" : "1",
+      "Operations" : "4",
+      "Supervision" : "4",
+      "ErrorHandling" : "4",
+      "CodeReview" : "4",
+      "Title" : "Principal Software Engineer",
+      "ProblemDecomposition" : "4",
+      "GeneralProgramming" : "4",
+      "Performance,DataStructuresandAlgorithms" : "4",
+      "Capacity Planning" : "0",
+      "Collaboration" : "4",
+      "KnowledgeTransfer" : "4",
+      "Accountability" : "4",
+      "Strategy" : "4",
+      "DefensiveCoding" : "4",
+      "Planning" : "4",
+      "Delivery" : "4"
+    }
+}

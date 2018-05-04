@@ -1,18 +1,29 @@
 // @flow
 
 import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
-import type { MilestoneMap } from '../constants'
+import { Div } from 'glamorous'
+import FunButton from '../glamorous/FunButton'
+import type { MilestoneMap, RoleToLevel } from '../constants'
+import type { User } from '../models/User'
 import React from 'react'
+import _ from 'lodash'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
-  minimumForNextLevel: number
+  user?: string,
+  saveUser: (ratings: MilestoneMap,  currentRole: string, username: string) => void,
+  nextRoleToLevel: {
+    [category: string]: number
+  }
 }
+
 
 class PointSummaries extends React.Component<Props> {
   render() {
-    const { milestoneByTrack, minimumForNextLevel } = this.props;
-    const totalPoints = totalPointsFromMilestoneMap(milestoneByTrack)
+    const { milestoneByTrack, nextRoleToLevel, user } = this.props;
+    const totalPoints = _.reduce(milestoneByTrack, (memo, track) => memo + track, 0)
+
+    const minCumScore = nextRoleToLevel["Min Cumulative Scores"];
 
     const blocks = [
       {
@@ -21,51 +32,67 @@ class PointSummaries extends React.Component<Props> {
       },
       {
         label: 'Points needed for next level',
-        value: minimumForNextLevel
+        value: minCumScore
       }
     ]
 
+    const meetsMinReqForAllFields = _.every(milestoneByTrack, (score, categoryName) => {
+      return score >= nextRoleToLevel[categoryName];
+    })
+
+    const deservesPromition = meetsMinReqForAllFields && totalPoints >= minCumScore;
+
+    if (!user) return null;
+
     return (
-      <table>
-        <style jsx>{`
-          table {
-            border-spacing: 3px;
-            margin-bottom: 20px;
-            margin-left: -3px;
-          }
-          .point-summary-label {
-            font-size: 12px;
-            text-align: center;
-            font-weight: normal;
-            width: 120px;
-          }
-          .point-summary-value {
-            width: 120px;
-            background: #eee;
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 50px;
-            border-radius: 2px;
-            text-align: center;
-          }
-        `}</style>
-        <tbody>
-          <tr>
-          {blocks.map(({label}, i) => (
-            <th key={i} className="point-summary-label">
-              {label}
-            </th>
-          ))}
-          </tr>
-          <tr>
-          {blocks.map(({value}, i) => (
-            <td key={i} className="point-summary-value">
-              {value}
-            </td>
-          ))}
-          </tr>
-        </tbody>
-      </table>
+      <Div display="flex" flexDirection="column">
+        <h2>
+          {user}
+        </h2>
+        <table>
+          <style jsx>{`
+            table {
+              border-spacing: 3px;
+              margin-bottom: 20px;
+              margin-left: -3px;
+            }
+            .point-summary-label {
+              font-size: 12px;
+              text-align: center;
+              font-weight: normal;
+              width: 120px;
+            }
+            .point-summary-value {
+              width: 120px;
+              background: #eee;
+              font-size: 24px;
+              font-weight: bold;
+              line-height: 50px;
+              border-radius: 2px;
+              text-align: center;
+            }
+          `}</style>
+          <tbody>
+            <tr>
+            {blocks.map(({label}, i) => (
+              <th key={i} className="point-summary-label">
+                {label}
+              </th>
+            ))}
+            </tr>
+            <tr>
+            {blocks.map(({value}, i) => (
+              <td key={i} className="point-summary-value">
+                {value}
+              </td>
+            ))}
+            </tr>
+          </tbody>
+        </table>
+        <FunButton width="150px" onClick={this.props.saveUser}>
+          {deservesPromition ? 'Promote Employee' : 'Save Information' } 
+          </FunButton>
+      </Div>
     )
   }
 }

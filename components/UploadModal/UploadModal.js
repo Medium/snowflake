@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import glamorous from 'glamorous';
+import glamorous, { Form } from 'glamorous';
 import Modal from 'react-modal';
 import CancelIcon from '../icons/CancelIcon'
 import SuccessIcon from '../icons/SuccessIcon'
@@ -9,6 +9,8 @@ import { teal, teal2 } from '../../palette'
 import UploadMatrixStep from './UploadMatrixStep'
 import UploadThresholdStep from './UploadThresholdStep'
 import SubmitStep from './SubmitStep'
+import api from '../../api/api';
+import { select } from 'd3-selection';
 
 const UploadModalContainer = glamorous.div({
   padding: '40px',
@@ -58,7 +60,22 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
         [name]: file 
       } }
     );
-}
+  }
+
+  resetModal = () => {
+    this.setState({
+      currentStep: 1,
+      files: {}
+    })
+  }
+
+  submitFiles = () => {
+    api.submitFiles(this.state.files)
+    .then(() => {
+      this.resetModal()
+      this.props.toggleModal()
+    });
+  }
 
   changeStep = (step: number) => {
     this.setState({
@@ -73,7 +90,7 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
       case 2:
         return  <UploadThresholdStep toNextStep={this.onUploadThreshold} />
       case 3:
-        return <SubmitStep />
+        return <SubmitStep submitFiles={this.submitFiles} />
     }
   }
 
@@ -81,7 +98,7 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
     e.preventDefault();
 
     const matrixFile = e.target.files[0];
-    this.saveFile(matrixFile, "matrixFile");
+    this.saveFile(matrixFile, "performanceMatrix");
     this.incStep();
   }
 
@@ -90,7 +107,7 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
     e.preventDefault();
 
     const thresholdFile = e.target.files[0];
-    this.saveFile(thresholdFile, "thresholdFile");
+    this.saveFile(thresholdFile, "roleDefinition");
     this.incStep();
   }
 

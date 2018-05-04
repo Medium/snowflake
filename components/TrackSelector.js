@@ -37,6 +37,8 @@ class TrackSelector extends React.Component<Props> {
             cursor: pointer;
           }
           .track-selector-label {
+            max-width: 20px;
+            word-wrap: break-word;
             text-align: center;
             font-size: 9px;
           }
