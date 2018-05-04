@@ -15,4 +15,5 @@ const apiDev: Api = {
     }
 }
 
+export default apiDev;
 

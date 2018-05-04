@@ -1,9 +1,10 @@
 // @flow
 import apiDev from './apiDev';
 import apiServer from './apiServer';
+import type { Api } from './apiType';
 
-const isProd = false;
+const isProd = true;
 
-const api = isProd ? apiServer : apiDev
+const api: Api = isProd ? apiServer : apiDev
 
 export default api;

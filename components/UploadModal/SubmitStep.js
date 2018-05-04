@@ -1,6 +1,8 @@
+// @flow
 import * as React from 'react';
 import glamorous, { Div, H1 } from 'glamorous'
 import { teal, teal2 } from '../../palette'
+import api from '../../api/api';
 
 const FunButton = glamorous.button({
   backgroundColor: teal,
@@ -16,11 +18,15 @@ const FunButton = glamorous.button({
   width: '80px'
 })
 
-const SubmitStep = () => (
+type SubmittedTypeProps = {
+  submitFiles: () => void
+};
+
+const SubmitStep = ({ submitFiles }: SubmittedTypeProps) => (
   <Div textAlign="center">
     <H1 marginBottom="200px">You can submit!</H1>
 
-    <FunButton>Submit</FunButton>
+    <FunButton onClick={submitFiles}>Submit</FunButton>
   </Div>
 )
 

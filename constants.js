@@ -1,6 +1,8 @@
 // @flow
 import * as d3 from 'd3'
 
+export const departments = ['ENGINEERING', 'PRODUCT', 'DESIGN', 'CUSTOMER_INSIGHTS'];
+
 export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |

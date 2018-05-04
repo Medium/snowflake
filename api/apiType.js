@@ -5,6 +5,6 @@ export type Files = {
 }
 
 export type Api = {
-    submitFiles: (files: File) => Promise<void>
+    submitFiles: (files: Files) => Promise<void>
 }
 
