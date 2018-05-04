@@ -11,7 +11,6 @@ import UploadThresholdStep from './UploadThresholdStep'
 import SubmitStep from './SubmitStep'
 import api from '../../api/api';
 import { select } from 'd3-selection';
-import DepartmentDropDown from './../DepartmentDropDown';
 
 const UploadModalContainer = glamorous.div({
   padding: '40px',
@@ -93,7 +92,6 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
   }
 
   onUploadThreshold = (e: any) => {
-    debugger;
     e.preventDefault();
 
     const thresholdFile = e.target.files[0];
@@ -104,7 +102,6 @@ class UploadModal extends React.Component<UploadModalProps, UploadModalState> {
   render() {
     return (
       <Modal isOpen={this.props.isModalOpen} style={{ content: { margin: '0 auto', maxHeight: '80vh', maxWidth: '40vw'}}}>
-        <DepartmentDropDown/>
         <ProgressBarContainer>
           <ProgressBar
             numBuckets={totalSteps}
