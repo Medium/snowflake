@@ -648,7 +648,7 @@ export const tracks: Tracks = {
         examples: [
           "Collected and delivered feedback",
           "Discussed career options and areas of interest informally",
-          "Hosted a Floodgate Academy intern"
+          "Paired with development interns"
         ]
       },
       {
@@ -661,8 +661,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Set up and attended regular, constructive 1:1s",
-          "Provided coaching on how to have difficult conversations",
-          "Taught group members the GROW model"
+          "Provided coaching on how to have difficult conversations"
         ]
       },
       {
@@ -674,9 +673,8 @@ export const tracks: Tracks = {
           "Works with team leads to elevate emerging leaders"
         ],
         examples: [
-          "Reviewed individual group member progression every 6 weeks",
-          "Suggested appropriate group member for Tech Lead position",
-          "Arranged a requested switch of discipline for a group member"
+          "Reviewed individual group member progression every quarter",
+          "Suggested appropriate group member for Tech Lead position"
         ]
       },
       {
@@ -703,7 +701,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Provided coaching to group leads",
-          "Devised Pathwise curriculum for group leads",
+          "Devised curriculum for group leads",
           "Advocated to execs for engineer development resources and programs"
         ]
       }
@@ -726,8 +724,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Facilitated effective tactical meeting with empathy",
-          "Explained tactical meeting format to a new hire",
-          "Provided feedback on sprint planning meeting"
+          "Explained iteration meeting format to a new hire",
+          "Provided feedback on iteration meeting"
         ]
       },
       {
@@ -739,8 +737,7 @@ export const tracks: Tracks = {
           "Advocates for improved diversity and inclusion, and proposes ideas to help"
         ],
         examples: [
-          "Defined Frankenmeeting structure for small team",
-          "Improved Watch on-call rotation scheduling",
+          "Defined Launch meeting structure for small team",
           "Defined standard channels for inter-team communication"
         ]
       },
@@ -752,9 +749,8 @@ export const tracks: Tracks = {
           "Reallocates resources to meet organizational needs"
         ],
         examples: [
-          "Developed baseline team templates for consistency",
-          "Created bug-rotation program to address ongoing quality issues",
-          "Defined Guilds manifesto and charter"
+          "Created 🚒 write-up program to address ongoing quality issues",
+          "Defined and/or contributed to engineering.stratasan.com"
         ]
       },
       {
@@ -765,11 +761,7 @@ export const tracks: Tracks = {
           "Analyzes existing processes for bias and shortfall",
           "Ties abstract concerns to concrete organizational actions or norms"
         ],
-        examples: [
-          "Connected mobile recruiting difficulties to focus on excellence",
-          "Raised leadership level change discrepancies",
-          "Analyzed the hiring rubric for false negative potential"
-        ]
+        examples: ["???", "???", "???"]
       },
       {
         summary:
@@ -780,9 +772,9 @@ export const tracks: Tracks = {
           "Leads planning and communication for reorgs"
         ],
         examples: [
-          "Lead efforts to increase number of mobile engineers",
+          "???",
           "Directed resources to meaningfully improve diversity at all levels",
-          "Built the growth framework rubric"
+          "???"
         ]
       }
     ]
@@ -799,7 +791,7 @@ export const tracks: Tracks = {
           "Uses tools and processes to help ensure colleagues are healthy and happy",
         signals: [
           "Keeps confidences unless legally or morally obliged to do otherwise",
-          "Applies the reasonable person principle to others",
+          "Assumes positive intent",
           "Avoids blame and focuses on positive change"
         ],
         examples: [
@@ -818,7 +810,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Coordinated a small celebration for a project launch",
-          "Connected tedious A|B testing project with overall company goals",
+          "Connected tedious data ETL with overall company goals",
           "Noted a team without a recent win and suggested some easy quick wins"
         ]
       },
