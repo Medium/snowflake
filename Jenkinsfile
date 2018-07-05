@@ -8,24 +8,24 @@ ansiColor('xterm') {
           deleteDir()
           cleanWs()
         }
-    
+
         stage('Checkout') {
           checkout scm
         }
-    
+
         stage('Deploy') {
           try {
             docker.image('node:9-alpine').inside("-u 0") {
               sh '''
                 yarn
-                yarn export
+                make build
                 echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
                 apk add -U aws-cli
-                aws s3 sync --acl public-read out s3://oneup.stratasan.com/
+                aws s3 sync --acl public-read static s3://oneup.stratasan.com/
               '''
             }
             currentBuild.result = 'SUCCESS'
-    
+
           } catch (err) {
             currentBuild.result = 'FAILURE'
             throw err
