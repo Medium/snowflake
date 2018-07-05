@@ -2,12 +2,11 @@
 import * as d3 from "d3";
 
 export type TrackId =
-  | "WEB_CLIENT"
-  | "FOUNDATIONS"
-  | "SERVERS"
+  | "WEB_CLIENT"  // market assessment.
+  | "FOUNDATIONS" // product strategy
+  | "SERVERS" // product execution
   | "PROJECT_MANAGEMENT"
   | "COMMUNICATION"
-  | "CRAFT"
   | "INITIATIVE"
   | "CAREER_DEVELOPMENT"
   | "ORG_DESIGN"
@@ -25,7 +24,6 @@ export type MilestoneMap = {
   SERVERS: Milestone,
   PROJECT_MANAGEMENT: Milestone,
   COMMUNICATION: Milestone,
-  CRAFT: Milestone,
   INITIATIVE: Milestone,
   CAREER_DEVELOPMENT: Milestone,
   ORG_DESIGN: Milestone,
@@ -94,7 +92,6 @@ type Tracks = {|
   SERVERS: Track,
   PROJECT_MANAGEMENT: Track,
   COMMUNICATION: Track,
-  CRAFT: Track,
   INITIATIVE: Track,
   CAREER_DEVELOPMENT: Track,
   ORG_DESIGN: Track,
@@ -108,169 +105,148 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   WEB_CLIENT: {
-    displayName: "Web client",
+    displayName: "Market understanding",
     category: "A",
     description:
-      "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+      "Assess and value market opportunities, monitor competitors, identify trends",
     milestones: [
       {
         summary:
-          "Works effectively within established web client architectures, following current best practices",
+          "Understand the job to be done for a product",
         signals: [
-          "Makes minor modifications to existing screens",
-          "Fixes simple design quality issues",
-          "Uses CSS appropriately, following style guide"
+          "Gather feedback from stakeholders to identify minimum viable product or minimum marketable feature",
+          "Communicate requirements to the engineering team"
         ],
         examples: [
-          "Fixed typos in templates",
-          "Add simple jQuery to bind click events in Analytics",
-          "Edited simple UI components in Pathways"
+          "Wrote up description of Blackbird user-defined crosswalks and reviewed with team",
         ]
       },
       {
         summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "Understand the market demand for a feature or product",
         signals: [
-          "Makes sensible abstractions based on template and code patterns",
-          "Specs and builds interactive components independently",
+          "Understands the competitive landscape, approximate pricing and total market size",
+          "Understands the target user and communicates it to the team",
           "Prototypes simple new features quickly"
         ],
         examples: [
-          "Built a specific Card component to describe a user-facing resource, e.g. SliceCard",
-          "Created new UI component to improve UI consistency",
-          "Added templates to drive screen in Analytics"
+          "Built a product canvas / product requirements document for Launchpad demographics",
+          "Built a competitive matrix for longitudinal patient analysis"
         ]
       },
       {
         summary:
-          "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+          "Indentifies the total addressable market for specific products",
         signals: [
-          "Provides useful design feedback and suggests feasible alternatives",
-          "Performs systemic tasks to significantly minimise bundle size",
-          "Acts a caretaker for all of web client code"
+          "Works with other departments to approximate total market and provides realistic revenue goals",
+          "Uses market opportunities to prioritize one product or feature request over another"
         ],
         examples: [
-          "Improved bundle code to improve webpack bundling process",
-          "Pioneered new CSS techniques such as flexbox and grid",
-          "Effectively ported legacy javascript to new and modern paradigms"
+          "Worked with sales to determine competitor average pricing for healthcare utilization projections and identified total market opportunity, influenced internal pricing discussion",
+          "Worked with marketing department to craft message specific to target users",
         ]
       },
       {
         summary:
-          "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+          "Independently identifies, assesses and communicates market opportunities",
         signals: [
-          "Pioneers architecture migrations that reduce programmer burden",
-          "Implements complex UI transitions that bring delight",
-          "Makes architectural decisions that eliminate entire classes of bugs"
+          "Familiarity with healthcare domain allows PM to identify adjacent market opportunities",
+          "Proposes alternative paths forward to management team",
         ],
         examples: [
-          "Added type-checking library to improve compile-time verification",
-          "Abstracted all XHR requests into single code path",
-          "Designed and implemented new architectures for data storage"
+          "Demonstrated that minor changes to Launchpad would make it applicable to post-acute healthcare and assessed total market opportunity, presented to management"
         ]
       },
       {
         summary:
-          "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
+          "Is considered an expert on company strategy to identify and assess market opportunities",
         signals: [
-          "Invents new techniques to innovate and overcome browser constraints",
-          "Identifies and solved systemic problems with current architecture",
-          "Defines a long-term vision for web client and ensures projects are in service of it"
+          "Has systemized methodology for assessing opportunities and regularly develops strategy to address",
+          "Clearly compares competing opportunities and evaluates which present the highest opportunity for growth"
         ],
         examples: [
-          "Invented CSS in JS",
-          "Implemented unidirectional data flow to completion"
+          "Identified market opportunity, effectively created organizational alignment around it and changed company direction"
         ]
       }
     ]
   },
 
   FOUNDATIONS: {
-    displayName: "Foundations",
+    displayName: "Product Strategy",
     category: "A",
     description:
-      "Develops expertise in foundational systems, such as deployments, pipelines and databases",
+      "Understands competitive advantages to create product vision",
     milestones: [
       {
         summary:
-          "Works effectively within established structures, following current best practices",
+          "Understands the product's job to be done",
         signals: [
-          "Writes thorough postmortems for service outages",
-          "Makes simple configuration changes to services",
-          "Performs backfills safely and effectively, without causing pages"
+          "Discusses job to be done with stakeholders and communicates it during product meetings",
+          "Influences design of product or feature at hand in order to influence design, priority, value",
+          "Understands what the product doesn't do",
         ],
         examples: [
-          "Made safe and effective terraform changes",
-          "Implemented new ETL pipelines based on existing ones",
-          "Resolved out of disk errors independently"
+          "Interviews various potential users to confirm understanding of the job to be done",
+          "Rules out scope creep that doesn't contribute to the goal at hand",
         ]
       },
       {
         summary:
-          "Develops new instances of existing architecture, or minor improvements to existing architecture",
+          "Identifies new value that a product can deliver",
         signals: [
-          "Made minor version upgrades to technologies",
-          "Builds new ETL within Peach",
-          "Understands how to monitor resources within AWS"
+          "Evaluates value of new product to identify prioritization against competing products that we might tackle",
+          "Interviews potential users to see how the product or feature might be used",
         ],
         examples: [
-          "Developed and tested new CMS data extraction with peach",
-          "Developed and applied new terraform modules to create new resources",
-          "Improved ETL efficiency by moving health ETL to peach"
+          "????"
         ]
       },
       {
         summary:
-          "Designs standalone systems of moderate complexity, or major new features in existing systems",
+          "Shapes product strategy to continually provide competitive advantage",
         signals: [
-          "Acts as primary maintainer for existing critical systems",
-          "Designs moderately complex systems",
-          "Makes major version upgrades to libraries"
+          "Gathers feedback from users that identifies how a product can be differentiated from competitors",
+          "Influences decisions based on gathered metrics",
         ],
         examples: [
-          "Introduced terraform as de-facto resource management system",
-          "Built and maintain significant health infrastructure"
+          "Presents report on user confusion based on metrics, provides suggestions to alleviate",
+          "Researches competition and comes up with novel ways to address gaps in user experience"
         ]
       },
       {
         summary:
-          "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+          "Guides long-term strategy for some products or services",
         signals: [
-          "Designs complex projects that encompass multiple systems and technologies",
-          "Demonstrates deep knowledge of foundational systems",
-          "Introduces new databases and technologies to meet underserved needs"
+          "Is considered the expert on specific products and services and consulted for changes",
+          "Works cross-departmentally to promote visibility of changes to products and services",
         ],
         examples: [
-          "Pioneered staging-daily resurrect/teardown",
-          "Designed AWS configuration management",
-          "Introduced Kinesis and pioneered streaming events pipeline"
+          "Worked with the sales and marketing team to develop material for new product release.",
         ]
       },
       {
         summary:
-          "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+          "Guides long-term strategy for all products and services offered by Stratasan",
         signals: [
-          "Designs transformational projects in service of long-term goals",
-          "Defines the strategic vision for foundational work and supporting technologies",
-          "Invents industry-leading techniques to solve complex problems"
+          "Is familiar with the health care strategic planning market and how our product fits in the overall landscape",
+          "Influences organizational direction by presenting compelling cases for product development focus",
         ],
         examples: [
-          "Defined and developed Medium's continuous delivery strategy",
-          "Developed and implemented HA strategy"
+          "Recommended product focus based on reading industry white papers",
         ]
-      }
+      },
     ]
   },
 
   SERVERS: {
-    displayName: "Servers",
+    displayName: "Product Execution",
     category: "A",
     description:
       "Develops expertise in server side engineering, using Python & Django",
     milestones: [
       {
         summary:
-          "Works effectively within established server side frameworks, following current best practices",
+          "Works effectively within established structures, following current best practices",
         signals: [
           "Edits pathways endpoints using DRF",
           "Edits and adds analytics views & templates using standard methods"
@@ -427,9 +403,9 @@ export const tracks: Tracks = {
           "Asks for help at the appropriate juncture"
         ],
         examples: [
-          "Updated slack before running a long peach job",
-          "Updated project status changes in GitHub",
-          "Appropriately sought clarification in Github Issues"
+          "Took notes from meetings, dissimenated to interested parties",
+          "Communicated project status to individuals that requested it",
+          "Appropriately sought clarification in feature specifications"
         ]
       },
       {
@@ -442,22 +418,22 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Received and integrated critical feedback positively",
-          "Used geekbot appropriately to notify of blockers on reviews",
-          "Spoke to domain experts before writing spec"
+          "Kept team members (sales, marketing) informed about timeline confidence and required adjustments",
+          "Spoke to domain experts before writing specifications"
         ]
       },
       {
         summary:
           "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
         signals: [
+          "Shares the necessary information to facilitate stakeholder discussion about product strategy and direction",
           "Resolves communication difficulties between others",
           "Anticipates and shares schedule deviations in plenty of time",
           "Manages project stakeholder expectations effectively"
         ],
         examples: [
-          "Provides ongoing updates in #support during 🚒",
-          "Gave a substantial Dev L&L presentation on React",
-          "Helped Product craft marketing around new product or feature"
+          "Gave a substantial lunch and learn presentation of new product or feature",
+          "Craft marketing and sales messaging around new product or features"
         ]
       },
       {
@@ -469,8 +445,7 @@ export const tracks: Tracks = {
           "Negotiates resourcing compromises with other teams"
         ],
         examples: [
-          "Introduced Slack emoji reactions like 🌲 an 🚒",
-          "Effectively communicated data dependencies for certain products to non-engineering colleagues"
+          "Establishes cross-departmental alignment around product strategy within the organization",
         ]
       },
       {
@@ -484,81 +459,7 @@ export const tracks: Tracks = {
         examples: [
           "Organized company town-hall",
           "Created the communication plan for a large organizational change",
-          "Presented to the board about key company metrics and projects"
-        ]
-      }
-    ]
-  },
-
-  CRAFT: {
-    displayName: "Craft",
-    category: "B",
-    description:
-      "Embodies and promotes practices to ensure excellent quality products and services",
-    milestones: [
-      {
-        summary: "Delivers consistently good quality work",
-        signals: [
-          "Tests new code thoroughly, both locally, staging when necessary and in production once shipped",
-          "Writes tests for new feature and bug fixes",
-          "Writes clear Pull-Requests"
-        ],
-        examples: [
-          "Caught a bug on staging before review",
-          "Landed non-trivial PR with no caretaker comments",
-          "Wrote front-end unittests for immutable models"
-        ]
-      },
-      {
-        summary:
-          "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
-        signals: [
-          "Refactors existing code to make it more testable",
-          "Adds tests for uncovered areas",
-          "Deletes unnecessary code and deprecates proactively when safe to do so"
-        ],
-        examples: [
-          "Requested tests for a PR when acting as reviewer",
-          "Requested improved logging when reviewing a PR",
-          "Fixed a TODO for someone else in the codebase"
-        ]
-      },
-      {
-        summary: "Improves others' ability to deliver great quality work",
-        signals: [
-          "Improves CI tests and introduces linters/formatters",
-          "Gives thoughtful code reviews as a domain expert",
-          "Adds tooling to improve code quality"
-        ],
-        examples: [
-          "Added tox in CI to test by py2 and py3",
-          "Improved Jenkinsfile to run the same volume of tests faster"
-        ]
-      },
-      {
-        summary:
-          "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
-        signals: [
-          "Builds systems so as to eliminate entire classes of programmer error",
-          "Focuses the team on quality with regular reminders",
-          "Addresses fire engines and explores methods to eradicate certain types"
-        ],
-        examples: [
-          "Added prettier formatting in JS",
-          "Prototyped and led migration to event-driven workers"
-        ]
-      },
-      {
-        summary:
-          "Enables and encourages the entire organization to make quality a central part of the development process",
-        signals: [
-          "Defines policies for the engineering org that encourage quality work",
-          "Identifies and eliminates single points of failure throughout the organization",
-          "Secures time and resources from execs to support great quality"
-        ],
-        examples: [
-          "Introduced stratabot and advocated to product/management for its continued development",
-          "Instituted and ensured success of a 10% new product policy"
+          "Presented key company metrics and projects to the company leadership team"
         ]
       }
     ]
@@ -575,17 +476,20 @@ export const tracks: Tracks = {
           "Identifies opportunities for organizational change or product improvements",
         signals: [
           "Sparks meaningful conversations in iteration meetings",
-          "Asks leadership team probing questions at all-hands"
+          "Asks leadership team probing questions at all-hands",
+          "Reads articles about Product Management best practices",
+          "Documents workflows to create repeatable processes"
         ],
         examples: [
-          "Reported a production issue in Github before clients hit #support"
+          "Triage feature request list",
+          "Take meeting notes",
+          "Follow up on items to make sure they are completed"
         ]
       },
       {
         summary:
           "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
         signals: [
-          "Picks bugs off the backlog proactively when blocked elsewhere",
           "Makes design quality improvements unprompted",
           "Takes on trust and safety tasks proactively when blocked elsewhere"
         ],
@@ -600,12 +504,13 @@ export const tracks: Tracks = {
           "Causes change to positively impact an entire team or instigates a minor feature or service",
         signals: [
           "Demonstrates concepts proactively with prototypes",
-          "Fixes complicated bugs outside of regular domain",
+          "Documents complicated bugs outside of regular domain",
           "Takes ownership of systems that nobody owns or wants"
         ],
         examples: [
           "Defined style guide to resolve style arguments",
-          "Proposed and implemented improvements to spectrum around internal patient data"
+          "Documented and cataloged all places where date formatting should be standardized",
+          "Proposed user improvements to product, gathered data to support, and communicated with team"
         ]
       },
       {
@@ -616,17 +521,17 @@ export const tracks: Tracks = {
           "Exemplifies grit and determination in the face of persistent obstacles",
           "Instigates major new features, services, or architectures"
         ],
-        examples: ["Implemented and secured support for native login", "???"]
+        examples: ["Implemented new plan to gather user metrics", "Worked with customer success team to roll out new training materials"]
       },
       {
         summary:
           "Effects change that has a substantial positive impact on the whole company",
         signals: [
-          "Creates a new function to solve systemic issues",
+          "Create new organizational processes to solve systemic issues",
           "Galvanizes the entire company and garners buy in for a new strategy",
           "Changes complex organizational processes"
         ],
-        examples: ["???", "???", "???"]
+        examples: ["Work with customer success, marketing, and sales to communicate new market opportunity"]
       }
     ]
   },
@@ -635,7 +540,7 @@ export const tracks: Tracks = {
     displayName: "Career development",
     category: "C",
     description:
-      "Provides strategic support to engineers to help them build the career they want",
+      "Provides strategic support to colleagues to help them build the career they want",
     milestones: [
       {
         summary:
@@ -974,7 +879,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+          "Teaches small groups of colleagues and contributes to Stratasan's shared knowledge base",
         signals: [
           "Avoids siloing information when it can be usefully shared with others",
           "Works to increase the bus factor of systems",
@@ -982,8 +887,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Gave a brown bag presentation on payments",
-          "Wrote Hatch post on avoiding RDS backfill issues",
-          "Wrote Medium-U content module"
+          "Wrote customer support documentation on dealing with issues with large service areas in Launch",
+          "Wrote Stratasan blog posts"
         ]
       },
       {
@@ -1191,8 +1096,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Joined and actively participated in the web client guild",
-          "Brought a small gift back from vacation for the team",
-          "Wrote entertaining and informative Prod Ops writeups on Hatch"
+          "Wrote entertaining and informative blog post on product management for Stratasan blog"
         ]
       },
       {
@@ -1200,26 +1104,25 @@ export const tracks: Tracks = {
           "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
         signals: [
           "Makes space for others to participate",
-          "Collaborates with other engineers outside direct responsibilities",
-          "Finds ways to ramp up and engage new hires quickly"
+          "Collaborates with other colleagues outside direct responsibilities",
+          "Proactively build team culture"
         ],
         examples: [
           "Created onboarding bingo",
           "Brought shy and introverted people into a dominant conversation",
-          "Volunteered as secretary for a team"
+          "Volunteered as note taker for a team"
         ]
       },
       {
         summary:
           "Contributes to improving team relatedness, and helps build a culture of lending support",
         signals: [
-          "Takes on additional Watch shifts at short notice",
           "Pitches in to help other teams hit deadlines, without missing own deadlines",
           "Uses position to raise difficult issues on someone's behalf"
         ],
         examples: [
-          "Lead Watch cycles with little support while still contributing to projects",
-          "Started and drove the LGBTQIA ERG",
+          "Encourages team members to remember core values during difficult conversations",
+          "Started and drove outreach to local campuses to connect with interns, provide professional guidance",
           "Stayed positive and improved team morale during period after layoffs"
         ]
       },
@@ -1227,14 +1130,13 @@ export const tracks: Tracks = {
         summary:
           "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
         signals: [
-          "Goes above and beyond on the Watch, serving the team without complaint",
+          "Actively participates in user groups, conferences while reflecting company values",
           "Implements concrete programs to signficantly improve team inclusivity",
           "Takes on large amounts of tedious grunt work for the team without being asked"
         ],
         examples: [
           "Devoted large amount of time to helping outside direct responsibilities",
-          "Refactored hundreds of legacy Shepherd nodes",
-          "Acted as sole maintainer of Boxen for years"
+          "Elevated company culture by commending others for positive behavior"
         ]
       },
       {
@@ -1242,13 +1144,13 @@ export const tracks: Tracks = {
           "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
         signals: [
           "Brings separate teams together to build relatedness",
-          "Holds individuals, teams, and leadership accountable to Medium's values",
+          "Holds individuals, teams, and leadership accountable to company values",
           "Sets the tone, policy, and goals around maintaining an inclusive company"
         ],
         examples: [
-          "Organized wine and olive tasting offsite to Napa for the whole engineering org",
-          "Devised, delivered and acted on findings from an engineer happiness survey",
-          "Challenged and corrected exclusionary behaviour or policies"
+          "Organized offsite for the whole technical team",
+          "Devised, delivered and acted on findings from an employment satisfaction survey",
+          "Challenged and corrected exclusionary behavior or policies"
         ]
       }
     ]
@@ -1292,14 +1194,12 @@ export const categoryColorScale = d3
   .range(["#00abc2", "#428af6", "#e1439f", "#e54552"]);
 
 export const titles = [
-  { label: "Engineer I", minPoints: 0, maxPoints: 16 },
-  { label: "Engineer II", minPoints: 17, maxPoints: 35 },
-  { label: "Senior Engineer", minPoints: 36, maxPoints: 57 },
-  { label: "Group Lead", minPoints: 36, maxPoints: 57 },
-  { label: "Staff Engineer", minPoints: 58, maxPoints: 89 },
-  { label: "Senior Group Lead", minPoints: 58, maxPoints: 89 },
-  { label: "Principal Engineer", minPoints: 90 },
-  { label: "Director of Engineering", minPoints: 90 }
+  { label: "Product Manager Associate", minPoints: 0, maxPoints: 35 },
+  { label: "Product Manager", minPoints: 36, maxPoints: 80 },
+  { label: "Senior Product Manager", minPoints: 81, maxPoints: 90 },
+  { label: "Director of Product Management", minPoints: 91, maxPoints: 150 },
+  { label: "Senior Director of Product Management", minPoints: 151, maxPoints: 220},
+  { label: "Vice President of Product Management", minPoints: 221, maxPoints: 250 }
 ];
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
