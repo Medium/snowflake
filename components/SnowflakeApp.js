@@ -10,7 +10,8 @@ import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../cons
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
+import TitleSelector from '../components/TitleSelector';
+import Admin from '../components/Admin';
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -50,7 +51,7 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
+      'MEDIAWIKI': 0,
       'WEB_CLIENT': 0,
       'FOUNDATIONS': 0,
       'SERVERS': 0,
@@ -67,33 +68,33 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'MEDIAWIKI'
   }
 }
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
+    name: '',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
+      'MEDIAWIKI': 0,
+      'WEB_CLIENT': 0,
+      'FOUNDATIONS': 0,
+      'SERVERS': 0,
+      'PROJECT_MANAGEMENT': 0,
+      'COMMUNICATION': 0,
+      'CRAFT': 0,
+      'INITIATIVE': 0,
+      'CAREER_DEVELOPMENT': 0,
+      'ORG_DESIGN': 0,
       'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
+      'ACCOMPLISHMENT': 0,
+      'MENTORSHIP': 0,
+      'EVANGELISM': 0,
+      'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'MEDIAWIKI'
   }
 }
 
@@ -129,6 +130,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     return (
       <main>
         <style jsx global>{`
+          .aui .light-fill { fill: #FFF; }
+          .aui .logo-border { fill: transparent; stroke: #939598; }
+          .aui .logo-gradient-dark { fill: #1D396B; }
+          .aui .logo-gradient-darkest { fill: #051E3C; }
+          .aui .logo-gradient-light { fill: #79B3E1; }
           body {
             font-family: Helvetica;
           }
@@ -156,9 +162,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
             <Wordmark />
-          </a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
@@ -201,11 +205,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+            Improvements by Liferay
           </div>
         </div>
+
+        <Admin />
       </main>
     )
   }
