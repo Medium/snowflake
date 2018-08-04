@@ -51,7 +51,7 @@ class Track extends React.Component<Props> {
         <h2>{track.displayName}</h2>
         <p className="track-description">{track.description}</p>
         <div style={{display: 'flex'}}>
-          <table style={{flex: 0, marginRight: 50}}>
+          <table style={{marginRight: 50}}>
             <tbody>
               {milestones.slice().reverse().map((milestone) => {
                 const isMet = milestone <= currentMilestoneId
