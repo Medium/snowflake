@@ -1,5 +1,5 @@
 import SnowflakeApp from '../components/SnowflakeApp'
 
-export default () => <div>
+export default () => <div style={{background:'lavender'}}>
   <SnowflakeApp />
 </div>

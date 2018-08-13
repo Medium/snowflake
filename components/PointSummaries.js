@@ -22,7 +22,7 @@ class PointSummaries extends React.Component<Props> {
     let pointsToNextLevel = 1
     while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
       pointsToNextLevel++
-      if (pointsToNextLevel > 135) {
+      if (pointsToNextLevel > 192) {
         pointsToNextLevel = 'N/A'
         break
       }
@@ -59,7 +59,7 @@ class PointSummaries extends React.Component<Props> {
           }
           .point-summary-value {
             width: 120px;
-            background: #eee;
+            background: white;
             font-size: 24px;
             font-weight: bold;
             line-height: 50px;
