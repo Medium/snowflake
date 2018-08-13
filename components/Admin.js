@@ -119,7 +119,6 @@ class Admin extends React.Component<Props> {
     }
 
     render() {
-        console.log(this);
         return (
             <div>
                 <style>
