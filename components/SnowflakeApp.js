@@ -165,8 +165,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{margin: '0 auto 0', width: 300}}>
             <Wordmark />
         </div>
-        <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
             <form>
               <input
                   type="text"
@@ -180,16 +178,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   currentTitle={this.state.title}
                   setTitleFn={(title) => this.setTitle(title)} />
             </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
-          </div>
-          <div style={{flex: 0}}>
-            <NightingaleChart
-                milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-          </div>
-        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{flex: 1}}>
+
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
@@ -203,6 +194,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+       </div>
+       <div style={{flex: 0}}>
+            <NightingaleChart
+                milestoneByTrack={this.state.milestoneByTrack}
+                focusedTrackId={this.state.focusedTrackId}
+                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+          </div>
+
+       </div>
+       <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+
         <div className="footer" style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
