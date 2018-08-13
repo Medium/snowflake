@@ -139,7 +139,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             font-family: Helvetica;
           }
           main {
-            width: 960px;
+            width: 1180px;
             margin: 0 auto;
             background-color: lavender;
           }
@@ -161,39 +161,38 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             color: #888;
             text-decoration: none;
           }
+          .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
         `}</style>
         <div style={{margin: '0 auto 0', width: 300}}>
             <Wordmark />
         </div>
+
+        <form>
+
+        <input
+          type="text"
+          className="name-input center"
+          value={this.state.name}
+          onChange={e => this.setState({name: e.target.value})}
+          placeholder="Enter Engineer's Name Here"
+          />
+          <TitleSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            currentTitle={this.state.title}
+            setTitleFn={(title) => this.setTitle(title)} />
+
+        </form>
+        <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            <form>
-              <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Enter Engineer's Name Here"
-                  />
-              <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
-            </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
-          </div>
-          <div style={{flex: 0}}>
-            <NightingaleChart
-                milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-          </div>
-        </div>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
@@ -203,6 +202,24 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+       </div>
+       <div style={{flex: 0.5}}>
+            <NightingaleChart
+                milestoneByTrack={this.state.milestoneByTrack}
+                focusedTrackId={this.state.focusedTrackId}
+                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+          </div>
+          <div style={{flex:0.5}}>
+        <TrackSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            focusedTrackId={this.state.focusedTrackId}
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+
+
+        </div>
+
+
+       </div>
         <div className="footer" style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.

@@ -20,6 +20,9 @@ class TitleSelector extends React.Component {
           line-height: 20px;
           margin-bottom: 20px;
           min-width: 300px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;      
         }
       `}</style>
       {titles.map(title => (
