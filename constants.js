@@ -1,6 +1,6 @@
 // @flow
 import * as d3 from 'd3'
-import raz from './data.json'
+import trackData from './data.json'
 export type TrackId = 'MEDIAWIKI' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
@@ -33,30 +33,38 @@ export const milestoneToPoints = (milestone: Milestone): number => {
     case 1: return 1
     case 2: return 3
     case 3: return 6
-    case 4: return 12
+    case 4: return 9
+    case 5: return 12
     default: return 0
   }
 }
+export const titles = [
+  {label: 'Junior Software Engineer', minPoints: 0, maxPoints: 24},
+  {label: 'Software Engineer', minPoints: 25, maxPoints: 53},
+  {label: 'Senior Software Engineer', minPoints: 54, maxPoints: 87},
+  {label: 'Tech Leader', minPoints: 88, maxPoints: 115},
+  {label: 'Engineering Manager', minPoints: 88, maxPoints: 115},
+  {label: 'Software Architect', minPoints: 116},
+  {label: 'Head of Engineering', minPoints: 116}
+]
 
 export const pointsToLevels = {
   '0': '1.1',
-  '5': '1.2',
-  '11': '1.3',
-  '17': '2.1',
-  '23': '2.2',
-  '29': '2.3',
-  '36': '3.1',
-  '43': '3.2',
-  '50': '3.3',
-  '58': '4.1',
-  '66': '4.2',
-  '74': '4.3',
-  '90': '5.1',
-  '110': '5.2',
-  '135': '5.3',
+  '9': '1.2',
+  '18': '1.3',
+  '25': '2.1',
+  '38': '2.2',
+  '51': '2.3',
+  '64': '3.1',
+  '72': '3.2',
+  '80': '3.3',
+  '98': '4.1',
+  '110': '4.2',
+  '130': '5.1',
+  '160': '5.2'
 }
 
-export const maxLevel = 135
+export const maxLevel = 192
 
 export type Track = {
   displayName: string,
@@ -88,8 +96,8 @@ type Tracks = {|
   'COMMUNITY': Track
 |}
 
-console.log(raz)
-export const tracks: Tracks = raz;
+console.log(trackData)
+export const tracks: Tracks = trackData;
 
 export const trackIds: TrackId[] = Object.keys(tracks)
 
@@ -120,15 +128,6 @@ export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#007DA4', '#C4D600', '#FB8B24', '#D90368'])
 
-export const titles = [
-  {label: 'Junior Software Engineer', minPoints: 0, maxPoints: 16},
-  {label: 'Software Engineer', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Software Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Tech Leader', minPoints: 58, maxPoints: 89},
-  {label: 'Engineering Manager', minPoints: 58, maxPoints: 89},
-  {label: 'Software Architect', minPoints: 90},
-  {label: 'Head of Engineering', minPoints: 90}
-]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)

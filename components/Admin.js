@@ -119,6 +119,7 @@ class Admin extends React.Component<Props> {
     }
 
     render() {
+        console.log(this);
         return (
             <div>
                 <style>
@@ -131,10 +132,10 @@ class Admin extends React.Component<Props> {
                         .sidebar {
                             position: fixed;
                             right: 0;
-                            width: 220px;
+                            width: 150px;
                             top: 0;
                             height: 100%;
-                            background-color: #061F3B;
+                            background-color: #3f0f73;
                             margin: 0;
                             padding: 0;
                         }
@@ -217,12 +218,14 @@ class Admin extends React.Component<Props> {
                     {this.renderList()}
                 </ul>
 
-                <div className="footer">
+                <div className="">
                     <div className="container">
                         <button className="btn btn-primary" onClick={this.handleClickSave.bind(this)}>save snowflake</button>
                         <button className="btn btn-default" onClick={this.handleClickNew.bind(this)}>reset snowflake</button>
+                        <div style={{padding:'100px'}}></div>
                     </div>
                 </div>
+
             </div>
         );
     }
