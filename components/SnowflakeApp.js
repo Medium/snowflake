@@ -141,12 +141,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           main {
             width: 960px;
             margin: 0 auto;
+            background-color: lavender;
           }
           .name-input {
             border: none;
             display: block;
             border-bottom: 2px solid #fff;
-            font-size: 30px;
+            font-size: 25px;
             line-height: 40px;
             font-weight: bold;
             width: 380px;
@@ -161,7 +162,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
+        <div style={{margin: '0 auto 0', width: 300}}>
             <Wordmark />
         </div>
         <div style={{display: 'flex'}}>
@@ -172,7 +173,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   className="name-input"
                   value={this.state.name}
                   onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
+                  placeholder="Enter Engineer's Name Here"
                   />
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
@@ -202,10 +203,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
+        <div className="footer" style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Improvements by Liferay
+            Improvements by <a href="https://software.wikimedia.de" target="_blank">Wikimedia Germnay</a>. 
           </div>
         </div>
 
