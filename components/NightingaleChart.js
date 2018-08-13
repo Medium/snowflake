@@ -53,13 +53,37 @@ class NightingaleChart extends React.Component<Props> {
             height: ${width}px;
           }
           .track-milestone {
-            fill: #eee;
+            fill: white;
             cursor: pointer;
           }
           .track-milestone-current, .track-milestone:hover {
             stroke: #000;
             stroke-width: 4px;
             stroke-linejoin: round;
+          }
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+          }
+          /* Tooltip text */
+          .tooltip .tooltiptext {
+              visibility: hidden;
+              width: 120px;
+              background-color: black;
+              color: #fff;
+              text-align: center;
+              padding: 5px 0;
+              border-radius: 6px;
+          
+              /* Position the tooltip text - see examples below! */
+              position: absolute;
+              z-index: 1;
+          }
+          
+          /* Show the tooltip text when you mouse over the tooltip container */
+          .tooltip:hover .tooltiptext {
+              visibility: visible;
           }
         `}</style>
         <svg>
@@ -80,13 +104,15 @@ class NightingaleChart extends React.Component<Props> {
                           style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
                     )
                   })}
+                  <title id="title">{tracks[trackId].displayName}</title>
                   <circle
                       r="8"
                       cx="0"
                       cy="-50"
                       style={{fill: categoryColorScale(tracks[trackId].category)}}
                       className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
-                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
+                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} 
+                      />
                 </g>
             )})}
           </g>
@@ -94,6 +120,7 @@ class NightingaleChart extends React.Component<Props> {
       </figure>
     )
   }
+
 }
 
 export default NightingaleChart

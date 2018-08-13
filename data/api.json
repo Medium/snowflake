@@ -1,0 +1,6 @@
+[
+	{
+	  "path": "/users/*",
+	  "data": true
+	}
+  ]
