@@ -17,7 +17,7 @@ class TrackSelector extends React.Component<Props> {
         <style jsx>{`
           table {
             width: 100%;
-            border-spacing: 3px;
+            border-spacing: 2px;
             border-bottom: 2px solid #ccc;
             padding-bottom: 20px;
             margin-bottom: 20px;
@@ -29,30 +29,26 @@ class TrackSelector extends React.Component<Props> {
             text-align: center;
             background: white;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 16px;
             border-radius: 3px;
             cursor: pointer;
           }
           .track-selector-label {
             text-align: center;
-            font-size: 9px;
+            font-size: 12px;
           }
         `}</style>
         <tbody>
           <tr>
             {trackIds.map(trackId => (
-              <td key={trackId} className="track-selector-label" onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
-                {tracks[trackId].displayName}
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {trackIds.map(trackId => (
-              <td key={trackId} className="track-selector-value"
-                  style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
+              <tr key={trackId} className="track-selector-label" onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
+              {tracks[trackId].displayName}
+                <td key={trackId} className="track-selector-value"
+                  style={{border: '0px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
                   onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
-                {this.props.milestoneByTrack[trackId]}
-              </td>
+                {this.props.milestoneByTrack[trackId]}    
+                </td>
+              </tr>
             ))}
           </tr>
         </tbody>
