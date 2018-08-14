@@ -96,7 +96,6 @@ type Tracks = {|
   'COMMUNITY': Track
 |}
 
-console.log(trackData)
 export const tracks: Tracks = trackData;
 
 export const trackIds: TrackId[] = Object.keys(tracks)

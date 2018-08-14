@@ -75,7 +75,7 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: '',
-    title: 'Staff Engineer',
+    title: 'Junior Software Engineer',
     milestoneByTrack: {
       'MEDIAWIKI': 0,
       'WEB_CLIENT': 0,
@@ -139,7 +139,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             font-family: Helvetica;
           }
           main {
-            width: 1180px;
+            width: 79%;
             margin: 0 auto;
             background-color: lavender;
           }
