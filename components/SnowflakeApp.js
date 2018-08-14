@@ -168,7 +168,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         }
         
         `}</style>
-        <div style={{margin: '0 auto 0', width: 300}}>
+        <div style={{margin: '0 auto 0', width: 120}}>
             <Wordmark />
         </div>
 
@@ -187,8 +187,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             setTitleFn={(title) => this.setTitle(title)} />
 
         </form>
-        <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+        <TrackSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            focusedTrackId={this.state.focusedTrackId}
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
 
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
@@ -210,11 +212,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
           </div>
           <div style={{flex:0.5}}>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
-
+          <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
 
         </div>
 

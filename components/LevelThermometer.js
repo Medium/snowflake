@@ -11,8 +11,8 @@ const margins = {
   bottom: 30,
   left: 10
 }
-const height = 150
-const width = 550
+const height = 100
+const width = 300
 
 type Props = {
   milestoneByTrack: MilestoneMap,
