@@ -1,10 +1,10 @@
 # Snowflake
 
-Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
+Snowflake is Medium's tool for planning and supporting our engineers' career development that is now being used by Wikimedia Germany. You can read more
 about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
-Our growth tool is hosted [publicly](https://snowflake.medium.com).
+Our growth tool is hosted [publicly](https://wmde-wmdetest.wedeploy.io/).
 
-![The Lannisters send their regards](https://i.imgur.com/e9DYLBr.png)
+[Imgur](https://i.imgur.com/zWaGa6O.png)
 
 ## Contributions
 
@@ -31,7 +31,16 @@ Install dependencies:
 
 This will put a static version of the site in `out/`.
 
+### Deploying
+from the out library run: ```we deploy -p wmdetest```
+
+### Deploying API (for saved useres)
+
+from the data library run: ```we deploy -p wmdetest```
+
 ## Future work
 
-* Load initial data from a file, to improve flexibility.
+* Remove hardcoded values from code (like urls and custom magic like that)
+* Add pipeline to build configs
+* Split json data file into several (per category) and build them using the build pipeline
 * Add restricted job title selection and validation.
