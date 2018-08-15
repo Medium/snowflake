@@ -4,7 +4,7 @@ Snowflake is Medium's tool for planning and supporting our engineers' career dev
 about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
 Our growth tool is hosted [publicly](https://wmde-wmdetest.wedeploy.io/).
 
-[Imgur](https://i.imgur.com/zWaGa6O.png)
+![The Lannisters send their regards](https://i.imgur.com/zWaGa6O.png)
 
 ## Contributions
 
