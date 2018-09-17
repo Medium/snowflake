@@ -11,8 +11,9 @@
     "react-dom": "^16.0.0"
   },
   "scripts": {
+    "build": "next build",
     "dev": "next",
-    "export": "next build && next export",
+    "export": "next export",
     "flow": "flow"
   },
   "devDependencies": {
