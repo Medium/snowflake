@@ -12,6 +12,7 @@ type Props = {
 
 class Track extends React.Component<Props> {
   render() {
+    console.log(this.props);
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
