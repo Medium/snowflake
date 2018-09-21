@@ -1,28 +1,28 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+export type TrackId = 'ANDROID' | 'IOS' | 'WEB' | 'DEV_OPS' | 'PLATFORM' |
+  'TEST_AUTOMATION' | 'COMMUNICATION' | 'QUALITY' | 'OWNERSHIP' |
+  'CAREER_DEVELOPMENT' | 'LEADERSHIP' | 'CULTURE' | 'DELIVERY' |
+  'MENTORSHIP' | 'INNOVATION' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
+  'ANDROID': Milestone,
+  'IOS': Milestone,
+  'WEB': Milestone,
+  'DEV_OPS': Milestone,
+  'PLATFORM': Milestone,
+  'DELIVERY': Milestone,
   'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
+  'QUALITY': Milestone,
+  'OWNERSHIP': Milestone,
   'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
+  'LEADERSHIP': Milestone,
+  'CULTURE': Milestone,
+  'INNOVATION': Milestone,
   'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
+  'TEST_AUTOMATION': Milestone,
   'COMMUNITY': Milestone
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
@@ -71,28 +71,28 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
-  'PROJECT_MANAGEMENT': Track,
+  'ANDROID': Track,
+  'IOS': Track,
+  'WEB': Track,
+  'DEV_OPS': Track,
+  'PLATFORM': Track,
+  'DELIVERY': Track,
   'COMMUNICATION': Track,
-  'CRAFT': Track,
-  'INITIATIVE': Track,
+  'QUALITY': Track,
+  'OWNERSHIP': Track,
   'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
-  'WELLBEING': Track,
-  'ACCOMPLISHMENT': Track,
+  'LEADERSHIP': Track,
+  'CULTURE': Track,
+  'INNOVATION': Track,
   'MENTORSHIP': Track,
-  'EVANGELISM': Track,
-  'RECRUITING': Track,
+  'TEST_AUTOMATION': Track,
   'COMMUNITY': Track
 |}
 
 export const tracks: Tracks = {
-  "MOBILE": {
-    "displayName": "Mobile",
-    "category": "A",
+  "ANDROID": {
+    "displayName": "Android",
+    "category": "TECHNICAL_EXCELLENCE",
     "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
     "milestones": [{
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
@@ -157,9 +157,76 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WEB_CLIENT": {
-    "displayName": "Web client",
-    "category": "A",
+  "IOS": {
+    "displayName": "iOS",
+    "category": "TECHNICAL_EXCELLENCE",
+    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "milestones": [{
+      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  },
+
+  "WEB": {
+    "displayName": "Web",
+    "category": "TECHNICAL_EXCELLENCE",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
@@ -224,9 +291,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "FOUNDATIONS": {
-    "displayName": "Foundations",
-    "category": "A",
+  "DEV_OPS": {
+    "displayName": "Dev Ops",
+    "category": "TECHNICAL_EXCELLENCE",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
       "summary": "Works effectively within established structures, following current best practices",
@@ -291,9 +358,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "SERVERS": {
-    "displayName": "Servers",
-    "category": "A",
+  "PLATFORM": {
+    "displayName": "Platform",
+    "category": "TECHNICAL_EXCELLENCE",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "milestones": [{
       "summary": "Works effectively within established server side frameworks, following current best practices",
@@ -358,9 +425,76 @@ export const tracks: Tracks = {
     }],
   },
 
-  "PROJECT_MANAGEMENT": {
-    "displayName": "Project management",
-    "category": "B",
+  "TEST_AUTOMATION": {
+    "displayName": "Test Automation",
+    "category": "TECHNICAL_EXCELLENCE",
+    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    "milestones": [{
+      "summary": "Works effectively within established web client architectures, following current best practices",
+      "signals": [
+        "Makes minor modifications to existing screens",
+        "Fixes simple design quality issues",
+        "Uses CSS appropriately, following style guide",
+      ],
+      "examples": [
+        "Implemented sticky footer on the post page",
+        "Hooked up the action to dismiss a post from a stream",
+        "Built PaymentHistory screen using ResponseScreen",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Makes sensible abstractions based on template and code patterns",
+        "Specs and builds interactive components independently",
+        "Prototypes simple new features quickly",
+      ],
+      "examples": [
+        "Built credit card input component",
+        "Created shared buttons template",
+        "Built modal system",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+      "signals": [
+        "Provides useful design feedback and suggests feasible alternatives",
+        "Performs systemic tasks to significantly minimise bundle size",
+        "Acts a caretaker for all of web client code",
+      ],
+      "examples": [
+        "Designed font loading strategy for Medium",
+        "Researched utility of service workers for Medium",
+        "Designed and implemented ResponseScreen",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migrations that reduce programmer burden",
+        "Implements complex UI transitions that bring delight",
+        "Makes architectural decisions that eliminate entire classes of bugs",
+      ],
+      "examples": [
+        "Designed Medium's post morpher and delta system",
+        "Implemented Medium's scrolling text over image blur",
+        "Designed and pioneered proto-based model storage",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
+      "signals": [
+        "Invents new techniques to innovate and overcome browser constraints",
+        "Identifies and solved systemic problems with current architecture",
+        "Defines a long-term vision for web client and ensures projects are in service of it",
+      ],
+      "examples": [
+        "Invented CSS in JS",
+        "Defined and drove migration strategy to Lite",
+        "Implemented unidirectional data flow to completion",
+      ],
+    }],
+  },
+
+  "DELIVERY": {
+    "displayName": "Delivery",
+    "category": "EXECUTION",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
       "summary": "Effectively delivers individual tasks",
@@ -425,76 +559,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "COMMUNICATION": {
-    "displayName": "Communication",
-    "category": "B",
-    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
-    "milestones": [{
-      "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
-      "signals": [
-        "Communicates project status clearly and effectively",
-        "Collaborates with others with empathy",
-        "Asks for help at the appropriate juncture",
-      ],
-      "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
-        "Gave thoughtful check-in and check-out comments",
-      ],
-    }, {
-      "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
-      "signals": [
-        "Practises active listening and suspension of attention",
-        "Ensures stakeholders are aware of current blockers",
-        "Chooses the appropriate tools for accurate and timely communication",
-      ],
-      "examples": [
-        "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
-        "Spoke to domain experts before writing spec",
-      ],
-    }, {
-      "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
-      "signals": [
-        "Resolves communication difficulties between others",
-        "Anticipates and shares schedule deviations in plenty of time",
-        "Manages project stakeholder expectations effectively",
-      ],
-      "examples": [
-        "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
-        "Gave notice of upcoming related work in Eng Briefing",
-      ],
-    }, {
-      "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
-      "signals": [
-        "Communicates project risk and tradeoffs skillfully and with nuance",
-        "Contextualizes and clarifies ambiguous direction and strategy for others",
-        "Negotiates resourcing compromises with other teams",
-      ],
-      "examples": [
-        "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
-      ],
-    }, {
-      "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
-      "signals": [
-        "Defines processes for clear communication for the entire team",
-        "Shares the right amount of information with the right people, at the right time",
-        "Develops and delivers plans to execs, the board, and outside investors",
-      ],
-      "examples": [
-        "Organized half year check-in company offsite",
-        "Created the communication plan for a large organizational change",
-        "Presented to the board about key company metrics and projects",
-      ],
-    }],
-  },
-
-  "CRAFT": {
-    "displayName": "Craft",
-    "category": "B",
+  "QUALITY": {
+    "displayName": "Quality",
+    "category": "EXECUTION",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
       "summary": "Delivers consistently good quality work",
@@ -559,9 +626,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "INITIATIVE": {
-    "displayName": "Initiative",
-    "category": "B",
+  "OWNERSHIP": {
+    "displayName": "Ownership",
+    "category": "EXECUTION",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
     "milestones": [{
       "summary": "Identifies opportunities for organizational change or product improvements",
@@ -626,76 +693,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "CAREER_DEVELOPMENT": {
-    "displayName": "Career development",
-    "category": "C",
-    "description": "Provides strategic support to engineers to help them build the career they want",
-    "milestones": [{
-      "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
-      "signals": [
-        "Advocates on behalf and in defense of a group member",
-        "Shares opportunities for improvements and recognises achievements",
-        "Explains appropriate available industry paths",
-      ],
-      "examples": [
-        "Collected and delivered feedback",
-        "Discussed career options and areas of interest informally",
-        "Hosted a Floodgate Academy intern",
-      ],
-    }, {
-      "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
-      "signals": [
-        "Ensure a group member has an appropriate role on their team",
-        "Offers effective career advice to group members, without being prescriptive",
-        "Creates space for people to talk through challenges",
-      ],
-      "examples": [
-        "Set up and attended regular, constructive 1:1s",
-        "Provided coaching on how to have difficult conversations",
-        "Taught group members the GROW model",
-      ],
-    }, {
-      "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
-      "signals": [
-        "Discusses paths, and creates plans for personal and professional growth",
-        "Advocates to align people with appropriate roles within organization",
-        "Works with team leads to elevate emerging leaders",
-      ],
-      "examples": [
-        "Reviewed individual group member progression every 6 weeks",
-        "Suggested appropriate group member for Tech Lead position",
-        "Arranged a requested switch of discipline for a group member",
-      ],
-    }, {
-      "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
-      "signals": [
-        "Manages team transitions smoothly, respecting team and individual needs",
-        "Develops best practices for conflict resolution",
-        "Ensures all group members' roles are meeting their career needs",
-      ],
-      "examples": [
-        "Completed training on situational leadership",
-        "Built a resourcing plan based on company, team, and individual goals",
-        "Prevented regretted attrition with intentional, targeted intervention",
-      ],
-    }, {
-      "summary": "Supports the development of a signficant part of the engineering org, and widely viewed as a trusted advisor",
-      "signals": [
-        "Supports and develops senior leaders",
-        "Identified leadership training opportunities for senior leadership",
-        "Pushes everyone to be as good as they can be, with empathy",
-      ],
-      "examples": [
-        "Provided coaching to group leads",
-        "Devised Pathwise curriculum for group leads",
-        "Advocated to execs for engineer development resources and programs",
-      ],
-    }],
-  },
-
-  "ORG_DESIGN": {
-    "displayName": "Org design",
-    "category": "C",
+  "INNOVATION": {
+    "displayName": "Innovation",
+    "category": "EXECUTION",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "milestones": [{
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -760,9 +760,143 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WELLBEING": {
-    "displayName": "Wellbeing",
-    "category": "C",
+  "COMMUNICATION": {
+    "displayName": "Communication",
+    "category": "PEOPLE",
+    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    "milestones": [{
+      "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
+      "signals": [
+        "Communicates project status clearly and effectively",
+        "Collaborates with others with empathy",
+        "Asks for help at the appropriate juncture",
+      ],
+      "examples": [
+        "Updated The Watch before running a backfill",
+        "Updated project status changes in Asana promptly",
+        "Gave thoughtful check-in and check-out comments",
+      ],
+    }, {
+      "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
+      "signals": [
+        "Practises active listening and suspension of attention",
+        "Ensures stakeholders are aware of current blockers",
+        "Chooses the appropriate tools for accurate and timely communication",
+      ],
+      "examples": [
+        "Received and integrated critical feedback positively",
+        "Created cross-team Slack channel for payments work",
+        "Spoke to domain experts before writing spec",
+      ],
+    }, {
+      "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
+      "signals": [
+        "Resolves communication difficulties between others",
+        "Anticipates and shares schedule deviations in plenty of time",
+        "Manages project stakeholder expectations effectively",
+      ],
+      "examples": [
+        "Directed team response effectively during outages",
+        "Gave a substantial Eng All Hands presentation on React",
+        "Gave notice of upcoming related work in Eng Briefing",
+      ],
+    }, {
+      "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
+      "signals": [
+        "Communicates project risk and tradeoffs skillfully and with nuance",
+        "Contextualizes and clarifies ambiguous direction and strategy for others",
+        "Negotiates resourcing compromises with other teams",
+      ],
+      "examples": [
+        "Lead off-site workshop on interviewing",
+        "Wrote Medium's growth framework and rationale",
+        "Aligned the entire organization around claps",
+      ],
+    }, {
+      "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
+      "signals": [
+        "Defines processes for clear communication for the entire team",
+        "Shares the right amount of information with the right people, at the right time",
+        "Develops and delivers plans to execs, the board, and outside investors",
+      ],
+      "examples": [
+        "Organized half year check-in company offsite",
+        "Created the communication plan for a large organizational change",
+        "Presented to the board about key company metrics and projects",
+      ],
+    }],
+  },
+
+  "CAREER_DEVELOPMENT": {
+    "displayName": "Career development",
+    "category": "PEOPLE",
+    "description": "Provides strategic support to engineers to help them build the career they want",
+    "milestones": [{
+      "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
+      "signals": [
+        "Advocates on behalf and in defense of a group member",
+        "Shares opportunities for improvements and recognises achievements",
+        "Explains appropriate available industry paths",
+      ],
+      "examples": [
+        "Collected and delivered feedback",
+        "Discussed career options and areas of interest informally",
+        "Hosted a Floodgate Academy intern",
+      ],
+    }, {
+      "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
+      "signals": [
+        "Ensure a group member has an appropriate role on their team",
+        "Offers effective career advice to group members, without being prescriptive",
+        "Creates space for people to talk through challenges",
+      ],
+      "examples": [
+        "Set up and attended regular, constructive 1:1s",
+        "Provided coaching on how to have difficult conversations",
+        "Taught group members the GROW model",
+      ],
+    }, {
+      "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
+      "signals": [
+        "Discusses paths, and creates plans for personal and professional growth",
+        "Advocates to align people with appropriate roles within organization",
+        "Works with team leads to elevate emerging leaders",
+      ],
+      "examples": [
+        "Reviewed individual group member progression every 6 weeks",
+        "Suggested appropriate group member for Tech Lead position",
+        "Arranged a requested switch of discipline for a group member",
+      ],
+    }, {
+      "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
+      "signals": [
+        "Manages team transitions smoothly, respecting team and individual needs",
+        "Develops best practices for conflict resolution",
+        "Ensures all group members' roles are meeting their career needs",
+      ],
+      "examples": [
+        "Completed training on situational leadership",
+        "Built a resourcing plan based on company, team, and individual goals",
+        "Prevented regretted attrition with intentional, targeted intervention",
+      ],
+    }, {
+      "summary": "Supports the development of a signficant part of the engineering org, and widely viewed as a trusted advisor",
+      "signals": [
+        "Supports and develops senior leaders",
+        "Identified leadership training opportunities for senior leadership",
+        "Pushes everyone to be as good as they can be, with empathy",
+      ],
+      "examples": [
+        "Provided coaching to group leads",
+        "Devised Pathwise curriculum for group leads",
+        "Advocated to execs for engineer development resources and programs",
+      ],
+    }],
+  },
+
+  "CULTURE": {
+    "displayName": "Culture",
+    "category": "PEOPLE",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
@@ -827,9 +961,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "ACCOMPLISHMENT": {
-    "displayName": "Accomplishment",
-    "category": "C",
+  "LEADERSHIP": {
+    "displayName": "Leadership",
+    "category": "PEOPLE",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     "milestones": [{
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
@@ -896,7 +1030,7 @@ export const tracks: Tracks = {
 
   "MENTORSHIP": {
     "displayName": "Mentorship",
-    "category": "D",
+    "category": "PEOPLE",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     "milestones": [{
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
@@ -961,143 +1095,9 @@ export const tracks: Tracks = {
     }],
   },
 
-  "EVANGELISM": {
-    "displayName": "Evangelism",
-    "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
-    "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
-      "signals": [
-        "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
-        "Communicates genuine and honest excitement about their work externally",
-      ],
-      "examples": [
-        "Shared a Medium product launch post on Facebook",
-        "Acted as a guide for a non-friend visitor to the office",
-        "Supported PR efforts by giving a quote or having a photo taken",
-      ],
-    }, {
-      "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
-      "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
-      ],
-      "examples": [
-        "Volunteered as a helper for CODE2040 writing workshop",
-        "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
-      ],
-    }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
-      "signals": [
-        "Mentors or participates in a high visibility way in an external organization",
-        "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
-      ],
-      "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
-        "Established close ties with Creative Commons",
-        "Built a durable, long-standing relationship with Code2040",
-      ],
-    }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
-      "signals": [
-        "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
-      ],
-      "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
-        "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
-      ],
-    }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
-      "signals": [
-        "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
-      ],
-      "examples": [
-        "Published or interviewed in a mainstream newspaper or website outside tech",
-        "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
-      ],
-    }],
-  },
-
-  "RECRUITING": {
-    "displayName": "Recruiting",
-    "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
-    "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
-      "signals": [
-        "Reviews existing network for hiring leads regularly",
-        "Shadows interviews to gain familiarity with process",
-        "Reviews current job postings regularly",
-      ],
-      "examples": [
-        "Completed interview calibration",
-        "Set up casual sessions to practice asking questions",
-        "Referred appropriate individuals for open positions",
-      ],
-    }, {
-      "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
-      "signals": [
-        "Uses interview rubric to provide clear, objective feedback on candidates",
-        "Interviews candidates with empathy and treats them all with equal respect",
-        "Researches approaches for sourcing candidates and diversifying hiring",
-      ],
-      "examples": [
-        "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
-        "Tested a new service for quality and diversity of candidates",
-      ],
-    }, {
-      "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
-      "signals": [
-        "Teaches new interviewers how to interview with empathy",
-        "Models great interview technique and feedback when shadowed",
-        "Reverse shadows trainees and helps calibrate their feedback",
-      ],
-      "examples": [
-        "Wrote new interview question which meets our question quality criteria",
-        "Brought candidates into our pipeline proactively, with a high conversion rate",
-        "Proposed useful, tangible improvements to the interview process",
-      ],
-    }, {
-      "summary": "Actively contributes to and leads hiring decisions, and goes to great lengths to source great candidates",
-      "signals": [
-        "Documents subtle cues in interviews that indicate values alignment",
-        "Makes hiring decisions, resolving discrepancies between conflicting reports",
-        "Top-grades candidates and teases out character traits",
-      ],
-      "examples": [
-        "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
-        "Started CODE2040 internship program",
-      ],
-    }, {
-      "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
-      "signals": [
-        "Sets the tone, policy and goals around building a diverse, high-quality team",
-        "Identifies and brings in promising acquisitions",
-        "Tracks industry activity, identifying opportunities for critical roles",
-      ],
-      "examples": [
-        "Talked with a senior candidate over many months to fill a critical role",
-        "Organized efforts around convincing acquired engineers to join and stay",
-        "Set goals, then tracked and reported metrics on team demographics over time",
-      ],
-    }],
-  },
-
   "COMMUNITY": {
     "displayName": "Community",
-    "category": "D",
+    "category": "PEOPLE",
     "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
     "milestones": [{
       "summary": "Is available and present on current teams, and works to contribute positively to company culture",
@@ -1190,7 +1190,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#65ba96', '#eeb262', '#4b9eea', '#ea685e'])
 
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
