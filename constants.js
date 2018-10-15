@@ -5,7 +5,7 @@ export type TrackId = 'TEST' | 'ANALYZE' | 'DRIVE' //| 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+export type Milestone = 0 | 1 | 2 | 3
 
 export type MilestoneMap = {
   'TEST': Milestone,
@@ -25,7 +25,7 @@ export type MilestoneMap = {
   'RECRUITING': Milestone,
   'COMMUNITY': Milestone
 }
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = [0, 1, 2, 3]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -53,11 +53,11 @@ export const pointsToLevels = {
   '66': '4.2',
   '74': '4.3',
   '90': '5.1',
-  '110': '5.2',
-  '135': '5.3',
+  //'110': '5.2',
+  //'135': '5.3',
 }
 
-export const maxLevel = 135
+export const maxLevel = 90
 
 export type Track = {
   displayName: string,
@@ -147,18 +147,6 @@ export const tracks: Tracks = {
         "Migrated Android persistance layer to reactive programming",
       ],
       //Milestone 5
-    }, {
-      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
-      "signals": [
-        "Defines long-term goals and ensures active projects are in service of them",
-        "Designs and builds innovative, industry-leading UI interactions",
-        "Invents new techniques to responsibly stretch limits of the Android platform",
-      ],
-      "examples": [
-        "Defined and drove complete migration plan to Swift or Kotlin",
-        "Implemented Android recycler views before platform support existed",
-        "Pioneered application-level abstractions for multi-app environment",
-      ],
     }],
   },
 
