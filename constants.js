@@ -1,17 +1,17 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+export type TrackId = 'TEST' | 'ANALYZE' | 'DRIVE' //| 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
+  'TEST': Milestone,
+  'ANALYZE': Milestone,
+  'DRIVE': Milestone,
+  //'TESTING PLANS': Milestone,
   'PROJECT_MANAGEMENT': Milestone,
   'COMMUNICATION': Milestone,
   'CRAFT': Milestone,
@@ -71,8 +71,8 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
+  'TEST': Track,
+  'ANALYZE': Track,
   'FOUNDATIONS': Track,
   'SERVERS': Track,
   'PROJECT_MANAGEMENT': Track,
@@ -91,10 +91,11 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "MOBILE": {
-    "displayName": "Mobile",
+    "displayName": "Testing Methods",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "description": "Develops automation tests, such as iOS or Android",
     "milestones": [{
+      //Milestone 1
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
       "signals": [
         "Delivers features requiring simple local modifications",
@@ -106,6 +107,7 @@ export const tracks: Tracks = {
         "Add follow button for publications on Android",
         "Fetched and displayed a new stream, using existing stream item styles",
       ],
+      //Milestone 2
     }, {
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
@@ -118,6 +120,7 @@ export const tracks: Tracks = {
         "Added support for rendering a new type of stream item",
         "Prototyped a simple new feature quickly",
       ],
+      //Milestone 3
     }, {
       "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
       "signals": [
@@ -130,6 +133,7 @@ export const tracks: Tracks = {
         "Built series reader on Android",
         "Informed the team about recent best practice changes and deprecations",
       ],
+      //Milestone 4
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
       "signals": [
@@ -142,6 +146,7 @@ export const tracks: Tracks = {
         "Designed architecture for fetching and rendering stream items",
         "Migrated Android persistance layer to reactive programming",
       ],
+      //Milestone 5
     }, {
       "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
       "signals": [
@@ -158,10 +163,11 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Web client",
+    "displayName": "Moving Testing Left",
     "category": "A",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
+      //Milestone 1
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
         "Makes minor modifications to existing screens",
@@ -174,6 +180,7 @@ export const tracks: Tracks = {
         "Built PaymentHistory screen using ResponseScreen",
       ],
     }, {
+      //Milestone 2
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Makes sensible abstractions based on template and code patterns",
@@ -186,6 +193,7 @@ export const tracks: Tracks = {
         "Built modal system",
       ],
     }, {
+      //Milestone 3
       "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
       "signals": [
         "Provides useful design feedback and suggests feasible alternatives",
@@ -198,6 +206,7 @@ export const tracks: Tracks = {
         "Designed and implemented ResponseScreen",
       ],
     }, {
+      //Milestone 4
       "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
       "signals": [
         "Pioneers architecture migrations that reduce programmer burden",
@@ -210,6 +219,7 @@ export const tracks: Tracks = {
         "Designed and pioneered proto-based model storage",
       ],
     }, {
+      //Milestone 5
       "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
       "signals": [
         "Invents new techniques to innovate and overcome browser constraints",
@@ -225,10 +235,11 @@ export const tracks: Tracks = {
   },
 
   "FOUNDATIONS": {
-    "displayName": "Foundations",
+    "displayName": "Product Stack",
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
+      //Milestone 1
       "summary": "Works effectively within established structures, following current best practices",
       "signals": [
         "Writes thorough postmortems for service outages",
@@ -241,6 +252,7 @@ export const tracks: Tracks = {
         "Resolved out of disk errors independently",
       ],
     }, {
+      //Milestone 2
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Made minor version upgrades to technologies",
@@ -253,6 +265,7 @@ export const tracks: Tracks = {
         "Improved ETL efficiency by improving Dynamo to S3 loading",
       ],
     }, {
+      //Milestone 3
       "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
       "signals": [
         "Acts as primary maintainer for existing critical systems",
@@ -265,6 +278,7 @@ export const tracks: Tracks = {
         "Designed flexible framework for writing machine learning jobs",
       ],
     }, {
+      //Milestone 4
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
       "signals": [
         "Designs complex projects that encompass multiple systems and technologies",
@@ -277,6 +291,7 @@ export const tracks: Tracks = {
         "Introduced Kinesis and pioneered streaming events pipeline",
       ],
     }, {
+      //Milestone 5
       "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
       "signals": [
         "Designs transformational projects in service of long-term goals",
@@ -292,10 +307,11 @@ export const tracks: Tracks = {
   },
 
   "SERVERS": {
-    "displayName": "Servers",
+    "displayName": "User Focus",
     "category": "A",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "milestones": [{
+      //Milestone 1
       "summary": "Works effectively within established server side frameworks, following current best practices",
       "signals": [
         "Adds NodeJS endpoints using layers architecture",
@@ -308,6 +324,7 @@ export const tracks: Tracks = {
         "Queried a Dynamo LSI appropriately",
       ],
     }, {
+      //Milestone 2
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Assesses correctness and utility of existing code and avoids blind copy-pasting",
@@ -320,6 +337,7 @@ export const tracks: Tracks = {
         "Updated Facebook API version and codebase dependencies",
       ],
     }, {
+      //Milestone 3
       "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
       "signals": [
         "Acts as primary maintainer for existing critical systems",
@@ -332,6 +350,7 @@ export const tracks: Tracks = {
         "Built Textshots server",
       ],
     }, {
+      //Milestone 4
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
       "signals": [
         "Delivers complex systems that achieve their goals",
@@ -344,6 +363,7 @@ export const tracks: Tracks = {
         "Created Gotham framework for creating Go services",
       ],
     }, {
+      //Milestone 5
       "summary": "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
       "signals": [
         "Designs transformational projects of significant complexity and scope",
@@ -359,10 +379,11 @@ export const tracks: Tracks = {
   },
 
   "PROJECT_MANAGEMENT": {
-    "displayName": "Project management",
+    "displayName": "Data Analysis",
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
+      //Milestone 1
       "summary": "Effectively delivers individual tasks",
       "signals": [
         "Estimates small tasks accurately",
@@ -375,6 +396,7 @@ export const tracks: Tracks = {
         "Delivered payment history dashboard",
       ],
     }, {
+      //Milestone 2
       "summary": "Effectively delivers small personal projects",
       "signals": [
         "Performs research and considers alternative approaches",
@@ -387,6 +409,7 @@ export const tracks: Tracks = {
         "Executed the recommends to claps backfill",
       ],
     }, {
+      //Milestone 3
       "summary": "Effectively delivers projects through a small team",
       "signals": [
         "Delegates tasks to others appropriately",
@@ -399,6 +422,7 @@ export const tracks: Tracks = {
         "Facilitated project kickoff meeting to get buy-in",
       ],
     }, {
+      //Milestone 4
       "summary": "Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity",
       "signals": [
         "Finds ways to deliver requested scope faster, and prioritizes backlog",
@@ -411,6 +435,7 @@ export const tracks: Tracks = {
         "Involved marketing, legal, and appropriate functions at project start",
       ],
     }, {
+      //Milestone 5
       "summary": "Manages major company pushes delivered by multiple teams",
       "signals": [
         "Considers external constraints and business objectives when planning",
@@ -426,10 +451,11 @@ export const tracks: Tracks = {
   },
 
   "COMMUNICATION": {
-    "displayName": "Communication",
+    "displayName": "Risk Mitigation",
     "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "milestones": [{
+      //Milestone 1
       "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
       "signals": [
         "Communicates project status clearly and effectively",
@@ -442,6 +468,7 @@ export const tracks: Tracks = {
         "Gave thoughtful check-in and check-out comments",
       ],
     }, {
+      //Milestone 2
       "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
       "signals": [
         "Practises active listening and suspension of attention",
@@ -454,6 +481,7 @@ export const tracks: Tracks = {
         "Spoke to domain experts before writing spec",
       ],
     }, {
+      //Milestone 3
       "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
       "signals": [
         "Resolves communication difficulties between others",
@@ -466,6 +494,7 @@ export const tracks: Tracks = {
         "Gave notice of upcoming related work in Eng Briefing",
       ],
     }, {
+      //Milestone 4
       "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
       "signals": [
         "Communicates project risk and tradeoffs skillfully and with nuance",
@@ -478,6 +507,7 @@ export const tracks: Tracks = {
         "Aligned the entire organization around claps",
       ],
     }, {
+      //Milestone 5
       "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
       "signals": [
         "Defines processes for clear communication for the entire team",
@@ -493,10 +523,11 @@ export const tracks: Tracks = {
   },
 
   "CRAFT": {
-    "displayName": "Craft",
+    "displayName": "Deep Dive",
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
+      //Milestone 1
       "summary": "Delivers consistently good quality work",
       "signals": [
         "Tests new code thoroughly, both locally, and in production once shipped",
@@ -509,6 +540,7 @@ export const tracks: Tracks = {
         "Wrote hermetic tests for the happy and sad cases",
       ],
     }, {
+      //Milestone 2
       "summary": "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
       "signals": [
         "Refactors existing code to make it more testable",
@@ -521,6 +553,7 @@ export const tracks: Tracks = {
         "Fixed a TODO for someone else in the codebase",
       ],
     }, {
+      //Milestone 3
       "summary": "Improves others' ability to deliver great quality work",
       "signals": [
         "Implements systems that enable better testing",
@@ -533,6 +566,7 @@ export const tracks: Tracks = {
         "Created fixture system for visual quality",
       ],
     }, {
+      //Milestone 4
       "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
       "signals": [
         "Builds systems so as to eliminate entire classes of programmer error",
@@ -545,6 +579,7 @@ export const tracks: Tracks = {
         "Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
+      //Milestone 5
       "summary": "Enables and encourages the entire organization to make quality a central part of the development process",
       "signals": [
         "Defines policies for the engineering org that encourage quality work",
@@ -558,12 +593,12 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
   "INITIATIVE": {
-    "displayName": "Initiative",
+    "displayName": "Big Picture",
     "category": "B",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
     "milestones": [{
+      //Milestone 1
       "summary": "Identifies opportunities for organizational change or product improvements",
       "signals": [
         "Writes Hatch posts about improvement opportunities",
@@ -576,6 +611,7 @@ export const tracks: Tracks = {
         "Reported a site issue in Github",
       ],
     }, {
+      //Milestone 2
       "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
       "signals": [
         "Picks bugs off the backlog proactively when blocked elsewhere",
@@ -588,6 +624,7 @@ export const tracks: Tracks = {
         "Audited web client performance in Chrome and proposed fixes",
       ],
     }, {
+      //Milestone 3
       "summary": "Causes change to positively impact an entire team or instigates a minor feature or service",
       "signals": [
         "Demonstrates concepts proactively with prototypes",
@@ -600,6 +637,7 @@ export const tracks: Tracks = {
         "Implemented video for Android independently, unprompted",
       ],
     }, {
+      //Milestone 4
       "summary": "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
       "signals": [
         "Champions and pioneers new technologies to solve new classes of problem",
@@ -612,6 +650,7 @@ export const tracks: Tracks = {
         "Migrated medium2 to mono repo and bazel",
       ],
     }, {
+      //Milestone 5
       "summary": "Effects change that has a substantial positive impact on the whole company",
       "signals": [
         "Creates a new function to solve systemic issues",
@@ -627,10 +666,11 @@ export const tracks: Tracks = {
   },
 
   "CAREER_DEVELOPMENT": {
-    "displayName": "Career development",
+    "displayName": "Development",
     "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
     "milestones": [{
+      //Milestone 1
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
       "signals": [
         "Advocates on behalf and in defense of a group member",
@@ -643,6 +683,7 @@ export const tracks: Tracks = {
         "Hosted a Floodgate Academy intern",
       ],
     }, {
+      //Milestone 2
       "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
       "signals": [
         "Ensure a group member has an appropriate role on their team",
@@ -655,6 +696,7 @@ export const tracks: Tracks = {
         "Taught group members the GROW model",
       ],
     }, {
+      //Milestone 3
       "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
       "signals": [
         "Discusses paths, and creates plans for personal and professional growth",
@@ -667,6 +709,7 @@ export const tracks: Tracks = {
         "Arranged a requested switch of discipline for a group member",
       ],
     }, {
+      //Milestone 4
       "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
       "signals": [
         "Manages team transitions smoothly, respecting team and individual needs",
@@ -679,6 +722,7 @@ export const tracks: Tracks = {
         "Prevented regretted attrition with intentional, targeted intervention",
       ],
     }, {
+      //Milestone 5
       "summary": "Supports the development of a signficant part of the engineering org, and widely viewed as a trusted advisor",
       "signals": [
         "Supports and develops senior leaders",
@@ -694,10 +738,11 @@ export const tracks: Tracks = {
   },
 
   "ORG_DESIGN": {
-    "displayName": "Org design",
+    "displayName": "Challenge",
     "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "milestones": [{
+      //Milestone 1
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
       "signals": [
         "Reflects on meetings that leave them inspired or frustrated",
@@ -710,6 +755,7 @@ export const tracks: Tracks = {
         "Provided feedback on sprint planning meeting",
       ],
     }, {
+      //Milestone 2
       "summary": "Identifies opportunities to improve existing processes and makes changes that positively affect the local team",
       "signals": [
         "Defines meeting structure and cadence that meets team needs",
@@ -722,6 +768,7 @@ export const tracks: Tracks = {
         "Defined standard channels for inter-team communication",
       ],
     }, {
+      //Milestone 3
       "summary": "Develops processes to solve ongoing organizational problems",
       "signals": [
         "Creates programs that meaningfully improve organizational diversity",
@@ -734,6 +781,7 @@ export const tracks: Tracks = {
         "Defined Guilds manifesto and charter",
       ],
     }, {
+      //Milestone 4
       "summary": "Thinks deeply about organizational issues and identifies hidden dynamics that contribute to them",
       "signals": [
         "Evaluates incentive structures and their effect on execution",
@@ -746,6 +794,7 @@ export const tracks: Tracks = {
         "Analyzed the hiring rubric for false negative potential",
       ],
     }, {
+      //Milestone 5
       "summary": "Leads initiatives to address issues stemming from hidden dynamics and company norms",
       "signals": [
         "Builds programs to train leadership in desired skills",
@@ -761,10 +810,11 @@ export const tracks: Tracks = {
   },
 
   "WELLBEING": {
-    "displayName": "Wellbeing",
+    "displayName": "Improve",
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
+      //Milestone 1
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
       "signals": [
         "Keeps confidences unless legally or morally obliged to do otherwise",
@@ -777,6 +827,7 @@ export const tracks: Tracks = {
         "Checked in with colleague showing signs of burnout",
       ],
     }, {
+      //Milestone 2
       "summary": "Creates a positive, supportive, engaging team environment for group members",
       "signals": [
         "Sheds light on other experiences to build empathy and compassion",
@@ -789,6 +840,7 @@ export const tracks: Tracks = {
         "Noted a team without a recent win and suggested some easy quick wins",
       ],
     }, {
+      //Milestone 3
       "summary": "Manages expectations across peers, leads in the org, promotes calm, and prevents consensus building",
       "signals": [
         "Trains group members to separate stimulus from response",
@@ -801,6 +853,7 @@ export const tracks: Tracks = {
         "Reframed a problem as a challenge, instead of a barrier, when appropriate",
       ],
     }, {
+      //Milestone 4
       "summary": "Advocates for the needs of teams and group members, and proactively works to calm the organization",
       "signals": [
         "Ensures team environments are safe and inclusive, proactively",
@@ -813,6 +866,7 @@ export const tracks: Tracks = {
         "Guided people through complex organizational change",
       ],
     }, {
+      //Milestone 5
       "summary": "Manages narratives, channels negativity into inspiration and motivation, and protects the entire team",
       "signals": [
         "Recognizes and points out narratives when appropriate",
@@ -828,10 +882,11 @@ export const tracks: Tracks = {
   },
 
   "ACCOMPLISHMENT": {
-    "displayName": "Accomplishment",
+    "displayName": "Evangelism",
     "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     "milestones": [{
+      //Milestone 1
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
       "signals": [
         "Notices when someone is stuck and reaches out",
@@ -844,6 +899,7 @@ export const tracks: Tracks = {
         "Reinforces and affirms positive feedback for good work",
       ],
     }, {
+      //Milestone 2
       "summary": "Helps individuals resolve difficult performance issues, with insight, compassion, and skill",
       "signals": [
         "Gathers context outside the immediate problem",
@@ -856,6 +912,7 @@ export const tracks: Tracks = {
         "Gave honest feedback about poor performance, with compassion",
       ],
     }, {
+      //Milestone 3
       "summary": "Intervenes in long-standing performance issues with targeted behavior change or performance plans",
       "signals": [
         "Aggregates signals of poor performance and creates process for improvement",
@@ -868,6 +925,7 @@ export const tracks: Tracks = {
         "Managed group member closely to maximise chances of PIP success",
       ],
     }, {
+      //Milestone 4
       "summary": "Mediates escalated situations, empowers underperforming teams, and resolves conflict",
       "signals": [
         "Recognizes heightened situations and toxic or aggressive interactions",
@@ -880,6 +938,7 @@ export const tracks: Tracks = {
         "Mediated sit-down between team members to address tension",
       ],
     }, {
+      //Milestone 5
       "summary": "Resolves complex organizational dysfunction, or persistent conflict at senior levels",
       "signals": [
         "Takes control of dysfunctional teams to organise chaos",
@@ -895,10 +954,11 @@ export const tracks: Tracks = {
   },
 
   "MENTORSHIP": {
-    "displayName": "Mentorship",
+    "displayName": "Relationships",
     "category": "D",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     "milestones": [{
+      //Milestone 1
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
       "signals": [
         "Makes themself available for informal support and advice",
@@ -911,6 +971,7 @@ export const tracks: Tracks = {
         "Helped a colleague understand their feelings",
       ],
     }, {
+      //Milestone 2
       "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
       "signals": [
         "Takes time to explain concepts and best practices",
@@ -923,6 +984,7 @@ export const tracks: Tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
+      //Milestone 3
       "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
@@ -935,6 +997,7 @@ export const tracks: Tracks = {
         "Wrote Medium-U content module",
       ],
     }, {
+      //Milestone 4
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
       "signals": [
         "Defines an entire curriculum for a discipline",
@@ -947,6 +1010,7 @@ export const tracks: Tracks = {
         "Designed and taught web client guild curriculum",
       ],
     }, {
+      //Milestone 5
       "summary": "Instills and promotes a culture of learning and development within the team",
       "signals": [
         "Sets incentive structures to recognise and reward mentorship",
@@ -962,10 +1026,11 @@ export const tracks: Tracks = {
   },
 
   "EVANGELISM": {
-    "displayName": "Evangelism",
+    "displayName": "Impact",
     "category": "D",
     "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
+      //Milestone 1
       "summary": "Represents Medium well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
@@ -978,6 +1043,7 @@ export const tracks: Tracks = {
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
+      //Milestone 2
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
         "Takes meaningful action to introduce people to Medium",
@@ -990,6 +1056,7 @@ export const tracks: Tracks = {
         "Talked at a Women Who Code event hosted at Medium",
       ],
     }, {
+      //Milestone 3
       "summary": "Works hard to positively influence large groups of people on their views of Medium",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
@@ -1002,6 +1069,7 @@ export const tracks: Tracks = {
         "Built a durable, long-standing relationship with Code2040",
       ],
     }, {
+      //Milestone 4
       "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
@@ -1014,6 +1082,7 @@ export const tracks: Tracks = {
         "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
       ],
     }, {
+      //Milestone 5
       "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
@@ -1029,10 +1098,11 @@ export const tracks: Tracks = {
   },
 
   "RECRUITING": {
-    "displayName": "Recruiting",
+    "displayName": "Growth",
     "category": "D",
     "description": "Strengthens Medium's team by bringing in excellent staff members",
     "milestones": [{
+      //Milestone 1
       "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
       "signals": [
         "Reviews existing network for hiring leads regularly",
@@ -1045,6 +1115,7 @@ export const tracks: Tracks = {
         "Referred appropriate individuals for open positions",
       ],
     }, {
+      //Milestone 2
       "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
       "signals": [
         "Uses interview rubric to provide clear, objective feedback on candidates",
@@ -1057,6 +1128,7 @@ export const tracks: Tracks = {
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
+      //Milestone 3
       "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
       "signals": [
         "Teaches new interviewers how to interview with empathy",
@@ -1069,6 +1141,7 @@ export const tracks: Tracks = {
         "Proposed useful, tangible improvements to the interview process",
       ],
     }, {
+      //Milestone 4
       "summary": "Actively contributes to and leads hiring decisions, and goes to great lengths to source great candidates",
       "signals": [
         "Documents subtle cues in interviews that indicate values alignment",
@@ -1081,6 +1154,7 @@ export const tracks: Tracks = {
         "Started CODE2040 internship program",
       ],
     }, {
+      //Milestone 5
       "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
       "signals": [
         "Sets the tone, policy and goals around building a diverse, high-quality team",
@@ -1094,7 +1168,7 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
+/*
   "COMMUNITY": {
     "displayName": "Community",
     "category": "D",
@@ -1160,7 +1234,7 @@ export const tracks: Tracks = {
         "Challenged and corrected exclusionary behaviour or policies",
       ],
     }],
-  },
+},*/
 }
 
 export const trackIds: TrackId[] = Object.keys(tracks)
