@@ -96,42 +96,42 @@ export const tracks: Tracks = {
     "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
       //Milestone 1
-      "summary": "Works effectively within established iOS or Android architectures, following current best practices",
+      "summary": "You are learning Hudl’s test methods and tools and have started to implement them into your testing",
       "signals": [
-        "Delivers features requiring simple local modifications",
-        "Adds simple actions that call server endpoints",
-        "Reuses existing components appropriately",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Added existing button to a different iOS surface",
-        "Add follow button for publications on Android",
-        "Fetched and displayed a new stream, using existing stream item styles",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
       //Milestone 2
     }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "You know how and when to use the right testing method and tools during testing",
       "signals": [
-        "Defines new useful and appropriate proto-generated objects",
-        "Creates simple new activities on Android",
-        "Migrates code from old patterns to new patterns",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Upgraded SDWebImage to a new major version",
-        "Added support for rendering a new type of stream item",
-        "Prototyped a simple new feature quickly",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
       //Milestone 3
     }, {
-      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "summary": "You are creating and coaching others on how to best use specific testing methods and tools",
       "signals": [
-        "Implements complex features with a large product surface area",
-        "Works effectively with  Android reactive programming framework",
-        "Adds support for new iOS features after a major iOS version upgrade",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Designed iOS caching strategy for offline reading",
-        "Built series reader on Android",
-        "Informed the team about recent best practice changes and deprecations",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
       //Milestone 4
     }, {
@@ -156,42 +156,42 @@ export const tracks: Tracks = {
     "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{
       //Milestone 1
-      "summary": "Works effectively within established web client architectures, following current best practices",
+      "summary": "You are starting to identify and documenting risk for features",
       "signals": [
-        "Makes minor modifications to existing screens",
-        "Fixes simple design quality issues",
-        "Uses CSS appropriately, following style guide",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Implemented sticky footer on the post page",
-        "Hooked up the action to dismiss a post from a stream",
-        "Built PaymentHistory screen using ResponseScreen",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "You are starting to implement ways of introducing quality earlier into the product lifecycle",
       "signals": [
-        "Makes sensible abstractions based on template and code patterns",
-        "Specs and builds interactive components independently",
-        "Prototypes simple new features quickly",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Built credit card input component",
-        "Created shared buttons template",
-        "Built modal system",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
+      "summary": "You are mitigating risk and introducing quality in all aspects of the life cycle",
       "signals": [
-        "Provides useful design feedback and suggests feasible alternatives",
-        "Performs systemic tasks to significantly minimise bundle size",
-        "Acts a caretaker for all of web client code",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
-        "Designed and implemented ResponseScreen",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -228,42 +228,42 @@ export const tracks: Tracks = {
     "description": "Knowledge and insight to the different software, platforms and business levels that make up a product.",
     "milestones": [{
       //Milestone 1
-      "summary": "Works effectively within established structures, following current best practices",
+      "summary": "You are learning how your features work on the product level",
       "signals": [
-        "Writes thorough postmortems for service outages",
-        "Makes simple configuration changes to services",
-        "Performs backfills safely and effectively, without causing pages",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Made safe and effective Ansible changes",
-        "Implemented new ETL pipelines based on existing ones",
-        "Resolved out of disk errors independently",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "You are able to understand and mitigate risk on the UI and API layer of your product",
       "signals": [
-        "Made minor version upgrades to technologies",
-        "Builds machine learning jobs within the ML framework",
-        "Triages service issues correctly and independently",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Upgraded NodeJS from 8.0 to 8.1.1",
-        "Built custom packages for RPMs",
-        "Improved ETL efficiency by improving Dynamo to S3 loading",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "summary": "You know your squad's system architecture and understand the key components that make up your feature or platform on the business and product level",
       "signals": [
-        "Acts as primary maintainer for existing critical systems",
-        "Designs moderately complex systems",
-        "Makes major version upgrades to libraries",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
-        "Designed flexible framework for writing machine learning jobs",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -297,45 +297,45 @@ export const tracks: Tracks = {
   "SERVERS": {
     "displayName": "User Focus",
     "category": "A",
-    "description": "Understanding and adoptoin of user workflows, stories, and insights to product usage",
+    "description": "Understanding and adoption of user workflows, stories, and insights to product usage",
     "milestones": [{
       //Milestone 1
-      "summary": "Works effectively within established server side frameworks, following current best practices",
+      "summary": "You are learning about your squad's users and how they use the product stack",
       "signals": [
-        "Adds NodeJS endpoints using layers architecture",
-        "Adds golang endpoints using Gotham architecture",
-        "Makes minor server changes to support client needs",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
-        "Added delete audio route to Buggle",
-        "Queried a Dynamo LSI appropriately",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "summary": "You are introducing insights from user workflows into your testing approach and methods",
       "signals": [
-        "Assesses correctness and utility of existing code and avoids blind copy-pasting",
-        "Generalizes code when appropriate",
-        "Determines data needs from product requirements",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Identified need for new index on Dynamo",
-        "Acted as caretaker for routes protos",
-        "Updated Facebook API version and codebase dependencies",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "summary": "You evolve and coach others understanding and testing approach based on your user knowledge",
       "signals": [
-        "Acts as primary maintainer for existing critical systems",
-        "Integrates third party services effectively",
-        "Writes playbooks for new service maintenance",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Implemented Google Auth login to Medium",
-        "Implemented payments integration with Stripe",
-        "Built Textshots server",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -372,42 +372,42 @@ export const tracks: Tracks = {
     "description": "Ability to understand insights relating to products and users.",
     "milestones": [{
       //Milestone 1
-      "summary": "Effectively delivers individual tasks",
+      "summary": "You are learning and starting to use Hudl’s analysis tools to evaluate and guide your decisions",
       "signals": [
-        "Estimates small tasks accurately",
-        "Delivers tightly-scoped projects efficiently",
-        "Writes effective technical specs outlining approach",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Wrote the technical spec for featured post images",
-        "Delivered stream item support for email digests",
-        "Delivered payment history dashboard",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Effectively delivers small personal projects",
+      "summary": "You utilize data from multiple available sources to draw conclusions about the quality of your product.",
       "signals": [
-        "Performs research and considers alternative approaches",
-        "Balances pragmatism and polish appropriately",
-        "Defines and hits interim milestones",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Delivered promo editor",
-        "Delivered audio uploading for web client",
-        "Executed the recommends to claps backfill",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Effectively delivers projects through a small team",
+      "summary": "You are able to leverage different sources of data to answer complex questions about product and user trends.",
       "signals": [
-        "Delegates tasks to others appropriately",
-        "Integrates business needs into project planning",
-        "Chooses appropriate project management strategy based on context",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Ran project retro to assess improvement opportunities",
-        "Completed launch checklist unprompted for well controlled rollout",
-        "Facilitated project kickoff meeting to get buy-in",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -441,58 +441,58 @@ export const tracks: Tracks = {
   "COMMUNICATION": {
     "displayName": "Risk Communication",
     "category": "B",
-    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    "description": "Shares the right amount of information with the right people, at the right time, and reacts effectively",
     "milestones": [{
       //Milestone 1
-      "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
+      "summary": "You are able to understand risks and then prioritize user impact in conversations",
       "signals": [
-        "Communicates project status clearly and effectively",
-        "Collaborates with others with empathy",
-        "Asks for help at the appropriate juncture",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
-        "Gave thoughtful check-in and check-out comments",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
+      "summary": "You understand the risk and impact of changes to your product/feature and communicate risk(s) to your squad",
       "signals": [
-        "Practises active listening and suspension of attention",
-        "Ensures stakeholders are aware of current blockers",
-        "Chooses the appropriate tools for accurate and timely communication",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
-        "Spoke to domain experts before writing spec",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
+      "summary": "You identify and communicate high-risk areas for projects and features to help drive strategy and direction.",
       "signals": [
-        "Resolves communication difficulties between others",
-        "Anticipates and shares schedule deviations in plenty of time",
-        "Manages project stakeholder expectations effectively",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
-        "Gave notice of upcoming related work in Eng Briefing",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
       "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
       "signals": [
-        "Communicates project risk and tradeoffs skillfully and with nuance",
-        "Contextualizes and clarifies ambiguous direction and strategy for others",
-        "Negotiates resourcing compromises with other teams",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 5
@@ -511,47 +511,47 @@ export const tracks: Tracks = {
   },
 
   "CRAFT": {
-    "displayName": "Deep Dive",
+    "displayName": "Root Cause",
     "category": "B",
-    "description": "Ability to understand the root cause of trends and issues.",
+    "description": "Ability to understand the why behind trends and issues.",
     "milestones": [{
       //Milestone 1
-      "summary": "Delivers consistently good quality work",
+      "summary": "You are learning the processes and tools for discovering root causes of issues or trends",
       "signals": [
-        "Tests new code thoroughly, both locally, and in production once shipped",
-        "Writes tests for every new feature and bug fix",
-        "Writes clear comments and documentation",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Caught a bug on Hatch before it went live",
-        "Landed non-trivial PR with no caretaker comments",
-        "Wrote hermetic tests for the happy and sad cases",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
+      "summary": "You use your investigative skill set to discover and understand the root cause issues and trends",
       "signals": [
-        "Refactors existing code to make it more testable",
-        "Adds tests for uncovered areas",
-        "Deletes unnecessary code and deprecates proactively when safe to do so",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Requested tests for a PR when acting as reviewer",
-        "Reduced the number of zelda fitzgerald exceptions",
-        "Fixed a TODO for someone else in the codebase",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Improves others' ability to deliver great quality work",
+      "summary": "You break down complex problems and then use that knowledge for creating and communicating next steps",
       "signals": [
-        "Implements systems that enable better testing",
-        "Gives thoughtful code reviews as a domain expert",
-        "Adds tooling to improve code quality",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Improved PRB to run the same volume of tests faster",
-        "Simplified hermetic test data modification",
-        "Created fixture system for visual quality",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -582,47 +582,47 @@ export const tracks: Tracks = {
     }],
   },
   "INITIATIVE": {
-    "displayName": "Big Picture",
+    "displayName": "Connections",
     "category": "B",
-    "description": "Undertanding of how all the pieces fit together and how each piece impacts all aspects of a product",
+    "description": "Undertanding how all the pieces fit together and how each piece impacts all aspects of a product",
     "milestones": [{
       //Milestone 1
-      "summary": "Identifies opportunities for organizational change or product improvements",
+      "summary": "You are learning how all of your squads features impact user workflows.",
       "signals": [
-        "Writes Hatch posts about improvement opportunities",
-        "Raises meaningful tensions in tactical meetings",
-        "Asks leadership team probing questions at FAM",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Wrote about problems with TTR on Hatch",
-        "Wrote about content policy problems on Hatch",
-        "Reported a site issue in Github",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
+      "summary": "You understand how users and the team will be impacted by various changes and outcomes",
       "signals": [
-        "Picks bugs off the backlog proactively when blocked elsewhere",
-        "Makes design quality improvements unprompted",
-        "Takes on trust and safety tasks proactively when blocked elsewhere",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Advocated on own behalf for a change in role",
-        "Implemented flow typing for promises",
-        "Audited web client performance in Chrome and proposed fixes",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Causes change to positively impact an entire team or instigates a minor feature or service",
+      "summary": "You help shape how changes and outcomes will fit into the bigger picture and overall success of the product",
       "signals": [
-        "Demonstrates concepts proactively with prototypes",
-        "Fixes complicated bugs outside of regular domain",
-        "Takes ownership of systems that nobody owns or wants",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Defined style guide to resolve style arguments",
-        "Proposed and implemented at-mentions prototype",
-        "Implemented video for Android independently, unprompted",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
