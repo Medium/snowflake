@@ -73,24 +73,24 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    title: 'Staff Engineer',
+    title: 'QA I',
     milestoneByTrack: {
       'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
+      'WEB_CLIENT': 1,
+      'FOUNDATIONS': 1,
+      'SERVERS': 1,
+      'PROJECT_MANAGEMENT': 1,
       'COMMUNICATION': 1,
       'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
+      'INITIATIVE': 1,
+      'CAREER_DEVELOPMENT': 1,
+      'ORG_DESIGN': 1,
       'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'ACCOMPLISHMENT': 1,
+      'MENTORSHIP': 1,
+      'EVANGELISM': 1,
+      'RECRUITING': 1,
+      'COMMUNITY': 1
     },
     focusedTrackId: 'MOBILE'
   }
@@ -160,8 +160,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           </a>
         </div>
         <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
-            <form>
+          <div style={{flex: .5}}>
+            {/* <form>
               <input
                   type="text"
                   className="name-input"
@@ -173,7 +173,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
                   setTitleFn={(title) => this.setTitle(title)} />
-            </form>
+            </form> */}
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
