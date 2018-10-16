@@ -5,7 +5,7 @@ export type TrackId = 'TEST' | 'ANALYZE' | 'DRIVE' //| 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Milestone = 0 | 1 | 2 | 3
+export type Milestone = 0 | 1 | 2 | 3 | 4
 
 export type MilestoneMap = {
   'TEST': Milestone,
@@ -25,7 +25,7 @@ export type MilestoneMap = {
   'RECRUITING': Milestone,
   'COMMUNITY': Milestone
 }
-export const milestones = [0, 1, 2, 3]
+export const milestones = [0, 1, 2, 3, 4]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -57,7 +57,7 @@ export const pointsToLevels = {
   //'135': '5.3',
 }
 
-export const maxLevel = 90
+export const maxLevel = 180
 
 export type Track = {
   displayName: string,
@@ -93,7 +93,7 @@ export const tracks: Tracks = {
   "MOBILE": {
     "displayName": "Testing Methods",
     "category": "A",
-    "description": "Develops automation tests, such as iOS or Android",
+    "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
       //Milestone 1
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
@@ -151,9 +151,9 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Moving Testing Left",
+    "displayName": "Shift Testing Left",
     "category": "A",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{
       //Milestone 1
       "summary": "Works effectively within established web client architectures, following current best practices",
@@ -225,7 +225,7 @@ export const tracks: Tracks = {
   "FOUNDATIONS": {
     "displayName": "Product Stack",
     "category": "A",
-    "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+    "description": "Knowledge and insight to the different software, platforms and business levels that make up a product.",
     "milestones": [{
       //Milestone 1
       "summary": "Works effectively within established structures, following current best practices",
@@ -297,7 +297,7 @@ export const tracks: Tracks = {
   "SERVERS": {
     "displayName": "User Focus",
     "category": "A",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+    "description": "Understanding and adoptoin of user workflows, stories, and insights to product usage",
     "milestones": [{
       //Milestone 1
       "summary": "Works effectively within established server side frameworks, following current best practices",
@@ -369,7 +369,7 @@ export const tracks: Tracks = {
   "PROJECT_MANAGEMENT": {
     "displayName": "Data Analysis",
     "category": "B",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+    "description": "Ability to understand insights relating to products and users.",
     "milestones": [{
       //Milestone 1
       "summary": "Effectively delivers individual tasks",
@@ -439,7 +439,7 @@ export const tracks: Tracks = {
   },
 
   "COMMUNICATION": {
-    "displayName": "Risk Mitigation",
+    "displayName": "Risk Communication",
     "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "milestones": [{
@@ -513,7 +513,7 @@ export const tracks: Tracks = {
   "CRAFT": {
     "displayName": "Deep Dive",
     "category": "B",
-    "description": "Embodies and promotes practices to ensure excellent quality products and services",
+    "description": "Ability to understand the root cause of trends and issues.",
     "milestones": [{
       //Milestone 1
       "summary": "Delivers consistently good quality work",
@@ -584,7 +584,7 @@ export const tracks: Tracks = {
   "INITIATIVE": {
     "displayName": "Big Picture",
     "category": "B",
-    "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
+    "description": "Undertanding of how all the pieces fit together and how each piece impacts all aspects of a product",
     "milestones": [{
       //Milestone 1
       "summary": "Identifies opportunities for organizational change or product improvements",
@@ -656,7 +656,7 @@ export const tracks: Tracks = {
   "CAREER_DEVELOPMENT": {
     "displayName": "Development",
     "category": "C",
-    "description": "Provides strategic support to engineers to help them build the career they want",
+    "description": "Focus on driving improvement for self, squad, chapter, and Hudl",
     "milestones": [{
       //Milestone 1
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
@@ -728,7 +728,7 @@ export const tracks: Tracks = {
   "ORG_DESIGN": {
     "displayName": "Challenge",
     "category": "C",
-    "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    "description": "Challenging the status quo with the end goal of improvement",
     "milestones": [{
       //Milestone 1
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -800,7 +800,7 @@ export const tracks: Tracks = {
   "WELLBEING": {
     "displayName": "Improve",
     "category": "C",
-    "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+    "description": "Your outcomes move yourself, squad, chapter, and Hudl forward",
     "milestones": [{
       //Milestone 1
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
@@ -872,7 +872,7 @@ export const tracks: Tracks = {
   "ACCOMPLISHMENT": {
     "displayName": "Evangelism",
     "category": "C",
-    "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
+    "description": "Inspires a better understanding and adoption of quality best practices.",
     "milestones": [{
       //Milestone 1
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
@@ -944,7 +944,7 @@ export const tracks: Tracks = {
   "MENTORSHIP": {
     "displayName": "Relationships",
     "category": "D",
-    "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    "description": "Building relationships that are meaningful",
     "milestones": [{
       //Milestone 1
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
@@ -1016,7 +1016,7 @@ export const tracks: Tracks = {
   "EVANGELISM": {
     "displayName": "Impact",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Value added from impact and outcomes",
     "milestones": [{
       //Milestone 1
       "summary": "Represents Medium well externally, and influences individuals positively",
@@ -1088,7 +1088,7 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Growth",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Investment in personal and professional development",
     "milestones": [{
       //Milestone 1
       "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",

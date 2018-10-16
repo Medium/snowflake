@@ -70,56 +70,56 @@ class LevelThermometer extends React.Component<Props> {
          + "h" + (radius - width)
          + "z";
   }
-  render() {
-    let categoryPoints = categoryPointsFromMilestoneMap(this.props.milestoneByTrack)
-    let lastCategoryIndex = 0
-    categoryPoints.forEach((categoryPoint, i) => {
-      if (categoryPoint.points) lastCategoryIndex = i
-    })
-    let cumulativePoints = 0
-    return (
-      <figure>
-        <style jsx>{`
-          figure {
-            margin: 0 0 0 -10px;
-          }
-          svg {
-            width: ${width}px;
-            height: ${height + 10}px;
-          }
-        `}</style>
-        <svg>
-          <g transform={`translate(${margins.left},${margins.top})`}>
-            {categoryPoints.map((categoryPoint, i) => {
-              const x = this.pointScale(cumulativePoints)
-              const width = this.pointScale(cumulativePoints + categoryPoint.points) - x
-              cumulativePoints += categoryPoint.points
-              return (i != lastCategoryIndex ?
-                <rect
-                    key={categoryPoint.categoryId}
-                    x={x}
-                    y={0}
-                    width={width}
-                    height={height - margins.top - margins.bottom}
-                    style={{fill: categoryColorScale(categoryPoint.categoryId), borderRight: "1px solid #000"}}
-                    /> :
-                <path
-                    key={categoryPoint.categoryId}
-                    d={this.rightRoundedRect(x, 0, width, height - margins.top - margins.bottom, 3)}
-                    style={{fill: categoryColorScale(categoryPoint.categoryId)}}
-                    />
-              )
-            })}
-            <g ref={ref => this.topAxis = ref} className="top-axis"
-                transform={`translate(0, -2)`}
-                />
-            <g ref={ref => this.bottomAxis = ref} className="bottom-axis"
-                transform={`translate(0,${height - margins.top - margins.bottom + 1})`}
-                />
-          </g>
-        </svg>
-      </figure>
-    )
+  render() { return null
+    // let categoryPoints = categoryPointsFromMilestoneMap(this.props.milestoneByTrack)
+    // let lastCategoryIndex = 0
+    // categoryPoints.forEach((categoryPoint, i) => {
+    //   if (categoryPoint.points) lastCategoryIndex = i
+    // })
+    // let cumulativePoints = 0
+    // return (
+    //   <figure>
+    //     <style jsx>{`
+    //       figure {
+    //         margin: 0 0 0 -10px;
+    //       }
+    //       svg {
+    //         width: ${width}px;
+    //         height: ${height + 10}px;
+    //       }
+    //     `}</style>
+    //     <svg>
+    //       <g transform={`translate(${margins.left},${margins.top})`}>
+    //         {categoryPoints.map((categoryPoint, i) => {
+    //           const x = this.pointScale(cumulativePoints)
+    //           const width = this.pointScale(cumulativePoints + categoryPoint.points) - x
+    //           cumulativePoints += categoryPoint.points
+    //           return (i != lastCategoryIndex ?
+    //             <rect
+    //                 key={categoryPoint.categoryId}
+    //                 x={x}
+    //                 y={0}
+    //                 width={width}
+    //                 height={height - margins.top - margins.bottom}
+    //                 style={{fill: categoryColorScale(categoryPoint.categoryId), borderRight: "1px solid #000"}}
+    //                 /> :
+    //             <path
+    //                 key={categoryPoint.categoryId}
+    //                 d={this.rightRoundedRect(x, 0, width, height - margins.top - margins.bottom, 3)}
+    //                 style={{fill: categoryColorScale(categoryPoint.categoryId)}}
+    //                 />
+    //           )
+    //         })}
+    //         <g ref={ref => this.topAxis = ref} className="top-axis"
+    //             transform={`translate(0, -2)`}
+    //             />
+    //         <g ref={ref => this.bottomAxis = ref} className="bottom-axis"
+    //             transform={`translate(0,${height - margins.top - margins.bottom + 1})`}
+    //             />
+    //       </g>
+    //     </svg>
+    //   </figure>
+    // )
   }
 }
 
