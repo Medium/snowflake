@@ -53,9 +53,9 @@ class PointSummaries extends React.Component<Props> {
             margin-left: -3px;
           }
           .point-summary-label {
-            font-size: 12px;
+            font-size: 18px;
             text-align: center;
-            font-weight: normal;
+            font-weight: bold;
             width: 120px;
           }
           .point-summary-value {
