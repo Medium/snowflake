@@ -222,7 +222,6 @@ export const tracks: Tracks = {
           "Acts a caretaker for all of web client code"
         ],
         examples: [
-          "Designed font loading strategy for Medium",
           "Researched utility of HTTP/2 for Vend",
           "Designed and implemented Add/Edit Product screen"
         ]
@@ -236,7 +235,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Designed Vend's frontend entity storage and syncronisation system",
-          "Implemented Medium's scrolling text over image blur",
+          "Implemented Vend's multi-framework strategy",
           "Defined and drove migration strategy from Angular 1.6 to 2"
         ]
       },
@@ -320,7 +319,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Invented a novel ML technique that advanced the state of the art",
-          "Defined and developed Medium's continuous delivery strategy",
+          "Defined and developed Vend's continuous delivery strategy",
           "Developed and implemented DR strategy"
         ]
       }
@@ -379,7 +378,7 @@ export const tracks: Tracks = {
           "Makes appropriate buy vs build choices"
         ],
         examples: [
-          "Designed Medium's ranked feed architecture",
+          "Designed and implemented Vend's mutation-based API",
           "Designed historical inventory system",
           "Created standards and tools for writing Go microservices"
         ]
@@ -599,7 +598,6 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Implemented a strategy to attack flakey build pipelines",
-          "Iterated repeatedly to develop Medium's underlines solution",
           "Defined and oversaw plan for closing Heartbleed vulnerability"
         ]
       },
