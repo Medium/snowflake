@@ -1,42 +1,30 @@
 // @flow
 import * as d3 from "d3";
 
-export type TrackId =
-  | "MOBILE"
-  | "WEB_CLIENT"
-  | "FOUNDATIONS (PLATFORM)"
-  | "SERVERS & API"
-  | "PROJECT_MANAGEMENT"
-  | "COMMUNICATION"
-  | "CRAFT"
-  | "INITIATIVE"
-  | "CAREER_DEVELOPMENT"
-  | "ORG_DESIGN"
-  | "WELLBEING"
-  | "ACCOMPLISHMENT"
-  | "MENTORSHIP"
-  | "EVANGELISM"
-  | "RECRUITING"
-  | "COMMUNITY";
+type Tracks = {|
+  "MOBILE": Track,
+  "WEB_CLIENT": Track,
+  "FOUNDATIONS (PLATFORM)": Track,
+  "SERVERS & API": Track,
+  "PROJECT_MANAGEMENT": Track,
+  "COMMUNICATION": Track,
+  "CRAFT": Track,
+  "INITIATIVE": Track,
+  "CAREER_DEVELOPMENT": Track,
+  "ORG_DESIGN": Track,
+  "WELLBEING": Track,
+  "ACCOMPLISHMENT": Track,
+  "MENTORSHIP": Track,
+  "EVANGELISM": Track,
+  "RECRUITING": Track,
+  "COMMUNITY": Track
+|};
+
+export type TrackId = $Keys<Tracks>;
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5;
 
 export type MilestoneMap = {
-  "MOBILE": Milestone,
-  "WEB_CLIENT": Milestone,
-  "FOUNDATIONS (PLATFORM)": Milestone,
-  "SERVERS & API": Milestone,
-  "PROJECT_MANAGEMENT": Milestone,
-  "COMMUNICATION": Milestone,
-  "CRAFT": Milestone,
-  "INITIATIVE": Milestone,
-  "CAREER_DEVELOPMENT": Milestone,
-  "ORG_DESIGN": Milestone,
-  "WELLBEING": Milestone,
-  "ACCOMPLISHMENT": Milestone,
-  "MENTORSHIP": Milestone,
-  "EVANGELISM": Milestone,
-  "RECRUITING": Milestone,
-  "COMMUNITY": Milestone
+  [TrackId]: Milestone
 };
 export const milestones = [0, 1, 2, 3, 4, 5];
 
@@ -89,25 +77,6 @@ export type Track = {
     examples: string[]
   }[]
 };
-
-type Tracks = {|
-  "MOBILE": Track,
-  "WEB_CLIENT": Track,
-  "FOUNDATIONS (PLATFORM)": Track,
-  "SERVERS & API": Track,
-  "PROJECT_MANAGEMENT": Track,
-  "COMMUNICATION": Track,
-  "CRAFT": Track,
-  "INITIATIVE": Track,
-  "CAREER_DEVELOPMENT": Track,
-  "ORG_DESIGN": Track,
-  "WELLBEING": Track,
-  "ACCOMPLISHMENT": Track,
-  "MENTORSHIP": Track,
-  "EVANGELISM": Track,
-  "RECRUITING": Track,
-  "COMMUNITY": Track
-|};
 
 export const tracks: Tracks = {
   MOBILE: {
