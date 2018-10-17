@@ -91,7 +91,7 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "MOBILE": {
-    "displayName": "Testing Method",
+    "displayName": "Testing Methods",
     "category": "A",
     "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
@@ -151,7 +151,7 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Moving Left",
+    "displayName": "Shifting Left",
     "category": "A",
     "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{

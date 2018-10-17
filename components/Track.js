@@ -39,6 +39,7 @@ class Track extends React.Component<Props> {
             width: 50px;
             text-align: center;
             background: #eee;
+            color: white;
             font-weight: bold;
             font-size: 24px;
             border-radius: 3px;
