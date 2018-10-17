@@ -91,7 +91,7 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "MOBILE": {
-    "displayName": "Testing Methods",
+    "displayName": "Testing Method",
     "category": "A",
     "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
@@ -151,7 +151,7 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Shift Testing Left",
+    "displayName": "Moving Left",
     "category": "A",
     "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{
@@ -654,47 +654,47 @@ export const tracks: Tracks = {
   },
 
   "CAREER_DEVELOPMENT": {
-    "displayName": "Development",
+    "displayName": "Improvement",
     "category": "C",
     "description": "Focus on driving improvement for self, squad, chapter, and Hudl",
     "milestones": [{
       //Milestone 1
-      "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
+      "summary": "You are learning how your role delivers value",
       "signals": [
-        "Advocates on behalf and in defense of a group member",
-        "Shares opportunities for improvements and recognises achievements",
-        "Explains appropriate available industry paths",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Collected and delivered feedback",
-        "Discussed career options and areas of interest informally",
-        "Hosted a Floodgate Academy intern",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
+      "summary": "You seek to increase the amount of value your role delivers",
       "signals": [
-        "Ensure a group member has an appropriate role on their team",
-        "Offers effective career advice to group members, without being prescriptive",
-        "Creates space for people to talk through challenges",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Set up and attended regular, constructive 1:1s",
-        "Provided coaching on how to have difficult conversations",
-        "Taught group members the GROW model",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
+      "summary": "You are evolving the way your role delivers value and mitigates risk.",
       "signals": [
-        "Discusses paths, and creates plans for personal and professional growth",
-        "Advocates to align people with appropriate roles within organization",
-        "Works with team leads to elevate emerging leaders",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Reviewed individual group member progression every 6 weeks",
-        "Suggested appropriate group member for Tech Lead position",
-        "Arranged a requested switch of discipline for a group member",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -731,114 +731,114 @@ export const tracks: Tracks = {
     "description": "Challenging the status quo with the end goal of improvement",
     "milestones": [{
       //Milestone 1
-      "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
+      "summary": "You are having conversations that help yourself and others understand and issues and the status of quality",
       "signals": [
-        "Reflects on meetings that leave them inspired or frustrated",
-        "Teaches others about existing processes",
-        "Actively participates and makes contributions within organizational processes",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Facilitated effective tactical meeting with empathy",
-        "Explained tactical meeting format to a new hire",
-        "Provided feedback on sprint planning meeting",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Identifies opportunities to improve existing processes and makes changes that positively affect the local team",
+      "summary": "You challenge squad quality while focusing on prevention and efficiency",
       "signals": [
-        "Defines meeting structure and cadence that meets team needs",
-        "Engages in organizational systems thinking",
-        "Advocates for improved diversity and inclusion, and proposes ideas to help",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Defined Frankenmeeting structure for small team",
-        "Improved Watch on-call rotation scheduling",
-        "Defined standard channels for inter-team communication",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Develops processes to solve ongoing organizational problems",
+      "summary": "You are strategically challenging process and direction",
       "signals": [
-        "Creates programs that meaningfully improve organizational diversity",
-        "Solves long-standing organizational problems",
-        "Reallocates resources to meet organizational needs",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Developed baseline team templates for consistency",
-        "Created bug-rotation program to address ongoing quality issues",
-        "Defined Guilds manifesto and charter",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
       "summary": "Thinks deeply about organizational issues and identifies hidden dynamics that contribute to them",
       "signals": [
-        "Evaluates incentive structures and their effect on execution",
-        "Analyzes existing processes for bias and shortfall",
-        "Ties abstract concerns to concrete organizational actions or norms",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Connected mobile recruiting difficulties to focus on excellence",
-        "Raised leadership level change discrepancies",
-        "Analyzed the hiring rubric for false negative potential",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 5
       "summary": "Leads initiatives to address issues stemming from hidden dynamics and company norms",
       "signals": [
-        "Builds programs to train leadership in desired skills",
-        "Creates new structures that provide unique growth opportunities",
-        "Leads planning and communication for reorgs",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Lead efforts to increase number of mobile engineers",
-        "Directed resources to meaningfully improve diversity at all levels",
-        "Built the growth framework rubric",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }],
   },
 
   "WELLBEING": {
-    "displayName": "Improve",
+    "displayName": "Change",
     "category": "C",
-    "description": "Your outcomes move yourself, squad, chapter, and Hudl forward",
+    "description": "Your outcomes drive yourself, squad, chapter, and Hudl forward",
     "milestones": [{
       //Milestone 1
-      "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
+      "summary": "You are leveling up personally and starting to drive change on the squad level",
       "signals": [
-        "Keeps confidences unless legally or morally obliged to do otherwise",
-        "Applies the reasonable person principle to others",
-        "Avoids blame and focuses on positive change",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Ensured group members were taking enough vacation",
-        "Put themself in another's shoes to understand their perspective",
-        "Checked in with colleague showing signs of burnout",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Creates a positive, supportive, engaging team environment for group members",
+      "summary": "You are implementing change on the squad level and you are starting to have an impact outside of the squad",
       "signals": [
-        "Sheds light on other experiences to build empathy and compassion",
-        "Validates ongoing work and sustains motivation",
-        "Proposes solutions when teams get bogged down or lose momentum",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Coordinated a small celebration for a project launch",
-        "Connected tedious A|B testing project with overall company goals",
-        "Noted a team without a recent win and suggested some easy quick wins",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Manages expectations across peers, leads in the org, promotes calm, and prevents consensus building",
+      "summary": "You are driving change outside of the squad and your impact is being felt on the chapter level",
       "signals": [
-        "Trains group members to separate stimulus from response",
-        "Maintains a pulse on individual and team morale",
-        "Helps group members approach problems with curiosity",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Completed training on transference and counter transference",
-        "Completed training on compromise and negotiation techniques",
-        "Reframed a problem as a challenge, instead of a barrier, when appropriate",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -875,42 +875,42 @@ export const tracks: Tracks = {
     "description": "Inspires a better understanding and adoption of quality best practices.",
     "milestones": [{
       //Milestone 1
-      "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
+      "summary": "You are learning quality best practices and are starting to share that information with your squad",
       "signals": [
-        "Notices when someone is stuck and reaches out",
-        "Helps others break down problems into feasible, tangible next steps",
-        "Talks through problems non-judgmentally",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Completed training on diagnosing problems",
-        "Unblocked a group member",
-        "Reinforces and affirms positive feedback for good work",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "Helps individuals resolve difficult performance issues, with insight, compassion, and skill",
+      "summary": "You are leveling up and implementing quality best practices on the squad level",
       "signals": [
-        "Gathers context outside the immediate problem",
-        "Recognizes issues within local environment and suggests change",
-        "Works to encourage ownership of actions and responsibilities",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Completed training on decision making",
-        "Convinced a group member to solve a problem directly, rather than doing it for them",
-        "Gave honest feedback about poor performance, with compassion",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "Intervenes in long-standing performance issues with targeted behavior change or performance plans",
+      "summary": "You are coaching and changing others mindsets around quality outside of the squad",
       "signals": [
-        "Aggregates signals of poor performance and creates process for improvement",
-        "Investigates motivation and externalities for consistent poor performance",
-        "Puts together comprehensive, achievable performance plans",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Worked with group member to address persistent communication failures",
-        "Arranged a transfer to another team, resulting in improved performance",
-        "Managed group member closely to maximise chances of PIP success",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -949,40 +949,40 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
       "signals": [
-        "Makes themself available for informal support and advice",
-        "Acts as sounding board for peers and more junior members",
-        "Provides sound advice when asked",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Acted as an onboarding buddy",
-        "Paired with an engineer to help them with an unfamiliar area",
-        "Helped a colleague understand their feelings",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
       "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
       "signals": [
-        "Takes time to explain concepts and best practices",
-        "Asks questions to illuminate concepts, rather than stating them",
-        "Allows others to lead efforts when it will help their development",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Shared interesting article with a team member to help with their growth",
-        "Offered unprompted feedback to help growth, with empathy",
-        "Lead from behind to support someone new to a leadership role",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
       "signals": [
-        "Avoids siloing information when it can be usefully shared with others",
-        "Works to increase the bus factor of systems",
-        "Finds tools that work best for a team member's personality",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Gave a brown bag presentation on payments",
-        "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -1021,40 +1021,40 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "Represents Medium well externally, and influences individuals positively",
       "signals": [
-        "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
-        "Communicates genuine and honest excitement about their work externally",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
-        "Acted as a guide for a non-friend visitor to the office",
-        "Supported PR efforts by giving a quote or having a photo taken",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Volunteered as a helper for CODE2040 writing workshop",
-        "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "Works hard to positively influence large groups of people on their views of Medium",
       "signals": [
-        "Mentors or participates in a high visibility way in an external organization",
-        "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
-        "Established close ties with Creative Commons",
-        "Built a durable, long-standing relationship with Code2040",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4
@@ -1093,40 +1093,40 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
       "signals": [
-        "Reviews existing network for hiring leads regularly",
-        "Shadows interviews to gain familiarity with process",
-        "Reviews current job postings regularly",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Completed interview calibration",
-        "Set up casual sessions to practice asking questions",
-        "Referred appropriate individuals for open positions",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 2
       "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
       "signals": [
-        "Uses interview rubric to provide clear, objective feedback on candidates",
-        "Interviews candidates with empathy and treats them all with equal respect",
-        "Researches approaches for sourcing candidates and diversifying hiring",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
-        "Tested a new service for quality and diversity of candidates",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
       "signals": [
-        "Teaches new interviewers how to interview with empathy",
-        "Models great interview technique and feedback when shadowed",
-        "Reverse shadows trainees and helps calibrate their feedback",
+        "Example Behavior",
+        "Example Behavior",
+        "Example Behavior",
       ],
       "examples": [
-        "Wrote new interview question which meets our question quality criteria",
-        "Brought candidates into our pipeline proactively, with a high conversion rate",
-        "Proposed useful, tangible improvements to the interview process",
+        "Example Task",
+        "Example Task",
+        "Example Task",
       ],
     }, {
       //Milestone 4

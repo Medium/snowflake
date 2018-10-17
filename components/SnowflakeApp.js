@@ -85,7 +85,7 @@ const defaultState = (): SnowflakeAppState => {
       'INITIATIVE': 1,
       'CAREER_DEVELOPMENT': 1,
       'ORG_DESIGN': 1,
-      'WELLBEING': 0,
+      'WELLBEING': 1,
       'ACCOMPLISHMENT': 1,
       'MENTORSHIP': 1,
       'EVANGELISM': 1,
