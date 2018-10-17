@@ -947,7 +947,7 @@ export const tracks: Tracks = {
     "description": "Building relationships that are meaningful",
     "milestones": [{
       //Milestone 1
-      "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
+      "summary": "You are building relationships that are building confidence and trust.",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -960,7 +960,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 2
-      "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
+      "summary": "You are leveraging relationships to help achieve successful outcomes",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -973,7 +973,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 3
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "You build and use relationships that help get things done faster and better benefiting the Chapter and or Hudl",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1019,7 +1019,7 @@ export const tracks: Tracks = {
     "description": "Value added from impact and outcomes",
     "milestones": [{
       //Milestone 1
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Your impact is seen on the personal and team level",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1032,7 +1032,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 2
-      "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
+      "summary": "Your impact is felt on the immediate team and starting to make an impact on others outside of your team",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1045,7 +1045,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 3
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Your impact is felt across the Chapter and Hudl",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1088,10 +1088,12 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Growth",
     "category": "D",
-    "description": "Investment in personal and professional development",
+    "description": "Investment in personal and professional development", 
+
+
     "milestones": [{
       //Milestone 1
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "You are leveling up personally and are starting to grow within your role",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1104,7 +1106,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 2
-      "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
+      "summary": "You are growing within your role and evolving your skillset",
       "signals": [
         "Example Behavior",
         "Example Behavior",
@@ -1117,7 +1119,7 @@ export const tracks: Tracks = {
       ],
     }, {
       //Milestone 3
-      "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
+      "summary": "You are helping others grow personally and or professionally",
       "signals": [
         "Example Behavior",
         "Example Behavior",
