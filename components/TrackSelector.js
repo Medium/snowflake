@@ -30,6 +30,7 @@ class TrackSelector extends React.Component<Props> {
             background: #eee;
             font-weight: bold;
             font-size: 24px;
+            color: white;
             border-radius: 3px;
             cursor: pointer;
           }
