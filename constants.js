@@ -255,7 +255,7 @@ export const tracks: Tracks = {
     ]
   },
 
-  FOUNDATIONS: {
+  "FOUNDATIONS (PLATFORM)": {
     displayName: "Platform & Data",
     category: "A",
     description: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
@@ -326,7 +326,7 @@ export const tracks: Tracks = {
     ]
   },
 
-  SERVERS: {
+  "SERVERS & API": {
     displayName: "Services & APIs",
     category: "A",
     description: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",

@@ -53,8 +53,8 @@ const emptyState = (): SnowflakeAppState => {
     milestoneByTrack: {
       'MOBILE': 0,
       'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
+      'FOUNDATIONS (PLATFORM)': 0,
+      'SERVERS & API': 0,
       'PROJECT_MANAGEMENT': 0,
       'COMMUNICATION': 0,
       'CRAFT': 0,
@@ -79,8 +79,8 @@ const defaultState = (): SnowflakeAppState => {
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
+      'FOUNDATIONS (PLATFORM)': 3,
+      'SERVERS & API': 2,
       'PROJECT_MANAGEMENT': 4,
       'COMMUNICATION': 1,
       'CRAFT': 1,
@@ -240,9 +240,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   shiftFocusedTrackMilestoneByDelta(delta: number) {
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
-    if (milestone < 0) milestone = 0
-    if (milestone > 5) milestone = 5
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+    this.handleTrackMilestoneChange(this.state.focusedTrackId, coerceMilestone(milestone))
   }
 
   setTitle(title: string) {

@@ -61,7 +61,7 @@ class LevelThermometer extends React.Component<Props> {
       .style('text-anchor', 'start')
   }
 
-  rightRoundedRect(x, y, width, height, radius) {
+  rightRoundedRect(x: number, y: number, width: number, height: number, radius: number): string {
     return "M" + x + "," + y
          + "h" + (width - radius)
          + "a" + radius + "," + radius + " 0 0 1 " + radius + "," + radius
