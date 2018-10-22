@@ -7,6 +7,7 @@ import KeyboardListener from '../components/KeyboardListener'
 import LevelThermometer from '../components/LevelThermometer'
 import NightingaleChart from '../components/NightingaleChart'
 import PointSummaries from '../components/PointSummaries'
+import SheetsControl from '../components/SheetsControl'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
 import Track from '../components/Track'
@@ -171,6 +172,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
+              <SheetsControl
+                  name={this.state.name}
+                  onImport={this.handleSheetsImport.bind(this)}
+                  milestoneByTrack={this.state.milestoneByTrack} />
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
@@ -212,6 +217,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
       </main>
     )
+  }
+
+  handleSheetsImport(milestones: Milestone[]) {
+    const milestoneByTrack = {}
+    milestones.forEach((milestone, i) => {
+      milestoneByTrack[trackIds[i]] = milestone
+    })
+    this.setState({ milestoneByTrack })
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
