@@ -23,6 +23,10 @@ type Tracks = {|
 export type TrackId = $Keys<Tracks>;
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5;
 
+export type NoteMap = {
+  [TrackId]: ?string
+}
+
 export type MilestoneMap = {
   [TrackId]: Milestone
 };

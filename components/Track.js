@@ -2,12 +2,14 @@
 
 import { tracks, milestones, categoryColorScale } from '../constants'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+import type { MilestoneMap, NoteMap, TrackId, Milestone } from '../constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
+  notesByTrack: NoteMap,
   trackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void,
+  handleTrackNoteChangeFn: (TrackId, string) => void
 }
 
 class Track extends React.Component<Props> {
@@ -15,6 +17,7 @@ class Track extends React.Component<Props> {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
+    const currentNotes = this.props.notesByTrack[this.props.trackId] || ''
     return (
       <div className="track">
         <style jsx>{`
@@ -83,6 +86,13 @@ class Track extends React.Component<Props> {
               </ul>
             </div>
           ) : null}
+        </div>
+        <div style={{display: 'flex'}}>
+          <textarea
+            style={{flex: 1}}
+            rows='10'
+            value={currentNotes}
+            onChange={e => this.props.handleTrackNoteChangeFn(this.props.trackId, e.currentTarget.value)} />
         </div>
       </div>
     )
