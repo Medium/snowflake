@@ -173,10 +173,16 @@ export default class SheetsControl extends React.Component<Props, State> {
   }
 
   handleCreateClick() {
-    const rowValue = val => ({
+    const rowValue = (val, bold) => ({
       userEnteredValue: {
         [typeof val === 'number' ? 'numberValue' : 'stringValue']: val
-      }
+      },
+      textFormatRuns: bold ? [
+        {
+          startIndex: 0,
+          format: { bold: true }
+        }
+      ] : undefined
     })
     const rows = trackIds.map(trackId => [
       tracks[trackId].displayName,
@@ -199,7 +205,7 @@ export default class SheetsControl extends React.Component<Props, State> {
     const data = rows.map((row, i) => ({
       startRow: i,
       rowData: {
-        values: row.map(rowValue)
+        values: row.map((val, j) => rowValue(val, i === 2 || j === 0))
       }
     }))
     gapi.client.sheets.spreadsheets.create({
