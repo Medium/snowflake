@@ -1,6 +1,6 @@
 // @flow
 
-import type { Milestone, MilestoneMap } from '../constants'
+import type { Milestone, MilestoneMap, NoteMap } from '../constants'
 import { trackIds, tracks } from '../constants'
 
 import React from 'react'
@@ -13,14 +13,16 @@ const CLIENT_ID = '124466069863-0uic3ahingc9bst2oc95h29nvu30lrnu.apps.googleuser
 const DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"]
 const SCOPES = "https://www.googleapis.com/auth/spreadsheets"
 
-const RANGE = `B1:b${trackIds.length}`
+const RANGE = `B1:C${trackIds.length+3}`
 
 const DOCS_URL_REGEX = /^https:\/\/docs.google.com\/spreadsheets\/d\/([0-9a-zA-Z_\-]+)/
 
 type Props = {
   name: string,
-  onImport: (milestones: Milestone[]) => void,
-  milestoneByTrack: MilestoneMap
+  title: string,
+  onImport: (name: string, title: string, milestones: Milestone[], notes: string[]) => void,
+  milestoneByTrack: MilestoneMap,
+  notesByTrack: NoteMap
 }
 
 type State = {
@@ -147,14 +149,19 @@ export default class SheetsControl extends React.Component<Props, State> {
     // Get stuff from sheet
     gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: this.state.sheetId,
-      range: RANGE
+      range: RANGE,
+      majorDimension: 'COLUMNS'
     }).then(response => {
       console.log('imported sheet')
       const range = response.result
       if (range.values.length > 0) {
-        const milestones = range.values.map(val => parseInt(val[0]))
-        milestones.forEach(milestone => console.log(milestone))
-        this.props.onImport(milestones)
+        // Special-case the first two rows
+        const name = range.values[0][0]
+        const title = range.values[1][0]
+        // Skip the third as they're just constant headers
+        const milestones = range.values[0].slice(3).map(val => parseInt(val[0]))
+        const notes = range.values[1].slice(3)
+        this.props.onImport(name, title, milestones, notes)
       } else {
         console.log('no values found')
       }
@@ -166,22 +173,39 @@ export default class SheetsControl extends React.Component<Props, State> {
   }
 
   handleCreateClick() {
-    const rows = trackIds.map(trackId => [tracks[trackId].displayName, this.props.milestoneByTrack[trackId]])
+    const rowValue = (val, bold) => ({
+      userEnteredValue: {
+        [typeof val === 'number' ? 'numberValue' : 'stringValue']: val
+      },
+      textFormatRuns: bold ? [
+        {
+          startIndex: 0,
+          format: { bold: true }
+        }
+      ] : undefined
+    })
+    const rows = trackIds.map(trackId => [
+      tracks[trackId].displayName,
+      this.props.milestoneByTrack[trackId],
+      this.props.notesByTrack[trackId]
+    ])
+    rows.unshift([
+      'Track',
+      'Milestone',
+      'Notes'
+    ])
+    rows.unshift([
+      'Title',
+      this.props.title
+    ])
+    rows.unshift([
+      'Name',
+      this.props.name
+    ])
     const data = rows.map((row, i) => ({
       startRow: i,
       rowData: {
-        values: [
-          {
-            userEnteredValue: {
-              stringValue: row[0]
-            }
-          },
-          {
-            userEnteredValue: {
-              numberValue: row[1]
-            }
-          }
-        ]
+        values: row.map((val, j) => rowValue(val, i === 2 || j === 0))
       }
     }))
     gapi.client.sheets.spreadsheets.create({
@@ -195,14 +219,22 @@ export default class SheetsControl extends React.Component<Props, State> {
   }
 
   handleSaveClick() {
-    const values = trackIds.map(trackId => this.props.milestoneByTrack[trackId])
+    const headers = [
+      [this.props.name],
+      [this.props.title],
+      ['Milestone', 'Notes']
+    ]
+    const values = trackIds.map(trackId => [
+      this.props.milestoneByTrack[trackId],
+      this.props.notesByTrack[trackId]
+    ])
     gapi.client.sheets.spreadsheets.values.update({
       spreadsheetId: this.state.sheetId,
       range: RANGE,
       valueInputOption: 'USER_ENTERED',
       resource: {
-        majorDimension: 'COLUMNS',
-        values: [ values ]
+        majorDimension: 'ROWS',
+        values: headers.concat(values)
       }
     }).then(() => {
       console.log('saved')

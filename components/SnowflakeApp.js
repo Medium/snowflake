@@ -1,6 +1,6 @@
 // @flow
 
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import type { Milestone, MilestoneMap, NoteMap, TrackId } from '../constants'
 import { eligibleTitles, milestoneToPoints, milestones, trackIds } from '../constants'
 
 import KeyboardListener from '../components/KeyboardListener'
@@ -15,6 +15,7 @@ import TrackSelector from '../components/TrackSelector'
 import Wordmark from '../components/Wordmark'
 
 type SnowflakeAppState = {
+  notesByTrack: NoteMap,
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
@@ -69,6 +70,7 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
+    notesByTrack: {},
     focusedTrackId: 'MOBILE'
   }
 }
@@ -95,6 +97,7 @@ const defaultState = (): SnowflakeAppState => {
       'RECRUITING': 3,
       'COMMUNITY': 0
     },
+    notesByTrack: {},
     focusedTrackId: 'MOBILE'
   }
 }
@@ -174,8 +177,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   />
               <SheetsControl
                   name={this.state.name}
+                  title={this.state.title}
                   onImport={this.handleSheetsImport.bind(this)}
-                  milestoneByTrack={this.state.milestoneByTrack} />
+                  milestoneByTrack={this.state.milestoneByTrack}
+                  notesByTrack={this.state.notesByTrack} />
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
@@ -202,8 +207,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
         <Track
             milestoneByTrack={this.state.milestoneByTrack}
+            notesByTrack={this.state.notesByTrack}
             trackId={this.state.focusedTrackId}
-            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)}
+            handleTrackNoteChangeFn={(track, note) => this.handleTrackNoteChange(track, note)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             <a href="#" onClick={() => this.setState(emptyState())}>Reset</a>
@@ -219,12 +226,16 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     )
   }
 
-  handleSheetsImport(milestones: Milestone[]) {
+  handleSheetsImport(name: string, title: string, milestones: Milestone[], notes: string[]) {
     const milestoneByTrack = {}
     milestones.forEach((milestone, i) => {
       milestoneByTrack[trackIds[i]] = milestone
     })
-    this.setState({ milestoneByTrack })
+    const notesByTrack = {}
+    notes.forEach((note, i) => {
+      notesByTrack[trackIds[i]] = note
+    })
+    this.setState({ name, title, milestoneByTrack, notesByTrack })
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
@@ -235,6 +246,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
 
     this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+  }
+
+  handleTrackNoteChange(trackId: TrackId, note: string) {
+    const notesByTrack = Object.assign({}, this.state.notesByTrack)
+    notesByTrack[trackId] = note
+
+    this.setState({ notesByTrack })
   }
 
   shiftFocusedTrack(delta: number) {
