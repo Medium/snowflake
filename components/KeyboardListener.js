@@ -15,6 +15,10 @@ class KeyboardListener extends React.Component<Props> {
   }
 
   handleKeyDown(e: KeyboardEvent) {
+    if (document.activeElement && document.activeElement.tagName === 'INPUT') {
+      // Don't do shortcuts while input has focus.
+      return
+    }
     switch(e.code) {
       case 'ArrowUp':
         this.props.increaseFocusedMilestoneFn()
