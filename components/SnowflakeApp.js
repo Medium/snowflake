@@ -181,10 +181,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           onChange={e => this.setState({name: e.target.value})}
           placeholder="Enter Engineer's Name Here"
           />
-          <TitleSelector
+          {/* <TitleSelector
             milestoneByTrack={this.state.milestoneByTrack}
             currentTitle={this.state.title}
-            setTitleFn={(title) => this.setTitle(title)} />
+            setTitleFn={(title) => this.setTitle(title)} /> */
+          }
 
         </form>
         <TrackSelector
@@ -205,17 +206,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
        </div>
-       <div style={{flex: 0.5}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-          </div>
-          <div style={{flex:0.5}}>
-          <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
-
-        </div>
 
 
        </div>
