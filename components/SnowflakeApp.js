@@ -4,7 +4,6 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
@@ -165,8 +164,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         }
         
         `}</style>
-        <div style={{margin: '0 auto 0', width: 120}}>
-            <Wordmark />
+
+        <div style={{display: 'flex', 'justify-content': 'space-between'}}>
+        <div style={{width: 120}}>
+            <div className="aui">
+                <img width="110px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Wikimedia_Deutschland-Logo.svg/512px-Wikimedia_Deutschland-Logo.svg.png"></img>
+            </div>
         </div>
 
         <form>
@@ -185,6 +188,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
 
         </form>
+
+          <div title="FIXME Add about text here" style={{width:'110px', fill: 'grey'}}>
+              <svg viewBox="0 0 24 24">
+                  <path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" />
+              </svg>
+          </div>
+        </div>
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
