@@ -36,6 +36,7 @@ class Help extends React.Component {
           onClick={() => this.showModal()}
           style={{
             display: 'block',
+            width: '100%',
             border: 'none',
             padding: 0,
             background: 'none',
