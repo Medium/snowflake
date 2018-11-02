@@ -174,13 +174,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
         <form>
 
+          <label>
+              <span style={{fontSize: '1.5rem'}}>
+                  Enter Engineer's Name Here
+              </span>
         <input
           type="text"
           className="name-input center"
           value={this.state.name}
           onChange={e => this.setState({name: e.target.value})}
-          placeholder="Enter Engineer's Name Here"
+          placeholder="Jane Doe"
           />
+          </label>
           {/* <TitleSelector
             milestoneByTrack={this.state.milestoneByTrack}
             currentTitle={this.state.title}
