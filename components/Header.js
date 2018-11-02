@@ -20,8 +20,13 @@ class Header extends React.PureComponent<Props> {
 
         <form>
 
-          <label>
-              <span style={{fontSize: '1.5rem'}}>
+          <label style={{
+            display: 'flex',
+            height: '100%',
+            'flex-direction': 'column',
+            justifyContent: 'center',
+          }}>
+              <span>
                   Enter Engineer's Name Here
               </span>
             <input

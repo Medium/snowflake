@@ -31,7 +31,7 @@ class Help extends React.Component {
 
   render() {
     return (
-      <div title="FIXME Add about text here" style={{width: '110px', fill: 'grey'}}>
+      <div style={{width: '110px', fill: 'grey'}}>
         <button
           onClick={() => this.showModal()}
           style={{
