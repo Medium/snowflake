@@ -137,8 +137,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
           .name-input {
             border: none;
+            text-align: center;
             display: block;
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid #ccc;
             font-size: 30px;
             line-height: 40px;
             font-weight: bold;
@@ -146,7 +147,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             margin-bottom: 10px;
           }
           .name-input:hover, .name-input:focus {
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #ff8c00;
             outline: 0;
           }
           a {
@@ -159,7 +160,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <Wordmark />
           </a>
         </div>
-        <div style={{display: 'flex'}}>
+        <div align="center">
           <div style={{flex: .5}}>
             { <form>
               <input
@@ -167,7 +168,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   className="name-input"
                   value={this.state.name}
                   onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
+                  placeholder="Hudlies Name"
                   />
               {/* <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
