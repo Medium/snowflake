@@ -91,7 +91,7 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "MOBILE": {
-    "displayName": "Testing Methods",
+    "displayName": "Test Metric: Testing Methods",
     "category": "A",
     "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
@@ -151,7 +151,7 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Shifting Left",
+    "displayName": "Test Metric: Shifting Left",
     "category": "A",
     "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{
@@ -223,7 +223,7 @@ export const tracks: Tracks = {
   },
 
   "FOUNDATIONS": {
-    "displayName": "Product Stack",
+    "displayName": "Test Metric: Product Stack",
     "category": "A",
     "description": "Knowledge and insight to the different software, platforms and business levels that make up a product.",
     "milestones": [{
@@ -295,7 +295,7 @@ export const tracks: Tracks = {
   },
 
   "SERVERS": {
-    "displayName": "User Focus",
+    "displayName": "Test Metric: User Focus",
     "category": "A",
     "description": "Understanding and adoption of user workflows, stories, and insights to product usage",
     "milestones": [{
@@ -367,7 +367,7 @@ export const tracks: Tracks = {
   },
 
   "PROJECT_MANAGEMENT": {
-    "displayName": "Data Analysis",
+    "displayName": "Analyze Metric: Data Analysis",
     "category": "B",
     "description": "Ability to understand insights relating to products and users.",
     "milestones": [{
@@ -439,7 +439,7 @@ export const tracks: Tracks = {
   },
 
   "COMMUNICATION": {
-    "displayName": "Risk Communication",
+    "displayName": "Analyze Metric: Risk Communication",
     "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and reacts effectively",
     "milestones": [{
@@ -511,7 +511,7 @@ export const tracks: Tracks = {
   },
 
   "CRAFT": {
-    "displayName": "Root Cause",
+    "displayName": "Analyze Metric: Deep Dive",
     "category": "B",
     "description": "Ability to understand the why behind trends and issues.",
     "milestones": [{
@@ -582,7 +582,7 @@ export const tracks: Tracks = {
     }],
   },
   "INITIATIVE": {
-    "displayName": "Connections",
+    "displayName": "Analyze Metric: Connections",
     "category": "B",
     "description": "Undertanding how all the pieces fit together and how each piece impacts all aspects of a product",
     "milestones": [{
@@ -654,7 +654,7 @@ export const tracks: Tracks = {
   },
 
   "CAREER_DEVELOPMENT": {
-    "displayName": "Improvement",
+    "displayName": "Drive Metric: Improvement",
     "category": "C",
     "description": "Focus on driving improvement for self, squad, chapter, and Hudl",
     "milestones": [{
@@ -726,7 +726,7 @@ export const tracks: Tracks = {
   },
 
   "ORG_DESIGN": {
-    "displayName": "Challenge",
+    "displayName": "Drive Metric: Challenge",
     "category": "C",
     "description": "Challenging the status quo with the end goal of improvement",
     "milestones": [{
@@ -798,7 +798,7 @@ export const tracks: Tracks = {
   },
 
   "WELLBEING": {
-    "displayName": "Change",
+    "displayName": "Drive Metric: Change",
     "category": "C",
     "description": "Your outcomes drive yourself, squad, chapter, and Hudl forward",
     "milestones": [{
@@ -870,7 +870,7 @@ export const tracks: Tracks = {
   },
 
   "ACCOMPLISHMENT": {
-    "displayName": "Evangelism",
+    "displayName": "Drive Metric: Advocate",
     "category": "C",
     "description": "Inspires a better understanding and adoption of quality best practices.",
     "milestones": [{
@@ -1254,7 +1254,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#009ce3', '#5f7284', '#394551', '#ff6300'])
+  .range(['#009ce3', '#5f7284', '#ff6300', '#394551'])
 
 export const titles = [
   {label: 'QA I', minPoints: 0, maxPoints: 16},
