@@ -73,7 +73,7 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    title: 'QA I',
+    title: 'Hudlies Name',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 1,

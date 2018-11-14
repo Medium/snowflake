@@ -96,42 +96,42 @@ export const tracks: Tracks = {
     "description": "Strategies and approaches used to test an application to ensure it behaves and looks as expected.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning Hudl’s test methods and tools and have started to implement them into your testing",
+      "summary": "You are learning Hudl’s test methods and tools and have started to implement them into your testing.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Automation",
+        // "Performance Testing",
+        // "Test Bashes",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
       //Milestone 2
     }, {
-      "summary": "You know how and when to use the right testing method and tools during testing",
+      "summary": "You know how and when to use the right testing method and tools during testing.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Automation",
+        // "Performance Testing",
+        // "Test Bashes",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
       //Milestone 3
     }, {
-      "summary": "You are creating and coaching others on how to best use specific testing methods and tools",
+      "summary": "You are creating and coaching others on how to best use specific testing methods and tools.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Automation",
+        // "Performance Testing",
+        // "Test Bashes",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
       //Milestone 4
     }, {
@@ -156,42 +156,42 @@ export const tracks: Tracks = {
     "description": "Ensuring quality earlier in the product lifecycle.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are starting to identify and documenting risk for features",
+      "summary": "You are starting to identify and documenting risk for features.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You are starting to implement ways of introducing quality earlier into the product lifecycle",
+      "summary": "You are starting to implement multiple ways of introducing quality earlier into the product lifecycle.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You are mitigating risk and introducing quality in all aspects of the life cycle",
+      "summary": "You are mitigating risk and introducing quality in all aspects of the life cycle.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -228,42 +228,42 @@ export const tracks: Tracks = {
     "description": "Knowledge and insight to the different software, platforms and business levels that make up a product.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning how your features work on the product level",
+      "summary": "You are learning how your features work on the product level.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You are able to understand and mitigate risk on the UI and API layer of your product",
+      "summary": "You are able to understand and mitigate risk on the UI and API layer of your product.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You know your squad's system architecture and understand the key components that make up your feature or platform on the business and product level",
+      "summary": "You know your squad's system architecture and understand the key components that make up your feature or platform on the business and product level.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -297,45 +297,45 @@ export const tracks: Tracks = {
   "SERVERS": {
     "displayName": "Test Metric: User Focus",
     "category": "A",
-    "description": "Understanding and adoption of user workflows, stories, and insights to product usage",
+    "description": "Understanding and adoption of user workflows, stories, and insights to product usage.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning about your squad's users and how they use the product stack",
+      "summary": "You are learning about your squad's users and how they use the product stack.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You are introducing insights from user workflows into your testing approach and methods",
+      "summary": "You are introducing insights from user workflows into your testing approach and methods.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You evolve and coach others understanding and testing approach based on your user knowledge",
+      "summary": "You evolve and coach others understanding and testing approach based on your user knowledge.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -372,42 +372,42 @@ export const tracks: Tracks = {
     "description": "Ability to understand insights relating to products and users.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning and starting to use Hudl’s analysis tools to evaluate and guide your decisions",
+      "summary": "You are learning and starting to use Hudl’s analysis tools to evaluate and guide your decisions.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
       "summary": "You utilize data from multiple available sources to draw conclusions about the quality of your product.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "You are able to leverage different sources of data to answer complex questions about product and user trends.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -441,45 +441,45 @@ export const tracks: Tracks = {
   "COMMUNICATION": {
     "displayName": "Analyze Metric: Risk Communication",
     "category": "B",
-    "description": "Shares the right amount of information with the right people, at the right time, and reacts effectively",
+    "description": "Shares the right amount of information with the right people, at the right time, and reacts effectively.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are able to understand risks and then prioritize user impact in conversations",
+      "summary": "You are able to understand risks and then prioritize user impact in conversations.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You understand the risk and impact of changes to your product/feature and communicate risk(s) to your squad",
+      "summary": "You understand the risk and impact of changes to your product/feature and communicate risk(s) to your squad.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "You identify and communicate high-risk areas for projects and features to help drive strategy and direction.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -513,45 +513,45 @@ export const tracks: Tracks = {
   "CRAFT": {
     "displayName": "Analyze Metric: Deep Dive",
     "category": "B",
-    "description": "Ability to understand the why behind trends and issues.",
+    "description": "Ability to discover and then understand the why behind trends and issues.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning the processes and tools for discovering root causes of issues or trends",
+      "summary": "You are learning the processes and tools for discovering root causes of issues or trends.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You use your investigative skill set to discover and understand the root cause issues and trends",
+      "summary": "You discover and communicate the why and how behind issues and trends.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You break down complex problems and then use that knowledge for creating and communicating next steps",
+      "summary": "Your investigation skills go beyond talking about the what and why; you go a level deeper by using insights to predict and prevent future issues.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -584,45 +584,45 @@ export const tracks: Tracks = {
   "INITIATIVE": {
     "displayName": "Analyze Metric: Connections",
     "category": "B",
-    "description": "Undertanding how all the pieces fit together and how each piece impacts all aspects of a product",
+    "description": "Undertanding how all the pieces fit together and how each piece impacts all aspects of a product.",
     "milestones": [{
       //Milestone 1
       "summary": "You are learning how all of your squads features impact user workflows.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You understand how users and the team will be impacted by various changes and outcomes",
+      "summary": "You understand how users and the team will be impacted by various changes and outcomes.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You help shape how changes and outcomes will fit into the bigger picture and overall success of the product",
+      "summary": "You help shape how changes and outcomes will fit into the bigger picture and overall success of the product.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -656,45 +656,45 @@ export const tracks: Tracks = {
   "CAREER_DEVELOPMENT": {
     "displayName": "Drive Metric: Improvement",
     "category": "C",
-    "description": "Focus on driving improvement for self, squad, chapter, and Hudl",
+    "description": "Focus on driving improvement for self, squad, chapter, and Hudl.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning how your role delivers value",
+      "summary": "You are learning how your role delivers value.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You seek to increase the amount of value your role delivers",
+      "summary": "You seek to increase the amount of value your role delivers.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
       "summary": "You are evolving the way your role delivers value and mitigates risk.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -728,45 +728,45 @@ export const tracks: Tracks = {
   "ORG_DESIGN": {
     "displayName": "Drive Metric: Challenge",
     "category": "C",
-    "description": "Challenging the status quo with the end goal of improvement",
+    "description": "Challenging the status quo with the end goal of improvement.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are having conversations that help yourself and others understand and issues and the status of quality",
+      "summary": "You are having conversations that help yourself and others understand and issues and the status of quality.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You challenge squad quality while focusing on prevention and efficiency",
+      "summary": "You challenge squad quality while focusing on prevention and efficiency.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You are strategically challenging process and direction",
+      "summary": "You are strategically challenging process and direction.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -798,47 +798,47 @@ export const tracks: Tracks = {
   },
 
   "WELLBEING": {
-    "displayName": "Drive Metric: Change",
+    "displayName": "Drive Metric: Value",
     "category": "C",
-    "description": "Your outcomes drive yourself, squad, chapter, and Hudl forward",
+    "description": "Your outcomes drive yourself, squad, chapter, and Hudl forward.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are leveling up personally and starting to drive change on the squad level",
+      "summary": "You are leveling up personally and starting to drive change on the squad level.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You are implementing change on the squad level and you are starting to have an impact outside of the squad",
+      "summary": "You are implementing change on the squad level and you are starting to have an impact outside of the squad.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You are driving change outside of the squad and your impact is being felt on the chapter level",
+      "summary": "You are driving change outside of the squad and your impact is being felt on the chapter level.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
@@ -875,42 +875,42 @@ export const tracks: Tracks = {
     "description": "Inspires a better understanding and adoption of quality best practices.",
     "milestones": [{
       //Milestone 1
-      "summary": "You are learning quality best practices and are starting to share that information with your squad",
+      "summary": "You are learning quality best practices and are starting to share that information with your squad.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 2
-      "summary": "You are leveling up and implementing quality best practices on the squad level",
+      "summary": "You are leveling up others and implementing quality best practices on the squad level.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 3
-      "summary": "You are coaching and changing others mindsets around quality outside of the squad",
+      "summary": "You are coaching and changing others mindsets around quality outside of the squad.",
       "signals": [
-        "Example Behavior",
-        "Example Behavior",
-        "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
+        // "Example Behavior",
       ],
       "examples": [
-        "Example Task",
-        "Example Task",
-        "Example Task",
+        // "Example Task",
+        // "Example Task",
+        // "Example Task",
       ],
     }, {
       //Milestone 4
