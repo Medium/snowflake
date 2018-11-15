@@ -173,7 +173,7 @@ export const tracks: Tracks = {
         examples: [
           "Implemented new Houston confirmation banner in the Monoliph",
           "Hooked up the action to dismiss a card from the dashboard",
-          "Reskinned customer list using existing customer badge"
+          "Reskinned customer list using the existing customer badge"
         ]
       },
       {
@@ -184,9 +184,9 @@ export const tracks: Tracks = {
           "Prototypes simple new features quickly"
         ],
         examples: [
-          "Built credit card input component",
-          "Created shared datepicker template in Houston",
-          "Built modal system"
+          "Built dropdown component in Houston",
+          "Rewrote Houston next-stepper to use multiple transclusion rather than binding",
+          "Refactored an existing page to use Houston"
         ]
       },
       {
@@ -198,7 +198,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Researched utility of HTTP/2 for Vend",
-          "Designed and implemented Add/Edit Product screen"
+          "Designed and implemented Add/Edit Product screen",
+          "Created shared datepicker component in Houston"
         ]
       },
       {
