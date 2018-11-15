@@ -742,6 +742,7 @@ export const tracks: Tracks = {
     displayName: "Org design",
     category: "C",
     summary: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    description: "Too much structure and process can slow a team down, but too little can also be debilitating. As an organisation, we need to be continually focusing on how the team is executing, finding ways to do things faster and better, and ensuring that the appropriate systems are in place to foster a diverse and inclusive team.",
     milestones: [
       {
         summary: "Respects and participates in processes, giving meaningful feedback to help the organization improve",
