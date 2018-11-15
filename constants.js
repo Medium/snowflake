@@ -805,7 +805,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Lead efforts to increase investment in Engineering",
-          "Directed resources to meaningfully improve diversity at all levels",
+          "Created a structure to allow engineers to work efficiently from outside of New Zealand",
           "Built a salary framework used across Vend"
         ]
       }
