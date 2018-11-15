@@ -74,6 +74,7 @@ export const maxLevel = 135;
 export type Track = {
   displayName: string,
   category: string, // TK categoryId type?
+  summary: string,
   description: string,
   milestones: {
     summary: string,
@@ -86,7 +87,7 @@ export const tracks: Tracks = {
   MOBILE: {
     displayName: "Mobile",
     category: "A",
-    description: "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    summary: "Develops expertise in native mobile platform engineering, such as iOS or Android",
     milestones: [
       {
         summary: "Works effectively within established iOS or Android architectures, following current best practices",
@@ -159,7 +160,8 @@ export const tracks: Tracks = {
   WEB_CLIENT: {
     displayName: "Web client",
     category: "A",
-    description: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    summary: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    description: "",
     milestones: [
       {
         summary: "Works effectively within established web client architectures, following current best practices",
@@ -231,7 +233,7 @@ export const tracks: Tracks = {
   "FOUNDATIONS (PLATFORM)": {
     displayName: "Platform & Data",
     category: "A",
-    description: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+    summary: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     milestones: [
       {
         summary: "Works effectively within established structures, following current best practices",
@@ -302,7 +304,7 @@ export const tracks: Tracks = {
   "SERVERS & API": {
     displayName: "Services & APIs",
     category: "A",
-    description: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",
+    summary: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",
     milestones: [
       {
         summary: "Works effectively within established server side frameworks, following current best practices",
@@ -375,7 +377,7 @@ export const tracks: Tracks = {
   PROJECT_MANAGEMENT: {
     displayName: "Project management",
     category: "B",
-    description: "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+    summary: "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     milestones: [
       {
         summary: "Effectively delivers individual tasks",
@@ -448,7 +450,7 @@ export const tracks: Tracks = {
   COMMUNICATION: {
     displayName: "Communication",
     category: "B",
-    description: "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    summary: "Shares the right amount of information with the right people, at the right time, and listens effectively",
     milestones: [
       {
         summary: "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
@@ -521,7 +523,7 @@ export const tracks: Tracks = {
   CRAFT: {
     displayName: "Craft",
     category: "B",
-    description: "Embodies and promotes practices to ensure excellent quality products and services",
+    summary: "Embodies and promotes practices to ensure excellent quality products and services",
     milestones: [
       {
         summary: "Delivers consistently good quality work",
@@ -593,7 +595,7 @@ export const tracks: Tracks = {
   INITIATIVE: {
     displayName: "Initiative",
     category: "B",
-    description: "Challenges the status quo and effects positive organizational change outside of mandated work",
+    summary: "Challenges the status quo and effects positive organizational change outside of mandated work",
     milestones: [
       {
         summary: "Identifies opportunities for organizational change or product improvements",
@@ -666,7 +668,7 @@ export const tracks: Tracks = {
   CAREER_DEVELOPMENT: {
     displayName: "Career development",
     category: "C",
-    description: "Provides strategic support to engineers to help them build the career they want",
+    summary: "Provides strategic support to engineers to help them build the career they want",
     milestones: [
       {
         summary: "Engages in the Engineering career development process",
@@ -739,7 +741,7 @@ export const tracks: Tracks = {
   ORG_DESIGN: {
     displayName: "Org design",
     category: "C",
-    description: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    summary: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     milestones: [
       {
         summary: "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -812,7 +814,7 @@ export const tracks: Tracks = {
   WELLBEING: {
     displayName: "Wellbeing",
     category: "C",
-    description: "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+    summary: "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     milestones: [
       {
         summary: "Uses tools and processes to help ensure colleagues are healthy and happy",
@@ -885,7 +887,7 @@ export const tracks: Tracks = {
   ACCOMPLISHMENT: {
     displayName: "Accomplishment",
     category: "C",
-    description: "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
+    summary: "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     milestones: [
       {
         summary: "Helps individuals identify blockers and helps them identify next steps for resolution",
@@ -958,7 +960,7 @@ export const tracks: Tracks = {
   MENTORSHIP: {
     displayName: "Mentorship",
     category: "D",
-    description: "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    summary: "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     milestones: [
       {
         summary: "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
@@ -1031,7 +1033,7 @@ export const tracks: Tracks = {
   EVANGELISM: {
     displayName: "Evangelism",
     category: "D",
-    description: "Promotes Vend to the outside world and establishes it as an attractive and thoughtful place to work",
+    summary: "Promotes Vend to the outside world and establishes it as an attractive and thoughtful place to work",
     milestones: [
       {
         summary: "Represents Vend well externally, and influences individuals positively",
@@ -1104,7 +1106,7 @@ export const tracks: Tracks = {
   RECRUITING: {
     displayName: "Recruiting",
     category: "D",
-    description: "Strengthens Vend's team by bringing in excellent staff members",
+    summary: "Strengthens Vend's team by bringing in excellent staff members",
     milestones: [
       {
         summary: "Brings new candidates into the pipeline and/or understands how to evaluate candidates at Vend",
@@ -1177,7 +1179,7 @@ export const tracks: Tracks = {
   COMMUNITY: {
     displayName: "Community",
     category: "D",
-    description: "Builds community internally, gives of themself to the team, and champions and extols company values",
+    summary: "Builds community internally, gives of themself to the team, and champions and extols company values",
     milestones: [
       {
         summary: "Is available and present on current teams, and works to contribute positively to company culture",

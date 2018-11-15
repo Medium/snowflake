@@ -29,9 +29,8 @@ class Track extends React.Component<Props> {
           h2 {
             margin: 0 0 10px 0;
           }
-          p.track-description {
+          .track-description {
             margin-top: 0;
-            padding-bottom: 20px;
             border-bottom: 2px solid #ccc;
           }
           table {
@@ -52,7 +51,10 @@ class Track extends React.Component<Props> {
           }
         `}</style>
         <h2>{track.displayName}</h2>
-        <p className="track-description">{track.description}</p>
+        <div className="track-description">
+          <p><em>{track.summary}</em></p>
+          {track.description ? <p>{track.description}</p> : null}
+        </div>
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
