@@ -161,7 +161,7 @@ export const tracks: Tracks = {
     displayName: "Web client",
     category: "A",
     summary: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
-    description: "We need to provide our users with a modern, responsive web product that renders well across all major browsers. We need engineers with expertise in web client technologies to help us continue to build industry-leading technology like our editor and take advantage of new opportunities like AMP.",
+    description: "",
     milestones: [
       {
         summary: "Works effectively within established web client architectures, following current best practices",
