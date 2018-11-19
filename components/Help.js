@@ -31,7 +31,7 @@ class Help extends React.Component {
 
   render() {
     return (
-      <div style={{width: '110px', fill: 'grey'}}>
+      <div style={{width: '50px', fill: 'grey'}}>
         <button
           onClick={() => this.showModal()}
           style={{
@@ -39,7 +39,7 @@ class Help extends React.Component {
             width: '100%',
             border: 'none',
             padding: 0,
-            background: 'none',
+            background: 'none'
           }}
         >
         <svg viewBox="0 0 24 24">

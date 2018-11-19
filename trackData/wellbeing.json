@@ -1,0 +1,66 @@
+{
+    "displayName": "Wellbeing",
+    "category": "C",
+    "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+    "milestones": [{
+      "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
+      "signals": [
+        "Keeps confidences unless legally or morally obliged to do otherwise",
+        "Applies the reasonable person principle to others",
+        "Avoids blame and focuses on positive change"
+      ],
+      "examples": [
+        "Ensured group members were taking enough vacation",
+        "Put themself in another's shoes to understand their perspective",
+        "Checked in with colleague showing signs of burnout"
+      ]
+    }, {
+      "summary": "Creates a positive, supportive, engaging team environment for group members",
+      "signals": [
+        "Sheds light on other experiences to build empathy and compassion",
+        "Validates ongoing work and sustains motivation",
+        "Proposes solutions when teams get bogged down or lose momentum"
+      ],
+      "examples": [
+        "Coordinated a small celebration for a project launch",
+        "Connected tedious A|B testing project with overall company goals",
+        "Noted a team without a recent win and suggested some easy quick wins"
+      ]
+    }, {
+      "summary": "Manages expectations across peers, leads in the org, promotes calm, and prevents consensus building",
+      "signals": [
+        "Trains group members to separate stimulus from response",
+        "Maintains a pulse on individual and team morale",
+        "Helps group members approach problems with curiosity"
+      ],
+      "examples": [
+        "Completed training on transference and counter transference",
+        "Completed training on compromise and negotiation techniques",
+        "Reframed a problem as a challenge, instead of a barrier, when appropriate"
+      ]
+    }, {
+      "summary": "Advocates for the needs of teams and group members, and proactively works to calm the organization",
+      "signals": [
+        "Ensures team environments are safe and inclusive, proactively",
+        "Grounds group member anxieties in reality",
+        "Tracks team retention actively and proposes solutions to strengthen it"
+      ],
+      "examples": [
+        "Relieved org tension around product direction by providing extra context",
+        "Encouraged group members to focus on what they can control",
+        "Guided people through complex organizational change"
+      ]
+    }, {
+      "summary": "Manages narratives, channels negativity into inspiration and motivation, and protects the entire team",
+      "signals": [
+        "Recognizes and points out narratives when appropriate",
+        "Works to reshape narratives from victimization to ownership",
+        "Increases the psychological safety of the entire team"
+      ],
+      "examples": [
+        "Converted group member from a problem haver to a problem solver",
+        "Challenged false narrative and redirected to compassion and empathy",
+        "Cultivated and championed a culture of empathy within the entire team"
+      ]
+    }]
+  }
