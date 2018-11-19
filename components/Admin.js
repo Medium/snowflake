@@ -142,9 +142,9 @@ class Admin extends React.Component<Props> {
     render() {
         
         var sideBarView;
-        if (this.hasAdminRights()) {
+        //if (this.hasAdminRights()) {
             sideBarView = <ul className="sidebar"> <div className="sidebar-header">SAVED USERS</div>{this.renderList()}</ul>;
-        }
+        //}
         return (
             <div>
             <style>

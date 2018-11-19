@@ -1,0 +1,141 @@
+{
+    "displayName": "Backend",
+    "category": "A",
+    "description": "Develops expertise in server side engineering",
+    "milestones": [{
+      "summary": "Works effectively within established server side frameworks, following current best practices",
+      "signals": [
+        "Nice storytelling, code and commits are self explainable, facilitates code reviews by others",
+        "Writes code with quality and automated tests",
+        "Understands test types and knows when to write them",
+        "Can write and understands SQL queries and understands the basics of relational databases",
+        "Adds simple features to existing products",
+        "Understands the MVC design pattern",
+        "Is able to use debug tools and knows how to find the root cause of bugs",
+        "Understands how version control systems work",
+        "Knows how to write Views (from MVC) in template languages",
+        "Writes code documentation when applicable",
+        "Has basic knowledge of most used frameworks and libraries",
+        "Fixes simple bugs that don't require major refactor in the code",
+        "Understands what are the most common Design Patterns",
+        "Undertands the most common Data Structures, Algorithms, Programming Paradigms, etc."
+      ],
+      "examples": [
+        "Write a unit or integration test, using JUnit, Mockito and Arquilian",
+        "Write bug fixes with tests covering them, avoiding regressions",
+        "Send a pull request that is easy to review",
+        "Fix a custom SQL bug",
+        "Add a new MVC command to an existing portlet",
+        "Debugs Java code in order to find what's causing NullPointerExceptions",
+        "Analyze HTTP requests and responses bodies in order to debug code and understand its root cause",
+        "Fix a JSPs tags and its parameters",
+        "Make a change to an existing Service Builder entity",
+        "Use git's basic commands",
+        "Add a delete button to an entity row in a JSP",
+        "Create a JSP to display a list of Service Builder entities",
+        "Write a query to fetch entities from database",
+        "Respect source formatting rules",
+        "Create a JSP or Soy Template from scratch",
+        "Understand OSGi's lifecycle",
+        "Uses Gogo Shell basic commands",
+        "Uses Mockito in unit tests",
+        "Understand basic Spark transformations and actions (map, flatmap, reduce, collect, count, etc)",
+        "Understand the difference between lists, hashtables, stacks, queues, trees and when to use them",
+        "Use composition or inheritance when applicable"
+      ]
+    },
+    {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Effectively reviews others' code",
+        "Is concious about how major changes impact in external dependencies and upgrade processes",
+        "Identifies improvements in an existing architecture and makes changes to them",
+        "Implements a new instance of an architectural interface",
+        "Develops new features from scratch to an existing product",
+        "Reuses code and extracts reusable code when needed",
+        "Estimates stories with some accuracy and knows how to break them in small subtasks",
+        "Notices when changes may have a high performance impact",
+        "Identifies what are the code patterns used in a project",
+        "Models data entities",
+        "Fixes complex bugs that affect many parts of the code",
+        "Applies Design Patterns in an optimal way",
+        "Writes code with high cohesion and low coupling"
+      ],
+      "examples": [
+        "Write an UpgradeProcess instance",
+        "Create a new Rule for the Forms portlet",
+        "Implement a new AssetEntryImpl",
+        "Implement a new Spark Job",
+        "Create a new CRUD portlet",
+        "Implement a new custom Finder",
+        "Implement a portlet DataHandler",
+        "Fix a bug that changes many code layers (JSP, *ServiceImpl, *LocalServiceImpl, *FinderImpl, etc)",
+        "Reviews and changes pull requests that are not following the project code patterns and source formatting rules",
+        "Create a new entity from scratch in Service Builder",
+        "Creates a Builder or a Factory when it makes sense"
+      ]
+    },
+    {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Develops integrations with third-party systems or APIs that can be consumed by them",
+        "Suggests new technologies and good practices that can be used by several projects",
+        "Suggests changes to frameworks with minimal impact",
+        "Handles escalated issues from other teams",
+        "Implements complex features in an optimal way",
+        "Comes up with technical solutions for complex problems and bugs",
+        "Understands and fixes performance and memory leak issues and knows how to use profiling tools",
+        "Helps defining new product's architecture",
+        "Detects common problems to several projects and can fix them with a single solution",
+        "Understands project details enough to discuss with external stakeholders about their needs",
+        "Estabilishes best practices and patterns to be used by a project"
+      ],
+      "examples": [
+        "Implement a connector with Salesforce for the Commerce project",
+        "Create the architecture of Forms rules",
+        "Help defining the Analytics' architecture",
+        "Choose to use Scala in all Spark Jobs because it has better performance than Java",
+        "Drives the Reactive Programming adoption to many projects",
+        "Create APIO, a new REST framework that can be used by all projects",
+        "Is the front facing person for Support and Global Services",
+        "Fix a bug related to Staging that requires many lines of changes",
+        "Use JProfiling and thread dump toold to find memory leaks and performance bottlenecks",
+        "Uses Gogo Shell to track why a Component or Service is not active",
+        "Add support to translations in Forms that requires a major refactoring",
+        "Implement a new Servlet Filter",
+        "Create the Analytics SDK",
+        "Meet with a client to discuss the technical solution for a potential sponsored development contract",
+        "Propose a new patttern to extract logic from several JSPs and convert their logic to Java Beans",
+        "Use Protobuffer to mitigate performance issues"
+      ]
+    },
+    {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Researches and chooses the technology stack and frameworks to be used by projects",
+        "Updates an existing product with new architectures and patterns",
+        "Translates business needs to technical solutions",
+        "Is a reference to the technical community and industry",
+        "Guides and changes the direction of the Engineering department",
+        "Conceives and designs new products",
+        "Globally coordinates adoption on new patterns and technologies",
+        "Last resource for architectural problems escalation",
+        "Decides on deprecation of products or libraries",
+        "Evaluates the technical feasibility of new products",
+        "Defines the non-functional requirements for products (scalability, security, maintances and performance requirements)",
+        "Defines how applications will integrate with others",
+        "Develops new frameworks or libraries that can be used by external developers"
+      ],
+      "examples": [
+        "Decide to use OSGi in all portal projects",
+        "Participate o JSRs specification committees ",
+        "Give a presentation at JavaOne",
+        "Decide to user Hibernate, Spring and Tomcat for a given project",
+        "Help the product manager to find a technical solutions for a new product",
+        "Partipate on the definition of the Portlet 3.0 specification",
+        "Envisions and creates the WeDeploy product from market needs, creating a new revenue stream for company",
+        "Define the protocol to be used by Experience Cloud to integrate with Customer Service",
+        "Create the jodd open-source library"
+      ]
+    }]
+  }

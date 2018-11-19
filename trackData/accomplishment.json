@@ -1,0 +1,66 @@
+{
+    "displayName": "Accomplishment",
+    "category": "C",
+    "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
+    "milestones": [{
+      "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
+      "signals": [
+        "Notices when someone is stuck and reaches out",
+        "Helps others break down problems into feasible, tangible next steps",
+        "Talks through problems non-judgmentally"
+      ],
+      "examples": [
+        "Completed training on diagnosing problems",
+        "Unblocked a group member",
+        "Reinforces and affirms positive feedback for good work"
+      ]
+    }, {
+      "summary": "Helps individuals resolve difficult performance issues, with insight, compassion, and skill",
+      "signals": [
+        "Gathers context outside the immediate problem",
+        "Recognizes issues within local environment and suggests change",
+        "Works to encourage ownership of actions and responsibilities"
+      ],
+      "examples": [
+        "Completed training on decision making",
+        "Convinced a group member to solve a problem directly, rather than doing it for them",
+        "Gave honest feedback about poor performance, with compassion"
+      ]
+    }, {
+      "summary": "Intervenes in long-standing performance issues with targeted behavior change or performance plans",
+      "signals": [
+        "Aggregates signals of poor performance and creates process for improvement",
+        "Investigates motivation and externalities for consistent poor performance",
+        "Puts together comprehensive, achievable performance plans"
+      ],
+      "examples": [
+        "Worked with group member to address persistent communication failures",
+        "Arranged a transfer to another team, resulting in improved performance",
+        "Managed group member closely to maximise chances of PIP success"
+      ]
+    }, {
+      "summary": "Mediates escalated situations, empowers underperforming teams, and resolves conflict",
+      "signals": [
+        "Recognizes heightened situations and toxic or aggressive interactions",
+        "Inserts themself into conflict where appropriate to calm and mediate",
+        "Encourages open dialog and builds trust between parties in conflict"
+      ],
+      "examples": [
+        "Empowered a team to drive forward amidst uncertainty",
+        "Protected team from externalities so they could focus on goals",
+        "Mediated sit-down between team members to address tension"
+      ]
+    }, {
+      "summary": "Resolves complex organizational dysfunction, or persistent conflict at senior levels",
+      "signals": [
+        "Takes control of dysfunctional teams to organise chaos",
+        "Repairs broken team dynamics and builds harmony",
+        "Presides over a well-oiled team of teams"
+      ],
+      "examples": [
+        "Turned around the performance of a problematic team",
+        "De-escalated serious tensions between teams",
+        "Rebuilt trust between senior team leads"
+      ]
+    }]
+  }

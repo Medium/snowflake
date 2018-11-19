@@ -1,0 +1,66 @@
+{
+    "displayName": "Craft",
+    "category": "B",
+    "description": "Embodies and promotes practices to ensure excellent quality products and services",
+    "milestones": [{
+      "summary": "Delivers consistently good quality work",
+      "signals": [
+        "Tests new code thoroughly, both locally, and in production once shipped",
+        "Writes tests for every new feature and bug fix",
+        "Writes clear comments and documentation"
+      ],
+      "examples": [
+        "Caught a bug on Hatch before it went live",
+        "Landed non-trivial PR with no caretaker comments",
+        "Wrote hermetic tests for the happy and sad cases"
+      ]
+    }, {
+      "summary": "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
+      "signals": [
+        "Refactors existing code to make it more testable",
+        "Adds tests for uncovered areas",
+        "Deletes unnecessary code and deprecates proactively when safe to do so"
+      ],
+      "examples": [
+        "Requested tests for a PR when acting as reviewer",
+        "Reduced the number of zelda fitzgerald exceptions",
+        "Fixed a TODO for someone else in the codebase"
+      ]
+    }, {
+      "summary": "Improves others' ability to deliver great quality work",
+      "signals": [
+        "Implements systems that enable better testing",
+        "Gives thoughtful code reviews as a domain expert",
+        "Adds tooling to improve code quality"
+      ],
+      "examples": [
+        "Improved PRB to run the same volume of tests faster",
+        "Simplified hermetic test data modification",
+        "Created fixture system for visual quality"
+      ]
+    }, {
+      "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
+      "signals": [
+        "Builds systems so as to eliminate entire classes of programmer error",
+        "Focuses the team on quality with regular reminders",
+        "Coordinates Watch priorities and projects"
+      ],
+      "examples": [
+        "Added code coverage reporting to iOS CI pipeline",
+        "Iterated repeatedly to develop Medium's underlines solution",
+        "Defined and oversaw plan for closing Heartbleed vulnerability"
+      ]
+    }, {
+      "summary": "Enables and encourages the entire organization to make quality a central part of the development process",
+      "signals": [
+        "Defines policies for the engineering org that encourage quality work",
+        "Identifies and eliminates single points of failure throughout the organization",
+        "Secures time and resources from execs to support great quality"
+      ],
+      "examples": [
+        "Negotiated resources for Fix-It week with exec team",
+        "Instituted and ensured success of a 20% time policy",
+        "Started The Watch"
+      ]
+    }]
+  }

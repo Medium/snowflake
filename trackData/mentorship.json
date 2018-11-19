@@ -1,0 +1,66 @@
+{
+    "displayName": "Mentorship",
+    "category": "D",
+    "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    "milestones": [{
+      "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
+      "signals": [
+        "Makes themself available for informal support and advice",
+        "Acts as sounding board for peers and more junior members",
+        "Provides sound advice when asked"
+      ],
+      "examples": [
+        "Acted as an onboarding buddy",
+        "Paired with an engineer to help them with an unfamiliar area",
+        "Helped a colleague understand their feelings"
+      ]
+    }, {
+      "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
+      "signals": [
+        "Takes time to explain concepts and best practices",
+        "Asks questions to illuminate concepts, rather than stating them",
+        "Allows others to lead efforts when it will help their development"
+      ],
+      "examples": [
+        "Shared interesting article with a team member to help with their growth",
+        "Offered unprompted feedback to help growth, with empathy",
+        "Lead from behind to support someone new to a leadership role"
+      ]
+    }, {
+      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "signals": [
+        "Avoids siloing information when it can be usefully shared with others",
+        "Works to increase the bus factor of systems",
+        "Finds tools that work best for a team member's personality"
+      ],
+      "examples": [
+        "Gave a brown bag presentation on payments",
+        "Wrote Hatch post on avoiding RDS backfill issues",
+        "Wrote Medium-U content module"
+      ]
+    }, {
+      "summary": "Encourages people to mentor each other, and creates ways for them to do so",
+      "signals": [
+        "Defines an entire curriculum for a discipline",
+        "Draws positive attention to well-modeled mentor and teaching behaviours",
+        "Creates brown bag series and lines up speakers"
+      ],
+      "examples": [
+        "Created and lead Medium's Women in Eng group",
+        "Organized an Eng All Hands with an outside speaker",
+        "Designed and taught web client guild curriculum"
+      ]
+    }, {
+      "summary": "Instills and promotes a culture of learning and development within the team",
+      "signals": [
+        "Sets incentive structures to recognise and reward mentorship",
+        "Empowers team members to develop themselves",
+        "Role models productive and healthy mentor relationships"
+      ],
+      "examples": [
+        "Instituted the professional education budget for engineers",
+        "Mentored mentors",
+        "Started the eng advisor program and lined up external mentors"
+      ]
+    }]
+  }

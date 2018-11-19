@@ -1,0 +1,66 @@
+{
+    "displayName": "Org design",
+    "category": "C",
+    "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    "milestones": [{
+      "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
+      "signals": [
+        "Reflects on meetings that leave them inspired or frustrated",
+        "Teaches others about existing processes",
+        "Actively participates and makes contributions within organizational processes"
+      ],
+      "examples": [
+        "Facilitated effective tactical meeting with empathy",
+        "Explained tactical meeting format to a new hire",
+        "Provided feedback on sprint planning meeting"
+      ]
+    }, {
+      "summary": "Identifies opportunities to improve existing processes and makes changes that positively affect the local team",
+      "signals": [
+        "Defines meeting structure and cadence that meets team needs",
+        "Engages in organizational systems thinking",
+        "Advocates for improved diversity and inclusion, and proposes ideas to help"
+      ],
+      "examples": [
+        "Defined Frankenmeeting structure for small team",
+        "Improved Watch on-call rotation scheduling",
+        "Defined standard channels for inter-team communication"
+      ]
+    }, {
+      "summary": "Develops processes to solve ongoing organizational problems",
+      "signals": [
+        "Creates programs that meaningfully improve organizational diversity",
+        "Solves long-standing organizational problems",
+        "Reallocates resources to meet organizational needs"
+      ],
+      "examples": [
+        "Developed baseline team templates for consistency",
+        "Created bug-rotation program to address ongoing quality issues",
+        "Defined Guilds manifesto and charter"
+      ]
+    }, {
+      "summary": "Thinks deeply about organizational issues and identifies hidden dynamics that contribute to them",
+      "signals": [
+        "Evaluates incentive structures and their effect on execution",
+        "Analyzes existing processes for bias and shortfall",
+        "Ties abstract concerns to concrete organizational actions or norms"
+      ],
+      "examples": [
+        "Connected mobile recruiting difficulties to focus on excellence",
+        "Raised leadership level change discrepancies",
+        "Analyzed the hiring rubric for false negative potential"
+      ]
+    }, {
+      "summary": "Leads initiatives to address issues stemming from hidden dynamics and company norms",
+      "signals": [
+        "Builds programs to train leadership in desired skills",
+        "Creates new structures that provide unique growth opportunities",
+        "Leads planning and communication for reorgs"
+      ],
+      "examples": [
+        "Lead efforts to increase number of mobile engineers",
+        "Directed resources to meaningfully improve diversity at all levels",
+        "Built the growth framework rubric"
+      ]
+    }]
+  }

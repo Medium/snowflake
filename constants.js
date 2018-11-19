@@ -1,6 +1,22 @@
 // @flow
 import * as d3 from 'd3'
-import trackData from './data.json'
+import  WEB_CLIENT from './trackData/frontend.json'
+import MEDIAWIKI from './trackData/frameworks.json'
+import SERVERS from './trackData/backend.json'
+import FOUNDATIONS from './trackData/foundations.json'
+import PROJECT_MANAGEMENT from './trackData/projectManagement.json'
+import COMMUNICATION from './trackData/communication.json'
+import CRAFT from './trackData/craft.json'
+import INITIATIVE from './trackData/initiative.json'
+import CAREER_DEVELOPMENT from './trackData/careerDevelopment.json'
+import ORG_DESIGN from './trackData/orgDesign.json'
+import WELLBEING from './trackData/wellbeing.json'
+import ACCOMPLISHMENT from './trackData/accomplishment.json'
+import MENTORSHIP from './trackData/mentorship.json'
+import EVANGELISM from './trackData/evangelism.json'
+import RECRUITING from './trackData/recruiting.json'
+import COMMUNITY from './trackData/community.json'
+
 export type TrackId = 'MEDIAWIKI' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
@@ -96,9 +112,16 @@ type Tracks = {|
   'COMMUNITY': Track
 |}
 
-export const tracks: Tracks = trackData;
+export const tracks: Tracks = {
+                                MEDIAWIKI, WEB_CLIENT, SERVERS, FOUNDATIONS, 
+                                PROJECT_MANAGEMENT, COMMUNICATION, CRAFT, INITIATIVE, 
+                                CAREER_DEVELOPMENT, ORG_DESIGN, WELLBEING, ACCOMPLISHMENT,
+                                MENTORSHIP, EVANGELISM, RECRUITING, COMMUNITY
+                              };
 
+ 
 export const trackIds: TrackId[] = Object.keys(tracks)
+
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)

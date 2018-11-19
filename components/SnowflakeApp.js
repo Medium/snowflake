@@ -4,11 +4,11 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import Admin from '../components/Admin';
+import Header from "./Header";
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -165,26 +165,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         }
         
         `}</style>
-        <div style={{margin: '0 auto 0', width: 120}}>
-            <Wordmark />
-        </div>
 
-        <form>
-
-        <input
-          type="text"
-          className="name-input center"
-          value={this.state.name}
-          onChange={e => this.setState({name: e.target.value})}
-          placeholder="Enter Engineer's Name Here"
-          />
-          {/* <TitleSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            currentTitle={this.state.title}
-            setTitleFn={(title) => this.setTitle(title)} /> */
-          }
-
-        </form>
+        <Header
+          name={this.state.name}
+          setNameFn={(name) => this.setState({name})}
+        />
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
