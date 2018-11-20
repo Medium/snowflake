@@ -3,26 +3,19 @@
     "category": "A",
     "description": "Executes assigned responsibilities in an effective and timely manner. Finds balance between what is ideal and what is optimal under present constraints.",
     "milestones": [{
-        "summary": "Works effectively within established iOS, Android or Hybrid architectures, adding minor improvements and following current best practices.",
+        "summary": "Works effectively within established domain specific libraries and frameworks, adding minor improvements and following current best practices.",
         "signals": [
-            "Understands the basics of UI components and their hierarchy for at least one platform, efficiently distinguishes which UI component should be used at the right time",
-            "Delivers simple features that don't require major changes in the UI and app flow",
-            "Understands the basics of UI thread and avoids blocking operations",
-            "Reuses existing UI components appropriately",
+            "Understands the basics of several components and their hierarchy for at least one framework, efficiently distinguishes which library should be used at the right time",
+            "Reuses existing libs/components appropriately",
             "Follows project architecture and doesn't reinvent the wheel",
             "Follows projects best practices",
-            "Tests code before sending pull requests and avoids breaking the CI unit tests",
             "Understands algorithms and data structure concepts"
         ],
         "examples": [
-            "Creates simple new Activities on Android",
-            "Adds a field to a form in the UI",
-            "Changes the color of a button",
+            "Uses a library/framework at the right time",
             "Knows and uses HTTP clients framemworks",
-            "Replicates the like UI component in other areas of the app",
             "Follows source formatting patterns",
-            "Follows project structure organization",
-            "Makes HTTP requests to web services in an asynchronous way"
+            "Follows project structure organization"
         ]
     },
     {
@@ -64,6 +57,25 @@
             "Creates the Screens project"
         ]
     },
+    {
+        "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team.",
+        "signals": [
+            "Defines long-term goals and ensures active projects are in service of them",
+            "Designs and builds innovative, industry-leading UI interactions that can used by projects outside the compahy",
+            "Invents new techniques to responsibly stretch limits of a mobile platform",
+            "Be a committer to a large mobile platform, language or library",
+            "Participates on standards definition committees ",
+            "Is a technical reference to the open source community"
+        ],
+        "examples": [
+            "Defined and drove complete migration plan to Swift or Kotlin",
+            "Implemented Android recycler views before platform support existed",
+            "Sends a pull request to Retrofit",
+            "Is a member of Kotlin Language Committee",
+            "Has many points in Stackoverflow",
+            "Is the maintainer of a GitHub project that has hundreds of stars"
+        ]
+        },
     {
         "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team.",
         "signals": [
