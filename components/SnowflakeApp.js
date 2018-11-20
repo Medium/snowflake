@@ -1,6 +1,7 @@
 // @flow
 
 import TrackSelector from '../components/TrackSelector'
+import TitleSelector from '../components/TitleSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
@@ -136,7 +137,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             font-family: Helvetica;
           }
           main {
-            width: 79%;
+            width: 90%;
             margin: 0 auto;
             background-color: lavender;
           }
@@ -170,13 +171,17 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           name={this.state.name}
           setNameFn={(name) => this.setState({name})}
         />
+        {/* <TitleSelector
+            milestoneByTrack={this.state.milestoneByTrack}
+            currentTitle={this.state.title}
+            setTitleFn={(title) => this.setTitle(title)} />  */}
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
 
         <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
+          <div style={{flex: 2}}>
 
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
@@ -188,11 +193,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
        </div>
+       <div style={{flex: 2}}>
+
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
 
+       </div>
 
        </div>
         <div className="footer" style={{display: 'flex', paddingBottom: '20px'}}>

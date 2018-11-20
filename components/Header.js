@@ -11,7 +11,7 @@ type Props = {
 class Header extends React.PureComponent<Props> {
   render() {
     return (
-      <div style={{display: 'flex', 'justify-content': 'space-between'}}>
+      <div style={{display: 'flex', 'justify-content': 'space-between', 'padding-right': '10%'}}>
         <div style={{width: 120}}>
           <div className="aui">
             <img width="110px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Wikimedia_Deutschland-Logo.svg/512px-Wikimedia_Deutschland-Logo.svg.png"/>
@@ -37,12 +37,6 @@ class Header extends React.PureComponent<Props> {
               placeholder="Jane Doe"
             />
           </label>
-          {/* <TitleSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            currentTitle={this.state.title}
-            setTitleFn={(title) => this.setTitle(title)} /> */
-          }
-
         </form>
 
         <Help />

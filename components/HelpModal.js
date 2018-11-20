@@ -21,7 +21,7 @@ class HelpModal extends React.Component {
         </style>
         <div className="modalBackdrop" >
 
-          <div style={{ margin: 'auto', background: 'white', border: 'purple', width:'900px'}}>
+          <div style={{ margin: 'auto', background: 'white', border: 'purple', width:'900px', 'border-radius': '13px', padding: '21px'}}>
           <button onClick={() => this.props.hideModalFn()} style={{float: 'right', color: 'white', backgroundColor: 'purple'}} class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
           </button>

@@ -114,28 +114,32 @@
       "signals": [
         "Researches and chooses the technology stack and frameworks to be used by projects",
         "Updates an existing product with new architectures and patterns",
-        "Translates business needs to technical solutions",
+        "Delivers complex systems that achieve their goals",
         "Is a reference to the technical community and industry",
         "Guides and changes the direction of the Engineering department",
-        "Conceives and designs new products",
-        "Globally coordinates adoption on new patterns and technologies",
+        "Avoids subtle architectural mistakes when considering new systems",
+        "Makes appropriate buy vs build choices",
         "Last resource for architectural problems escalation",
-        "Decides on deprecation of products or libraries",
+        "Evaluates on deprecation of products or libraries",
         "Evaluates the technical feasibility of new products",
         "Defines the non-functional requirements for products (scalability, security, maintances and performance requirements)",
         "Defines how applications will integrate with others",
         "Develops new frameworks or libraries that can be used by external developers"
       ],
       "examples": [
-        "Decide to use OSGi in all portal projects",
-        "Participate o JSRs specification committees ",
-        "Give a presentation at JavaOne",
-        "Decide to user Hibernate, Spring and Tomcat for a given project",
-        "Help the product manager to find a technical solutions for a new product",
-        "Partipate on the definition of the Portlet 3.0 specification",
-        "Envisions and creates the WeDeploy product from market needs, creating a new revenue stream for company",
-        "Define the protocol to be used by Experience Cloud to integrate with Customer Service",
-        "Create the jodd open-source library"
+        " "
+      ]
+    },
+    {
+      "summary": "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
+      "signals": [
+        "Designs transformational projects of significant complexity and scope",
+        "Makes decisions that have positive, long term, wide ranging consequences",
+        "Identifies and solves systemic problems with current architecture"
+      ],
+      "examples": [
+        "Researched, vetted, and selected the right architecture for Wikibase/Wikidata",
+        "Defined microservices architecture and migration plan"
       ]
     }]
   }
