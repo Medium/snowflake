@@ -456,6 +456,7 @@ export const tracks: Tracks = {
         summary: "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
         signals: [
           "Communicates project status clearly and effectively",
+          "Ensures their tech lead is aware of current blockers",
           "Collaborates with others with empathy",
           "Asks for help at the appropriate juncture"
         ],
@@ -469,7 +470,6 @@ export const tracks: Tracks = {
         summary: "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
         signals: [
           "Practises active listening and suspension of attention",
-          "Ensures stakeholders are aware of current blockers",
           "Chooses the appropriate tools for accurate and timely communication"
         ],
         examples: [
