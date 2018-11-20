@@ -143,7 +143,7 @@ class Admin extends React.Component<Props> {
         
         var sideBarView;
         //if (this.hasAdminRights()) {
-            sideBarView = <ul className="sidebar"> <div className="sidebar-header">SAVED USERS</div>{this.renderList()}</ul>;
+            sideBarView = <ul className="sidebar"> <div className="sidebar-header">SAVED USERS</div>{this.renderList()} <br></br><div className="sidebar-header">ACTIONS<li><div onClick={this.handleClickSave.bind(this)}>Save</div></li><li><div onClick={this.handleClickNew.bind(this)}>Reset</div></li> </div><br></br><br></br><br></br></ul>;
         //}
         return (
             <div>
@@ -156,6 +156,7 @@ class Admin extends React.Component<Props> {
             
             .sidebar {
                 position: fixed;
+                overflow-y: scroll;            
                 right: 0;
                 width: 150px;
                 top: 0;
@@ -238,15 +239,7 @@ class Admin extends React.Component<Props> {
             </style>
             
             {sideBarView}
-            
-            <div className="">
-            <div className="container">
-            <button className="btn btn-primary" onClick={this.handleClickSave.bind(this)}>save snowflake</button>
-            <button className="btn btn-default" onClick={this.handleClickNew.bind(this)}>reset snowflake</button>
-            <div style={{padding:'100px'}}></div>
-            </div>
-            </div>
-            
+                        
             </div>
         );
 

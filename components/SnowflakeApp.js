@@ -171,17 +171,17 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           name={this.state.name}
           setNameFn={(name) => this.setState({name})}
         />
-        {/* <TitleSelector
+        <TitleSelector
             milestoneByTrack={this.state.milestoneByTrack}
             currentTitle={this.state.title}
-            setTitleFn={(title) => this.setTitle(title)} />  */}
+            setTitleFn={(title) => this.setTitle(title)} />
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
 
         <div style={{display: 'flex'}}>
-          <div style={{flex: 2}}>
+          <div style={{flex: 3}}>
 
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
@@ -201,6 +201,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
 
        </div>
+       <div>
+        <Admin />
+       </div>
 
        </div>
         <div className="footer" style={{display: 'flex', paddingBottom: '20px'}}>
@@ -209,8 +212,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             Improvements by <a href="https://software.wikimedia.de" target="_blank">Wikimedia Germnay</a>. 
           </div>
         </div>
-
-        <Admin />
+        <br></br>
+        <br></br>
       </main>
     )
   }
