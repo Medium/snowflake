@@ -208,7 +208,7 @@ class Admin extends React.Component<Props> {
                 position: fixed;
                 left: 0;
                 bottom: 0;
-                padding: 1rem;
+                padding: 0rem;
                 width: 100%;
                 background-color: #fff;
                 box-shadow: 0 0 10px 0px rgba(0, 0, 0, .3);
