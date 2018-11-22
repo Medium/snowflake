@@ -105,7 +105,8 @@ export const tracks: Tracks = {
         summary: "Develops new instances of existing architecture, or minor improvements to existing architecture",
         signals: [
           "Defines new useful and appropriate proto-generated objects",
-          "Migrates code from old patterns to new patterns"
+          "Migrates code from old patterns to new patterns",
+          "Adds simple components to iOS Houston"
         ],
         examples: [
           "Added support for a new type of promotion",
@@ -116,7 +117,8 @@ export const tracks: Tracks = {
         summary: "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
         signals: [
           "Implements complex features with a large product surface area",
-          "Adds support for new iOS features after a major iOS version upgrade"
+          "Adds support for new iOS features after a major iOS version upgrade",
+          "Adds complex components to iOS Houston"
         ],
         examples: [
           "Designed iOS caching strategy for product search",
@@ -132,6 +134,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Upgraded CocoaPods to a new major version",
+          "Changed Register’s Sell Screen architecture to use MVVM",
           "Designed architecture for storing and synchronising sales",
           "Removed all Singletons in iOS app"
         ]
