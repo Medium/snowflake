@@ -49,7 +49,7 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MEDIAWIKI': 0,
+      'FRAMEWORKS': 0,
       'WEB_CLIENT': 0,
       'FOUNDATIONS': 0,
       'SERVERS': 0,
@@ -66,7 +66,7 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MEDIAWIKI'
+    focusedTrackId: 'FRAMEWORKS'
   }
 }
 
@@ -75,7 +75,7 @@ const defaultState = (): SnowflakeAppState => {
     name: '',
     title: 'Junior Software Engineer',
     milestoneByTrack: {
-      'MEDIAWIKI': 0,
+      'FRAMEWORKS': 0,
       'WEB_CLIENT': 0,
       'FOUNDATIONS': 0,
       'SERVERS': 0,
@@ -92,7 +92,7 @@ const defaultState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
-    focusedTrackId: 'MEDIAWIKI'
+    focusedTrackId: 'FRAMEWORKS'
   }
 }
 

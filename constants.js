@@ -1,7 +1,7 @@
 // @flow
 import * as d3 from 'd3'
-import  WEB_CLIENT from './trackData/frontend.json'
-import MEDIAWIKI from './trackData/frameworks.json'
+import WEB_CLIENT from './trackData/frontend.json'
+import FRAMEWORKS from './trackData/frameworks.json'
 import SERVERS from './trackData/backend.json'
 import FOUNDATIONS from './trackData/foundations.json'
 import PROJECT_MANAGEMENT from './trackData/projectManagement.json'
@@ -17,14 +17,14 @@ import EVANGELISM from './trackData/evangelism.json'
 import RECRUITING from './trackData/recruiting.json'
 import COMMUNITY from './trackData/community.json'
 
-export type TrackId = 'MEDIAWIKI' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+export type TrackId = 'FRAMEWORKS' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'MEDIAWIKI': Milestone,
+  'FRAMEWORKS': Milestone,
   'WEB_CLIENT': Milestone,
   'SERVERS': Milestone,
   'FOUNDATIONS': Milestone,
@@ -94,7 +94,7 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MEDIAWIKI': Track,
+  'FRAMEWORKS': Track,
   'WEB_CLIENT': Track,
   'SERVERS': Track,
   'FOUNDATIONS': Track,
@@ -113,7 +113,7 @@ type Tracks = {|
 |}
 
 export const tracks: Tracks = {
-                                MEDIAWIKI, WEB_CLIENT, SERVERS, FOUNDATIONS, 
+                                FRAMEWORKS: FRAMEWORKS, WEB_CLIENT, SERVERS, FOUNDATIONS,
                                 PROJECT_MANAGEMENT, COMMUNICATION, CRAFT, INITIATIVE, 
                                 CAREER_DEVELOPMENT, ORG_DESIGN, WELLBEING, ACCOMPLISHMENT,
                                 MENTORSHIP, EVANGELISM, RECRUITING, COMMUNITY
