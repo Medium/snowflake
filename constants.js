@@ -971,7 +971,7 @@ export const tracks: Tracks = {
           "Provides sound advice when asked"
         ],
         examples: [
-          "Acted as an onboarding buddy",
+          "Acted as an onboarding buddy to a new hire",
           "Paired with an engineer to help them with an unfamiliar area",
           "Helped a colleague understand their feelings"
         ]
@@ -1010,7 +1010,7 @@ export const tracks: Tracks = {
           "Creates lunch-n-learn series and lines up speakers"
         ],
         examples: [
-          "Created and lead Vend's Frontend platform group",
+          "Created and led Vend's Frontend platform group",
           "Organized an Eng All Hands with an outside speaker",
           "Designed and taught Go microservices curriculum"
         ]
