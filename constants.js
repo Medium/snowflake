@@ -88,6 +88,7 @@ export const tracks: Tracks = {
     displayName: "Mobile",
     category: "A",
     summary: "Develops expertise in native mobile platform engineering on iOS",
+    description: "Native apps allow us to provide better, more tailored experiences to users. To build those, we need engineers with expertise in iOS who can help us deliver feature parity across all the platforms we support, and build first class products that blend in seamlessly with platform conventions.",
     milestones: [
       {
         summary: "Works effectively within established iOS architectures, following current best practices",
