@@ -98,9 +98,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning Hudl’s test methods and tools and have started to implement them into your testing.",
       "signals": [
-        // "Automation",
-        // "Performance Testing",
-        // "Test Bashes",
+        "Automation",
+        "Test Bashes",
+        "Exploratory Testing",
       ],
       "examples": [
         // "Example Task",
@@ -111,9 +111,9 @@ export const tracks: Tracks = {
     }, {
       "summary": "You know how and when to use the right testing method and tools during testing.",
       "signals": [
-        // "Automation",
-        // "Performance Testing",
-        // "Test Bashes",
+        "Automation",
+        "Test Bashes",
+        "Exploratory Testing",
       ],
       "examples": [
         // "Example Task",
@@ -124,9 +124,9 @@ export const tracks: Tracks = {
     }, {
       "summary": "You are creating and coaching others on how to best use specific testing methods and tools.",
       "signals": [
-        // "Automation",
-        // "Performance Testing",
-        // "Test Bashes",
+        "Automation",
+        "Test Bashes",
+        "Exploratory Testing",
       ],
       "examples": [
         // "Example Task",
@@ -158,9 +158,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are starting to identify and documenting risk for features.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Test Plans",
+        "Acceptance Criteria",
+        "Design Reviews",
       ],
       "examples": [
         // "Example Task",
@@ -171,9 +171,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You are starting to implement multiple ways of introducing quality earlier into the product lifecycle.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Test Plans",
+        "Acceptance Criteria",
+        "Design Reviews",
       ],
       "examples": [
         // "Example Task",
@@ -184,9 +184,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are mitigating risk and introducing quality in all aspects of the life cycle.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Test Plans",
+        "Acceptance Criteria",
+        "Design Reviews",
       ],
       "examples": [
         // "Example Task",
@@ -230,9 +230,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning how your features work on the product level.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Integration Testing",
+        "Tribe Product & Feaure Knowledge",
+        "Hudl Tools & Platforms Expertise",
       ],
       "examples": [
         // "Example Task",
@@ -243,9 +243,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You are able to understand and mitigate risk on the UI and API layer of your product.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Integration Testing",
+        "Tribe Product & Feaure Knowledge",
+        "Hudl Tools & Platforms Expertise",
       ],
       "examples": [
         // "Example Task",
@@ -256,9 +256,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You know your squad's system architecture and understand the key components that make up your feature or platform on the business and product level.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Integration Testing",
+        "Tribe Product & Feaure Knowledge",
+        "Hudl Tools & Platforms Expertise",
       ],
       "examples": [
         // "Example Task",
@@ -302,9 +302,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning about your squad's users and how they use the product stack.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "User Workflows",
+        "Real World Testing",
+        "Understanding the customers wants vs needs",
       ],
       "examples": [
         // "Example Task",
@@ -315,9 +315,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You are introducing insights from user workflows into your testing approach and methods.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "User Workflows",
+        "Real World Testing",
+        "Understanding the customers wants vs needs",
       ],
       "examples": [
         // "Example Task",
@@ -328,9 +328,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You evolve and coach others understanding and testing approach based on your user knowledge.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "User Workflows",
+        "Real World Testing",
+        "Understanding the customers wants vs needs",
       ],
       "examples": [
         // "Example Task",
@@ -374,9 +374,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning and starting to use Hudl’s analysis tools to evaluate and guide your decisions.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Usage",
+        "User Insights",
+        "Feaure & App Peformance Health"
       ],
       "examples": [
         // "Example Task",
@@ -387,9 +387,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You utilize data from multiple available sources to draw conclusions about the quality of your product.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Usage",
+        "User Insights",
+        "Feaure & App Peformance Health"
       ],
       "examples": [
         // "Example Task",
@@ -400,9 +400,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are able to leverage different sources of data to answer complex questions about product and user trends.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Usage",
+        "User Insights",
+        "Feaure & App Peformance Health"
       ],
       "examples": [
         // "Example Task",
@@ -446,9 +446,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are able to understand risks and then prioritize user impact in conversations.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature & User Dashboards",
+        "Quality Indicators",
+        "Tracking & Prioritizing Quality Debt",
       ],
       "examples": [
         // "Example Task",
@@ -459,9 +459,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You understand the risk and impact of changes to your product/feature and communicate risk(s) to your squad.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature & User Dashboards",
+        "Quality Indicators",
+        "Tracking & Prioritizing Quality Debt",
       ],
       "examples": [
         // "Example Task",
@@ -472,9 +472,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You identify and communicate high-risk areas for projects and features to help drive strategy and direction.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature & User Dashboards",
+        "Quality Indicators",
+        "Tracking & Prioritizing Quality Debt",
       ],
       "examples": [
         // "Example Task",
@@ -518,9 +518,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning the processes and tools for discovering root causes of issues or trends.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Post Mortems",
+        "Stack Traces",
+        "Reproing Issues",
       ],
       "examples": [
         // "Example Task",
@@ -531,9 +531,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You discover and communicate the why and how behind issues and trends.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Post Mortems",
+        "Stack Traces",
+        "Reproing Issues",
       ],
       "examples": [
         // "Example Task",
@@ -544,9 +544,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "Your investigation skills go beyond talking about the what and why; you go a level deeper by using insights to predict and prevent future issues.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Post Mortems",
+        "Stack Traces",
+        "Reproing Issues",
       ],
       "examples": [
         // "Example Task",
@@ -589,9 +589,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning how all of your squads features impact user workflows.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Interactions",
+        "Product & System Architecture",
+        "Impact & Risk Analysis",
       ],
       "examples": [
         // "Example Task",
@@ -602,9 +602,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You understand how users and the team will be impacted by various changes and outcomes.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Interactions",
+        "Product & System Architecture",
+        "Impact & Risk Analysis",
       ],
       "examples": [
         // "Example Task",
@@ -615,9 +615,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You help shape how changes and outcomes will fit into the bigger picture and overall success of the product.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Feature Interactions",
+        "Product & System Architecture",
+        "Impact & Risk Analysis",
       ],
       "examples": [
         // "Example Task",
@@ -661,9 +661,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning how your role delivers value.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Personal & Professional Development",
+        "QA Projects",
+        "Hudl Work Smarter Learnings",
       ],
       "examples": [
         // "Example Task",
@@ -674,9 +674,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You seek to increase the amount of value your role delivers.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Personal & Professional Development",
+        "QA Projects",
+        "Hudl Work Smarter Learnings",
       ],
       "examples": [
         // "Example Task",
@@ -687,9 +687,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are evolving the way your role delivers value and mitigates risk.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Personal & Professional Development",
+        "QA Projects",
+        "Hudl Work Smarter Learnings",
       ],
       "examples": [
         // "Example Task",
@@ -733,9 +733,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are having conversations that help yourself and others understand and issues and the status of quality.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Code Reviews",
+        "Design Reviews",
+        "Release Strategy",
       ],
       "examples": [
         // "Example Task",
@@ -746,9 +746,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You challenge squad quality while focusing on prevention and efficiency.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Code Reviews",
+        "Design Reviews",
+        "Release Strategy",
       ],
       "examples": [
         // "Example Task",
@@ -759,9 +759,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are strategically challenging process and direction.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Code Reviews",
+        "Design Reviews",
+        "Release Strategy",
       ],
       "examples": [
         // "Example Task",
@@ -805,7 +805,7 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are leveling up personally and starting to drive change on the squad level.",
       "signals": [
-        // "Example Behavior",
+        "Please work with your Team Lead to best capture how your outcomes are adding value.",
         // "Example Behavior",
         // "Example Behavior",
       ],
@@ -818,7 +818,7 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You are implementing change on the squad level and you are starting to have an impact outside of the squad.",
       "signals": [
-        // "Example Behavior",
+        "Please work with your Team Lead to best capture how your outcomes are adding value.",
         // "Example Behavior",
         // "Example Behavior",
       ],
@@ -831,7 +831,7 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are driving change outside of the squad and your impact is being felt on the chapter level.",
       "signals": [
-        // "Example Behavior",
+        "Please work with your Team Lead to best capture how your outcomes are adding value.",
         // "Example Behavior",
         // "Example Behavior",
       ],
@@ -877,9 +877,9 @@ export const tracks: Tracks = {
       //Milestone 1
       "summary": "You are learning quality best practices and are starting to share that information with your squad.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Giving presentations",
+        "Creating blog posts",
+        "Increasing knowledge within the Chapter",
       ],
       "examples": [
         // "Example Task",
@@ -890,9 +890,9 @@ export const tracks: Tracks = {
       //Milestone 2
       "summary": "You are leveling up others and implementing quality best practices on the squad level.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Giving presentations",
+        "Creating blog posts",
+        "Increasing knowledge within the Chapter",
       ],
       "examples": [
         // "Example Task",
@@ -903,9 +903,9 @@ export const tracks: Tracks = {
       //Milestone 3
       "summary": "You are coaching and changing others mindsets around quality outside of the squad.",
       "signals": [
-        // "Example Behavior",
-        // "Example Behavior",
-        // "Example Behavior",
+        "Giving presentations",
+        "Creating blog posts",
+        "Increasing knowledge within the Chapter",
       ],
       "examples": [
         // "Example Task",

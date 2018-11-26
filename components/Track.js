@@ -70,7 +70,7 @@ class Track extends React.Component<Props> {
           {currentMilestone ? (
             <div style={{flex: 1}}>
               <h3>{currentMilestone.summary}</h3>
-              {/* <h4>Focus Area Examples:</h4> */}
+              <h4>Focus Area Examples:</h4>
               <ul>
                 {currentMilestone.signals.map((signal, i) => (
                   <li key={i}>{signal}</li>
