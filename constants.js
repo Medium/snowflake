@@ -1257,12 +1257,12 @@ export const categoryColorScale = d3.scaleOrdinal()
   .range(['#009ce3', '#5f7284', '#ff6300', '#394551'])
 
 export const titles = [
-  {label: 'QA I', minPoints: 0, maxPoints: 16},
-  {label: 'QA II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior QA/Team Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Quality Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal QA', minPoints: 90},
-  {label: 'QA Manager', minPoints: 90}
+  {label: 'QA', minPoints: 0, maxPoints: 90},
+  {label: 'QA II', minPoints: 91, maxPoints: 92},
+  {label: 'Senior QA/Team Lead', minPoints: 93, maxPoints: 94},
+  {label: 'Quality Lead', minPoints: 95, maxPoints: 96},
+  {label: 'Principal QA', minPoints: 97},
+  {label: 'QA Manager', minPoints: 98}
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
