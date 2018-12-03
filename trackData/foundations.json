@@ -3,6 +3,7 @@
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
+      "points": 1,
       "summary": "Works effectively within established structures, following current best practices",
       "signals": [
         "Writes thorough postmortems for service outages",
@@ -15,6 +16,7 @@
         "Resolved out of disk errors independently"
       ]
     }, {
+      "points": 3,
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Made minor version upgrades to technologies",
@@ -27,6 +29,7 @@
         "Improved ETL efficiency by improving Dynamo to S3 loading"
       ]
     }, {
+      "points": 6,
       "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
       "signals": [
         "Acts as primary maintainer for existing critical systems",
@@ -39,6 +42,7 @@
         "Designed flexible framework for writing machine learning jobs"
       ]
     }, {
+      "points": 12,
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
       "signals": [
         "Designs complex projects that encompass multiple systems and technologies",
@@ -51,6 +55,7 @@
         "Introduced Kinesis and pioneered streaming events pipeline"
       ]
     }, {
+      "points": 20,
       "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
       "signals": [
         "Designs transformational projects in service of long-term goals",

@@ -3,6 +3,7 @@
   "category": "B",
   "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
   "milestones": [{
+    "points": 1,
     "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
     "signals": [
       "Communicates project status clearly and effectively",
@@ -15,6 +16,7 @@
       "Gave thoughtful check-in and check-out comments"
     ]
   }, {
+    "points": 3,
     "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
     "signals": [
       "Practises active listening and suspension of attention",
@@ -27,6 +29,7 @@
       "Spoke to domain experts before writing spec"
     ]
   }, {
+    "points": 6,
     "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
     "signals": [
       "Resolves communication difficulties between others",
@@ -39,6 +42,7 @@
       "Gave notice of upcoming related work in Eng Briefing"
     ]
   }, {
+    "points": 12,
     "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
     "signals": [
       "Communicates project risk and tradeoffs skillfully and with nuance",
@@ -51,6 +55,7 @@
       "Aligned the entire organization around claps"
     ]
   }, {
+    "points": 20,
     "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
     "signals": [
       "Defines processes for clear communication for the entire team",

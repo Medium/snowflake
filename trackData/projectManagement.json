@@ -3,6 +3,7 @@
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
+      "points": 1,
       "summary": "Effectively delivers individual tasks",
       "signals": [
         "Estimates small tasks accurately",
@@ -15,6 +16,7 @@
         "Delivered payment history dashboard"
       ]
     }, {
+      "points": 3,
       "summary": "Effectively delivers small personal projects",
       "signals": [
         "Performs research and considers alternative approaches",
@@ -27,6 +29,7 @@
         "Executed the recommends to claps backfill"
       ]
     }, {
+      "points": 6,
       "summary": "Effectively delivers projects through a small team",
       "signals": [
         "Delegates tasks to others appropriately",
@@ -39,6 +42,7 @@
         "Facilitated project kickoff meeting to get buy-in"
       ]
     }, {
+      "points": 12,
       "summary": "Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity",
       "signals": [
         "Finds ways to deliver requested scope faster, and prioritizes backlog",
@@ -51,6 +55,7 @@
         "Involved marketing, legal, and appropriate functions at project start"
       ]
     }, {
+      "points": 20,
       "summary": "Manages major company pushes delivered by multiple teams",
       "signals": [
         "Considers external constraints and business objectives when planning",

@@ -3,6 +3,7 @@
     "category": "D",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     "milestones": [{
+      "points": 1,
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
       "signals": [
         "Makes themself available for informal support and advice",
@@ -15,6 +16,7 @@
         "Helped a colleague understand their feelings"
       ]
     }, {
+      "points": 3,
       "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
       "signals": [
         "Takes time to explain concepts and best practices",
@@ -27,6 +29,7 @@
         "Lead from behind to support someone new to a leadership role"
       ]
     }, {
+      "points": 6,
       "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
@@ -39,6 +42,7 @@
         "Wrote Medium-U content module"
       ]
     }, {
+      "points": 12,
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
       "signals": [
         "Defines an entire curriculum for a discipline",
@@ -51,6 +55,7 @@
         "Designed and taught web client guild curriculum"
       ]
     }, {
+      "points": 20,
       "summary": "Instills and promotes a culture of learning and development within the team",
       "signals": [
         "Sets incentive structures to recognise and reward mentorship",

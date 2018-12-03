@@ -3,6 +3,7 @@
     "category": "D",
     "description": "Strengthens Medium's team by bringing in excellent staff members",
     "milestones": [{
+      "points": 1,
       "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
       "signals": [
         "Reviews existing network for hiring leads regularly",
@@ -15,6 +16,7 @@
         "Referred appropriate individuals for open positions"
       ]
     }, {
+      "points": 3,
       "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
       "signals": [
         "Uses interview rubric to provide clear, objective feedback on candidates",
@@ -27,6 +29,7 @@
         "Tested a new service for quality and diversity of candidates"
       ]
     }, {
+      "points": 6,
       "summary": "Maintains and strengthens the integrity of the current process, and regularly brings in great candidates",
       "signals": [
         "Teaches new interviewers how to interview with empathy",
@@ -39,6 +42,7 @@
         "Proposed useful, tangible improvements to the interview process"
       ]
     }, {
+      "points": 12,
       "summary": "Actively contributes to and leads hiring decisions, and goes to great lengths to source great candidates",
       "signals": [
         "Documents subtle cues in interviews that indicate values alignment",
@@ -51,6 +55,7 @@
         "Started CODE2040 internship program"
       ]
     }, {
+      "points": 20,
       "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
       "signals": [
         "Sets the tone, policy and goals around building a diverse, high-quality team",

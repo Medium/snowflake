@@ -3,6 +3,7 @@
     "category": "B",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
     "milestones": [{
+      "points": 1,
       "summary": "Identifies opportunities for organizational change or product improvements",
       "signals": [
         "Writes Hatch posts about improvement opportunities",
@@ -15,6 +16,7 @@
         "Reported a site issue in Github"
       ]
     }, {
+      "points": 3,
       "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
       "signals": [
         "Picks bugs off the backlog proactively when blocked elsewhere",
@@ -27,6 +29,7 @@
         "Audited web client performance in Chrome and proposed fixes"
       ]
     }, {
+      "points": 6,
       "summary": "Causes change to positively impact an entire team or instigates a minor feature or service",
       "signals": [
         "Demonstrates concepts proactively with prototypes",
@@ -39,6 +42,7 @@
         "Implemented video for Android independently, unprompted"
       ]
     }, {
+      "points": 12,
       "summary": "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
       "signals": [
         "Champions and pioneers new technologies to solve new classes of problem",
@@ -51,6 +55,7 @@
         "Migrated medium2 to mono repo and bazel"
       ]
     }, {
+      "points": 20,
       "summary": "Effects change that has a substantial positive impact on the whole company",
       "signals": [
         "Creates a new function to solve systemic issues",

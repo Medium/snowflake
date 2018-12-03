@@ -3,6 +3,7 @@
     "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
     "milestones": [{
+      "points": 1,
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
       "signals": [
         "Advocates on behalf and in defense of a group member",
@@ -15,6 +16,7 @@
         "Hosted a Floodgate Academy intern"
       ]
     }, {
+      "points": 3,
       "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
       "signals": [
         "Ensure a group member has an appropriate role on their team",
@@ -27,6 +29,7 @@
         "Taught group members the GROW model"
       ]
     }, {
+      "points": 6,
       "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
       "signals": [
         "Discusses paths, and creates plans for personal and professional growth",
@@ -39,6 +42,7 @@
         "Arranged a requested switch of discipline for a group member"
       ]
     }, {
+      "points": 12,
       "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
       "signals": [
         "Manages team transitions smoothly, respecting team and individual needs",
@@ -51,6 +55,7 @@
         "Prevented regretted attrition with intentional, targeted intervention"
       ]
     }, {
+      "points": 20,
       "summary": "Supports the development of a signficant part of the engineering org, and widely viewed as a trusted advisor",
       "signals": [
         "Supports and develops senior leaders",
