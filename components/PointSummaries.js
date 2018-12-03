@@ -11,7 +11,6 @@ type Props = {
 class PointSummaries extends React.Component<Props> {
   render() {
     const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
-
     let currentLevel, nextLevel
 
     let pointsForCurrentLevel = totalPoints

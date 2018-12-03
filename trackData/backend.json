@@ -3,6 +3,7 @@
     "category": "A",
     "description": "Develops expertise in server side engineering",
     "milestones": [{
+      "points": 1.5,
       "summary": "Works effectively within established server side frameworks, following current best practices",
       "signals": [
         "Nice storytelling, code and commits are self explainable, facilitates code reviews by others",
@@ -45,6 +46,7 @@
       ]
     },
     {
+      "points": 4.5,
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Effectively reviews others' code",
@@ -76,6 +78,7 @@
       ]
     },
     {
+      "points": 9,
       "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
       "signals": [
         "Develops integrations with third-party systems or APIs that can be consumed by them",
@@ -110,6 +113,7 @@
       ]
     },
     {
+      "points": 18,
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
       "signals": [
         "Researches and chooses the technology stack and frameworks to be used by projects",
@@ -131,6 +135,7 @@
       ]
     },
     {
+      "points": 30,
       "summary": "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
       "signals": [
         "Designs transformational projects of significant complexity and scope",

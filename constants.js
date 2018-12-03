@@ -1,7 +1,6 @@
 // @flow
 import * as d3 from 'd3'
-import WEB_CLIENT from './trackData/frontend.json'
-import FRAMEWORKS from './trackData/frameworks.json'
+import  WEB_CLIENT from './trackData/frontend.json'
 import SERVERS from './trackData/backend.json'
 import FOUNDATIONS from './trackData/foundations.json'
 import PROJECT_MANAGEMENT from './trackData/projectManagement.json'
@@ -17,14 +16,13 @@ import EVANGELISM from './trackData/evangelism.json'
 import RECRUITING from './trackData/recruiting.json'
 import COMMUNITY from './trackData/community.json'
 
-export type TrackId = 'FRAMEWORKS' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+export type TrackId = 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
-  'FRAMEWORKS': Milestone,
   'WEB_CLIENT': Milestone,
   'SERVERS': Milestone,
   'FOUNDATIONS': Milestone,
@@ -43,17 +41,6 @@ export type MilestoneMap = {
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
-export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 6
-    case 4: return 12
-    case 5: return 20
-    default: return 0
-  }
-}
 export const titles = [
   {label: 'Junior Software Engineer', minPoints: 0, maxPoints: 24},
   {label: 'Software Engineer', minPoints: 25, maxPoints: 53},
@@ -94,7 +81,6 @@ export type Track = {
 }
 
 type Tracks = {|
-  'FRAMEWORKS': Track,
   'WEB_CLIENT': Track,
   'SERVERS': Track,
   'FOUNDATIONS': Track,
@@ -113,7 +99,7 @@ type Tracks = {|
 |}
 
 export const tracks: Tracks = {
-                                FRAMEWORKS: FRAMEWORKS, WEB_CLIENT, SERVERS, FOUNDATIONS,
+                                WEB_CLIENT, SERVERS, FOUNDATIONS, 
                                 PROJECT_MANAGEMENT, COMMUNICATION, CRAFT, INITIATIVE, 
                                 CAREER_DEVELOPMENT, ORG_DESIGN, WELLBEING, ACCOMPLISHMENT,
                                 MENTORSHIP, EVANGELISM, RECRUITING, COMMUNITY
@@ -134,7 +120,12 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     const milestone = milestoneMap[trackId]
     const categoryId = tracks[trackId].category
     let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+    if (milestone === 0){
+      pointsByCategory.set(categoryId, currentPoints + 0)
+    }
+    else {
+      pointsByCategory.set(categoryId, currentPoints + tracks[trackId].milestones[milestone - 1].points)
+    }
   })
   return Array.from(categoryIds.values()).map(categoryId => {
     const points = pointsByCategory.get(categoryId)
@@ -142,9 +133,17 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   })
 }
 
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
-    .reduce((sum, addend) => (sum + addend), 0)
+export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number => {
+  var sum = 0;
+  trackIds.map(trackId => {
+    const milestone = milestoneMap[trackId]
+    if (milestone > 0) {
+      sum = sum + tracks[trackId].milestones[milestone-1].points
+    }
+  })
+  return sum;
+}
+
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
@@ -153,8 +152,19 @@ export const categoryColorScale = d3.scaleOrdinal()
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
+  var test = titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
     .map(title => title.label)
+
+    let categoryPoints = categoryPointsFromMilestoneMap(milestoneMap)
+
+    if (categoryPoints[0].points <= 23)
+    {
+      test = test.filter(e => e !== "Tech Leader");
+      test = test.filter(e => e !== "Software Architect");
+    }
+
+    console.log(test)
+
+    return test;
 }

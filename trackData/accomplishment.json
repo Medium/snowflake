@@ -3,6 +3,7 @@
     "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     "milestones": [{
+      "points": 1,
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
       "signals": [
         "Notices when someone is stuck and reaches out",
@@ -15,6 +16,7 @@
         "Reinforces and affirms positive feedback for good work"
       ]
     }, {
+      "points": 3,
       "summary": "Helps individuals resolve difficult performance issues, with insight, compassion, and skill",
       "signals": [
         "Gathers context outside the immediate problem",
@@ -27,6 +29,7 @@
         "Gave honest feedback about poor performance, with compassion"
       ]
     }, {
+      "points": 6,
       "summary": "Intervenes in long-standing performance issues with targeted behavior change or performance plans",
       "signals": [
         "Aggregates signals of poor performance and creates process for improvement",
@@ -39,6 +42,7 @@
         "Managed group member closely to maximise chances of PIP success"
       ]
     }, {
+      "points": 12,
       "summary": "Mediates escalated situations, empowers underperforming teams, and resolves conflict",
       "signals": [
         "Recognizes heightened situations and toxic or aggressive interactions",
@@ -51,6 +55,7 @@
         "Mediated sit-down between team members to address tension"
       ]
     }, {
+      "points": 20,
       "summary": "Resolves complex organizational dysfunction, or persistent conflict at senior levels",
       "signals": [
         "Takes control of dysfunctional teams to organise chaos",

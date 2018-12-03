@@ -3,6 +3,7 @@
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
+      "points": 1,
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
       "signals": [
         "Keeps confidences unless legally or morally obliged to do otherwise",
@@ -15,6 +16,7 @@
         "Checked in with colleague showing signs of burnout"
       ]
     }, {
+      "points": 3,
       "summary": "Creates a positive, supportive, engaging team environment for group members",
       "signals": [
         "Sheds light on other experiences to build empathy and compassion",
@@ -27,6 +29,7 @@
         "Noted a team without a recent win and suggested some easy quick wins"
       ]
     }, {
+      "points": 6,
       "summary": "Manages expectations across peers, leads in the org, promotes calm, and prevents consensus building",
       "signals": [
         "Trains group members to separate stimulus from response",
@@ -39,6 +42,7 @@
         "Reframed a problem as a challenge, instead of a barrier, when appropriate"
       ]
     }, {
+      "points": 12,
       "summary": "Advocates for the needs of teams and group members, and proactively works to calm the organization",
       "signals": [
         "Ensures team environments are safe and inclusive, proactively",
@@ -51,6 +55,7 @@
         "Guided people through complex organizational change"
       ]
     }, {
+      "points": 20,
       "summary": "Manages narratives, channels negativity into inspiration and motivation, and protects the entire team",
       "signals": [
         "Recognizes and points out narratives when appropriate",

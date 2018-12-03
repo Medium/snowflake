@@ -3,6 +3,7 @@
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
+      "points": 1,
       "summary": "Delivers consistently good quality work",
       "signals": [
         "Tests new code thoroughly, both locally, and in production once shipped",
@@ -15,6 +16,7 @@
         "Wrote hermetic tests for the happy and sad cases"
       ]
     }, {
+      "points": 3,
       "summary": "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems",
       "signals": [
         "Refactors existing code to make it more testable",
@@ -27,6 +29,7 @@
         "Fixed a TODO for someone else in the codebase"
       ]
     }, {
+      "points": 6,
       "summary": "Improves others' ability to deliver great quality work",
       "signals": [
         "Implements systems that enable better testing",
@@ -39,6 +42,7 @@
         "Created fixture system for visual quality"
       ]
     }, {
+      "points": 12,
       "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
       "signals": [
         "Builds systems so as to eliminate entire classes of programmer error",
@@ -51,6 +55,7 @@
         "Defined and oversaw plan for closing Heartbleed vulnerability"
       ]
     }, {
+      "points": 20,
       "summary": "Enables and encourages the entire organization to make quality a central part of the development process",
       "signals": [
         "Defines policies for the engineering org that encourage quality work",

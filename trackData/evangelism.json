@@ -3,6 +3,7 @@
     "category": "D",
     "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
+      "points": 1,
       "summary": "Represents Medium well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
@@ -15,6 +16,7 @@
         "Supported PR efforts by giving a quote or having a photo taken"
       ]
     }, {
+      "points": 3,
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
         "Takes meaningful action to introduce people to Medium",
@@ -27,6 +29,7 @@
         "Talked at a Women Who Code event hosted at Medium"
       ]
     }, {
+      "points": 6,
       "summary": "Works hard to positively influence large groups of people on their views of Medium",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
@@ -39,6 +42,7 @@
         "Built a durable, long-standing relationship with Code2040"
       ]
     }, {
+      "points": 12,
       "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
@@ -51,6 +55,7 @@
         "Published “Why Content Editable Is Terrible” on the Medium engineering blog"
       ]
     }, {
+      "points": 20,
       "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",

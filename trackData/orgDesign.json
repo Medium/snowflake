@@ -3,6 +3,7 @@
     "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "milestones": [{
+      "points": 1,
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
       "signals": [
         "Reflects on meetings that leave them inspired or frustrated",
@@ -15,6 +16,7 @@
         "Provided feedback on sprint planning meeting"
       ]
     }, {
+      "points": 3,
       "summary": "Identifies opportunities to improve existing processes and makes changes that positively affect the local team",
       "signals": [
         "Defines meeting structure and cadence that meets team needs",
@@ -27,6 +29,7 @@
         "Defined standard channels for inter-team communication"
       ]
     }, {
+      "points": 6,
       "summary": "Develops processes to solve ongoing organizational problems",
       "signals": [
         "Creates programs that meaningfully improve organizational diversity",
@@ -39,6 +42,7 @@
         "Defined Guilds manifesto and charter"
       ]
     }, {
+      "points": 12,
       "summary": "Thinks deeply about organizational issues and identifies hidden dynamics that contribute to them",
       "signals": [
         "Evaluates incentive structures and their effect on execution",
@@ -51,6 +55,7 @@
         "Analyzed the hiring rubric for false negative potential"
       ]
     }, {
+      "points": 20,
       "summary": "Leads initiatives to address issues stemming from hidden dynamics and company norms",
       "signals": [
         "Builds programs to train leadership in desired skills",
