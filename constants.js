@@ -1118,8 +1118,7 @@ export const tracks: Tracks = {
         examples: [
           "Completed interview calibration",
           "Set up casual sessions to practice asking questions",
-          "Referred appropriate individuals for open positions",
-          "Helped to triage job applicantions from the talent pool."
+          "Referred appropriate individuals for open positions"
         ]
       },
       {
@@ -1130,7 +1129,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Added observable evidence for interview feedback in different occasions",
-          "Started a monthly brunch for candidates to meet Vend employees"
+          "Started a monthly brunch for candidates to meet Vend employees",
+          "Helped to triage job applications from the talent pool."
         ]
       },
       {
