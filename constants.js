@@ -1109,7 +1109,7 @@ export const tracks: Tracks = {
     summary: "Strengthens Vend's team by bringing in excellent staff members",
     milestones: [
       {
-        summary: "Brings new candidates into the pipeline and/or understands how to evaluate candidates at Vend",
+        summary: "Brings new candidates into the pipeline and/or understands how to evaluate candidates at Vend (https://bit.ly/2KW3n86)",
         signals: [
           "Reviews existing network for hiring leads regularly",
           "Shadows interviews to gain familiarity with process",
