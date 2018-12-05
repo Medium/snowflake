@@ -1143,7 +1143,7 @@ export const tracks: Tracks = {
         examples: [
           "Wrote fantastic new interview questions that are measurable and insightful",
           "Brought candidates into our pipeline proactively, with a high conversion rate",
-          "Added new questions/exercises to be done during practical tests",
+          "Improved practical tests with new tests and/or questions",
           "Proposed useful, tangible improvements to the interview process"
         ]
       },
