@@ -1118,20 +1118,19 @@ export const tracks: Tracks = {
         examples: [
           "Completed interview calibration",
           "Set up casual sessions to practice asking questions",
-          "Referred appropriate individuals for open positions"
+          "Referred appropriate individuals for open positions",
+          "Helped to triage job applicantions from the talent pool."
         ]
       },
       {
         summary: "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
         signals: [
-          "Provides clear, objective feedback on candidates (we should have an interview rubric)",
-          "Interviews candidates with empathy and treats them all with equal respect",
+          "Consistently provides clear, objective feedback on candidates (we should have an interview rubric)",
           "Researches approaches for sourcing candidates and diversifying hiring"
         ],
         examples: [
-          "Added observable evidence for interview feedback",
-          "Started a monthly brunch for candidates to meet Vend employees",
-          ""
+          "Added observable evidence for interview feedback in different occasions",
+          "Started a monthly brunch for candidates to meet Vend employees"
         ]
       },
       {
@@ -1144,6 +1143,7 @@ export const tracks: Tracks = {
         examples: [
           "Wrote fantastic new interview questions that are measurable and insightful",
           "Brought candidates into our pipeline proactively, with a high conversion rate",
+          "Added new questions/exercises to be done during practical tests",
           "Proposed useful, tangible improvements to the interview process"
         ]
       },
@@ -1157,6 +1157,7 @@ export const tracks: Tracks = {
         examples: [
           "Planned engineering summit on interview process and training",
           "Organized and lead Vend's presence at a recruitment fair",
+          "Set up practical tests for interviews",
           "Started internship program"
         ]
       },
