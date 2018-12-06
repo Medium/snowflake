@@ -152,7 +152,7 @@ export const categoryColorScale = d3.scaleOrdinal()
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-  var test = titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
+  var titleList = titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
     .map(title => title.label)
 
@@ -160,11 +160,16 @@ export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
 
     if (categoryPoints[0].points <= 23)
     {
-      test = test.filter(e => e !== "Tech Leader");
-      test = test.filter(e => e !== "Software Architect");
+      titleList = titleList.filter(e => e !== "Tech Leader");
+      titleList = titleList.filter(e => e !== "Software Architect");
+    }
+    if (categoryPoints[1].points+categoryPoints[2].points+categoryPoints[3].points <= 65)
+    {
+      titleList = titleList.filter(e => e !== "Engineering Manager");
+      titleList = titleList.filter(e => e !== "Head of Engineering");
     }
 
-    console.log(test)
+    console.log(titleList);
 
-    return test;
+    return titleList;
 }
