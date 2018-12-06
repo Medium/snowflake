@@ -740,8 +740,8 @@ export const tracks: Tracks = {
   ORG_DESIGN: {
     displayName: "Org design",
     category: "C",
-    summary: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
-    description: "Too much structure and process can slow a team down, but too little can also be debilitating. As an organisation, we need to be continually focusing on how the team is executing, finding ways to do things faster and better, and ensuring that the appropriate systems are in place to foster a diverse and inclusive team.",
+    summary: "Defines processes and structures that enables the strong growth and execution of a diverse engineering organization",
+    description: "As an organisation, we need to foster a culture of continuous improvement, focusing on how teams are executing. We need to look for ways to do things better and more efficiently, and to create appropriate systems to promote healthy, diverse and inclusive teams.",
     milestones: [
       {
         summary: "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -804,8 +804,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Lead efforts to increase investment in Engineering",
-          "Created a structure to allow engineers to work efficiently from outside of New Zealand",
-          "Built a salary framework used across Vend"
+          "Created the structure for a globally distributed engineering team"
+          "Built a compensation framework used across Vend"
         ]
       }
     ]
