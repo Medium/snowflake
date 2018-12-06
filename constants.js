@@ -1109,7 +1109,7 @@ export const tracks: Tracks = {
     summary: "Strengthens Vend's team by bringing in excellent staff members",
     milestones: [
       {
-        summary: "Brings new candidates into the pipeline and/or understands how to evaluate candidates at Vend (https://bit.ly/2KW3n86)",
+        summary: "Brings new candidates into the pipeline and understands how to evaluate candidates at Vend (https://bit.ly/2KW3n86)",
         signals: [
           "Reviews existing network for hiring leads regularly",
           "Shadows interviews to gain familiarity with process",
@@ -1124,13 +1124,14 @@ export const tracks: Tracks = {
       {
         summary: "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
         signals: [
-          "Consistently provides clear, objective feedback on candidates (we should have an interview rubric)",
+          "Consistently provides clear, objective feedback on candidates",
           "Researches approaches for sourcing candidates and diversifying hiring"
         ],
         examples: [
-          "Added observable evidence for interview feedback in different occasions",
+          "Added observable evidence for interview feedback on different occasions",
           "Started a monthly brunch for candidates to meet Vend employees",
-          "Helped to triage job applications from the talent pool."
+          "Helped to triage job applications from the talent pool.",
+          "Conducted practical tests for interview candidates. "
         ]
       },
       {
@@ -1157,7 +1158,7 @@ export const tracks: Tracks = {
         examples: [
           "Planned engineering summit on interview process and training",
           "Organized and lead Vend's presence at a recruitment fair",
-          "Set up practical tests for interviews",
+          "Created new practical test(s) to test the technical capabilities of interview candidates.",
           "Started internship program"
         ]
       },
