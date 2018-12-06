@@ -87,10 +87,11 @@ export const tracks: Tracks = {
   MOBILE: {
     displayName: "Mobile",
     category: "A",
-    summary: "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    summary: "Develops expertise in native mobile platform engineering on iOS",
+    description: "Native apps allow us to provide better, more tailored experiences to users. To build those, we need engineers with expertise in iOS who can help us deliver feature parity across all the platforms we support, and build first class products that blend in seamlessly with platform conventions.",
     milestones: [
       {
-        summary: "Works effectively within established iOS or Android architectures, following current best practices",
+        summary: "Works effectively within established iOS architectures, following current best practices",
         signals: [
           "Delivers features requiring simple local modifications",
           "Adds simple actions that call server endpoints",
@@ -98,7 +99,6 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Added existing button to a different iOS surface",
-          "Add follow button for publications on Android",
           "Fetched and displayed a new stream, using existing stream item styles"
         ]
       },
@@ -106,11 +106,10 @@ export const tracks: Tracks = {
         summary: "Develops new instances of existing architecture, or minor improvements to existing architecture",
         signals: [
           "Defines new useful and appropriate proto-generated objects",
-          "Creates simple new activities on Android",
-          "Migrates code from old patterns to new patterns"
+          "Migrates code from old patterns to new patterns",
+          "Adds simple components to iOS Houston"
         ],
         examples: [
-          "Upgraded SDWebImage to a new major version",
           "Added support for a new type of promotion",
           "Prototyped a simple new feature quickly"
         ]
@@ -119,12 +118,11 @@ export const tracks: Tracks = {
         summary: "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
         signals: [
           "Implements complex features with a large product surface area",
-          "Works effectively with  Android reactive programming framework",
-          "Adds support for new iOS features after a major iOS version upgrade"
+          "Adds support for new iOS features after a major iOS version upgrade",
+          "Adds complex components to iOS Houston"
         ],
         examples: [
           "Designed iOS caching strategy for product search",
-          "Built series reader on Android",
           "Informed the team about recent best practice changes and deprecations"
         ]
       },
@@ -137,6 +135,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Upgraded CocoaPods to a new major version",
+          "Changed Register’s Sell Screen architecture to use MVVM",
           "Designed architecture for storing and synchronising sales",
           "Removed all Singletons in iOS app"
         ]
@@ -145,12 +144,10 @@ export const tracks: Tracks = {
         summary: "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
         signals: [
           "Defines long-term goals and ensures active projects are in service of them",
-          "Designs and builds innovative, industry-leading UI interactions",
-          "Invents new techniques to responsibly stretch limits of the Android platform"
+          "Designs and builds innovative, industry-leading UI interactions"
         ],
         examples: [
           "Defined and drove complete migration plan to Swift",
-          "Implemented Android recycler views before platform support existed",
           "Pioneered application-level abstractions for multi-app environment"
         ]
       }
@@ -379,6 +376,7 @@ export const tracks: Tracks = {
     displayName: "Project management",
     category: "B",
     summary: "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+    description: "There is a limit to what people can achieve individually, and coordination of multiple people on a project is very important. We need people that can take large projects, break them down into achievable milestones, manage and delegate scope effectively, and ensure that deadlines are met.",
     milestones: [
       {
         summary: "Effectively delivers individual tasks",
@@ -452,6 +450,7 @@ export const tracks: Tracks = {
     displayName: "Communication",
     category: "B",
     summary: "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    description: "Great communication is central to everything we do at Vend, and without it, most non-trivial efforts would fail. Whether discussing approaches, giving presentations, listening attentively, or managing stakeholders, excellent communication is a key skill. The ability to communicate an idea, and to understand communicated ideas is of critical importance to ensure a well-aligned, agile team.",
     milestones: [
       {
         summary: "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
