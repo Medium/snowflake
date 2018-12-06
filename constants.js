@@ -161,7 +161,7 @@ export const tracks: Tracks = {
     displayName: "Web client",
     category: "A",
     summary: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
-    description: "We need to provide our users with a modern, responsive web product that renders well across all major browsers. We need engineers with expertise in web client technologies to communicate effectively with our APIs and help us continue to build industry-leading technology.",
+    description: "We need to provide our users with a modern, responsive web product that renders well across all major browsers. We need engineers with expertise in web client technologies to help us continue to build industry-leading technology.",
     milestones: [
       {
         summary: "Works effectively within established web client architectures, following current best practices",
@@ -186,7 +186,7 @@ export const tracks: Tracks = {
         examples: [
           "Built dropdown component in Houston",
           "Rewrote Houston next-stepper to use multiple transclusion rather than binding",
-          "Refactored an existing page to use Houston"
+          "Rebuilt an existing page to use Houston"
         ]
       },
       {
