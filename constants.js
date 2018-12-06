@@ -1010,7 +1010,7 @@ export const tracks: Tracks = {
           "Creates lunch-n-learn series and lines up speakers"
         ],
         examples: [
-          "Created and led Vend's Frontend platform group",
+          "Created FEDs and led the FEDs Unite meeting",
           "Organized an Eng All Hands with an outside speaker",
           "Designed and taught Go microservices curriculum"
         ]
