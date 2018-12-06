@@ -449,7 +449,7 @@ export const tracks: Tracks = {
     displayName: "Communication",
     category: "B",
     summary: "Shares the right amount of information with the right people, at the right time, and listens effectively",
-    description: "Great communication is central to everything we do at Medium, and without it, most non-trivial efforts would fail. Whether discussing approaches, giving presentations, listening attentively, or managing stakeholders, excellent communication is a key skill. The ability to communicate an idea, and to understand communicated ideas is of critical importance to ensure a well-aligned, agile team.",
+    description: "Great communication is central to everything we do at Vend, and without it, most non-trivial efforts would fail. Whether discussing approaches, giving presentations, listening attentively, or managing stakeholders, excellent communication is a key skill. The ability to communicate an idea, and to understand communicated ideas is of critical importance to ensure a well-aligned, agile team.",
     milestones: [
       {
         summary: "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
