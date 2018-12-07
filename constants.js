@@ -158,7 +158,7 @@ export const tracks: Tracks = {
     displayName: "Web client",
     category: "A",
     summary: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
-    description: "",
+    description: "We need to provide our users with a modern, responsive web product that renders well across all major browsers. We need engineers with expertise in web client technologies to help us continue to build industry-leading technology.",
     milestones: [
       {
         summary: "Works effectively within established web client architectures, following current best practices",
@@ -170,7 +170,7 @@ export const tracks: Tracks = {
         examples: [
           "Implemented new Houston confirmation banner in the Monoliph",
           "Hooked up the action to dismiss a card from the dashboard",
-          "Reskinned customer list using existing customer badge"
+          "Reskinned customer list using the existing customer badge"
         ]
       },
       {
@@ -181,9 +181,9 @@ export const tracks: Tracks = {
           "Prototypes simple new features quickly"
         ],
         examples: [
-          "Built credit card input component",
-          "Created shared datepicker template in Houston",
-          "Built modal system"
+          "Built dropdown component in Houston",
+          "Rewrote Houston next-stepper to use multiple transclusion rather than binding",
+          "Rebuilt an existing page to use Houston"
         ]
       },
       {
@@ -195,7 +195,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Researched utility of HTTP/2 for Vend",
-          "Designed and implemented Add/Edit Product screen"
+          "Designed and implemented Add/Edit Product screen",
+          "Created shared datepicker component in Houston"
         ]
       },
       {
