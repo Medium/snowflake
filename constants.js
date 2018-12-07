@@ -960,6 +960,7 @@ export const tracks: Tracks = {
     displayName: "Mentorship",
     category: "D",
     summary: "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    description: "While Career Development is about formal planning, mentorship is equally important. We want to continue our culture of learning and teaching, and incentivise engineers to help develop each other, whether through internal posts, support groups, team presentations, programming curricula, or some other medium.",
     milestones: [
       {
         summary: "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
@@ -969,7 +970,7 @@ export const tracks: Tracks = {
           "Provides sound advice when asked"
         ],
         examples: [
-          "Acted as an onboarding buddy",
+          "Acted as an onboarding buddy to a new hire",
           "Paired with an engineer to help them with an unfamiliar area",
           "Helped a colleague understand their feelings"
         ]
@@ -1008,7 +1009,7 @@ export const tracks: Tracks = {
           "Creates lunch-n-learn series and lines up speakers"
         ],
         examples: [
-          "Created and lead Vend's Frontend platform group",
+          "Created FEDs and led the FEDs Unite meeting",
           "Organized an Eng All Hands with an outside speaker",
           "Designed and taught Go microservices curriculum"
         ]
