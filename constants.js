@@ -754,7 +754,7 @@ export const tracks: Tracks = {
         examples: [
           "Facilitated effective meetings with empathy",
           "Explained sprint planning format to a new hire",
-          "Provided meaningful feedback on retrospectives"
+          "Provided meaningful feedback during retrospectives"
         ]
       },
       {
@@ -780,7 +780,7 @@ export const tracks: Tracks = {
         examples: [
           "Developed 90-day plan template",
           "Created and implemented the on-boarding program in Engineering",
-          "Defined Frontend Guild manifesto"
+          "Defined the PQA role to address ongoing communication issues between Solutions and Support"
         ]
       },
       {
@@ -806,7 +806,8 @@ export const tracks: Tracks = {
         examples: [
           "Lead efforts to increase investment in Engineering",
           "Created the structure for a globally distributed engineering team"
-          "Built a compensation framework used across Vend"
+          "Built a compensation framework used across Vend",
+          "Directed resources to meaningfully improve diversity at all levels"
         ]
       }
     ]
