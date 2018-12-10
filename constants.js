@@ -741,7 +741,8 @@ export const tracks: Tracks = {
   ORG_DESIGN: {
     displayName: "Org design",
     category: "C",
-    summary: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    summary: "Defines processes and structures that enables the strong growth and execution of a diverse engineering organization",
+    description: "As an organisation, we need to foster a culture of continuous improvement, focusing on how teams are executing. We need to look for ways to do things better and more efficiently, and to create appropriate systems to promote healthy, diverse and inclusive teams.",
     milestones: [
       {
         summary: "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -753,7 +754,7 @@ export const tracks: Tracks = {
         examples: [
           "Facilitated effective meetings with empathy",
           "Explained sprint planning format to a new hire",
-          "Provided feedback on sprint planning meeting"
+          "Provided meaningful feedback during retrospectives"
         ]
       },
       {
@@ -778,8 +779,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Developed 90-day plan template",
-          "Created bug-rotation program to address ongoing quality issues",
-          "Defined Frontend Guild manifesto"
+          "Created and implemented the on-boarding program in Engineering",
+          "Defined the PQA role to address ongoing communication issues between Solutions and Support"
         ]
       },
       {
@@ -804,8 +805,9 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Lead efforts to increase investment in Engineering",
-          "Directed resources to meaningfully improve diversity at all levels",
-          "Reviewed and aligned salaries across similar levels."
+          "Created the structure for a globally distributed engineering team"
+          "Built a compensation framework used across Vend",
+          "Directed resources to meaningfully improve diversity at all levels"
         ]
       }
     ]
