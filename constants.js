@@ -328,7 +328,7 @@ export const tracks: Tracks = {
         examples: [
           "Identified need for a new index in MySQL database",
           "Re-worked ElasticSearch analyzers for better autocompletion results",
-          "Added a new report type to the reporting service"
+          "Added a new report type to the reporting service",
           "Implemented data cleanup functionality in a service",
           "Refactored a service to make fewer external API calls",
           "Added versioning to a previously non versioned entity"
