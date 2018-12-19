@@ -231,7 +231,8 @@ export const tracks: Tracks = {
   "FOUNDATIONS (PLATFORM)": {
     displayName: "Platform",
     category: "A",
-    summary: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+    summary: "Develops expertise in foundational systems, such as CI/CD, data pipelines, databases, and infrastructure as a code",
+    description: "As Vend grow in scale and towards top of mind POS retailer software, we need to enable product teams to reliably ship valuable features as soon as possible and also provide a robust infrastructure on which the organization and retailers can rely on",
     milestones: [
       {
         summary: "Works effectively within established structures, following current best practices",
@@ -298,6 +299,7 @@ export const tracks: Tracks = {
       }
     ]
   },
+ 
 
   "SERVERS & API": {
     displayName: "Services & APIs",
