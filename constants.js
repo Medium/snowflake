@@ -87,10 +87,11 @@ export const tracks: Tracks = {
   MOBILE: {
     displayName: "Mobile",
     category: "A",
-    summary: "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    summary: "Develops expertise in native mobile platform engineering on iOS",
+    description: "Native apps allow us to provide better, more tailored experiences to users. To build those, we need engineers with expertise in iOS who can help us deliver feature parity across all the platforms we support, and build first class products that blend in seamlessly with platform conventions.",
     milestones: [
       {
-        summary: "Works effectively within established iOS or Android architectures, following current best practices",
+        summary: "Works effectively within established iOS architectures, following current best practices",
         signals: [
           "Delivers features requiring simple local modifications",
           "Adds simple actions that call server endpoints",
@@ -98,7 +99,6 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Added existing button to a different iOS surface",
-          "Add follow button for publications on Android",
           "Fetched and displayed a new stream, using existing stream item styles"
         ]
       },
@@ -106,11 +106,10 @@ export const tracks: Tracks = {
         summary: "Develops new instances of existing architecture, or minor improvements to existing architecture",
         signals: [
           "Defines new useful and appropriate proto-generated objects",
-          "Creates simple new activities on Android",
-          "Migrates code from old patterns to new patterns"
+          "Migrates code from old patterns to new patterns",
+          "Adds simple components to iOS Houston"
         ],
         examples: [
-          "Upgraded SDWebImage to a new major version",
           "Added support for a new type of promotion",
           "Prototyped a simple new feature quickly"
         ]
@@ -119,12 +118,11 @@ export const tracks: Tracks = {
         summary: "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
         signals: [
           "Implements complex features with a large product surface area",
-          "Works effectively with  Android reactive programming framework",
-          "Adds support for new iOS features after a major iOS version upgrade"
+          "Adds support for new iOS features after a major iOS version upgrade",
+          "Adds complex components to iOS Houston"
         ],
         examples: [
           "Designed iOS caching strategy for product search",
-          "Built series reader on Android",
           "Informed the team about recent best practice changes and deprecations"
         ]
       },
@@ -137,6 +135,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Upgraded CocoaPods to a new major version",
+          "Changed Register’s Sell Screen architecture to use MVVM",
           "Designed architecture for storing and synchronising sales",
           "Removed all Singletons in iOS app"
         ]
@@ -145,12 +144,10 @@ export const tracks: Tracks = {
         summary: "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
         signals: [
           "Defines long-term goals and ensures active projects are in service of them",
-          "Designs and builds innovative, industry-leading UI interactions",
-          "Invents new techniques to responsibly stretch limits of the Android platform"
+          "Designs and builds innovative, industry-leading UI interactions"
         ],
         examples: [
           "Defined and drove complete migration plan to Swift",
-          "Implemented Android recycler views before platform support existed",
           "Pioneered application-level abstractions for multi-app environment"
         ]
       }
@@ -161,7 +158,7 @@ export const tracks: Tracks = {
     displayName: "Web client",
     category: "A",
     summary: "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
-    description: "",
+    description: "We need to provide our users with a modern, responsive web product that renders well across all major browsers. We need engineers with expertise in web client technologies to help us continue to build industry-leading technology.",
     milestones: [
       {
         summary: "Works effectively within established web client architectures, following current best practices",
@@ -173,7 +170,7 @@ export const tracks: Tracks = {
         examples: [
           "Implemented new Houston confirmation banner in the Monoliph",
           "Hooked up the action to dismiss a card from the dashboard",
-          "Reskinned customer list using existing customer badge"
+          "Reskinned customer list using the existing customer badge"
         ]
       },
       {
@@ -184,9 +181,9 @@ export const tracks: Tracks = {
           "Prototypes simple new features quickly"
         ],
         examples: [
-          "Built credit card input component",
-          "Created shared datepicker template in Houston",
-          "Built modal system"
+          "Built dropdown component in Houston",
+          "Rewrote Houston next-stepper to use multiple transclusion rather than binding",
+          "Rebuilt an existing page to use Houston"
         ]
       },
       {
@@ -198,7 +195,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Researched utility of HTTP/2 for Vend",
-          "Designed and implemented Add/Edit Product screen"
+          "Designed and implemented Add/Edit Product screen",
+          "Created shared datepicker component in Houston"
         ]
       },
       {
@@ -378,6 +376,7 @@ export const tracks: Tracks = {
     displayName: "Project management",
     category: "B",
     summary: "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+    description: "There is a limit to what people can achieve individually, and coordination of multiple people on a project is very important. We need people that can take large projects, break them down into achievable milestones, manage and delegate scope effectively, and ensure that deadlines are met.",
     milestones: [
       {
         summary: "Effectively delivers individual tasks",
@@ -451,6 +450,7 @@ export const tracks: Tracks = {
     displayName: "Communication",
     category: "B",
     summary: "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    description: "Great communication is central to everything we do at Vend, and without it, most non-trivial efforts would fail. Whether discussing approaches, giving presentations, listening attentively, or managing stakeholders, excellent communication is a key skill. The ability to communicate an idea, and to understand communicated ideas is of critical importance to ensure a well-aligned, agile team.",
     milestones: [
       {
         summary: "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
@@ -741,7 +741,8 @@ export const tracks: Tracks = {
   ORG_DESIGN: {
     displayName: "Org design",
     category: "C",
-    summary: "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    summary: "Defines processes and structures that enables the strong growth and execution of a diverse engineering organization",
+    description: "As an organisation, we need to foster a culture of continuous improvement, focusing on how teams are executing. We need to look for ways to do things better and more efficiently, and to create appropriate systems to promote healthy, diverse and inclusive teams.",
     milestones: [
       {
         summary: "Respects and participates in processes, giving meaningful feedback to help the organization improve",
@@ -753,7 +754,7 @@ export const tracks: Tracks = {
         examples: [
           "Facilitated effective meetings with empathy",
           "Explained sprint planning format to a new hire",
-          "Provided feedback on sprint planning meeting"
+          "Provided meaningful feedback during retrospectives"
         ]
       },
       {
@@ -778,8 +779,8 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Developed 90-day plan template",
-          "Created bug-rotation program to address ongoing quality issues",
-          "Defined Frontend Guild manifesto"
+          "Created and implemented the on-boarding program in Engineering",
+          "Defined the PQA role to address ongoing communication issues between Solutions and Support"
         ]
       },
       {
@@ -804,8 +805,9 @@ export const tracks: Tracks = {
         ],
         examples: [
           "Lead efforts to increase investment in Engineering",
-          "Directed resources to meaningfully improve diversity at all levels",
-          "Reviewed and aligned salaries across similar levels."
+          "Created the structure for a globally distributed engineering team"
+          "Built a compensation framework used across Vend",
+          "Directed resources to meaningfully improve diversity at all levels"
         ]
       }
     ]
@@ -961,6 +963,7 @@ export const tracks: Tracks = {
     displayName: "Mentorship",
     category: "D",
     summary: "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    description: "While Career Development is about formal planning, mentorship is equally important. We want to continue our culture of learning and teaching, and incentivise engineers to help develop each other, whether through internal posts, support groups, team presentations, programming curricula, or some other medium.",
     milestones: [
       {
         summary: "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
@@ -970,7 +973,7 @@ export const tracks: Tracks = {
           "Provides sound advice when asked"
         ],
         examples: [
-          "Acted as an onboarding buddy",
+          "Acted as an onboarding buddy to a new hire",
           "Paired with an engineer to help them with an unfamiliar area",
           "Helped a colleague understand their feelings"
         ]
@@ -1009,7 +1012,7 @@ export const tracks: Tracks = {
           "Creates lunch-n-learn series and lines up speakers"
         ],
         examples: [
-          "Created and lead Vend's Frontend platform group",
+          "Created FEDs and led the FEDs Unite meeting",
           "Organized an Eng All Hands with an outside speaker",
           "Designed and taught Go microservices curriculum"
         ]
