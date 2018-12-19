@@ -231,7 +231,7 @@ export const tracks: Tracks = {
   },
 
   "FOUNDATIONS (PLATFORM)": {
-    displayName: "Platform & Data",
+    displayName: "Platform",
     category: "A",
     summary: "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     milestones: [
