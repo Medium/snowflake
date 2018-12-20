@@ -237,14 +237,13 @@ export const tracks: Tracks = {
       {
         summary: "Works effectively within established structures, following current best practices",
         signals: [
-          "Writes thorough postmortems for service outages",
+          
           "Makes simple configuration changes to services",
-          "Has knowledge necessary to be level 1 on-call"
+          "Is on level 1 on-call and is able to independently do the initial triage of alerts"
         ],
         examples: [
-          "Made safe and effective changes to app-gulp",
-          "Added a new server role using Puppet and Terraform",
-          "Resolved out of disk errors independently"
+          "Provisioned new service",
+          
         ]
       },
       {
@@ -252,7 +251,8 @@ export const tracks: Tracks = {
         signals: [
           "Made minor version upgrades to technologies",
           "Creates re-usable components for developers",
-          "Triages service issues correctly and independently"
+          "Writes thorough postmortems for service outages",
+          "Resolved out of disk errors independently"
         ],
         examples: [
           "Identified source of slow requests in a single service from the edge in"
@@ -263,12 +263,14 @@ export const tracks: Tracks = {
         signals: [
           "Acts as primary maintainer for existing critical systems",
           "Designs moderately complex systems",
-          "Makes major version upgrades to libraries"
+          "Makes major version upgrades to libraries",
+          "Triages service issues correctly and independently"
         ],
         examples: [
           "Designed ENVS3 configuration management",
           "Built Vend log processing and storage pipeline",
-          "Designed flexible framework for writing machine learning jobs"
+          "Upgraded elasicsearch cluster",
+          "Is on level 2 on-call"
         ]
       },
       {
@@ -276,12 +278,16 @@ export const tracks: Tracks = {
         signals: [
           "Designs complex projects that encompass multiple systems and technologies",
           "Demonstrates deep knowledge of foundational systems",
-          "Introduces new databases and technologies to meet underserved needs"
+          "Introduces new technologies to meet underserved needs",
+          "Revamps existing infrastructure to reduce architectural gaps or improve performance"
         ],
         examples: [
           "Designed and built Duke",
           "Designed AWS configuration management",
-          "Introduced stream processing with Maxwell and Hydrant"
+          "Introduced stream processing with Maxwell and Hydrant",
+          "Defined and implemented autoscaling strategy to cope with elastic demand",
+          "Redesigned logging infrastructure",
+          "Automated DB migrations"
         ]
       },
       {
