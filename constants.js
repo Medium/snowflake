@@ -1037,6 +1037,7 @@ export const tracks: Tracks = {
     displayName: "Evangelism",
     category: "D",
     summary: "Promotes Vend to the outside world and establishes it as an attractive and thoughtful place to work",
+    description: "Vend devotes a lot of intentional thought to all its endeavours, whether our technical innovations, the cultural impact of our choices, or how we design our organisation. We strive to create a healthy, balanced, and mindful workplace, build exceptional products, and engage with the outside world in a responsible, inclusive way. We want our people to be communicating these efforts externally, representing Vend well, building partnerships with other organisations, and encouraging people to get to know us more.",
     milestones: [
       {
         summary: "Represents Vend well externally, and influences individuals positively",
@@ -1046,9 +1047,10 @@ export const tracks: Tracks = {
           "Communicates genuine and honest excitement about their work externally"
         ],
         examples: [
-          "Shared a Vend product launch post on Facebook",
+          "Shared a Vend product launch post or a job ad on social media",
           "Acted as a guide for a non-friend visitor to the office",
-          "Supported PR efforts by giving a quote or having a photo taken"
+          "Supported PR efforts by giving a quote or having a photo taken",
+          "Promoted Vend by talking to people at a conference or a meetup"
         ]
       },
       {
