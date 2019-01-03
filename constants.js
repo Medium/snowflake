@@ -1048,7 +1048,7 @@ export const tracks: Tracks = {
           "Shared a Vend product launch post or a job ad on social media",
           "Acted as a guide for a non-friend visitor to the office",
           "Supported PR efforts by giving a quote or having a photo taken",
-          "Promoted Vend by talking to people at a conference or meetup"
+          "Promoted Vend by talking to people at a conference or a meetup"
         ]
       },
       {
