@@ -311,6 +311,7 @@ export const tracks: Tracks = {
     displayName: "Services & APIs",
     category: "A",
     summary: "Develops expertise in server side engineering, using technologies such as Go, Java, or PHP",
+    description: "Excellent clients are no use if they don’t have a fast and responsive server to communicate with. We need engineers that can help build efficient application services that respond quickly to requests, and provide clean interfaces that can be accessed from multiple different clients.",
     milestones: [
       {
         summary: "Works effectively within established server side frameworks, following current best practices",
@@ -333,9 +334,12 @@ export const tracks: Tracks = {
           "Determines data needs from product requirements"
         ],
         examples: [
-          "Identified need for new index on Dynamo",
+          "Identified need for a new index in MySQL database",
           "Re-worked ElasticSearch analyzers for better autocompletion results",
-          "Added a new report type to the reporting service"
+          "Added a new report type to the reporting service",
+          "Implemented data cleanup functionality in a service",
+          "Refactored a service to make fewer external API calls",
+          "Added versioning to a previously non versioned entity"
         ]
       },
       {
@@ -361,6 +365,7 @@ export const tracks: Tracks = {
         examples: [
           "Designed and implemented Vend's mutation-based API",
           "Designed historical inventory system",
+          "Implemented data cleanup orchestration",
           "Created standards and tools for writing Go microservices"
         ]
       },
@@ -1045,6 +1050,7 @@ export const tracks: Tracks = {
     displayName: "Evangelism",
     category: "D",
     summary: "Promotes Vend to the outside world and establishes it as an attractive and thoughtful place to work",
+    description: "Vend devotes a lot of intentional thought to all its endeavours, whether our technical innovations, the cultural impact of our choices, or how we design our organisation. We strive to create a healthy, balanced, and mindful workplace, build exceptional products, and engage with the outside world in a responsible, inclusive way. We want our people to be communicating these efforts externally, representing Vend well, building partnerships with other organisations, and encouraging people to get to know us more.",
     milestones: [
       {
         summary: "Represents Vend well externally, and influences individuals positively",
@@ -1054,9 +1060,10 @@ export const tracks: Tracks = {
           "Communicates genuine and honest excitement about their work externally"
         ],
         examples: [
-          "Shared a Vend product launch post on Facebook",
+          "Shared a Vend product launch post or a job ad on social media",
           "Acted as a guide for a non-friend visitor to the office",
-          "Supported PR efforts by giving a quote or having a photo taken"
+          "Supported PR efforts by giving a quote or having a photo taken",
+          "Promoted Vend by talking to people at a conference or a meetup"
         ]
       },
       {
