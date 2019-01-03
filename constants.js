@@ -232,18 +232,19 @@ export const tracks: Tracks = {
     displayName: "Platform",
     category: "A",
     summary: "Develops expertise in foundational systems, such as CI/CD, data pipelines, databases, and infrastructure as a code",
-    description: "As Vend grow in scale and towards top of mind POS retailer software, we need to enable product teams to reliably ship valuable features as soon as possible and also provide a robust infrastructure on which the organization and retailers can rely on",
+    description: "As Vend grows in scale and towards top of mind POS retailer software, we need to reliably ship valuable features to our retailers as soon as possible and also provide a robust infrastructure on which the organization can rely on",
     milestones: [
       {
         summary: "Works effectively within established structures, following current best practices",
         signals: [
-          
           "Makes simple configuration changes to services",
-          "Is on level 1 on-call and is able to independently do the initial triage of alerts"
+          "Knows how to search logs in our logging infrastructure"
+          "Is on level 1 on-call and is able to independently do the initial alerts triage"
         ],
         examples: [
           "Provisioned new service",
-          
+          "Created dashboard in our monitoring tool of choice"
+          "Configured CI/CD to new or existing services"
         ]
       },
       {
