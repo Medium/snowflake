@@ -286,7 +286,7 @@ export const tracks: Tracks = {
           "Designed and built Duke",
           "Designed AWS configuration management",
           "Introduced stream processing with Maxwell and Hydrant",
-          "Defined and implemented autoscaling strategy to cope with elastic demand",
+          "Designed autoscaling strategy to cope with elastic demand",
           "Redesigned logging infrastructure",
           "Automated DB migrations"
         ]
