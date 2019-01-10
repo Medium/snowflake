@@ -1,18 +1,21 @@
 // @flow
 
-import TrackSelector from '../components/TrackSelector'
-import NightingaleChart from '../components/NightingaleChart'
+import type { Milestone, MilestoneMap, NoteMap, TrackId } from '../constants'
+import { eligibleTitles, milestoneToPoints, milestones, trackIds } from '../constants'
+
 import KeyboardListener from '../components/KeyboardListener'
-import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import NightingaleChart from '../components/NightingaleChart'
 import PointSummaries from '../components/PointSummaries'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import SheetsControl from '../components/SheetsControl'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
+import Track from '../components/Track'
+import TrackSelector from '../components/TrackSelector'
+import Wordmark from '../components/Wordmark'
 
 type SnowflakeAppState = {
+  notesByTrack: NoteMap,
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
@@ -47,13 +50,13 @@ const coerceMilestone = (value: number): Milestone => {
 
 const emptyState = (): SnowflakeAppState => {
   return {
-    name: '',
+    name: 'Enter Your Name Here',
     title: '',
     milestoneByTrack: {
       'MOBILE': 0,
       'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
+      'FOUNDATIONS (PLATFORM)': 0,
+      'SERVERS & API': 0,
       'PROJECT_MANAGEMENT': 0,
       'COMMUNICATION': 0,
       'CRAFT': 0,
@@ -67,6 +70,7 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUITING': 0,
       'COMMUNITY': 0
     },
+    notesByTrack: {},
     focusedTrackId: 'MOBILE'
   }
 }
@@ -78,8 +82,8 @@ const defaultState = (): SnowflakeAppState => {
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
+      'FOUNDATIONS (PLATFORM)': 3,
+      'SERVERS & API': 2,
       'PROJECT_MANAGEMENT': 4,
       'COMMUNICATION': 1,
       'CRAFT': 1,
@@ -93,6 +97,7 @@ const defaultState = (): SnowflakeAppState => {
       'RECRUITING': 3,
       'COMMUNITY': 0
     },
+    notesByTrack: {},
     focusedTrackId: 'MOBILE'
   }
 }
@@ -156,7 +161,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
+          <a href="https://vendhq.com/" target="_blank">
             <Wordmark />
           </a>
         </div>
@@ -170,6 +175,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
+              <SheetsControl
+                  name={this.state.name}
+                  title={this.state.title}
+                  onImport={this.handleSheetsImport.bind(this)}
+                  milestoneByTrack={this.state.milestoneByTrack}
+                  notesByTrack={this.state.notesByTrack} />
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
@@ -196,11 +207,16 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
         <Track
             milestoneByTrack={this.state.milestoneByTrack}
+            notesByTrack={this.state.notesByTrack}
             trackId={this.state.focusedTrackId}
-            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)}
+            handleTrackNoteChangeFn={(track, note) => this.handleTrackNoteChange(track, note)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
+            <a href="#" onClick={() => this.setState(emptyState())}>Reset</a>
+          </div>
+          <div style={{flex: 5}}>
+            Forked from <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
             Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
             Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
             Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
@@ -208,6 +224,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
       </main>
     )
+  }
+
+  handleSheetsImport(name: string, title: string, milestones: Milestone[], notes: string[]) {
+    const milestoneByTrack = {}
+    milestones.forEach((milestone, i) => {
+      milestoneByTrack[trackIds[i]] = milestone
+    })
+    const notesByTrack = {}
+    notes.forEach((note, i) => {
+      notesByTrack[trackIds[i]] = note
+    })
+    this.setState({ name, title, milestoneByTrack, notesByTrack })
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
@@ -218,6 +246,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
 
     this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+  }
+
+  handleTrackNoteChange(trackId: TrackId, note: string) {
+    const notesByTrack = Object.assign({}, this.state.notesByTrack)
+    notesByTrack[trackId] = note
+
+    this.setState({ notesByTrack })
   }
 
   shiftFocusedTrack(delta: number) {
@@ -236,9 +271,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   shiftFocusedTrackMilestoneByDelta(delta: number) {
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
-    if (milestone < 0) milestone = 0
-    if (milestone > 5) milestone = 5
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+    this.handleTrackMilestoneChange(this.state.focusedTrackId, coerceMilestone(milestone))
   }
 
   setTitle(title: string) {
