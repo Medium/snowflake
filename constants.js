@@ -242,8 +242,8 @@ export const tracks: Tracks = {
           "Is on level 1 on-call and is able to independently do the initial alerts triage"
         ],
         examples: [
-          "Provisioned new service",
-          "Created dashboard in our monitoring tool of choice"
+          "Understands the workflow to provision new services",
+          "Created dashboard in Vend's monitoring tool of choice",
           "Configured CI/CD to new or existing services"
         ]
       },
@@ -253,10 +253,10 @@ export const tracks: Tracks = {
           "Made minor version upgrades to technologies",
           "Creates re-usable components for developers",
           "Writes thorough postmortems for service outages",
-          "Resolved out of disk errors independently"
         ],
         examples: [
-          "Identified source of slow requests in a single service from the edge in"
+          "Identified source of slow requests in a single service from the edge in",
+          "Identified broken deployments and rolled them back"
         ]
       },
       {
