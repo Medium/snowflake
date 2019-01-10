@@ -288,7 +288,8 @@ export const tracks: Tracks = {
           "Introduced stream processing with Maxwell and Hydrant",
           "Designed autoscaling strategy to cope with elastic demand",
           "Redesigned logging infrastructure",
-          "Automated DB migrations"
+          "Automated DB migrations",
+          "Automated Terraform to plan & apply on merge to master"
         ]
       },
       {
