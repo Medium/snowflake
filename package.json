@@ -6,9 +6,9 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
-    "next": "^4.0.0-beta.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "scripts": {
     "dev": "next",
@@ -16,6 +16,7 @@
     "flow": "flow"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.2"
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "flow-bin": "^0.91.0"
   }
 }
