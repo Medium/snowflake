@@ -97,6 +97,11 @@ const defaultState = (): SnowflakeAppState => {
     focusedTrackId: 'MOBILE'
   }
 }
+const getIdForTrack = track => {
+  return Object.keys(tracks).find(trackId => {
+    return tracks[trackId] === track;
+  });
+}
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
@@ -189,8 +194,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
             decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
         <Track
-            milestoneByTrack={this.state.milestoneByTrack}
-            trackId={this.state.focusedTrackId}
+            currentMilestoneValue={this.state.milestoneByTrack[this.state.focusedTrackId]}
+            track={tracks[this.state.focusedTrackId]}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
@@ -204,8 +209,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     )
   }
 
-  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+  handleTrackMilestoneChange(track: Track, milestone: Milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
+    const trackId = getIdForTrack(track)
     milestoneByTrack[trackId] = milestone
 
     const titles = eligibleTitles(milestoneByTrack)

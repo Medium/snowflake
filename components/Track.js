@@ -1,20 +1,19 @@
 // @flow
 
-import { tracks, milestones, categoryColorScale } from '../constants'
+import { milestones, categoryColorScale } from '../constants'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+import type { Track, Milestone } from '../constants'
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
-  trackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  currentMilestoneValue: Milestone,
+  track: Track,
+  handleTrackMilestoneChangeFn: (Track, Milestone) => void
 }
 
-class Track extends React.Component<Props> {
+class TrackComponent extends React.Component<Props> {
   render() {
-    const track = tracks[this.props.trackId]
-    const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
-    const currentMilestone = track.milestones[currentMilestoneId - 1]
+    const { currentMilestoneValue, track } = this.props;
+    const currentMilestone = track.milestones[currentMilestoneValue - 1]
     return (
       <div className="track">
         <style jsx>{`
@@ -54,11 +53,11 @@ class Track extends React.Component<Props> {
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
               {milestones.slice().reverse().map((milestone) => {
-                const isMet = milestone <= currentMilestoneId
+                const isMet = milestone <= currentMilestoneValue
                 return (
                   <tr key={milestone}>
-                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(track, milestone)}
+                        style={{border: `4px solid ${milestone === currentMilestoneValue ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
                       {milestone}
                     </td>
                   </tr>
@@ -89,4 +88,4 @@ class Track extends React.Component<Props> {
   }
 }
 
-export default Track
+export default TrackComponent
