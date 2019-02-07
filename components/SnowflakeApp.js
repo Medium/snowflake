@@ -187,7 +187,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
+            tracks={tracks}
+        />
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
             selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
