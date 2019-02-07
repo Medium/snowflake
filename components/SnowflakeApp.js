@@ -4,12 +4,13 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import { eligibleTitles, trackIds, milestones, milestoneToPoints, tracks } from '../constants'
+import type { DomainId, Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
 
 type SnowflakeAppState = {
+  domain: DomainId,
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
@@ -26,6 +27,7 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   })
   if (hashValues[16]) result.name = decodeURI(hashValues[16])
   if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  if (hashValues[18]) result.domain = decodeURI(hashValues[18])
   return result
 }
 
@@ -44,6 +46,7 @@ const coerceMilestone = (value: number): Milestone => {
 
 const emptyState = (): SnowflakeAppState => {
   return {
+    domain: '',
     name: '',
     title: '',
     milestoneByTrack: {
@@ -70,6 +73,7 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
+    domain: 'FULLSTACK',
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: {
@@ -96,7 +100,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title), encodeURI(state.domain))
   return values.join(',')
 }
 
