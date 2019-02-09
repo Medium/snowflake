@@ -2,6 +2,7 @@
 import * as d3 from 'd3'
 
 import FULLSTACK_TRACKS from './track-definitions/fullstack';
+import OPS_TRACKS from './track-definitions/ops';
 
 export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
@@ -80,7 +81,7 @@ type Tracks = {|
 
 const allTracks = {
   FULLSTACK: FULLSTACK_TRACKS,
-  OPS: FULLSTACK_TRACKS
+  OPS: OPS_TRACKS
 }
 
 export const getTracksForDomain = (domainId: DomainId) => allTracks[domainId] || FULLSTACK_TRACKS;
