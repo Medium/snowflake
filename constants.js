@@ -83,50 +83,21 @@ const allTracks = {
   OPS: FULLSTACK_TRACKS
 }
 
-export const trackIds: TrackId[] = Object.keys(tracks)
+export const getTracksForDomain = (domainId: DomainId) => allTracks[domainId] || FULLSTACK_TRACKS;
 
-export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
-  set.add(tracks[trackId].category)
-  return set
-}, new Set())
+export const getCategoryIdsFromTracks = tracks => {
+  const trackIds = Object.keys(tracks);
 
-export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
-  let pointsByCategory = new Map()
-  trackIds.forEach((trackId) => {
-    const milestone = milestoneMap[trackId]
-    const categoryId = tracks[trackId].category
-    let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
-  })
-  return Array.from(categoryIds.values()).map(categoryId => {
-    const points = pointsByCategory.get(categoryId)
-    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
-  })
+  return trackIds.reduce((set, trackId) => {
+    set.add(tracks[trackId].category)
+    return set
+  }, new Set())
 }
 
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
-    .reduce((sum, addend) => (sum + addend), 0)
+export const getCategoryColorScaleFromTracks = tracks => {
+  const categoryIds = getCategoryIdsFromTracks(tracks);
 
-export const categoryColorScale = d3.scaleOrdinal()
-  .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
-
-export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
-]
-
-export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-    .map(title => title.label)
+  return d3.scaleOrdinal()
+    .domain(categoryIds)
+    .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
 }

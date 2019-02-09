@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import { milestones, categoryColorScale } from '../constants'
+import { milestones } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 400
@@ -12,7 +12,8 @@ type Props = {
   milestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void,
-  tracks: Array<Track>
+  tracks: Array<Track>,
+  categoryColorScale: (String) => String
 }
 
 class NightingaleChart extends React.Component<Props> {
@@ -83,14 +84,14 @@ class NightingaleChart extends React.Component<Props> {
                           className={'track-milestone ' + (isMet ? 'is-met ' : ' ') + (isCurrentMilestone ? 'track-milestone-current' : '')}
                           onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], milestone)}
                           d={this.arcFn(milestone)}
-                          style={{fill: isMet ? categoryColorScale(this.props.tracks[trackId].category) : undefined}} />
+                          style={{fill: isMet ? this.props.categoryColorScale(this.props.tracks[trackId].category) : undefined}} />
                     )
                   })}
                   <circle
                       r="8"
                       cx="0"
                       cy="-50"
-                      style={{fill: categoryColorScale(this.props.tracks[trackId].category)}}
+                      style={{fill: this.props.categoryColorScale(this.props.tracks[trackId].category)}}
                       className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
                       onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], 0)} />
                 </g>
