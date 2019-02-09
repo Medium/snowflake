@@ -2,7 +2,7 @@
 
 import React from 'react'
 import * as d3 from 'd3'
-import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
+import { milestones, categoryColorScale } from '../constants'
 import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 400
@@ -11,7 +11,8 @@ const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a
 type Props = {
   milestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void,
+  tracks: Array<Track>
 }
 
 class NightingaleChart extends React.Component<Props> {
@@ -21,6 +22,8 @@ class NightingaleChart extends React.Component<Props> {
 
   constructor(props: *) {
     super(props)
+
+    const trackIds = Object.keys(props.tracks);
 
     this.colorScale = d3.scaleSequential(d3.interpolateWarm)
       .domain([0, 5])
@@ -41,7 +44,10 @@ class NightingaleChart extends React.Component<Props> {
   }
 
   render() {
+    const trackIds = Object.keys(this.props.tracks);
+
     const currentMilestoneId = this.props.milestoneByTrack[this.props.focusedTrackId]
+
     return (
       <figure>
         <style jsx>{`
@@ -77,14 +83,14 @@ class NightingaleChart extends React.Component<Props> {
                           className={'track-milestone ' + (isMet ? 'is-met ' : ' ') + (isCurrentMilestone ? 'track-milestone-current' : '')}
                           onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, milestone)}
                           d={this.arcFn(milestone)}
-                          style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
+                          style={{fill: isMet ? categoryColorScale(this.props.tracks[trackId].category) : undefined}} />
                     )
                   })}
                   <circle
                       r="8"
                       cx="0"
                       cy="-50"
-                      style={{fill: categoryColorScale(tracks[trackId].category)}}
+                      style={{fill: categoryColorScale(this.props.tracks[trackId].category)}}
                       className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
                       onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
                 </g>
