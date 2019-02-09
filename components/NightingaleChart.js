@@ -81,7 +81,7 @@ class NightingaleChart extends React.Component<Props> {
                       <path
                           key={milestone}
                           className={'track-milestone ' + (isMet ? 'is-met ' : ' ') + (isCurrentMilestone ? 'track-milestone-current' : '')}
-                          onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, milestone)}
+                          onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], milestone)}
                           d={this.arcFn(milestone)}
                           style={{fill: isMet ? categoryColorScale(this.props.tracks[trackId].category) : undefined}} />
                     )
@@ -92,7 +92,7 @@ class NightingaleChart extends React.Component<Props> {
                       cy="-50"
                       style={{fill: categoryColorScale(this.props.tracks[trackId].category)}}
                       className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
-                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
+                      onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], 0)} />
                 </g>
             )})}
           </g>
