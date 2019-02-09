@@ -7,7 +7,7 @@ import Track from '../components/Track'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints, tracks } from '../constants'
 import type { DomainId, Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
+import DomainSelector from '../components/DomainSelector'
 
 type SnowflakeAppState = {
   domain: DomainId,
@@ -171,10 +171,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
+              <DomainSelector
+                  currentDomain={this.state.domain}
+                  setDomainFn={(domain) => this.setDomain(domain)} />
             </form>
           </div>
           <div style={{flex: 0}}>
@@ -244,10 +243,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
   }
 
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
+  setDomain(domain: string) {
+    this.setState({ domain })
   }
 }
 

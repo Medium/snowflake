@@ -27,6 +27,11 @@ export type MilestoneMap = {
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
+export const domains = [
+  'FULLSTACK',
+  'OPS'
+];
+
 export type DomainId = 'FULLSTACK' | 'OPS'
 
 export const milestoneToPoints = (milestone: Milestone): number => {
