@@ -14,7 +14,7 @@
     "dev": "next",
     "export": "next build && next export",
     "flow": "flow",
-    "start": "next"
+    "start": "next -p 5000"
   },
   "devDependencies": {
     "flow-bin": "^0.57.2"
