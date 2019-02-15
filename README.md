@@ -1,6 +1,6 @@
 # Snowflake
 
-Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
+Snowflake is Dialogue's tool for planning and supporting our engineers' career development. It is forked from Medium tool snowflake.medium.com. You can read more
 about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
 Our growth tool is hosted [publicly](https://snowflake.medium.com).
 
