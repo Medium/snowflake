@@ -222,11 +222,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const milestoneByTrack = this.state.milestoneByTrack
     const trackId = getIdForTrack(track, getTracksForDomain(this.state.domain))
     milestoneByTrack[trackId] = milestone
-
     this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   shiftFocusedTrack(delta: number) {
+    const trackIds = Object.keys(getTracksForDomain(this.state.domain))
     let index = trackIds.indexOf(this.state.focusedTrackId)
     index = (index + delta + trackIds.length) % trackIds.length
     const focusedTrackId = trackIds[index]
@@ -243,7 +243,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     let milestone = prevMilestone + delta
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+    this.handleTrackMilestoneChange(getTracksForDomain(this.state.domain)[this.state.focusedTrackId], milestone)
   }
 
   setDomain(domain: string) {
