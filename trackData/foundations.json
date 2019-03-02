@@ -38,7 +38,7 @@
       ],
       "examples": [
         "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
+        "Built WMDE's realtime stats pipeline",
         "Designed flexible framework for writing machine learning jobs"
       ]
     }, {
@@ -64,7 +64,7 @@
       ],
       "examples": [
         "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
+        "Defined and developed WMDE's continuous delivery strategy",
         "Developed and implemented HA strategy"
       ]
     }]

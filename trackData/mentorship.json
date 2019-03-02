@@ -30,7 +30,7 @@
       ]
     }, {
       "points": 6,
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to WMDE's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
@@ -39,7 +39,7 @@
       "examples": [
         "Gave a brown bag presentation on payments",
         "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module"
+        "Wrote WMDE-U content module"
       ]
     }, {
       "points": 12,
@@ -50,7 +50,7 @@
         "Creates brown bag series and lines up speakers"
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead WMDE's Women in Eng group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum"
       ]
