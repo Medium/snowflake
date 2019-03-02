@@ -169,10 +169,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           name={this.state.name}
           setNameFn={(name) => this.setState({name})}
         />
-        {/* <TitleSelector
+        <TitleSelector
             milestoneByTrack={this.state.milestoneByTrack}
             currentTitle={this.state.title}
-            setTitleFn={(title) => this.setTitle(title)} /> */}
+            setTitleFn={(title) => this.setTitle(title)} />
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}

@@ -1,10 +1,10 @@
 {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens WMDE's team by bringing in excellent staff members",
     "milestones": [{
       "points": 1,
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at WMDE",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -25,7 +25,7 @@
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet WMDE employees",
         "Tested a new service for quality and diversity of candidates"
       ]
     }, {
@@ -51,7 +51,7 @@
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
+        "Organized and lead WMDE's presence at a recruitment fair",
         "Started CODE2040 internship program"
       ]
     }, {
