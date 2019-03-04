@@ -5,16 +5,16 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import { milestones, milestoneToPoints, getTracksForDomain, getCategoryColorScaleFromTracks } from '../constants'
-import type { DomainId, Milestone, MilestoneMap, TrackId } from '../constants'
+import type { DomainId, Milestone, MilestoneMap } from '../constants'
 import React from 'react'
 import DomainSelector from '../components/DomainSelector'
 
 type SnowflakeAppState = {
   domain: DomainId,
   milestoneByTrack: MilestoneMap,
-  name: string,
-  title: string,
-  focusedTrackId: TrackId,
+  name: String,
+  title: String,
+  focusedTrackId: String,
 }
 
 const hashToState = (hash: String, trackIds: Array<TrackId>): ?SnowflakeAppState => {
@@ -50,24 +50,24 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      '1': 0,
+      '2': 0,
+      '3': 0,
+      '4': 0,
+      '5': 0,
+      '6': 0,
+      '7': 0,
+      '8': 0,
+      '9': 0,
+      '10': 0,
+      '11': 0,
+      '12': 0,
+      '13': 0,
+      '14': 0,
+      '15': 0,
+      '16': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: '1'
   }
 }
 
@@ -77,24 +77,24 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      '1': 1,
+      '2': 2,
+      '3': 3,
+      '4': 2,
+      '5': 4,
+      '6': 1,
+      '7': 1,
+      '8': 4,
+      '9': 3,
+      '10': 2,
+      '11': 0,
+      '12': 4,
+      '13': 2,
+      '14': 2,
+      '15': 3,
+      '16': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: '1'
   }
 }
 
