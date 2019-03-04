@@ -1,6 +1,6 @@
 const tracks = {
   "5": {
-    "displayName": "Project management",
+    "displayName": "Project Management",
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
@@ -11,9 +11,9 @@ const tracks = {
         "Writes effective technical specs outlining approach",
       ],
       "examples": [
-        "Wrote the technical spec for featured post images",
-        "Delivered stream item support for email digests",
-        "Delivered payment history dashboard",
+        "Wrote the technical spec (TDD/GDD) for a small project",
+        "Delivered dashboard widget updates",
+        "Delivered customer.io event updates that allowed email marketing to build out a new segment",
       ],
     }, {
       "summary": "Effectively delivers small personal projects",
@@ -23,9 +23,9 @@ const tracks = {
         "Defines and hits interim milestones",
       ],
       "examples": [
-        "Delivered promo editor",
-        "Delivered audio uploading for web client",
-        "Executed the recommends to claps backfill",
+        "Drove pro/con conversations for StyledComponents and Emotion",
+        "Delivered Planner updates in BackBone",
+        "Consistently meets sprint commitments",
       ],
     }, {
       "summary": "Effectively delivers projects through a small team",
@@ -47,7 +47,7 @@ const tracks = {
         "Leverages recognition of repeated project patterns",
       ],
       "examples": [
-        "Oversaw technical delivery of Hightower",
+        "Oversaw technical delivery of Aurora Migration",
         "Managed infrastructure migration to VPC",
         "Involved marketing, legal, and appropriate functions at project start",
       ],
@@ -55,12 +55,12 @@ const tracks = {
       "summary": "Manages major company pushes delivered by multiple teams",
       "signals": [
         "Considers external constraints and business objectives when planning",
-        "Leads teams of teams, and coordinates effective cross-functional collaboration",
+        "Leads teams of teams, and coordinates effective cross- functional collaboration",
         "Owns a key company metric",
       ],
       "examples": [
         "Managed technical migration to SOA",
-        "Lead technical delivery of 10/7",
+        "Aligns engineering OKRs to company milestones and drives those OKRs through dedicated platform and services teams",
         "Delivered multi-month engineering project on time",
       ],
     }],
@@ -78,21 +78,21 @@ const tracks = {
         "Asks for help at the appropriate juncture",
       ],
       "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
-        "Gave thoughtful check-in and check-out comments",
+        "Reports required updates to PMs prior to DemoDays",
+        "Updated project status changes in Trello/Jira promptly",
+        "Gave thoughtful Pull Request comments",
       ],
     }, {
       "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
       "signals": [
         "Practises active listening and suspension of attention",
+        "Received and integrated radical candor positively",
         "Ensures stakeholders are aware of current blockers",
-        "Chooses the appropriate tools for accurate and timely communication",
       ],
       "examples": [
-        "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
-        "Spoke to domain experts before writing spec",
+        "Created cross-team Slack channel for a small project",
+        "Chooses the appropriate tools for accurate and timely communication",
+        "Spoke to domain experts before writing TDD/GDD",
       ],
     }, {
       "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
@@ -103,8 +103,8 @@ const tracks = {
       ],
       "examples": [
         "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
-        "Gave notice of upcoming related work in Eng Briefing",
+        "Gave a substantial Developer Meetup presentation on React",
+        "Gave notice of upcoming related work in the Developer SoS",
       ],
     }, {
       "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
@@ -115,8 +115,8 @@ const tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
+        "Wrote Prodigy's growth framework and rationale",
+        "Aligned the entire organization around a change initiative",
       ],
     }, {
       "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
@@ -127,7 +127,7 @@ const tracks = {
       ],
       "examples": [
         "Organized half year check-in company offsite",
-        "Created the communication plan for a large organizational change",
+        "Created a communication plan for a large organizational change",
         "Presented to the board about key company metrics and projects",
       ],
     }],
@@ -145,7 +145,7 @@ const tracks = {
         "Writes clear comments and documentation",
       ],
       "examples": [
-        "Caught a bug on Hatch before it went live",
+        "Caught a bug in the job queue before it went live",
         "Landed non-trivial PR with no caretaker comments",
         "Wrote hermetic tests for the happy and sad cases",
       ],
@@ -158,7 +158,7 @@ const tracks = {
       ],
       "examples": [
         "Requested tests for a PR when acting as reviewer",
-        "Reduced the number of zelda fitzgerald exceptions",
+        "Reduced the number of brittle tests",
         "Fixed a TODO for someone else in the codebase",
       ],
     }, {
@@ -169,9 +169,9 @@ const tracks = {
         "Adds tooling to improve code quality",
       ],
       "examples": [
-        "Improved PRB to run the same volume of tests faster",
+        "Improved GraphQL to run the same volume of tests faster",
         "Simplified hermetic test data modification",
-        "Created fixture system for visual quality",
+        "Integrated ESLint with agreed upon rules",
       ],
     }, {
       "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
@@ -181,9 +181,9 @@ const tracks = {
         "Coordinates Watch priorities and projects",
       ],
       "examples": [
-        "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
-        "Defined and oversaw plan for closing Heartbleed vulnerability",
+        "Added code coverage reporting and build failures to DataDog",
+        "Iterated repeatedly to develop Prodigy-Hydra shared component methodologies",
+        "Defined and oversaw plan for resolving NPM token leak",
       ],
     }, {
       "summary": "Enables and encourages the entire organization to make quality a central part of the development process",
@@ -193,9 +193,9 @@ const tracks = {
         "Secures time and resources from execs to support great quality",
       ],
       "examples": [
-        "Negotiated resources for Fix-It week with exec team",
+        "Negotiated resources for Sprint 0 week with exec team",
         "Instituted and ensured success of a 20% time policy",
-        "Started The Watch",
+        "Negotiated resources for Sprint 0 week with exec team",
       ],
     }],
   },
@@ -207,14 +207,14 @@ const tracks = {
     "milestones": [{
       "summary": "Identifies opportunities for organizational change or product improvements",
       "signals": [
-        "Writes Hatch posts about improvement opportunities",
+        "Writes posts and documentation about improvement opportunities",
         "Raises meaningful tensions in tactical meetings",
         "Asks leadership team probing questions at FAM",
       ],
       "examples": [
-        "Wrote about problems with TTR on Hatch",
-        "Wrote about content policy problems on Hatch",
-        "Reported a site issue in Github",
+        "Wrote about problems with developer onboarding",
+        "Brings up meaningful blockers in agile ceremonies",
+        "Reported a site issue in Jira",
       ],
     }, {
       "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
@@ -225,7 +225,7 @@ const tracks = {
       ],
       "examples": [
         "Advocated on own behalf for a change in role",
-        "Implemented flow typing for promises",
+        "Introduced better testing tools",
         "Audited web client performance in Chrome and proposed fixes",
       ],
     }, {
@@ -237,8 +237,8 @@ const tracks = {
       ],
       "examples": [
         "Defined style guide to resolve style arguments",
-        "Proposed and implemented at-mentions prototype",
-        "Implemented video for Android independently, unprompted",
+        "Proposed and implemented a migration towards Express.js",
+        "Actively supports legacy customer support tooling",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
@@ -248,9 +248,9 @@ const tracks = {
         "Instigates major new features, services, or architectures",
       ],
       "examples": [
-        "Created the interviewing rubric and booklet",
+        "Introduced and lead TypeScript migration for game",
         "Implemented and secured support for native login",
-        "Migrated medium2 to mono repo and bazel",
+        "Build the answer pipeline",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the whole company",
@@ -261,8 +261,8 @@ const tracks = {
       ],
       "examples": [
         "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "Leads tribe restructuring efforts ",
+        "Convinced leadership and engineering org to move to The Growth Framework",
       ],
     }],
   },
@@ -281,7 +281,7 @@ const tracks = {
       "examples": [
         "Collected and delivered feedback",
         "Discussed career options and areas of interest informally",
-        "Hosted a Floodgate Academy intern",
+        "Demonstrates ability to coach junior developers",
       ],
     }, {
       "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
@@ -291,9 +291,9 @@ const tracks = {
         "Creates space for people to talk through challenges",
       ],
       "examples": [
-        "Set up and attended regular, constructive 1:1s",
+        "Set up and attended regular, constructive 1:1s ",
         "Provided coaching on how to have difficult conversations",
-        "Taught group members the GROW model",
+        "Facilitates specialization meetups",
       ],
     }, {
       "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
@@ -303,7 +303,7 @@ const tracks = {
         "Works with team leads to elevate emerging leaders",
       ],
       "examples": [
-        "Reviewed individual group member progression every 6 weeks",
+        "Reviewed individual group member progression at a regular cadence",
         "Suggested appropriate group member for Tech Lead position",
         "Arranged a requested switch of discipline for a group member",
       ],
@@ -315,7 +315,7 @@ const tracks = {
         "Ensures all group members' roles are meeting their career needs",
       ],
       "examples": [
-        "Completed training on situational leadership",
+        "Completed training on leadership",
         "Built a resourcing plan based on company, team, and individual goals",
         "Prevented regretted attrition with intentional, targeted intervention",
       ],
@@ -328,7 +328,7 @@ const tracks = {
       ],
       "examples": [
         "Provided coaching to group leads",
-        "Devised Pathwise curriculum for group leads",
+        "Devised managerial training for group leads",
         "Advocated to execs for engineer development resources and programs",
       ],
     }],
@@ -347,7 +347,7 @@ const tracks = {
       ],
       "examples": [
         "Facilitated effective tactical meeting with empathy",
-        "Explained tactical meeting format to a new hire",
+        "Actively teaches new employees about key engineering processes",
         "Provided feedback on sprint planning meeting",
       ],
     }, {
@@ -358,12 +358,12 @@ const tracks = {
         "Advocates for improved diversity and inclusion, and proposes ideas to help",
       ],
       "examples": [
-        "Defined Frankenmeeting structure for small team",
-        "Improved Watch on-call rotation scheduling",
+        "Facilitates and runs sprint ceremonies",
+        "Provides feedback to organziational templates for TDDs, PRs, etc.",
         "Defined standard channels for inter-team communication",
       ],
     }, {
-      "summary": "Develops processes to solve ongoing organizational problems",
+      "summary": "Develops processes and programs to solve ongoing organizational problems",
       "signals": [
         "Creates programs that meaningfully improve organizational diversity",
         "Solves long-standing organizational problems",
@@ -382,9 +382,9 @@ const tracks = {
         "Ties abstract concerns to concrete organizational actions or norms",
       ],
       "examples": [
-        "Connected mobile recruiting difficulties to focus on excellence",
-        "Raised leadership level change discrepancies",
-        "Analyzed the hiring rubric for false negative potential",
+        "Introduced referral bonuses",
+        "Raised challenges with product & technology long range planning",
+        "Analyzed the hiring scorecards for false negative potential",
       ],
     }, {
       "summary": "Leads initiatives to address issues stemming from hidden dynamics and company norms",
@@ -394,7 +394,7 @@ const tracks = {
         "Leads planning and communication for reorgs",
       ],
       "examples": [
-        "Lead efforts to increase number of mobile engineers",
+        "Lead efforts to increase number of guild specific engineers",
         "Directed resources to meaningfully improve diversity at all levels",
         "Built the growth framework rubric",
       ],
@@ -415,7 +415,7 @@ const tracks = {
       "examples": [
         "Ensured group members were taking enough vacation",
         "Put themself in another's shoes to understand their perspective",
-        "Checked in with colleague showing signs of burnout",
+        "Checked in with colleague showing signs of burnout ",
       ],
     }, {
       "summary": "Creates a positive, supportive, engaging team environment for group members",
@@ -426,7 +426,7 @@ const tracks = {
       ],
       "examples": [
         "Coordinated a small celebration for a project launch",
-        "Connected tedious A|B testing project with overall company goals",
+        "Connected A|B testing project with overall company goals",
         "Noted a team without a recent win and suggested some easy quick wins",
       ],
     }, {
@@ -437,8 +437,8 @@ const tracks = {
         "Helps group members approach problems with curiosity",
       ],
       "examples": [
-        "Completed training on transference and counter transference",
-        "Completed training on compromise and negotiation techniques",
+        "Ran training programs through Lunch & Learns, Developer Meetups, etc",
+        "Completed managerial training on Radical Candor",
         "Reframed a problem as a challenge, instead of a barrier, when appropriate",
       ],
     }, {
@@ -480,7 +480,7 @@ const tracks = {
         "Talks through problems non-judgmentally",
       ],
       "examples": [
-        "Completed training on diagnosing problems",
+        "Provides useful resources in a complex pull request",
         "Unblocked a group member",
         "Reinforces and affirms positive feedback for good work",
       ],
@@ -492,7 +492,7 @@ const tracks = {
         "Works to encourage ownership of actions and responsibilities",
       ],
       "examples": [
-        "Completed training on decision making",
+        "Contributes to Scaling Challenge objectives",
         "Convinced a group member to solve a problem directly, rather than doing it for them",
         "Gave honest feedback about poor performance, with compassion",
       ],
@@ -564,16 +564,16 @@ const tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to Prodigy's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
         "Finds tools that work best for a team member's personality",
       ],
       "examples": [
-        "Gave a brown bag presentation on payments",
-        "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Gave a presentation on PSconfig",
+        "Wrote documentation for the Answers Pipeline",
+        "Suggests appropriate SMARTgoals to co-workers",
       ],
     }, {
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
@@ -583,12 +583,12 @@ const tracks = {
         "Creates brown bag series and lines up speakers",
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead a Diversity and Inclusion group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum",
       ],
     }, {
-      "summary": "Instills and promotes a culture of learning and development within the team",
+      "summary": "Instills and promotes a culture of learning and development within the entire engineering team",
       "signals": [
         "Sets incentive structures to recognise and reward mentorship",
         "Empowers team members to develop themselves",
@@ -597,7 +597,7 @@ const tracks = {
       "examples": [
         "Instituted the professional education budget for engineers",
         "Mentored mentors",
-        "Started the eng advisor program and lined up external mentors",
+        "Started an eng advisor program and lined up external mentors",
       ],
     }],
   },
@@ -605,66 +605,66 @@ const tracks = {
   "14": {
     "displayName": "Evangelism",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Promotes Prodigy to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Represents Prodigy/Ops well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
+        "Attends Prodigy-hosted events and talks with guests",
         "Communicates genuine and honest excitement about their work externally",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
+        "Shared a Prodigy product launch post on Facebook or Twitter",
         "Acted as a guide for a non-friend visitor to the office",
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Takes meaningful action to introduce people to Prodigy",
+        "Joined public Slack group and represented Prodigy appropriately, and well",
+        "Organizes positive small- or Prodigy-sized events that bring people to Prodigy",
       ],
       "examples": [
-        "Volunteered as a helper for CODE2040 writing workshop",
+        "Volunteered as a helper for social engineering events in the area",
         "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Talked at a Women Who Code event hosted at Prodigy",
       ],
     }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Works hard to positively influence large groups of people on their views of Prodigy",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
         "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Writes blog posts about Prodigy that receive moderate traffic",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
+        "Represented Prodigy on a panel at a conference of industry experts",
         "Established close ties with Creative Commons",
-        "Built a durable, long-standing relationship with Code2040",
+        "Built a durable, long-standing org relationship with local engineering groups ",
       ],
     }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
+      "summary": "Establishes Prodigy as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
+        "Publishes material about Prodigy's organizational or technical innovations",
+        "Leverages significant following to evangelise Prodigy",
       ],
       "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
-        "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+        "Published a paper on Prodigy technology in a peer-reviewed journal",
+        "Writes technical blog posts on behalf of Prodigy",
+        "Creates an Engineering Blog platform for Prodigy",
       ],
     }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
+      "summary": "Introduces Prodigy in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
+        "Influences people with large audiences to talk about Prodigy positively",
+        "Drives recognition and adoption of Prodigy in significant numbers",
       ],
       "examples": [
         "Published or interviewed in a mainstream newspaper or website outside tech",
         "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
+        "Represented Prodigy in national televised media",
       ],
     }],
   },
@@ -672,9 +672,9 @@ const tracks = {
   "15": {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens Prodigy's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Prodigy",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -688,13 +688,13 @@ const tracks = {
     }, {
       "summary": "Interviews regularly, helps the team make meaningful hiring decisions, and helps build a diverse pipeline",
       "signals": [
-        "Uses interview rubric to provide clear, objective feedback on candidates",
+        "Uses interview scorecard to provide clear, objective feedback on candidates",
         "Interviews candidates with empathy and treats them all with equal respect",
         "Researches approaches for sourcing candidates and diversifying hiring",
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet Prodigy employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -718,8 +718,8 @@ const tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
-        "Started CODE2040 internship program",
+        "Organized and lead Prodigy's presence at a recruitment fair",
+        "Started accelerator program",
       ],
     }, {
       "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
@@ -748,7 +748,7 @@ const tracks = {
         "Joins groups or committees outside regular duties",
       ],
       "examples": [
-        "Joined and actively participated in the web client guild",
+        "Joined and actively participated in an engineering guild",
         "Brought a small gift back from vacation for the team",
         "Wrote entertaining and informative Prod Ops writeups on Hatch",
       ],
@@ -772,9 +772,9 @@ const tracks = {
         "Uses position to raise difficult issues on someone's behalf",
       ],
       "examples": [
-        "Lead Watch cycles with little support while still contributing to projects",
-        "Started and drove the LGBTQIA ERG",
-        "Stayed positive and improved team morale during period after layoffs",
+        "Helps support devops with Service Desk items",
+        "Joined team building committee",
+        "Stayed positive and improved team morale during period after employee attrition",
       ],
     }, {
       "summary": "Exemplifies selflessness for the team without compromising responsibilities, and lifts everyone up",
@@ -785,14 +785,14 @@ const tracks = {
       ],
       "examples": [
         "Devoted large amount of time to helping outside direct responsibilities",
-        "Refactored hundreds of legacy Shepherd nodes",
-        "Acted as sole maintainer of Boxen for years",
+        "Refactored dozens of legacy API endpoints",
+        "Acted as sole maintainer of a legacy service",
       ],
     }, {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to Prodigy's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
