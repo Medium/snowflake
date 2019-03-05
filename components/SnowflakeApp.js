@@ -4,10 +4,11 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import { milestones, milestoneToPoints, getTracksForDomain, getCategoryColorScaleFromTracks } from '../constants'
+import { milestones, milestoneToPoints, getTracksForDomain, getTargetRolesForDomain, getCategoryColorScaleFromTracks } from '../constants'
 import type { DomainId, Milestone, MilestoneMap } from '../constants'
 import React from 'react'
 import DomainSelector from '../components/DomainSelector'
+import TargetRoleSelector, {EMPTY_VALUE as TARGET_ROLE_EMPTY_VALUE} from '../components/TargetRoleSelector'
 
 type SnowflakeAppState = {
   domain: DomainId,
@@ -15,6 +16,7 @@ type SnowflakeAppState = {
   name: String,
   title: String,
   focusedTrackId: String,
+
 }
 
 const hashToState = (hash: String, trackIds: Array<TrackId>): ?SnowflakeAppState => {
@@ -49,6 +51,7 @@ const emptyState = (): SnowflakeAppState => {
     domain: '',
     name: '',
     title: '',
+    targetRole: TARGET_ROLE_EMPTY_VALUE,
     milestoneByTrack: {
       '1': 0,
       '2': 0,
@@ -76,6 +79,7 @@ const defaultState = (): SnowflakeAppState => {
     domain: 'FULLSTACK',
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
+    targetRole: TARGET_ROLE_EMPTY_VALUE,
     milestoneByTrack: {
       '1': 1,
       '2': 2,
@@ -136,6 +140,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   render() {
     const tracks = getTracksForDomain(this.state.domain);
+    const targetRoles = getTargetRolesForDomain(this.state.domain);
     const categoryColorScale = getCategoryColorScaleFromTracks(tracks);
     return (
       <main>
@@ -179,6 +184,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
               <DomainSelector
                   currentDomain={this.state.domain}
                   setDomainFn={(domain) => this.setDomain(domain)} />
+              {targetRoles &&
+                <TargetRoleSelector
+                    targetRole={this.state.targetRole}
+                    allRoles={targetRoles}
+                    setTargetRoleFn={(targetRole) => this.setTargetRole(targetRole)} />
+              }
             </form>
           </div>
           <div style={{flex: 0}}>
@@ -247,7 +258,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   setDomain(domain: string) {
-    this.setState({ domain })
+    this.setState({
+      domain,
+      targetRole: TARGET_ROLE_EMPTY_VALUE
+    })
+  }
+
+  setTargetRole(targetRole: string) {
+    this.setState({ targetRole })
   }
 }
 

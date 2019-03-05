@@ -4,6 +4,8 @@ import * as d3 from 'd3'
 import FULLSTACK_TRACKS from './track-definitions/fullstack';
 import OPS_TRACKS from './track-definitions/ops';
 
+import FULLSTACK_TARGET_ROLES from './target-roles/fullstack';
+
 export const milestones = [0, 1, 2, 3, 4, 5]
 
 export const domains = [
@@ -24,10 +26,16 @@ export type Track = {
 
 const allTracks = {
   FULLSTACK: FULLSTACK_TRACKS,
-  OPS: OPS_TRACKS
+  OPS: OPS_TRACKS,
+}
+
+const targetRoles = {
+  FULLSTACK: FULLSTACK_TARGET_ROLES,
 }
 
 export const getTracksForDomain = (domainId: DomainId) => allTracks[domainId] || FULLSTACK_TRACKS;
+
+export const getTargetRolesForDomain = (domainId: DomainId) => targetRoles[domainId];
 
 export const getCategoryIdsFromTracks = tracks => {
   const trackIds = Object.keys(tracks);
