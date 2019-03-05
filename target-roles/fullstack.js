@@ -1,22 +1,22 @@
 export default [
   {
-    displayName: 'Junior Fullstack Developer',
+    displayName: 'Junior Full Stack Developer',
     trackLevels: [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   },
   {
-    displayName: 'Intermediate Fullstack Developer',
+    displayName: 'Intermediate Full Stack Developer',
     trackLevels: [2, 1, 2, 2, 1, 2, 2, 1, 0, 0, 1, 1, 0, 0, 0, 1],
   },
   {
-    displayName: 'Senior Fullstack Developer',
+    displayName: 'Senior Full Stack Developer',
     trackLevels: [3, 3, 3, 3, 2, 3, 3, 2, 1, 1, 2, 2, 1, 1, 1, 2],
   },
   {
-    displayName: 'Fullstack Tech Lead',
+    displayName: 'Full Stack Tech Lead',
     trackLevels: [3, 3, 4, 4, 3, 3, 3, 3, 2, 1, 2, 2, 2, 2, 2, 2],
   },
   {
-    displayName: 'Fullstack Specialization Lead',
+    displayName: 'Full Stack Specialization Lead',
     trackLevels: [3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
   },
   {
