@@ -1,4 +1,4 @@
-import COMMON_TRACKS from './shared';
+import commonTracks from './shared';
 
 const tracks = {
   "1": {
@@ -272,5 +272,5 @@ const tracks = {
 
 export default {
   ...tracks,
-  ...COMMON_TRACKS
+  ...commonTracks
 }
