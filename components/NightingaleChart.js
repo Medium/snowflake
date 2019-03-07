@@ -60,8 +60,11 @@ class NightingaleChart extends React.Component<Props> {
             height: ${width}px;
           }
           .track-milestone {
-            fill: #eee;
+            fill: none;
             cursor: pointer;
+          }
+          .track-milesone--base {
+            fill: #eee;
           }
           .track-milestone-current, .track-milestone:hover {
             stroke: #000;
@@ -73,11 +76,42 @@ class NightingaleChart extends React.Component<Props> {
           <g transform={`translate(${width/2},${width/2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
               const isCurrentTrack = trackId == this.props.focusedTrackId
+
               return (
                 <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
+                  
+                  {/* background tiles */}
+                  {arcMilestones.map((milestone) => {
+                    return (
+                      <path
+                          key={milestone}
+                          className={'track-milestone track-milesone--base'}
+                          onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], milestone)}
+                          d={this.arcFn(milestone)}  />
+                    )
+                  })}
+                  
+                  {/* target goal tiles */}
+                  {this.props.targetMilestones && arcMilestones.map((milestone) => {
+                    const targetMilestone = this.props.targetMilestones[i];
+                    const actualMilestone = this.props.milestoneByTrack[trackId];
+                    const shouldDisplay = targetMilestone > actualMilestone && targetMilestone >= milestone;
+
+                    return (
+                      shouldDisplay && <path
+                          key={milestone}
+                          className={'track-milestone'}
+                          onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], milestone)}
+                          d={this.arcFn(milestone)}
+                          style={{fill: 'orange'}} />
+                    )
+                  })}
+
+                  {/* satisfied tiles */}
                   {arcMilestones.map((milestone) => {
                     const isCurrentMilestone = isCurrentTrack && milestone == currentMilestoneId
                     const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+
                     return (
                       <path
                           key={milestone}

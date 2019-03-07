@@ -114,6 +114,18 @@ const stateToHash = (state: SnowflakeAppState, trackIds: Array<TrackId>) => {
   return values.join(',')
 }
 
+const getTargetMilestonesForTargetRole = (targetRoles, targetRoleName) => {
+  if (targetRoleName === TARGET_ROLE_EMPTY_VALUE) {
+    return null;
+  }
+  
+  const targetRole = targetRoles.find(role => {
+    return role.displayName === targetRoleName;
+  });
+
+  return targetRole.milestones;
+}
+
 type Props = {}
 
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
@@ -142,6 +154,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const tracks = getTracksForDomain(this.state.domain);
     const targetRoles = getTargetRolesForDomain(this.state.domain);
     const categoryColorScale = getCategoryColorScaleFromTracks(tracks);
+    const targetMilestones = getTargetMilestonesForTargetRole(targetRoles, this.state.targetRole);
+
     return (
       <main>
         <style jsx global>{`
@@ -198,7 +212,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)}
                 tracks={tracks}
-                categoryColorScale={categoryColorScale} />
+                categoryColorScale={categoryColorScale}
+                targetMilestones={targetMilestones} />
           </div>
         </div>
         <TrackSelector
