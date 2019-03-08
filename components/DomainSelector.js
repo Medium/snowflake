@@ -11,7 +11,9 @@ type Props = {
 
 class DomainSelector extends React.Component {
   render() {
-    return <select value={this.props.currentDomain} onChange={e => this.props.setDomainFn(e.target.value)}>
+    return <div>
+      <label style={{display: 'block', 'margin-bottom': '5px'}}>Department</label>
+      <select value={this.props.currentDomain} onChange={e => this.props.setDomainFn(e.target.value)}>
       <style jsx>{`
         select {
           font-size: 20px;
@@ -26,6 +28,7 @@ class DomainSelector extends React.Component {
         </option>
       ))}
     </select>
+    </div>
   }
 }
 
