@@ -66,6 +66,11 @@ class NightingaleChart extends React.Component<Props> {
           .track-milesone--base {
             fill: #eee;
           }
+          .track-milestone-incomplete {
+            fill: none;
+            stroke-width: 2px;
+            stroke-linejoin: round;
+          }
           .track-milestone-current, .track-milestone:hover {
             stroke: #000;
             stroke-width: 4px;
@@ -95,15 +100,16 @@ class NightingaleChart extends React.Component<Props> {
                   {this.props.targetMilestones && arcMilestones.map((milestone) => {
                     const targetMilestone = this.props.targetMilestones[i];
                     const actualMilestone = this.props.milestoneByTrack[trackId];
-                    const shouldDisplay = targetMilestone > actualMilestone && targetMilestone >= milestone;
+                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+                    const shouldDisplay = !isMet && targetMilestone > actualMilestone && targetMilestone >= milestone;
 
                     return (
                       shouldDisplay && <path
                           key={milestone}
-                          className={'track-milestone'}
+                          className={'track-milestone track-milestone-incomplete'}
                           onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.tracks[trackId], milestone)}
                           d={this.arcFn(milestone)}
-                          style={{fill: 'orange'}} />
+                          style={{stroke: this.props.categoryColorScale(this.props.tracks[trackId].category)}} />
                     )
                   })}
 
