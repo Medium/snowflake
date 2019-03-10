@@ -3,6 +3,7 @@ import * as d3 from 'd3'
 
 import FULLSTACK_TRACKS from './track-definitions/fullstack';
 import OPS_TRACKS from './track-definitions/ops';
+import GAME_TRACKS from './track-definitions/game';
 
 import FULLSTACK_TARGET_ROLES from './target-roles/fullstack';
 
@@ -10,7 +11,8 @@ export const milestones = [0, 1, 2, 3, 4, 5]
 
 export const domains = [
   'FULLSTACK',
-  'OPS'
+  'OPS',
+  'GAME',
 ];
 
 export type Track = {
@@ -27,6 +29,7 @@ export type Track = {
 const allTracks = {
   FULLSTACK: FULLSTACK_TRACKS,
   OPS: OPS_TRACKS,
+  GAME: GAME_TRACKS,
 }
 
 const targetRoles = {
