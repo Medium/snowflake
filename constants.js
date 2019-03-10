@@ -9,10 +9,14 @@ import FULLSTACK_TARGET_ROLES from './target-roles/fullstack';
 
 export const milestones = [0, 1, 2, 3, 4, 5]
 
+export const FULLSTACK_DOMAIN = 'Full Stack';
+export const OPS_DOMAIN = 'Ops';
+export const GAME_DOMAIN = 'Game';
+
 export const domains = [
-  'FULLSTACK',
-  'OPS',
-  'GAME',
+  FULLSTACK_DOMAIN,
+  OPS_DOMAIN,
+  GAME_DOMAIN,
 ];
 
 export type Track = {
@@ -27,13 +31,13 @@ export type Track = {
 }
 
 const allTracks = {
-  FULLSTACK: FULLSTACK_TRACKS,
-  OPS: OPS_TRACKS,
-  GAME: GAME_TRACKS,
+  [FULLSTACK_DOMAIN]: FULLSTACK_TRACKS,
+  [OPS_DOMAIN]: OPS_TRACKS,
+  [GAME_DOMAIN]: GAME_TRACKS,
 }
 
 const targetRoles = {
-  FULLSTACK: FULLSTACK_TARGET_ROLES,
+  [FULLSTACK_DOMAIN]: FULLSTACK_TARGET_ROLES,
 }
 
 export const getTracksForDomain = (domainId: DomainId) => allTracks[domainId] || FULLSTACK_TRACKS;

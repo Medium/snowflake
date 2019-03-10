@@ -4,7 +4,7 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import { milestones, milestoneToPoints, getTracksForDomain, getTargetRolesForDomain, getCategoryColorScaleFromTracks } from '../constants'
+import { milestones, milestoneToPoints, getTracksForDomain, getTargetRolesForDomain, getCategoryColorScaleFromTracks, FULLSTACK_DOMAIN } from '../constants'
 import type { DomainId, Milestone, MilestoneMap } from '../constants'
 import React from 'react'
 import DomainSelector from '../components/DomainSelector'
@@ -76,7 +76,7 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    domain: 'FULLSTACK',
+    domain: FULLSTACK_DOMAIN,
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     targetRole: TARGET_ROLE_EMPTY_VALUE,
