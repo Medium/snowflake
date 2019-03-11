@@ -7,7 +7,7 @@ export const EMPTY_VALUE = 'None';
 class TargetRoleSelector extends React.Component {
   render() {
     return <div>
-        <label style={{display: 'block', 'margin-bottom': '5px'}}>Target role</label>
+        <label style={{display: 'block', 'marginBottom': '5px'}}>Target role</label>
         <select value={this.props.targetRole} onChange={e => this.props.setTargetRoleFn(e.target.value)}>
         <style jsx>{`
           select {
