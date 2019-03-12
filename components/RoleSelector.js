@@ -4,11 +4,11 @@ import React from 'react'
 
 export const EMPTY_VALUE = 'None';
 
-class TargetRoleSelector extends React.Component {
+class RoleSelector extends React.Component {
   render() {
     return <div>
-        <label style={{display: 'block', 'marginBottom': '5px'}}>Target role</label>
-        <select value={this.props.targetRole} onChange={e => this.props.setTargetRoleFn(e.target.value)}>
+        <label style={{display: 'block', 'marginBottom': '5px'}}>{this.props.label}</label>
+        <select value={this.props.selectedRole} onChange={e => this.props.setRoleFn(e.target.value)}>
         <style jsx>{`
           select {
             font-size: 20px;
@@ -28,4 +28,4 @@ class TargetRoleSelector extends React.Component {
   }
 }
 
-export default TargetRoleSelector
+export default RoleSelector
