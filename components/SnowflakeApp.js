@@ -8,7 +8,7 @@ import { milestones, milestoneToPoints, getTracksForDomain, getTargetRolesForDom
 import type { DomainId, Milestone, MilestoneMap } from '../constants'
 import React from 'react'
 import DomainSelector from '../components/DomainSelector'
-import TargetRoleSelector, {EMPTY_VALUE as TARGET_ROLE_EMPTY_VALUE} from '../components/TargetRoleSelector'
+import RoleSelector, {EMPTY_VALUE as TARGET_ROLE_EMPTY_VALUE} from '../components/RoleSelector'
 
 type SnowflakeAppState = {
   domain: DomainId,
@@ -16,7 +16,6 @@ type SnowflakeAppState = {
   name: String,
   title: String,
   focusedTrackId: String,
-
 }
 
 const hashToState = (hash: String, trackIds: Array<TrackId>): ?SnowflakeAppState => {
@@ -30,6 +29,7 @@ const hashToState = (hash: String, trackIds: Array<TrackId>): ?SnowflakeAppState
   if (hashValues[16]) result.name = decodeURI(hashValues[16])
   if (hashValues[17]) result.title = decodeURI(hashValues[17])
   if (hashValues[18]) result.domain = decodeURI(hashValues[18])
+  if (hashValues[19]) result.targetRole = decodeURI(hashValues[19])
   return result
 }
 
@@ -50,7 +50,7 @@ const emptyState = (): SnowflakeAppState => {
   return {
     domain: '',
     name: '',
-    title: '',
+    title: TARGET_ROLE_EMPTY_VALUE,
     targetRole: TARGET_ROLE_EMPTY_VALUE,
     milestoneByTrack: {
       '1': 0,
@@ -78,7 +78,7 @@ const defaultState = (): SnowflakeAppState => {
   return {
     domain: FULLSTACK_DOMAIN,
     name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    title: 'Senior Full Stack Developer',
     targetRole: TARGET_ROLE_EMPTY_VALUE,
     milestoneByTrack: {
       '1': 1,
@@ -110,7 +110,7 @@ const getIdForTrack = (track, tracks) => {
 
 const stateToHash = (state: SnowflakeAppState, trackIds: Array<TrackId>) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title), encodeURI(state.domain))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title), encodeURI(state.domain), encodeURI(state.targetRole))
   return values.join(',')
 }
 
@@ -152,9 +152,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   render() {
     const tracks = getTracksForDomain(this.state.domain);
-    const targetRoles = getTargetRolesForDomain(this.state.domain);
+    const allRoles = getTargetRolesForDomain(this.state.domain);
     const categoryColorScale = getCategoryColorScaleFromTracks(tracks);
-    const targetMilestones = getTargetMilestonesForTargetRole(targetRoles, this.state.targetRole);
+    const targetMilestones = getTargetMilestonesForTargetRole(allRoles, this.state.targetRole);
 
     return (
       <main>
@@ -198,11 +198,19 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
               <DomainSelector
                   currentDomain={this.state.domain}
                   setDomainFn={(domain) => this.setDomain(domain)} />
-              {targetRoles &&
-                <TargetRoleSelector
-                    targetRole={this.state.targetRole}
-                    allRoles={targetRoles}
-                    setTargetRoleFn={(targetRole) => this.setTargetRole(targetRole)} />
+              {allRoles &&
+                <RoleSelector
+                    label={'Current role'}
+                    selectedRole={this.state.title}
+                    allRoles={allRoles}
+                    setRoleFn={(currentRole) => this.setCurrentRole(currentRole)} />
+              }
+              {allRoles &&
+                <RoleSelector
+                    label={'Target role'}
+                    selectedRole={this.state.targetRole}
+                    allRoles={allRoles}
+                    setRoleFn={(targetRole) => this.setTargetRole(targetRole)} />
               }
             </form>
           </div>
@@ -267,12 +275,17 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   setDomain(domain: string) {
     this.setState({
       domain,
-      targetRole: TARGET_ROLE_EMPTY_VALUE
+      targetRole: TARGET_ROLE_EMPTY_VALUE,
+      title: TARGET_ROLE_EMPTY_VALUE,
     })
   }
 
   setTargetRole(targetRole: string) {
     this.setState({ targetRole })
+  }
+
+  setCurrentRole(role: string) {
+    this.setState({ title: role })
   }
 }
 
