@@ -1,0 +1,51 @@
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.4
+
+defaults:
+  # This is a safe, basic set of configurations that jobs can default to.
+  base: &base_defaults
+    docker: 
+      - image: circleci/node:latest #this should be set to a fixed version
+
+dev-context: &dev-context
+  context: dev
+  filters:
+    branches:
+      only: develop
+
+prod-context: &prod-context
+  context: production
+  filters:
+    branches:
+      only: master
+
+jobs:
+  build_and_deploy_dev:
+    << : *base_defaults
+    steps:
+      - checkout
+      - run: yarn && yarn export
+      - aws-s3/copy:
+        from: out/
+        to: "s3://prodigy-snowflake-dev"
+    << : *dev-context
+
+  build_and_deploy_prod:
+    << : *base_defaults
+    steps:
+      - checkout
+      - run: yarn && yarn export
+      - aws-s3/copy:
+        from: out/
+        to: "s3://prodigy-snowflake-production"
+    << : *prod-context
+    
+workflows:
+  version: 2
+  build_and_deploy_dev:
+    jobs:
+      - build_and_deploy_dev
+  build_and_deploy_prod:
+    jobs:
+      - build_and_deploy
