@@ -48,4 +48,4 @@ workflows:
       - build_and_deploy_dev
   build_and_deploy_prod:
     jobs:
-      - build_and_deploy
+      - build_and_deploy_prod
