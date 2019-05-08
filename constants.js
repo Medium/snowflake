@@ -168,8 +168,5 @@ export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
       titleList = titleList.filter(e => e !== "Engineering Manager");
       titleList = titleList.filter(e => e !== "Head of Engineering");
     }
-
-    console.log(titleList);
-
     return titleList;
 }

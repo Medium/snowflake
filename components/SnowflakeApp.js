@@ -8,7 +8,6 @@ import Track from '../components/Track'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import Admin from '../components/Admin';
 import Header from "./Header";
 
 type SnowflakeAppState = {
@@ -200,7 +199,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
        </div>
        <div>
-        <Admin />
        </div>
 
        </div>
