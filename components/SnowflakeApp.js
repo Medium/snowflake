@@ -73,21 +73,21 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    name: 'Soapbox Simon',
+    title: 'Senior Engineer',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
       'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
+      'SERVERS': 1,
+      'PROJECT_MANAGEMENT': 3,
       'COMMUNICATION': 1,
       'CRAFT': 1,
-      'INITIATIVE': 4,
+      'INITIATIVE': 1,
       'CAREER_DEVELOPMENT': 3,
       'ORG_DESIGN': 2,
       'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
+      'ACCOMPLISHMENT': 2,
       'MENTORSHIP': 2,
       'EVANGELISM': 2,
       'RECRUITING': 3,
@@ -128,9 +128,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   render() {
     return (
       <main>
+        <link href="https://fonts.googleapis.com/css?family=Muli:200i,400,400i,600,700,800,900|Roboto" rel="stylesheet" />
         <style jsx global>{`
           body {
-            font-family: Helvetica;
+            font-family: Muli, Roboto, Helvetica;
           }
           main {
             width: 960px;
@@ -156,13 +157,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
+          <a href="https://soapboxhq.com/" target="_blank">
             <Wordmark />
           </a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
+              <div style={{'font-size':'36px'}}>👋</div>
               <input
                   type="text"
                   className="name-input"
@@ -199,11 +201,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
+          <div style={{flex: 5}}>
+            ❤️ Made by: <a href="https://medium.engineering" target="_blank">Medium Eng.</a> <br />
+            💙 Modified by: <a href="https://soapboxhq.com">Soapbox Eng.</a> <br />
+            👩‍🔬 Learn about our Soapbox <a href="https://docs.google.com/document/d/1aGnE9t48aOCwrr_u0U80ArkcVhA9ANuUw0g_ClWzs8c/" target="_blank">growth framework</a>.
+          </div>
           <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+            <a href="#" onClick={() => this.setState(emptyState())}>Reset</a>
           </div>
         </div>
       </main>

@@ -102,31 +102,31 @@ export const tracks: Tracks = {
         "Reuses existing components appropriately",
       ],
       "examples": [
-        "Added existing button to a different iOS surface",
-        "Add follow button for publications on Android",
-        "Fetched and displayed a new stream, using existing stream item styles",
+        "Added existing button to a different iOS view",
+        "Add button to add item on Android",
+        "Fetched and displayed items using existing item styles",
       ],
     }, {
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
-        "Defines new useful and appropriate proto-generated objects",
+        "Defines new useful and appropriate objects",
         "Creates simple new activities on Android",
         "Migrates code from old patterns to new patterns",
       ],
       "examples": [
-        "Upgraded SDWebImage to a new major version",
-        "Added support for rendering a new type of stream item",
+        "Upgraded Alamofire to a new major version",
+        "Added support for rendering a new type of data endpoint",
         "Prototyped a simple new feature quickly",
       ],
     }, {
       "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
       "signals": [
         "Implements complex features with a large product surface area",
-        "Works effectively with  Android reactive programming framework",
+        "Works effectively with Android reactive programming framework",
         "Adds support for new iOS features after a major iOS version upgrade",
       ],
       "examples": [
-        "Designed iOS caching strategy for offline reading",
+        "Designed and personally implemented an iOS caching strategy for offline reading",
         "Built series reader on Android",
         "Informed the team about recent best practice changes and deprecations",
       ],
@@ -169,9 +169,9 @@ export const tracks: Tracks = {
         "Uses CSS appropriately, following style guide",
       ],
       "examples": [
-        "Implemented sticky footer on the post page",
-        "Hooked up the action to dismiss a post from a stream",
-        "Built PaymentHistory screen using ResponseScreen",
+        "Implemented sticky item adder on the item detail page",
+        "Hooked up the action to delete an item from an agenda",
+        "Built a new page using ready made scaffolding for EmberJS",
       ],
     }, {
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
@@ -181,9 +181,9 @@ export const tracks: Tracks = {
         "Prototypes simple new features quickly",
       ],
       "examples": [
-        "Built credit card input component",
+        "Built paginated page component",
         "Created shared buttons template",
-        "Built modal system",
+        "Uses and understand how Ember-Data works ",
       ],
     }, {
       "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints",
@@ -193,9 +193,9 @@ export const tracks: Tracks = {
         "Acts a caretaker for all of web client code",
       ],
       "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
-        "Designed and implemented ResponseScreen",
+        "Designed font loading strategy for SoapBox",
+        "Researched utility of service workers for SoapBox",
+        "Designed and implemented A major feature in the app",
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
@@ -205,9 +205,9 @@ export const tracks: Tracks = {
         "Makes architectural decisions that eliminate entire classes of bugs",
       ],
       "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
-        "Designed and pioneered proto-based model storage",
+        "Designed and implemented a significant SoapBox component library asset",
+        "Implemented SoapBox's complex microsoft teams embedded frame view",
+        "Designed and pioneered local storage model for front-end authentication",
       ],
     }, {
       "summary": "Is an industry-leading expert in web client or sets strategic web client direction for an eng team",
@@ -218,7 +218,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Invented CSS in JS",
-        "Defined and drove migration strategy to Lite",
+        "Defined and drove migration strategy to EmberJS from JQuery",
         "Implemented unidirectional data flow to completion",
       ],
     }],
@@ -236,7 +236,7 @@ export const tracks: Tracks = {
         "Performs backfills safely and effectively, without causing pages",
       ],
       "examples": [
-        "Made safe and effective Ansible changes",
+        "Made safe and effective AWS changes",
         "Implemented new ETL pipelines based on existing ones",
         "Resolved out of disk errors independently",
       ],
@@ -260,8 +260,8 @@ export const tracks: Tracks = {
         "Makes major version upgrades to libraries",
       ],
       "examples": [
-        "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
+        "Designed AWS configuration management",
+        "Built SoapBox's realtime stats pipeline and monitoring dashboard",
         "Designed flexible framework for writing machine learning jobs",
       ],
     }, {
@@ -272,7 +272,7 @@ export const tracks: Tracks = {
         "Introduces new databases and technologies to meet underserved needs",
       ],
       "examples": [
-        "Designed and built BBFD",
+        "Designed and built caching service for improved data performance management",
         "Designed AWS configuration management",
         "Introduced Kinesis and pioneered streaming events pipeline",
       ],
@@ -285,8 +285,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
-        "Developed and implemented HA strategy",
+        "Defined and developed SoapBox's continuous delivery strategy",
+        "Developed and implemented High Availability strategy",
       ],
     }],
   },
@@ -294,18 +294,18 @@ export const tracks: Tracks = {
   "SERVERS": {
     "displayName": "Servers",
     "category": "A",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+    "description": "Develops expertise in server side engineering, using technologies such as PHP, NodeJS, or Python and creating performant REST APIs.",
     "milestones": [{
       "summary": "Works effectively within established server side frameworks, following current best practices",
       "signals": [
         "Adds NodeJS endpoints using layers architecture",
-        "Adds golang endpoints using Gotham architecture",
+        "Adds Service endpoints using Laravel PHP Framework",
         "Makes minor server changes to support client needs",
       ],
       "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
-        "Added delete audio route to Buggle",
-        "Queried a Dynamo LSI appropriately",
+        "Added IFTTT trigger for adding items to SoapBox",
+        "Added a RESTful DELETE API endpoint for item management",
+        "Created a minor PHP Artisan command for a Laravel function",
       ],
     }, {
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
@@ -315,9 +315,9 @@ export const tracks: Tracks = {
         "Determines data needs from product requirements",
       ],
       "examples": [
-        "Identified need for new index on Dynamo",
-        "Acted as caretaker for routes protos",
-        "Updated Facebook API version and codebase dependencies",
+        "Identified need for new index on Algolia",
+        "Acted as caretaker for API routes management",
+        "Updated version and codebase dependencies without errors",
       ],
     }, {
       "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
@@ -327,9 +327,9 @@ export const tracks: Tracks = {
         "Writes playbooks for new service maintenance",
       ],
       "examples": [
-        "Implemented Google Auth login to Medium",
+        "Implemented Google Auth login to SoapBox",
         "Implemented payments integration with Stripe",
-        "Built Textshots server",
+        "Built Email Delivery services and deployed servers ",
       ],
     }, {
       "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
@@ -339,9 +339,9 @@ export const tracks: Tracks = {
         "Makes appropriate buy vs build choices",
       ],
       "examples": [
-        "Designed Medium's ranked feed architecture",
+        "Designed SoapBox's cursor management for paged data feeds",
         "Designed custom domains architecture",
-        "Created Gotham framework for creating Go services",
+        "Created Idempotency framework for proper API management",
       ],
     }, {
       "summary": "Is an industry-leading expert in server side engineering or sets strategic server side direction for an eng team",
@@ -351,8 +351,8 @@ export const tracks: Tracks = {
         "Identifies and solves systemic problems with current architecture",
       ],
       "examples": [
-        "Researched, vetted, and selected Go as Medium's statically typed language",
-        "Defined microservices architecture and medium2 migration plan",
+        "Researched, vetted, and selected Laravel as SoapBox's primary backend language",
+        "Defined microservices architecture and migration plan for V4 -> V5 customers",
         "Defined and implemented proprietary IP core to the company's success",
       ],
     }],
@@ -372,7 +372,7 @@ export const tracks: Tracks = {
       "examples": [
         "Wrote the technical spec for featured post images",
         "Delivered stream item support for email digests",
-        "Delivered payment history dashboard",
+        "Delivered payment billing history project",
       ],
     }, {
       "summary": "Effectively delivers small personal projects",
@@ -382,9 +382,9 @@ export const tracks: Tracks = {
         "Defines and hits interim milestones",
       ],
       "examples": [
-        "Delivered promo editor",
-        "Delivered audio uploading for web client",
-        "Executed the recommends to claps backfill",
+        "Delivered comment messaging interface",
+        "Delivered file uploading for web client",
+        "Executed the recommends database backfills for priority sorting",
       ],
     }, {
       "summary": "Effectively delivers projects through a small team",
@@ -406,8 +406,8 @@ export const tracks: Tracks = {
         "Leverages recognition of repeated project patterns",
       ],
       "examples": [
-        "Oversaw technical delivery of Hightower",
-        "Managed infrastructure migration to VPC",
+        "Oversaw technical delivery of Agenda Templates Project",
+        "Managed infrastructure migration to virtual private clouds",
         "Involved marketing, legal, and appropriate functions at project start",
       ],
     }, {
@@ -415,11 +415,11 @@ export const tracks: Tracks = {
       "signals": [
         "Considers external constraints and business objectives when planning",
         "Leads teams of teams, and coordinates effective cross-functional collaboration",
-        "Owns a key company metric",
+        "Owns key company metrics",
       ],
       "examples": [
         "Managed technical migration to SOA",
-        "Lead technical delivery of 10/7",
+        "Lead technical delivery of migration from SoapBox V4 to V5",
         "Delivered multi-month engineering project on time",
       ],
     }],
@@ -437,8 +437,8 @@ export const tracks: Tracks = {
         "Asks for help at the appropriate juncture",
       ],
       "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
+        "Updated SoapBox github wiki when performing install scripts and run into errors",
+        "Updated project status changes in JIRA promptly",
         "Gave thoughtful check-in and check-out comments",
       ],
     }, {
@@ -450,7 +450,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
+        "Created cross-team Slack channel for revenue based work",
         "Spoke to domain experts before writing spec",
       ],
     }, {
@@ -462,7 +462,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
+        "Gave a substantial Eng All Hands presentation on EmberJS",
         "Gave notice of upcoming related work in Eng Briefing",
       ],
     }, {
@@ -474,8 +474,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
+        "Wrote SoapBox's growth framework and rationale",
+        "Aligned the entire organization around Discussions development",
       ],
     }, {
       "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
@@ -504,7 +504,7 @@ export const tracks: Tracks = {
         "Writes clear comments and documentation",
       ],
       "examples": [
-        "Caught a bug on Hatch before it went live",
+        "Caught a bug by QAing onw work before it went live",
         "Landed non-trivial PR with no caretaker comments",
         "Wrote hermetic tests for the happy and sad cases",
       ],
@@ -517,7 +517,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Requested tests for a PR when acting as reviewer",
-        "Reduced the number of zelda fitzgerald exceptions",
+        "Reduced the number of sentry exceptions",
         "Fixed a TODO for someone else in the codebase",
       ],
     }, {
@@ -528,9 +528,9 @@ export const tracks: Tracks = {
         "Adds tooling to improve code quality",
       ],
       "examples": [
-        "Improved PRB to run the same volume of tests faster",
+        "Improved performance of travis scripts to run the same volume of tests faster",
         "Simplified hermetic test data modification",
-        "Created fixture system for visual quality",
+        "Created system for improved and accessible visual quality",
       ],
     }, {
       "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues",
@@ -541,7 +541,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
+        "Iterated repeatedly to develop SoapBox's underlines solution",
         "Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
@@ -552,9 +552,9 @@ export const tracks: Tracks = {
         "Secures time and resources from execs to support great quality",
       ],
       "examples": [
-        "Negotiated resources for Fix-It week with exec team",
+        "Negotiated resources for Fix-It week with SLT",
         "Instituted and ensured success of a 20% time policy",
-        "Started The Watch",
+        "Started a guild to tackle system vulnerabilties and squash bugs",
       ],
     }],
   },
@@ -566,14 +566,14 @@ export const tracks: Tracks = {
     "milestones": [{
       "summary": "Identifies opportunities for organizational change or product improvements",
       "signals": [
-        "Writes Hatch posts about improvement opportunities",
+        "Writes project briefs about improvement opportunities",
         "Raises meaningful tensions in tactical meetings",
-        "Asks leadership team probing questions at FAM",
+        "Asks leadership team probing questions at all hands",
       ],
       "examples": [
-        "Wrote about problems with TTR on Hatch",
-        "Wrote about content policy problems on Hatch",
-        "Reported a site issue in Github",
+        "Wrote about problems with API performance issues",
+        "Wrote about content policy problems",
+        "Reported a site issue in Github/JIRA",
       ],
     }, {
       "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
@@ -597,7 +597,7 @@ export const tracks: Tracks = {
       "examples": [
         "Defined style guide to resolve style arguments",
         "Proposed and implemented at-mentions prototype",
-        "Implemented video for Android independently, unprompted",
+        "Implemented file upload for Android independently, unprompted",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the engineering organization or a major product impact",
@@ -609,7 +609,7 @@ export const tracks: Tracks = {
       "examples": [
         "Created the interviewing rubric and booklet",
         "Implemented and secured support for native login",
-        "Migrated medium2 to mono repo and bazel",
+        "Migrated database to latest version of MYSQL unprompted to allow better unicode support across product",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the whole company",
@@ -619,9 +619,9 @@ export const tracks: Tracks = {
         "Changes complex organizational processes",
       ],
       "examples": [
-        "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "Migrated the organization to using Agile methodologies",
+        "Built SoapBox chrome extention prototype and convinced execs to build it",
+        "Convinced leadership and engineering org to move to a microservices architecture",
       ],
     }],
   },
@@ -640,7 +640,7 @@ export const tracks: Tracks = {
       "examples": [
         "Collected and delivered feedback",
         "Discussed career options and areas of interest informally",
-        "Hosted a Floodgate Academy intern",
+        "Hosted an improving interviewing workshop session",
       ],
     }, {
       "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
@@ -687,7 +687,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Provided coaching to group leads",
-        "Devised Pathwise curriculum for group leads",
+        "Devised engineering growth curriculum for group leads",
         "Advocated to execs for engineer development resources and programs",
       ],
     }],
@@ -717,8 +717,8 @@ export const tracks: Tracks = {
         "Advocates for improved diversity and inclusion, and proposes ideas to help",
       ],
       "examples": [
-        "Defined Frankenmeeting structure for small team",
-        "Improved Watch on-call rotation scheduling",
+        "Defined innovative meeting structure for small team",
+        "Improved support on-call rotation scheduling",
         "Defined standard channels for inter-team communication",
       ],
     }, {
@@ -923,7 +923,7 @@ export const tracks: Tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to SoapBox's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
@@ -931,8 +931,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Gave a brown bag presentation on payments",
-        "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Wrote article for support team on how to properly investigate bugs with Microsoft Teams authentication",
+        "Wrote content on how to properly install and set up development environment",
       ],
     }, {
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
@@ -942,7 +942,7 @@ export const tracks: Tracks = {
         "Creates brown bag series and lines up speakers",
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead SoapBox' Women in Eng group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum",
       ],
@@ -964,66 +964,66 @@ export const tracks: Tracks = {
   "EVANGELISM": {
     "displayName": "Evangelism",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Promotes SoapBox to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Represents SoapBox well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
+        "Attends SoapBox-hosted events and talks with guests",
         "Communicates genuine and honest excitement about their work externally",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
+        "Shared a SoapBox product launch post on Facebook",
         "Acted as a guide for a non-friend visitor to the office",
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Takes meaningful action to introduce people to SoapBox",
+        "Joined public Slack group and represented Soapbox appropriately, and well",
+        "Organizes positive small- or medium-sized events that bring people to SoapBox",
       ],
       "examples": [
-        "Volunteered as a helper for CODE2040 writing workshop",
+        "Volunteered as a helper for external code writing workshop",
         "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Talked at a Laravel Toronto event hosted at SoapBox",
       ],
     }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Works hard to positively influence large groups of people on their views of Soapbox",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
         "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Writes blog posts about Soapbox that receive moderate traffic",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
+        "Represented Soapbox on a panel at a conference of industry experts",
         "Established close ties with Creative Commons",
-        "Built a durable, long-standing relationship with Code2040",
+        "Built a durable, long-standing org relationship with external not-for-profit",
       ],
     }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
+      "summary": "Establishes Soapbox as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
+        "Publishes material about Soapbox's organizational or technical innovations",
+        "Leverages significant following to evangelise Soapbox",
       ],
       "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
-        "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+        "Published a paper on Soapbox technology in a peer-reviewed journal",
+        "Authored joint-press releases",
+        "Published opinionated post on an Engineering blog internal or external",
       ],
     }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
+      "summary": "Introduces Soapbox in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
+        "Influences people with large audiences to talk about Soapbox positively",
+        "Drives recognition and adoption of Soapbox in significant numbers",
       ],
       "examples": [
         "Published or interviewed in a mainstream newspaper or website outside tech",
         "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
+        "Represented Soapbox in national televised media",
       ],
     }],
   },
@@ -1031,9 +1031,9 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens Soapbox's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Soapbox",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -1053,7 +1053,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a quarterly event for candidates to meet SoapBox employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -1077,8 +1077,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
-        "Started CODE2040 internship program",
+        "Organized and lead SoapBox's presence at a recruitment fair",
+        "Started a SoapBox internship program",
       ],
     }, {
       "summary": "Sets recruitment strategy, invests in long-term relationships for critical roles, and recruits at scale",
@@ -1109,7 +1109,7 @@ export const tracks: Tracks = {
       "examples": [
         "Joined and actively participated in the web client guild",
         "Brought a small gift back from vacation for the team",
-        "Wrote entertaining and informative Prod Ops writeups on Hatch",
+        "Wrote entertaining and informative Prod Ops writeups",
       ],
     }, {
       "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
@@ -1126,13 +1126,13 @@ export const tracks: Tracks = {
     }, {
       "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
       "signals": [
-        "Takes on additional Watch shifts at short notice",
+        "Takes on additional support shifts at short notice",
         "Pitches in to help other teams hit deadlines, without missing own deadlines",
         "Uses position to raise difficult issues on someone's behalf",
       ],
       "examples": [
-        "Lead Watch cycles with little support while still contributing to projects",
-        "Started and drove the LGBTQIA ERG",
+        "Helped with support calls while still contributing to projects",
+        "Organizes team building events",
         "Stayed positive and improved team morale during period after layoffs",
       ],
     }, {
@@ -1144,18 +1144,18 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Devoted large amount of time to helping outside direct responsibilities",
-        "Refactored hundreds of legacy Shepherd nodes",
-        "Acted as sole maintainer of Boxen for years",
+        "Refactored hundreds of legacy files",
+        "Acted as sole maintainer of LinkifyJS for years",
       ],
     }, {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to SoapBox's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
-        "Organized wine and olive tasting offsite to Napa for the whole engineering org",
+        "Organizes events for whole org",
         "Devised, delivered and acted on findings from an engineer happiness survey",
         "Challenged and corrected exclusionary behaviour or policies",
       ],
@@ -1190,17 +1190,19 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
+  .range(['#24acfc', '#8147FC', '#b7dc50', '#00D7C8'])
 
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
   {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
+  {label: 'Sr. Engineer', minPoints: 36, maxPoints: 57},
+  {label: 'Team Lead', minPoints: 36, maxPoints: 57},
+  {label: 'Engineering Manager', minPoints: 36, maxPoints: 57},
   {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
+  {label: 'Sr. Team Lead', minPoints: 58, maxPoints: 89},
+  {label: 'Sr. Engineering Manager', minPoints: 58, maxPoints: 89},
   {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
+  {label: 'Dir. Engineering', minPoints: 90}
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {

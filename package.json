@@ -1,14 +1,14 @@
 {
-  "name": "eng-growth",
+  "name": "SoapBox/Snowflake",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "https://github.com/Medium/eng-growth",
+  "repository": "https://github.com/SoapBox/Snowflake",
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
     "next": "^4.0.0-beta.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "scripts": {
     "dev": "next",
@@ -16,6 +16,6 @@
     "flow": "flow"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.2"
+    "flow-bin": "^0.59"
   }
 }
