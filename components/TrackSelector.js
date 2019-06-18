@@ -1,17 +1,20 @@
 // @flow
 
 import React from 'react'
-import { trackIds, tracks, categoryColorScale } from '../constants'
-import type { MilestoneMap, TrackId } from '../constants'
+import { categoryColorScale } from '../constants'
+import type { MilestoneMap, TrackId, Tracks } from '../constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
+  trackIds: Array<TrackId>,
+  tracks: Tracks,
   setFocusedTrackIdFn: (TrackId) => void
 }
 
 class TrackSelector extends React.Component<Props> {
   render() {
+    const { tracks, trackIds } = this.props;
     return (
       <table>
         <style jsx>{`
@@ -34,6 +37,8 @@ class TrackSelector extends React.Component<Props> {
             cursor: pointer;
           }
           .track-selector-label {
+            max-width: 20px;
+            word-wrap: break-word;
             text-align: center;
             font-size: 9px;
           }

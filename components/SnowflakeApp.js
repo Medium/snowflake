@@ -1,48 +1,43 @@
 // @flow
 
+import { isEmpty, isUndefined, mapValues } from 'lodash'
+import { Div, H1 } from 'glamorous'
 import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { milestoneToPoints, departments } from '../constants'
+import type { RoleToLevel, Tracks } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
+import Modal from 'react-modal'
+import UploadModal from './UploadModal/UploadModal'
+import api from '../api/api'
+import coerceMilestone from '../utils/coerceMilestone'
+import FunButton from '../glamorous/FunButton'
+import Spinner from './Spinner'
+import { teal2 } from '../palette'
+import type { UserData } from '../models/UserData'
+import UserSelect from './UserSelect'
+import PromotionModal from './PromotionModal'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
-  focusedTrackId: TrackId,
-}
-
-const hashToState = (hash: String): ?SnowflakeAppState => {
-  if (!hash) return null
-  const result = defaultState()
-  const hashValues = hash.split('#')[1].split(',')
-  if (!hashValues) return null
-  trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
-  })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
-  return result
-}
-
-const coerceMilestone = (value: number): Milestone => {
-  // HACK I know this is goofy but i'm dealing with flow typing
-  switch(value) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 2
-    case 3: return 3
-    case 4: return 4
-    case 5: return 5
-    default: return 0
-  }
+  focusedTrackId?: TrackId,
+  isUploadModalOpen: boolean,
+  tracks?: Tracks,
+  trackIds: Array<string>,
+  roleToLevel?: RoleToLevel,
+  loadingData: boolean,
+  users: Array<string>,
+  selectedUser: string,
+  selectedUserData?: UserData,
+  promotionModalOpen: boolean,
 }
 
 const emptyState = (): SnowflakeAppState => {
@@ -50,24 +45,13 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    isUploadModalOpen: false,
+    trackIds: [],
+    loadingData: true,
+    users: [],
+    selectedUser: '',
+    promotionModalOpen: false
   }
 }
 
@@ -76,31 +60,18 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    isUploadModalOpen: false,
+    trackIds: [],
+    loadingData: true,
+    users: [],
+    selectedUser: '',
+    promotionModalOpen: false
   }
 }
 
-const stateToHash = (state: SnowflakeAppState) => {
-  if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
-  return values.join(',')
+const defaultMilestoneByTrack = (tracks?: Tracks) => {
+  return mapValues(tracks, () => 0);
 }
 
 type Props = {}
@@ -111,21 +82,206 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     this.state = emptyState()
   }
 
-  componentDidUpdate() {
-    const hash = stateToHash(this.state)
-    if (hash) window.location.replace(`#${hash}`)
+  componentDidMount() {
+    // request for the the initial constants - the defualt will be engineering masterconfig
+    Promise.all([api.getMasterConfig(departments[0]), api.fetchUsers()])
+      .then(([{ role, rating}, users]) => {
+        this.setState({
+          roleToLevel: role,
+          tracks: rating,
+          trackIds: Object.keys(rating),
+          milestoneByTrack: mapValues(rating, _ => 0),
+          focusedTrackId: Object.keys(rating)[0],
+          loadingData: false,
+          users
+        })
+      })
+      .catch(() => {
+        this.setState({
+          ...defaultState(),
+          loadingData: false
+        })
+      })
+
+      this.setState(defaultState())
   }
 
-  componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
+  fetchConfig = () => {
+    Promise.all([api.getMasterConfig(departments[0]), api.fetchUsers()])
+      .then(([{ role, rating}, users]) => {
+        this.setState({
+          roleToLevel: role,
+          tracks: rating,
+          trackIds: Object.keys(rating),
+          milestoneByTrack: mapValues(rating, _ => 0),
+          focusedTrackId: Object.keys(rating)[0],
+          loadingData: false,
+          users
+        })
+      })
+  }
+
+  toggleUploadModal = () => {
+    
+    this.setState({
+      isUploadModalOpen: !this.state.isUploadModalOpen
+    })
+  }
+
+  selectUser = (e: any) => {
+    const userName: string = e.target.value;
+    api.fetchUser(userName)
+      .then(userData => {
+        this.setState({
+          selectedUser: userName,
+          selectedUserData: userData,
+          milestoneByTrack: isEmpty(userData.ratings) ? defaultMilestoneByTrack(this.state.tracks) : userData.ratings
+        })
+      })
+  }
+
+  renderUserSelect = () => {
+    if (!this.state.tracks || typeof this.state.focusedTrackId === 'undefined') return null;
+
+    return (
+      <UserSelect selectedUser={this.state.selectedUser} users={this.state.users} selectUser={this.selectUser}/>
+    ) 
+  }
+
+  saveUser = async (withPromotion: boolean) => {
+    debugger
+    await api.saveUser(
+      this.state.milestoneByTrack,
+      withPromotion ? this.state.selectedUserData.ladder[0] : this.state.selectedUserData.currentRole,
+      this.state.selectedUser
+    )
+
+    const userData = await api.fetchUser(this.state.selectedUser)
+
+    this.setState({
+      selectedUserData: userData,
+      milestoneByTrack: isEmpty(userData.ratings) ? defaultMilestoneByTrack(this.state.tracks) : userData.ratings
+    })
+  }
+
+  togglePromotionModal = () => {
+    this.setState({
+      promotionModalOpen: !this.state.promotionModalOpen
+    })
+  }
+
+  renderProjectedThresholds = () => {
+    const { tracks, trackIds, selectedUserData, roleToLevel } = this.state;
+
+    if (!selectedUserData) return null
+
+    const ladder = selectedUserData.ladder;
+
+    return ladder.map(role => {
+      const levels = roleToLevel[role];
+
+      return <NightingaleChart
+          label={`Min Thresholds for ${role}`}
+          tracks={tracks}
+          milestoneByTrack={levels}
+          focusedTrackId={null}
+          trackIds={trackIds}
+          handleTrackMilestoneChangeFn={() => {}} />
+
+    }) 
+  }
+
+  togglePromotionModal = () => {
+    this.setState({
+      promotionModalOpen: !this.state.promotionModalOpen
+    })
+  }
+
+  renderVisualiations = () => {
+    if (!this.state.roleToLevel || !this.state.selectedUserData || !this.state.selectedUser || !this.state.tracks || typeof this.state.focusedTrackId === 'undefined') return null;
+    const trackIds = Object.keys(this.state.tracks);
+
+    const nextRoleToLevel = this.state.roleToLevel[this.state.selectedUserData.ladder[0]];
+
+    return (
+      <div>
+        {/* <UserSelect selectedUser={this.state.selectedUser} users={this.state.users} selectUser={this.selectUser}/> */}
+        <div style={{display: 'flex'}}>
+          <PointSummaries
+              user={this.state.selectedUser}
+              milestoneByTrack={this.state.milestoneByTrack}
+              openPromotionModal={this.togglePromotionModal}
+              saveUser={this.saveUser}
+              nextRoleToLevel={nextRoleToLevel} />
+        </div>
+        <div style={{flex: 0, display: 'flex'}}>
+        <PromotionModal
+          isModalOpen={this.state.promotionModalOpen}
+          userName={this.state.selectedUser}
+          nextRole={this.state.selectedUserData.currentRole}
+          onClose={this.togglePromotionModal} />
+        <NightingaleChart
+            label={`Current Score as a ${this.state.selectedUserData.currentRole}`}
+            tracks={this.state.tracks}
+            milestoneByTrack={this.state.milestoneByTrack}
+            focusedTrackId={this.state.focusedTrackId}
+            trackIds={trackIds}
+            handleTrackMilestoneChangeFn={() => {}} />
+        {this.renderProjectedThresholds()}
+        </div>
+      <TrackSelector
+          tracks={this.state.tracks}
+          milestoneByTrack={this.state.milestoneByTrack}
+          focusedTrackId={this.state.focusedTrackId}
+          setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
+          trackIds={trackIds} />
+      <KeyboardListener
+          selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
+          selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
+          increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
+          decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
+      <Track
+          tracks={this.state.tracks}
+          trackId={this.state.focusedTrackId}
+          milestoneByTrack={this.state.milestoneByTrack}
+          handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+      </div>
+    )
+  }
+
+  renderFirstToCome = () => {
+    const { tracks } = this.state;
+
+    return !tracks
+      ? <H1 maxWidth="750px" margin="100px auto">
+          We don't have any configurations yet! Be the first to upload one.
+        </H1>
+      : null;
+  }
+
+  renderContent = () => {
+    if (this.state.loadingData) return <div style={{height:"60vh", display:"flex", alignItems:"center"}}><Spinner /></div>;
+
+    return (
+      <Div textAlign="center" height="500px">
+        {this.renderFirstToCome()}
+        <FunButton marginBottom="50px" onClick={() => this.toggleUploadModal()} width="500px" height="50px" display="block">
+          upload a new matrix
+        </FunButton>
+
+        {this.renderUserSelect()}
+
+        {this.renderVisualiations()}
+        <UploadModal
+          isModalOpen={this.state.isUploadModalOpen}
+          fetchConfig={this.fetchConfig}
+          toggleModal={this.toggleUploadModal} />
+      </Div>
+    )
   }
 
   render() {
+
     return (
       <main>
         <style jsx global>{`
@@ -154,73 +310,83 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             color: #888;
             text-decoration: none;
           }
+          .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+          }
+
+          .cube1, .cube2 {
+            background-color: ${teal2};
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+            animation: sk-cubemove 1.8s infinite ease-in-out;
+          }
+
+          .cube2 {
+            -webkit-animation-delay: -0.9s;
+            animation-delay: -0.9s;
+          }
+
+          @-webkit-keyframes sk-cubemove {
+            25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+            50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+            75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+            100% { -webkit-transform: rotate(-360deg) }
+          }
+
+          @keyframes sk-cubemove {
+            25% { 
+              transform: translateX(42px) rotate(-90deg) scale(0.5);
+              -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+            } 50% { 
+              transform: translateX(42px) translateY(42px) rotate(-179deg);
+              -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+            } 50.1% { 
+              transform: translateX(42px) translateY(42px) rotate(-180deg);
+              -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+            } 75% { 
+              transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+              -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+            } 100% { 
+              transform: rotate(-360deg);
+              -webkit-transform: rotate(-360deg);
+            }
+          }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
-        </div>
-        <div style={{display: 'flex'}}>
-          <div style={{flex: 1}}>
-            <form>
-              <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  />
-              <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
-            </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
-          </div>
-          <div style={{flex: 0}}>
-            <NightingaleChart
-                milestoneByTrack={this.state.milestoneByTrack}
-                focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-          </div>
-        </div>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
-        <KeyboardListener
-            selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
-            selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
-            increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
-            decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
-        <Track
-            milestoneByTrack={this.state.milestoneByTrack}
-            trackId={this.state.focusedTrackId}
-            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
-          <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
-          </div>
-        </div>
+        <Div marginTop="100px">
+          {this.renderContent()}
+        </Div>
       </main>
     )
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+
+    if (this.state.tracks === undefined) return;
+
+    const isWithinRange = !isUndefined(this.state.tracks[trackId].milestones[milestone])
+
     const milestoneByTrack = this.state.milestoneByTrack
-    milestoneByTrack[trackId] = milestone
+    if (isWithinRange) {
+      milestoneByTrack[trackId] = milestone
+    }
 
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    this.setState({
+      milestoneByTrack,
+      focusedTrackId: isWithinRange ? trackId : this.state.focusedTrackId
+      })
   }
 
   shiftFocusedTrack(delta: number) {
+    const { trackIds } = this.state;
+    if (!this.state.focusedTrackId) return;
+
     let index = trackIds.indexOf(this.state.focusedTrackId)
     index = (index + delta + trackIds.length) % trackIds.length
     const focusedTrackId = trackIds[index]
@@ -228,23 +394,23 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   setFocusedTrackId(trackId: TrackId) {
+    const { trackIds } = this.state;
     let index = trackIds.indexOf(trackId)
     const focusedTrackId = trackIds[index]
+
     this.setState({ focusedTrackId })
   }
 
   shiftFocusedTrackMilestoneByDelta(delta: number) {
+    if (!this.state.focusedTrackId) return;
+
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
+    
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
-  }
 
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
-    title = titles.indexOf(title) == -1 ? titles[0] : title
-    this.setState({ title })
+    this.handleTrackMilestoneChange(this.state.focusedTrackId, coerceMilestone(milestone))
   }
 }
 
