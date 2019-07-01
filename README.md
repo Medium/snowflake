@@ -1,3 +1,6 @@
+## ⚠️ Heads up: Medium isn’t using this tool anymore, but you’re welcome to!
+[Read more about our current thinking around engineer growth](https://medium.engineering/engineering-growth-at-medium-4935b3234d25).
+
 # Snowflake
 
 Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
