@@ -201,7 +201,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
             Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
+            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">this version of our growth framework</a>
+            {' '}and <a href="https://medium.engineering/engineering-growth-at-medium-4935b3234d25" target="_blank">what we do currently</a>.
             Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
             Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
           </div>
