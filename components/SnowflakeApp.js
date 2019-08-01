@@ -50,7 +50,7 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
+      'CHAPTER_ONE': 0,
       'WEB_CLIENT': 0,
       'FOUNDATIONS': 0,
       'SERVERS': 0,
@@ -64,10 +64,8 @@ const emptyState = (): SnowflakeAppState => {
       'ACCOMPLISHMENT': 0,
       'MENTORSHIP': 0,
       'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'CHAPTER_ONE'
   }
 }
 
@@ -76,7 +74,7 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
+      'CHAPTER_ONE': 1,
       'WEB_CLIENT': 2,
       'FOUNDATIONS': 3,
       'SERVERS': 2,
@@ -90,10 +88,8 @@ const defaultState = (): SnowflakeAppState => {
       'ACCOMPLISHMENT': 4,
       'MENTORSHIP': 2,
       'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'CHAPTER_ONE'
   }
 }
 
@@ -156,9 +152,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
+          Placeholder for Wordmark
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
