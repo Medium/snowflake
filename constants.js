@@ -1,21 +1,22 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'CHAPTER_ONE' | 'CHAPTER_TWO' | 'CHAPTER_THREE' | 'PLANNING' |
-  'COLLABORATION' | 'COMMUNICATION' | 'CLIENT_VALUE' | 'INITIATIVE' |
-  'COMPLEXITY' | 'MATURITY' | 'LEARNING' | 'INFLUENCE' |
-  'MENTORSHIP' | 'EVANGELISM'
+export type TrackId = 'CHAPTER_ONE' | 'CHAPTER_TWO' | 'CHAPTER_THREE' | 'CHAPTER_FOUR' |
+  'PLANNING' | 'COLLABORATION' | 'CLIENT_VALUE' |
+  'INITIATIVE' | 'COMPLEXITY' | 'MATURITY' |
+  'LEARNING' | 'INFLUENCE' | 'MENTORSHIP'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
   'CHAPTER_ONE': Milestone,
   'CHAPTER_TWO': Milestone,
   'CHAPTER_THREE': Milestone,
+  'CHAPTER_FOUR': Milestone,
   'PLANNING': Milestone,
   'COLLABORATION': Milestone,
-  'COMMUNICATION': Milestone,
   'CLIENT_VALUE': Milestone,
   'INITIATIVE': Milestone,
+  'MATURITY': Milestone,
   'COMPLEXITY': Milestone,
   'MATURITY': Milestone,
   'LEARNING': Milestone,
@@ -71,9 +72,9 @@ type Tracks = {|
   'CHAPTER_ONE': Track,
   'CHAPTER_TWO': Track,
   'CHAPTER_THREE': Track,
+  'CHAPTER_FOUR': Track,
   'PLANNING': Track,
   'COLLABORATION': Track,
-  'COMMUNICATION': Track,
   'CLIENT_VALUE': Track,
   'INITIATIVE': Track,
   'COMPLEXITY': Track,
@@ -84,11 +85,12 @@ type Tracks = {|
   'EVANGELISM': Track,
 |}
 
+// @TODO: Array?
 export const tracks: Tracks = {
   "CHAPTER_ONE": {
     "displayName": "Servant Leadership",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "description": "Comprehends the capacity to engage with stakeholders both internally and externally, and to develop strong interpersonal relationships with teams and clients to unlock their potential.",
     "milestones": [{
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
       "signals": [
@@ -153,9 +155,9 @@ export const tracks: Tracks = {
   },
 
   "CHAPTER_TWO": {
-    "displayName": "Web client",
+    "displayName": "Coaching",
     "category": "A",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    "description": "Helps people to develop their own independent thinking, guiding them through processes.",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
@@ -220,9 +222,9 @@ export const tracks: Tracks = {
   },
 
   "CHAPTER_THREE": {
-    "displayName": "Foundations",
+    "displayName": "Facilitation",
     "category": "A",
-    "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
     "milestones": [{
       "summary": "Works effectively within established structures, following current best practices",
       "signals": [
@@ -285,11 +287,76 @@ export const tracks: Tracks = {
       ],
     }],
   },
-
-  "PLANNING": {
-    "displayName": "Servers",
+  "CHAPTER_FOUR": {
+    "displayName": "Motivation",
     "category": "A",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  },
+  "PLANNING": {
+    "displayName": "Planning & Coordination",
+    "category": "B",
+    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously.",
     "milestones": [{
       "summary": "Works effectively within established server side frameworks, following current best practices",
       "signals": [
@@ -354,9 +421,9 @@ export const tracks: Tracks = {
   },
 
   "COLLABORATION": {
-    "displayName": "Project management",
+    "displayName": "Communication & Collaboration	",
     "category": "B",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+    "description": "Focus on teamwork, communication skills, asking for and giving feedback, collaboration, and documentation.",
     "milestones": [{
       "summary": "Effectively delivers individual tasks",
       "signals": [
@@ -420,77 +487,10 @@ export const tracks: Tracks = {
     }],
   },
 
-  "COMMUNICATION": {
-    "displayName": "Communication",
-    "category": "B",
-    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
-    "milestones": [{
-      "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
-      "signals": [
-        "Communicates project status clearly and effectively",
-        "Collaborates with others with empathy",
-        "Asks for help at the appropriate juncture",
-      ],
-      "examples": [
-        "Updated The Watch before running a backfill",
-        "Updated project status changes in Asana promptly",
-        "Gave thoughtful check-in and check-out comments",
-      ],
-    }, {
-      "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
-      "signals": [
-        "Practises active listening and suspension of attention",
-        "Ensures stakeholders are aware of current blockers",
-        "Chooses the appropriate tools for accurate and timely communication",
-      ],
-      "examples": [
-        "Received and integrated critical feedback positively",
-        "Created cross-team Slack channel for payments work",
-        "Spoke to domain experts before writing spec",
-      ],
-    }, {
-      "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
-      "signals": [
-        "Resolves communication difficulties between others",
-        "Anticipates and shares schedule deviations in plenty of time",
-        "Manages project stakeholder expectations effectively",
-      ],
-      "examples": [
-        "Directed team response effectively during outages",
-        "Gave a substantial Eng All Hands presentation on React",
-        "Gave notice of upcoming related work in Eng Briefing",
-      ],
-    }, {
-      "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
-      "signals": [
-        "Communicates project risk and tradeoffs skillfully and with nuance",
-        "Contextualizes and clarifies ambiguous direction and strategy for others",
-        "Negotiates resourcing compromises with other teams",
-      ],
-      "examples": [
-        "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
-        "Aligned the entire organization around claps",
-      ],
-    }, {
-      "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
-      "signals": [
-        "Defines processes for clear communication for the entire team",
-        "Shares the right amount of information with the right people, at the right time",
-        "Develops and delivers plans to execs, the board, and outside investors",
-      ],
-      "examples": [
-        "Organized half year check-in company offsite",
-        "Created the communication plan for a large organizational change",
-        "Presented to the board about key company metrics and projects",
-      ],
-    }],
-  },
-
   "CLIENT_VALUE": {
-    "displayName": "Craft",
+    "displayName": "Client Value",
     "category": "B",
-    "description": "Embodies and promotes practices to ensure excellent quality products and services",
+    "description": "Focus on delivering repeatable value to our clients by ensuring excellent quality products and services in our Value Stream Delivery.",
     "milestones": [{
       "summary": "Delivers consistently good quality work",
       "signals": [
@@ -556,7 +556,7 @@ export const tracks: Tracks = {
 
   "INITIATIVE": {
     "displayName": "Initiative",
-    "category": "B",
+    "category": "C",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
     "milestones": [{
       "summary": "Identifies opportunities for organizational change or product improvements",
@@ -622,9 +622,9 @@ export const tracks: Tracks = {
   },
 
   "COMPLEXITY": {
-    "displayName": "Career development",
+    "displayName": "Complexity",
     "category": "C",
-    "description": "Provides strategic support to engineers to help them build the career they want",
+    "description": "Ability to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain.",
     "milestones": [{
       "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
       "signals": [
@@ -689,9 +689,9 @@ export const tracks: Tracks = {
   },
 
   "MATURITY": {
-    "displayName": "Org design",
+    "displayName": "Maturity",
     "category": "C",
-    "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
+    "description": "Strenghtens Palantir's values to create and collaborate in open, diverse, and inclusive environments.",
     "milestones": [{
       "summary": "Respects and participates in processes, giving meaningful feedback to help the organization improve",
       "signals": [
@@ -756,9 +756,9 @@ export const tracks: Tracks = {
   },
 
   "LEARNING": {
-    "displayName": "Wellbeing",
-    "category": "C",
-    "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
+    "displayName": "Learning & Career Development",
+    "category": "D",
+    "description": "Provides strategic support to individuals to help them build the career they want.",
     "milestones": [{
       "summary": "Uses tools and processes to help ensure colleagues are healthy and happy",
       "signals": [
@@ -823,9 +823,9 @@ export const tracks: Tracks = {
   },
 
   "INFLUENCE": {
-    "displayName": "Accomplishment",
-    "category": "C",
-    "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
+    "displayName": "Influence",
+    "category": "D",
+    "description": "Impacts and promotes Palantir's culture and values positively through leadership and representation of our brand.",
     "milestones": [{
       "summary": "Helps individuals identify blockers and helps them identify next steps for resolution",
       "signals": [
@@ -892,7 +892,7 @@ export const tracks: Tracks = {
   "MENTORSHIP": {
     "displayName": "Mentorship",
     "category": "D",
-    "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    "description": "Provides support to others, spreads knowledge, and develops the team outside formal reporting structures.",
     "milestones": [{
       "summary": "Informally mentors individuals in an ad-hoc way, supports new hires, and conveys institutional knowledge",
       "signals": [
@@ -956,72 +956,6 @@ export const tracks: Tracks = {
     }],
   },
 
-  "EVANGELISM": {
-    "displayName": "Evangelism",
-    "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
-    "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
-      "signals": [
-        "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
-        "Communicates genuine and honest excitement about their work externally",
-      ],
-      "examples": [
-        "Shared a Medium product launch post on Facebook",
-        "Acted as a guide for a non-friend visitor to the office",
-        "Supported PR efforts by giving a quote or having a photo taken",
-      ],
-    }, {
-      "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
-      "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
-      ],
-      "examples": [
-        "Volunteered as a helper for CODE2040 writing workshop",
-        "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
-      ],
-    }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
-      "signals": [
-        "Mentors or participates in a high visibility way in an external organization",
-        "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
-      ],
-      "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
-        "Established close ties with Creative Commons",
-        "Built a durable, long-standing relationship with Code2040",
-      ],
-    }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
-      "signals": [
-        "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
-      ],
-      "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
-        "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
-      ],
-    }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
-      "signals": [
-        "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
-      ],
-      "examples": [
-        "Published or interviewed in a mainstream newspaper or website outside tech",
-        "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
-      ],
-    }],
-  },
 }
 
 export const trackIds: TrackId[] = Object.keys(tracks)
