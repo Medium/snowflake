@@ -63,7 +63,6 @@ const emptyState = (): SnowflakeAppState => {
       'LEARNING': 0,
       'INFLUENCE': 0,
       'MENTORSHIP': 0,
-      'EVANGELISM': 0,
     },
     focusedTrackId: 'CHAPTER_ONE'
   }
@@ -87,7 +86,6 @@ const defaultState = (): SnowflakeAppState => {
       'LEARNING': 0,
       'INFLUENCE': 4,
       'MENTORSHIP': 2,
-      'EVANGELISM': 2,
     },
     focusedTrackId: 'CHAPTER_ONE'
   }
