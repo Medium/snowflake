@@ -1,27 +1,26 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'CHAPTER_ONE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
+export type TrackId = 'CHAPTER_ONE' | 'CHAPTER_TWO' | 'CHAPTER_THREE' | 'PLANNING' |
+  'COLLABORATION' | 'COMMUNICATION' | 'CLIENT_VALUE' | 'INITIATIVE' |
+  'COMPLEXITY' | 'MATURITY' | 'LEARNING' | 'INFLUENCE' |
   'MENTORSHIP' | 'EVANGELISM'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
   'CHAPTER_ONE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
+  'CHAPTER_TWO': Milestone,
+  'CHAPTER_THREE': Milestone,
+  'PLANNING': Milestone,
+  'COLLABORATION': Milestone,
   'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
+  'CLIENT_VALUE': Milestone,
   'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
+  'COMPLEXITY': Milestone,
+  'MATURITY': Milestone,
+  'LEARNING': Milestone,
+  'INFLUENCE': Milestone,
   'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
@@ -70,17 +69,17 @@ export type Track = {
 
 type Tracks = {|
   'CHAPTER_ONE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
-  'PROJECT_MANAGEMENT': Track,
+  'CHAPTER_TWO': Track,
+  'CHAPTER_THREE': Track,
+  'PLANNING': Track,
+  'COLLABORATION': Track,
   'COMMUNICATION': Track,
-  'CRAFT': Track,
+  'CLIENT_VALUE': Track,
   'INITIATIVE': Track,
-  'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
-  'WELLBEING': Track,
-  'ACCOMPLISHMENT': Track,
+  'COMPLEXITY': Track,
+  'MATURITY': Track,
+  'LEARNING': Track,
+  'INFLUENCE': Track,
   'MENTORSHIP': Track,
   'EVANGELISM': Track,
 |}
@@ -153,7 +152,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WEB_CLIENT": {
+  "CHAPTER_TWO": {
     "displayName": "Web client",
     "category": "A",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
@@ -220,7 +219,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "FOUNDATIONS": {
+  "CHAPTER_THREE": {
     "displayName": "Foundations",
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
@@ -287,7 +286,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "SERVERS": {
+  "PLANNING": {
     "displayName": "Servers",
     "category": "A",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
@@ -354,7 +353,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "PROJECT_MANAGEMENT": {
+  "COLLABORATION": {
     "displayName": "Project management",
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
@@ -488,7 +487,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "CRAFT": {
+  "CLIENT_VALUE": {
     "displayName": "Craft",
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
@@ -622,7 +621,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "CAREER_DEVELOPMENT": {
+  "COMPLEXITY": {
     "displayName": "Career development",
     "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
@@ -689,7 +688,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "ORG_DESIGN": {
+  "MATURITY": {
     "displayName": "Org design",
     "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
@@ -756,7 +755,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WELLBEING": {
+  "LEARNING": {
     "displayName": "Wellbeing",
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
@@ -823,7 +822,7 @@ export const tracks: Tracks = {
     }],
   },
 
-  "ACCOMPLISHMENT": {
+  "INFLUENCE": {
     "displayName": "Accomplishment",
     "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
@@ -1052,7 +1051,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#a7d1bc', '#9fc855', '#11a9a1', '#fb6500'])
+  .range(['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc'])
 
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
