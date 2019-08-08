@@ -6,10 +6,11 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { eligibleTitles, trackIds, milestones, milestoneToPoints, cohorts } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
+import CohortSelector from '../components/CohortSelector'
 import TitleSelector from '../components/TitleSelector'
 
 type SnowflakeAppState = {
@@ -49,6 +50,7 @@ const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
     title: '',
+    cohort: '',
     milestoneByTrack: {
       'CHAPTER_ONE': 0,
       'CHAPTER_TWO': 0,
@@ -72,6 +74,7 @@ const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Kiki',
     title: 'Staff Engineer',
+    cohort: 'Management',
     milestoneByTrack: {
       'CHAPTER_ONE': 1,
       'CHAPTER_TWO': 2,
@@ -162,6 +165,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
+              <CohortSelector
+                  currentCohort={this.state.cohort}
+                  setCohortFn={(cohort) => this.setCohort(cohort)} />
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
@@ -232,6 +238,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     if (milestone < 0) milestone = 0
     if (milestone > 5) milestone = 5
     this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone)
+  }
+
+  setCohort(cohort: string) {
+    this.setState({ cohort })
   }
 
   setTitle(title: string) {

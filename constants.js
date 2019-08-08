@@ -987,6 +987,11 @@ export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc'])
 
+export const cohorts = [
+  {key: 'MANAGEMENT', label: 'Management'},
+  {key: 'ENGINEERING', label: 'Engineering'}
+]
+
 // @TODO: Array of arrays?
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16},
