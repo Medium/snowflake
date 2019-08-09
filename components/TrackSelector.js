@@ -14,8 +14,6 @@ type Props = {
 class TrackSelector extends React.Component<Props> {
   render() {
     const trackList = trackMap(tracks, this.props.currentCohort)
-    console.log(this.props.currentCohort)
-    console.log(trackList["CHAPTER_ONE"])
     return (
       <table>
         <style jsx>{`

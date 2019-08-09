@@ -29,7 +29,6 @@ class CohortSelector extends React.Component {
 
   trackChange(e) {
     this.props.setCohortFn(e.target.value)
-    console.log(e.target.value)
   }
 }
 

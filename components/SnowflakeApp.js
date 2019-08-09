@@ -28,8 +28,9 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  if (hashValues[13]) result.name = decodeURI(hashValues[13])
+  if (hashValues[14]) result.cohort = decodeURI(hashValues[14])
+  if (hashValues[15]) result.title = decodeURI(hashValues[15])
   return result
 }
 
@@ -49,8 +50,8 @@ const coerceMilestone = (value: number): Milestone => {
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
-    title: '',
     cohort: '',
+    title: '',
     milestoneByTrack: {
       'CHAPTER_ONE': 0,
       'CHAPTER_TWO': 0,
@@ -73,8 +74,8 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Kiki',
-    title: 'Staff Engineer',
     cohort: 'Management',
+    title: 'Staff Manager',
     milestoneByTrack: {
       'CHAPTER_ONE': 1,
       'CHAPTER_TWO': 2,
@@ -86,7 +87,7 @@ const defaultState = (): SnowflakeAppState => {
       'INITIATIVE': 4,
       'COMPLEXITY': 3,
       'MATURITY': 2,
-      'LEARNING': 0,
+      'LEARNING': 2,
       'INFLUENCE': 4,
       'MENTORSHIP': 2,
     },
@@ -96,7 +97,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.cohort), encodeURI(state.title))
   return values.join(',')
 }
 
@@ -251,7 +252,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack)
+    let titles = eligibleTitles(this.state.milestoneByTrack, this.state.cohort)
     title = titles.indexOf(title) == -1 ? titles[0] : title
     this.setState({ title })
   }
