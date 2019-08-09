@@ -89,138 +89,8 @@ type Tracks = {|
 export const tracks: Tracks = {
   "CHAPTER_ONE": {},
   "CHAPTER_TWO": {},
-  "CHAPTER_THREE": {
-    "displayName": "Facilitation",
-    "category": "A",
-    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
-    "milestones": [{
-      "summary": "Works effectively within established structures, following current best practices",
-      "signals": [
-        "Writes thorough postmortems for service outages",
-        "Makes simple configuration changes to services",
-        "Performs backfills safely and effectively, without causing pages",
-      ],
-      "examples": [
-        "Made safe and effective Ansible changes",
-        "Implemented new ETL pipelines based on existing ones",
-        "Resolved out of disk errors independently",
-      ],
-    }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
-      "signals": [
-        "Made minor version upgrades to technologies",
-        "Builds machine learning jobs within the ML framework",
-        "Triages service issues correctly and independently",
-      ],
-      "examples": [
-        "Upgraded NodeJS from 8.0 to 8.1.1",
-        "Built custom packages for RPMs",
-        "Improved ETL efficiency by improving Dynamo to S3 loading",
-      ],
-    }, {
-      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
-      "signals": [
-        "Acts as primary maintainer for existing critical systems",
-        "Designs moderately complex systems",
-        "Makes major version upgrades to libraries",
-      ],
-      "examples": [
-        "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
-        "Designed flexible framework for writing machine learning jobs",
-      ],
-    }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
-      "signals": [
-        "Designs complex projects that encompass multiple systems and technologies",
-        "Demonstrates deep knowledge of foundational systems",
-        "Introduces new databases and technologies to meet underserved needs",
-      ],
-      "examples": [
-        "Designed and built BBFD",
-        "Designed AWS configuration management",
-        "Introduced Kinesis and pioneered streaming events pipeline",
-      ],
-    }, {
-      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
-      "signals": [
-        "Designs transformational projects in service of long-term goals",
-        "Defines the strategic vision for foundational work and supporting technologies",
-        "Invents industry-leading techniques to solve complex problems",
-      ],
-      "examples": [
-        "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
-        "Developed and implemented HA strategy",
-      ],
-    }],
-  },
-  "CHAPTER_FOUR": {
-    "displayName": "Motivation",
-    "category": "A",
-    "description": "Comprehends the ability to energize people to achieve their goals.",
-    "milestones": [{
-      "summary": "Works effectively within established structures, following current best practices",
-      "signals": [
-        "Writes thorough postmortems for service outages",
-        "Makes simple configuration changes to services",
-        "Performs backfills safely and effectively, without causing pages",
-      ],
-      "examples": [
-        "Made safe and effective Ansible changes",
-        "Implemented new ETL pipelines based on existing ones",
-        "Resolved out of disk errors independently",
-      ],
-    }, {
-      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
-      "signals": [
-        "Made minor version upgrades to technologies",
-        "Builds machine learning jobs within the ML framework",
-        "Triages service issues correctly and independently",
-      ],
-      "examples": [
-        "Upgraded NodeJS from 8.0 to 8.1.1",
-        "Built custom packages for RPMs",
-        "Improved ETL efficiency by improving Dynamo to S3 loading",
-      ],
-    }, {
-      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
-      "signals": [
-        "Acts as primary maintainer for existing critical systems",
-        "Designs moderately complex systems",
-        "Makes major version upgrades to libraries",
-      ],
-      "examples": [
-        "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
-        "Designed flexible framework for writing machine learning jobs",
-      ],
-    }, {
-      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
-      "signals": [
-        "Designs complex projects that encompass multiple systems and technologies",
-        "Demonstrates deep knowledge of foundational systems",
-        "Introduces new databases and technologies to meet underserved needs",
-      ],
-      "examples": [
-        "Designed and built BBFD",
-        "Designed AWS configuration management",
-        "Introduced Kinesis and pioneered streaming events pipeline",
-      ],
-    }, {
-      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
-      "signals": [
-        "Designs transformational projects in service of long-term goals",
-        "Defines the strategic vision for foundational work and supporting technologies",
-        "Invents industry-leading techniques to solve complex problems",
-      ],
-      "examples": [
-        "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
-        "Developed and implemented HA strategy",
-      ],
-    }],
-  },
+  "CHAPTER_THREE": {},
+  "CHAPTER_FOUR": {},
   "PLANNING": {
     "displayName": "Planning & Coordination",
     "category": "B",
@@ -857,7 +727,11 @@ export const categoryColorScale = d3.scaleOrdinal()
 
 export const cohorts = [
   {key: 'MANAGEMENT', label: 'Management'},
-  {key: 'ENGINEERING', label: 'Engineering'}
+  {key: 'ENGINEERING', label: 'Engineering'},
+  {key: 'FRONTEND', label: 'Front End Development'},
+  {key: 'PM', label: 'Project Management'},
+  {key: 'UX', label: 'User Experience Design'},
+  {key: 'UI', label: 'User Interface Design'},
 ]
 
 export const titles = [
@@ -877,6 +751,38 @@ export const titles = [
   {label: 'Senior Manager', minPoints: 58, maxPoints: 89, cohort: 'Management'},
   {label: 'Principal Manager', minPoints: 90, cohort: 'Management'},
   {label: 'Director of Management', minPoints: 90, cohort: 'Management'},
+  {label: 'Front End Developer I', minPoints: 0, maxPoints: 16, cohort: 'Front End Development'},
+  {label: 'Front End Developer II', minPoints: 17, maxPoints: 35, cohort: 'Front End Development'},
+  {label: 'Senior Front End Developer', minPoints: 36, maxPoints: 57, cohort: 'Front End Development'},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 57, cohort: 'Front End Development'},
+  {label: 'Staff Front End Developer', minPoints: 58, maxPoints: 89, cohort: 'Front End Development'},
+  {label: 'Senior Front End Developer', minPoints: 58, maxPoints: 89, cohort: 'Front End Development'},
+  {label: 'Principal Front End Developer', minPoints: 90, cohort: 'Front End Development'},
+  {label: 'Director of Front End Development', minPoints: 90, cohort: 'Front End Development'},
+  {label: 'Strategist I', minPoints: 0, maxPoints: 16, cohort: 'User Experience Design'},
+  {label: 'Strategist II', minPoints: 17, maxPoints: 35, cohort: 'User Experience Design'},
+  {label: 'Senior Strategist', minPoints: 36, maxPoints: 57, cohort: 'User Experience Design'},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 57, cohort: 'User Experience Design'},
+  {label: 'Staff Strategist', minPoints: 58, maxPoints: 89, cohort: 'User Experience Design'},
+  {label: 'Senior Strategist', minPoints: 58, maxPoints: 89, cohort: 'User Experience Design'},
+  {label: 'Principal Strategist', minPoints: 90, cohort: 'User Experience Design'},
+  {label: 'Director of User Experience Design', minPoints: 90, cohort: 'User Experience Design'},
+  {label: 'Designer I', minPoints: 0, maxPoints: 16, cohort: 'User Interface Design'},
+  {label: 'Designer II', minPoints: 17, maxPoints: 35, cohort: 'User Interface Design'},
+  {label: 'Senior Designer', minPoints: 36, maxPoints: 57, cohort: 'User Interface Design'},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 57, cohort: 'User Interface Design'},
+  {label: 'Staff Designer', minPoints: 58, maxPoints: 89, cohort: 'User Interface Design'},
+  {label: 'Senior Designer', minPoints: 58, maxPoints: 89, cohort: 'User Interface Design'},
+  {label: 'Principal Designer', minPoints: 90, cohort: 'User Interface Design'},
+  {label: 'Director of User Interface Design', minPoints: 90, cohort: 'User Interface Design'},
+  {label: 'Project Manager I', minPoints: 0, maxPoints: 16, cohort: 'Project Management'},
+  {label: 'Project Manager II', minPoints: 17, maxPoints: 35, cohort: 'Project Management'},
+  {label: 'Senior Project Manager', minPoints: 36, maxPoints: 57, cohort: 'Project Management'},
+  {label: 'Group Lead', minPoints: 36, maxPoints: 57, cohort: 'Project Management'},
+  {label: 'Staff Project Manager', minPoints: 58, maxPoints: 89, cohort: 'Project Management'},
+  {label: 'Senior Project Manager', minPoints: 58, maxPoints: 89, cohort: 'Project Management'},
+  {label: 'Principal Project Manager', minPoints: 90, cohort: 'Project Management'},
+  {label: 'Director of Project Management', minPoints: 90, cohort: 'Project Management'},
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap, cohort: string): string[] => {
@@ -893,6 +799,15 @@ export const trackMap = (trackList: object[], cohort: string): object[] => {
       return defaultTracks(trackList)
     case 'Engineering':
       return engineeringTracks(trackList)
+    case 'Front End Development':
+      return frontendTracks(trackList)
+    case 'User Experience Design':
+      return uxTracks(trackList)
+    case 'User Interface Design':
+      return uiTracks(trackList)
+    case 'Project Management':
+      return pmTracks(trackList)
+
     default:
       return defaultTracks(trackList)
   }
@@ -1032,6 +947,138 @@ export const defaultTracks = (trackList: object[]): object[] => {
       ],
     }],
   }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
   return trackList
 }
 
@@ -1165,6 +1212,1210 @@ export const engineeringTracks = (trackList: object[]): object[] => {
         "Defined and drove complete migration plan to Swift or Kotlin",
         "Implemented Android recycler views before platform support existed",
         "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  return trackList
+}
+
+export const frontendTracks = (trackList: object[]): object[] => {
+  trackList["CHAPTER_ONE"] = {
+    "displayName": "Front End One",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_TWO"] = {
+    "displayName": "Engineering Two",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  return trackList
+}
+
+export const uxTracks = (trackList: object[]): object[] => {
+  trackList["CHAPTER_ONE"] = {
+    "displayName": "UX One",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_TWO"] = {
+    "displayName": "Engineering Two",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  return trackList
+}
+
+export const uiTracks = (trackList: object[]): object[] => {
+  trackList["CHAPTER_ONE"] = {
+    "displayName": "Design One",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_TWO"] = {
+    "displayName": "Engineering Two",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  return trackList
+}
+
+export const pmTracks = (trackList: object[]): object[] => {
+  trackList["CHAPTER_ONE"] = {
+    "displayName": "PM One",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_TWO"] = {
+    "displayName": "Engineering Two",
+    "category": "A",
+    "description": "Most testing.",
+    "milestones": [{
+      "summary": "Does the thing",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Defines new useful and appropriate proto-generated objects",
+        "Creates simple new activities on Android",
+        "Migrates code from old patterns to new patterns",
+      ],
+      "examples": [
+        "Upgraded SDWebImage to a new major version",
+        "Added support for rendering a new type of stream item",
+        "Prototyped a simple new feature quickly",
+      ],
+    }, {
+      "summary": "Designs major new features and demonstrates a nuanced understanding of mobile platform constraints",
+      "signals": [
+        "Implements complex features with a large product surface area",
+        "Works effectively with  Android reactive programming framework",
+        "Adds support for new iOS features after a major iOS version upgrade",
+      ],
+      "examples": [
+        "Designed iOS caching strategy for offline reading",
+        "Built series reader on Android",
+        "Informed the team about recent best practice changes and deprecations",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
+      "signals": [
+        "Pioneers architecture migration strategies that reduce programmer burden",
+        "Fixes subtle memory management issues",
+        "Implements interactive dismissals that bring delight",
+      ],
+      "examples": [
+        "Upgraded CocoaPods to a new major version",
+        "Designed architecture for fetching and rendering stream items",
+        "Migrated Android persistance layer to reactive programming",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in mobile engineering or sets strategic mobile direction for an eng team",
+      "signals": [
+        "Defines long-term goals and ensures active projects are in service of them",
+        "Designs and builds innovative, industry-leading UI interactions",
+        "Invents new techniques to responsibly stretch limits of the Android platform",
+      ],
+      "examples": [
+        "Defined and drove complete migration plan to Swift or Kotlin",
+        "Implemented Android recycler views before platform support existed",
+        "Pioneered application-level abstractions for multi-app environment",
+      ],
+    }],
+  }
+  trackList["CHAPTER_THREE"] = {
+    "displayName": "Facilitation",
+    "category": "A",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
+      ],
+    }],
+  }
+  trackList["CHAPTER_FOUR"] = {
+    "displayName": "Motivation",
+    "category": "A",
+    "description": "Comprehends the ability to energize people to achieve their goals.",
+    "milestones": [{
+      "summary": "Works effectively within established structures, following current best practices",
+      "signals": [
+        "Writes thorough postmortems for service outages",
+        "Makes simple configuration changes to services",
+        "Performs backfills safely and effectively, without causing pages",
+      ],
+      "examples": [
+        "Made safe and effective Ansible changes",
+        "Implemented new ETL pipelines based on existing ones",
+        "Resolved out of disk errors independently",
+      ],
+    }, {
+      "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
+      "signals": [
+        "Made minor version upgrades to technologies",
+        "Builds machine learning jobs within the ML framework",
+        "Triages service issues correctly and independently",
+      ],
+      "examples": [
+        "Upgraded NodeJS from 8.0 to 8.1.1",
+        "Built custom packages for RPMs",
+        "Improved ETL efficiency by improving Dynamo to S3 loading",
+      ],
+    }, {
+      "summary": "Designs standalone systems of moderate complexity, or major new features in existing systems",
+      "signals": [
+        "Acts as primary maintainer for existing critical systems",
+        "Designs moderately complex systems",
+        "Makes major version upgrades to libraries",
+      ],
+      "examples": [
+        "Designed Ansible configuration management",
+        "Built Medium's realtime stats pipeline",
+        "Designed flexible framework for writing machine learning jobs",
+      ],
+    }, {
+      "summary": "Builds complex, reusable architectures that pioneer best practices for other engineers, or multi-system services",
+      "signals": [
+        "Designs complex projects that encompass multiple systems and technologies",
+        "Demonstrates deep knowledge of foundational systems",
+        "Introduces new databases and technologies to meet underserved needs",
+      ],
+      "examples": [
+        "Designed and built BBFD",
+        "Designed AWS configuration management",
+        "Introduced Kinesis and pioneered streaming events pipeline",
+      ],
+    }, {
+      "summary": "Is an industry-leading expert in foundational engineering or sets strategic foundational direction for an eng team",
+      "signals": [
+        "Designs transformational projects in service of long-term goals",
+        "Defines the strategic vision for foundational work and supporting technologies",
+        "Invents industry-leading techniques to solve complex problems",
+      ],
+      "examples": [
+        "Invented a novel ML technique that advanced the state of the art",
+        "Defined and developed Medium's continuous delivery strategy",
+        "Developed and implemented HA strategy",
       ],
     }],
   }
