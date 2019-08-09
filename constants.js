@@ -992,7 +992,6 @@ export const cohorts = [
   {key: 'ENGINEERING', label: 'Engineering'}
 ]
 
-// @TODO: Array of arrays?
 export const titles = [
   {label: 'Engineer I', minPoints: 0, maxPoints: 16, cohort: 'Engineering'},
   {label: 'Engineer II', minPoints: 17, maxPoints: 35, cohort: 'Engineering'},
