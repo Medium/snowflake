@@ -10,7 +10,7 @@ type Props = {
 
 class CohortSelector extends React.Component {
   render() {
-    return <select value={this.props.currentCohort} onChange={e => this.props.setCohortFn(e.target.value)}>
+    return <select value={this.props.currentCohort} onChange={e => this.trackChange(e)}>
       <style jsx>{`
         select {
           font-size: 20px;
@@ -25,6 +25,11 @@ class CohortSelector extends React.Component {
         </option>
       ))}
     </select>
+  }
+
+  trackChange(e) {
+    this.props.setCohortFn(e.target.value)
+    console.log(e.target.value)
   }
 }
 

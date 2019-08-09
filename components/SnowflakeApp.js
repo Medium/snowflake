@@ -187,6 +187,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrackId={this.state.focusedTrackId}
+            currentCohort={this.state.cohort}
             setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
         <KeyboardListener
             selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
@@ -196,6 +197,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <Track
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
+            currentCohort={this.state.cohort}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
@@ -216,21 +218,24 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
     const titles = eligibleTitles(milestoneByTrack)
     const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
+    const cohort = this.state.cohort
 
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    this.setState({ milestoneByTrack, focusedTrackId: trackId, title, cohort })
   }
 
   shiftFocusedTrack(delta: number) {
     let index = trackIds.indexOf(this.state.focusedTrackId)
     index = (index + delta + trackIds.length) % trackIds.length
     const focusedTrackId = trackIds[index]
-    this.setState({ focusedTrackId })
+    const cohort = this.state.cohort
+    this.setState({ focusedTrackId, cohort })
   }
 
   setFocusedTrackId(trackId: TrackId) {
     let index = trackIds.indexOf(trackId)
     const focusedTrackId = trackIds[index]
-    this.setState({ focusedTrackId })
+    const cohort = this.state.cohort
+    this.setState({ focusedTrackId, cohort })
   }
 
   shiftFocusedTrackMilestoneByDelta(delta: number) {
