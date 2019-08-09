@@ -87,10 +87,10 @@ type Tracks = {|
 
 // @TODO: Array?
 export const tracks: Tracks = {
-  "CHAPTER_ONE": {},
-  "CHAPTER_TWO": {},
-  "CHAPTER_THREE": {},
-  "CHAPTER_FOUR": {},
+  "CHAPTER_ONE": {"category": "A"},
+  "CHAPTER_TWO": {"category": "A"},
+  "CHAPTER_THREE": {"category": "A"},
+  "CHAPTER_FOUR": {"category": "A"},
   "PLANNING": {
     "displayName": "Planning & Coordination",
     "category": "B",
