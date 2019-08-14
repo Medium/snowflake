@@ -1,17 +1,17 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
+export type TrackId = 'MOBILE' | 'FRONTEND' | 'SYSTEME' | 'BACKEND' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+  'MENTORSHIP' | 'EVANGELISME' | 'RECRUTEMENT' | 'CULTURE'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = {
   'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
+  'FRONTEND': Milestone,
+  'SYSTEME': Milestone,
+  'BACKEND': Milestone,
   'PROJECT_MANAGEMENT': Milestone,
   'COMMUNICATION': Milestone,
   'CRAFT': Milestone,
@@ -21,9 +21,9 @@ export type MilestoneMap = {
   'WELLBEING': Milestone,
   'ACCOMPLISHMENT': Milestone,
   'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
+  'EVANGELISME': Milestone,
+  'RECRUTEMENT': Milestone,
+  'CULTURE': Milestone
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
@@ -72,9 +72,9 @@ export type Track = {
 
 type Tracks = {|
   'MOBILE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
+  'FRONTEND': Track,
+  'SYSTEME': Track,
+  'BACKEND': Track,
   'PROJECT_MANAGEMENT': Track,
   'COMMUNICATION': Track,
   'CRAFT': Track,
@@ -84,9 +84,9 @@ type Tracks = {|
   'WELLBEING': Track,
   'ACCOMPLISHMENT': Track,
   'MENTORSHIP': Track,
-  'EVANGELISM': Track,
-  'RECRUITING': Track,
-  'COMMUNITY': Track
+  'EVANGELISME': Track,
+  'RECRUTEMENT': Track,
+  'CULTURE': Track
 |}
 
 export const tracks: Tracks = {
@@ -157,8 +157,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "WEB_CLIENT": {
-    "displayName": "Web client",
+  "FRONTEND": {
+    "displayName": "Frontend",
     "category": "A",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
@@ -224,8 +224,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "FOUNDATIONS": {
-    "displayName": "Foundations",
+  "SYSTEME": {
+    "displayName": "Système",
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
@@ -291,8 +291,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "SERVERS": {
-    "displayName": "Servers",
+  "BACKEND": {
+    "displayName": "Backend",
     "category": "A",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "milestones": [{
@@ -961,8 +961,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "EVANGELISM": {
-    "displayName": "Evangelism",
+  "EVANGELISME": {
+    "displayName": "Evangélisme",
     "category": "D",
     "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
@@ -1028,8 +1028,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "RECRUITING": {
-    "displayName": "Recruiting",
+  "RECRUTEMENT": {
+    "displayName": "Recrutement",
     "category": "D",
     "description": "Strengthens Medium's team by bringing in excellent staff members",
     "milestones": [{
@@ -1095,8 +1095,8 @@ export const tracks: Tracks = {
     }],
   },
 
-  "COMMUNITY": {
-    "displayName": "Community",
+  "CULTURE": {
+    "displayName": "Culture",
     "category": "D",
     "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
     "milestones": [{

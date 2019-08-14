@@ -51,9 +51,9 @@ const emptyState = (): SnowflakeAppState => {
     title: '',
     milestoneByTrack: {
       'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
+      'FRONTEND': 0,
+      'SYSTEME': 0,
+      'BACKEND': 0,
       'PROJECT_MANAGEMENT': 0,
       'COMMUNICATION': 0,
       'CRAFT': 0,
@@ -63,9 +63,9 @@ const emptyState = (): SnowflakeAppState => {
       'WELLBEING': 0,
       'ACCOMPLISHMENT': 0,
       'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      'EVANGELISME': 0,
+      'RECRUTEMENT': 0,
+      'CULTURE': 0
     },
     focusedTrackId: 'MOBILE'
   }
@@ -77,9 +77,9 @@ const defaultState = (): SnowflakeAppState => {
     title: 'Staff Engineer',
     milestoneByTrack: {
       'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
+      'FRONTEND': 2,
+      'SYSTEME': 3,
+      'BACKEND': 2,
       'PROJECT_MANAGEMENT': 4,
       'COMMUNICATION': 1,
       'CRAFT': 1,
@@ -89,9 +89,9 @@ const defaultState = (): SnowflakeAppState => {
       'WELLBEING': 0,
       'ACCOMPLISHMENT': 4,
       'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'EVANGELISME': 2,
+      'RECRUTEMENT': 3,
+      'CULTURE': 0
     },
     focusedTrackId: 'MOBILE'
   }
