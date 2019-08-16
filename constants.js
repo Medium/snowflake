@@ -1154,7 +1154,7 @@ export const trackMap = (trackList: object[], cohort: string): object[] => {
       return defaultTracks(trackList)
     case 'Engineering':
       return engineeringTracks(trackList)
-    case 'Front End Development':
+    case 'Front-end Development':
       return frontendTracks(trackList)
     case 'User Experience Design':
       return uxTracks(trackList)
