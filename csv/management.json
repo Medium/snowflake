@@ -1,0 +1,216 @@
+trackList["CHAPTER_ONE"] = {
+    "milestone": "CHAPTER_ONE",
+    "cohort": "MANAGEMENT",
+    "category": "A",
+    "displayName": "Servant Leadership",
+    "description": "Comprehends the capacity to engage with stakeholders both internally and externally, and to develop strong interpersonal relationships with teams and clients to unlock their potential",
+    "milestones": [
+        {
+            "summary": "Helps individuals to get unblocked creating a supporting and engaging environment",
+            "signals": [
+                "Demonstrates an understanding of individuals' roles, goals and interests",
+                "Demonstrates concern for the well-being of people",
+                "Actively listens",
+                "Treats people with respect"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Manages expectations across teams and focus on building long-term relationships",
+            "signals": [
+                "Uses an understanding of the organization's processes, systems and policies to engage with people",
+                "Assumes positive intent of others, approaching every interaction with kindness and good humor",
+                "Empathetically listens",
+                "Communicates difficult or negative messages in an honest, accurate, and respectful manner"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Manages expectations supporting individuals and clients to perform at their highest capabilities",
+            "signals": [
+                "Helps people develop and perform as highly as possible",
+                "Uses awareness and understanding of the organization's culture to implement change initiatives",
+                "Is able to deeply understand and empathise with others",
+                "Delivers persuasive and compelling messages"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Advocates for people's needs, interests and goals and proactively works to support and enhance growth",
+            "signals": [
+                "Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose",
+                "Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues",
+                "Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information",
+                "Provides visible leadership that \"walks the talk\". Sets high performance standards for self, acting as a role model for the team"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Leads, inspires and servers others, enabling people to achieve their goals and full potential",
+            "signals": [
+                "Focus on bringuing their best self to your work, and making space for others to do so as well",
+                "Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation and maintenance of initiatives proposed by other executives",
+                "Uses storytelling to create a positive and engaging environment for teams and clients",
+                "Leverages relationships to best support and develop individuals"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_TWO"] = {
+    "milestone": "CHAPTER_TWO",
+    "cohort": "MANAGEMENT",
+    "category": "A",
+    "displayName": "Coaching",
+    "description": "Helps people to develop their own independent thinking, guiding them through processes",
+    "milestones": [
+        {
+            "summary": "Helps individuals to think through the likely impacts of alternative decisions",
+            "signals": [
+                "Helps individuals to think for themselves about possible impacts and solutions to a problem by asking open ended questions",
+                "Demonstrates a positive outlook on things"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Helps individuals to act or perform in the face of challenging goals",
+            "signals": [
+                "Shows confidence in other's ability and willingness to face challenges and solve problem",
+                "Helps people to gain awareness of current situations",
+                "Demonstrates curiosity"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
+            "signals": [
+                "Demonstrates the ability to understand what issues exist that limit individuals's ability to perform the task or accomplish the objectives",
+                "Determines whether people need help to remove barriers or if they are able to tackle them by themselves"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge or behavior",
+            "signals": [
+                "Partners with people to define actions based on their own abilities and knowledge",
+                "Supports people's progress, celebrates their wins and encourages them to find new paths if their original plan of action does not work out as expected",
+                "Demonstrates the ability to encourage meaningful thoughts that can help the other person address a challenge or break through to a new level of performance"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills and knowledge",
+            "signals": [
+                "Focuses on empowering their team members to discover solutions for themselves",
+                "Coaches senior leaders on creating positive working relationships with their teams and clients"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_THREE"] = {
+    "milestone": "CHAPTER_THREE",
+    "cohort": "MANAGEMENT",
+    "category": "A",
+    "displayName": "Facilitation",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+    "milestones": [
+        {
+            "summary": "Helps individuals resolve difficult issues, promoting an inclusive environment",
+            "signals": [
+                "Actively seeks many external views to help people gain understanding",
+                "Creates an inclusive environment"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Helps people collectively move through a process",
+            "signals": [
+                "Is able to effectively deal and understand views opposing their own views and is open to criticism and learning",
+                "Is becoming comfortable in mediating escalated conflicts",
+                "Builds consensus among people and teams"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Mediates escalated situations, empowers people, and resolves conflict\t",
+            "signals": [
+                "Understands what drives and motivates the project team, and their capabilities and is aware of differences",
+                "Resolves and\/or mediates conflicts in a respectful, appropriate and impartial manner",
+                "Takes time to understand how individuals and teams are performing and working together to deliver the project outcomes"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation and full buy-in from everyone who is involved",
+            "signals": [
+                "Understands themselves and the individuals in the project team, what drives and motivates them personally, and their individual capabilities",
+                "Is able to facilitate difficult interactions among stakeholders to achieve outcomes",
+                "Is focused on the big picure"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+            "signals": [
+                "Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams",
+                "Serves as a positive role model for productive conflict",
+                "Encourages productive and respectful task-related conflict, using it to facilitate change",
+                "Resolves complex organizational dysfunction, or persistent conflict at senior levels\t"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_FOUR"] = {
+    "milestone": "CHAPTER_FOUR",
+    "cohort": "MANAGEMENT",
+    "category": "A",
+    "displayName": "Motivation",
+    "description": "Comprehends the ability to energize people to achieve their goals",
+    "milestones": [
+        {
+            "summary": "Fosters enthusiasm and common purpose across people",
+            "signals": [
+                "Generates commitment in individuals and the team",
+                "Speaks positively and enthusiastically about the organization's products\/services and future direction"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Mobilizes individuals to develop goals, execut plans and deliver client value\t",
+            "signals": [
+                "Creates a fun and energetic environment that promotes creativity",
+                "Validates ongoing work and sustains motivation",
+                "Establishes challenging, yet realistic, performance goals that tap into people's interests"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Inspires others to a greater effort by setting an example in his\/her own behavior of dedication",
+            "signals": [
+                "Recognises individual and team performance, even when things go wrong",
+                "Empowers a team to drive forward amidst uncertainty",
+                "Models excellence and enthusiasm for the work"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve",
+            "signals": [
+                "Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn",
+                "Ensures that the self-realisation and practical needs of the project team are met"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Enables and directs generation of energy - motivation to act - among members of the organization and clients",
+            "signals": [
+                "Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions",
+                "Ability to find and use successes to celebrate progress towards the vision",
+                "Sets clear goals and a desired future state that is compelling and realistic for stakeholders"
+            ],
+            "examples": []
+        }
+    ]
+}

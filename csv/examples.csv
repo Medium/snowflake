@@ -5,22 +5,22 @@ CHAPTER_ONE,DEFAULT,1,3,Actively listens
 CHAPTER_ONE,DEFAULT,1,4,Treats people with respect
 CHAPTER_ONE,DEFAULT,1,5,
 CHAPTER_ONE,DEFAULT,1,6,
-CHAPTER_ONE,DEFAULT,2,1,"Uses an understanding of the organization’s processes, systems and policies to engage with people"
+CHAPTER_ONE,DEFAULT,2,1,"Uses an understanding of the organization's processes, systems and policies to engage with people"
 CHAPTER_ONE,DEFAULT,2,2,"Assumes positive intent of others, approaching every interaction with kindness and good humor"
 CHAPTER_ONE,DEFAULT,2,3,Empathetically listens
 CHAPTER_ONE,DEFAULT,2,4,"Communicates difficult or negative messages in an honest, accurate, and respectful manner"
 CHAPTER_ONE,DEFAULT,2,5,
 CHAPTER_ONE,DEFAULT,2,6,
 CHAPTER_ONE,DEFAULT,3,1,Helps people develop and perform as highly as possible
-CHAPTER_ONE,DEFAULT,3,2,Uses awareness and understanding of the organization’s culture to implement change initiatives
+CHAPTER_ONE,DEFAULT,3,2,Uses awareness and understanding of the organization's culture to implement change initiatives
 CHAPTER_ONE,DEFAULT,3,3,Is able to deeply understand and empathise with others
 CHAPTER_ONE,DEFAULT,3,4,Delivers persuasive and compelling messages
 CHAPTER_ONE,DEFAULT,3,5,
 CHAPTER_ONE,DEFAULT,3,6,
 CHAPTER_ONE,DEFAULT,4,1,"Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose"
-CHAPTER_ONE,DEFAULT,4,2,"Uses an understanding of the organization’s culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues"
+CHAPTER_ONE,DEFAULT,4,2,"Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues"
 CHAPTER_ONE,DEFAULT,4,3,"Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information"
-CHAPTER_ONE,DEFAULT,4,4,"Provides visible leadership that ‘’walks the talk’’. Sets high performance standards for self, acting as a role model for the team"
+CHAPTER_ONE,DEFAULT,4,4,"Provides visible leadership that ""walks the talk"". Sets high performance standards for self, acting as a role model for the team"
 CHAPTER_ONE,DEFAULT,4,5,
 CHAPTER_ONE,DEFAULT,4,6,
 CHAPTER_ONE,DEFAULT,5,1,"Focus on bringuing their best self to your work, and making space for others to do so as well"
@@ -90,14 +90,14 @@ CHAPTER_THREE,DEFAULT,5,4,"Resolves complex organizational dysfunction, or persi
 CHAPTER_THREE,DEFAULT,5,5,
 CHAPTER_THREE,DEFAULT,5,6,
 CHAPTER_FOUR,DEFAULT,1,1,Generates commitment in individuals and the team
-CHAPTER_FOUR,DEFAULT,1,2,Speaks positively and enthusiastically about the organization’s products/services and future direction
+CHAPTER_FOUR,DEFAULT,1,2,Speaks positively and enthusiastically about the organization's products/services and future direction
 CHAPTER_FOUR,DEFAULT,1,3,
 CHAPTER_FOUR,DEFAULT,1,4,
 CHAPTER_FOUR,DEFAULT,1,5,
 CHAPTER_FOUR,DEFAULT,1,6,
 CHAPTER_FOUR,DEFAULT,2,1,Creates a fun and energetic environment that promotes creativity
 CHAPTER_FOUR,DEFAULT,2,2,Validates ongoing work and sustains motivation
-CHAPTER_FOUR,DEFAULT,2,3,"Establishes challenging, yet realistic, performance goals that tap into people’s interests"
+CHAPTER_FOUR,DEFAULT,2,3,"Establishes challenging, yet realistic, performance goals that tap into people's interests"
 CHAPTER_FOUR,DEFAULT,2,4,
 CHAPTER_FOUR,DEFAULT,2,5,
 CHAPTER_FOUR,DEFAULT,2,6,
@@ -136,13 +136,13 @@ PLANNING,DEFAULT,3,2,Integrates business needs into project planning
 PLANNING,DEFAULT,3,3,Chooses appropriate project management strategy based on context
 PLANNING,DEFAULT,3,4,Demonstrates the ability to prioritize the most important work for the company/team
 PLANNING,DEFAULT,3,5,Delegates tasks to others appropriately
-PLANNING,DEFAULT,3,6,"When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they’re going to be delivering in the next few projects"
+PLANNING,DEFAULT,3,6,"When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
 PLANNING,DEFAULT,4,1,"Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically"
 PLANNING,DEFAULT,4,2,Manages dependencies on other projects and teams
 PLANNING,DEFAULT,4,3,Leverages recognition of repeated project patterns
 PLANNING,DEFAULT,4,4,Able to reduce complexity and prioritize the most important work for the company
 PLANNING,DEFAULT,4,5,Helps define roadmaps and set vision for long-term projects
-PLANNING,DEFAULT,4,6,Often “sees around corners” and addresses issues before they become critical
+PLANNING,DEFAULT,4,6,"Often ""sees around corners"" and addresses issues before they become critical"
 PLANNING,DEFAULT,5,1,"Able to plan and execute large, complex projects with interdependencies across teams and systems"
 PLANNING,DEFAULT,5,2,"Leads teams of teams, and coordinates effective cross- functional collaboration"
 PLANNING,DEFAULT,5,3,Considers external constraints and business objectives when planning
@@ -265,7 +265,7 @@ COMPLEXITY,DEFAULT,4,5,Deals with change in an open and collaborative way to fac
 COMPLEXITY,DEFAULT,4,6,"Simplifies complexities by pulling together ideas, issues, and observations into a single concept or a clear presentation"
 COMPLEXITY,DEFAULT,5,1,Builds the capacity in other people to cope with complexity
 COMPLEXITY,DEFAULT,5,2,Leads change strategies to facilitate human resource management
-COMPLEXITY,DEFAULT,5,3,Has an holistic vision – is driven by an holistic vision of the project outcomes
+COMPLEXITY,DEFAULT,5,3,Has an holistic vision -- is driven by an holistic vision of the project outcomes
 COMPLEXITY,DEFAULT,5,4,Creates an organizational architecture that facilitates a positive work environment
 COMPLEXITY,DEFAULT,5,5,"Helps others to move through the change curve, from resistors to adopters"
 COMPLEXITY,DEFAULT,5,6,Has high energy - gives energy to those around them
@@ -284,7 +284,7 @@ MATURITY,DEFAULT,2,6,
 MATURITY,DEFAULT,3,1,Self-aware of strengths and weaknesses
 MATURITY,DEFAULT,3,2,Embraces big challenges as opportunities for growth and learning
 MATURITY,DEFAULT,3,3,Uses position to raise difficult issues on someone's behalf
-MATURITY,DEFAULT,3,4,"Allows everyone the opportunity to contribute, regardless of their title or how many years they’ve been with the company"
+MATURITY,DEFAULT,3,4,"Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company"
 MATURITY,DEFAULT,3,5,Able to change direction quickly based on shifting company and project needs
 MATURITY,DEFAULT,3,6,
 MATURITY,DEFAULT,4,1,"Goes above and beyond, serving the team without complaint"
@@ -395,22 +395,22 @@ CHAPTER_ONE,MANAGEMENT,1,3,Actively listens
 CHAPTER_ONE,MANAGEMENT,1,4,Treats people with respect
 CHAPTER_ONE,MANAGEMENT,1,5,
 CHAPTER_ONE,MANAGEMENT,1,6,
-CHAPTER_ONE,MANAGEMENT,2,1,"Uses an understanding of the organization’s processes, systems and policies to engage with people"
+CHAPTER_ONE,MANAGEMENT,2,1,"Uses an understanding of the organization's processes, systems and policies to engage with people"
 CHAPTER_ONE,MANAGEMENT,2,2,"Assumes positive intent of others, approaching every interaction with kindness and good humor"
 CHAPTER_ONE,MANAGEMENT,2,3,Empathetically listens
 CHAPTER_ONE,MANAGEMENT,2,4,"Communicates difficult or negative messages in an honest, accurate, and respectful manner"
 CHAPTER_ONE,MANAGEMENT,2,5,
 CHAPTER_ONE,MANAGEMENT,2,6,
 CHAPTER_ONE,MANAGEMENT,3,1,Helps people develop and perform as highly as possible
-CHAPTER_ONE,MANAGEMENT,3,2,Uses awareness and understanding of the organization’s culture to implement change initiatives
+CHAPTER_ONE,MANAGEMENT,3,2,Uses awareness and understanding of the organization's culture to implement change initiatives
 CHAPTER_ONE,MANAGEMENT,3,3,Is able to deeply understand and empathise with others
 CHAPTER_ONE,MANAGEMENT,3,4,Delivers persuasive and compelling messages
 CHAPTER_ONE,MANAGEMENT,3,5,
 CHAPTER_ONE,MANAGEMENT,3,6,
 CHAPTER_ONE,MANAGEMENT,4,1,"Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose"
-CHAPTER_ONE,MANAGEMENT,4,2,"Uses an understanding of the organization’s culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues"
+CHAPTER_ONE,MANAGEMENT,4,2,"Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues"
 CHAPTER_ONE,MANAGEMENT,4,3,"Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information"
-CHAPTER_ONE,MANAGEMENT,4,4,"Provides visible leadership that ‘’walks the talk’’. Sets high performance standards for self, acting as a role model for the team"
+CHAPTER_ONE,MANAGEMENT,4,4,"Provides visible leadership that ""walks the talk"". Sets high performance standards for self, acting as a role model for the team"
 CHAPTER_ONE,MANAGEMENT,4,5,
 CHAPTER_ONE,MANAGEMENT,4,6,
 CHAPTER_ONE,MANAGEMENT,5,1,"Focus on bringuing their best self to your work, and making space for others to do so as well"
@@ -480,14 +480,14 @@ CHAPTER_THREE,MANAGEMENT,5,4,"Resolves complex organizational dysfunction, or pe
 CHAPTER_THREE,MANAGEMENT,5,5,
 CHAPTER_THREE,MANAGEMENT,5,6,
 CHAPTER_FOUR,MANAGEMENT,1,1,Generates commitment in individuals and the team
-CHAPTER_FOUR,MANAGEMENT,1,2,Speaks positively and enthusiastically about the organization’s products/services and future direction
+CHAPTER_FOUR,MANAGEMENT,1,2,Speaks positively and enthusiastically about the organization's products/services and future direction
 CHAPTER_FOUR,MANAGEMENT,1,3,
 CHAPTER_FOUR,MANAGEMENT,1,4,
 CHAPTER_FOUR,MANAGEMENT,1,5,
 CHAPTER_FOUR,MANAGEMENT,1,6,
 CHAPTER_FOUR,MANAGEMENT,2,1,Creates a fun and energetic environment that promotes creativity
 CHAPTER_FOUR,MANAGEMENT,2,2,Validates ongoing work and sustains motivation
-CHAPTER_FOUR,MANAGEMENT,2,3,"Establishes challenging, yet realistic, performance goals that tap into people’s interests"
+CHAPTER_FOUR,MANAGEMENT,2,3,"Establishes challenging, yet realistic, performance goals that tap into people's interests"
 CHAPTER_FOUR,MANAGEMENT,2,4,
 CHAPTER_FOUR,MANAGEMENT,2,5,
 CHAPTER_FOUR,MANAGEMENT,2,6,
@@ -552,9 +552,9 @@ CHAPTER_TWO,ENGINEERING,2,4,"Is becoming comfortable diving in and making change
 CHAPTER_TWO,ENGINEERING,2,5,"Provides helpful, timely code reviews"
 CHAPTER_TWO,ENGINEERING,2,6,Ability to perform code audit
 CHAPTER_TWO,ENGINEERING,3,1,"Consistently delivers code that sets the standard for quality, security and maintainability"
-CHAPTER_TWO,ENGINEERING,3,2,Understands large swaths of the codebase with a deep knowledge and ability to “reach in and touch the right levers.” Able to move rapidly as a result
+CHAPTER_TWO,ENGINEERING,3,2,"Understands large swaths of the codebase with a deep knowledge and ability to ""reach in and touch the right levers."" Able to move rapidly as a result"
 CHAPTER_TWO,ENGINEERING,3,3,Most input from code reviewers is at a high level - already writes reliable code
-CHAPTER_TWO,ENGINEERING,3,4,"Code review feedback is sought after, respected, and often the source of others’ learning"
+CHAPTER_TWO,ENGINEERING,3,4,"Code review feedback is sought after, respected, and often the source of others' learning"
 CHAPTER_TWO,ENGINEERING,3,5,Writes meaningful code reviews
 CHAPTER_TWO,ENGINEERING,3,6,Sets the standards for performing code audits
 CHAPTER_TWO,ENGINEERING,4,1,Uses mastery to ship quickly
@@ -672,9 +672,9 @@ CHAPTER_TWO,FRONTEND,2,4,"Is becoming comfortable diving in and making changes t
 CHAPTER_TWO,FRONTEND,2,5,"Provides helpful, timely front-end code reviews"
 CHAPTER_TWO,FRONTEND,2,6,
 CHAPTER_TWO,FRONTEND,3,1,Consistently delivers front-end code that sets the standard for quality and maintainability
-CHAPTER_TWO,FRONTEND,3,2,Understands large swaths of the codebase with a deep knowledge and ability to “reach in and touch the right levers.” Able to move rapidly as a result
+CHAPTER_TWO,FRONTEND,3,2,"Understands large swaths of the codebase with a deep knowledge and ability to ""reach in and touch the right levers."" Able to move rapidly as a result"
 CHAPTER_TWO,FRONTEND,3,3,Most input from front-end code reviewers is at a high leve - already writes reliable code
-CHAPTER_TWO,FRONTEND,3,4,"Front-end code review feedback is sought after, respected, and often the source of others’ learning"
+CHAPTER_TWO,FRONTEND,3,4,"Front-end code review feedback is sought after, respected, and often the source of others' learning"
 CHAPTER_TWO,FRONTEND,3,5,Writes meaningful front-end code reviews
 CHAPTER_TWO,FRONTEND,3,6,Translates design solutions into high quality front-end code
 CHAPTER_TWO,FRONTEND,4,1,Uses mastery to ship quickly
@@ -836,14 +836,14 @@ CHAPTER_THREE,PM,3,6,Regurlay review quality metrics with the team
 CHAPTER_THREE,PM,3,7,"Establishes, updates, and utilizes key performance indicators"
 CHAPTER_THREE,PM,4,1,Develops guidance and direction on how the project risks will be managed throughout the project
 CHAPTER_THREE,PM,4,2,Oversees and guides the risk analysis process and the development of risk responses
-CHAPTER_THREE,PM,4,3,Links the outcomes to the organisational goals and the client’s vision and mission statements through measurable key performance indicators and a review and assurance process
+CHAPTER_THREE,PM,4,3,Links the outcomes to the organisational goals and the client's vision and mission statements through measurable key performance indicators and a review and assurance process
 CHAPTER_THREE,PM,4,4,Maintains awareness and visibility of the risks to the client and team throughout the course of the project
 CHAPTER_THREE,PM,4,5,Ensures audits of quality process are executed in accordance with quality management plan
 CHAPTER_THREE,PM,4,6,
-CHAPTER_THREE,PM,5,1,"Expertly conducts all stages of risk mitigation—including planning, identification, analysis, and response"
+CHAPTER_THREE,PM,5,1,"Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response"
 CHAPTER_THREE,PM,5,2,Drives and leads creative actions to enhance opportunities and reduce threats to project objectives
 CHAPTER_THREE,PM,5,3,Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issue
-CHAPTER_THREE,PM,5,4,"Clearly articulates the risks to the client, including their negative impact on the company’s overall business"
+CHAPTER_THREE,PM,5,4,"Clearly articulates the risks to the client, including their negative impact on the company's overall business"
 CHAPTER_THREE,PM,5,5,Identifies quality standards for use by the team that establish performance and quality expectations
 CHAPTER_THREE,PM,5,6,
 CHAPTER_FOUR,PM,1,1,"Actively listens and understands stakeholders needs, interests, and influence for project success"
@@ -914,7 +914,7 @@ CHAPTER_ONE,UX,5,6,Seen as a leader and contributor in the broader technical sid
 CHAPTER_TWO,UX,1,1,"Gather business requirements and user insights through surveys, user tests, and interviews with the assitance of senior startegists"
 CHAPTER_TWO,UX,1,2,Uses basic feedback techniques to improve relatively simple strategy concepts and techniques
 CHAPTER_TWO,UX,1,3,Is building the ability to plan information validation activities and incorporate user and stakeholders into design changes by observing and interaction with senior strategists
-CHAPTER_TWO,UX,1,4,"Understands client business/objectives and identifies opportunities for client ”wins” through digital design, tools and experiences"
+CHAPTER_TWO,UX,1,4,"Understands client business/objectives and identifies opportunities for client ""wins"" through digital design, tools and experiences"
 CHAPTER_TWO,UX,1,5,
 CHAPTER_TWO,UX,1,6,
 CHAPTER_TWO,UX,2,1,Conducts validations/interviews with users and stakeholders with assistance of a more senior strategist
@@ -930,17 +930,17 @@ CHAPTER_TWO,UX,3,4,Communicates usability findings and provides recommendations 
 CHAPTER_TWO,UX,3,5,Facilitates the planning and execution of on-site discovery workshops
 CHAPTER_TWO,UX,3,6,Conducts comparative analysis
 CHAPTER_TWO,UX,3,7,Perform content audits and competitor site analysis
-CHAPTER_TWO,UX,4,1,Independently conducts all aspects of complex user-research programs—from early-stage requirements to summative usability testing
+CHAPTER_TWO,UX,4,1,Independently conducts all aspects of complex user-research programs--from early-stage requirements to summative usability testing
 CHAPTER_TWO,UX,4,2,"Adapts user-research techniques to inform both new and on-going, complex, product-development effort"
 CHAPTER_TWO,UX,4,3,"Communicates usability findings, metrics, and associated design strategies to large, distributed product teams"
 CHAPTER_TWO,UX,4,4,Discusses usability metrics and their impact on product ROI
 CHAPTER_TWO,UX,4,5,
 CHAPTER_TWO,UX,4,6,
-CHAPTER_TWO,UX,5,1,"Expertly conducts all stages of user research—including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability–testing activities"
+CHAPTER_TWO,UX,5,1,"Expertly conducts all stages of user research--including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability--testing activities"
 CHAPTER_TWO,UX,5,2,Simultaneously plans and drives multiple user-research activities across widely divergent product domains
 CHAPTER_TWO,UX,5,3,"Drives and conducts all aspects of formal summative testing, including the use of metrics and competitive benchmark testing"
 CHAPTER_TWO,UX,5,4,"Communicates usability metrics and findings to engineers, designers, PM and executives"
-CHAPTER_TWO,UX,5,5,"Clearly articulates the impacts of perpetuating usability issues, including their negative impact on the company’s overall business"
+CHAPTER_TWO,UX,5,5,"Clearly articulates the impacts of perpetuating usability issues, including their negative impact on the company's overall business"
 CHAPTER_TWO,UX,5,6,Creates new user-elicitation methods and techniques to suit novel research needs and requirements
 CHAPTER_THREE,UX,1,1,Understands lessons from discovery and research to inform audience definition and identify key personas
 CHAPTER_THREE,UX,1,2,"Synthesizes findings from discovery process, identifying opportunities and issues with guidance of senior strategists"
@@ -968,7 +968,7 @@ CHAPTER_THREE,UX,4,5,
 CHAPTER_THREE,UX,4,6,
 CHAPTER_THREE,UX,5,1,"Demonstrates ability to generate and translat insights into actionable digital opportunities through reports/presentations, personas, user flows, journey maps,.."
 CHAPTER_THREE,UX,5,2,"Balances creativity with structure, collaborating with designers, PM, and  engineers"
-CHAPTER_THREE,UX,5,3,"Advocates for pushing the limits on a project’s capabilities, both from a visual and functional perspective"
+CHAPTER_THREE,UX,5,3,"Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
 CHAPTER_THREE,UX,5,4,Articulates a design strategy or approach that will impact the user experience across products or platforms and support own ideas with sound reasoning and/or data
 CHAPTER_THREE,UX,5,5,
 CHAPTER_THREE,UX,5,6,
@@ -1113,14 +1113,14 @@ CHAPTER_FOUR,UI,3,4,
 CHAPTER_FOUR,UI,3,5,
 CHAPTER_FOUR,UI,3,6,
 CHAPTER_FOUR,UI,4,1,"Builds complex, accurate wireframes, following visual-design guidelines"
-CHAPTER_FOUR,UI,4,2,"Collaborates with strategists, PM and engineers to understand how all aspects of a product’s functionality would work within an established visual-design framework"
+CHAPTER_FOUR,UI,4,2,"Collaborates with strategists, PM and engineers to understand how all aspects of a product's functionality would work within an established visual-design framework"
 CHAPTER_FOUR,UI,4,3,"Maintains an awareness of trends in visual design and guides other visual designers in implementing cutting-edge, visual-design solutions for their products"
 CHAPTER_FOUR,UI,4,4,Has a strong understanding of web design systems and helps create a standardized toolbox of components to draw from
 CHAPTER_FOUR,UI,4,5,
 CHAPTER_FOUR,UI,4,6,
 CHAPTER_FOUR,UI,5,1,"Expertly builds complex, accurate wireframes, following visual-design guidelines"
-CHAPTER_FOUR,UI,5,2,Guides and directs the UI design team to understand how all aspects of a product’s functionality would work within an established visual-design framework
+CHAPTER_FOUR,UI,5,2,Guides and directs the UI design team to understand how all aspects of a product's functionality would work within an established visual-design framework
 CHAPTER_FOUR,UI,5,3,Stays abreast of trends in visual design and expertly guides other visual designers in implementing cutting-edge solutions for their products
-CHAPTER_FOUR,UI,5,4,"Advocates for pushing the limits on a project’s capabilities, both from a visual and functional perspective"
+CHAPTER_FOUR,UI,5,4,"Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
 CHAPTER_FOUR,UI,5,5,
 CHAPTER_FOUR,UI,5,6,

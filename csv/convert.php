@@ -1,7 +1,7 @@
 <?php
 
-#create_jobs();
-create_examples(TRUE);
+create_jobs();
+create_examples();
 
 /**
  * Converts the job list and writes the file.
@@ -10,7 +10,7 @@ create_examples(TRUE);
  *   Outputs the JSON to the command line.
  */
 function create_jobs($debug = FALSE) {
-  $jsonresult = csvtojson("./job-titles.csv");
+  $jsonresult = process_csv("./job-titles.csv");
   if ($debug) {
     echo $jsonresult;
   }
@@ -44,7 +44,7 @@ function create_jobs($debug = FALSE) {
 function create_examples($debug = FALSE) {
   $milestones = process_csv("./milestones.csv", 'php');
   if ($debug) {
-    var_dump($milestones);
+    #var_dump($milestones);
   }
   $levels = process_csv("./levels.csv", 'php');
   if ($debug) {
@@ -55,17 +55,51 @@ function create_examples($debug = FALSE) {
   #  var_dump($examples);
   }
 
+
   $output = '';
+  $data = [];
   foreach ($milestones as $milestone) {
-    $data = [];
-    $output .= $milestone['milestone'] . ':';
-    $data = json_encode($milestone);
-    $output .= $data . ',';
+    $temp = $milestone;
+    $summary = '';
+    foreach ($levels as $level) {
+      $signals = [];
+      if ($level['milestone'] == $temp['milestone'] && $level['cohort'] == $temp['cohort']) {
+        $summary = $level['summary'];
+        foreach ($examples as $example) {
+          if (!empty($example['example']) && $example['milestone'] == $temp['milestone'] && $example['cohort'] == $temp['cohort'] && intval($example['level']) == intval($level['level'])) {
+            $signals[] = $example['example'];
+          }
+        }
+        $temp['milestones'][] = [
+          'summary' => $summary,
+          'signals' => $signals,
+          'examples' => [],
+        ];
+      }
+    }
+    if ($milestone['cohort'] == 'DEFAULT') {
+      $output .= '"' . $milestone['milestone'] . '":';
+      $output .= json_encode($temp, JSON_PRETTY_PRINT) . ',';
+      file_put_contents('milestones.json', $output);
+    }
+    else {
+      $cohort = $milestone['cohort'];
+      foreach ($temp as $key => $item) {
+        if ($key == 'cohort' && $item == $cohort) {
+          $data[$cohort][] = $temp;
+        }
+      }
+    }
   }
-  if ($debug) {
-    var_dump($output);
+  foreach ($data as $cohort => $info) {
+    $track_output = '';
+    foreach ($info as $element) {
+      $track_output .= 'trackList["' . $element['milestone'] . '"] = ';
+      $track_output .= json_encode($element, JSON_PRETTY_PRINT) . "\n";
+    }
+    file_put_contents(strtolower($cohort) . '.json', $track_output);
+
   }
- # file_put_contents('milestones.json', $jsonresult);
 }
 
 /**
