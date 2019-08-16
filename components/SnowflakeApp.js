@@ -75,7 +75,7 @@ const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Kiki',
     cohort: 'Management',
-    title: 'Staff Manager',
+    title: 'Specialist, IV',
     milestoneByTrack: {
       'CHAPTER_ONE': 1,
       'CHAPTER_TWO': 2,

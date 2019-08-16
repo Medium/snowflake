@@ -30,8 +30,8 @@ export const milestoneToPoints = (milestone: Milestone): number => {
     case 0: return 0
     case 1: return 1
     case 2: return 3
-    case 3: return 9
-    case 4: return 18
+    case 3: return 10
+    case 4: return 20
     case 5: return 30
     default: return 0
   }
@@ -1143,7 +1143,7 @@ export const titles = [
 export const eligibleTitles = (milestoneMap: MilestoneMap, cohort: string): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
   return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints)
+                             && (title.maxPoints === undefined || totalPoints-50 <= title.maxPoints)
                              && (title.cohort === cohort))
     .map(title => title.label)
 }
