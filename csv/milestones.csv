@@ -1,0 +1,38 @@
+milestone,cohort,category,displayName,description
+CHAPTER_ONE,DEFAULT,A,Servant Leadership,"Comprehends the capacity to engage with stakeholders both internally and externally, and to develop strong interpersonal relationships with teams and clients to unlock their potential"
+CHAPTER_TWO,DEFAULT,A,Coaching,"Helps people to develop their own independent thinking, guiding them through processes"
+CHAPTER_THREE,DEFAULT,A,Facilitation,"Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity"
+CHAPTER_FOUR,DEFAULT,A,Motivation,Comprehends the ability to energize people to achieve their goals
+PLANNING,DEFAULT,B,Plan and Coordination,"Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously"
+COLLABORATION,DEFAULT,B,Communication & Collaboration,"Focus on teamwork, communication skills, asking for and giving feedback, collaboration, and documentation"
+VALUE,DEFAULT,B,Client Value,Focus on delivering repeatable value to our clients by ensuring excellent quality products and services in our Value Stream Delivery
+INITIATIVE,DEFAULT,C,Initiative,Challenges the status quo and takes ownership and initiative outside of mandated work
+COMPLEXITY,DEFAULT,C,Maturity,"Strenghtens Palantir's values to create and collaborate in open, diverse, and inclusive environments"
+MATURITY,DEFAULT,C,Compexity,"Ability to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain"
+LEARNING,DEFAULT,D,Learning & Career Development,Provides strategic support to individuals to help them build the career they want
+MENTORSHIP,DEFAULT,D,Mentorship,"Provides support to others, spreads knowledge, and develops the team outside formal reporting structures"
+INFLUENCE,DEFAULT,D,Influence,Impacts and promotes Palantir's culture and values positively through leadership and representation of our brand
+CHAPTER_ONE,MANAGEMENT,A,Servant Leadership,"Comprehends the capacity to engage with stakeholders both internally and externally, and to develop strong interpersonal relationships with teams and clients to unlock their potential"
+CHAPTER_TWO,MANAGEMENT,A,Coaching,"Helps people to develop their own independent thinking, guiding them through processes"
+CHAPTER_THREE,MANAGEMENT,A,Facilitation,"Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity"
+CHAPTER_FOUR,MANAGEMENT,A,Motivation,Comprehends the ability to energize people to achieve their goals
+CHAPTER_ONE,ENGINEERING,A,Foundations,"Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas	"
+CHAPTER_TWO,ENGINEERING,A,Coding,"Develops expertise and proficiency in our code base, with solid understanding of relevant areas	"
+CHAPTER_THREE,ENGINEERING,A,DevOps,Develops expertise and proficiency in DevOps	
+CHAPTER_FOUR,ENGINEERING,A,Craft,Embodies and promotes practices to ensure excellent quality products and services
+CHAPTER_ONE,FRONTEND,A,Foundations,"Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas	"
+CHAPTER_TWO,FRONTEND,A,Coding,"Develops expertise and proficiency in our front-end code base, with solid understanding of relevant areas	"
+CHAPTER_THREE,FRONTEND,A,Web Technologies,"Develops expertise in web client technologies, such as HTML, CSS and JavaScript	"
+CHAPTER_FOUR,FRONTEND,A,Craft,Embodies and promotes practices to ensure excellent quality products and services
+CHAPTER_ONE,PM,A,Foundations,"Develops expertise and proficiency in our PM practice, with solid understanding of relevant areas	"
+CHAPTER_TWO,PM,A,Plan,"Comprehends the processes and activities to identify, define, combine, unify, and coordinate the various elements within PM such as scope, budget, timelines and resources	"
+CHAPTER_THREE,PM,A,Risk Mitigation,"Comprehends the ability to conduct risk planning, identification, analysis, and response planning and controlling risk on a project	"
+CHAPTER_FOUR,PM,A,Information,"Comprehends the effective exchanges of accurate, appropriate and relevant information with stakeholders	"
+CHAPTER_ONE,UX,A,Foundations,"Develops expertise and proficiency in our strategy practice, with solid understanding of relevant areas	"
+CHAPTER_TWO,UX,A,Discovery & Definition,"Comprehends the analysis of the business model, stakeholders, goals, key performance indicators, and existing technologies and workflows	"
+CHAPTER_THREE,UX,A,Strategy & Design,Comprehends the analysis and creation of content strategy	
+CHAPTER_FOUR,UX,A,User-centered Design,Comprehends an understanding of the end user to guide decision making for product design and development	
+CHAPTER_ONE,UI,A,Foundations,"Develops expertise and proficiency in our design practice, with solid understanding of relevant areas"
+CHAPTER_TWO,UI,A,Information Architecture,"Comprehends the structural designs and organizing principles for information environments, Web sites, and software products"
+CHAPTER_THREE,UI,A,Interaction Design,Comprehends the application’s workflows and behaviors in response to a user’s actions
+CHAPTER_FOUR,UI,A,Visual Design,Comprehends the creation of visual elements and application of visual treatments and branding to Web sites and products
