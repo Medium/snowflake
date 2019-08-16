@@ -1,1 +1,434 @@
-ArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArrayArray
+[
+    {
+        "label": "Engineer I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Engineer II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Engineer III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Engineer IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Engineer V",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Sr. Engineer I",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Sr. Engineer II",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Technical Architect I",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Technical Architect II",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Sr. Technical Architect I",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Sr. Technical Architect II",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Sr. Technical Architect III",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "Engineering"
+    },
+    {
+        "label": "Front-End Developer, I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Front-End Developer, II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Front-End Developer, III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Front-End Developer, IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Front-End Developer, V",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Sr. Front-End Developer, I",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Sr. Front-End Developer, II",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Technical Architect I",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Technical Architect II",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Sr. Technical Architect I",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Sr. Technical Architect II",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Sr. Technical Architect III",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "Front-end Development"
+    },
+    {
+        "label": "Web Strategist, I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Web Strategist, II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Web Strategist, III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Web Strategist, IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Web Strategist, V",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Sr. Strategist, I",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Sr. Strategist II",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "UX Architect, I",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "UX Architect, II",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Sr. UX Architect, I",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Sr. UX Architect, II",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Sr. UX Architect, III",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "User Experience Design"
+    },
+    {
+        "label": "Designer, I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Designer, II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Designer, III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Designer, IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Designer, V",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Sr. Designer, I",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Sr. Designer, II",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "UX Architect, I",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "UX Architect, II",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Sr. UX Architect, I",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Sr. UX Architect, II",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Sr. UX Architect, III",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "User Interface Design"
+    },
+    {
+        "label": "Project Manager, I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Project Manager, II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Project Manager, III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Project Manager, IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Project Manager, V",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Sr. Project Manager, I",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Sr. Project Manager, II",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Sr. Project Manager, III",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Program Mgr, I",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Program Mgr, II",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Program Mgr, III",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Sr. Program Mgr, I",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "Project Management"
+    },
+    {
+        "label": "Specialist, I",
+        "minPoints": "0",
+        "maxPoints": "19",
+        "cohort": "Management"
+    },
+    {
+        "label": "Specialist, II",
+        "minPoints": "20",
+        "maxPoints": "39",
+        "cohort": "Management"
+    },
+    {
+        "label": "Specialist, III",
+        "minPoints": "40",
+        "maxPoints": "59",
+        "cohort": "Management"
+    },
+    {
+        "label": "Specialist, IV",
+        "minPoints": "60",
+        "maxPoints": "79",
+        "cohort": "Management"
+    },
+    {
+        "label": "Manager, I",
+        "minPoints": "80",
+        "maxPoints": "109",
+        "cohort": "Management"
+    },
+    {
+        "label": "Manager, II",
+        "minPoints": "110",
+        "maxPoints": "139",
+        "cohort": "Management"
+    },
+    {
+        "label": "Manager, III",
+        "minPoints": "140",
+        "maxPoints": "179",
+        "cohort": "Management"
+    },
+    {
+        "label": "Manager, IV",
+        "minPoints": "180",
+        "maxPoints": "219",
+        "cohort": "Management"
+    },
+    {
+        "label": "Sr. Manager, I",
+        "minPoints": "220",
+        "maxPoints": "269",
+        "cohort": "Management"
+    },
+    {
+        "label": "Sr. Manager, II",
+        "minPoints": "270",
+        "maxPoints": "319",
+        "cohort": "Management"
+    },
+    {
+        "label": "Director, I",
+        "minPoints": "320",
+        "maxPoints": "369",
+        "cohort": "Management"
+    },
+    {
+        "label": "Director, II",
+        "minPoints": "370",
+        "maxPoints": "400",
+        "cohort": "Management"
+    }
+]

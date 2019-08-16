@@ -1,7 +1,8 @@
 <?php
 
+create_points();
 create_jobs();
-create_examples();
+#create_examples();
 
 /**
  * Converts the job list and writes the file.
@@ -10,7 +11,7 @@ create_examples();
  *   Outputs the JSON to the command line.
  */
 function create_jobs($debug = FALSE) {
-  $jsonresult = process_csv("./job-titles.csv");
+  $jsonresult = process_csv("./job-titles.csv", 'json');
   if ($debug) {
     echo $jsonresult;
   }
@@ -18,28 +19,30 @@ function create_jobs($debug = FALSE) {
 }
 
 /**
+ * Converts the points list and writes the file.
+ *
+ * @param boolean $debug
+ *   Outputs the JSON to the command line.
+ */
+function create_points($debug = FALSE) {
+  $result = process_csv("./points.csv", 'php');
+  $output = '';
+
+  foreach($result as $item) {
+    $output .= "'" . $item['points'] . "': '" . $item['level'] . "',\n";
+  }
+
+  if ($debug) {
+    var_dump($output);
+  }
+  file_put_contents('points.json', $output);
+}
+
+/**
  * Converts the examples list and writes the file.
  *
  * @param boolean $debug
  *   Outputs the JSON to the command line.
-
-   "PLANNING": {
-    "displayName": "Planning & Coordination",
-    "category": "B",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously.",
-    "milestones": [{
-      "summary": "Works effectively within established server side frameworks, following current best practices",
-      "signals": [
-        "Adds NodeJS endpoints using layers architecture",
-        "Adds golang endpoints using Gotham architecture",
-        "Makes minor server changes to support client needs",
-      ],
-      "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
-        "Added delete audio route to Buggle",
-        "Queried a Dynamo LSI appropriately",
-      ],
-    },
  */
 function create_examples($debug = FALSE) {
   $milestones = process_csv("./milestones.csv", 'php');
@@ -129,5 +132,5 @@ function process_csv($file, $format = 'json', $delimiter = ",", $enclosure = '"'
 
   fclose($handle);
 
-  return ($json) ? json_encode($csv_json) : $csv_json;
+  return ($format == 'json') ? json_encode($csv_json, JSON_PRETTY_PRINT) : $csv_json;
 }

@@ -29,7 +29,7 @@ class LevelThermometer extends React.Component<Props> {
     super(props)
 
     this.pointScale = d3.scaleLinear()
-      .domain([0, 135])
+      .domain([0, 360])
       .rangeRound([0, width - margins.left - margins.right]);
 
     this.topAxisFn = d3.axisTop()
