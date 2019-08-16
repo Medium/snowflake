@@ -5,7 +5,7 @@ CHAPTER_THREE,DEFAULT,A,Facilitation,"Comprehends the ability to lead people thr
 CHAPTER_FOUR,DEFAULT,A,Motivation,Comprehends the ability to energize people to achieve their goals
 PLANNING,DEFAULT,B,Plan and Coordination,"Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously"
 COLLABORATION,DEFAULT,B,Communication & Collaboration,"Focus on teamwork, communication skills, asking for and giving feedback, collaboration, and documentation"
-VALUE,DEFAULT,B,Client Value,Focus on delivering repeatable value to our clients by ensuring excellent quality products and services in our Value Stream Delivery
+CLIENT_VALUE,DEFAULT,B,Client Value,Focus on delivering repeatable value to our clients by ensuring excellent quality products and services in our Value Stream Delivery
 INITIATIVE,DEFAULT,C,Initiative,Challenges the status quo and takes ownership and initiative outside of mandated work
 COMPLEXITY,DEFAULT,C,Maturity,"Strenghtens Palantir's values to create and collaborate in open, diverse, and inclusive environments"
 MATURITY,DEFAULT,C,Compexity,"Ability to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain"

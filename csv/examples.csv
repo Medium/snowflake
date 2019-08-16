@@ -179,36 +179,36 @@ COLLABORATION,DEFAULT,5,3,"Relied upon as one of the best communicators of compl
 COLLABORATION,DEFAULT,5,4,Holds others and themselves accountable for their commitments and results by providing thoughtful feedback
 COLLABORATION,DEFAULT,5,5,Communicates company-level objectives clearly and how they relate to initiatives and projects
 COLLABORATION,DEFAULT,5,6,Proactively identifies and remedies communication gaps and issues
-VALUE,DEFAULT,1,1,Delivers consistently good outcomes within project scope and following quality standards
-VALUE,DEFAULT,1,2,Understands how the tasks impact and fit within the broader scope and objectives of the final product or service
-VALUE,DEFAULT,1,3,Shows a willingness to do what it takes to achieve the desired results
-VALUE,DEFAULT,1,4,Writes clear comments and documentation
-VALUE,DEFAULT,1,5,
-VALUE,DEFAULT,1,6,
-VALUE,DEFAULT,2,1,Works efficiently and puts in the time and effort necessary to deliver great outcomes
-VALUE,DEFAULT,2,2,Realizes when progress toward desired results is stalling and takes action to get back on track
-VALUE,DEFAULT,2,3,Accepts difficult tasks and gets right to work
-VALUE,DEFAULT,2,4,Devotes time to find the most effective ways to meet the commitments
-VALUE,DEFAULT,2,5,
-VALUE,DEFAULT,2,6,
-VALUE,DEFAULT,3,1,Guides others in defining their assignments as results to accomplish
-VALUE,DEFAULT,3,2,Gives thoughtful feedback as a domain expert
-VALUE,DEFAULT,3,3,"Helps others to orient toward achieving results, supporting them when facing problems and issues"
-VALUE,DEFAULT,3,4,Holds others accountable for their commitments and results and a succesful client release
-VALUE,DEFAULT,3,5,Required for eligibility to be a Project Owner
-VALUE,DEFAULT,3,6,Required eligibility to be a Consultant
-VALUE,DEFAULT,4,1,Helps others to maximize their potential through mentoring and coaching
-VALUE,DEFAULT,4,2,Focuses on high-level client relationship and satisfaction
-VALUE,DEFAULT,4,3,"Anticipates unusual issues and problems, taking steps to minimize their impacts on results"
-VALUE,DEFAULT,4,4,Holds institutional knowledge
-VALUE,DEFAULT,4,5,Required eligibility to be a Project Advocate
-VALUE,DEFAULT,4,6,Required eligibility to be a Service Line Lead
-VALUE,DEFAULT,5,1,Defines policies for the organization that encourage quality work and maximize client value
-VALUE,DEFAULT,5,2,Identifies and eliminates single points of failure throughout the organization
-VALUE,DEFAULT,5,3,Secures time and resources from execs to support great quality
-VALUE,DEFAULT,5,4,Connects clients to strategic and technical solutions to solve complex business challenges
-VALUE,DEFAULT,5,5,
-VALUE,DEFAULT,5,6,
+CLIENT_VALUE,DEFAULT,1,1,Delivers consistently good outcomes within project scope and following quality standards
+CLIENT_VALUE,DEFAULT,1,2,Understands how the tasks impact and fit within the broader scope and objectives of the final product or service
+CLIENT_VALUE,DEFAULT,1,3,Shows a willingness to do what it takes to achieve the desired results
+CLIENT_VALUE,DEFAULT,1,4,Writes clear comments and documentation
+CLIENT_VALUE,DEFAULT,1,5,
+CLIENT_VALUE,DEFAULT,1,6,
+CLIENT_VALUE,DEFAULT,2,1,Works efficiently and puts in the time and effort necessary to deliver great outcomes
+CLIENT_VALUE,DEFAULT,2,2,Realizes when progress toward desired results is stalling and takes action to get back on track
+CLIENT_VALUE,DEFAULT,2,3,Accepts difficult tasks and gets right to work
+CLIENT_VALUE,DEFAULT,2,4,Devotes time to find the most effective ways to meet the commitments
+CLIENT_VALUE,DEFAULT,2,5,
+CLIENT_VALUE,DEFAULT,2,6,
+CLIENT_VALUE,DEFAULT,3,1,Guides others in defining their assignments as results to accomplish
+CLIENT_VALUE,DEFAULT,3,2,Gives thoughtful feedback as a domain expert
+CLIENT_VALUE,DEFAULT,3,3,"Helps others to orient toward achieving results, supporting them when facing problems and issues"
+CLIENT_VALUE,DEFAULT,3,4,Holds others accountable for their commitments and results and a succesful client release
+CLIENT_VALUE,DEFAULT,3,5,Required for eligibility to be a Project Owner
+CLIENT_VALUE,DEFAULT,3,6,Required eligibility to be a Consultant
+CLIENT_VALUE,DEFAULT,4,1,Helps others to maximize their potential through mentoring and coaching
+CLIENT_VALUE,DEFAULT,4,2,Focuses on high-level client relationship and satisfaction
+CLIENT_VALUE,DEFAULT,4,3,"Anticipates unusual issues and problems, taking steps to minimize their impacts on results"
+CLIENT_VALUE,DEFAULT,4,4,Holds institutional knowledge
+CLIENT_VALUE,DEFAULT,4,5,Required eligibility to be a Project Advocate
+CLIENT_VALUE,DEFAULT,4,6,Required eligibility to be a Service Line Lead
+CLIENT_VALUE,DEFAULT,5,1,Defines policies for the organization that encourage quality work and maximize client value
+CLIENT_VALUE,DEFAULT,5,2,Identifies and eliminates single points of failure throughout the organization
+CLIENT_VALUE,DEFAULT,5,3,Secures time and resources from execs to support great quality
+CLIENT_VALUE,DEFAULT,5,4,Connects clients to strategic and technical solutions to solve complex business challenges
+CLIENT_VALUE,DEFAULT,5,5,
+CLIENT_VALUE,DEFAULT,5,6,
 INITIATIVE,DEFAULT,1,1,
 INITIATIVE,DEFAULT,1,2,"Is becoming comfortable owning small tasks independently, but typically relies on more experienced teammates when tackling larger issues"
 INITIATIVE,DEFAULT,1,3,Typically relies on teammates and senior people for setting project goals and breaking down larger projects into discrete tasks

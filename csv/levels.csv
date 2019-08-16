@@ -29,11 +29,11 @@ COLLABORATION,DEFAULT,2,"Communicates and Collaborates with the wider team appro
 COLLABORATION,DEFAULT,3,"Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders"
 COLLABORATION,DEFAULT,4,"Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization"
 COLLABORATION,DEFAULT,5,"Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others"
-VALUE,DEFAULT,1,Delivers consistently good quality work
-VALUE,DEFAULT,2,"Increases the robustness and reliability of work, and devotes time to polishing products and systems"
-VALUE,DEFAULT,3,Improves others' ability to deliver great quality work
-VALUE,DEFAULT,4,Advocates for and models great quality with proactive actions ensuring project and team success
-VALUE,DEFAULT,5,Enables and encourages the entire organization to deliver client value as a central part of the development process
+CLIENT_VALUE,DEFAULT,1,Delivers consistently good quality work
+CLIENT_VALUE,DEFAULT,2,"Increases the robustness and reliability of work, and devotes time to polishing products and systems"
+CLIENT_VALUE,DEFAULT,3,Improves others' ability to deliver great quality work
+CLIENT_VALUE,DEFAULT,4,Advocates for and models great quality with proactive actions ensuring project and team success
+CLIENT_VALUE,DEFAULT,5,Enables and encourages the entire organization to deliver client value as a central part of the development process
 INITIATIVE,DEFAULT,1,Identifies opportunities for organizational change and/or product/service improvements
 INITIATIVE,DEFAULT,2,Causes change to positively impact a few individuals or minor improvement to an existing product or service
 INITIATIVE,DEFAULT,3,Causes change to positively impact an entire team or instigates a minor feature or service
