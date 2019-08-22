@@ -14,11 +14,13 @@
     "dev": "next",
     "export": "next build && next export",
     "flow": "flow",
-    "lint": "eslint src components"
+    "lint": "eslint components data pages --ext js,jsx"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint": "^6.2.1",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-flowtype": "^4.2.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
