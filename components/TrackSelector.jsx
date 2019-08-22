@@ -27,18 +27,28 @@ const TrackSelector = ({
             margin-left: -3px;
           }
           .track-selector-value {
-            line-height: 50px;
             width: 50px;
-            text-align: center;
             background: #eee;
-            font-weight: bold;
-            font-size: 24px;
             border-radius: 3px;
             cursor: pointer;
           }
-          .track-selector-label {
+          .track-selector-value  button {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 50px;
             text-align: center;
-            font-size: 9px;
+          }
+          .track-selector-label button {
+              text-align: center;
+              font-size: 9px;
+          }
+          button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
           }
         `}
     </style>

@@ -14,29 +14,29 @@ class KeyboardListener extends React.Component<Props> {
     window.addEventListener('keydown', (e) => this.handleKeyDown(e)); // TK unlisten
   }
 
-  handleKeyDown({ code, preventDefault }: KeyboardEvent) {
+  handleKeyDown(event: KeyboardEvent) {
     const {
       increaseFocusedMilestoneFn,
       selectNextTrackFn,
       decreaseFocusedMilestoneFn,
       selectPrevTrackFn,
     } = this.props;
-    switch (code) {
+    switch (event.code) {
       case 'ArrowUp':
         increaseFocusedMilestoneFn();
-        preventDefault();
+        event.preventDefault();
         break;
       case 'ArrowRight':
         selectNextTrackFn();
-        preventDefault();
+        event.preventDefault();
         break;
       case 'ArrowDown':
         decreaseFocusedMilestoneFn();
-        preventDefault();
+        event.preventDefault();
         break;
       case 'ArrowLeft':
         selectPrevTrackFn();
-        preventDefault();
+        event.preventDefault();
         break;
       default:
         break;

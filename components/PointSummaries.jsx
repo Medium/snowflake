@@ -14,12 +14,11 @@ const PointSummaries = ({ milestoneByTrack } : Props) => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneByTrack);
 
   let currentLevel;
-
   let pointsForCurrentLevel = totalPoints;
   while (!pointsToLevels[pointsForCurrentLevel]) {
-    currentLevel = pointsToLevels[pointsForCurrentLevel];
     pointsForCurrentLevel -= 1;
   }
+  currentLevel = pointsToLevels[pointsForCurrentLevel];
 
   let pointsToNextLevel = 1;
   while (!pointsToLevels[totalPoints + pointsToNextLevel]) {

@@ -39,14 +39,22 @@ const Track = ({
             border-spacing: 3px;
           }
           td {
-            line-height: 50px;
             width: 50px;
-            text-align: center;
             background: #eee;
-            font-weight: bold;
-            font-size: 24px;
             border-radius: 3px;
             cursor: pointer;
+          }
+          td button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
           }
           ul {
             line-height: 1.5em;

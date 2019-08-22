@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TrackSelector from './TrackSelector';
 import NightingaleChart from './NightingaleChart';
 import KeyboardListener from './KeyboardListener';
@@ -89,76 +89,70 @@ const stateToHash = (state: SnowflakeAppState) => {
   return values.join(',');
 };
 
-type Props = {}
+const SnowflakeApp = () => {
+  const [state, setState] = useState<SnowflakeAppState>(defaultState());
 
-class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = emptyState();
-  }
-
-  componentDidMount() {
-    const state = hashToState(window.location.hash);
-    if (state) {
-      this.setState(state);
-    } else {
-      this.setState(defaultState());
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      const hashState = hashToState(window.location.hash);
+      if (hashState) {
+        setState(hashState);
+      } else {
+        const hash = stateToHash(state);
+        if (hash) {
+          window.location.replace(`#${hash}`);
+        }
+      }
     }
-  }
+  }, []);
 
-  componentDidUpdate() {
-    const hash = stateToHash(this.state);
-    if (hash) window.location.replace(`#${hash}`);
-  }
+  const {
+    milestoneByTrack,
+    name,
+    title,
+    focusedTrackId,
+  } = state;
 
-  render() {
-    const {
-      milestoneByTrack,
-      name,
-      title,
-      focusedTrackId,
-    } = this.state;
+  const handleTrackMilestoneChange = (trackId: TrackId, milestone: number) => {
+    milestoneByTrack[trackId] = coerceMilestone(milestone);
 
-    const { setState } = this;
+    const titles = eligibleTitles(milestoneByTrack);
+    const newTitle = titles.indexOf(title) === -1 ? titles[0] : title;
 
-    const handleTrackMilestoneChange = (trackId: TrackId, milestone: number) => {
-      milestoneByTrack[trackId] = coerceMilestone(milestone);
+    setState({
+      ...state, milestoneByTrack, focusedTrackId: trackId, title: newTitle,
+    });
+  };
 
-      const titles = eligibleTitles(milestoneByTrack);
-      const newTitle = titles.indexOf(title) === -1 ? titles[0] : title;
+  const shiftFocusedTrack = (delta: number) => {
+    let index = trackIds.indexOf(focusedTrackId);
+    index = (index + delta + trackIds.length) % trackIds.length;
+    setState({ ...state, focusedTrackId: trackIds[index] });
+  };
 
-      setState({ milestoneByTrack, focusedTrackId: trackId, title: newTitle });
-    };
+  const setFocusedTrackId = (trackId: TrackId) => {
+    const index = trackIds.indexOf(trackId);
+    const newFocusedTrackId = trackIds[index];
+    setState({ ...state, focusedTrackId: newFocusedTrackId });
+  };
 
-    const shiftFocusedTrack = (delta: number) => {
-      let index = trackIds.indexOf(focusedTrackId);
-      index = (index + delta + trackIds.length) % trackIds.length;
-      setState({ focusedTrackId: trackIds[index] });
-    };
+  const shiftFocusedTrackMilestoneByDelta = (delta: number) => {
+    const prevMilestone = milestoneByTrack[focusedTrackId];
+    let milestone = prevMilestone + delta;
+    if (milestone < 0) milestone = 0;
+    if (milestone > 5) milestone = 5;
+    handleTrackMilestoneChange(focusedTrackId, milestone);
+  };
 
-    const setFocusedTrackId = (trackId: TrackId) => {
-      const index = trackIds.indexOf(trackId);
-      const newFocusedTrackId = trackIds[index];
-      setState({ focusedTrackId: newFocusedTrackId });
-    };
+  const setTitle = (newTitle: string) => {
+    const titles = eligibleTitles(milestoneByTrack);
+    setState({ ...state, title: titles.indexOf(newTitle) === -1 ? titles[0] : newTitle });
+  };
 
-    const shiftFocusedTrackMilestoneByDelta = (delta: number) => {
-      const prevMilestone = milestoneByTrack[focusedTrackId];
-      let milestone = prevMilestone + delta;
-      if (milestone < 0) milestone = 0;
-      if (milestone > 5) milestone = 5;
-      handleTrackMilestoneChange(focusedTrackId, milestone);
-    };
-
-    const setTitle = (newTitle: string) => {
-      const titles = eligibleTitles(milestoneByTrack);
-      setState({ title: titles.indexOf(newTitle) === -1 ? titles[0] : newTitle });
-    };
-
-    return (
-      <main>
-        <style jsx global>
-          {`
+  return (
+    <main>
+      <style jsx global>
+        {`
           body {
             font-family: Helvetica;
           }
@@ -185,83 +179,82 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}
-        </style>
-        <div style={{ margin: '19px auto 0', width: 142 }}>
-          <a href="https://medium.com/" target="_blank" rel="noopener noreferrer">
-            <Wordmark />
-          </a>
-        </div>
-        <div style={{ display: 'flex' }}>
-          <div style={{ flex: 1 }}>
-            <form>
-              <input
-                type="text"
-                className="name-input"
-                value={name}
-                onChange={(e) => this.setState({ name: e.target.value })}
-                placeholder="Name"
-              />
-              <TitleSelector
-                milestoneByTrack={milestoneByTrack}
-                currentTitle={title}
-                setTitleFn={setTitle}
-              />
-            </form>
-            <PointSummaries milestoneByTrack={milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={milestoneByTrack} />
-          </div>
-          <div style={{ flex: 0 }}>
-            <NightingaleChart
-              milestoneByTrack={milestoneByTrack}
-              focusedTrackId={focusedTrackId}
-              handleTrackMilestoneChangeFn={handleTrackMilestoneChange}
+      </style>
+      <div style={{ margin: '19px auto 0', width: 142 }}>
+        <a href="https://medium.com/" target="_blank" rel="noopener noreferrer">
+          <Wordmark />
+        </a>
+      </div>
+      <div style={{ display: 'flex' }}>
+        <div style={{ flex: 1 }}>
+          <form>
+            <input
+              type="text"
+              className="name-input"
+              value={name}
+              onChange={(e) => this.setState({ name: e.target.value })}
+              placeholder="Name"
             />
-          </div>
+            <TitleSelector
+              milestoneByTrack={milestoneByTrack}
+              currentTitle={title}
+              setTitleFn={setTitle}
+            />
+          </form>
+          <PointSummaries milestoneByTrack={milestoneByTrack} />
+          <LevelThermometer milestoneByTrack={milestoneByTrack} />
         </div>
-        <TrackSelector
-          milestoneByTrack={milestoneByTrack}
-          focusedTrackId={focusedTrackId}
-          setFocusedTrackIdFn={setFocusedTrackId}
-        />
-        <KeyboardListener
-          selectNextTrackFn={() => shiftFocusedTrack(1)}
-          selectPrevTrackFn={() => shiftFocusedTrack(-1)}
-          increaseFocusedMilestoneFn={() => shiftFocusedTrackMilestoneByDelta(1)}
-          decreaseFocusedMilestoneFn={() => shiftFocusedTrackMilestoneByDelta(-1)}
-        />
-        <Track
-          milestoneByTrack={milestoneByTrack}
-          trackId={focusedTrackId}
-          handleTrackMilestoneChangeFn={handleTrackMilestoneChange}
-        />
-        <div style={{ display: 'flex', paddingBottom: '20px' }}>
-          <div style={{ flex: 1 }}>
+        <div style={{ flex: 0 }}>
+          <NightingaleChart
+            milestoneByTrack={milestoneByTrack}
+            focusedTrackId={focusedTrackId}
+            handleTrackMilestoneChangeFn={handleTrackMilestoneChange}
+          />
+        </div>
+      </div>
+      <TrackSelector
+        milestoneByTrack={milestoneByTrack}
+        focusedTrackId={focusedTrackId}
+        setFocusedTrackIdFn={setFocusedTrackId}
+      />
+      <KeyboardListener
+        selectNextTrackFn={() => shiftFocusedTrack(1)}
+        selectPrevTrackFn={() => shiftFocusedTrack(-1)}
+        increaseFocusedMilestoneFn={() => shiftFocusedTrackMilestoneByDelta(1)}
+        decreaseFocusedMilestoneFn={() => shiftFocusedTrackMilestoneByDelta(-1)}
+      />
+      <Track
+        milestoneByTrack={milestoneByTrack}
+        trackId={focusedTrackId}
+        handleTrackMilestoneChangeFn={handleTrackMilestoneChange}
+      />
+      <div style={{ display: 'flex', paddingBottom: '20px' }}>
+        <div style={{ flex: 1 }}>
             Made with
-            {' '}
-            <span role="img" aria-label="love">❤️</span>
-            {' '}
+          {' '}
+          <span role="img" aria-label="love">❤️</span>
+          {' '}
 by
-            {' '}
-            <a href="https://medium.engineering" target="_blank" rel="noopener noreferrer">Medium Eng</a>
+          {' '}
+          <a href="https://medium.engineering" target="_blank" rel="noopener noreferrer">Medium Eng</a>
 .
             Learn about the
-            {' '}
-            <a href="https://medium.com/s/engineering-growth-framework" target="_blank" rel="noopener noreferrer">this version of our growth framework</a>
-            {' '}
+          {' '}
+          <a href="https://medium.com/s/engineering-growth-framework" target="_blank" rel="noopener noreferrer">this version of our growth framework</a>
+          {' '}
 and
-            <a href="https://medium.engineering/engineering-growth-at-medium-4935b3234d25" target="_blank" rel="noopener noreferrer">what we do currently</a>
+          <a href="https://medium.engineering/engineering-growth-at-medium-4935b3234d25" target="_blank" rel="noopener noreferrer">what we do currently</a>
 .
             Get the
-            <a href="https://github.com/Medium/snowflake" target="_blank" rel="noopener noreferrer">source code</a>
+          <a href="https://github.com/Medium/snowflake" target="_blank" rel="noopener noreferrer">source code</a>
 .
             Read the
-            <a href="https://medium.com/p/85e078bc15b7" target="_blank" rel="noopener noreferrer">terms of service</a>
+          <a href="https://medium.com/p/85e078bc15b7" target="_blank" rel="noopener noreferrer">terms of service</a>
 .
-          </div>
         </div>
-      </main>
-    );
-  }
-}
+      </div>
+    </main>
+  );
+};
 
 export default SnowflakeApp;
