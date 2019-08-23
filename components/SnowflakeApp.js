@@ -21,13 +21,14 @@ type SnowflakeAppState = {
 const hashToState = (hash: String): ?SnowflakeAppState => {
   if (!hash) return null
   const result = defaultState()
-  const hashValues = hash.split('#')[1].split(',')
+  const hashValues = hash
   if (!hashValues) return null
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  if (hashValues[1] && hashValues[0]) result.name = hashValues[1] + ' ' + hashValues[0]
+  //if (hashValues[18] !== undefined) result.title = [hashValues[18], hashValues[29], hashValues[20], hashValues[21]]
+  
   return result
 }
 
@@ -111,12 +112,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidUpdate() {
-    const hash = stateToHash(this.state)
-    if (hash) window.location.replace(`#${hash}`)
+    stateToHash(this.state)
   }
 
   componentDidMount() {
-    const state = hashToState(window.location.hash)
+      // get http
+    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 0, 0, 0, 1])
     if (state) {
       this.setState(state)
     } else {
