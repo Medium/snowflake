@@ -6,7 +6,7 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { trackIds, milestones, milestoneToPoints } from '../constants'
+import { titles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
@@ -14,7 +14,7 @@ import React from 'react'
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
-  title: string,
+  title: Array,
   focusedTrackId: TrackId,
 }
 
@@ -48,7 +48,7 @@ const coerceMilestone = (value: number): Milestone => {
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
-    title: '',
+    title: [0, 0, 0, 0],
     milestoneByTrack: {
       'MOBILE': 0,
       'FRONTEND': 0,
@@ -74,7 +74,7 @@ const emptyState = (): SnowflakeAppState => {
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    title: [0, 1, 1, 0],
     milestoneByTrack: {
       'MOBILE': 1,
       'FRONTEND': 2,
@@ -161,6 +161,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <h1>{this.state.name}</h1>
+            <ul>
+              {titles.map(eligibleTitle => (
+                <li key={eligibleTitle.id}>
+                  <input type="checkbox" checked disabled/><a href="http://www.lemonde.fr" target="_blank">{eligibleTitle.label}</a>
+                </li>
+              ))}
+            </ul>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
