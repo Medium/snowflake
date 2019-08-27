@@ -25,7 +25,20 @@ export type MilestoneMap = {
   'RECRUTEMENT': Milestone,
   'CULTURE': Milestone
 }
+
 export const milestones = [0, 1, 2, 3, 4, 5]
+
+export type Title = {
+  label: string,
+  urlId: Number
+}
+
+export type Titles = {|
+  'SCRUM_MASTER': Title,
+  'EXTERNAL_REFERENT': Title,
+  'ENGINEER_PROJECT_OWNER': Title,
+  'ARCHITECTURE_OWNER': Title
+|}
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -1190,18 +1203,32 @@ export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
 
-export const titles = [
-  {id: 'scrumMaster', label: 'Scrum Master'},
-  {id: 'externalReferent', label: 'External Referent'},
-  {id: 'engineerProjectOwrner', label: 'Engineering Project Owner'},
-  {id: 'architectureOwner', label: 'Architecture Owner'}
-]
+export const titles: Titles = {
+  'SCRUM_MASTER': {
+    label: 'Scrum Master',
+    urlId: 0
+  },
+  'EXTERNAL_REFERENT': {
+    label: 'External Referent',
+    urlId: 0
+  },
+  'ENGINEER_PROJECT_OWNER': {
+    label: 'Engineering Project Owner',
+    urlId: 0
+  },
+  'ARCHITECTURE_OWNER': {
+    label: 'Architecture Owner',
+    urlId: 0
+  },
+}
 
-export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
+export const titlesIds = Object.keys(titles)
+
+/*export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
 
   return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
     .map(title => title.label)
   return titles.map(title => title.label)
-}
+}*/

@@ -6,15 +6,15 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { titles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
-import type { Milestone, MilestoneMap, TrackId } from '../constants'
+import type { Milestone, MilestoneMap, TrackId, Titles } from '../constants'
 import React from 'react'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
-  title: Array,
+  title: Titles,
   focusedTrackId: TrackId,
 }
 
@@ -23,11 +23,15 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   const result = defaultState()
   const hashValues = hash
   if (!hashValues) return null
+  
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
   if (hashValues[1] && hashValues[0]) result.name = hashValues[1] + ' ' + hashValues[0]
-  //if (hashValues[18] !== undefined) result.title = [hashValues[18], hashValues[29], hashValues[20], hashValues[21]]
+  if (hashValues[18] !== undefined) result.title[titlesIds[0]] = hashValues[18]
+  if (hashValues[19] !== undefined) result.title[titlesIds[1]] = hashValues[19]
+  if (hashValues[20] !== undefined) result.title[titlesIds[2]] = hashValues[20]
+  if (hashValues[21] !== undefined) result.title[titlesIds[3]] = hashValues[21]
   
   return result
 }
@@ -48,7 +52,6 @@ const coerceMilestone = (value: number): Milestone => {
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
-    title: [0, 0, 0, 0],
     milestoneByTrack: {
       'MOBILE': 0,
       'FRONTEND': 0,
@@ -67,14 +70,25 @@ const emptyState = (): SnowflakeAppState => {
       'RECRUTEMENT': 0,
       'CULTURE': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'MOBILE',
+    title: {
+      'SCRUM_MASTER': 0,
+      'EXTERNAL_REFERENT': 0,
+      'ENGINEER_PROJECT_OWNER': 0,
+      'ARCHITECTURE_OWNER': 0
+    }
   }
 }
 
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
-    title: [0, 1, 1, 0],
+    title: {
+      'SCRUM_MASTER': 0,
+      'EXTERNAL_REFERENT': 0,
+      'ENGINEER_PROJECT_OWNER': 1,
+      'ARCHITECTURE_OWNER': 1
+    },
     milestoneByTrack: {
       'MOBILE': 1,
       'FRONTEND': 2,
@@ -117,7 +131,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   componentDidMount() {
       // get http
-    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 0, 0, 0, 1])
+    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 1, 1, 1, 1])
     if (state) {
       this.setState(state)
     } else {
@@ -162,11 +176,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           <div style={{flex: 1}}>
             <h1>{this.state.name}</h1>
             <ul>
-              {titles.map(eligibleTitle => (
-                <li key={eligibleTitle.id}>
-                  <input type="checkbox" checked disabled/><a href="http://www.lemonde.fr" target="_blank">{eligibleTitle.label}</a>
+            {titlesIds.map((eligibleTitle, i) => (
+                <li key={eligibleTitle}>
+                  <input type="checkbox" checked disabled/><a href="http://www.lemonde.fr" target="_blank">{titles[eligibleTitle].label}{this.state.title[eligibleTitle]}</a>
                 </li>
-              ))}
+            ))}
             </ul>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
