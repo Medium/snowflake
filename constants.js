@@ -1223,12 +1223,3 @@ export const titles: Titles = {
 }
 
 export const titlesIds = Object.keys(titles)
-
-/*export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-    .map(title => title.label)
-  return titles.map(title => title.label)
-}*/

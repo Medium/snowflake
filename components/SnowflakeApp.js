@@ -131,7 +131,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   componentDidMount() {
       // get http
-    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 1, 1, 1, 1])
+    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 1, 1, 0, 0])
     if (state) {
       this.setState(state)
     } else {
@@ -144,7 +144,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <main>
         <style jsx global>{`
           body {
-            font-family: Helvetica;
+            font-family: 'Titillium Web', sans-serif;
           }
           main {
             width: 960px;
@@ -178,7 +178,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <ul>
             {titlesIds.map((eligibleTitle, i) => (
                 <li key={eligibleTitle}>
-                  <input type="checkbox" checked disabled/><a href="http://www.lemonde.fr" target="_blank">{titles[eligibleTitle].label}{this.state.title[eligibleTitle]}</a>
+                  <input type="checkbox" defaultChecked={this.state.title[eligibleTitle]} disabled/>
+                  <a href="http://www.lemonde.fr" target="_blank">{titles[eligibleTitle].label}</a>
                 </li>
             ))}
             </ul>
