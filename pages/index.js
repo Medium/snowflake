@@ -3,12 +3,7 @@ import fetch from 'isomorphic-unfetch'
 
 const Index = props => (
   <div>
-    {props.shows.map(show => (
-        <li key={show.id}>
-          <a>{show.name}</a>
-        </li>
-      ))}
-    <SnowflakeApp />
+    <SnowflakeApp data={props} />
   </div>
 );
 
@@ -18,9 +13,7 @@ Index.getInitialProps = async function(plop) {
   console.log('plop', Object.keys(plop.query));
   console.log(`Show data fetched. Count: ${data.length}`);
 
-  return {
-    shows: data.map(entry => entry.show)
-  };
+  return ['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 1, 1, 0, 0]
 };
 
 export default Index;

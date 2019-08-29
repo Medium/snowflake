@@ -1206,19 +1206,19 @@ export const categoryColorScale = d3.scaleOrdinal()
 export const titles: Titles = {
   'SCRUM_MASTER': {
     label: 'Scrum Master',
-    urlId: 0
+    url: 'scrum-master'
   },
   'EXTERNAL_REFERENT': {
     label: 'External Referent',
-    urlId: 0
+    url: 'external-referent'
   },
   'ENGINEER_PROJECT_OWNER': {
     label: 'Engineering Project Owner',
-    urlId: 0
+    url: 'engineering-project-owner'
   },
   'ARCHITECTURE_OWNER': {
     label: 'Architecture Owner',
-    urlId: 0
+    url: 'architcture-owner'
   },
 }
 

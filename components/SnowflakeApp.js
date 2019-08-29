@@ -10,6 +10,7 @@ import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../c
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId, Titles } from '../constants'
 import React from 'react'
+import Link from 'next/link'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -122,21 +123,15 @@ type Props = {}
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
+
     this.state = emptyState()
+    if (props.data) {
+      this.state = hashToState(props.data)
+    } 
   }
 
   componentDidUpdate() {
     stateToHash(this.state)
-  }
-
-  componentDidMount() {
-      // get http
-    const state = hashToState(['Green', 'Rachel', 0, 0, 5, 2, 1, 2, 3, 4, 0, 4, 3, 0, 2, 3, 1, 0, 1, 1, 0, 0])
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
   }
 
   render() {
@@ -176,12 +171,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           <div style={{flex: 1}}>
             <h1>{this.state.name}</h1>
             <ul>
-            {titlesIds.map((eligibleTitle, i) => (
+              {titlesIds.map((eligibleTitle, i) => (
                 <li key={eligibleTitle}>
                   <input type="checkbox" defaultChecked={this.state.title[eligibleTitle]} disabled/>
-                  <a href="http://www.lemonde.fr" target="_blank">{titles[eligibleTitle].label}</a>
+                  <Link href={titles[eligibleTitle].url}><a>{titles[eligibleTitle].label}</a></Link>
                 </li>
-            ))}
+              ))}
             </ul>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
