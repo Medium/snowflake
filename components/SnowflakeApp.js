@@ -4,7 +4,6 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
 import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
@@ -19,20 +18,20 @@ type SnowflakeAppState = {
   focusedTrackId: TrackId,
 }
 
-const hashToState = (hash: String): ?SnowflakeAppState => {
-  if (!hash) return null
+const propsToState = (data: String): ?SnowflakeAppState => {
+  if (!data) return null
   const result = defaultState()
-  const hashValues = hash
-  if (!hashValues) return null
+  const dataValues = data
+  if (!dataValues) return null
   
   trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
+    result.milestoneByTrack[trackId] = coerceMilestone(Number(dataValues[i]))
   })
-  if (hashValues[1] && hashValues[0]) result.name = hashValues[1] + ' ' + hashValues[0]
-  if (hashValues[18] !== undefined) result.title[titlesIds[0]] = hashValues[18]
-  if (hashValues[19] !== undefined) result.title[titlesIds[1]] = hashValues[19]
-  if (hashValues[20] !== undefined) result.title[titlesIds[2]] = hashValues[20]
-  if (hashValues[21] !== undefined) result.title[titlesIds[3]] = hashValues[21]
+  if (dataValues[1] && dataValues[0]) result.name = dataValues[1] + ' ' + dataValues[0]
+  if (dataValues[18] !== undefined) result.title[titlesIds[0]] = dataValues[18]
+  if (dataValues[19] !== undefined) result.title[titlesIds[1]] = dataValues[19]
+  if (dataValues[20] !== undefined) result.title[titlesIds[2]] = dataValues[20]
+  if (dataValues[21] !== undefined) result.title[titlesIds[3]] = dataValues[21]
   
   return result
 }
@@ -114,6 +113,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
+  console.log('paso por aqui')
   const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
   return values.join(',')
 }
@@ -126,7 +126,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
     this.state = emptyState()
     if (props.data) {
-      this.state = hashToState(props.data)
+      this.state = propsToState(props.data)
     } 
   }
 
@@ -135,6 +135,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   render() {
+    let titleList;
+
+    if (this.props.pageType) {
+      titleList = <ul>
+        {titlesIds.map((eligibleTitle, i) => (
+          <li key={eligibleTitle}>
+            <input type="checkbox" defaultChecked={this.state.title[eligibleTitle]} disabled/>
+            <Link href={titles[eligibleTitle].url}><a>{titles[eligibleTitle].label}</a></Link>
+          </li>
+        ))}
+      </ul>
+    }
     return (
       <main>
         <style jsx global>{`
@@ -164,20 +176,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <Wordmark />
-        </div>
+        
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            <h1>{this.state.name}</h1>
-            <ul>
-              {titlesIds.map((eligibleTitle, i) => (
-                <li key={eligibleTitle}>
-                  <input type="checkbox" defaultChecked={this.state.title[eligibleTitle]} disabled/>
-                  <Link href={titles[eligibleTitle].url}><a>{titles[eligibleTitle].label}</a></Link>
-                </li>
-              ))}
-            </ul>
+            {titleList}
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
@@ -201,14 +203,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
-          <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
-          </div>
-        </div>
       </main>
     )
   }
