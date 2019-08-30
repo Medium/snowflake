@@ -1,7 +1,7 @@
 // @flow
 import * as d3 from 'd3'
 
-export type TrackId = 'MOBILE' | 'FRONTEND' | 'SYSTEME' | 'BACKEND' |
+/*export type TrackId = 'MOBILE' | 'FRONTEND' | 'SYSTEME' | 'BACKEND' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISME' | 'RECRUTEMENT' | 'CULTURE'
@@ -24,10 +24,10 @@ export type MilestoneMap = {
   'EVANGELISME': Milestone,
   'RECRUTEMENT': Milestone,
   'CULTURE': Milestone
-}
+}*/
 
 export const milestones = [0, 1, 2, 3, 4, 5]
-
+/*
 export type Title = {
   label: string,
   urlId: Number
@@ -38,9 +38,9 @@ export type Titles = {|
   'EXTERNAL_REFERENT': Title,
   'ENGINEER_PROJECT_OWNER': Title,
   'ARCHITECTURE_OWNER': Title
-|}
+|}*/
 
-export const milestoneToPoints = (milestone: Milestone): number => {
+export const milestoneToPoints = (milestone) => {
   switch (milestone) {
     case 0: return 0
     case 1: return 1
@@ -71,7 +71,7 @@ export const pointsToLevels = {
 }
 
 export const maxLevel = 135
-
+/*
 export type Track = {
   displayName: string,
   category: string, // TK categoryId type?
@@ -101,8 +101,8 @@ type Tracks = {|
   'RECRUTEMENT': Track,
   'CULTURE': Track
 |}
-
-export const tracks: Tracks = {
+*/
+export const tracks = {
   "MOBILE": {
     "displayName": "Mobile",
     "category": "A",
@@ -1174,14 +1174,14 @@ export const tracks: Tracks = {
   },
 }
 
-export const trackIds: TrackId[] = Object.keys(tracks)
+export const trackIds = Object.keys(tracks)
 
-export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
+export const categoryIds = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)
   return set
 }, new Set())
 
-export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
+export const categoryPointsFromMilestoneMap = (milestoneMap) => {
   let pointsByCategory = new Map()
   trackIds.forEach((trackId) => {
     const milestone = milestoneMap[trackId]
@@ -1195,7 +1195,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   })
 }
 
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+export const totalPointsFromMilestoneMap = (milestoneMap) =>
   trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
     .reduce((sum, addend) => (sum + addend), 0)
 
@@ -1203,7 +1203,7 @@ export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
 
-export const titles: Titles = {
+export const titles = {
   'SCRUM_MASTER': {
     label: 'Scrum Master',
     url: 'scrum-master'

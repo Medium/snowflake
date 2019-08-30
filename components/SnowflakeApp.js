@@ -7,18 +7,19 @@ import Track from '../components/Track'
 import LevelThermometer from '../components/LevelThermometer'
 import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
-import type { Milestone, MilestoneMap, TrackId, Titles } from '../constants'
+//import type { Milestone, MilestoneMap, TrackId, Titles } from '../constants'
 import React from 'react'
 import Link from 'next/link'
 
+/*
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
   title: Titles,
   focusedTrackId: TrackId,
-}
+}*/
 
-const propsToState = (data: String): ?SnowflakeAppState => {
+const propsToState = (data) => {
   if (!data) return null
   const result = defaultState()
   const dataValues = data
@@ -36,7 +37,7 @@ const propsToState = (data: String): ?SnowflakeAppState => {
   return result
 }
 
-const coerceMilestone = (value: number): Milestone => {
+const coerceMilestone = (value) => {
   // HACK I know this is goofy but i'm dealing with flow typing
   switch(value) {
     case 0: return 0
@@ -49,7 +50,7 @@ const coerceMilestone = (value: number): Milestone => {
   }
 }
 
-const emptyState = (): SnowflakeAppState => {
+const emptyState = () => {
   return {
     name: '',
     milestoneByTrack: {
@@ -80,7 +81,7 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
+const defaultState = () => {
   return {
     name: 'Cersei Lannister',
     title: {
@@ -111,17 +112,17 @@ const defaultState = (): SnowflakeAppState => {
   }
 }
 
-const stateToHash = (state: SnowflakeAppState) => {
+const stateToHash = (state) => {
   if (!state || !state.milestoneByTrack) return null
   console.log('paso por aqui')
   const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
   return values.join(',')
 }
 
-type Props = {}
 
-class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
-  constructor(props: Props) {
+
+class SnowflakeApp extends React.Component {
+  constructor(props) {
     super(props)
 
     this.state = emptyState()
@@ -207,27 +208,27 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     )
   }
 
-  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
+  handleTrackMilestoneChange(trackId, milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
 
     this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
-  shiftFocusedTrack(delta: number) {
+  shiftFocusedTrack(delta) {
     let index = trackIds.indexOf(this.state.focusedTrackId)
     index = (index + delta + trackIds.length) % trackIds.length
     const focusedTrackId = trackIds[index]
     this.setState({ focusedTrackId })
   }
 
-  setFocusedTrackId(trackId: TrackId) {
+  setFocusedTrackId(trackId) {
     let index = trackIds.indexOf(trackId)
     const focusedTrackId = trackIds[index]
     this.setState({ focusedTrackId })
   }
 
-  shiftFocusedTrackMilestoneByDelta(delta: number) {
+  shiftFocusedTrackMilestoneByDelta(delta) {
     let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId]
     let milestone = prevMilestone + delta
     if (milestone < 0) milestone = 0

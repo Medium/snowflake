@@ -2,15 +2,15 @@
 
 import { tracks, milestones, categoryColorScale } from '../constants'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+//import type { MilestoneMap, TrackId, Milestone } from '../constants'
 
-type Props = {
+/*type Props = {
   milestoneByTrack: MilestoneMap,
   trackId: TrackId,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
-}
+}*/
 
-class Track extends React.Component<Props> {
+class Track extends React.Component {
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
@@ -21,15 +21,12 @@ class Track extends React.Component<Props> {
           div.track {
             margin: 0 0 20px 0;
             padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
           }
           h2 {
             margin: 0 0 10px 0;
           }
           p.track-description {
             margin-top: 0;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
           }
           table {
             border-spacing: 3px;
@@ -48,8 +45,10 @@ class Track extends React.Component<Props> {
             line-height: 1.5em;
           }
         `}</style>
+        <hr />
         <h2>{track.displayName}</h2>
         <p className="track-description">{track.description}</p>
+        <hr />
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
