@@ -5,11 +5,14 @@
   "repository": "https://github.com/Medium/eng-growth",
   "license": "MIT",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "d3": "^4.11.0",
+    "flow": "^0.2.3",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "^4.0.0-beta.4",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "webpack": "^4.39.3"
   },
   "scripts": {
     "dev": "next",
@@ -17,6 +20,6 @@
     "flow": "flow"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.2"
+    "flow-bin": "^0.106.3"
   }
 }

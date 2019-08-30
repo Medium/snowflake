@@ -151,7 +151,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       <main>
         <style jsx global>{`
           body {
-            font-family: 'proxima nova', sans-serif;
+            font-family: 'font-family: "proxima nova', sans-serif;
           }
           main {
             width: 960px;
