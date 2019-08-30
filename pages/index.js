@@ -1,6 +1,7 @@
 import SnowflakeApp from '../components/SnowflakeApp'
 import fetch from 'isomorphic-unfetch'
 import Wordmark from '../components/Wordmark'
+import "../styles/index.css"
 
 const Index = props => (
   <div>

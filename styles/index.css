@@ -1,3 +1,55 @@
-html{
-    color: purple;
+@font-face {
+    font-family: "proxima nova";
+    src: url("/static/fonts/proximanova-light-webfont.eot");
+    src:
+        url("/static/fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/static/fonts/proximanova-light-webfont.woff") format("woff"),
+        url("/static/fonts/proximanova-light-webfont.ttf") format("truetype"),
+        url("/static/fonts/proximanova-light-webfont.svg#proxima_novalight") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "proxima nova";
+    src: url("/static/onts/proximanova-regular-webfont.eot");
+    src:
+        url("/static/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/static/fonts/proximanova-regular-webfont.woff") format("woff"),
+        url("/static/fonts/proximanova-regular-webfont.ttf") format("truetype"),
+        url("/static/fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "proxima nova";
+    src: url("/static/fonts/proximanova-semibold-webfont.eot");
+    src:
+        url("/static/fonts/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/static/fonts/proximanova-semibold-webfont.woff") format("woff"),
+        url("/static/fonts/proximanova-semibold-webfont.ttf") format("truetype"),
+        url("/static/fonts/proximanova-semibold-webfont.svg#proxima_novasemibold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+    font-family: 'proxima-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #34393F;
+    font-size: 15px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #C5C9CF;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }

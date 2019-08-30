@@ -2,50 +2,13 @@
 
 import Wordmark from '../components/Wordmark'
 import SnowflakeApp from '../components/SnowflakeApp'
+import "../styles/index.css"
 
 const data = ['Master', 'Scrum', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const Index = props => (
   <main>
     <style dangerouslySetInnerHTML={{__html: `
-      @font-face {
-        font-family: "proxima nova";
-        src: url("/static/fonts/proximanova-light-webfont.eot");
-        src:
-            url("/static/fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"),
-            url("/static/fonts/proximanova-light-webfont.woff") format("woff"),
-            url("/static/fonts/proximanova-light-webfont.ttf") format("truetype"),
-            url("/static/fonts/proximanova-light-webfont.svg#proxima_novalight") format("svg");
-        font-weight: 300;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "proxima nova";
-        src: url("f/static/onts/proximanova-regular-webfont.eot");
-        src:
-            url("/static/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"),
-            url("/static/fonts/proximanova-regular-webfont.woff") format("woff"),
-            url("/static/fonts/proximanova-regular-webfont.ttf") format("truetype"),
-            url("/static/fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular") format("svg");
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "proxima nova";
-        src: url("/static/fonts/proximanova-semibold-webfont.eot");
-        src:
-            url("/static/fonts/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"),
-            url("/static/fonts/proximanova-semibold-webfont.woff") format("woff"),
-            url("/static/fonts/proximanova-semibold-webfont.ttf") format("truetype"),
-            url("/static/fonts/proximanova-semibold-webfont.svg#proxima_novasemibold") format("svg");
-        font-weight: bold;
-        font-style: normal;
-    }
-    body {
-      font-family: 'proxima-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      color: #707689;
-    }
+      
     `}}/>
       <div style={{margin: '19px auto 0', width: 142}}>
         <Wordmark />
