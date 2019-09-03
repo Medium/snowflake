@@ -1,13 +1,4 @@
-// @flow
-
 import React from 'react'
-/*
-type Props = {
-  increaseFocusedMilestoneFn: () => void,
-  selectNextTrackFn: () => void,
-  decreaseFocusedMilestoneFn: () => void,
-  selectPrevTrackFn: () => void
-}*/
 
 class KeyboardListener extends React.Component {
   componentDidMount() {

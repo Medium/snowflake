@@ -7,7 +7,6 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "d3": "^4.11.0",
-    "flow": "^0.2.3",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.5",
     "react": "^16.9.0",
@@ -16,8 +15,7 @@
   },
   "scripts": {
     "dev": "next",
-    "export": "next build && next export",
-    "flow": "flow"
+    "export": "next build && next export"
   },
   "devDependencies": {
     "flow-bin": "^0.106.3"

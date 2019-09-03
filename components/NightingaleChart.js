@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react'
 import * as d3 from 'd3'
 import { trackIds, milestones, tracks, categoryColorScale } from '../constants'

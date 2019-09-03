@@ -1,5 +1,3 @@
-// @flow
-
 import * as d3 from 'd3'
 import { pointsToLevels, categoryPointsFromMilestoneMap, categoryColorScale, categoryIds } from '../constants'
 import React from 'react'
@@ -13,10 +11,6 @@ const margins = {
 }
 const height = 150
 const width = 550
-
-/*type Props = {
-  milestoneByTrack: MilestoneMap,
-}*/
 
 class LevelThermometer extends React.Component {
   pointScale
