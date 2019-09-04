@@ -15,6 +15,7 @@ const propsToState = (data) => {
   if (!dataValues) return null
   
   trackIds.forEach((trackId, i) => {
+    console.log(trackId, dataValues[i])
     result.milestoneByTrack[trackId] = coerceMilestone(Number(dataValues[i]))
   })
   if (dataValues[1] && dataValues[0]) result.name = dataValues[1] + ' ' + dataValues[0]

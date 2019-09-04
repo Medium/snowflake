@@ -2,7 +2,7 @@ import Wordmark from '../components/Wordmark'
 import SnowflakeApp from '../components/SnowflakeApp'
 import "../styles/index.css"
 
-const data = ['Referent', 'External', 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const data = ['', 'Architecture Owner', 3, 3, 3, 2, 0, 3, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 const Index = props => (
   <main>
       <div style={{margin: '19px auto 0', width: 142}}>
