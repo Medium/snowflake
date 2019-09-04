@@ -1,5 +1,3 @@
-// @flow
-
 import Wordmark from '../components/Wordmark'
 import SnowflakeApp from '../components/SnowflakeApp'
 import "../styles/index.css"
@@ -7,9 +5,6 @@ import "../styles/index.css"
 const data = ['Master', 'Scrum', 0, 0, 1, 2, 0, 2, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
 const Index = props => (
   <main>
-    <style dangerouslySetInnerHTML={{__html: `
-      
-    `}}/>
       <div style={{margin: '19px auto 0', width: 142}}>
         <Wordmark />
       </div>
