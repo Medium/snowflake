@@ -5,17 +5,8 @@ import Track from '../components/Track'
 import LevelThermometer from '../components/LevelThermometer'
 import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
-//import type { Milestone, MilestoneMap, TrackId, Titles } from '../constants'
 import React from 'react'
 import Link from 'next/link'
-
-/*
-type SnowflakeAppState = {
-  milestoneByTrack: MilestoneMap,
-  name: string,
-  title: Titles,
-  focusedTrackId: TrackId,
-}*/
 
 const propsToState = (data) => {
   if (!data) return null
@@ -137,10 +128,9 @@ class SnowflakeApp extends React.Component {
     let titleList;
 
     if (this.props.pageType) {
-      titleList = <ul>
+      titleList = <ul className="titleList">
         {titlesIds.map((eligibleTitle, i) => (
-          <li key={eligibleTitle}>
-            <input type="checkbox" defaultChecked={this.state.title[eligibleTitle]} disabled/>
+          <li key={eligibleTitle} className={this.state.title[eligibleTitle] ? 'checked' : ''}>
             <Link href={titles[eligibleTitle].url}><a>{titles[eligibleTitle].label}</a></Link>
           </li>
         ))}
@@ -148,34 +138,6 @@ class SnowflakeApp extends React.Component {
     }
     return (
       <main>
-        <style jsx global>{`
-          body {
-            font-family: 'font-family: "proxima nova', sans-serif;
-          }
-          main {
-            width: 960px;
-            margin: 0 auto;
-          }
-          .name-input {
-            border: none;
-            display: block;
-            border-bottom: 2px solid #fff;
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 380px;
-            margin-bottom: 10px;
-          }
-          .name-input:hover, .name-input:focus {
-            border-bottom: 2px solid #ccc;
-            outline: 0;
-          }
-          a {
-            color: #888;
-            text-decoration: none;
-          }
-        `}</style>
-        
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             {titleList}

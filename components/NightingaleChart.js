@@ -1,16 +1,9 @@
 import React from 'react'
 import * as d3 from 'd3'
 import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
-//import type { TrackId, Milestone, MilestoneMap } from '../constants'
 
 const width = 400
 const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
-/*
-type Props = {
-  milestoneByTrack: MilestoneMap,
-  focusedTrackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
-}*/
 
 class NightingaleChart extends React.Component {
   colorScale
@@ -56,7 +49,7 @@ class NightingaleChart extends React.Component {
           }
           .track-milestone-current, .track-milestone:hover {
             stroke: #000;
-            stroke-width: 4px;
+            stroke-width: 3px;
             stroke-linejoin: round;
           }
         `}</style>

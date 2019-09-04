@@ -5,7 +5,7 @@ import "../styles/index.css"
 
 const Index = props => (
   <div>
-    <div style={{margin: '19px auto 0', width: 142}}>
+    <div style={{margin: '0 auto', width: 200}}>
       <Wordmark />
     </div>
     <h1>{props[1]} {props[0]}</h1>

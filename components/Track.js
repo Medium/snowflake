@@ -38,6 +38,8 @@ class Track extends React.Component {
             font-size: 24px;
             border-radius: 3px;
             cursor: pointer;
+            padding: 0 4px;
+            color: #B0BED2;
           }
           ul {
             line-height: 1.5em;
@@ -55,7 +57,9 @@ class Track extends React.Component {
                 return (
                   <tr key={milestone}>
                     <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                        style={{border: `3px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, 
+                        background: isMet ? categoryColorScale(track.category) : undefined,
+                        color: isMet ? 'white' : 'black'}}>
                       {milestone}
                     </td>
                   </tr>

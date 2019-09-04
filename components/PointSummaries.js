@@ -1,5 +1,4 @@
 import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
-//import type { MilestoneMap } from '../constants'
 import React from 'react'
 
 
@@ -52,15 +51,16 @@ class PointSummaries extends React.Component {
             text-align: center;
             font-weight: normal;
             width: 120px;
+            color: #34393F;
           }
           .point-summary-value {
             width: 120px;
-            background: #eee;
+            background: #EEEFF0;
             font-size: 24px;
             font-weight: bold;
             line-height: 50px;
-            border-radius: 2px;
             text-align: center;
+            color: #000;
           }
         `}</style>
         <tbody>

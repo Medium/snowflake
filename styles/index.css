@@ -34,7 +34,7 @@
     font-style: normal;
 }
 body {
-    font-family: 'proxima-regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'proxima nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #34393F;
     font-size: 15px;
 }
@@ -42,6 +42,17 @@ body {
 hr {
     border: 0;
     border-top: 1px solid #C5C9CF;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #26282d;
+    width: 960px;
+    margin: 0 auto;
+}
+
+h4 {
+    margin: 15px 0 10px 0;
 }
 
 ul {
@@ -52,4 +63,62 @@ ul {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+li { 
+    padding-left: 10px; 
+    text-indent: -10px;    
+}
+li:before { 
+    content: '■'; 
+    padding-right:7px; 
+    color: rgba(27, 199, 75, 0.5); 
+}
+
+p {
+    margin: 0;
+    Padding: 0;
+}
+
+a {
+    color: #34393F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0099FF;
+}
+
+main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.titleList {
+    margin: 15px 0;
+}
+
+.titleList li:before {
+    margin: 3px 0;
+    content: '';
+}
+
+.titleList .checked:before {
+    margin: 3px 0;
+    content: '\2713';
+    color: rgba(27, 199, 75, 1); 
+}
+
+.titleList a {
+    margin: 3px 0 3px 12px;
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.titleList .checked a {
+    margin-left: 0;
+}
+
+.description {
+    margin-bottom: 15px;
 }

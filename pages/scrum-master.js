@@ -4,7 +4,7 @@ import Wordmark from '../components/Wordmark'
 import SnowflakeApp from '../components/SnowflakeApp'
 import "../styles/index.css"
 
-const data = ['Master', 'Scrum', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const data = ['Master', 'Scrum', 0, 0, 1, 2, 0, 2, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
 const Index = props => (
   <main>
     <style dangerouslySetInnerHTML={{__html: `
@@ -15,7 +15,7 @@ const Index = props => (
       </div>
       <h1>{data[1]} {data[0]}</h1>
       <h2>Missions</h2>
-      <p>Les Scrum Masters remplissent leur rôle en aidant tout le monde à comprendre la théorie, les pratiques, les règles et les valeurs 
+      <p className="description">Les Scrum Masters remplissent leur rôle en aidant tout le monde à comprendre la théorie, les pratiques, les règles et les valeurs 
       de Scrum.
       Le Scrum Master est un leader-serviteur de l'équipe Scrum. Le Scrum Master aide ceux qui sont externes à l'équipe Scrum 
       à comprendre lesquelles de leurs interactions avec l’équipe Scrum sont bénéfiques et lesquelles ne le sont pas.
@@ -45,6 +45,7 @@ développement empirique de produits</li>
         <li>Collaborer avec d'autres Scrum Masters pour accroître l'efficacité de l'application de Scrum
 au sein de l'organisation</li>
     </ul>
+    <hr />
     <div>
       <h2>Minimum Requis</h2>
       <SnowflakeApp data={data} />

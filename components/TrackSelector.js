@@ -14,7 +14,7 @@ class TrackSelector extends React.Component {
             margin-left: -3px;
           }
           .track-selector-value {
-            line-height: 43px;
+            line-height: 35px;
             width: 50px;
             text-align: center;
             background: #eee;
@@ -40,7 +40,7 @@ class TrackSelector extends React.Component {
           <tr>
             {trackIds.map(trackId => (
               <td key={trackId} className="track-selector-value"
-                  style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
+                  style={{border: '3px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(tracks[trackId].category)), background: categoryColorScale(tracks[trackId].category)}}
                   onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
                 {this.props.milestoneByTrack[trackId]}
               </td>
