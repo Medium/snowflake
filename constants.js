@@ -1,44 +1,6 @@
-// @flow
 import * as d3 from 'd3'
 
-/*export type TrackId = 'MOBILE' | 'FRONTEND' | 'SYSTEME' | 'BACKEND' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISME' | 'RECRUTEMENT' | 'CULTURE'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
-
-export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'FRONTEND': Milestone,
-  'SYSTEME': Milestone,
-  'BACKEND': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
-  'MENTORSHIP': Milestone,
-  'EVANGELISME': Milestone,
-  'RECRUTEMENT': Milestone,
-  'CULTURE': Milestone
-}*/
-
 export const milestones = [0, 1, 2, 3, 4, 5]
-/*
-export type Title = {
-  label: string,
-  urlId: Number
-}
-
-export type Titles = {|
-  'SCRUM_MASTER': Title,
-  'EXTERNAL_REFERENT': Title,
-  'ENGINEER_PROJECT_OWNER': Title,
-  'ARCHITECTURE_OWNER': Title
-|}*/
 
 export const milestoneToPoints = (milestone) => {
   switch (milestone) {
@@ -71,37 +33,7 @@ export const pointsToLevels = {
 }
 
 export const maxLevel = 135
-/*
-export type Track = {
-  displayName: string,
-  category: string, // TK categoryId type?
-  description: string,
-  milestones: {
-    summary: string,
-    signals: string[],
-    examples: string[]
-  }[]
-}
 
-type Tracks = {|
-  'MOBILE': Track,
-  'FRONTEND': Track,
-  'SYSTEME': Track,
-  'BACKEND': Track,
-  'PROJECT_MANAGEMENT': Track,
-  'COMMUNICATION': Track,
-  'CRAFT': Track,
-  'INITIATIVE': Track,
-  'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
-  'WELLBEING': Track,
-  'ACCOMPLISHMENT': Track,
-  'MENTORSHIP': Track,
-  'EVANGELISME': Track,
-  'RECRUTEMENT': Track,
-  'CULTURE': Track
-|}
-*/
 export const tracks = {
   "MOBILE": {
     "displayName": "Mobile",

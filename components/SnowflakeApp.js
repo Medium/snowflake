@@ -97,7 +97,7 @@ const defaultState = () => {
       'RECRUTEMENT': 3,
       'CULTURE': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'PROJECT_MANAGEMENT'
   }
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { trackIds, tracks, categoryColorScale } from '../constants'
-//import type { MilestoneMap, TrackId } from '../constants'
 
 class TrackSelector extends React.Component {
   render() {
