@@ -1,0 +1,7 @@
+{
+  "presets": [
+    "next/babel",
+    "@babel/preset-flow"
+  ],
+  "plugins": []
+}
