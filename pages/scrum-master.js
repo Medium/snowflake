@@ -3,25 +3,26 @@ import SnowflakeApp from '../components/SnowflakeApp'
 import "../styles/index.css"
 
 const data = { 
-  LASTNAME: 'Master',
-  FIRSTNAME: 'Scrum',
+  LASTNAME: '',
+  FIRSTNAME: 'Scrum Master',
   MOBILE: 0,
   FRONTEND: 0,
-  SYSTEME: 5,
+  SYSTEME: 0,
   BACKEND: 0,
-  PROJECT_MANAGEMENT: 3,
+  PROJECT_MANAGEMENT: 1,
   COMMUNICATION: 2,
-  CRAFT: 4,
-  INITIATIVE: 4,
-  CAREER_DEVELOPMENT: 1,
-  ORG_DESIGN: 1,
-  WELLBEING: 2,
-  ACCOMPLISHMENT: 2,
-  MENTORSHIP: 2,
-  EVANGELISME: 2,
-  RECRUTEMENT: 2,
-  CULTURE: 3
+  CRAFT: 0,
+  INITIATIVE: 2,
+  CAREER_DEVELOPMENT: 0,
+  ORG_DESIGN: 2,
+  WELLBEING: 0,
+  ACCOMPLISHMENT: 0,
+  MENTORSHIP: 0,
+  EVANGELISME: 0,
+  RECRUTEMENT: 0,
+  CULTURE: 1
 }
+
 const Index = props => (
   <main>
       <div style={{margin: '19px auto 0', width: 142}}>
