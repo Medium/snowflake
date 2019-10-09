@@ -2,13 +2,32 @@ import Wordmark from '../components/Wordmark'
 import SnowflakeApp from '../components/SnowflakeApp'
 import "../styles/index.css"
 
-const data = ['Master', 'Scrum', 0, 0, 1, 2, 0, 2, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0];
+const data = { 
+  LASTNAME: 'Master',
+  FIRSTNAME: 'Scrum',
+  MOBILE: 0,
+  FRONTEND: 0,
+  SYSTEME: 5,
+  BACKEND: 0,
+  PROJECT_MANAGEMENT: 3,
+  COMMUNICATION: 2,
+  CRAFT: 4,
+  INITIATIVE: 4,
+  CAREER_DEVELOPMENT: 1,
+  ORG_DESIGN: 1,
+  WELLBEING: 2,
+  ACCOMPLISHMENT: 2,
+  MENTORSHIP: 2,
+  EVANGELISME: 2,
+  RECRUTEMENT: 2,
+  CULTURE: 3
+}
 const Index = props => (
   <main>
       <div style={{margin: '19px auto 0', width: 142}}>
         <Wordmark />
       </div>
-      <h1>{data[1]} {data[0]}</h1>
+      <h1>{data.FIRSTNAME} {data.LASTNAME}</h1>
       <h2>Missions</h2>
       <p className="description">Les Scrum Masters remplissent leur rôle en aidant tout le monde à comprendre la théorie, les pratiques, les règles et les valeurs 
       de Scrum.

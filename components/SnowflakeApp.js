@@ -15,36 +15,22 @@ const propsToState = (data) => {
   if (!dataValues) return null
   
   trackIds.forEach((trackId, i) => {
-    console.log(trackId, dataValues[i])
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(dataValues[i]))
+    result.milestoneByTrack[trackId] = dataValues[trackId]
   })
-  if (dataValues[1] && dataValues[0]) result.name = dataValues[1] + ' ' + dataValues[0]
-  if (dataValues[18] !== undefined) result.title[titlesIds[0]] = dataValues[18]
-  if (dataValues[19] !== undefined) result.title[titlesIds[1]] = dataValues[19]
-  if (dataValues[20] !== undefined) result.title[titlesIds[2]] = dataValues[20]
-  if (dataValues[21] !== undefined) result.title[titlesIds[3]] = dataValues[21]
-  
-  return result
-}
+  result.name = dataValues.FIRSTNAME + ' ' + dataValues.LASTNAME;
+  result.title['ARCHITECTURE_OWNER'] = dataValues['Architecture Owner'];
+  result.title['EXTERNAL_REFERENT'] = dataValues['External Referent'];
+  result.title['ENGINEER_PROJECT_OWNER'] = dataValues['Engineering Project Owner'];
+  result.title['SCRUM_MASTER'] = dataValues['Scrum Master'];
 
-const coerceMilestone = (value) => {
-  // HACK I know this is goofy but i'm dealing with flow typing
-  switch(value) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 2
-    case 3: return 3
-    case 4: return 4
-    case 5: return 5
-    default: return 0
-  }
+  return result
 }
 
 const emptyState = () => {
   return {
     name: '',
     milestoneByTrack: {
-      'MOBILE': 0,
+      MOBILE: 0,
       'FRONTEND': 0,
       'SYSTEME': 0,
       'BACKEND': 0,
@@ -73,7 +59,7 @@ const emptyState = () => {
 
 const defaultState = () => {
   return {
-    name: 'Cersei Lannister',
+    name: 'Tony Stark',
     title: {
       'SCRUM_MASTER': 0,
       'EXTERNAL_REFERENT': 0,
@@ -83,7 +69,7 @@ const defaultState = () => {
     milestoneByTrack: {
       'MOBILE': 1,
       'FRONTEND': 2,
-      'SYSTEME': 3,
+      'SYSTEME': 4,
       'BACKEND': 2,
       'PROJECT_MANAGEMENT': 4,
       'COMMUNICATION': 1,
@@ -104,7 +90,6 @@ const defaultState = () => {
 
 const stateToHash = (state) => {
   if (!state || !state.milestoneByTrack) return null
-  console.log('paso por aqui')
   const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
   return values.join(',')
 }
@@ -132,7 +117,7 @@ class SnowflakeApp extends React.Component {
       titleList = <ul className="titleList">
         {titlesIds.map((eligibleTitle, i) => (
           <li key={eligibleTitle} className={this.state.title[eligibleTitle] ? 'checked' : ''}>
-            <Link href={titles[eligibleTitle].url}><a>{titles[eligibleTitle].label}</a></Link>
+            <Link href={titles[eligibleTitle].url}><a target='_blank'>{titles[eligibleTitle].label}</a></Link>
           </li>
         ))}
       </ul>

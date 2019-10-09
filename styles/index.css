@@ -98,19 +98,27 @@ main {
     margin: 15px 0;
 }
 
+.titleList li {
+    padding-left: 0;
+    text-indent: 0;
+}
+
 .titleList li:before {
     margin: 3px 0;
+    padding: 0 10px 0 9px;
     content: '';
+    border: 1px solid #EEEFF0;
 }
 
 .titleList .checked:before {
     margin: 3px 0;
     content: '\2713';
+    padding: 0 4px;
     color: rgba(27, 199, 75, 1); 
 }
 
 .titleList a {
-    margin: 3px 0 3px 12px;
+    margin: 3px 0 3px 0px;
     padding: 0 10px;
     display: inline-block;
 }
