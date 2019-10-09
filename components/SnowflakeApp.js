@@ -3,7 +3,7 @@ import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import LevelThermometer from '../components/LevelThermometer'
-import { titlesIds, titles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { rolesIds, roles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import React from 'react'
 import Link from 'next/link'
@@ -18,10 +18,10 @@ const propsToState = (data) => {
     result.milestoneByTrack[trackId] = dataValues[trackId]
   })
   result.name = dataValues.FIRSTNAME + ' ' + dataValues.LASTNAME;
-  result.title['ARCHITECTURE_OWNER'] = dataValues['Architecture Owner'];
-  result.title['EXTERNAL_REFERENT'] = dataValues['External Referent'];
-  result.title['ENGINEER_PROJECT_OWNER'] = dataValues['Engineering Project Owner'];
-  result.title['SCRUM_MASTER'] = dataValues['Scrum Master'];
+  result.role['ARCHITECTURE_OWNER'] = dataValues['Architecture Owner'];
+  result.role['EXTERNAL_REFERENT'] = dataValues['External Referent'];
+  result.role['ENGINEER_PROJECT_OWNER'] = dataValues['Engineering Project Owner'];
+  result.role['SCRUM_MASTER'] = dataValues['Scrum Master'];
 
   return result
 }
@@ -48,7 +48,7 @@ const emptyState = () => {
       'CULTURE': 0
     },
     focusedTrackId: 'MOBILE',
-    title: {
+    role: {
       'SCRUM_MASTER': 0,
       'EXTERNAL_REFERENT': 0,
       'ENGINEER_PROJECT_OWNER': 0,
@@ -60,7 +60,7 @@ const emptyState = () => {
 const defaultState = () => {
   return {
     name: 'Tony Stark',
-    title: {
+    role: {
       'SCRUM_MASTER': 0,
       'EXTERNAL_REFERENT': 0,
       'ENGINEER_PROJECT_OWNER': 1,
@@ -90,7 +90,7 @@ const defaultState = () => {
 
 const stateToHash = (state) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.role))
   return values.join(',')
 }
 
@@ -111,13 +111,13 @@ class SnowflakeApp extends React.Component {
   }
 
   render() {
-    let titleList;
+    let roleList;
 
     if (this.props.pageType) {
-      titleList = <ul className="titleList">
-        {titlesIds.map((eligibleTitle, i) => (
-          <li key={eligibleTitle} className={this.state.title[eligibleTitle] ? 'checked' : ''}>
-            <Link href={titles[eligibleTitle].url}><a target='_blank'>{titles[eligibleTitle].label}</a></Link>
+      roleList = <ul className="titleList">
+        {rolesIds.map((eligibleRole, i) => (
+          <li key={eligibleRole} className={this.state.role[eligibleRole] ? 'checked' : ''}>
+            <Link href={roles[eligibleRole].url}><a target='_blank'>{roles[eligibleRole].label}</a></Link>
           </li>
         ))}
       </ul>
@@ -126,7 +126,7 @@ class SnowflakeApp extends React.Component {
       <main>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            {titleList}
+            {roleList}
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>

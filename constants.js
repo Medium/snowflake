@@ -1133,11 +1133,10 @@ export const totalPointsFromMilestoneMap = (milestoneMap) =>
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  //.range(['#1BC74B', '#0099FF', '#59C1D1', '#ec5d61'])
 
 
 .range(['#1BC74B', '#0099FF', '#88d7e7', '#ff4d4d'])
-export const titles = {
+export const roles = {
   'SCRUM_MASTER': {
     label: 'Scrum Master',
     url: 'scrum-master'
@@ -1156,4 +1155,4 @@ export const titles = {
   },
 }
 
-export const titlesIds = Object.keys(titles)
+export const rolesIds = Object.keys(roles)
