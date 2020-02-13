@@ -67,7 +67,8 @@ const emptyState = (): SnowflakeAppState => {
       'INFLUENCE': 0,
       'MENTORSHIP': 0,
     },
-    focusedTrackId: 'CHAPTER_ONE'
+    focusedTrackId: 'CHAPTER_ONE',
+    version: "1.0.0"
   }
 }
 
@@ -135,17 +136,20 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             margin: 0 auto;
           }
           .name-input {
-            border: none;
+            border: 0;
+            border-bottom: 2px solid #ccc;
+            border-left: 2px solid #ccc;
             display: block;
-            border-bottom: 2px solid #fff;
             font-size: 30px;
             line-height: 40px;
             font-weight: bold;
             width: 380px;
             margin-bottom: 10px;
+            padding-left: 8px;
           }
           .name-input:hover, .name-input:focus {
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #999;
+            background: #eee;
             outline: 0;
           }
           a {
@@ -202,11 +206,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
         <div style={{display: 'flex', paddingBottom: '20px'}}>
           <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">this version of our growth framework</a>
-            {' '}and <a href="https://medium.engineering/engineering-growth-at-medium-4935b3234d25" target="_blank">what we do currently</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
+
+          </div>
+          <div style={{flex: 2}}>
+            Version {this.state.version}
+          </div>
+          <div style={{flex: 2}}>
+            {this.getDate()}
           </div>
         </div>
       </main>
@@ -256,6 +262,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     title = titles.indexOf(title) == -1 ? titles[0] : title
     this.setState({ title })
   }
+
+  getDate() {
+    var dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+    return new Date().toLocaleString('us-EN', dateOptions)
+  }
+
 }
 
 export default SnowflakeApp
