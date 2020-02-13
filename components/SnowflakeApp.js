@@ -144,6 +144,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             line-height: 40px;
             font-weight: bold;
             width: 380px;
+            margin-top: 140px;
             margin-bottom: 10px;
             padding-left: 8px;
           }
@@ -170,17 +171,18 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
+              Cohort: &nbsp;&nbsp;
               <CohortSelector
                   currentCohort={this.state.cohort}
                   setCohortFn={(cohort) => this.setCohort(cohort)} />
-              <TitleSelector
+              {/*}<TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
                   currentCohort={this.state.cohort}
-                  setTitleFn={(title) => this.setTitle(title)} />
+                setTitleFn={(title) => this.setTitle(title)} />*/}
             </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+            {/*<PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+          <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />*/}
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
