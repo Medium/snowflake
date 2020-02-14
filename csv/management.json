@@ -8,7 +8,7 @@ trackList["CHAPTER_ONE"] = {
         {
             "summary": "Helps individuals to get unblocked creating a supporting and engaging environment",
             "signals": [
-                "Demonstrates an understanding of individuals' roles, goals and interests",
+                "Demonstrates an understanding of individuals' roles, goals, and interests",
                 "Demonstrates concern for the well-being of people",
                 "Actively listens",
                 "Treats people with respect"
@@ -18,7 +18,7 @@ trackList["CHAPTER_ONE"] = {
         {
             "summary": "Manages expectations across teams and focus on building long-term relationships",
             "signals": [
-                "Uses an understanding of the organization's processes, systems and policies to engage with people",
+                "Uses an understanding of the organization's processes, systems and policies to engage with colleagues",
                 "Assumes positive intent of others, approaching every interaction with kindness and good humor",
                 "Empathetically listens",
                 "Communicates difficult or negative messages in an honest, accurate, and respectful manner"
@@ -30,7 +30,7 @@ trackList["CHAPTER_ONE"] = {
             "signals": [
                 "Helps people develop and perform as highly as possible",
                 "Uses awareness and understanding of the organization's culture to implement change initiatives",
-                "Is able to deeply understand and empathise with others",
+                "Is able to deeply understand and empathize with others",
                 "Delivers persuasive and compelling messages"
             ],
             "examples": []
@@ -41,14 +41,14 @@ trackList["CHAPTER_ONE"] = {
                 "Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose",
                 "Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues",
                 "Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information",
-                "Provides visible leadership that \"walks the talk\". Sets high performance standards for self, acting as a role model for the team"
+                "Provides visible leadership that \"walks the talk.\"  Sets high performance standards for self, acting as a role model for the team"
             ],
             "examples": []
         },
         {
             "summary": "Leads, inspires and servers others, enabling people to achieve their goals and full potential",
             "signals": [
-                "Focus on bringuing their best self to your work, and making space for others to do so as well",
+                "Focus on bringing their best self to your work, and making space for others to do so as well",
                 "Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation and maintenance of initiatives proposed by other executives",
                 "Uses storytelling to create a positive and engaging environment for teams and clients",
                 "Leverages relationships to best support and develop individuals"
@@ -62,7 +62,7 @@ trackList["CHAPTER_TWO"] = {
     "cohort": "MANAGEMENT",
     "category": "A",
     "displayName": "Coaching",
-    "description": "Helps people to develop their own independent thinking, guiding them through processes",
+    "description": "Helps people to develop their own independent thinking, guiding them through processes and facilitating learning",
     "milestones": [
         {
             "summary": "Helps individuals to think through the likely impacts of alternative decisions",
@@ -84,7 +84,7 @@ trackList["CHAPTER_TWO"] = {
         {
             "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
             "signals": [
-                "Demonstrates the ability to understand what issues exist that limit individuals's ability to perform the task or accomplish the objectives",
+                "Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives",
                 "Determines whether people need help to remove barriers or if they are able to tackle them by themselves"
             ],
             "examples": []
@@ -99,7 +99,7 @@ trackList["CHAPTER_TWO"] = {
             "examples": []
         },
         {
-            "summary": "Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills and knowledge",
+            "summary": "Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills, and knowledge",
             "signals": [
                 "Focuses on empowering their team members to discover solutions for themselves",
                 "Coaches senior leaders on creating positive working relationships with their teams and clients"
@@ -113,20 +113,19 @@ trackList["CHAPTER_THREE"] = {
     "cohort": "MANAGEMENT",
     "category": "A",
     "displayName": "Facilitation",
-    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+    "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
     "milestones": [
         {
             "summary": "Helps individuals resolve difficult issues, promoting an inclusive environment",
             "signals": [
-                "Actively seeks many external views to help people gain understanding",
-                "Creates an inclusive environment"
+                "Actively seeks views from a range of colleagues to help gain understanding",
+                "Contributes to creating an inclusive environment"
             ],
             "examples": []
         },
         {
             "summary": "Helps people collectively move through a process",
             "signals": [
-                "Is able to effectively deal and understand views opposing their own views and is open to criticism and learning",
                 "Is becoming comfortable in mediating escalated conflicts",
                 "Builds consensus among people and teams"
             ],
@@ -142,16 +141,16 @@ trackList["CHAPTER_THREE"] = {
             "examples": []
         },
         {
-            "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation and full buy-in from everyone who is involved",
+            "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved",
             "signals": [
                 "Understands themselves and the individuals in the project team, what drives and motivates them personally, and their individual capabilities",
                 "Is able to facilitate difficult interactions among stakeholders to achieve outcomes",
-                "Is focused on the big picure"
+                "Is focused on the big picture"
             ],
             "examples": []
         },
         {
-            "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+            "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
             "signals": [
                 "Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams",
                 "Serves as a positive role model for productive conflict",
@@ -172,13 +171,13 @@ trackList["CHAPTER_FOUR"] = {
         {
             "summary": "Fosters enthusiasm and common purpose across people",
             "signals": [
-                "Generates commitment in individuals and the team",
+                "Contributes to generating commitment in individuals and the team",
                 "Speaks positively and enthusiastically about the organization's products\/services and future direction"
             ],
             "examples": []
         },
         {
-            "summary": "Mobilizes individuals to develop goals, execut plans and deliver client value\t",
+            "summary": "Mobilizes individuals to develop goals, execute plans, and deliver client value        ",
             "signals": [
                 "Creates a fun and energetic environment that promotes creativity",
                 "Validates ongoing work and sustains motivation",
@@ -187,9 +186,9 @@ trackList["CHAPTER_FOUR"] = {
             "examples": []
         },
         {
-            "summary": "Inspires others to a greater effort by setting an example in his\/her own behavior of dedication",
+            "summary": "Inspires others to a greater effort by setting an example in his\/her\/their own behavior of dedication",
             "signals": [
-                "Recognises individual and team performance, even when things go wrong",
+                "Recognizes individual and team performance, even when things go wrong",
                 "Empowers a team to drive forward amidst uncertainty",
                 "Models excellence and enthusiasm for the work"
             ],
@@ -199,12 +198,12 @@ trackList["CHAPTER_FOUR"] = {
             "summary": "Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve",
             "signals": [
                 "Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn",
-                "Ensures that the self-realisation and practical needs of the project team are met"
+                "Ensures that the self-realization and practical needs of the project team are met"
             ],
             "examples": []
         },
         {
-            "summary": "Enables and directs generation of energy - motivation to act - among members of the organization and clients",
+            "summary": "Enables and directs generation of energy \u2014 motivation to act \u2014 among members of the organization and clients",
             "signals": [
                 "Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions",
                 "Ability to find and use successes to celebrate progress towards the vision",

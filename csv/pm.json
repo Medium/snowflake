@@ -3,15 +3,15 @@ trackList["CHAPTER_ONE"] = {
     "cohort": "PM",
     "category": "A",
     "displayName": "Foundations",
-    "description": "Develops expertise and proficiency in our PM practice, with solid understanding of relevant areas\t",
+    "description": "Develops expertise and proficiency in our project management practice, with solid understanding of relevant areas        ",
     "milestones": [
         {
             "summary": "Works effectively within established structures, following current best practices",
             "signals": [
                 "Is building proficiency in our PM practice and becoming comfortable with learning new skills",
-                "Able to develop comprehensice projects plans with assistance of seniors project managers",
+                "Able to develop comprehensive projects plans with assistance of seniors project managers",
                 "Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and develop according to plan",
-                "Is well-versed with project management methodologies and Microsoft Office",
+                "Is well-versed with project management methodologies and client collaboration tools",
                 "Actively listens, understands, and responds to clients and team members"
             ],
             "examples": []
@@ -25,16 +25,16 @@ trackList["CHAPTER_ONE"] = {
                 "Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, might have different responses from the client, and even different definitions of work",
                 "Monitors client satisfaction",
                 "Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders",
-                "Able to create, manage and maitain agreements, budgets, scope of work, and timelines",
-                "Works within the given parameteres delivered from Sales, such as problem statetment, budget,.."
+                "Able to create, manage and maintain agreements, budgets, scope of work, and timelines",
+                "Works within the given parameters delivered from Sales, such as problem statetment, budget"
             ],
             "examples": []
         },
         {
             "summary": "Manages project plans of moderate complexity, mastering delivery",
             "signals": [
-                "Effectively leads and takes ownership of project from concept to completion, acting as the liaison between the project team and clients",
-                "Facilitates team through Agile practices, including daily SCRUMS, grooming and retrospectives",
+                "Effectively leads a project from concept to completion, acting as the liaison between the project team and clients",
+                "Facilitates team through Agile practices, including daily scrum, grooming and retrospectives",
                 "Manages changes to the project scope, budget and timeline using appropriate verification techniques",
                 "Delegates project tasks based on junior staff members' individual strengths, skill sets and experience levels",
                 "Measures project performance using appropriate tools and techniques",
@@ -47,7 +47,7 @@ trackList["CHAPTER_ONE"] = {
         {
             "summary": "Develops complex project plans and guides other PM team members",
             "signals": [
-                "Defines success criteria and disseminate them to involved parties throughout project and program life cycle",
+                "Defines success criteria and disseminates them to involved parties throughout project and program life cycle",
                 "Establishes practices, templates, policies, tools and partnerships to expand and mature the PM capabilities for the organization",
                 "Sets and continually manages project expectations while delegating and managing deliverable with team members and stakeholders",
                 "Guides team members about every aspect of the project so that the team members can understand their tasks fully and act on them efficiently",
@@ -56,13 +56,13 @@ trackList["CHAPTER_ONE"] = {
             "examples": []
         },
         {
-            "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for a PM team",
+            "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic foundational direction for the project management team",
             "signals": [
                 "Guides and directs PM team members by providing direction to team and project success",
                 "Leverages constraints that exist for projects around resources, budget, time, quality and scope in order to meet project outcomes",
                 "Manages dilemmas and paradoxes as they occur throughout the project lifecycle by identifying and communicating trade-offs with key stakeholders",
                 "Seen as a leader and contributor in the broader technical side across the organization",
-                "Capability to track project benefits realisation and lessons learnt activities to feed into on-going improvements"
+                "Capability to track project benefits realization and lessons learned activities to feed into ongoing improvements"
             ],
             "examples": []
         }
@@ -73,7 +73,7 @@ trackList["CHAPTER_TWO"] = {
     "cohort": "PM",
     "category": "A",
     "displayName": "Plan",
-    "description": "Comprehends the processes and activities to identify, define, combine, unify, and coordinate the various elements within PM such as scope, budget, timelines and resources\t",
+    "description": "Comprehends the processes and activities to identify, define, combine, unify, and coordinate the various elements within project management such as scope, budget, timelines, and resources        ",
     "milestones": [
         {
             "summary": "Works effectively to assist the business planning, lifecycle management, reporting and performance measurement systems",
@@ -122,7 +122,7 @@ trackList["CHAPTER_TWO"] = {
             "examples": []
         },
         {
-            "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic planning direction for a PM team",
+            "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic planning direction for the project management team",
             "signals": [
                 "Ensures that the project is adding to the strategic advantage of the client",
                 "Defends product integrity from misinformed decision making either externally or internally",
@@ -138,10 +138,10 @@ trackList["CHAPTER_THREE"] = {
     "cohort": "PM",
     "category": "A",
     "displayName": "Risk Mitigation",
-    "description": "Comprehends the ability to conduct risk planning, identification, analysis, and response planning and controlling risk on a project\t",
+    "description": "Comprehends the ability to conduct risk planning, identification, analysis, and response planning and controlling risk on a project        ",
     "milestones": [
         {
-            "summary": "Works effectively within established project risk, following quality polices, objectives and responsibilities to satisfy project requirements",
+            "summary": "Works effectively within established project risk, following quality policies, objectives and responsibilities to satisfy project requirements",
             "signals": [
                 "Determines which risks may affect the project and documents their characteristics with assistance of senior PM",
                 "Ability to understand and document potential consequences of risks as they occur",
@@ -153,7 +153,7 @@ trackList["CHAPTER_THREE"] = {
         {
             "summary": "Develops and monitors risk mitigation with guidance",
             "signals": [
-                "Effectively determines which risks may affect the project and documents their characteristices with some assistance of senior PM",
+                "Effectively determines which risks may affect the project and documents their characteristics with some assistance of senior PM",
                 "Conducts ongoing risk assessments with guidance",
                 "Monitors status of project risks with guidance",
                 "Audits quality requirements and results from quality control measurements with guidance"
@@ -163,12 +163,12 @@ trackList["CHAPTER_THREE"] = {
         {
             "summary": "Performs risk mitigation to minimize project risks",
             "signals": [
-                "Oversses the risk identification and definition process",
-                "Ability to prioritize risks for further analysis or action by assessing their probabilities of occurence and impact",
+                "Oversees the risk identification and definition process",
+                "Ability to prioritize risks for further analysis or action by assessing their probabilities of occurrence and impact",
                 "Develops options and actions to enhance opportunities and reduce threats to project objectives",
                 "Initiates risk response plans when necessary",
                 "Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks",
-                "Regurlay review quality metrics with the team",
+                "Regularly review quality metrics with the team",
                 "Establishes, updates, and utilizes key performance indicators"
             ],
             "examples": []
@@ -189,7 +189,7 @@ trackList["CHAPTER_THREE"] = {
             "signals": [
                 "Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response",
                 "Drives and leads creative actions to enhance opportunities and reduce threats to project objectives",
-                "Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issue",
+                "Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issues",
                 "Clearly articulates the risks to the client, including their negative impact on the company's overall business",
                 "Identifies quality standards for use by the team that establish performance and quality expectations"
             ],
@@ -202,7 +202,7 @@ trackList["CHAPTER_FOUR"] = {
     "cohort": "PM",
     "category": "A",
     "displayName": "Information",
-    "description": "Comprehends the effective exchanges of accurate, appropriate and relevant information with stakeholders\t",
+    "description": "Comprehends the effective exchanges of accurate, appropriate, and relevant information with stakeholders        ",
     "milestones": [
         {
             "summary": "Actively listens, understands and responds to stakeholders",
@@ -223,11 +223,11 @@ trackList["CHAPTER_FOUR"] = {
             "examples": []
         },
         {
-            "summary": "Disseminates information effectively, egaging with stakeholders",
+            "summary": "Disseminates information effectively, engaging with stakeholders",
             "signals": [
                 "Engages with stakeholders proactively",
                 "Establishes regular interaction w\/ stakeholders, including formal and informal channels",
-                "Uses appropriate communications method for information diseeminated",
+                "Uses appropriate communications method for information disseminated",
                 "Appropriately matches level of formality to meetings and audience",
                 "Able to effectively summarize key points and issues in a clear and concise manner",
                 "Regularly conducts follow-up with stakeholders"
@@ -237,7 +237,7 @@ trackList["CHAPTER_FOUR"] = {
         {
             "summary": "Ensures quality of information and guidance to proactive respond to stakeholders",
             "signals": [
-                "Engages with team members in developing reports, analysing issues, evaluating progress, and option analysis",
+                "Engages with team members in developing reports, analyzing issues, evaluating progress, and option analysis",
                 "Proactively responds to issues and concerns",
                 "Balances speed of provision of information against reliability of information",
                 "Seeks validation of information",
@@ -248,7 +248,7 @@ trackList["CHAPTER_FOUR"] = {
         {
             "summary": "Effectively manages high-level information to diverse audience, ensuring stakeholder engagement",
             "signals": [
-                "Evaluates, develops and execute responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
+                "Evaluates, develops and executes responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
                 "Builds processes and structures that ensure transfer of information as a whole that influence strategic decisions and produce foundations for new capabilities",
                 "Continually seeks new information to assess the effectiveness of the project strategy"
             ],
