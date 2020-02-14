@@ -2,7 +2,7 @@
 
 create_points();
 create_jobs();
-#create_examples();
+create_examples();
 
 /**
  * Converts the job list and writes the file.
