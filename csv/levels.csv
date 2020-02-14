@@ -19,11 +19,11 @@ CHAPTER_FOUR,DEFAULT,Motivation,2,"Mobilizes individuals to develop goals, execu
 CHAPTER_FOUR,DEFAULT,Motivation,3,Inspires others to a greater effort by setting an example in his/her/their own behavior of dedication
 CHAPTER_FOUR,DEFAULT,Motivation,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
 CHAPTER_FOUR,DEFAULT,Motivation,5,Enables and directs generation of energy — motivation to act — among members of the organization and clients
-PLANNING,DEFAULT,Plan and Coordination,1,Effectively organizes and manages delivery of individual tasks
-PLANNING,DEFAULT,Plan and Coordination,2,Effectively organizes and manages delivery of small projects
-PLANNING,DEFAULT,Plan and Coordination,3,Effectively organizes and manages delivery a small team to deliver a project
-PLANNING,DEFAULT,Plan and Coordination,4,Effectively organizes and manages delivery of complex and/or multi-stakeholder projects on a large team
-PLANNING,DEFAULT,Plan and Coordination,5,Facilitates major internal and external projects delivered by multiple teams
+PLANNING,DEFAULT,Planning and Coordination,1,Effectively organizes and manages delivery of individual tasks
+PLANNING,DEFAULT,Planning and Coordination,2,Effectively organizes and manages delivery of small projects
+PLANNING,DEFAULT,Planning and Coordination,3,Effectively organizes and manages delivery a small team to deliver a project
+PLANNING,DEFAULT,Planning and Coordination,4,Effectively organizes and manages delivery of complex and/or multi-stakeholder projects on a large team
+PLANNING,DEFAULT,Planning and Coordination,5,Facilitates major internal and external projects delivered by multiple teams
 COLLABORATION,DEFAULT,Communication and Collaboration,1,"Communicates and collaborates effectively with close stakeholders when called upon, and incorporates constructive feedback"
 COLLABORATION,DEFAULT,Communication and Collaboration,2,"Communicates and collaborates with the wider team appropriately, focusing on timeliness and good quality information"
 COLLABORATION,DEFAULT,Communication and Collaboration,3,"Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders"
@@ -65,7 +65,7 @@ INFLUENCE,DEFAULT,Influence,3,Works hard to positively influence large groups of
 INFLUENCE,DEFAULT,Influence,4,"Establishes Palantir as an agile, innovative company and workplace to the whole industry"
 INFLUENCE,DEFAULT,Influence,5,Serve as a strategic advisor to have positive impact in the industry
 CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,Helps individuals to get unblocked creating a supporting and engaging environment
-CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,Manages expectations across teams and focus on building long-term relationships
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,Manages expectations across teams and focuses on building long-term relationships
 CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,Manages expectations supporting individuals and clients to perform at their highest capabilities
 CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,"Advocates for people's needs, interests and goals and proactively works to support and enhance growth"
 CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,"Leads, inspires and servers others, enabling people to achieve their goals and full potential"
@@ -79,7 +79,7 @@ CHAPTER_THREE,MANAGEMENT,Facilitation,2,Helps people collectively move through a
 CHAPTER_THREE,MANAGEMENT,Facilitation,3,"Mediates escalated situations, empowers people, and resolves conflict	"
 CHAPTER_THREE,MANAGEMENT,Facilitation,4,"Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved"
 CHAPTER_THREE,MANAGEMENT,Facilitation,5,"Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity"
-CHAPTER_FOUR,MANAGEMENT,Motivation,1,Fosters enthusiasm and common purpose across people
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,Fosters enthusiasm and common purpose among colleagues
 CHAPTER_FOUR,MANAGEMENT,Motivation,2,"Mobilizes individuals to develop goals, execute plans, and deliver client value        "
 CHAPTER_FOUR,MANAGEMENT,Motivation,3,Inspires others to a greater effort by setting an example in his/her/their own behavior of dedication
 CHAPTER_FOUR,MANAGEMENT,Motivation,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
