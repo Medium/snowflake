@@ -1,186 +1,186 @@
-milestone,cohort,level,summary
-CHAPTER_ONE,DEFAULT,1,Helps individuals to get unblocked creating a supporting and engaging environment
-CHAPTER_ONE,DEFAULT,2,Manages expectations across teams and focus on building long-term relationships
-CHAPTER_ONE,DEFAULT,3,Manages expectations supporting individuals and clients to perform at their highest capabilities
-CHAPTER_ONE,DEFAULT,4,"Advocates for people's needs, interests and goals and proactively works to support and enhance growth"
-CHAPTER_ONE,DEFAULT,5,"Leads, inspires and servers others, enabling people to achieve their goals and full potential"
-CHAPTER_TWO,DEFAULT,1,Helps individuals to think through the likely impacts of alternative decisions
-CHAPTER_TWO,DEFAULT,2,Helps individuals to act or perform in the face of challenging goals
-CHAPTER_TWO,DEFAULT,3,"Coaches people proactively, and guides people to realizations rather than providing the answer	"
-CHAPTER_TWO,DEFAULT,4,"Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge or behavior"
-CHAPTER_TWO,DEFAULT,5,"Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills and knowledge"
-CHAPTER_THREE,DEFAULT,1,"Helps individuals resolve difficult issues, promoting an inclusive environment"
-CHAPTER_THREE,DEFAULT,2,Helps people collectively move through a process
-CHAPTER_THREE,DEFAULT,3,"Mediates escalated situations, empowers people, and resolves conflict	"
-CHAPTER_THREE,DEFAULT,4,"Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation and full buy-in from everyone who is involved"
-CHAPTER_THREE,DEFAULT,5,"Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity"
-CHAPTER_FOUR,DEFAULT,1,Fosters enthusiasm and common purpose across people
-CHAPTER_FOUR,DEFAULT,2,"Mobilizes individuals to develop goals, execut plans and deliver client value	"
-CHAPTER_FOUR,DEFAULT,3,Inspires others to a greater effort by setting an example in his/her own behavior of dedication
-CHAPTER_FOUR,DEFAULT,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
-CHAPTER_FOUR,DEFAULT,5,Enables and directs generation of energy - motivation to act - among members of the organization and clients
-PLANNING,DEFAULT,1,Effectively delivers individual tasks
-PLANNING,DEFAULT,2,Effectively delivers small projects
-PLANNING,DEFAULT,3,Effectively delivers projects through a small team
-PLANNING,DEFAULT,4,"Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity"
-PLANNING,DEFAULT,5,Manages major company pushes delivered by multiple teams
-COLLABORATION,DEFAULT,1,"Communicates and Collaborates effectively to close stakeholders when called upon, and incorporates constructive feedback"
-COLLABORATION,DEFAULT,2,"Communicates and Collaborates with the wider team appropriately, focusing on timeliness and good quality information"
-COLLABORATION,DEFAULT,3,"Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders"
-COLLABORATION,DEFAULT,4,"Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization"
-COLLABORATION,DEFAULT,5,"Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others"
-CLIENT_VALUE,DEFAULT,1,Delivers consistently good quality work
-CLIENT_VALUE,DEFAULT,2,"Increases the robustness and reliability of work, and devotes time to polishing products and systems"
-CLIENT_VALUE,DEFAULT,3,Improves others' ability to deliver great quality work
-CLIENT_VALUE,DEFAULT,4,Advocates for and models great quality with proactive actions ensuring project and team success
-CLIENT_VALUE,DEFAULT,5,Enables and encourages the entire organization to deliver client value as a central part of the development process
-INITIATIVE,DEFAULT,1,Identifies opportunities for organizational change and/or product/service improvements
-INITIATIVE,DEFAULT,2,Causes change to positively impact a few individuals or minor improvement to an existing product or service
-INITIATIVE,DEFAULT,3,Causes change to positively impact an entire team or instigates a minor feature or service
-INITIATIVE,DEFAULT,4,Effects change that has a substantial positive impact on the organization or a major product/service impact
-INITIATIVE,DEFAULT,5,Effects change that has a substantial positive impact on the whole company
-COMPLEXITY,DEFAULT,1,"Is available and present on current teams, and works to contribute positively to company culture"
-COMPLEXITY,DEFAULT,2,"Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture"
-COMPLEXITY,DEFAULT,3,"Contributes to improving team relatedness, and helps build a culture of lending support"
-COMPLEXITY,DEFAULT,4,"Creates an environment that provides people with autonomy, master, and purpose, and lifts everyone up"
-COMPLEXITY,DEFAULT,5,"Lives the company values, guards healthy work environment, and defines policies that support relatedness between teams"
-MATURITY,DEFAULT,1,"Identifies complicated situations with guidance, following best practices"
-MATURITY,DEFAULT,2,"Integrates complicated ideas and approaches with guidance, following best practices"
-MATURITY,DEFAULT,3,Handles complicated situations and focus on learning and creativity in the organization
-MATURITY,DEFAULT,4,Identifies and deals with complex situations by fostering innovation
-MATURITY,DEFAULT,5,Helps and supports others to deal with complexity by adapating and learning continuously
-LEARNING,DEFAULT,1,Gives insight into opportunities and helps identify individuals' strengths and weaknesses
-LEARNING,DEFAULT,2,Formally supports and advocates for one person and provides tools to help them solve career problems
-LEARNING,DEFAULT,3,Inspires and retains a small group of people and actively pushes them to stretch themselves
-LEARNING,DEFAULT,4,"Manages interactions and processes between groups, promoting best practices and setting a positive example"
-LEARNING,DEFAULT,5,"Supports the development of a signficant part of the management chapter, and widely viewed as an advisor"
-MENTORSHIP,DEFAULT,1,"Receives support from others, assists new hires, and conveys institutional knowledge"
-MENTORSHIP,DEFAULT,2,Informally mentors individuals in an ad-hoc way and contributes to Palantir's knowledge base
-MENTORSHIP,DEFAULT,3,Teaches small groups of people and guides people to realizations rather than providing the answer
-MENTORSHIP,DEFAULT,4,"Actively mentors people by providing knowledge, advice, and resources"
-MENTORSHIP,DEFAULT,5,Instills and promotes a culture of learning and development within the entire team
-INFLUENCE,DEFAULT,1,"Represents Palantir well internally and externally, and influences individuals positively"
-INFLUENCE,DEFAULT,2,"Represents Palantir well internally and externally, and takes simple actions that positively influence groups of people"
-INFLUENCE,DEFAULT,3,Works hard to positively influence large groups of people
-INFLUENCE,DEFAULT,4,"Establishes Palantir as an agile, innovative company and workplace to the whole industry"
-INFLUENCE,DEFAULT,5,Serve as a strategic advisor to have positive impact in the industry
-CHAPTER_ONE,MANAGEMENT,1,Helps individuals to get unblocked creating a supporting and engaging environment
-CHAPTER_ONE,MANAGEMENT,2,Manages expectations across teams and focus on building long-term relationships
-CHAPTER_ONE,MANAGEMENT,3,Manages expectations supporting individuals and clients to perform at their highest capabilities
-CHAPTER_ONE,MANAGEMENT,4,"Advocates for people's needs, interests and goals and proactively works to support and enhance growth"
-CHAPTER_ONE,MANAGEMENT,5,"Leads, inspires and servers others, enabling people to achieve their goals and full potential"
-CHAPTER_TWO,MANAGEMENT,1,Helps individuals to think through the likely impacts of alternative decisions
-CHAPTER_TWO,MANAGEMENT,2,Helps individuals to act or perform in the face of challenging goals
-CHAPTER_TWO,MANAGEMENT,3,"Coaches people proactively, and guides people to realizations rather than providing the answer	"
-CHAPTER_TWO,MANAGEMENT,4,"Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge or behavior"
-CHAPTER_TWO,MANAGEMENT,5,"Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills and knowledge"
-CHAPTER_THREE,MANAGEMENT,1,"Helps individuals resolve difficult issues, promoting an inclusive environment"
-CHAPTER_THREE,MANAGEMENT,2,Helps people collectively move through a process
-CHAPTER_THREE,MANAGEMENT,3,"Mediates escalated situations, empowers people, and resolves conflict	"
-CHAPTER_THREE,MANAGEMENT,4,"Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation and full buy-in from everyone who is involved"
-CHAPTER_THREE,MANAGEMENT,5,"Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity"
-CHAPTER_FOUR,MANAGEMENT,1,Fosters enthusiasm and common purpose across people
-CHAPTER_FOUR,MANAGEMENT,2,"Mobilizes individuals to develop goals, execut plans and deliver client value	"
-CHAPTER_FOUR,MANAGEMENT,3,Inspires others to a greater effort by setting an example in his/her own behavior of dedication
-CHAPTER_FOUR,MANAGEMENT,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
-CHAPTER_FOUR,MANAGEMENT,5,Enables and directs generation of energy - motivation to act - among members of the organization and clients
-CHAPTER_ONE,ENGINEERING,1,"Works effectively within established structures, following current best practices"
-CHAPTER_ONE,ENGINEERING,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
-CHAPTER_ONE,ENGINEERING,3,Designs technical solutions of moderate complexity
-CHAPTER_ONE,ENGINEERING,4,"Builds complex, technical solutions that pioneer best practices for other engineers, or multi-system services"
-CHAPTER_ONE,ENGINEERING,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the engineering team"
-CHAPTER_TWO,ENGINEERING,1,Learning the ropes of our tech stack as well as our development practices
-CHAPTER_TWO,ENGINEERING,2,"Often writes production-ready code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers."
-CHAPTER_TWO,ENGINEERING,3,Writes production-ready code every day. Is beginning to master parts of our tech stack while also teaching others
-CHAPTER_TWO,ENGINEERING,4,Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis
-CHAPTER_TWO,ENGINEERING,5,"Is an industry-leading expert, deeply knowledgeable in several domains and sets strategic developing direction for the engineering team"
-CHAPTER_THREE,ENGINEERING,1,"Works effectively within established DevOps practices, following current best practices"
-CHAPTER_THREE,ENGINEERING,2,"Develops new instances of existing practices, with assistance of senior engineers"
-CHAPTER_THREE,ENGINEERING,3,Designs standalone systems of moderate complexity
-CHAPTER_THREE,ENGINEERING,4,"Designs complex solutions to take advantage of opportunities and new technologies, acting as a partner to and a team member of the Engineering chapter"
-CHAPTER_THREE,ENGINEERING,5,"Is an industry-leading expert, deeply knowledgeable in DevOps practices and sets strategic developing direction for the engineering team        	"
-CHAPTER_FOUR,ENGINEERING,1,Delivers consistently good quality work	
-CHAPTER_FOUR,ENGINEERING,2,"Increases the robustness and reliability of codebases, and devotes time to polishing products and systems	"
-CHAPTER_FOUR,ENGINEERING,3,Improves others' ability to deliver great quality work	
-CHAPTER_FOUR,ENGINEERING,4,"Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues	"
-CHAPTER_FOUR,ENGINEERING,5,Enables and encourages the entire chapter to make quality a central part of the development process
-CHAPTER_ONE,FRONTEND,1,"Works effectively within established structures, following current best practices"
-CHAPTER_ONE,FRONTEND,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
-CHAPTER_ONE,FRONTEND,3,Designs technical solutions of moderate complexity
-CHAPTER_ONE,FRONTEND,4,"Builds complex, technical solutions that pioneer best practices for other FED, or multi-system services"
-CHAPTER_ONE,FRONTEND,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the FED team"
-CHAPTER_TWO,FRONTEND,1,Learning the ropes of our tech stack as well as our development practices
-CHAPTER_TWO,FRONTEND,2,"Often writes production-ready front-end code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers."
-CHAPTER_TWO,FRONTEND,3,Writes production-ready front-end code every day. Is beginning to master parts of our tech stack while also teaching others
-CHAPTER_TWO,FRONTEND,4,Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis
-CHAPTER_TWO,FRONTEND,5,"Is an industry-leading expert, deeply knowledgeable in several domains and sets strategic developing direction for the engineering team"
-CHAPTER_THREE,FRONTEND,1,"Works effectively within established web client architectures, following current best practices	"
-CHAPTER_THREE,FRONTEND,2,"Develops new instances of existing architecture, or minor improvements to existing architecture	"
-CHAPTER_THREE,FRONTEND,3,Designs major new features and demonstrates a nuanced understanding of browser constraints	
-CHAPTER_THREE,FRONTEND,4,"Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively	"
-CHAPTER_THREE,FRONTEND,5,Is an industry-leading expert in web client or sets strategic web client direction for the engineering chapter
-CHAPTER_FOUR,FRONTEND,1,Delivers consistently good quality work	
-CHAPTER_FOUR,FRONTEND,2,"Increases the robustness and reliability of codebases, and devotes time to polishing products and systems	"
-CHAPTER_FOUR,FRONTEND,3,Improves others' ability to deliver great quality work	
-CHAPTER_FOUR,FRONTEND,4,"Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues	"
-CHAPTER_FOUR,FRONTEND,5,Enables and encourages the entire chapter to make quality a central part of the development process
-CHAPTER_ONE,PM,1,"Works effectively within established structures, following current best practices"
-CHAPTER_ONE,PM,2,"Develops new instances for best practices, or minor improvements to existing practices and standards"
-CHAPTER_ONE,PM,3,"Manages project plans of moderate complexity, mastering delivery"
-CHAPTER_ONE,PM,4,Develops complex project plans and guides other PM team members
-CHAPTER_ONE,PM,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for a PM team"
-CHAPTER_TWO,PM,1,"Works effectively to assist the business planning, lifecycle management, reporting and performance measurement systems"
-CHAPTER_TWO,PM,2,"Works effectively to support the business planning, lifecycle management, reporting and performance measurement systems	"
-CHAPTER_TWO,PM,3,"Designs and establishes the business planning, lifecycle management, reporting and performance measurement systems"
-CHAPTER_TWO,PM,4,"Leads and guides the business planning, lifecycle management, reporting and performance measurement systems"
-CHAPTER_TWO,PM,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic planning direction for a PM team"
-CHAPTER_THREE,PM,1,"Works effectively within established project risk, following quality polices, objectives and responsibilities to satisfy project requirements"
-CHAPTER_THREE,PM,2,Develops and monitors risk mitigation with guidance
-CHAPTER_THREE,PM,3,Performs risk mitigation to minimize project risks
-CHAPTER_THREE,PM,4,"Develops and guides risk mitigation effectively, advocating for quality"
-CHAPTER_THREE,PM,5,"Provides guidance and direction on project risk, fostering quality"
-CHAPTER_FOUR,PM,1,"Actively listens, understands and responds to stakeholders"
-CHAPTER_FOUR,PM,2,Disseminates information effectively
-CHAPTER_FOUR,PM,3,"Disseminates information effectively, egaging with stakeholders"
-CHAPTER_FOUR,PM,4,Ensures quality of information and guidance to proactive respond to stakeholders
-CHAPTER_FOUR,PM,5,"Effectively manages high-level information to diverse audience, ensuring stakeholder engagement"
-CHAPTER_ONE,UX,1,"Works effectively within established structures, following current best practices"
-CHAPTER_ONE,UX,2,"Develops new instances for best practices, or minor improvements to existing practices and standards"
-CHAPTER_ONE,UX,3,"Designs complicated user experience, mastering delivery"
-CHAPTER_ONE,UX,4,Develops complex user experience strategies and guides other UX team members
-CHAPTER_ONE,UX,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for an UX team"
-CHAPTER_TWO,UX,1,"Works in the discovery and definition process with guidance, following current best practices"
-CHAPTER_TWO,UX,2,"Works effectively in the discovery and definition process with guidance, focusing on expanding experience and proficiency"
-CHAPTER_TWO,UX,3,Effectively leads the discovery and definition process
-CHAPTER_TWO,UX,4,Independently leads all aspects of the discovery and definition process
-CHAPTER_TWO,UX,5,"Guides and leads all stages of the discovery and definition process, developing new concepts"
-CHAPTER_THREE,UX,1,"Works in the strategy and design process with guidance, following current best practices"
-CHAPTER_THREE,UX,2,"Works effectively in the strategy and design process with guidance, focusing on expanding experience and proficiency"
-CHAPTER_THREE,UX,3,Effectively develops complicated content strategy
-CHAPTER_THREE,UX,4,Creates high-quality complex content strategy
-CHAPTER_THREE,UX,5,"Delivers and guides high-quality content strategy, deeply knowledgeable and sets new trends and solutions for the UX team"
-CHAPTER_FOUR,UX,1,"Works in the design validation process with guidance, following current best practices"
-CHAPTER_FOUR,UX,2,"Works effectively in the design validation process with guidance, focusing on expanding experience and proficiency"
-CHAPTER_FOUR,UX,3,Effectively leads the design process
-CHAPTER_FOUR,UX,4,Independently leads all aspects of the design process
-CHAPTER_FOUR,UX,5,"Guides and leads all stages of the design process, developing new concepts"
-CHAPTER_ONE,UI,1,"Works effectively within established structures, following current best practices"
-CHAPTER_ONE,UI,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
-CHAPTER_ONE,UI,3,"Designs complicated user experience design solutions, mastering delivery"
-CHAPTER_ONE,UI,4,Develops complex user experience strategies and guides other UI team members
-CHAPTER_ONE,UI,5,"Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for an UI team"
-CHAPTER_TWO,UI,1,Organizes simple informational elements within an existing product framework with guidance
-CHAPTER_TWO,UI,2,Organizes complicated informational elements within an existing product framework
-CHAPTER_TWO,UI,3,Organizes relatively complicated information elements within an existing product framework
-CHAPTER_TWO,UI,4,Organizes complex information elements into new product frameworks
-CHAPTER_TWO,UI,5,Designs and structures the key information elements of entire products and families of products
-CHAPTER_THREE,UI,1,Solves routine interaction-design problems effectively with guidance
-CHAPTER_THREE,UI,2,Solves moderately difficult interaction-design problems and develops solutions with guidance
-CHAPTER_THREE,UI,3,Solves complicated interaction-design problems and creates new interaction-design patterns  with guidance
-CHAPTER_THREE,UI,4,Efficiently solves complex interaction-design problems and creates new interaction-design patterns
-CHAPTER_THREE,UI,5,Efficiently leads and solves high-level complex interaction-design problems and creates new interaction-design patterns
-CHAPTER_FOUR,UI,1,Creates basic visual elements with guidance
-CHAPTER_FOUR,UI,2,"Creates accurate visual elements, following best practices"
-CHAPTER_FOUR,UI,3,"Creates sophisticated and complicated visual elements, following best practices	"
-CHAPTER_FOUR,UI,4,Delivers complex visual elements and guides other designers
-CHAPTER_FOUR,UI,5,"Delivers and guides high-quality visual elements, deeply knowledgeable and sets new trends and solutions for the UI team"
+milestone,cohort,label,level,summary
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,Helps unblock individuals by creating a supportive and engaging environment
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,Manages expectations across teams and focuses on building long-term relationships
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,Manages expectations and provides support for individuals and clients to perform at their highest capabilities
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,"Advocates for people's needs, interests, and goals and proactively works to support and enhance growth"
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,"Leads, inspires, and serves others, enabling people to achieve their goals and full potential"
+CHAPTER_TWO,DEFAULT,Coaching,1,Helps individuals think through the likely impacts of alternative decisions
+CHAPTER_TWO,DEFAULT,Coaching,2,Helps individuals accomplish challenging goals
+CHAPTER_TWO,DEFAULT,Coaching,3,"Coaches people proactively, and guides people to realizations rather than providing the answer	"
+CHAPTER_TWO,DEFAULT,Coaching,4,"Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge, or behavior"
+CHAPTER_TWO,DEFAULT,Coaching,5,"Empowers others to improve their performance, overcome challenges, and thrive at an optimal level"
+CHAPTER_THREE,DEFAULT,Facilitation,1,"Helps individuals resolve difficult issues, promoting an inclusive environment"
+CHAPTER_THREE,DEFAULT,Facilitation,2,Helps people collectively move through a process
+CHAPTER_THREE,DEFAULT,Facilitation,3,"Mediates escalated situations, empowers people, and resolves conflict	"
+CHAPTER_THREE,DEFAULT,Facilitation,4,"Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved"
+CHAPTER_THREE,DEFAULT,Facilitation,5,"Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity"
+CHAPTER_FOUR,DEFAULT,Motivation,1,Fosters enthusiasm and common purpose across people
+CHAPTER_FOUR,DEFAULT,Motivation,2,"Mobilizes individuals to develop goals, execute plans, and deliver client value        "
+CHAPTER_FOUR,DEFAULT,Motivation,3,Inspires others to a greater effort by setting an example in his/her/their own behavior of dedication
+CHAPTER_FOUR,DEFAULT,Motivation,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
+CHAPTER_FOUR,DEFAULT,Motivation,5,Enables and directs generation of energy — motivation to act — among members of the organization and clients
+PLANNING,DEFAULT,Plan and Coordination,1,Effectively organizes and manages delivery of individual tasks
+PLANNING,DEFAULT,Plan and Coordination,2,Effectively organizes and manages delivery of small projects
+PLANNING,DEFAULT,Plan and Coordination,3,Effectively organizes and manages delivery a small team to deliver a project
+PLANNING,DEFAULT,Plan and Coordination,4,Effectively organizes and manages delivery of complex and/or multi-stakeholder projects on a large team
+PLANNING,DEFAULT,Plan and Coordination,5,Facilitates major internal and external projects delivered by multiple teams
+COLLABORATION,DEFAULT,Communication and Collaboration,1,"Communicates and collaborates effectively with close stakeholders when called upon, and incorporates constructive feedback"
+COLLABORATION,DEFAULT,Communication and Collaboration,2,"Communicates and collaborates with the wider team appropriately, focusing on timeliness and good quality information"
+COLLABORATION,DEFAULT,Communication and Collaboration,3,"Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders"
+COLLABORATION,DEFAULT,Communication and Collaboration,4,"Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization"
+COLLABORATION,DEFAULT,Communication and Collaboration,5,"Influences outcomes at the highest level, moves beyond mere broadcasting, and sets default practices for others"
+CLIENT_VALUE,DEFAULT,Client Value,1,"Delivers, with guidance, consistently quality work focused on highest value to the client and project"
+CLIENT_VALUE,DEFAULT,Client Value,2,Able to optimize work to deliver for client value as defined by the team
+CLIENT_VALUE,DEFAULT,Client Value,3,Helps others make good choices about how to optimize work to deliver client value
+CLIENT_VALUE,DEFAULT,Client Value,4,Advocates for and models how to be proactive to ensure client and team success
+CLIENT_VALUE,DEFAULT,Client Value,5,Enables and encourages the entire organization to deliver client value as a central part of our work
+INITIATIVE,DEFAULT,Initiative,1,Identifies opportunities for organizational change and/or product/service improvements
+INITIATIVE,DEFAULT,Initiative,2,Causes change to positively impact a few individuals or minor improvement to an existing product or service
+INITIATIVE,DEFAULT,Initiative,3,Causes change to positively impact an entire team or instigates a minor feature or service
+INITIATIVE,DEFAULT,Initiative,4,Effects change that has a substantial positive impact on the organization or a major product/service impact
+INITIATIVE,DEFAULT,Initiative,5,Effects change that has a substantial positive impact on the whole company
+COMPLEXITY,DEFAULT,Maturity,1,"Is available and present on current teams, and works to contribute positively to company culture"
+COMPLEXITY,DEFAULT,Maturity,2,"Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture"
+COMPLEXITY,DEFAULT,Maturity,3,Contributes to improving team relatedness and helps build a culture of lending support
+COMPLEXITY,DEFAULT,Maturity,4,"Creates an environment that provides people with autonomy, mastery, and purpose, and lifts everyone up"
+COMPLEXITY,DEFAULT,Maturity,5,"Lives the company values, promotes a healthy work environment, and defines policies that support cohesion between teams"
+MATURITY,DEFAULT,Complexity,1,"Identifies complicated situations with guidance, following best practices"
+MATURITY,DEFAULT,Complexity,2,"Integrates complicated ideas and approaches with guidance, following best practices"
+MATURITY,DEFAULT,Complexity,3,Handles complicated situations and focuses on learning and creativity in the organization
+MATURITY,DEFAULT,Complexity,4,Identifies and deals with complex situations by fostering innovation
+MATURITY,DEFAULT,Complexity,5,Helps and supports others to deal with complexity by adapting and learning continuously
+LEARNING,DEFAULT,Learning and Career Development,1,Gives insight into opportunities and helps identify individuals' strengths and weaknesses
+LEARNING,DEFAULT,Learning and Career Development,2,Supports and provides mentorship for one person
+LEARNING,DEFAULT,Learning and Career Development,3,Inspires and retains a small group of people and actively pushes them to stretch themselves
+LEARNING,DEFAULT,Learning and Career Development,4,"Manages interactions and processes between groups, promoting best practices and setting a positive example"
+LEARNING,DEFAULT,Learning and Career Development,5,Supports the development of a significant part of the team and is widely viewed as an advisor
+MENTORSHIP,DEFAULT,Mentorship,1,"Receives support from others, assists new hires, and conveys institutional knowledge"
+MENTORSHIP,DEFAULT,Mentorship,2,Informally mentors individuals on an ad hoc basis and contributes to Palantir's knowledge base
+MENTORSHIP,DEFAULT,Mentorship,3,Teaches small groups of people and guides people to realizations rather than providing the answer
+MENTORSHIP,DEFAULT,Mentorship,4,"Actively mentors people by providing knowledge, advice, and resources"
+MENTORSHIP,DEFAULT,Mentorship,5,Instills and promotes a culture of learning and development within the entire team
+INFLUENCE,DEFAULT,Influence,1,Represents Palantir internally and externally in a manner aligned with Palantir's values
+INFLUENCE,DEFAULT,Influence,2,Represents Palantir well internally and externally in a manner aligned with Palantir's values and takes simple actions that positively influence groups of people
+INFLUENCE,DEFAULT,Influence,3,Works hard to positively influence large groups of people
+INFLUENCE,DEFAULT,Influence,4,"Establishes Palantir as an agile, innovative company and workplace to the whole industry"
+INFLUENCE,DEFAULT,Influence,5,Serve as a strategic advisor to have positive impact in the industry
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,Helps individuals to get unblocked creating a supporting and engaging environment
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,Manages expectations across teams and focus on building long-term relationships
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,Manages expectations supporting individuals and clients to perform at their highest capabilities
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,"Advocates for people's needs, interests and goals and proactively works to support and enhance growth"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,"Leads, inspires and servers others, enabling people to achieve their goals and full potential"
+CHAPTER_TWO,MANAGEMENT,Coaching,1,Helps individuals to think through the likely impacts of alternative decisions
+CHAPTER_TWO,MANAGEMENT,Coaching,2,Helps individuals to act or perform in the face of challenging goals
+CHAPTER_TWO,MANAGEMENT,Coaching,3,"Coaches people proactively, and guides people to realizations rather than providing the answer	"
+CHAPTER_TWO,MANAGEMENT,Coaching,4,"Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge or behavior"
+CHAPTER_TWO,MANAGEMENT,Coaching,5,"Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills, and knowledge"
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,"Helps individuals resolve difficult issues, promoting an inclusive environment"
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,Helps people collectively move through a process
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,"Mediates escalated situations, empowers people, and resolves conflict	"
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,"Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved"
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,"Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity"
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,Fosters enthusiasm and common purpose across people
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,"Mobilizes individuals to develop goals, execute plans, and deliver client value        "
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,Inspires others to a greater effort by setting an example in his/her/their own behavior of dedication
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,"Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve"
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,Enables and directs generation of energy — motivation to act — among members of the organization and clients
+CHAPTER_ONE,ENGINEERING,Foundations,1,"Works effectively within established structures, following current best practices"
+CHAPTER_ONE,ENGINEERING,Foundations,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
+CHAPTER_ONE,ENGINEERING,Foundations,3,Able to design technical solutions of moderate complexity
+CHAPTER_ONE,ENGINEERING,Foundations,4,"Builds complex, technical solutions that pioneer best practices for other engineers, or multi-system services"
+CHAPTER_ONE,ENGINEERING,Foundations,5,"Is considered an expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the engineering team"
+CHAPTER_TWO,ENGINEERING,Coding,1,Learning the ropes of our tech stack as well as our development practices
+CHAPTER_TWO,ENGINEERING,Coding,2,"Often writes production-ready code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers"
+CHAPTER_TWO,ENGINEERING,Coding,3,Writes production-ready code every day. Is beginning to master parts of our tech stack while also teaching others
+CHAPTER_TWO,ENGINEERING,Coding,4,Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis
+CHAPTER_TWO,ENGINEERING,Coding,5,"Is an industry-leading expert, is deeply knowledgeable in several domains, and sets strategic developing direction for the engineering team"
+CHAPTER_THREE,ENGINEERING,DevOps,1,"Works effectively within established DevOps practices, following current best practices"
+CHAPTER_THREE,ENGINEERING,DevOps,2,"Develops new instances of existing practices, with assistance from senior engineers"
+CHAPTER_THREE,ENGINEERING,DevOps,3,Designs standalone systems of moderate complexity
+CHAPTER_THREE,ENGINEERING,DevOps,4,"Designs complex solutions to take advantage of opportunities and new technologies, collaboratively working with the engineering team"
+CHAPTER_THREE,ENGINEERING,DevOps,5,"Is an industry-leading expert, is deeply knowledgeable in DevOps practices, and sets strategic developing direction for the engineering team                "
+CHAPTER_FOUR,ENGINEERING,Craft,1,"Delivers consistently good quality, well-made work        "
+CHAPTER_FOUR,ENGINEERING,Craft,2,"Increases the robustness and reliability of codebases, and devotes time to polishing products and systems	"
+CHAPTER_FOUR,ENGINEERING,Craft,3,Improves others' ability to deliver great quality work	
+CHAPTER_FOUR,ENGINEERING,Craft,4,Proactively advocates for and models great quality and tackles difficult and subtle system issues        
+CHAPTER_FOUR,ENGINEERING,Craft,5,Enables and encourages the entire discipline to make quality a central part of the development process
+CHAPTER_ONE,FRONTEND,Foundations,1,"Works effectively within established structures, following current best practices"
+CHAPTER_ONE,FRONTEND,Foundations,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
+CHAPTER_ONE,FRONTEND,Foundations,3,Able to design technical solutions of moderate complexity
+CHAPTER_ONE,FRONTEND,Foundations,4,"Builds complex, technical solutions that pioneer best practices for other FED, or multi-system services"
+CHAPTER_ONE,FRONTEND,Foundations,5,"Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic direction for the FED team"
+CHAPTER_TWO,FRONTEND,Coding,1,Learns the ropes of our tech stack as well as our development practices
+CHAPTER_TWO,FRONTEND,Coding,2,"Often writes production-ready front-end code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers"
+CHAPTER_TWO,FRONTEND,Coding,3,Writes production-ready front-end code every day. Is beginning to master parts of our tech stack while also teaching others
+CHAPTER_TWO,FRONTEND,Coding,4,Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis
+CHAPTER_TWO,FRONTEND,Coding,5,"Is an industry-leading expert, is deeply knowledgeable in several domains, and sets strategic developing direction for the engineering team"
+CHAPTER_THREE,FRONTEND,Web Technologies,1,"Works effectively within established web client architectures, following current best practices	"
+CHAPTER_THREE,FRONTEND,Web Technologies,2,"Develops new instances of existing architecture, or minor improvements to existing architecture	"
+CHAPTER_THREE,FRONTEND,Web Technologies,3,Designs major new features and demonstrates a nuanced understanding of browser constraints	
+CHAPTER_THREE,FRONTEND,Web Technologies,4,"Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively	"
+CHAPTER_THREE,FRONTEND,Web Technologies,5,Is an industry-leading expert and/or sets strategic direction for the engineering discipline
+CHAPTER_FOUR,FRONTEND,Craft,1,"Delivers consistently quality, well-made work        "
+CHAPTER_FOUR,FRONTEND,Craft,2,"Increases the robustness and reliability of codebases, and devotes time to polishing products and systems	"
+CHAPTER_FOUR,FRONTEND,Craft,3,Improves others' ability to deliver great quality work	
+CHAPTER_FOUR,FRONTEND,Craft,4,Proactively advocates for and models great quality and tackles difficult and subtle system issues        
+CHAPTER_FOUR,FRONTEND,Craft,5,Enables and encourages the entire team to make quality a central part of the development process
+CHAPTER_ONE,PM,Foundations,1,"Works effectively within established structures, following current best practices"
+CHAPTER_ONE,PM,Foundations,2,"Develops new instances for best practices, or minor improvements to existing practices and standards"
+CHAPTER_ONE,PM,Foundations,3,"Manages project plans of moderate complexity, mastering delivery"
+CHAPTER_ONE,PM,Foundations,4,Develops complex project plans and guides other PM team members
+CHAPTER_ONE,PM,Foundations,5,"Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic foundational direction for the project management team"
+CHAPTER_TWO,PM,Plan,1,"Works effectively to assist the business planning, lifecycle management, reporting and performance measurement systems"
+CHAPTER_TWO,PM,Plan,2,"Works effectively to support the business planning, lifecycle management, reporting and performance measurement systems	"
+CHAPTER_TWO,PM,Plan,3,"Designs and establishes the business planning, lifecycle management, reporting and performance measurement systems"
+CHAPTER_TWO,PM,Plan,4,"Leads and guides the business planning, lifecycle management, reporting and performance measurement systems"
+CHAPTER_TWO,PM,Plan,5,"Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic planning direction for the project management team"
+CHAPTER_THREE,PM,Risk Mitigation,1,"Works effectively within established project risk, following quality policies, objectives and responsibilities to satisfy project requirements"
+CHAPTER_THREE,PM,Risk Mitigation,2,Develops and monitors risk mitigation with guidance
+CHAPTER_THREE,PM,Risk Mitigation,3,Performs risk mitigation to minimize project risks
+CHAPTER_THREE,PM,Risk Mitigation,4,"Develops and guides risk mitigation effectively, advocating for quality"
+CHAPTER_THREE,PM,Risk Mitigation,5,"Provides guidance and direction on project risk, fostering quality"
+CHAPTER_FOUR,PM,Information,1,"Actively listens, understands and responds to stakeholders"
+CHAPTER_FOUR,PM,Information,2,Disseminates information effectively
+CHAPTER_FOUR,PM,Information,3,"Disseminates information effectively, engaging with stakeholders"
+CHAPTER_FOUR,PM,Information,4,Ensures quality of information and guidance to proactive respond to stakeholders
+CHAPTER_FOUR,PM,Information,5,"Effectively manages high-level information to diverse audience, ensuring stakeholder engagement"
+CHAPTER_ONE,UX,Foundations,1,"Works effectively within established structures, following current best practices"
+CHAPTER_ONE,UX,Foundations,2,"Develops new instances for best practices, or minor improvements to existing practices and standards"
+CHAPTER_ONE,UX,Foundations,3,"Designs complicated user experiences, mastering delivery"
+CHAPTER_ONE,UX,Foundations,4,Develops complex user experience strategies and guides other UX team members
+CHAPTER_ONE,UX,Foundations,5,"Is an industry-leading expert in multiple areas of our business, is deeply knowledgeable in several domains, and sets strategic foundational direction for the UX team"
+CHAPTER_TWO,UX,Discovery and Definition,1,"Works in the discovery and definition process with guidance, following current best practices"
+CHAPTER_TWO,UX,Discovery and Definition,2,"Works effectively in the discovery and definition process with guidance, focusing on expanding experience and proficiency"
+CHAPTER_TWO,UX,Discovery and Definition,3,Effectively leads the discovery and definition process
+CHAPTER_TWO,UX,Discovery and Definition,4,Independently leads all aspects of the discovery and definition process
+CHAPTER_TWO,UX,Discovery and Definition,5,"Guides and leads all stages of the discovery and definition process, developing new concepts"
+CHAPTER_THREE,UX,Strategy and Design,1,"Works in the strategy and design process with guidance, following current best practices"
+CHAPTER_THREE,UX,Strategy and Design,2,"Works effectively in the strategy and design process with guidance, focusing on expanding experience and proficiency"
+CHAPTER_THREE,UX,Strategy and Design,3,Effectively develops complicated content strategy
+CHAPTER_THREE,UX,Strategy and Design,4,Creates high-quality complex content strategy
+CHAPTER_THREE,UX,Strategy and Design,5,"Delivers and guides high-quality content strategy, deeply knowledgeable and sets new trends and solutions for the UX team"
+CHAPTER_FOUR,UX,User-centered Design,1,"Works in the design validation process with guidance, following current best practices"
+CHAPTER_FOUR,UX,User-centered Design,2,"Works effectively in the design validation process with guidance, focusing on expanding experience and proficiency"
+CHAPTER_FOUR,UX,User-centered Design,3,Effectively leads the design process
+CHAPTER_FOUR,UX,User-centered Design,4,Independently leads all aspects of the design process
+CHAPTER_FOUR,UX,User-centered Design,5,"Guides and leads all stages of the design process, developing new concepts"
+CHAPTER_ONE,UI,Foundations,1,"Works effectively within established structures, following current best practices"
+CHAPTER_ONE,UI,Foundations,2,"Works effectively within established structures, focusing on expanding experience and proficiency"
+CHAPTER_ONE,UI,Foundations,3,"Designs complicated user experience design solutions, mastering delivery"
+CHAPTER_ONE,UI,Foundations,4,Develops complex user experience strategies and guides other UI team members
+CHAPTER_ONE,UI,Foundations,5,"Is an industry-leading expert in multiple areas of business, deeply knowledgeable in several domains, and sets strategic foundational direction for the UI team"
+CHAPTER_TWO,UI,Information Architecture,1,Organizes simple informational elements within an existing product framework with guidance
+CHAPTER_TWO,UI,Information Architecture,2,Organizes complicated informational elements within an existing product framework
+CHAPTER_TWO,UI,Information Architecture,3,Organizes relatively complicated information elements within an existing product framework
+CHAPTER_TWO,UI,Information Architecture,4,Organizes complex information elements into new product frameworks
+CHAPTER_TWO,UI,Information Architecture,5,Designs and structures the key information elements of entire products and families of products
+CHAPTER_THREE,UI,Interaction Design,1,Solves routine interaction-design problems effectively with guidance
+CHAPTER_THREE,UI,Interaction Design,2,Solves moderately difficult interaction-design problems and develops solutions with guidance
+CHAPTER_THREE,UI,Interaction Design,3,Solves complicated interaction-design problems and creates new interaction-design patterns  with guidance
+CHAPTER_THREE,UI,Interaction Design,4,Efficiently solves complex interaction-design problems and creates new interaction-design patterns
+CHAPTER_THREE,UI,Interaction Design,5,Efficiently leads and solves high-level complex interaction-design problems and creates new interaction-design patterns
+CHAPTER_FOUR,UI,Visual Design,1,Creates basic visual elements with guidance
+CHAPTER_FOUR,UI,Visual Design,2,"Creates accurate visual elements, following best practices"
+CHAPTER_FOUR,UI,Visual Design,3,"Creates sophisticated and complicated visual elements, following best practices	"
+CHAPTER_FOUR,UI,Visual Design,4,Delivers complex visual elements and guides other designers
+CHAPTER_FOUR,UI,Visual Design,5,"Delivers and guides high-quality visual elements, deeply knowledgeable and sets new trends and solutions for the UI team"
