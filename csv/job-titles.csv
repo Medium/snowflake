@@ -1,0 +1,73 @@
+label,minPoints,maxPoints,cohort
+Engineer I,0,19,Engineering
+Engineer II,20,39,Engineering
+Engineer III,40,59,Engineering
+Engineer IV,60,79,Engineering
+Engineer V,80,109,Engineering
+Sr. Engineer I,110,139,Engineering
+Sr. Engineer II,140,179,Engineering
+Technical Architect I,180,219,Engineering
+Technical Architect II,220,269,Engineering
+Sr. Technical Architect I,270,319,Engineering
+Sr. Technical Architect II,320,369,Engineering
+Sr. Technical Architect III,370,400,Engineering
+"Front-End Developer, I",0,19,Front-end Development
+"Front-End Developer, II",20,39,Front-end Development
+"Front-End Developer, III",40,59,Front-end Development
+"Front-End Developer, IV",60,79,Front-end Development
+"Front-End Developer, V",80,109,Front-end Development
+"Sr. Front-End Developer, I",110,139,Front-end Development
+"Sr. Front-End Developer, II",140,179,Front-end Development
+Technical Architect I,180,219,Front-end Development
+Technical Architect II,220,269,Front-end Development
+Sr. Technical Architect I,270,319,Front-end Development
+Sr. Technical Architect II,320,369,Front-end Development
+Sr. Technical Architect III,370,400,Front-end Development
+"Web Strategist, I",0,19,User Experience Design
+"Web Strategist, II",20,39,User Experience Design
+"Web Strategist, III",40,59,User Experience Design
+"Web Strategist, IV",60,79,User Experience Design
+"Web Strategist, V",80,109,User Experience Design
+"Sr. Strategist, I",110,139,User Experience Design
+Sr. Strategist II,140,179,User Experience Design
+"UX Architect, I",180,219,User Experience Design
+"UX Architect, II",220,269,User Experience Design
+"Sr. UX Architect, I",270,319,User Experience Design
+"Sr. UX Architect, II",320,369,User Experience Design
+"Sr. UX Architect, III",370,400,User Experience Design
+"Designer, I",0,19,User Interface Design
+"Designer, II",20,39,User Interface Design
+"Designer, III",40,59,User Interface Design
+"Designer, IV",60,79,User Interface Design
+"Designer, V",80,109,User Interface Design
+"Sr. Designer, I",110,139,User Interface Design
+"Sr. Designer, II",140,179,User Interface Design
+"UX Architect, I",180,219,User Interface Design
+"UX Architect, II",220,269,User Interface Design
+"Sr. UX Architect, I",270,319,User Interface Design
+"Sr. UX Architect, II",320,369,User Interface Design
+"Sr. UX Architect, III",370,400,User Interface Design
+"Project Manager, I",0,19,Project Management
+"Project Manager, II",20,39,Project Management
+"Project Manager, III",40,59,Project Management
+"Project Manager, IV",60,79,Project Management
+"Project Manager, V",80,109,Project Management
+"Sr. Project Manager, I",110,139,Project Management
+"Sr. Project Manager, II",140,179,Project Management
+"Sr. Project Manager, III",180,219,Project Management
+"Program Mgr, I",220,269,Project Management
+"Program Mgr, II",270,319,Project Management
+"Program Mgr, III",320,369,Project Management
+"Sr. Program Mgr, I",370,400,Project Management
+"Specialist, I",0,19,Management
+"Specialist, II",20,39,Management
+"Specialist, III",40,59,Management
+"Specialist, IV",60,79,Management
+"Manager, I",80,109,Management
+"Manager, II",110,139,Management
+"Manager, III",140,179,Management
+"Manager, IV",180,219,Management
+"Sr. Manager, I",220,269,Management
+"Sr. Manager, II",270,319,Management
+"Director, I",320,369,Management
+"Director, II",370,400,Management

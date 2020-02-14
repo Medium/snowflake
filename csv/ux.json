@@ -1,0 +1,251 @@
+trackList["CHAPTER_ONE"] = {
+    "milestone": "CHAPTER_ONE",
+    "cohort": "UX",
+    "category": "A",
+    "displayName": "Foundations",
+    "description": "Develops expertise and proficiency in our strategy practice, with solid understanding of relevant areas\t",
+    "milestones": [
+        {
+            "summary": "Works effectively within established structures, following current best practices",
+            "signals": [
+                "Is building proficiency in our user experience practice and becoming comfortable with learning new technologies and skills",
+                "Has experience with web accessibility, usability and core design tools. Understands web design constraints and opportunities",
+                "Understands and applies how to use an existing pattern library to create wireframes, working with a more senior designer as a guide or mentor",
+                "Has knowledge in marketing and consumer behavior trends applicable to their work",
+                "Develops user-centered website strategies with guidance, in alignment with client goals and objectives",
+                "Has hands-on experience with UX tools which may include Sketch, InVision, prototyping tools, and Google Analytics"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Develops new instances for best practices, or minor improvements to existing practices and standards",
+            "signals": [
+                "Focuses on expanding experience and proficiency in our user experience practice, and establishing and promoting brand guidelines, best practices, and standards",
+                "Is well-versed with web accessibility, usability, and core design tools. Has a deep understanding of web design constraints",
+                "Applies existing team pattern libraries, provides examples of patterns in the wild, and explores multiple design options",
+                "Works with other team members to understand constraints and design feasibility",
+                "Contributes to strategic positioning, organizational insight, and client road maps",
+                "Is well-versed in marketing and consumer behavior trends",
+                "Develops user-centered website strategies that support user tasks, satisfy client goals, and contribute original documentation for projects",
+                "Sketches and creates wireframes",
+                "Designs and performs competitive analysis, proactively researches examples in the wild, seeks out industry trends, and performs and analyzes usability test plans",
+                "Collaborates with project managers, designers, and engineers to scope time and effort involved in design projects"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Designs complicated user experiences, mastering delivery",
+            "signals": [
+                "Effectively leads and takes ownership of the UX process, articulates strategy, best practices, and process collaborating with designers to inform and define the project",
+                "Is always able to articulate the \"why\" of design decisions to clients and the Palantir team",
+                "Always explores multiple options, evaluates and articulates pros and cons of choices, recommends user experience decisions, understands when to use low- and high-fidelity design tools, and contributes to existing team pattern libraries",
+                "Constantly partners with engineers and developers to understand technology system constraints and align strategy and design work in an efficient and effective way at the project level",
+                "Designs, performs, and analyzes usability test plans",
+                "Is able to articulate the difference and relationship between the different IA and content strategy deliverables",
+                "Collaborates with project managers and engineers to define and implement innovative solutions for the product direction"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Develops complex user experience strategies and guides other UX team members",
+            "signals": [
+                "Efficiently balances and manages complex user, business, and technical requirements to make design decisions",
+                "Guides junior team members in critical, high-level, design problem solving",
+                "Strategically analyzes the risks, benefits, and opportunities of various solutions",
+                "Seeks out discipline-wide opportunities for improvement",
+                "Considers client constraints and technical feasibility of potential design solutions"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Is an industry-leading expert in multiple areas of our business, is deeply knowledgeable in several domains, and sets strategic foundational direction for the UX team",
+            "signals": [
+                "Guides UX team members by providing strategic direction that best honors the client's business",
+                "Develops a unique user experience practice approach that outlines and defines activities, deliverables, and value to be used in sales and marketing initiatives",
+                "Designs and builds industry-leading solutions to solve complex UX problems and advocates for the best user experience possible",
+                "Serves as client focal point for all UX practices",
+                "Anticipates technical challenges, exploring alternatives and trade-offs thoroughly",
+                "Is recognized as a leader and contributor across the organization"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_TWO"] = {
+    "milestone": "CHAPTER_TWO",
+    "cohort": "UX",
+    "category": "A",
+    "displayName": "Discovery and Definition",
+    "description": "Comprehends the analysis of the business model, stakeholders, goals, key performance indicators, and existing technologies and workflows\t",
+    "milestones": [
+        {
+            "summary": "Works in the discovery and definition process with guidance, following current best practices",
+            "signals": [
+                "Gather business requirements and user insights through surveys, user tests, and interviews with the assistance of senior strategists",
+                "Uses basic feedback techniques to improve relatively simple strategy concepts and techniques",
+                "Through observation and interaction with senior strategists, is building the skills and expertise to plan information validation activities and incorporate user and stakeholder feedback into design iterations",
+                "Understands client business\/objectives and identifies opportunities for client \"wins\" through digital design, tools, and experiences"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Works effectively in the discovery and definition process with guidance, focusing on expanding experience and proficiency",
+            "signals": [
+                "Conducts validations\/interviews with users and stakeholders with assistance of a more senior strategist",
+                "Applies feedback techniques to improve discovery and definition strategies",
+                "Works with more senior team members to plan information validation activities and incorporate user feedback into design changes",
+                "Generates users and stakeholders interview questions and documentation",
+                "Works with FEDs and engineers to research technical documentation, APIs, integration with third party technologies, etc. to confirm project requirements and expectations "
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Effectively leads the discovery and definition process",
+            "signals": [
+                "Plans moderately complicated requirements-gathering, analysis, design-validation, and usability-testing activities",
+                "Independently conducts information-validation activities with internal and external stakeholders",
+                "Conducts gap and task analysis",
+                "Communicates usability findings and provides recommendations for improving user-interface experience",
+                "Facilitates the planning and execution of on-site discovery workshops",
+                "Conducts comparative analysis",
+                "Perform content audits and competitor site analysis"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Independently leads all aspects of the discovery and definition process",
+            "signals": [
+                "Independently conducts all aspects of complex user-research programs\u2014 from early-stage requirements to summative usability testing",
+                "Adapts user-research techniques to inform both new and ongoing, complex, product-development effort",
+                "Communicates usability findings, metrics, and associated design strategies to large, distributed product teams",
+                "Discusses usability metrics and their impact on product ROI"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Guides and leads all stages of the discovery and definition process, developing new concepts",
+            "signals": [
+                "Expertly conducts all stages of user research\u2014 including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability--testing activities",
+                "Simultaneously plans and drives multiple user-research activities across widely divergent product domains",
+                "Drives and conducts all aspects of formal summative testing, including the use of metrics and competitive benchmark testing",
+                "Communicates usability metrics and findings to clients and the Palantir team",
+                "Clearly provides clients with a plan, tools, behaviors, and best practices for addressing their usability issues",
+                "Creates new user-elicitation methods and techniques to suit novel research needs and requirements"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_THREE"] = {
+    "milestone": "CHAPTER_THREE",
+    "cohort": "UX",
+    "category": "A",
+    "displayName": "Strategy and Design",
+    "description": "Conducts analysis and creates content strategy",
+    "milestones": [
+        {
+            "summary": "Works in the strategy and design process with guidance, following current best practices",
+            "signals": [
+                "Understands learnings from discovery and research to inform audience definition and identify key personas",
+                "Synthesizes findings from discovery process, identifying opportunities and issues with guidance of senior strategists"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Works effectively in the strategy and design process with guidance, focusing on expanding experience and proficiency",
+            "signals": [
+                "Synthesizes findings from discovery process, effectively identifying opportunities and issues",
+                "Leverages learnings from discovery and research to inform audience definition and identify key personas",
+                "Demonstrates user journeys through journey mapping"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Effectively develops complicated content strategy",
+            "signals": [
+                "Works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences",
+                "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives",
+                "Understands user needs and intents then translate that to information architecture and content outline(s), collaborating with designers",
+                "Collaborates with designers on design strategy and visual design application for projects",
+                "Conducts usability tests"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Creates high-quality complex content strategy",
+            "signals": [
+                "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives, demonstrate a level of excellence, and may be achieved within budget",
+                "Provides high-level sitemap and wireframes or works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences",
+                "Crafts high-level content strategy recommendations",
+                "Guides the creation of wireframes for key pages in the new website, and explains wireframes to the client"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Delivers and guides high-quality content strategy, deeply knowledgeable and sets new trends and solutions for the UX team",
+            "signals": [
+                "Demonstrates ability to generate and translate insights into actionable digital opportunities through reports, presentations, personas, user flows, journey maps, etc.",
+                "Balances creativity with structure, collaborating with designers, project managers, and engineers",
+                "Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective",
+                "Articulates a design strategy or approach that will impact the user experience across products or platforms and supports these ideas with sound reasoning and data"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_FOUR"] = {
+    "milestone": "CHAPTER_FOUR",
+    "cohort": "UX",
+    "category": "A",
+    "displayName": "User-centered Design",
+    "description": "Relies on an understanding of the end user to guide decision making for product design and development",
+    "milestones": [
+        {
+            "summary": "Works in the design validation process with guidance, following current best practices",
+            "signals": [
+                "Conducts basic, early-stage design validations with stakeholders",
+                "Uses basic feedback techniques to improve relatively simple design concepts",
+                "Helps create clean and simple user-centred designs with guidance of senior teammates"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Works effectively in the design validation process with guidance, focusing on expanding experience and proficiency",
+            "signals": [
+                "Conducts design validations with stakeholders with assistance of a more senior designer",
+                "Applies feedback techniques to improve design concepts",
+                "Works with more senior team members to plan design validation activities and incorporate user feedback into design iteration",
+                "Generates user profiles, recruitment copy, test scripts, and reports"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Effectively leads the design process",
+            "signals": [
+                "Designs and delivers wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces",
+                "Independently conducts design validation activities with internal and external stakeholders",
+                "Translates concepts into user flows, wireframes, mockups, and prototypes that lead to intuitive user experiences",
+                "Assists the front-end developers to ensure the UX design achieves design goals and meets end-user needs"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Independently leads all aspects of the design process",
+            "signals": [
+                "Demonstrates the ability to identify design problems and devise solutions",
+                "Takes a user-centered design approach and rapidly tests and iterates the work",
+                "Ensures design production is efficient and delivers at the highest quality in accordance with UX's best practices and processes"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Guides and leads all stages of the design process, developing new concepts",
+            "signals": [
+                "Makes strategic design and user experience decisions related to both core and new functions, and features",
+                "Creates high-quality design deliverables and executes based on UX goals and priorities, acting as an expert in the field",
+                "Stays on top of UX design trends and looks for creative ways to inspire delightful experiences"
+            ],
+            "examples": []
+        }
+    ]
+}

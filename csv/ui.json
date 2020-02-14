@@ -1,0 +1,236 @@
+trackList["CHAPTER_ONE"] = {
+    "milestone": "CHAPTER_ONE",
+    "cohort": "UI",
+    "category": "A",
+    "displayName": "Foundations",
+    "description": "Develops expertise and proficiency in our design practice, with solid understanding of relevant areas",
+    "milestones": [
+        {
+            "summary": "Works effectively within established structures, following current best practices",
+            "signals": [
+                "Is building proficiency in our design practice and becoming comfortable with learning new technologies and skills",
+                "Has experience with web accessibility, usability and core development tools",
+                "Understands web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Works effectively within established structures, focusing on expanding experience and proficiency",
+            "signals": [
+                "Focuses on expanding experience and proficiency in our design practice, establishing and promoting brand guidelines, best practices and standards",
+                "Is well-versed with web accessibility, usability, and core design tools",
+                "Collaborates with project managers, strategists, and engineers to scope time and effort involved in design projects",
+                "Serves as a strategic visual design resource",
+                "Has a deep understanding of web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility",
+                "Designs a web experience that's best for the user and accurately reflects the client's goals, objectives, and brand identity"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Designs complicated user experience design solutions, mastering delivery",
+            "signals": [
+                "Is always able to articulate the \"why\" of design decisions",
+                "Constantly seeks input from the engineering and implementation team to validate and ensure that the design is executable",
+                "Executes all visual design stages from concept to HTML\/CSS browser",
+                "Has experience designing from user experience journeys, and realistic use cases to create functional and delightful designs",
+                "Drives the design process and serves as a gatekeeper and clients \"brand expert\"",
+                "Conceptualizes original ideas that bring simplicity and user friendliness to complex design roadblocks",
+                "Collaborates with project managers and engineers to define and implement innovative solutions for the product direction, design and interactions",
+                "Serves as a resident expert of digital tools and is skilled in developing digital design concepts"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Develops complex user experience strategies and guides other UI team members",
+            "signals": [
+                "Efficiently balances and manages complex user, business, and technical requirements to make design decisions",
+                "Guides junior team members in critical, high-level, design problem solving",
+                "Strategically analyzes the risks, benefits, and opportunities of various solutions",
+                "Seeks out chapter-wide opportunities for improvements",
+                "Ability to understand constraints and technical feasibility prior to client presentations"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Is an industry-leading expert in multiple areas of business, deeply knowledgeable in several domains, and sets strategic foundational direction for the UI team",
+            "signals": [
+                "Guides and directs UI team members by providing strategic direction to best deliver client's business goals",
+                "Is able to articulate a unique user experience approach that delivers client value for use in sales and marketing initiatives",
+                "Designs and builds industry-leading solutions to solve UI complex problems and advocates for the best user experience possible",
+                "Serves as client focal point for all UI practices",
+                "Anticipates technical challenges, exploring alternatives and trade offs thoroughly",
+                "Seen as a leader and contributor in the organization"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_TWO"] = {
+    "milestone": "CHAPTER_TWO",
+    "cohort": "UI",
+    "category": "A",
+    "displayName": "Information Architecture",
+    "description": "Comprehends the structural designs and organizing principles for information environments, Web sites, and software products",
+    "milestones": [
+        {
+            "summary": "Organizes simple informational elements within an existing product framework with guidance",
+            "signals": [
+                "Employs basic information-architecture concepts correctly",
+                "Evaluates structural design decisions for feature sets that are well defined or limited in scope with the assistance of senior designers",
+                "Understands the basic usability principles and trade offs behind their own design concepts"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Organizes complicated informational elements within an existing product framework",
+            "signals": [
+                "Employs complicated information-architecture concepts correctly",
+                "Makes good structural design decisions for feature sets that are well defined or limited in scope",
+                "Applies existing information patterns, working with a more senior designer as a guide"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Organizes relatively complicated information elements within an existing product framework",
+            "signals": [
+                "Explores multiple, alternative information-architecture solutions before choosing a design direction",
+                "Balances relatively complicated user, business, and technical requirements to arrive at sound information-architecture designs",
+                "Can explain the usability rationale and trade offs of one information architecture versus another"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Organizes complex information elements into new product frameworks",
+            "signals": [
+                "Creates new architectural design patterns for a product when necessary",
+                "Employs complex information-architecture concepts quickly and correctly",
+                "Explores multiple, alternative product information architectures to create a broad range of alternative design concepts",
+                "Understands the usability rationale and trade-offs for different product-level information architectures and can clearly articulate these to the team"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Designs and structures the key information elements of entire products and families of products",
+            "signals": [
+                "Creates new architectural design patterns that impact entire product lines and user-interface frameworks",
+                "Creates insightful, timely, compelling information-architecture designs for highly complex problem spaces",
+                "Efficiently balances and manages complex user, business, and technical requirements to make sound information-architecture design decisions",
+                "Anticipates and thinks through the entire breadth of impacts that information-architecture decisions can have on users, product teams, and UX designers",
+                "Understands and can compellingly articulate the usability trade-offs of various information-architecture design approaches for entire product families and frameworks"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_THREE"] = {
+    "milestone": "CHAPTER_THREE",
+    "cohort": "UI",
+    "category": "A",
+    "displayName": "Interaction Design",
+    "description": "Comprehends the application's workflows and behaviors in response to a user's actions",
+    "milestones": [
+        {
+            "summary": "Solves routine interaction-design problems effectively with guidance",
+            "signals": [
+                "Effectively solves routine interaction design problems, gathering the information necessary to weigh a limited set of options and arrive at sound conclusions",
+                "Escalates problems that are beyond the scope of their design capabilities for resolution by a more experienced designer",
+                "Writes select components of interaction design strategy documentation"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Solves moderately difficult interaction-design problems and develops solutions with guidance",
+            "signals": [
+                "Efficiently solves moderately difficult interaction design problems that impact people within their team or other related team",
+                "Applies existing interaction patterns, working with a more senior designer as a guide or mentor"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Solves complicated interaction-design problems and creates new interaction-design patterns  with guidance",
+            "signals": [
+                "Efficiently and creatively solves complicated interaction design problems that impact the stakeholders",
+                "Looks beyond obvious solutions and experiments with different approaches to solving problems",
+                "Develops solutions for problems that stretch their own design capabilities, but requests review and approval from a more senior designer",
+                "Facilitates effective problem solving in meetings and teams"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Efficiently solves complex interaction-design problems and creates new interaction-design patterns",
+            "signals": [
+                "Efficiently solves complex and difficult interaction design problems that impact the team or entire organization",
+                "Accurately defines the amount and kinds of information that is needed to gather for problem solving",
+                "Anticipates and proactively works to circumvent roadblocks to solutions",
+                "Creates new interaction design patterns for a product when necessary",
+                "Identifies underlying or hidden problems or trends across the organization"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Efficiently leads and solves high-level complex interaction-design problems and creates new interaction-design patterns",
+            "signals": [
+                "Efficiently and creatively solves even the most complex and difficult interaction design problems that impact the team or entire company",
+                "Creates new interaction design patterns that impact entire product lines and user interface frameworks",
+                "Asks critical, insightful questions and probes all fruitful sources for relevant information to facilitate problem solving",
+                "Leads the team in critical, high-level design problem solving",
+                "Strategically analyzes the risks, benefits, and opportunities of various solutions"
+            ],
+            "examples": []
+        }
+    ]
+}
+trackList["CHAPTER_FOUR"] = {
+    "milestone": "CHAPTER_FOUR",
+    "cohort": "UI",
+    "category": "A",
+    "displayName": "Visual Design",
+    "description": "Comprehends the creation of visual elements and application of visual treatments and branding to Web sites and products",
+    "milestones": [
+        {
+            "summary": "Creates basic visual elements with guidance",
+            "signals": [
+                "Competently creates basic layouts and produces mockups of designs with the guidance of senior designers",
+                "Turns image-based designs into a functional HTML and CSS code-based style guide"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Creates accurate visual elements, following best practices",
+            "signals": [
+                "Builds accurate wireframes, following visual design guidelines",
+                "Collaborates with other visual designers to produce graphics resource files for user interfaces"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Creates sophisticated and complicated visual elements, following best practices\t",
+            "signals": [
+                "Creates sophisticated layouts and produce mockups of designs",
+                "Builds complicated wireframes, following visual design guidelines",
+                "Uses various techniques to create drafts, models, and prototypes"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Delivers complex visual elements and guides other designers",
+            "signals": [
+                "Builds complex, accurate wireframes, following visual design guidelines",
+                "Collaborates with strategists, project managers, and engineers to understand how all aspects of a product's functionality would work within an established visual design framework",
+                "Maintains an awareness of trends in visual design and guides other visual designers in implementing cutting-edge, visual design solutions for their products",
+                "Has a strong understanding of web design systems and helps create a standardized toolbox of components to draw from"
+            ],
+            "examples": []
+        },
+        {
+            "summary": "Delivers and guides high-quality visual elements, deeply knowledgeable and sets new trends and solutions for the UI team",
+            "signals": [
+                "Expertly builds complex, accurate wireframes, following visual design guidelines",
+                "Guides and directs the UI design team to understand how all aspects of a product's functionality would work within an established visual design framework",
+                "Stays abreast of trends in visual design and expertly guides other visual designers in implementing cutting-edge solutions for their products",
+                "Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
+            ],
+            "examples": []
+        }
+    ]
+}

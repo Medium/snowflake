@@ -11,7 +11,7 @@ const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a
 type Props = {
   milestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void,
 }
 
 class NightingaleChart extends React.Component<Props> {
@@ -43,7 +43,8 @@ class NightingaleChart extends React.Component<Props> {
   render() {
     const currentMilestoneId = this.props.milestoneByTrack[this.props.focusedTrackId]
     return (
-      <figure>
+      <div id="chart">
+        <figure>
         <style jsx>{`
           figure {
             margin: 0;
@@ -91,7 +92,20 @@ class NightingaleChart extends React.Component<Props> {
             )})}
           </g>
         </svg>
-      </figure>
+        <div style={{
+          'font-size': '9px',
+          'font-weight': 'bold',
+          'text-align': 'center',
+          'margin-left': '164px',
+          'margin-top': '-216px',
+          'margin-bottom': '216px',
+          'width': '72px',
+          'overflow-wrap': 'break-word',
+          }}>
+          { tracks[this.props.focusedTrackId].displayName }
+        </div>
+        </figure>
+      </div>
     )
   }
 }

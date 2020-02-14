@@ -1,0 +1,1126 @@
+milestone,cohort,label,level,count,example
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,1,"Demonstrates an understanding of an individual's roles, goals, and interests"
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,2,Demonstrates concern for the well-being of colleagues
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,3,Actively listens
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,4,Treats others with respect
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,5,
+CHAPTER_ONE,DEFAULT,Servant Leadership,1,6,
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,1,"Uses an understanding of the organization's processes, systems and policies to engage with people"
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,2,"Assumes positive intent of others, approaching every interaction with kindness and good humor"
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,3,Empathetically listens
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,4,"Communicates difficult or negative messages in an honest, accurate, and respectful manner"
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,5,
+CHAPTER_ONE,DEFAULT,Servant Leadership,2,6,
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,1,Helps people develop and perform as highly as possible
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,2,Uses awareness and understanding of the organization's culture to implement change initiatives
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,3,Is able to deeply understand and empathize with others
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,4,Delivers persuasive and compelling messages
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,5,
+CHAPTER_ONE,DEFAULT,Servant Leadership,3,6,
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,1,"Always looks to enhance the development of their team members in ways that unlock potential, creativity, and sense of purpose"
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,2,"Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement necessary changes, and resolve talent needs and issues"
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,3,Is able to engage with others to seek input and advice when making a decision. Makes sure all impacted have the necessary information.
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,4,"Provides visible leadership that ""walks the talk."" Sets high performance standards for self, acting as a role model for the team"
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,5,
+CHAPTER_ONE,DEFAULT,Servant Leadership,4,6,
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,1,"Focus on bringing their best self to your work, and making space for others to do so as well"
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,2,"Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation, and maintenance of initiatives proposed by other leaders"
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,3,Uses storytelling to create a positive and engaging environment for teams and clients
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,4,Leverages relationships to best support and develop individuals
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,5,
+CHAPTER_ONE,DEFAULT,Servant Leadership,5,6,
+CHAPTER_TWO,DEFAULT,Coaching,1,1,Helps individuals think for themselves about possible impacts and solutions to a problem by asking open-ended questions
+CHAPTER_TWO,DEFAULT,Coaching,1,2,Demonstrates a positive outlook
+CHAPTER_TWO,DEFAULT,Coaching,1,3,
+CHAPTER_TWO,DEFAULT,Coaching,1,4,
+CHAPTER_TWO,DEFAULT,Coaching,1,5,
+CHAPTER_TWO,DEFAULT,Coaching,1,6,
+CHAPTER_TWO,DEFAULT,Coaching,2,1,Shows confidence in others' abilities and a willingness to face challenges and solve problems
+CHAPTER_TWO,DEFAULT,Coaching,2,2,Helps people gain awareness of current situations
+CHAPTER_TWO,DEFAULT,Coaching,2,3,Demonstrates curiosity
+CHAPTER_TWO,DEFAULT,Coaching,2,4,
+CHAPTER_TWO,DEFAULT,Coaching,2,5,
+CHAPTER_TWO,DEFAULT,Coaching,2,6,
+CHAPTER_TWO,DEFAULT,Coaching,3,1,Understands what issues exist that may limit an individual's ability to perform the task or accomplish the objectives
+CHAPTER_TWO,DEFAULT,Coaching,3,2,Determines whether colleagues need help to remove barriers or can overcome these obstacles unaided
+CHAPTER_TWO,DEFAULT,Coaching,3,3,
+CHAPTER_TWO,DEFAULT,Coaching,3,4,
+CHAPTER_TWO,DEFAULT,Coaching,3,5,
+CHAPTER_TWO,DEFAULT,Coaching,3,6,
+CHAPTER_TWO,DEFAULT,Coaching,4,1,Partners with others to help define actions based on one's abilities and knowledge
+CHAPTER_TWO,DEFAULT,Coaching,4,2,"Supports people's progress, celebrates their wins, and encourages them to find new paths if their original plan of action does not work out as expected"
+CHAPTER_TWO,DEFAULT,Coaching,4,3,Encourages creative thinking in colleagues who are tyring to address challenges or improve their performance
+CHAPTER_TWO,DEFAULT,Coaching,4,4,
+CHAPTER_TWO,DEFAULT,Coaching,4,5,
+CHAPTER_TWO,DEFAULT,Coaching,4,6,
+CHAPTER_TWO,DEFAULT,Coaching,5,1,Focuses on empowering their team members to discover solutions for themselves
+CHAPTER_TWO,DEFAULT,Coaching,5,2,Coaches senior leaders on creating positive working relationships with their teams and clients
+CHAPTER_TWO,DEFAULT,Coaching,5,3,
+CHAPTER_TWO,DEFAULT,Coaching,5,4,
+CHAPTER_TWO,DEFAULT,Coaching,5,5,
+CHAPTER_TWO,DEFAULT,Coaching,5,6,
+CHAPTER_THREE,DEFAULT,Facilitation,1,1,Actively seeks many external views to help people gain understanding
+CHAPTER_THREE,DEFAULT,Facilitation,1,2,Creates an inclusive environment
+CHAPTER_THREE,DEFAULT,Facilitation,1,3,
+CHAPTER_THREE,DEFAULT,Facilitation,1,4,
+CHAPTER_THREE,DEFAULT,Facilitation,1,5,
+CHAPTER_THREE,DEFAULT,Facilitation,1,6,
+CHAPTER_THREE,DEFAULT,Facilitation,2,1,Is able to effectively deal with and understand views opposing their own views and is open to criticism and learning
+CHAPTER_THREE,DEFAULT,Facilitation,2,2,Is becoming comfortable in mediating escalated conflicts
+CHAPTER_THREE,DEFAULT,Facilitation,2,3,Builds consensus among people and teams
+CHAPTER_THREE,DEFAULT,Facilitation,2,4,
+CHAPTER_THREE,DEFAULT,Facilitation,2,5,
+CHAPTER_THREE,DEFAULT,Facilitation,2,6,
+CHAPTER_THREE,DEFAULT,Facilitation,3,1,"Understands intrinsic motivations of the project team, as well as their individual capabilities. Is aware of differences between the two"
+CHAPTER_THREE,DEFAULT,Facilitation,3,2,"Resolves and/or mediates conflicts in a respectful, appropriate, and impartial manner"
+CHAPTER_THREE,DEFAULT,Facilitation,3,3,Takes time to understand how individuals and teams are performing and working together to deliver the project outcomes
+CHAPTER_THREE,DEFAULT,Facilitation,3,4,
+CHAPTER_THREE,DEFAULT,Facilitation,3,5,
+CHAPTER_THREE,DEFAULT,Facilitation,3,6,
+CHAPTER_THREE,DEFAULT,Facilitation,4,1,"Understands themselves and the individuals in the project team, what motivates them intrinsically as well as their own individual capabilities"
+CHAPTER_THREE,DEFAULT,Facilitation,4,2,Is able to facilitate difficult interactions among stakeholders to achieve outcomes
+CHAPTER_THREE,DEFAULT,Facilitation,4,3,Is focused on the big picture
+CHAPTER_THREE,DEFAULT,Facilitation,4,4,
+CHAPTER_THREE,DEFAULT,Facilitation,4,5,
+CHAPTER_THREE,DEFAULT,Facilitation,4,6,
+CHAPTER_THREE,DEFAULT,Facilitation,5,1,Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams
+CHAPTER_THREE,DEFAULT,Facilitation,5,2,Serves as a positive role model for productive conflict
+CHAPTER_THREE,DEFAULT,Facilitation,5,3,"Encourages productive and respectful task-related conflict, using it to facilitate change"
+CHAPTER_THREE,DEFAULT,Facilitation,5,4,"Resolves complex organizational dysfunction, or persistent conflict at senior levels	"
+CHAPTER_THREE,DEFAULT,Facilitation,5,5,
+CHAPTER_THREE,DEFAULT,Facilitation,5,6,
+CHAPTER_FOUR,DEFAULT,Motivation,1,1,Generates commitment in individuals and the team
+CHAPTER_FOUR,DEFAULT,Motivation,1,2,Speaks positively and enthusiastically about the organization's products/services and future direction
+CHAPTER_FOUR,DEFAULT,Motivation,1,3,
+CHAPTER_FOUR,DEFAULT,Motivation,1,4,
+CHAPTER_FOUR,DEFAULT,Motivation,1,5,
+CHAPTER_FOUR,DEFAULT,Motivation,1,6,
+CHAPTER_FOUR,DEFAULT,Motivation,2,1,Creates a fun and energetic environment that promotes creativity
+CHAPTER_FOUR,DEFAULT,Motivation,2,2,Validates ongoing work and sustains motivation
+CHAPTER_FOUR,DEFAULT,Motivation,2,3,"Establishes challenging, yet realistic, performance goals that tap into people's interests"
+CHAPTER_FOUR,DEFAULT,Motivation,2,4,
+CHAPTER_FOUR,DEFAULT,Motivation,2,5,
+CHAPTER_FOUR,DEFAULT,Motivation,2,6,
+CHAPTER_FOUR,DEFAULT,Motivation,3,1,"Recognizes individual and team performance, even when things go wrong"
+CHAPTER_FOUR,DEFAULT,Motivation,3,2,Empowers a team to drive forward amidst uncertainty
+CHAPTER_FOUR,DEFAULT,Motivation,3,3,Models excellence and enthusiasm for the work
+CHAPTER_FOUR,DEFAULT,Motivation,3,4,
+CHAPTER_FOUR,DEFAULT,Motivation,3,5,
+CHAPTER_FOUR,DEFAULT,Motivation,3,6,
+CHAPTER_FOUR,DEFAULT,Motivation,4,1,"Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn"
+CHAPTER_FOUR,DEFAULT,Motivation,4,2,Ensures that the self-realization and practical needs of the project team are met
+CHAPTER_FOUR,DEFAULT,Motivation,4,3,
+CHAPTER_FOUR,DEFAULT,Motivation,4,4,
+CHAPTER_FOUR,DEFAULT,Motivation,4,5,
+CHAPTER_FOUR,DEFAULT,Motivation,4,6,
+CHAPTER_FOUR,DEFAULT,Motivation,5,1,Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions
+CHAPTER_FOUR,DEFAULT,Motivation,5,2,Ability to find and use successes to celebrate progress towards the vision
+CHAPTER_FOUR,DEFAULT,Motivation,5,3,Sets clear goals and a desired future state that is compelling and realistic for stakeholders
+CHAPTER_FOUR,DEFAULT,Motivation,5,4,
+CHAPTER_FOUR,DEFAULT,Motivation,5,5,
+CHAPTER_FOUR,DEFAULT,Motivation,5,6,
+PLANNING,DEFAULT,Plan and Coordination,1,1,"Commits to and completes tasks within expected time frame, holding themselves accountable"
+PLANNING,DEFAULT,Plan and Coordination,1,2,Delivers tightly-scoped projects efficiently
+PLANNING,DEFAULT,Plan and Coordination,1,3,Is learning how to break down tasks and accurately estimate tasks
+PLANNING,DEFAULT,Plan and Coordination,1,4,
+PLANNING,DEFAULT,Plan and Coordination,1,5,
+PLANNING,DEFAULT,Plan and Coordination,1,6,
+PLANNING,DEFAULT,Plan and Coordination,2,1,"Is mastering the ability to break down tasks, plan, estimate, and cut scope in order to deliver on time"
+PLANNING,DEFAULT,Plan and Coordination,2,2,Researches and considers alternative approaches
+PLANNING,DEFAULT,Plan and Coordination,2,3,Defines and hits interim milestones
+PLANNING,DEFAULT,Plan and Coordination,2,4,Prioritizes in alignment with company goals
+PLANNING,DEFAULT,Plan and Coordination,2,5,Consistently and accurately estimates the time a given task will take
+PLANNING,DEFAULT,Plan and Coordination,2,6,
+PLANNING,DEFAULT,Plan and Coordination,3,1,"Can smoothly and successfully execute an initiative, set milestones for a team, and proactively ensure all core goals are hit, even if plans need to be changed to do so"
+PLANNING,DEFAULT,Plan and Coordination,3,2,Integrates business needs into project planning
+PLANNING,DEFAULT,Plan and Coordination,3,3,Chooses appropriate project management strategy based on context
+PLANNING,DEFAULT,Plan and Coordination,3,4,Demonstrates the ability to prioritize the most important work for the company/team
+PLANNING,DEFAULT,Plan and Coordination,3,5,Delegates tasks to others appropriately
+PLANNING,DEFAULT,Plan and Coordination,3,6,"When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
+PLANNING,DEFAULT,Plan and Coordination,4,1,"Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically"
+PLANNING,DEFAULT,Plan and Coordination,4,2,Manages dependencies on other projects and teams
+PLANNING,DEFAULT,Plan and Coordination,4,3,Leverages recognition of repeated project patterns
+PLANNING,DEFAULT,Plan and Coordination,4,4,Reduces complexity and prioritizes the most important work for the company
+PLANNING,DEFAULT,Plan and Coordination,4,5,Helps define roadmaps and set vision for long-term projects
+PLANNING,DEFAULT,Plan and Coordination,4,6,"Often ""sees around corners"" and addresses issues before they become critical"
+PLANNING,DEFAULT,Plan and Coordination,5,1,"Plans and executes large, complex projects with interdependencies across teams and systems"
+PLANNING,DEFAULT,Plan and Coordination,5,2,"Leads teams of teams, and coordinates effective cross-functional collaboration"
+PLANNING,DEFAULT,Plan and Coordination,5,3,"Considers external constraints, opportunities, and business objectives when planning"
+PLANNING,DEFAULT,Plan and Coordination,5,4,Can successfully manage (and adjust/update plans for) large efforts that start out with unclear or competing goals
+PLANNING,DEFAULT,Plan and Coordination,5,5,Creates plans that define the direction of the whole team moving forward
+PLANNING,DEFAULT,Plan and Coordination,5,6,Demonstrates the ability to deal with any project or initiative that is critical to the future of the company
+COLLABORATION,DEFAULT,Communication and Collaboration,1,1,Communicates project status clearly and effectively
+COLLABORATION,DEFAULT,Communication and Collaboration,1,2,Is learning to work collaboratively on a team and communicate in meetings
+COLLABORATION,DEFAULT,Communication and Collaboration,1,3,Proactively asks questions and reaches out for help to get unblocked
+COLLABORATION,DEFAULT,Communication and Collaboration,1,4,"Voices concerns or need for clarification to their project teams and, if necessary, discipline leaders or POD members"
+COLLABORATION,DEFAULT,Communication and Collaboration,1,5,Is developing the ability to communicate complicated concepts simply and successfully to a non-technical audience
+COLLABORATION,DEFAULT,Communication and Collaboration,1,6,Accepts feedback graciously and learns from experience
+COLLABORATION,DEFAULT,Communication and Collaboration,2,1,"Communicates clearly at team and client-facing meetings, escalating blockers quickly, clarifying requirements, and sharing assumptions"
+COLLABORATION,DEFAULT,Communication and Collaboration,2,2,Collaborates professionally with teammates and peers
+COLLABORATION,DEFAULT,Communication and Collaboration,2,3,"Adapts their message for a diverse audience, choosing appropriate tools and approach for accurate and timely communication"
+COLLABORATION,DEFAULT,Communication and Collaboration,2,4,"Seeks feedback to improve and receives it well. Gives timely, helpful feedback to peers"
+COLLABORATION,DEFAULT,Communication and Collaboration,2,5,Makes effective presentations to smaller audiences
+COLLABORATION,DEFAULT,Communication and Collaboration,2,6,
+COLLABORATION,DEFAULT,Communication and Collaboration,3,1,"Communicates technical issues and decisions clearly and proactively to a cross-functional audience, sharing bad news quickly as well"
+COLLABORATION,DEFAULT,Communication and Collaboration,3,2,"Builds cross-functional relationships with project team, chapter members, and clients"
+COLLABORATION,DEFAULT,Communication and Collaboration,3,3,"Engages in productive dialog even when there are conflicting views, both inside and outside the team. Seeks to understand other points of viewue"
+COLLABORATION,DEFAULT,Communication and Collaboration,3,4,Mastering ability to communicate complicated concepts simply and successfully to ensure understanding and appropriate action. Makes effective presentations to larger audiences
+COLLABORATION,DEFAULT,Communication and Collaboration,3,5,
+COLLABORATION,DEFAULT,Communication and Collaboration,3,6,
+COLLABORATION,DEFAULT,Communication and Collaboration,4,1,Communicates complex concepts and issues and easily makes compelling presentations to sophisticated audiences
+COLLABORATION,DEFAULT,Communication and Collaboration,4,2,Works with key stakeholders effectively to solve problems and make decisions
+COLLABORATION,DEFAULT,Communication and Collaboration,4,3,"Demonstrates the ability to always share status with all stakeholders, and proactively remedy communication issues"
+COLLABORATION,DEFAULT,Communication and Collaboration,4,4,Holds others and themselves accountable for their commitments and results by receiving and giving feedback
+COLLABORATION,DEFAULT,Communication and Collaboration,4,5,Spurs and facilitates meaningful discussion around complex issues
+COLLABORATION,DEFAULT,Communication and Collaboration,4,6,Offers insightful perspectives
+COLLABORATION,DEFAULT,Communication and Collaboration,5,1,Comfortably communicates and presents complex issues to diverse audiences inside and outside the company
+COLLABORATION,DEFAULT,Communication and Collaboration,5,2,"Coordinates communication among teams and stakeholders, including the right people at the right times"
+COLLABORATION,DEFAULT,Communication and Collaboration,5,3,"Is relied upon as one of the best communicators of complicated subjects, trade-offs, and decisions"
+COLLABORATION,DEFAULT,Communication and Collaboration,5,4,Holds others and themselves accountable for their commitments and results by providing thoughtful feedback and openly receiving feedback
+COLLABORATION,DEFAULT,Communication and Collaboration,5,5,Clearly communicates company-level objectives and how they relate to experiments and initiatives
+COLLABORATION,DEFAULT,Communication and Collaboration,5,6,Proactively identifies and remedies communication gaps and issues
+CLIENT_VALUE,DEFAULT,Client Value,1,1,Delivers consistently good outcomes within project scope and following quality standards
+CLIENT_VALUE,DEFAULT,Client Value,1,2,Understands how tasks impact and fit within the broader scope and objectives of the final product or service
+CLIENT_VALUE,DEFAULT,Client Value,1,3,Shows a willingness to do what it takes to achieve the desired results
+CLIENT_VALUE,DEFAULT,Client Value,1,4,Writes clear comments and documentation
+CLIENT_VALUE,DEFAULT,Client Value,1,5,
+CLIENT_VALUE,DEFAULT,Client Value,1,6,
+CLIENT_VALUE,DEFAULT,Client Value,2,1,Works efficiently and puts in the time and effort necessary to deliver great outcomes
+CLIENT_VALUE,DEFAULT,Client Value,2,2,Realizes when progress toward desired results is stalling and takes action to get back on track
+CLIENT_VALUE,DEFAULT,Client Value,2,3,Accepts difficult tasks and gets right to work
+CLIENT_VALUE,DEFAULT,Client Value,2,4,Devotes time to find the most effective ways to meet the commitments
+CLIENT_VALUE,DEFAULT,Client Value,2,5,Is focused on producing high-quality work
+CLIENT_VALUE,DEFAULT,Client Value,2,6,
+CLIENT_VALUE,DEFAULT,Client Value,3,1,Helps others identify the desired results of their assignments
+CLIENT_VALUE,DEFAULT,Client Value,3,2,Gives thoughtful feedback as a domain expert
+CLIENT_VALUE,DEFAULT,Client Value,3,3,"Helps others focus on achieving results, supporting them when facing problems and issues"
+CLIENT_VALUE,DEFAULT,Client Value,3,4,"Holds others accountable for their commitments, results, and successful client outcomes"
+CLIENT_VALUE,DEFAULT,Client Value,3,5,Required for eligibility to be a Project Owner
+CLIENT_VALUE,DEFAULT,Client Value,3,6,Required eligibility to be a Consultant
+CLIENT_VALUE,DEFAULT,Client Value,4,1,Helps others maximize their potential through mentoring and coaching
+CLIENT_VALUE,DEFAULT,Client Value,4,2,Focuses on high-level client relationships and satisfaction
+CLIENT_VALUE,DEFAULT,Client Value,4,3,"Anticipates unusual issues and problems, taking steps to minimize their impacts on results"
+CLIENT_VALUE,DEFAULT,Client Value,4,4,Holds institutional knowledge
+CLIENT_VALUE,DEFAULT,Client Value,4,5,Required eligibility to be a Project Advocate
+CLIENT_VALUE,DEFAULT,Client Value,4,6,Required eligibility to be a Service Line Lead
+CLIENT_VALUE,DEFAULT,Client Value,5,1,Defines policies for the organization that encourage quality work and maximize client value
+CLIENT_VALUE,DEFAULT,Client Value,5,2,Identifies and eliminates single points of failure throughout the organization
+CLIENT_VALUE,DEFAULT,Client Value,5,3,Secures time and resources from executive leadership to support great quality
+CLIENT_VALUE,DEFAULT,Client Value,5,4,Connects clients to strategic and technical solutions for complex business challenges
+CLIENT_VALUE,DEFAULT,Client Value,5,5,
+CLIENT_VALUE,DEFAULT,Client Value,5,6,
+INITIATIVE,DEFAULT,Initiative,1,1,
+INITIATIVE,DEFAULT,Initiative,1,2,"Is becoming comfortable owning small tasks independently, but typically relies on more experienced teammates when tackling larger issues"
+INITIATIVE,DEFAULT,Initiative,1,3,Typically relies on senior teammates to set project goals and break down larger projects into discrete tasks
+INITIATIVE,DEFAULT,Initiative,1,4,Asks leadership team probing questions
+INITIATIVE,DEFAULT,Initiative,1,5,
+INITIATIVE,DEFAULT,Initiative,1,6,
+INITIATIVE,DEFAULT,Initiative,2,1,"Regularly leads smaller projects or tasks, but relies on experienced teammates when working on major project investments"
+INITIATIVE,DEFAULT,Initiative,2,2,Often leans on others to help problem-solve project ambiguity
+INITIATIVE,DEFAULT,Initiative,2,3,Proactively takes on executable tasks when blocked elsewhere. Seek help to get unblocked
+INITIATIVE,DEFAULT,Initiative,2,4,Often relies on others to help cut scope when necessary
+INITIATIVE,DEFAULT,Initiative,2,5,Consistently delivers on reasonably well-defined projects
+INITIATIVE,DEFAULT,Initiative,2,6,Is becoming more comfortable defining project goals for more ambiguous projects
+INITIATIVE,DEFAULT,Initiative,3,1,"Regularly leads multiplee, large projects or initiatives"
+INITIATIVE,DEFAULT,Initiative,3,2,Takes ownership of tasks that nobody owns or wants
+INITIATIVE,DEFAULT,Initiative,3,3,Seeks out others involved in a situation to learn their perspectives
+INITIATIVE,DEFAULT,Initiative,3,4,Leaves things better than when they found them
+INITIATIVE,DEFAULT,Initiative,3,5,Is comfortable with ambiguity and can be relied on to remove blockers when necessary
+INITIATIVE,DEFAULT,Initiative,3,6,Demonstrates the ability to handle major tasks from definition through execution with consistently successful outcomes
+INITIATIVE,DEFAULT,Initiative,4,1,Develops and tests new ways to solve systemic issues
+INITIATIVE,DEFAULT,Initiative,4,2,Exemplifies grit and determination in the face of persistent obstacles
+INITIATIVE,DEFAULT,Initiative,4,3,Instigates major new company-wide initiatives
+INITIATIVE,DEFAULT,Initiative,4,4,Seeks creative and innovative ways to improve and develop what they are doing
+INITIATIVE,DEFAULT,Initiative,4,5,Can effectively cope with change
+INITIATIVE,DEFAULT,Initiative,4,6,
+INITIATIVE,DEFAULT,Initiative,5,1,Champions and pioneers new approaches and ideas to solve new classes of problems
+INITIATIVE,DEFAULT,Initiative,5,2,Galvanizes the entire company and garners buy-in for new strategies
+INITIATIVE,DEFAULT,Initiative,5,3,Improves complex organizational processes
+INITIATIVE,DEFAULT,Initiative,5,4,Embraces ambiguity and a growth mindset
+INITIATIVE,DEFAULT,Initiative,5,5,
+INITIATIVE,DEFAULT,Initiative,5,6,
+COMPLEXITY,DEFAULT,Maturity,1,1,Is learning how to integrate complicated information to identify strategies and solutions with the assistance of teammates and senior colleagues
+COMPLEXITY,DEFAULT,Maturity,1,2,Breaks down complicated problems or concepts into clear and manageable components
+COMPLEXITY,DEFAULT,Maturity,1,3,Effectively deals with and understands opposing views and is open to learning from feedback
+COMPLEXITY,DEFAULT,Maturity,1,4,
+COMPLEXITY,DEFAULT,Maturity,1,5,
+COMPLEXITY,DEFAULT,Maturity,1,6,
+COMPLEXITY,DEFAULT,Maturity,2,1,Quickly integrates complicated information to identify strategies and solutions with the assistance of teammates and senior colleagues
+COMPLEXITY,DEFAULT,Maturity,2,2,Demonstrates keen insights into situations
+COMPLEXITY,DEFAULT,Maturity,2,3,Assimilates large amounts of information
+COMPLEXITY,DEFAULT,Maturity,2,4,Responds flexibly and strategically to ongoing change
+COMPLEXITY,DEFAULT,Maturity,2,5,
+COMPLEXITY,DEFAULT,Maturity,2,6,
+COMPLEXITY,DEFAULT,Maturity,3,1,Identifies and deals with complicated situations to provide the best solutions
+COMPLEXITY,DEFAULT,Maturity,3,2,Demonstrates a sense of agency
+COMPLEXITY,DEFAULT,Maturity,3,3,Adopts a proactive approach instead of a reactive one
+COMPLEXITY,DEFAULT,Maturity,3,4,Demonstrates critical inquiry
+COMPLEXITY,DEFAULT,Maturity,3,5,Promotes exploration and experimentation as a response to uncertainty
+COMPLEXITY,DEFAULT,Maturity,3,6,
+COMPLEXITY,DEFAULT,Maturity,4,1,"Seeks to cultivate innovation in the face of uncertainty, both internally and externally"
+COMPLEXITY,DEFAULT,Maturity,4,2,Offers new perspectives to overcome complexity constraints
+COMPLEXITY,DEFAULT,Maturity,4,3,Selects systems thinking approaches to fit with the level of complexity and the nature of the environment
+COMPLEXITY,DEFAULT,Maturity,4,4,Focuses on the core message or desired result of a complex plan or idea
+COMPLEXITY,DEFAULT,Maturity,4,5,Deals with change in an open and collaborative way to facilitate a beneficial resolution
+COMPLEXITY,DEFAULT,Maturity,4,6,"Simplifies complexities by pulling together ideas, issues, and observations into a single concept or a clear presentation"
+COMPLEXITY,DEFAULT,Maturity,5,1,Builds the capacity in other people to cope with complexity
+COMPLEXITY,DEFAULT,Maturity,5,2,Leads others through change
+COMPLEXITY,DEFAULT,Maturity,5,3,Has a holistic vision 
+COMPLEXITY,DEFAULT,Maturity,5,4,Creates an organizational framework that facilitates a positive work environment
+COMPLEXITY,DEFAULT,Maturity,5,5,"Helps others to move through the change curve, from resistors to adopters"
+COMPLEXITY,DEFAULT,Maturity,5,6,Has engergy and engergizes those around them
+MATURITY,DEFAULT,Complexity,1,1,"Learns and exhibits Palantir core values: collaboration, bringing out the best in each other, curiosity, thinking ahead, and accessibility"
+MATURITY,DEFAULT,Complexity,1,2,Treats colleagues and clients with respect
+MATURITY,DEFAULT,Complexity,1,3,Objectively evaluates whether they've met their goals
+MATURITY,DEFAULT,Complexity,1,4,Takes responsibility for their own words and actions
+MATURITY,DEFAULT,Complexity,1,5,
+MATURITY,DEFAULT,Complexity,1,6,
+MATURITY,DEFAULT,Complexity,2,1,Brings their best self to work and makes space for others to do so as well
+MATURITY,DEFAULT,Complexity,2,2,"Trusts teammates, assumes good intent, and is able to disagree and commit"
+MATURITY,DEFAULT,Complexity,2,3,Finds ways to ramp up and engage new hires quickly
+MATURITY,DEFAULT,Complexity,2,4,Is able to deliver their work despite inevitable distractions
+MATURITY,DEFAULT,Complexity,2,5,Exhibits a growth mindset with regard to feedback
+MATURITY,DEFAULT,Complexity,2,6,
+MATURITY,DEFAULT,Complexity,3,1,Is aware of their own strengths and weaknesses
+MATURITY,DEFAULT,Complexity,3,2,Embraces big challenges as opportunities for growth and learning
+MATURITY,DEFAULT,Complexity,3,3,Uses their position to raise difficult issues on behalf of others
+MATURITY,DEFAULT,Complexity,3,4,"Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company"
+MATURITY,DEFAULT,Complexity,3,5,Is able to change direction quickly based on shifting company and project needs
+MATURITY,DEFAULT,Complexity,3,6,Demonstrates humility and patience
+MATURITY,DEFAULT,Complexity,4,1,"Goes above and beyond, serving the team without complaint"
+MATURITY,DEFAULT,Complexity,4,2,Implements concrete actions to significantly improve team inclusivity
+MATURITY,DEFAULT,Complexity,4,3,Builds consensus for decisions
+MATURITY,DEFAULT,Complexity,4,4,Devotes significant time to helping outside of direct responsibilities
+MATURITY,DEFAULT,Complexity,4,5,Helps individuals maintain resilience in periods of change
+MATURITY,DEFAULT,Complexity,4,6,
+MATURITY,DEFAULT,Complexity,5,1,Demonstrates the ability to de-escalate conflicts and build consensus between team members about technical matters
+MATURITY,DEFAULT,Complexity,5,2,"Holds individuals, teams, and leadership accountable to Palantir's values"
+MATURITY,DEFAULT,Complexity,5,3,"Sets the tone, policy, and goals around maintaining an open, diverse, and inclusive company"
+MATURITY,DEFAULT,Complexity,5,4,Models maturity and cultivates similar development in others
+MATURITY,DEFAULT,Complexity,5,5,
+MATURITY,DEFAULT,Complexity,5,6,
+LEARNING,DEFAULT,Learning and Career Development,1,1,Shares career and professional development options and areas of interest informally
+LEARNING,DEFAULT,Learning and Career Development,1,2,Shares opportunities for improvements and recognizes achievements for themselves and others
+LEARNING,DEFAULT,Learning and Career Development,1,3,Collects and delivers feedback
+LEARNING,DEFAULT,Learning and Career Development,1,4,
+LEARNING,DEFAULT,Learning and Career Development,1,5,
+LEARNING,DEFAULT,Learning and Career Development,1,6,
+LEARNING,DEFAULT,Learning and Career Development,2,1,Helps a group member have an appropriate role on the team
+LEARNING,DEFAULT,Learning and Career Development,2,2,"Offers effective career advice to group members, without being prescriptive"
+LEARNING,DEFAULT,Learning and Career Development,2,3,Creates space for people to talk through challenges
+LEARNING,DEFAULT,Learning and Career Development,2,4,Provides help on how to have difficult conversations
+LEARNING,DEFAULT,Learning and Career Development,2,5,Works closely with another to help them learn new skills or continue to improve skills
+LEARNING,DEFAULT,Learning and Career Development,2,6,
+LEARNING,DEFAULT,Learning and Career Development,3,1,Discusses career paths and helps create plans for others' personal and professional growth
+LEARNING,DEFAULT,Learning and Career Development,3,2,Advocates for aligning people with appropriate roles within organization
+LEARNING,DEFAULT,Learning and Career Development,3,3,Works with POD leads to elevate emerging leaders
+LEARNING,DEFAULT,Learning and Career Development,3,4,May participate in the hiring process meeting with candidates and offering thoughts to the discipline/hiring lead
+LEARNING,DEFAULT,Learning and Career Development,3,5,Promotes and exhibits psychological safety
+LEARNING,DEFAULT,Learning and Career Development,3,6,
+LEARNING,DEFAULT,Learning and Career Development,4,1,"Promotes and exhibits psychological safety, facilitation, and collaboration"
+LEARNING,DEFAULT,Learning and Career Development,4,2,"Ensures all group members' roles are meeting their career needs (e.g., PODs, chapter)"
+LEARNING,DEFAULT,Learning and Career Development,4,3,Initiates and oversees the hiring process once approval is given for a new hire
+LEARNING,DEFAULT,Learning and Career Development,4,4,Helps the team plan and implement discipline-related learning activities
+LEARNING,DEFAULT,Learning and Career Development,4,5,
+LEARNING,DEFAULT,Learning and Career Development,4,6,
+LEARNING,DEFAULT,Learning and Career Development,5,1,Works with others on their individual goals to understand how those goals align both with project work and Palantir service lines
+LEARNING,DEFAULT,Learning and Career Development,5,2,Identifies leadership training opportunities for senior leadership
+LEARNING,DEFAULT,Learning and Career Development,5,3,"Pushes everyone to be as good as they can be, with empathy"
+LEARNING,DEFAULT,Learning and Career Development,5,4,Provides coaching to group leaders
+LEARNING,DEFAULT,Learning and Career Development,5,5,Supports and develops senior leaders
+LEARNING,DEFAULT,Learning and Career Development,5,6,Serves as an advisor to company leaders
+MENTORSHIP,DEFAULT,Mentorship,1,1,Asks for support and advice
+MENTORSHIP,DEFAULT,Mentorship,1,2,Open to receiving feedback
+MENTORSHIP,DEFAULT,Mentorship,1,3,Act as an onboarding buddy
+MENTORSHIP,DEFAULT,Mentorship,1,4,Finds ways to ramp up and engage new team members
+MENTORSHIP,DEFAULT,Mentorship,1,5,
+MENTORSHIP,DEFAULT,Mentorship,1,6,
+MENTORSHIP,DEFAULT,Mentorship,2,1,Takes time to understand and explain concepts and best practices
+MENTORSHIP,DEFAULT,Mentorship,2,2,Makes themself available for informal support and advice
+MENTORSHIP,DEFAULT,Mentorship,2,3,Provides sound advice when asked
+MENTORSHIP,DEFAULT,Mentorship,2,4,"Offers unprompted feedback to help growth, with empathy"
+MENTORSHIP,DEFAULT,Mentorship,2,5,Avoids siloing information when it can be usefully shared with others
+MENTORSHIP,DEFAULT,Mentorship,2,6,
+MENTORSHIP,DEFAULT,Mentorship,3,1,"Asks questions to illuminate concepts, rather than stating them"
+MENTORSHIP,DEFAULT,Mentorship,3,2,Uses lessons learned to guide individuals and teams
+MENTORSHIP,DEFAULT,Mentorship,3,3,Finds approaches that work best for a team member's personality
+MENTORSHIP,DEFAULT,Mentorship,3,4,"Brings resources, critical readings, opportunities, or experiences to the attention of others"
+MENTORSHIP,DEFAULT,Mentorship,3,5,Acts as a sounding board for peers and more junior team members
+MENTORSHIP,DEFAULT,Mentorship,3,6,
+MENTORSHIP,DEFAULT,Mentorship,4,1,Defines an entire curriculum for a discipline
+MENTORSHIP,DEFAULT,Mentorship,4,2,Draws positive attention to well-modeled mentor and teaching behaviors
+MENTORSHIP,DEFAULT,Mentorship,4,3,Provides discipline support
+MENTORSHIP,DEFAULT,Mentorship,4,4,Exhibits enthusiasm in sharing knowledge and expertise
+MENTORSHIP,DEFAULT,Mentorship,4,5,Demonstrates a positive attitude and acts as a positive role model
+MENTORSHIP,DEFAULT,Mentorship,4,6,Helps individuals find new and challenging opportunities within the organization
+MENTORSHIP,DEFAULT,Mentorship,5,1,Empowers team members to develop themselves
+MENTORSHIP,DEFAULT,Mentorship,5,2,Models productive and healthy mentor relationships
+MENTORSHIP,DEFAULT,Mentorship,5,3,Is open to experimenting and learning practices that are new to the field
+MENTORSHIP,DEFAULT,Mentorship,5,4,Helps individuals to move out their comfort zone
+MENTORSHIP,DEFAULT,Mentorship,5,5,
+MENTORSHIP,DEFAULT,Mentorship,5,6,
+INFLUENCE,DEFAULT,Influence,1,1,Has project/team-level impact
+INFLUENCE,DEFAULT,Influence,1,2,Shares personal and organizational successes with their network
+INFLUENCE,DEFAULT,Influence,1,3,Communicates genuine and honest excitement about their work externally
+INFLUENCE,DEFAULT,Influence,1,4,Represents their team well to others in the company
+INFLUENCE,DEFAULT,Influence,1,5,
+INFLUENCE,DEFAULT,Influence,1,6,
+INFLUENCE,DEFAULT,Influence,2,1,Takes meaningful action to introduce people to Palantir
+INFLUENCE,DEFAULT,Influence,2,2,Represents Palantir appropriately and is well aligned with our core values
+INFLUENCE,DEFAULT,Influence,2,3,Finds ways to help teammates achieve their goals. Inspires teamwork
+INFLUENCE,DEFAULT,Influence,2,4,Shares their experience and expertise to help others grow
+INFLUENCE,DEFAULT,Influence,2,5,"Listens to everyone's opinion, and encourages people to speak up"
+INFLUENCE,DEFAULT,Influence,2,6,
+INFLUENCE,DEFAULT,Influence,3,1,Acts as a highly-visible mentor or participant in organizations other than Palantir
+INFLUENCE,DEFAULT,Influence,3,2,Builds fruitful partnerships with clients
+INFLUENCE,DEFAULT,Influence,3,3,Uses the advice process to make decisions
+INFLUENCE,DEFAULT,Influence,3,4,Identifies and advocates for foundational work and practice improvements in their discipline
+INFLUENCE,DEFAULT,Influence,3,5,Starts to broaden their impact. Considers effects of their work on other team and identifies and helps resolves team issues
+INFLUENCE,DEFAULT,Influence,3,6,Builds network of influence to support project outcomes
+INFLUENCE,DEFAULT,Influence,4,1,Establishes themself as an industry thought leader who attracts talent
+INFLUENCE,DEFAULT,Influence,4,2,Educates others about the work of the team
+INFLUENCE,DEFAULT,Influence,4,3,"Leads initiatives across disciplines, even outside their core expertise. Coordinates large and complex projects, including with outside partners"
+INFLUENCE,DEFAULT,Influence,4,4,"Contributes to the foundational good of their discipline, defining patterns and plays"
+INFLUENCE,DEFAULT,Influence,4,5,Effectively considers effects of their work on other teams and identifies and helps resolves team issues
+INFLUENCE,DEFAULT,Influence,4,6,"Incredibly knowledgeable in their area of experitse, often to a degree recognized far beyond our walls"
+INFLUENCE,DEFAULT,Influence,5,1,"Delivers key messages to broad, mainstream audiences"
+INFLUENCE,DEFAULT,Influence,5,2,Influences industry thought leaders to speak favorably about Palantir
+INFLUENCE,DEFAULT,Influence,5,3,Has high impact on company's trajectory
+INFLUENCE,DEFAULT,Influence,5,4,Drives foundational work benefitting their discipline and entire organization
+INFLUENCE,DEFAULT,Influence,5,5,Serves as a strategic advisor to company leaders and is a positive and influential leader across the entire organization
+INFLUENCE,DEFAULT,Influence,5,6,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,1,"Demonstrates an understanding of individuals' roles, goals, and interests"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,2,Demonstrates concern for the well-being of people
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,3,Actively listens
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,4,Treats people with respect
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,5,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,1,6,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,1,"Uses an understanding of the organization's processes, systems and policies to engage with colleagues"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,2,"Assumes positive intent of others, approaching every interaction with kindness and good humor"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,3,Empathetically listens
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,4,"Communicates difficult or negative messages in an honest, accurate, and respectful manner"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,5,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,2,6,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,1,Helps people develop and perform as highly as possible
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,2,Uses awareness and understanding of the organization's culture to implement change initiatives
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,3,Is able to deeply understand and empathize with others
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,4,Delivers persuasive and compelling messages
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,5,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,3,6,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,1,"Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,2,"Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,3,"Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,4,"Provides visible leadership that ""walks the talk.""  Sets high performance standards for self, acting as a role model for the team"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,5,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,4,6,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,1,"Focus on bringing their best self to your work, and making space for others to do so as well"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,2,"Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation and maintenance of initiatives proposed by other executives"
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,3,Uses storytelling to create a positive and engaging environment for teams and clients
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,4,Leverages relationships to best support and develop individuals
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,5,
+CHAPTER_ONE,MANAGEMENT,Servant Leadership,5,6,
+CHAPTER_TWO,MANAGEMENT,Coaching,1,1,Helps individuals to think for themselves about possible impacts and solutions to a problem by asking open ended questions
+CHAPTER_TWO,MANAGEMENT,Coaching,1,2,Demonstrates a positive outlook on things
+CHAPTER_TWO,MANAGEMENT,Coaching,1,3,
+CHAPTER_TWO,MANAGEMENT,Coaching,1,4,
+CHAPTER_TWO,MANAGEMENT,Coaching,1,5,
+CHAPTER_TWO,MANAGEMENT,Coaching,1,6,
+CHAPTER_TWO,MANAGEMENT,Coaching,2,1,Shows confidence in other's ability and willingness to face challenges and solve problem
+CHAPTER_TWO,MANAGEMENT,Coaching,2,2,Helps people to gain awareness of current situations
+CHAPTER_TWO,MANAGEMENT,Coaching,2,3,Demonstrates curiosity
+CHAPTER_TWO,MANAGEMENT,Coaching,2,4,
+CHAPTER_TWO,MANAGEMENT,Coaching,2,5,
+CHAPTER_TWO,MANAGEMENT,Coaching,2,6,
+CHAPTER_TWO,MANAGEMENT,Coaching,3,1,Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives
+CHAPTER_TWO,MANAGEMENT,Coaching,3,2,Determines whether people need help to remove barriers or if they are able to tackle them by themselves
+CHAPTER_TWO,MANAGEMENT,Coaching,3,3,
+CHAPTER_TWO,MANAGEMENT,Coaching,3,4,
+CHAPTER_TWO,MANAGEMENT,Coaching,3,5,
+CHAPTER_TWO,MANAGEMENT,Coaching,3,6,
+CHAPTER_TWO,MANAGEMENT,Coaching,4,1,Partners with people to define actions based on their own abilities and knowledge
+CHAPTER_TWO,MANAGEMENT,Coaching,4,2,"Supports people's progress, celebrates their wins and encourages them to find new paths if their original plan of action does not work out as expected"
+CHAPTER_TWO,MANAGEMENT,Coaching,4,3,Demonstrates the ability to encourage meaningful thoughts that can help the other person address a challenge or break through to a new level of performance
+CHAPTER_TWO,MANAGEMENT,Coaching,4,4,
+CHAPTER_TWO,MANAGEMENT,Coaching,4,5,
+CHAPTER_TWO,MANAGEMENT,Coaching,4,6,
+CHAPTER_TWO,MANAGEMENT,Coaching,5,1,Focuses on empowering their team members to discover solutions for themselves
+CHAPTER_TWO,MANAGEMENT,Coaching,5,2,Coaches senior leaders on creating positive working relationships with their teams and clients
+CHAPTER_TWO,MANAGEMENT,Coaching,5,3,
+CHAPTER_TWO,MANAGEMENT,Coaching,5,4,
+CHAPTER_TWO,MANAGEMENT,Coaching,5,5,
+CHAPTER_TWO,MANAGEMENT,Coaching,5,6,
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,1,Actively seeks views from a range of colleagues to help gain understanding
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,2,Contributes to creating an inclusive environment
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,3,
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,4,
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,5,
+CHAPTER_THREE,MANAGEMENT,Facilitation,1,6,
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,1,Is becoming comfortable in mediating escalated conflicts
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,2,Builds consensus among people and teams
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,3,
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,4,
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,5,
+CHAPTER_THREE,MANAGEMENT,Facilitation,2,6,
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,1,"Understands what drives and motivates the project team, and their capabilities and is aware of differences"
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,2,"Resolves and/or mediates conflicts in a respectful, appropriate and impartial manner"
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,3,Takes time to understand how individuals and teams are performing and working together to deliver the project outcomes
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,4,
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,5,
+CHAPTER_THREE,MANAGEMENT,Facilitation,3,6,
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,1,"Understands themselves and the individuals in the project team, what drives and motivates them personally, and their individual capabilities"
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,2,Is able to facilitate difficult interactions among stakeholders to achieve outcomes
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,3,Is focused on the big picture
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,4,
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,5,
+CHAPTER_THREE,MANAGEMENT,Facilitation,4,6,
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,1,Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,2,Serves as a positive role model for productive conflict
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,3,"Encourages productive and respectful task-related conflict, using it to facilitate change"
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,4,"Resolves complex organizational dysfunction, or persistent conflict at senior levels	"
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,5,
+CHAPTER_THREE,MANAGEMENT,Facilitation,5,6,
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,1,Contributes to generating commitment in individuals and the team
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,2,Speaks positively and enthusiastically about the organization's products/services and future direction
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,3,
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,4,
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,5,
+CHAPTER_FOUR,MANAGEMENT,Motivation,1,6,
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,1,Creates a fun and energetic environment that promotes creativity
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,2,Validates ongoing work and sustains motivation
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,3,"Establishes challenging, yet realistic, performance goals that tap into people's interests"
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,4,
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,5,
+CHAPTER_FOUR,MANAGEMENT,Motivation,2,6,
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,1,"Recognizes individual and team performance, even when things go wrong"
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,2,Empowers a team to drive forward amidst uncertainty
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,3,Models excellence and enthusiasm for the work
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,4,
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,5,
+CHAPTER_FOUR,MANAGEMENT,Motivation,3,6,
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,1,"Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn"
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,2,Ensures that the self-realization and practical needs of the project team are met
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,3,
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,4,
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,5,
+CHAPTER_FOUR,MANAGEMENT,Motivation,4,6,
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,1,Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,2,Ability to find and use successes to celebrate progress towards the vision
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,3,Sets clear goals and a desired future state that is compelling and realistic for stakeholders
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,4,
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,5,
+CHAPTER_FOUR,MANAGEMENT,Motivation,5,6,
+CHAPTER_ONE,ENGINEERING,Foundations,1,1,Is building proficiency with our tech stack and becoming comfortable with learning new technologies and skills
+CHAPTER_ONE,ENGINEERING,Foundations,1,2,"Has experience with development best practices, Palantir's chosen technology stack, web accessibility, and web development frameworks"
+CHAPTER_ONE,ENGINEERING,Foundations,1,3,Is able to perform assigned tasks and tickets with occasional assistance
+CHAPTER_ONE,ENGINEERING,Foundations,1,4,Is able to hlep estimate tickets while working on refining estimation skills
+CHAPTER_ONE,ENGINEERING,Foundations,1,5,
+CHAPTER_ONE,ENGINEERING,Foundations,1,6,
+CHAPTER_ONE,ENGINEERING,Foundations,2,1,"Focuses on expanding experience and proficiency in our code base, with solid understanding of relevant areas"
+CHAPTER_ONE,ENGINEERING,Foundations,2,2,"Is well-versed with development best practices, Palantir's chosen technology stack, web accessibility, and core development tools"
+CHAPTER_ONE,ENGINEERING,Foundations,2,3,Able to perform assigned tasks and tickets close to estimated time with minimal assistance
+CHAPTER_ONE,ENGINEERING,Foundations,2,4,Learns new areas of code base and new tech very quickly
+CHAPTER_ONE,ENGINEERING,Foundations,2,5,Is able to provide reliable estimates for tickets with context
+CHAPTER_ONE,ENGINEERING,Foundations,2,6,
+CHAPTER_ONE,ENGINEERING,Foundations,3,1,Independently scopes and implements solutions for their project/team
+CHAPTER_ONE,ENGINEERING,Foundations,3,2,"Is proficient in all relevant technical skills, and is able to move quickly. Maintains awareness of industry trends and tools"
+CHAPTER_ONE,ENGINEERING,Foundations,3,3,Contributes to open source Work
+CHAPTER_ONE,ENGINEERING,Foundations,3,4,Demonstrates the ability to come up with solid technical solutions to ambiguous or open-ended problems
+CHAPTER_ONE,ENGINEERING,Foundations,3,5,Often gives support to others in their areas of strongest skill
+CHAPTER_ONE,ENGINEERING,Foundations,3,6,Accurately estimates ticketed work
+CHAPTER_ONE,ENGINEERING,Foundations,4,1,Has a deep understanding of our architecture and how their domain fits within it. Systematically thinks through potential design impacts on other teams and the company
+CHAPTER_ONE,ENGINEERING,Foundations,4,2,"In an expert in our processes, also helps to define them. Keeps tests up to date"
+CHAPTER_ONE,ENGINEERING,Foundations,4,3,"Independently scopes, designs, and delivers solutions for large, complex challenges"
+CHAPTER_ONE,ENGINEERING,Foundations,4,4,Debugs expertly within their primary focus area
+CHAPTER_ONE,ENGINEERING,Foundations,4,5,"Provides oversight, coaching, and guidance through code and design reviews"
+CHAPTER_ONE,ENGINEERING,Foundations,4,6,"Incredibly knowledgeable in their aarea of expertise, often to a degree that is recogized far beyond our walls"
+CHAPTER_ONE,ENGINEERING,Foundations,5,1,"Is a primary expert in multiple areas of our technology stack, incredibly knowledgeable in several domains"
+CHAPTER_ONE,ENGINEERING,Foundations,5,2,Designs and builds industry-leading techniques to solve complex problems
+CHAPTER_ONE,ENGINEERING,Foundations,5,3,"Anticipates technical challenges, thoroughly explores alternatives and trade-offs"
+CHAPTER_ONE,ENGINEERING,Foundations,5,4,"Focuses on technical decision making, leading work that affects one or more complex systems and mission-critical areas"
+CHAPTER_ONE,ENGINEERING,Foundations,5,5,Explores technologies with sizable potential impact for Palantir
+CHAPTER_ONE,ENGINEERING,Foundations,5,6,
+CHAPTER_TWO,ENGINEERING,Coding,1,1,"Writes code that is sometimes production-ready, but usually requires iteration before shipping"
+CHAPTER_TWO,ENGINEERING,Coding,1,2,Is becoming comfortable working with one or two specific disciplines
+CHAPTER_TWO,ENGINEERING,Coding,1,3,Receives and integrates feedback from code reviews to ship high-quality code
+CHAPTER_TWO,ENGINEERING,Coding,1,4,Participates in code reviews and technical design
+CHAPTER_TWO,ENGINEERING,Coding,1,5,Receives and incorporates feedback from PR reviews
+CHAPTER_TWO,ENGINEERING,Coding,1,6,Performs small PR reviews around functional behavior
+CHAPTER_TWO,ENGINEERING,Coding,2,1,Writes code that usually ships promptly by receiving and successfully integrating critical input from code reviews. Work rarely needs to be rewritten before shipping
+CHAPTER_TWO,ENGINEERING,Coding,2,2,Follows style guides
+CHAPTER_TWO,ENGINEERING,Coding,2,3,Ships maintainable code that works and is understandable by teammates
+CHAPTER_TWO,ENGINEERING,Coding,2,4,"Is becoming comfortable diving in and making changes to many areas of code, not just a single area of code"
+CHAPTER_TWO,ENGINEERING,Coding,2,5,"Provides helpful, timely code reviews"
+CHAPTER_TWO,ENGINEERING,Coding,2,6,Is able to perform code audits
+CHAPTER_TWO,ENGINEERING,Coding,3,1,"Consistently delivers code that sets the standard for quality, security, and maintainability"
+CHAPTER_TWO,ENGINEERING,Coding,3,2,"Understands large swaths of the code base with a deep knowledge and ability to ""reach in and touch the right levers."" Able to move rapidly as a result"
+CHAPTER_TWO,ENGINEERING,Coding,3,3,"Writes consistently reliable code, so that input from code reviewers is high-level only"
+CHAPTER_TWO,ENGINEERING,Coding,3,4,"Provides code review feedback that is sought after, respected, and often instructional to others"
+CHAPTER_TWO,ENGINEERING,Coding,3,5,Writes meaningful code reviews
+CHAPTER_TWO,ENGINEERING,Coding,3,6,Sets the standards for performing code audits
+CHAPTER_TWO,ENGINEERING,Coding,4,1,Has mastered the skills necessary to ship quickly
+CHAPTER_TWO,ENGINEERING,Coding,4,2,Has built mastery in some relevant technical skills; good understanding of full stack
+CHAPTER_TWO,ENGINEERING,Coding,4,3,Provides mentorship and technical guidance to more junior teammates
+CHAPTER_TWO,ENGINEERING,Coding,4,4,"Writes highly insightful, comprehensive code reviews"
+CHAPTER_TWO,ENGINEERING,Coding,4,5,
+CHAPTER_TWO,ENGINEERING,Coding,4,6,
+CHAPTER_TWO,ENGINEERING,Coding,5,1,Is capable of building an entire complex product from scratch and requires significant R&D effort
+CHAPTER_TWO,ENGINEERING,Coding,5,2,Is seen as a leader who advances the state of the art and a contributor to the broader technical community
+CHAPTER_TWO,ENGINEERING,Coding,5,3,Demonstrates the ability to resolve technical problems without little context
+CHAPTER_TWO,ENGINEERING,Coding,5,4,"Constantly learning new technologies, can navigate and make legacy code maintainable"
+CHAPTER_TWO,ENGINEERING,Coding,5,5,
+CHAPTER_TWO,ENGINEERING,Coding,5,6,
+CHAPTER_THREE,ENGINEERING,DevOps,1,1,Is building proficiency in creating solutions using tools and automation to improve operations
+CHAPTER_THREE,ENGINEERING,DevOps,1,2,"Understands common software development tools and processes, including version control, issue tracking, and continuous build"
+CHAPTER_THREE,ENGINEERING,DevOps,1,3,
+CHAPTER_THREE,ENGINEERING,DevOps,1,4,
+CHAPTER_THREE,ENGINEERING,DevOps,1,5,
+CHAPTER_THREE,ENGINEERING,DevOps,1,6,
+CHAPTER_THREE,ENGINEERING,DevOps,2,1,"Focuses on expanding experience and proficiency in DevOps practices, with solid understanding of operating systems"
+CHAPTER_THREE,ENGINEERING,DevOps,2,2,"Understands web application development, server deployment and upkeep, and general networking practices"
+CHAPTER_THREE,ENGINEERING,DevOps,2,3,Modifies existing software to correct errors with guidance
+CHAPTER_THREE,ENGINEERING,DevOps,2,4,"Supports and improves our tools for continuous integration, automated testing, and release management with guidance"
+CHAPTER_THREE,ENGINEERING,DevOps,2,5,
+CHAPTER_THREE,ENGINEERING,DevOps,2,6,
+CHAPTER_THREE,ENGINEERING,DevOps,3,1,Enhances and streamlines operational processes through automation and integration without guidance
+CHAPTER_THREE,ENGINEERING,DevOps,3,2,Deploys and administers server-hosted software solutions
+CHAPTER_THREE,ENGINEERING,DevOps,3,3,"Modifies existing software to correct errors, adapt to new hardware, or improve performance"
+CHAPTER_THREE,ENGINEERING,DevOps,3,4,Is able to debug problems throughout the stack
+CHAPTER_THREE,ENGINEERING,DevOps,3,5,
+CHAPTER_THREE,ENGINEERING,DevOps,3,6,
+CHAPTER_THREE,ENGINEERING,DevOps,4,1,Analyzes user needs and software requirements to determine feasibility of design within time and cost constraints
+CHAPTER_THREE,ENGINEERING,DevOps,4,2,Responds to the needs of project managers and engineers to customize hosted tools to improve team efficiency
+CHAPTER_THREE,ENGINEERING,DevOps,4,3,Uses scientific analysis and mathematical models to predict and measure outcomes and consequences of design
+CHAPTER_THREE,ENGINEERING,DevOps,4,4,
+CHAPTER_THREE,ENGINEERING,DevOps,4,5,
+CHAPTER_THREE,ENGINEERING,DevOps,4,6,
+CHAPTER_THREE,ENGINEERING,DevOps,5,1,"Drives capacity for triaging and handling operational issues while advising the team on the process of writing code and engineering systems that will make their entire code base more reliable, testable, and scalable"
+CHAPTER_THREE,ENGINEERING,DevOps,5,2,Is seen as an expert who aadvances the state of the art and is a contributer to the broader technical community
+CHAPTER_THREE,ENGINEERING,DevOps,5,3,Creates innovative and comprehensive tools and practices to improve deployment and testing
+CHAPTER_THREE,ENGINEERING,DevOps,5,4,
+CHAPTER_THREE,ENGINEERING,DevOps,5,5,
+CHAPTER_THREE,ENGINEERING,DevOps,5,6,
+CHAPTER_FOUR,ENGINEERING,Craft,1,1,"Tests new code thoroughly, both locally and in production once shipped"
+CHAPTER_FOUR,ENGINEERING,Craft,1,2,Writes tests for every new feature and bug fix with guidance
+CHAPTER_FOUR,ENGINEERING,Craft,1,3,Writes clear comments and documentation
+CHAPTER_FOUR,ENGINEERING,Craft,1,4,"Works effectively within established web client architectures such as HTML, PHP, and JavaScript, following current best practices"
+CHAPTER_FOUR,ENGINEERING,Craft,1,5,
+CHAPTER_FOUR,ENGINEERING,Craft,1,6,
+CHAPTER_FOUR,ENGINEERING,Craft,2,1,Refactors existing code to make it more testable
+CHAPTER_FOUR,ENGINEERING,Craft,2,2,Adds tests for uncovered areas
+CHAPTER_FOUR,ENGINEERING,Craft,2,3,Deletes unnecessary code and deprecates proactively when safe to do so
+CHAPTER_FOUR,ENGINEERING,Craft,2,4,Assesses correctness and utility of existing code and avoids blind copy-pasting
+CHAPTER_FOUR,ENGINEERING,Craft,2,5,Generalizes code when appropriate
+CHAPTER_FOUR,ENGINEERING,Craft,2,6,Develops new instances of or minor improvements to existing architecture
+CHAPTER_FOUR,ENGINEERING,Craft,3,1,Implements systems that enable better testing
+CHAPTER_FOUR,ENGINEERING,Craft,3,2,Gives thoughtful code reviews as a domain expert
+CHAPTER_FOUR,ENGINEERING,Craft,3,3,"Adds tooling to improve code quality, security, and maintainability"
+CHAPTER_FOUR,ENGINEERING,Craft,3,4,
+CHAPTER_FOUR,ENGINEERING,Craft,3,5,
+CHAPTER_FOUR,ENGINEERING,Craft,3,6,
+CHAPTER_FOUR,ENGINEERING,Craft,4,1,"Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively"
+CHAPTER_FOUR,ENGINEERING,Craft,4,2,Consistently keeps the team focused on quality
+CHAPTER_FOUR,ENGINEERING,Craft,4,3,Coordinates priorities and projects
+CHAPTER_FOUR,ENGINEERING,Craft,4,4,Iterates repeatedly to develop and refine Palantir's best practices
+CHAPTER_FOUR,ENGINEERING,Craft,4,5,Acts as primary maintainer for existing critical systems
+CHAPTER_FOUR,ENGINEERING,Craft,4,6,
+CHAPTER_FOUR,ENGINEERING,Craft,5,1,Defines policies for the engineering discipline that encourage quality work
+CHAPTER_FOUR,ENGINEERING,Craft,5,2,Identifies and eliminates single points of failure throughout the discipline
+CHAPTER_FOUR,ENGINEERING,Craft,5,3,Identifies and solves systemic problems with current architecture
+CHAPTER_FOUR,ENGINEERING,Craft,5,4,"Creates a compelling technical vision with company-level impact, anticipating future needs"
+CHAPTER_FOUR,ENGINEERING,Craft,5,5,
+CHAPTER_FOUR,ENGINEERING,Craft,5,6,
+CHAPTER_ONE,FRONTEND,Foundations,1,1,Is building proficiency with our web technologies and becoming comfortable with learning new technologies and skills
+CHAPTER_ONE,FRONTEND,Foundations,1,2,"Has experience with web development frameworks, HTML, CSS, JavaScript, and website accessibility"
+CHAPTER_ONE,FRONTEND,Foundations,1,3,Is ble to perform assigned tasks and tickets with occasional assistance
+CHAPTER_ONE,FRONTEND,Foundations,1,4,Is able to help estimate tickets while working on refining estimation skills
+CHAPTER_ONE,FRONTEND,Foundations,1,5,"Has an understanding of wireframing, UX design, and UI patterns"
+CHAPTER_ONE,FRONTEND,Foundations,1,6,Has experience developing and testing across multiple browsers
+CHAPTER_ONE,FRONTEND,Foundations,2,1,"Focuses on expanding experience and proficiency in our web technology practices, with solid understanding of relevant areas"
+CHAPTER_ONE,FRONTEND,Foundations,2,2,"Is well versed with web development frameworks, HTML, CSS, JavaScript and website accessibility"
+CHAPTER_ONE,FRONTEND,Foundations,2,3,Is able to perform assigned tasks and tickets close to estimated time with minimal assistance
+CHAPTER_ONE,FRONTEND,Foundations,2,4,Is able to provide reliable estimates for tickets given a complete context
+CHAPTER_ONE,FRONTEND,Foundations,2,5,Has a practical understanding of DevOps and how it is related to their work
+CHAPTER_ONE,FRONTEND,Foundations,2,6,Is able to make open source contributions and proactively does so
+CHAPTER_ONE,FRONTEND,Foundations,3,1,Independently scopes and implements solutions for their project/team
+CHAPTER_ONE,FRONTEND,Foundations,3,2,"Is proficient in all relevant technical skills, and is able to move quickly. Maintains awareness of industry trends and tools"
+CHAPTER_ONE,FRONTEND,Foundations,3,3,Is able to complete tickets reasonably close to estimated time without needing to be reminded
+CHAPTER_ONE,FRONTEND,Foundations,3,4,Demonstrates the ability to come up with solid technical solutions to ambiguous or open-ended problems
+CHAPTER_ONE,FRONTEND,Foundations,3,5,Often gives support to others in their areas of strongest skill
+CHAPTER_ONE,FRONTEND,Foundations,3,6,Accurately estimates ticketed work
+CHAPTER_ONE,FRONTEND,Foundations,4,1,Has a deep understanding of our architecture and how their domain fits within it. Systematically thinks through potential design impacts on other teams and the company
+CHAPTER_ONE,FRONTEND,Foundations,4,2,"Is expert in our processes, also helping define them. Keeps tests up to date"
+CHAPTER_ONE,FRONTEND,Foundations,4,3,"Independently scopes, designs, and delivers solutions for large, complex challenges"
+CHAPTER_ONE,FRONTEND,Foundations,4,4,Debugs expertly within their primary focus area
+CHAPTER_ONE,FRONTEND,Foundations,4,5,"Provides oversight, coaching, and guidance through code and design reviews"
+CHAPTER_ONE,FRONTEND,Foundations,4,6,"Incredibly knowledgeable in their area of expertise, oftern to a degree that is recongized far beyond our walls"
+CHAPTER_ONE,FRONTEND,Foundations,5,1,Is seen as a leader and contributor across the organization
+CHAPTER_ONE,FRONTEND,Foundations,5,2,"Primary expert in multiple areas of our stack, incredibly knowledgeable in several domains"
+CHAPTER_ONE,FRONTEND,Foundations,5,3,Designs and builds industry-leading techniques to solve complex problems
+CHAPTER_ONE,FRONTEND,Foundations,5,4,Anticipates technical challenges and thoroughly explores alternatives and trade-offs
+CHAPTER_ONE,FRONTEND,Foundations,5,5,"Focuses on technical decision making, leading work that affects one or more complex systems and mission-critical areas"
+CHAPTER_ONE,FRONTEND,Foundations,5,6,Explores technologies with sizable potential impact for Palantir
+CHAPTER_TWO,FRONTEND,Coding,1,1,"Writes front-end code that is sometimes production-ready, but usually requires iteration before shipping"
+CHAPTER_TWO,FRONTEND,Coding,1,2,Is becoming comfortable working with one or two areas of front-end code
+CHAPTER_TWO,FRONTEND,Coding,1,3,Receives and integrates feedback from front-end code reviews to ship high-quality code
+CHAPTER_TWO,FRONTEND,Coding,1,4,Participates in front-end code reviews and architecture design
+CHAPTER_TWO,FRONTEND,Coding,1,5,
+CHAPTER_TWO,FRONTEND,Coding,1,6,
+CHAPTER_TWO,FRONTEND,Coding,2,1,Writes front-end code that usually ships promptly by receiving and successfully integrating critical input from code reviews. Work rarely needs to be rewritten before delivery
+CHAPTER_TWO,FRONTEND,Coding,2,2,Follows style guides
+CHAPTER_TWO,FRONTEND,Coding,2,3,Ships maintainable front-end code that works and is understandable by teammates
+CHAPTER_TWO,FRONTEND,Coding,2,4,"Is becoming comfortable diving in and making changes to many areas of code, not just a single area of code"
+CHAPTER_TWO,FRONTEND,Coding,2,5,"Provides helpful, timely front-end code reviews"
+CHAPTER_TWO,FRONTEND,Coding,2,6,
+CHAPTER_TWO,FRONTEND,Coding,3,1,Consistently delivers front-end code that sets the standard for quality and maintainability
+CHAPTER_TWO,FRONTEND,Coding,3,2,"Understands large swaths of the code base with a deep knowledge and ability to ""reach in and touch the right levers."" Able to move rapidly as a result"
+CHAPTER_TWO,FRONTEND,Coding,3,3,"Writes consistently reliable code, so input from code reviewers is high-level only"
+CHAPTER_TWO,FRONTEND,Coding,3,4,"Provides front-end code review feedback that is sought after, respected, and often instructional"
+CHAPTER_TWO,FRONTEND,Coding,3,5,Writes meaningful front-end code reviews
+CHAPTER_TWO,FRONTEND,Coding,3,6,Translates design solutions into high-quality front-end code
+CHAPTER_TWO,FRONTEND,Coding,4,1,Has mastered the skills to ship quickly
+CHAPTER_TWO,FRONTEND,Coding,4,2,Has mastery in some relevant technical skills; good understanding of full stack
+CHAPTER_TWO,FRONTEND,Coding,4,3,Provides mentorship and technical guidance to more junior teammates
+CHAPTER_TWO,FRONTEND,Coding,4,4,Provides highly insightful code review feedback that addresses high-level thoughts
+CHAPTER_TWO,FRONTEND,Coding,4,5,"Writes highly insightful, comprehensive front-end code reviews"
+CHAPTER_TWO,FRONTEND,Coding,4,6,
+CHAPTER_TWO,FRONTEND,Coding,5,1,"Builds cutting-edge web applications, with a focus on client side"
+CHAPTER_TWO,FRONTEND,Coding,5,2,Leads code testing integration and oversees quality system performance
+CHAPTER_TWO,FRONTEND,Coding,5,3,"Is seen as a leader who advances the state of the art, and is a contributor to the broader technical community"
+CHAPTER_TWO,FRONTEND,Coding,5,4,"Constantly learning new web technologies, can navigate and make legacy front-end code maintainable"
+CHAPTER_TWO,FRONTEND,Coding,5,5,Leads code reviews and guides software architecture decisions
+CHAPTER_TWO,FRONTEND,Coding,5,6,
+CHAPTER_THREE,FRONTEND,Web Technologies,1,1,Makes minor modifications to existing work
+CHAPTER_THREE,FRONTEND,Web Technologies,1,2,Fixes simple design quality issues
+CHAPTER_THREE,FRONTEND,Web Technologies,1,3,"Uses CSS appropriately, following style guide"
+CHAPTER_THREE,FRONTEND,Web Technologies,1,4,
+CHAPTER_THREE,FRONTEND,Web Technologies,1,5,
+CHAPTER_THREE,FRONTEND,Web Technologies,1,6,
+CHAPTER_THREE,FRONTEND,Web Technologies,2,1,Makes sensible abstractions based on template and code patterns
+CHAPTER_THREE,FRONTEND,Web Technologies,2,2,Specs and builds interactive components independently
+CHAPTER_THREE,FRONTEND,Web Technologies,2,3,Prototypes simple new features quickly
+CHAPTER_THREE,FRONTEND,Web Technologies,2,4,Builds modal systems
+CHAPTER_THREE,FRONTEND,Web Technologies,2,5,
+CHAPTER_THREE,FRONTEND,Web Technologies,2,6,
+CHAPTER_THREE,FRONTEND,Web Technologies,3,1,Provides useful design feedback and suggests feasible alternatives
+CHAPTER_THREE,FRONTEND,Web Technologies,3,2,Performs systemic tasks to significantly minimize bundle size
+CHAPTER_THREE,FRONTEND,Web Technologies,3,3,Acts a caretaker for all of web client code
+CHAPTER_THREE,FRONTEND,Web Technologies,3,4,Prototypes with code using modern front-end frameworks and digital pattern library
+CHAPTER_THREE,FRONTEND,Web Technologies,3,5,
+CHAPTER_THREE,FRONTEND,Web Technologies,3,6,
+CHAPTER_THREE,FRONTEND,Web Technologies,4,1,Pioneers architecture migrations that reduce programmer burden
+CHAPTER_THREE,FRONTEND,Web Technologies,4,2,Implements complex UI transitions that bring delight
+CHAPTER_THREE,FRONTEND,Web Technologies,4,3,Makes architectural decisions that eliminate entire classes of bugs
+CHAPTER_THREE,FRONTEND,Web Technologies,4,4,
+CHAPTER_THREE,FRONTEND,Web Technologies,4,5,
+CHAPTER_THREE,FRONTEND,Web Technologies,4,6,
+CHAPTER_THREE,FRONTEND,Web Technologies,5,1,Invents new techniques to mitigate browser constraints when feasible
+CHAPTER_THREE,FRONTEND,Web Technologies,5,2,Identifies and solves systemic problems with current architecture
+CHAPTER_THREE,FRONTEND,Web Technologies,5,3,Defines a long-term vision for web client and ensures projects are in service of it
+CHAPTER_THREE,FRONTEND,Web Technologies,5,4,Implements omni directional data flow to completion
+CHAPTER_THREE,FRONTEND,Web Technologies,5,5,
+CHAPTER_THREE,FRONTEND,Web Technologies,5,6,
+CHAPTER_FOUR,FRONTEND,Craft,1,1,"Understands the entire web development process, including design, development, and deployment and has some back-end knowledge as well"
+CHAPTER_FOUR,FRONTEND,Craft,1,2,Builds responsive and adaptive websites with guidance of senior FED
+CHAPTER_FOUR,FRONTEND,Craft,1,3,
+CHAPTER_FOUR,FRONTEND,Craft,1,4,
+CHAPTER_FOUR,FRONTEND,Craft,1,5,
+CHAPTER_FOUR,FRONTEND,Craft,1,6,
+CHAPTER_FOUR,FRONTEND,Craft,2,1,"Understands and demonstrates knowledge of accessibility needs, concerns, design, and best practices"
+CHAPTER_FOUR,FRONTEND,Craft,2,2,"Builds semantic, accessible, and maintainable front-end interfaces"
+CHAPTER_FOUR,FRONTEND,Craft,2,3,Accurately translates prototypes and design into working interfaces
+CHAPTER_FOUR,FRONTEND,Craft,2,4,
+CHAPTER_FOUR,FRONTEND,Craft,2,5,
+CHAPTER_FOUR,FRONTEND,Craft,2,6,
+CHAPTER_FOUR,FRONTEND,Craft,3,1,Supports complex and secure components for modern browsers written in the latest web standards
+CHAPTER_FOUR,FRONTEND,Craft,3,2,Works with UX to develop and maintain processes that ensure our tools and practices are up to date
+CHAPTER_FOUR,FRONTEND,Craft,3,3,Gives thoughtful front-end code reviews as a domain expert
+CHAPTER_FOUR,FRONTEND,Craft,3,4,Implements systems that enable better testing
+CHAPTER_FOUR,FRONTEND,Craft,3,5,Adds tooling to improve front-end code base quality
+CHAPTER_FOUR,FRONTEND,Craft,3,6,Maintains high coding standards and practices to exercise quality control on all aspects of web development
+CHAPTER_FOUR,FRONTEND,Craft,4,1,Takes the lead on browser/device acceptance testing and bug fixing
+CHAPTER_FOUR,FRONTEND,Craft,4,2,Collaborates with UX designers to promote and achieve optimal solutions for clients
+CHAPTER_FOUR,FRONTEND,Craft,4,3,Leads client demos
+CHAPTER_FOUR,FRONTEND,Craft,4,4,Maintains and improves front-end code bases across a wide variety of projects
+CHAPTER_FOUR,FRONTEND,Craft,4,5,Improves quality of work to meet the level of Palantir's best solutions through repeated iteration
+CHAPTER_FOUR,FRONTEND,Craft,4,6,
+CHAPTER_FOUR,FRONTEND,Craft,5,1,Defines policies for the team that encourage quality work
+CHAPTER_FOUR,FRONTEND,Craft,5,2,Identifies and eliminates single points of failure throughout the chapter
+CHAPTER_FOUR,FRONTEND,Craft,5,3,Secures time and resources from execs to support great quality
+CHAPTER_FOUR,FRONTEND,Craft,5,4,"Creates a compelling technical vision with company-level impact, anticipating future needs"
+CHAPTER_FOUR,FRONTEND,Craft,5,5,
+CHAPTER_FOUR,FRONTEND,Craft,5,6,
+CHAPTER_ONE,PM,Foundations,1,1,Is building proficiency in our PM practice and becoming comfortable with learning new skills
+CHAPTER_ONE,PM,Foundations,1,2,Able to develop comprehensive projects plans with assistance of seniors project managers
+CHAPTER_ONE,PM,Foundations,1,3,"Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and develop according to plan"
+CHAPTER_ONE,PM,Foundations,1,4,Is well-versed with project management methodologies and client collaboration tools
+CHAPTER_ONE,PM,Foundations,1,5,"Actively listens, understands, and responds to clients and team members"
+CHAPTER_ONE,PM,Foundations,1,6,
+CHAPTER_ONE,PM,Foundations,2,1,"Focused on expanding experience and proficiency in our PM practice, establishing and promoting brand guidelines, best practices and standards"
+CHAPTER_ONE,PM,Foundations,2,2,Develops a detailed project plan to monitor and track progress
+CHAPTER_ONE,PM,Foundations,2,3,Manages the relationship with the client and all stakeholders
+CHAPTER_ONE,PM,Foundations,2,4,"Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, might have different responses from the client, and even different definitions of work"
+CHAPTER_ONE,PM,Foundations,2,5,Monitors client satisfaction
+CHAPTER_ONE,PM,Foundations,2,6,Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders
+CHAPTER_ONE,PM,Foundations,2,7,"Able to create, manage and maintain agreements, budgets, scope of work, and timelines"
+CHAPTER_ONE,PM,Foundations,2,8,"Works within the given parameters delivered from Sales, such as problem statetment, budget"
+CHAPTER_ONE,PM,Foundations,3,1,"Effectively leads a project from concept to completion, acting as the liaison between the project team and clients"
+CHAPTER_ONE,PM,Foundations,3,2,"Facilitates team through Agile practices, including daily scrum, grooming and retrospectives"
+CHAPTER_ONE,PM,Foundations,3,3,"Manages changes to the project scope, budget and timeline using appropriate verification techniques"
+CHAPTER_ONE,PM,Foundations,3,4,"Delegates project tasks based on junior staff members' individual strengths, skill sets and experience levels"
+CHAPTER_ONE,PM,Foundations,3,5,Measures project performance using appropriate tools and techniques
+CHAPTER_ONE,PM,Foundations,3,6,Participates and/or drives feasibility studies and proposals for evaluation by appropriate key stakeholders
+CHAPTER_ONE,PM,Foundations,3,7,Serves as an internal quality control check for the project
+CHAPTER_ONE,PM,Foundations,3,8,"Provides status reporting regarding project milestones, deliverables, dependencies, risks and issues, communicating across leadership"
+CHAPTER_ONE,PM,Foundations,4,1,Defines success criteria and disseminates them to involved parties throughout project and program life cycle
+CHAPTER_ONE,PM,Foundations,4,2,"Establishes practices, templates, policies, tools and partnerships to expand and mature the PM capabilities for the organization"
+CHAPTER_ONE,PM,Foundations,4,3,Sets and continually manages project expectations while delegating and managing deliverable with team members and stakeholders
+CHAPTER_ONE,PM,Foundations,4,4,Guides team members about every aspect of the project so that the team members can understand their tasks fully and act on them efficiently
+CHAPTER_ONE,PM,Foundations,4,5,"Keeps an eye of latest strategies, tools and terminologies used in project management worldwide"
+CHAPTER_ONE,PM,Foundations,4,6,
+CHAPTER_ONE,PM,Foundations,5,1,Guides and directs PM team members by providing direction to team and project success
+CHAPTER_ONE,PM,Foundations,5,2,"Leverages constraints that exist for projects around resources, budget, time, quality and scope in order to meet project outcomes"
+CHAPTER_ONE,PM,Foundations,5,3,Manages dilemmas and paradoxes as they occur throughout the project lifecycle by identifying and communicating trade-offs with key stakeholders
+CHAPTER_ONE,PM,Foundations,5,4,Seen as a leader and contributor in the broader technical side across the organization
+CHAPTER_ONE,PM,Foundations,5,5,Capability to track project benefits realization and lessons learned activities to feed into ongoing improvements
+CHAPTER_ONE,PM,Foundations,5,6,
+CHAPTER_TWO,PM,Plan,1,1,"Understands all the agreements, budgets,scope of work, and timeline"
+CHAPTER_TWO,PM,Plan,1,2,Creates and maintains comprehensive project documentation with guidance
+CHAPTER_TWO,PM,Plan,1,3,"Assists in the definition of project scope and objectives, involving all relevant stakeholders and ensuring technical feasibility"
+CHAPTER_TWO,PM,Plan,1,4,
+CHAPTER_TWO,PM,Plan,1,5,
+CHAPTER_TWO,PM,Plan,1,6,
+CHAPTER_TWO,PM,Plan,2,1,"Ensures that the client and project team work together to define, document, and estimate a scope of work that fits within the budget"
+CHAPTER_TWO,PM,Plan,2,2,Ensures whether any changes to scope and its estimates remain within the budget
+CHAPTER_TWO,PM,Plan,2,3,"Updates the resource forecasting tool for all members of the team, based on project needs and budget limits, on a consistent and timely basis"
+CHAPTER_TWO,PM,Plan,2,4,"Monitors progress of the project against scope, quality, safety, time and cost baselines including approved changes with guidance"
+CHAPTER_TWO,PM,Plan,2,5,"Maintain a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client with guidance"
+CHAPTER_TWO,PM,Plan,2,6,"Monitors the billing schedule, and makes that schedule visible and accessible to the financial team and client"
+CHAPTER_TWO,PM,Plan,3,1,Develops a detailed project plan to monitor and track progress
+CHAPTER_TWO,PM,Plan,3,2,"Manages progress of the project against scope, quality, safety, time and cost baselines including approved changes"
+CHAPTER_TWO,PM,Plan,3,3,Categorizes needs versus wants
+CHAPTER_TWO,PM,Plan,3,4,"Ensures that changes are tangible, strategic and achievable"
+CHAPTER_TWO,PM,Plan,3,5,"Creates and maintains a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client"
+CHAPTER_TWO,PM,Plan,3,6,"Creates and maintains a billing schedule, and makes that schedule visible and accessible to the financial team and client"
+CHAPTER_TWO,PM,Plan,3,7,Ensures resource availability and allocation
+CHAPTER_TWO,PM,Plan,3,8,"Develops spreadsheets, diagrams and process maps to document needs"
+CHAPTER_TWO,PM,Plan,4,1,Leads discussions to review and disposition scope change requests
+CHAPTER_TWO,PM,Plan,4,2,Ensures that change fits with the project strategy and desired outcomes
+CHAPTER_TWO,PM,Plan,4,3,Establishes a completion plan that includes all aspects of delivery of project outcomes across the entire project life cycle
+CHAPTER_TWO,PM,Plan,4,4,"Demonstrates ability to discuss the standard project process with the team and client, in order to ensure that timelines, schedules and milestones reflect the appropriate path for the project to follow"
+CHAPTER_TWO,PM,Plan,4,5,Ensures that team members have awareness and visibility into the amount of time they are resourced to the project each week
+CHAPTER_TWO,PM,Plan,4,6,
+CHAPTER_TWO,PM,Plan,5,1,Ensures that the project is adding to the strategic advantage of the client
+CHAPTER_TWO,PM,Plan,5,2,Defends product integrity from misinformed decision making either externally or internally
+CHAPTER_TWO,PM,Plan,5,3,"Assists in dispute, negotiation, arbitration or litigation, as needed"
+CHAPTER_TWO,PM,Plan,5,4,Understands what it means to run a business-driven PM plan; from strategy through execution to the realization of business benefits; with the clients at the center of it all
+CHAPTER_TWO,PM,Plan,5,5,
+CHAPTER_TWO,PM,Plan,5,6,
+CHAPTER_THREE,PM,Risk Mitigation,1,1,Determines which risks may affect the project and documents their characteristics with assistance of senior PM
+CHAPTER_THREE,PM,Risk Mitigation,1,2,Ability to understand and document potential consequences of risks as they occur
+CHAPTER_THREE,PM,Risk Mitigation,1,3,Documents how project will demonstrate quality compliance
+CHAPTER_THREE,PM,Risk Mitigation,1,4,Builds quality metrics and quality checklists with guidance
+CHAPTER_THREE,PM,Risk Mitigation,1,5,
+CHAPTER_THREE,PM,Risk Mitigation,1,6,
+CHAPTER_THREE,PM,Risk Mitigation,2,1,Effectively determines which risks may affect the project and documents their characteristics with some assistance of senior PM
+CHAPTER_THREE,PM,Risk Mitigation,2,2,Conducts ongoing risk assessments with guidance
+CHAPTER_THREE,PM,Risk Mitigation,2,3,Monitors status of project risks with guidance
+CHAPTER_THREE,PM,Risk Mitigation,2,4,Audits quality requirements and results from quality control measurements with guidance
+CHAPTER_THREE,PM,Risk Mitigation,2,5,
+CHAPTER_THREE,PM,Risk Mitigation,2,6,
+CHAPTER_THREE,PM,Risk Mitigation,3,1,Oversees the risk identification and definition process
+CHAPTER_THREE,PM,Risk Mitigation,3,2,Ability to prioritize risks for further analysis or action by assessing their probabilities of occurrence and impact
+CHAPTER_THREE,PM,Risk Mitigation,3,3,Develops options and actions to enhance opportunities and reduce threats to project objectives
+CHAPTER_THREE,PM,Risk Mitigation,3,4,Initiates risk response plans when necessary
+CHAPTER_THREE,PM,Risk Mitigation,3,5,"Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks"
+CHAPTER_THREE,PM,Risk Mitigation,3,6,Regularly review quality metrics with the team
+CHAPTER_THREE,PM,Risk Mitigation,3,7,"Establishes, updates, and utilizes key performance indicators"
+CHAPTER_THREE,PM,Risk Mitigation,4,1,Develops guidance and direction on how the project risks will be managed throughout the project
+CHAPTER_THREE,PM,Risk Mitigation,4,2,Oversees and guides the risk analysis process and the development of risk responses
+CHAPTER_THREE,PM,Risk Mitigation,4,3,Links the outcomes to the organisational goals and the client's vision and mission statements through measurable key performance indicators and a review and assurance process
+CHAPTER_THREE,PM,Risk Mitigation,4,4,Maintains awareness and visibility of the risks to the client and team throughout the course of the project
+CHAPTER_THREE,PM,Risk Mitigation,4,5,Ensures audits of quality process are executed in accordance with quality management plan
+CHAPTER_THREE,PM,Risk Mitigation,4,6,
+CHAPTER_THREE,PM,Risk Mitigation,5,1,"Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response"
+CHAPTER_THREE,PM,Risk Mitigation,5,2,Drives and leads creative actions to enhance opportunities and reduce threats to project objectives
+CHAPTER_THREE,PM,Risk Mitigation,5,3,Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issues
+CHAPTER_THREE,PM,Risk Mitigation,5,4,"Clearly articulates the risks to the client, including their negative impact on the company's overall business"
+CHAPTER_THREE,PM,Risk Mitigation,5,5,Identifies quality standards for use by the team that establish performance and quality expectations
+CHAPTER_THREE,PM,Risk Mitigation,5,6,
+CHAPTER_FOUR,PM,Information,1,1,"Actively listens and understands stakeholders needs, interests, and influence for project success"
+CHAPTER_FOUR,PM,Information,1,2,Develops and adapts communication strategies with guidance
+CHAPTER_FOUR,PM,Information,1,3,
+CHAPTER_FOUR,PM,Information,1,4,
+CHAPTER_FOUR,PM,Information,1,5,
+CHAPTER_FOUR,PM,Information,1,6,
+CHAPTER_FOUR,PM,Information,2,1,"Undertakes analysis, evaluation of options (as appropriate), and takes/recommends actions"
+CHAPTER_FOUR,PM,Information,2,2,Matches level of information to stakeholder
+CHAPTER_FOUR,PM,Information,2,3,Provides accurate and factual information
+CHAPTER_FOUR,PM,Information,2,4,"Develops and maintains project tracking, dashboards and information systems"
+CHAPTER_FOUR,PM,Information,2,5,
+CHAPTER_FOUR,PM,Information,2,6,
+CHAPTER_FOUR,PM,Information,3,1,Engages with stakeholders proactively
+CHAPTER_FOUR,PM,Information,3,2,"Establishes regular interaction w/ stakeholders, including formal and informal channels"
+CHAPTER_FOUR,PM,Information,3,3,Uses appropriate communications method for information disseminated
+CHAPTER_FOUR,PM,Information,3,4,Appropriately matches level of formality to meetings and audience
+CHAPTER_FOUR,PM,Information,3,5,Able to effectively summarize key points and issues in a clear and concise manner
+CHAPTER_FOUR,PM,Information,3,6,Regularly conducts follow-up with stakeholders
+CHAPTER_FOUR,PM,Information,4,1,"Engages with team members in developing reports, analyzing issues, evaluating progress, and option analysis"
+CHAPTER_FOUR,PM,Information,4,2,Proactively responds to issues and concerns
+CHAPTER_FOUR,PM,Information,4,3,Balances speed of provision of information against reliability of information
+CHAPTER_FOUR,PM,Information,4,4,Seeks validation of information
+CHAPTER_FOUR,PM,Information,4,5,Provides feedback on templates and guidelines including examples and methods based on experiences and lessons learned
+CHAPTER_FOUR,PM,Information,4,6,
+CHAPTER_FOUR,PM,Information,5,1,"Evaluates, develops and executes responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle"
+CHAPTER_FOUR,PM,Information,5,2,Builds processes and structures that ensure transfer of information as a whole that influence strategic decisions and produce foundations for new capabilities
+CHAPTER_FOUR,PM,Information,5,3,Continually seeks new information to assess the effectiveness of the project strategy
+CHAPTER_FOUR,PM,Information,5,4,
+CHAPTER_FOUR,PM,Information,5,5,
+CHAPTER_FOUR,PM,Information,5,6,
+CHAPTER_ONE,UX,Foundations,1,1,Is building proficiency in our user experience practice and becoming comfortable with learning new technologies and skills
+CHAPTER_ONE,UX,Foundations,1,2,"Has experience with web accessibility, usability and core design tools. Understands web design constraints and opportunities"
+CHAPTER_ONE,UX,Foundations,1,3,"Understands and applies how to use an existing pattern library to create wireframes, working with a more senior designer as a guide or mentor"
+CHAPTER_ONE,UX,Foundations,1,4,Has knowledge in marketing and consumer behavior trends applicable to their work
+CHAPTER_ONE,UX,Foundations,1,5,"Develops user-centered website strategies with guidance, in alignment with client goals and objectives"
+CHAPTER_ONE,UX,Foundations,1,6,"Has hands-on experience with UX tools which may include Sketch, InVision, prototyping tools, and Google Analytics"
+CHAPTER_ONE,UX,Foundations,2,1,"Focuses on expanding experience and proficiency in our user experience practice, and establishing and promoting brand guidelines, best practices, and standards"
+CHAPTER_ONE,UX,Foundations,2,2,"Is well-versed with web accessibility, usability, and core design tools. Has a deep understanding of web design constraints"
+CHAPTER_ONE,UX,Foundations,2,3,"Applies existing team pattern libraries, provides examples of patterns in the wild, and explores multiple design options"
+CHAPTER_ONE,UX,Foundations,2,4,Works with other team members to understand constraints and design feasibility
+CHAPTER_ONE,UX,Foundations,2,5,"Contributes to strategic positioning, organizational insight, and client road maps"
+CHAPTER_ONE,UX,Foundations,2,6,Is well-versed in marketing and consumer behavior trends
+CHAPTER_ONE,UX,Foundations,2,7,"Develops user-centered website strategies that support user tasks, satisfy client goals, and contribute original documentation for projects"
+CHAPTER_ONE,UX,Foundations,2,8,Sketches and creates wireframes
+CHAPTER_ONE,UX,Foundations,2,9,"Designs and performs competitive analysis, proactively researches examples in the wild, seeks out industry trends, and performs and analyzes usability test plans"
+CHAPTER_ONE,UX,Foundations,2,10,"Collaborates with project managers, designers, and engineers to scope time and effort involved in design projects"
+CHAPTER_ONE,UX,Foundations,3,1,"Effectively leads and takes ownership of the UX process, articulates strategy, best practices, and process collaborating with designers to inform and define the project"
+CHAPTER_ONE,UX,Foundations,3,2,"Is always able to articulate the ""why"" of design decisions to clients and the Palantir team"
+CHAPTER_ONE,UX,Foundations,3,3,"Always explores multiple options, evaluates and articulates pros and cons of choices, recommends user experience decisions, understands when to use low- and high-fidelity design tools, and contributes to existing team pattern libraries"
+CHAPTER_ONE,UX,Foundations,3,4,Constantly partners with engineers and developers to understand technology system constraints and align strategy and design work in an efficient and effective way at the project level
+CHAPTER_ONE,UX,Foundations,3,5,"Designs, performs, and analyzes usability test plans"
+CHAPTER_ONE,UX,Foundations,3,6,Is able to articulate the difference and relationship between the different IA and content strategy deliverables
+CHAPTER_ONE,UX,Foundations,3,7,Collaborates with project managers and engineers to define and implement innovative solutions for the product direction
+CHAPTER_ONE,UX,Foundations,4,1,"Efficiently balances and manages complex user, business, and technical requirements to make design decisions"
+CHAPTER_ONE,UX,Foundations,4,2,"Guides junior team members in critical, high-level, design problem solving"
+CHAPTER_ONE,UX,Foundations,4,3,"Strategically analyzes the risks, benefits, and opportunities of various solutions"
+CHAPTER_ONE,UX,Foundations,4,4,Seeks out discipline-wide opportunities for improvement
+CHAPTER_ONE,UX,Foundations,4,5,Considers client constraints and technical feasibility of potential design solutions
+CHAPTER_ONE,UX,Foundations,4,6,
+CHAPTER_ONE,UX,Foundations,5,1,Guides UX team members by providing strategic direction that best honors the client's business
+CHAPTER_ONE,UX,Foundations,5,2,"Develops a unique user experience practice approach that outlines and defines activities, deliverables, and value to be used in sales and marketing initiatives"
+CHAPTER_ONE,UX,Foundations,5,3,Designs and builds industry-leading solutions to solve complex UX problems and advocates for the best user experience possible
+CHAPTER_ONE,UX,Foundations,5,4,Serves as client focal point for all UX practices
+CHAPTER_ONE,UX,Foundations,5,5,"Anticipates technical challenges, exploring alternatives and trade-offs thoroughly"
+CHAPTER_ONE,UX,Foundations,5,6,Is recognized as a leader and contributor across the organization
+CHAPTER_TWO,UX,Discovery and Definition,1,1,"Gather business requirements and user insights through surveys, user tests, and interviews with the assistance of senior strategists"
+CHAPTER_TWO,UX,Discovery and Definition,1,2,Uses basic feedback techniques to improve relatively simple strategy concepts and techniques
+CHAPTER_TWO,UX,Discovery and Definition,1,3,"Through observation and interaction with senior strategists, is building the skills and expertise to plan information validation activities and incorporate user and stakeholder feedback into design iterations"
+CHAPTER_TWO,UX,Discovery and Definition,1,4,"Understands client business/objectives and identifies opportunities for client ""wins"" through digital design, tools, and experiences"
+CHAPTER_TWO,UX,Discovery and Definition,1,5,
+CHAPTER_TWO,UX,Discovery and Definition,1,6,
+CHAPTER_TWO,UX,Discovery and Definition,2,1,Conducts validations/interviews with users and stakeholders with assistance of a more senior strategist
+CHAPTER_TWO,UX,Discovery and Definition,2,2,Applies feedback techniques to improve discovery and definition strategies
+CHAPTER_TWO,UX,Discovery and Definition,2,3,Works with more senior team members to plan information validation activities and incorporate user feedback into design changes
+CHAPTER_TWO,UX,Discovery and Definition,2,4,Generates users and stakeholders interview questions and documentation
+CHAPTER_TWO,UX,Discovery and Definition,2,5,"Works with FEDs and engineers to research technical documentation, APIs, integration with third party technologies, etc. to confirm project requirements and expectations "
+CHAPTER_TWO,UX,Discovery and Definition,2,6,
+CHAPTER_TWO,UX,Discovery and Definition,3,1,"Plans moderately complicated requirements-gathering, analysis, design-validation, and usability-testing activities"
+CHAPTER_TWO,UX,Discovery and Definition,3,2,Independently conducts information-validation activities with internal and external stakeholders
+CHAPTER_TWO,UX,Discovery and Definition,3,3,Conducts gap and task analysis
+CHAPTER_TWO,UX,Discovery and Definition,3,4,Communicates usability findings and provides recommendations for improving user-interface experience
+CHAPTER_TWO,UX,Discovery and Definition,3,5,Facilitates the planning and execution of on-site discovery workshops
+CHAPTER_TWO,UX,Discovery and Definition,3,6,Conducts comparative analysis
+CHAPTER_TWO,UX,Discovery and Definition,3,7,Perform content audits and competitor site analysis
+CHAPTER_TWO,UX,Discovery and Definition,4,1,Independently conducts all aspects of complex user-research programs— from early-stage requirements to summative usability testing
+CHAPTER_TWO,UX,Discovery and Definition,4,2,"Adapts user-research techniques to inform both new and ongoing, complex, product-development effort"
+CHAPTER_TWO,UX,Discovery and Definition,4,3,"Communicates usability findings, metrics, and associated design strategies to large, distributed product teams"
+CHAPTER_TWO,UX,Discovery and Definition,4,4,Discusses usability metrics and their impact on product ROI
+CHAPTER_TWO,UX,Discovery and Definition,4,5,
+CHAPTER_TWO,UX,Discovery and Definition,4,6,
+CHAPTER_TWO,UX,Discovery and Definition,5,1,"Expertly conducts all stages of user research— including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability--testing activities"
+CHAPTER_TWO,UX,Discovery and Definition,5,2,Simultaneously plans and drives multiple user-research activities across widely divergent product domains
+CHAPTER_TWO,UX,Discovery and Definition,5,3,"Drives and conducts all aspects of formal summative testing, including the use of metrics and competitive benchmark testing"
+CHAPTER_TWO,UX,Discovery and Definition,5,4,Communicates usability metrics and findings to clients and the Palantir team
+CHAPTER_TWO,UX,Discovery and Definition,5,5,"Clearly provides clients with a plan, tools, behaviors, and best practices for addressing their usability issues"
+CHAPTER_TWO,UX,Discovery and Definition,5,6,Creates new user-elicitation methods and techniques to suit novel research needs and requirements
+CHAPTER_THREE,UX,Strategy and Design,1,1,Understands learnings from discovery and research to inform audience definition and identify key personas
+CHAPTER_THREE,UX,Strategy and Design,1,2,"Synthesizes findings from discovery process, identifying opportunities and issues with guidance of senior strategists"
+CHAPTER_THREE,UX,Strategy and Design,1,3,
+CHAPTER_THREE,UX,Strategy and Design,1,4,
+CHAPTER_THREE,UX,Strategy and Design,1,5,
+CHAPTER_THREE,UX,Strategy and Design,1,6,
+CHAPTER_THREE,UX,Strategy and Design,2,1,"Synthesizes findings from discovery process, effectively identifying opportunities and issues"
+CHAPTER_THREE,UX,Strategy and Design,2,2,Leverages learnings from discovery and research to inform audience definition and identify key personas
+CHAPTER_THREE,UX,Strategy and Design,2,3,Demonstrates user journeys through journey mapping
+CHAPTER_THREE,UX,Strategy and Design,2,4,
+CHAPTER_THREE,UX,Strategy and Design,2,5,
+CHAPTER_THREE,UX,Strategy and Design,2,6,
+CHAPTER_THREE,UX,Strategy and Design,3,1,Works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences
+CHAPTER_THREE,UX,Strategy and Design,3,2,"Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives"
+CHAPTER_THREE,UX,Strategy and Design,3,3,"Understands user needs and intents then translate that to information architecture and content outline(s), collaborating with designers"
+CHAPTER_THREE,UX,Strategy and Design,3,4,Collaborates with designers on design strategy and visual design application for projects
+CHAPTER_THREE,UX,Strategy and Design,3,5,Conducts usability tests
+CHAPTER_THREE,UX,Strategy and Design,3,6,
+CHAPTER_THREE,UX,Strategy and Design,4,1,"Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives, demonstrate a level of excellence, and may be achieved within budget"
+CHAPTER_THREE,UX,Strategy and Design,4,2,Provides high-level sitemap and wireframes or works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences
+CHAPTER_THREE,UX,Strategy and Design,4,3,Crafts high-level content strategy recommendations
+CHAPTER_THREE,UX,Strategy and Design,4,4,"Guides the creation of wireframes for key pages in the new website, and explains wireframes to the client"
+CHAPTER_THREE,UX,Strategy and Design,4,5,
+CHAPTER_THREE,UX,Strategy and Design,4,6,
+CHAPTER_THREE,UX,Strategy and Design,5,1,"Demonstrates ability to generate and translate insights into actionable digital opportunities through reports, presentations, personas, user flows, journey maps, etc."
+CHAPTER_THREE,UX,Strategy and Design,5,2,"Balances creativity with structure, collaborating with designers, project managers, and engineers"
+CHAPTER_THREE,UX,Strategy and Design,5,3,"Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
+CHAPTER_THREE,UX,Strategy and Design,5,4,Articulates a design strategy or approach that will impact the user experience across products or platforms and supports these ideas with sound reasoning and data
+CHAPTER_THREE,UX,Strategy and Design,5,5,
+CHAPTER_THREE,UX,Strategy and Design,5,6,
+CHAPTER_FOUR,UX,User-centered Design,1,1,"Conducts basic, early-stage design validations with stakeholders"
+CHAPTER_FOUR,UX,User-centered Design,1,2,Uses basic feedback techniques to improve relatively simple design concepts
+CHAPTER_FOUR,UX,User-centered Design,1,3,Helps create clean and simple user-centred designs with guidance of senior teammates
+CHAPTER_FOUR,UX,User-centered Design,1,4,
+CHAPTER_FOUR,UX,User-centered Design,1,5,
+CHAPTER_FOUR,UX,User-centered Design,1,6,
+CHAPTER_FOUR,UX,User-centered Design,2,1,Conducts design validations with stakeholders with assistance of a more senior designer
+CHAPTER_FOUR,UX,User-centered Design,2,2,Applies feedback techniques to improve design concepts
+CHAPTER_FOUR,UX,User-centered Design,2,3,Works with more senior team members to plan design validation activities and incorporate user feedback into design iteration
+CHAPTER_FOUR,UX,User-centered Design,2,4,"Generates user profiles, recruitment copy, test scripts, and reports"
+CHAPTER_FOUR,UX,User-centered Design,2,5,
+CHAPTER_FOUR,UX,User-centered Design,2,6,
+CHAPTER_FOUR,UX,User-centered Design,3,1,"Designs and delivers wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces"
+CHAPTER_FOUR,UX,User-centered Design,3,2,Independently conducts design validation activities with internal and external stakeholders
+CHAPTER_FOUR,UX,User-centered Design,3,3,"Translates concepts into user flows, wireframes, mockups, and prototypes that lead to intuitive user experiences"
+CHAPTER_FOUR,UX,User-centered Design,3,4,Assists the front-end developers to ensure the UX design achieves design goals and meets end-user needs
+CHAPTER_FOUR,UX,User-centered Design,3,5,
+CHAPTER_FOUR,UX,User-centered Design,3,6,
+CHAPTER_FOUR,UX,User-centered Design,4,1,Demonstrates the ability to identify design problems and devise solutions
+CHAPTER_FOUR,UX,User-centered Design,4,2,Takes a user-centered design approach and rapidly tests and iterates the work
+CHAPTER_FOUR,UX,User-centered Design,4,3,Ensures design production is efficient and delivers at the highest quality in accordance with UX's best practices and processes
+CHAPTER_FOUR,UX,User-centered Design,4,4,
+CHAPTER_FOUR,UX,User-centered Design,4,5,
+CHAPTER_FOUR,UX,User-centered Design,4,6,
+CHAPTER_FOUR,UX,User-centered Design,5,1,"Makes strategic design and user experience decisions related to both core and new functions, and features"
+CHAPTER_FOUR,UX,User-centered Design,5,2,"Creates high-quality design deliverables and executes based on UX goals and priorities, acting as an expert in the field"
+CHAPTER_FOUR,UX,User-centered Design,5,3,Stays on top of UX design trends and looks for creative ways to inspire delightful experiences
+CHAPTER_FOUR,UX,User-centered Design,5,4,
+CHAPTER_FOUR,UX,User-centered Design,5,5,
+CHAPTER_FOUR,UX,User-centered Design,5,6,
+CHAPTER_ONE,UI,Foundations,1,1,Is building proficiency in our design practice and becoming comfortable with learning new technologies and skills
+CHAPTER_ONE,UI,Foundations,1,2,"Has experience with web accessibility, usability and core development tools"
+CHAPTER_ONE,UI,Foundations,1,3,"Understands web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility"
+CHAPTER_ONE,UI,Foundations,1,4,
+CHAPTER_ONE,UI,Foundations,1,5,
+CHAPTER_ONE,UI,Foundations,1,6,
+CHAPTER_ONE,UI,Foundations,2,1,"Focuses on expanding experience and proficiency in our design practice, establishing and promoting brand guidelines, best practices and standards"
+CHAPTER_ONE,UI,Foundations,2,2,"Is well-versed with web accessibility, usability, and core design tools"
+CHAPTER_ONE,UI,Foundations,2,3,"Collaborates with project managers, strategists, and engineers to scope time and effort involved in design projects"
+CHAPTER_ONE,UI,Foundations,2,4,Serves as a strategic visual design resource
+CHAPTER_ONE,UI,Foundations,2,5,"Has a deep understanding of web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility"
+CHAPTER_ONE,UI,Foundations,2,6,"Designs a web experience that's best for the user and accurately reflects the client's goals, objectives, and brand identity"
+CHAPTER_ONE,UI,Foundations,3,1,"Is always able to articulate the ""why"" of design decisions"
+CHAPTER_ONE,UI,Foundations,3,2,Constantly seeks input from the engineering and implementation team to validate and ensure that the design is executable
+CHAPTER_ONE,UI,Foundations,3,3,Executes all visual design stages from concept to HTML/CSS browser
+CHAPTER_ONE,UI,Foundations,3,4,"Has experience designing from user experience journeys, and realistic use cases to create functional and delightful designs"
+CHAPTER_ONE,UI,Foundations,3,5,"Drives the design process and serves as a gatekeeper and clients ""brand expert"""
+CHAPTER_ONE,UI,Foundations,3,6,Conceptualizes original ideas that bring simplicity and user friendliness to complex design roadblocks
+CHAPTER_ONE,UI,Foundations,3,7,"Collaborates with project managers and engineers to define and implement innovative solutions for the product direction, design and interactions"
+CHAPTER_ONE,UI,Foundations,3,8,Serves as a resident expert of digital tools and is skilled in developing digital design concepts
+CHAPTER_ONE,UI,Foundations,4,1,"Efficiently balances and manages complex user, business, and technical requirements to make design decisions"
+CHAPTER_ONE,UI,Foundations,4,2,"Guides junior team members in critical, high-level, design problem solving"
+CHAPTER_ONE,UI,Foundations,4,3,"Strategically analyzes the risks, benefits, and opportunities of various solutions"
+CHAPTER_ONE,UI,Foundations,4,4,Seeks out chapter-wide opportunities for improvements
+CHAPTER_ONE,UI,Foundations,4,5,Ability to understand constraints and technical feasibility prior to client presentations
+CHAPTER_ONE,UI,Foundations,4,6,
+CHAPTER_ONE,UI,Foundations,5,1,Guides and directs UI team members by providing strategic direction to best deliver client's business goals
+CHAPTER_ONE,UI,Foundations,5,2,Is able to articulate a unique user experience approach that delivers client value for use in sales and marketing initiatives
+CHAPTER_ONE,UI,Foundations,5,3,Designs and builds industry-leading solutions to solve UI complex problems and advocates for the best user experience possible
+CHAPTER_ONE,UI,Foundations,5,4,Serves as client focal point for all UI practices
+CHAPTER_ONE,UI,Foundations,5,5,"Anticipates technical challenges, exploring alternatives and trade offs thoroughly"
+CHAPTER_ONE,UI,Foundations,5,6,Seen as a leader and contributor in the organization
+CHAPTER_TWO,UI,Information Architecture,1,1,Employs basic information-architecture concepts correctly
+CHAPTER_TWO,UI,Information Architecture,1,2,Evaluates structural design decisions for feature sets that are well defined or limited in scope with the assistance of senior designers
+CHAPTER_TWO,UI,Information Architecture,1,3,Understands the basic usability principles and trade offs behind their own design concepts
+CHAPTER_TWO,UI,Information Architecture,1,4,
+CHAPTER_TWO,UI,Information Architecture,1,5,
+CHAPTER_TWO,UI,Information Architecture,1,6,
+CHAPTER_TWO,UI,Information Architecture,2,1,Employs complicated information-architecture concepts correctly
+CHAPTER_TWO,UI,Information Architecture,2,2,Makes good structural design decisions for feature sets that are well defined or limited in scope
+CHAPTER_TWO,UI,Information Architecture,2,3,"Applies existing information patterns, working with a more senior designer as a guide"
+CHAPTER_TWO,UI,Information Architecture,2,4,
+CHAPTER_TWO,UI,Information Architecture,2,5,
+CHAPTER_TWO,UI,Information Architecture,2,6,
+CHAPTER_TWO,UI,Information Architecture,3,1,"Explores multiple, alternative information-architecture solutions before choosing a design direction"
+CHAPTER_TWO,UI,Information Architecture,3,2,"Balances relatively complicated user, business, and technical requirements to arrive at sound information-architecture designs"
+CHAPTER_TWO,UI,Information Architecture,3,3,Can explain the usability rationale and trade offs of one information architecture versus another
+CHAPTER_TWO,UI,Information Architecture,3,4,
+CHAPTER_TWO,UI,Information Architecture,3,5,
+CHAPTER_TWO,UI,Information Architecture,3,6,
+CHAPTER_TWO,UI,Information Architecture,4,1,Creates new architectural design patterns for a product when necessary
+CHAPTER_TWO,UI,Information Architecture,4,2,Employs complex information-architecture concepts quickly and correctly
+CHAPTER_TWO,UI,Information Architecture,4,3,"Explores multiple, alternative product information architectures to create a broad range of alternative design concepts"
+CHAPTER_TWO,UI,Information Architecture,4,4,Understands the usability rationale and trade-offs for different product-level information architectures and can clearly articulate these to the team
+CHAPTER_TWO,UI,Information Architecture,4,5,
+CHAPTER_TWO,UI,Information Architecture,4,6,
+CHAPTER_TWO,UI,Information Architecture,5,1,Creates new architectural design patterns that impact entire product lines and user-interface frameworks
+CHAPTER_TWO,UI,Information Architecture,5,2,"Creates insightful, timely, compelling information-architecture designs for highly complex problem spaces"
+CHAPTER_TWO,UI,Information Architecture,5,3,"Efficiently balances and manages complex user, business, and technical requirements to make sound information-architecture design decisions"
+CHAPTER_TWO,UI,Information Architecture,5,4,"Anticipates and thinks through the entire breadth of impacts that information-architecture decisions can have on users, product teams, and UX designers"
+CHAPTER_TWO,UI,Information Architecture,5,5,Understands and can compellingly articulate the usability trade-offs of various information-architecture design approaches for entire product families and frameworks
+CHAPTER_TWO,UI,Information Architecture,5,6,
+CHAPTER_THREE,UI,Interaction Design,1,1,"Effectively solves routine interaction design problems, gathering the information necessary to weigh a limited set of options and arrive at sound conclusions"
+CHAPTER_THREE,UI,Interaction Design,1,2,Escalates problems that are beyond the scope of their design capabilities for resolution by a more experienced designer
+CHAPTER_THREE,UI,Interaction Design,1,3,Writes select components of interaction design strategy documentation
+CHAPTER_THREE,UI,Interaction Design,1,4,
+CHAPTER_THREE,UI,Interaction Design,1,5,
+CHAPTER_THREE,UI,Interaction Design,1,6,
+CHAPTER_THREE,UI,Interaction Design,2,1,Efficiently solves moderately difficult interaction design problems that impact people within their team or other related team
+CHAPTER_THREE,UI,Interaction Design,2,2,"Applies existing interaction patterns, working with a more senior designer as a guide or mentor"
+CHAPTER_THREE,UI,Interaction Design,2,3,
+CHAPTER_THREE,UI,Interaction Design,2,4,
+CHAPTER_THREE,UI,Interaction Design,2,5,
+CHAPTER_THREE,UI,Interaction Design,2,6,
+CHAPTER_THREE,UI,Interaction Design,3,1,Efficiently and creatively solves complicated interaction design problems that impact the stakeholders
+CHAPTER_THREE,UI,Interaction Design,3,2,Looks beyond obvious solutions and experiments with different approaches to solving problems
+CHAPTER_THREE,UI,Interaction Design,3,3,"Develops solutions for problems that stretch their own design capabilities, but requests review and approval from a more senior designer"
+CHAPTER_THREE,UI,Interaction Design,3,4,Facilitates effective problem solving in meetings and teams
+CHAPTER_THREE,UI,Interaction Design,3,5,
+CHAPTER_THREE,UI,Interaction Design,3,6,
+CHAPTER_THREE,UI,Interaction Design,4,1,Efficiently solves complex and difficult interaction design problems that impact the team or entire organization
+CHAPTER_THREE,UI,Interaction Design,4,2,Accurately defines the amount and kinds of information that is needed to gather for problem solving
+CHAPTER_THREE,UI,Interaction Design,4,3,Anticipates and proactively works to circumvent roadblocks to solutions
+CHAPTER_THREE,UI,Interaction Design,4,4,Creates new interaction design patterns for a product when necessary
+CHAPTER_THREE,UI,Interaction Design,4,5,Identifies underlying or hidden problems or trends across the organization
+CHAPTER_THREE,UI,Interaction Design,4,6,
+CHAPTER_THREE,UI,Interaction Design,5,1,Efficiently and creatively solves even the most complex and difficult interaction design problems that impact the team or entire company
+CHAPTER_THREE,UI,Interaction Design,5,2,Creates new interaction design patterns that impact entire product lines and user interface frameworks
+CHAPTER_THREE,UI,Interaction Design,5,3,"Asks critical, insightful questions and probes all fruitful sources for relevant information to facilitate problem solving"
+CHAPTER_THREE,UI,Interaction Design,5,4,"Leads the team in critical, high-level design problem solving"
+CHAPTER_THREE,UI,Interaction Design,5,5,"Strategically analyzes the risks, benefits, and opportunities of various solutions"
+CHAPTER_THREE,UI,Interaction Design,5,6,
+CHAPTER_FOUR,UI,Visual Design,1,1,Competently creates basic layouts and produces mockups of designs with the guidance of senior designers
+CHAPTER_FOUR,UI,Visual Design,1,2,Turns image-based designs into a functional HTML and CSS code-based style guide
+CHAPTER_FOUR,UI,Visual Design,1,3,
+CHAPTER_FOUR,UI,Visual Design,1,4,
+CHAPTER_FOUR,UI,Visual Design,1,5,
+CHAPTER_FOUR,UI,Visual Design,1,6,
+CHAPTER_FOUR,UI,Visual Design,2,1,"Builds accurate wireframes, following visual design guidelines"
+CHAPTER_FOUR,UI,Visual Design,2,2,Collaborates with other visual designers to produce graphics resource files for user interfaces
+CHAPTER_FOUR,UI,Visual Design,2,3,
+CHAPTER_FOUR,UI,Visual Design,2,4,
+CHAPTER_FOUR,UI,Visual Design,2,5,
+CHAPTER_FOUR,UI,Visual Design,2,6,
+CHAPTER_FOUR,UI,Visual Design,3,1,Creates sophisticated layouts and produce mockups of designs
+CHAPTER_FOUR,UI,Visual Design,3,2,"Builds complicated wireframes, following visual design guidelines"
+CHAPTER_FOUR,UI,Visual Design,3,3,"Uses various techniques to create drafts, models, and prototypes"
+CHAPTER_FOUR,UI,Visual Design,3,4,
+CHAPTER_FOUR,UI,Visual Design,3,5,
+CHAPTER_FOUR,UI,Visual Design,3,6,
+CHAPTER_FOUR,UI,Visual Design,4,1,"Builds complex, accurate wireframes, following visual design guidelines"
+CHAPTER_FOUR,UI,Visual Design,4,2,"Collaborates with strategists, project managers, and engineers to understand how all aspects of a product's functionality would work within an established visual design framework"
+CHAPTER_FOUR,UI,Visual Design,4,3,"Maintains an awareness of trends in visual design and guides other visual designers in implementing cutting-edge, visual design solutions for their products"
+CHAPTER_FOUR,UI,Visual Design,4,4,Has a strong understanding of web design systems and helps create a standardized toolbox of components to draw from
+CHAPTER_FOUR,UI,Visual Design,4,5,
+CHAPTER_FOUR,UI,Visual Design,4,6,
+CHAPTER_FOUR,UI,Visual Design,5,1,"Expertly builds complex, accurate wireframes, following visual design guidelines"
+CHAPTER_FOUR,UI,Visual Design,5,2,Guides and directs the UI design team to understand how all aspects of a product's functionality would work within an established visual design framework
+CHAPTER_FOUR,UI,Visual Design,5,3,Stays abreast of trends in visual design and expertly guides other visual designers in implementing cutting-edge solutions for their products
+CHAPTER_FOUR,UI,Visual Design,5,4,"Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
+CHAPTER_FOUR,UI,Visual Design,5,5,
+CHAPTER_FOUR,UI,Visual Design,5,6,
