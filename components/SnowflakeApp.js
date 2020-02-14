@@ -74,22 +74,22 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Kiki',
-    cohort: 'Management',
-    title: 'Specialist, IV',
+    name: 'Palantiri Name',
+    cohort: 'Project Management',
+    title: 'Project Manager, III',
     milestoneByTrack: {
-      'CHAPTER_ONE': 1,
+      'CHAPTER_ONE': 2,
       'CHAPTER_TWO': 2,
-      'CHAPTER_THREE': 3,
-      'CHAPTER_FOUR': 1,
+      'CHAPTER_THREE': 2,
+      'CHAPTER_FOUR': 2,
       'PLANNING': 2,
-      'COLLABORATION': 4,
-      'CLIENT_VALUE': 1,
-      'INITIATIVE': 4,
-      'COMPLEXITY': 3,
+      'COLLABORATION': 2,
+      'CLIENT_VALUE': 2,
+      'INITIATIVE': 2,
+      'COMPLEXITY': 2,
       'MATURITY': 2,
       'LEARNING': 2,
-      'INFLUENCE': 4,
+      'INFLUENCE': 2,
       'MENTORSHIP': 2,
     },
     focusedTrackId: 'CHAPTER_ONE'

@@ -38,18 +38,21 @@ export const milestoneToPoints = (milestone: Milestone): number => {
 }
 
 export const pointsToLevels = {
-'0': '1.0',
-'20': '2.0',
-'40': '3.0',
-'60': '4.0',
-'80': '5.0',
-'110': '6.0',
-'140': '7.0',
-'180': '8.0',
-'220': '9.0',
-'270': '10.0',
-'320': '11.0',
-'370': '12.0',
+  '0': '1.0',
+  '20': '2.0',
+  '40': '3.0',
+  '60': '4.0',
+  '80': '5.0',
+  '110': '6.0',
+  '140': '7.0',
+  '180': '8.0',
+  '220': '9.0',
+  '270': '10.0',
+  '320': '11.0',
+  '370': '12.0',
+  '420': '13.0',
+  '470': '14.0',
+  '520': '15.0',
 }
 
 export const maxLevel = 135
@@ -79,7 +82,6 @@ type Tracks = {|
   'LEARNING': Track,
   'INFLUENCE': Track,
   'MENTORSHIP': Track,
-  'EVANGELISM': Track,
 |}
 
 export const tracks: Tracks = {
@@ -88,581 +90,570 @@ export const tracks: Tracks = {
   "CHAPTER_THREE": {"category": "A"},
   "CHAPTER_FOUR": {"category": "A"},
   "PLANNING":{
-    "milestone": "PLANNING",
-    "cohort": "DEFAULT",
-    "category": "B",
-    "displayName": "Plan and Coordination",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
-    "milestones": [
-        {
-            "summary": "Effectively delivers individual tasks",
-            "signals": [
-                "Commits to and completes tasks within expected time frame, holding themselves accountable",
-                "Delivers tightly-scoped projects efficiently",
-                "Is learning how to break down tasks and make accurate task estimation",
-                "Writes effective technical specs outlining approach"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Effectively delivers small projects",
-            "signals": [
-                "Mastering ability to break down tasks, plan, estimate, and cut scope to ship on time",
-                "Performs research and considers alternative approaches",
-                "Defines and hits interim milestones",
-                "Prioritizes in alignment with company goals",
-                "Consistently and accurately estimates the time a given task will take"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Effectively delivers projects through a small team",
-            "signals": [
-                "Can smoothly and successfully execute an initiative, set milestones for a team, and proactively ensure all core goals are hit, even if plans need to be changed to do so",
-                "Integrates business needs into project planning",
-                "Chooses appropriate project management strategy based on context",
-                "Demonstrates the ability to prioritize the most important work for the company\/team",
-                "Delegates tasks to others appropriately",
-                "When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity",
-            "signals": [
-                "Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically",
-                "Manages dependencies on other projects and teams",
-                "Leverages recognition of repeated project patterns",
-                "Able to reduce complexity and prioritize the most important work for the company",
-                "Helps define roadmaps and set vision for long-term projects",
-                "Often \"sees around corners\" and addresses issues before they become critical"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Manages major company pushes delivered by multiple teams",
-            "signals": [
-                "Able to plan and execute large, complex projects with interdependencies across teams and systems",
-                "Leads teams of teams, and coordinates effective cross- functional collaboration",
-                "Considers external constraints and business objectives when planning",
-                "Can successfully manage (and adjust\/update plans for) large efforts that start out with unclear or competing goals",
-                "Creates plans that define the direction of the whole team moving forward",
-                "Demonstrates the ability to deal with any project or initiative that is critical to the future of the company"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "COLLABORATION":{
-    "milestone": "COLLABORATION",
-    "cohort": "DEFAULT",
-    "category": "B",
-    "displayName": "Communication & Collaboration",
-    "description": "Focus on teamwork, communication skills, asking for and giving feedback, collaboration, and documentation",
-    "milestones": [
-        {
-            "summary": "Communicates and Collaborates effectively to close stakeholders when called upon, and incorporates constructive feedback",
-            "signals": [
-                "Communicates project status clearly and effectively",
-                "Learning to work collaboratively on a team and communicate in meetings",
-                "Proactively asks questions and reaches out for help to get unblocked",
-                "Voices concerns or need for clarification to their project teams and, if necessary, chapter leads or POD members",
-                "Developing ability to communicate complicated concepts simply and successfully w\/ a non-technical audience",
-                "Accepts feedback graciously and learns from experience"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Communicates and Collaborates with the wider team appropriately, focusing on timeliness and good quality information",
-            "signals": [
-                "Communicates clearly at team and client-facing meetings, escalating blockers quickly, clarifying requirements and sharing assumption",
-                "Collaborates professionally with teammates and peers",
-                "Adapts their message for a diverse technical audience, choosing appropriate tools and approach for accurate and timely communication",
-                "Seeks feedback to improve and receives it well. Gives timely, helpful feedback to peers",
-                "Makes effective presentations to smaller audiences",
-                "Proactively adds documentation to help others"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
-            "signals": [
-                "Communicates technical issues and decisions clearly and proactively to a cross-functional audience, sharing bad news quickly as well",
-                "Builds relationships cross-functionally, with project team, chapter members and clients",
-                "Engages in productive dialog even when there are conflicting views, both inside and outside team. Seeks to understand other points of view",
-                "Actively seeks feedback to improve and receives it well. Gives timely, helpful feedback to peers",
-                "Mastering ability to communicate complicated concepts simply and successfully w\/ a non-technical audience. Makes effective presentations to larger audiences"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
-            "signals": [
-                "Communicates complex concepts, issues, and easily makes compelling presentations to sophisticated audiences",
-                "Works with key stakeholders effectively to solve problems and make decisions",
-                "Demonstrates the ability to always share status with all stakeholders, and proactively remedy communication issue",
-                "Holds others and themselves accountable for their commitments and results by recieving and giving feedback",
-                "Spurs and facilitates meaningful discussion around complex issues",
-                "Writes insightful documentation"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets best practices for others",
-            "signals": [
-                "Comfortably communicates and presents complex issues to diverse audiences inside and outside the company",
-                "Coordinates communication among teams and stakeholders, including the right people at the right times",
-                "Relied upon as one of the best communicators of complicated technical subjects, tradeoffs, and decisions",
-                "Holds others and themselves accountable for their commitments and results by providing thoughtful feedback",
-                "Communicates company-level objectives clearly and how they relate to initiatives and projects",
-                "Proactively identifies and remedies communication gaps and issues"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "CLIENT_VALUE":{
-    "milestone": "CLIENT_VALUE",
-    "cohort": "DEFAULT",
-    "category": "B",
-    "displayName": "Client Value",
-    "description": "Focus on delivering repeatable value to our clients by ensuring excellent quality products and services in our Value Stream Delivery",
-    "milestones": [
-        {
-            "summary": "Delivers consistently good quality work",
-            "signals": [
-                "Delivers consistently good outcomes within project scope and following quality standards",
-                "Understands how the tasks impact and fit within the broader scope and objectives of the final product or service",
-                "Shows a willingness to do what it takes to achieve the desired results",
-                "Writes clear comments and documentation"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Increases the robustness and reliability of work, and devotes time to polishing products and systems",
-            "signals": [
-                "Works efficiently and puts in the time and effort necessary to deliver great outcomes",
-                "Realizes when progress toward desired results is stalling and takes action to get back on track",
-                "Accepts difficult tasks and gets right to work",
-                "Devotes time to find the most effective ways to meet the commitments"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Improves others' ability to deliver great quality work",
-            "signals": [
-                "Guides others in defining their assignments as results to accomplish",
-                "Gives thoughtful feedback as a domain expert",
-                "Helps others to orient toward achieving results, supporting them when facing problems and issues",
-                "Holds others accountable for their commitments and results and a succesful client release",
-                "Required for eligibility to be a Project Owner",
-                "Required eligibility to be a Consultant"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Advocates for and models great quality with proactive actions ensuring project and team success",
-            "signals": [
-                "Helps others to maximize their potential through mentoring and coaching",
-                "Focuses on high-level client relationship and satisfaction",
-                "Anticipates unusual issues and problems, taking steps to minimize their impacts on results",
-                "Holds institutional knowledge",
-                "Required eligibility to be a Project Advocate",
-                "Required eligibility to be a Service Line Lead"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Enables and encourages the entire organization to deliver client value as a central part of the development process",
-            "signals": [
-                "Defines policies for the organization that encourage quality work and maximize client value",
-                "Identifies and eliminates single points of failure throughout the organization",
-                "Secures time and resources from execs to support great quality",
-                "Connects clients to strategic and technical solutions to solve complex business challenges"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "INITIATIVE":{
-    "milestone": "INITIATIVE",
-    "cohort": "DEFAULT",
-    "category": "C",
-    "displayName": "Initiative",
-    "description": "Challenges the status quo and takes ownership and initiative outside of mandated work",
-    "milestones": [
-        {
-            "summary": "Identifies opportunities for organizational change and\/or product\/service improvements",
-            "signals": [
-                "Is becoming comfortable owning small tasks independently, but typically relies on more experienced teammates when tackling larger issues",
-                "Typically relies on teammates and senior people for setting project goals and breaking down larger projects into discrete tasks",
-                "Asks leadership team probing questions"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
-            "signals": [
-                "Regularly leads smaller projects or tasks, but relies on experienced teammates when working on major project investments",
-                "Often leans on others to help problem-solve project ambiguity",
-                "Takes on safety tasks proactively when blocked elsewhere",
-                "Often relies on others to help cut scope when necessary",
-                "Consistently delivers on reasonably well-defined projects",
-                "Is becoming more comfortable to define project goals for more ambiguous projects"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Causes change to positively impact an entire team or instigates a minor feature or service",
-            "signals": [
-                "Regularly leads multiple and large projects or initiatives",
-                "Takes ownership of tasks that nobody owns or wants",
-                "Seeks out others involved in a situation to learn their perspectives",
-                "Leaves things better than when found them",
-                "Comfortable with ambiguity; relied on to remove it when necessary",
-                "Demonstrates the ability to handle significant major tasks from definition through execution with the successful outcome never seriously in doubt"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Effects change that has a substantial positive impact on the organization or a major product\/service impact",
-            "signals": [
-                "Develops and Tests new ways to solve systemic issues",
-                "Exemplifies grit and determination in the face of persistent obstacles",
-                "Instigates major new features, services, or architectures",
-                "Seeks creative and innovative ways to improve and develop what they are doing",
-                "Can effectively cope with change"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Effects change that has a substantial positive impact on the whole company",
-            "signals": [
-                "Champions and pioneers new technologies and ideas to solve new classes of problem",
-                "Galvanizes the entire company and garners buy in for a new strategy",
-                "Changes complex organizational processes",
-                "Embraces ambiguity and a Growth mindset"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "COMPLEXITY":{
-    "milestone": "COMPLEXITY",
-    "cohort": "DEFAULT",
-    "category": "C",
-    "displayName": "Maturity",
-    "description": "Strenghtens Palantir's values to create and collaborate in open, diverse, and inclusive environments",
-    "milestones": [
-        {
-            "summary": "Is available and present on current teams, and works to contribute positively to company culture",
-            "signals": [
-                "Is learning how to integrate complicated information to identify strategies and solutions with the assistance of teammates and senior people",
-                "Breaks down complicated problems or concepts into clear and manageable components",
-                "Is able to effectively deal and understand views opposing their own views and is open to criticism and learning"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
-            "signals": [
-                "Quickly integrates complicated information to identify strategies and solutions with the assitance of teammates and senior people",
-                "Demonstrates keen insights into situtations",
-                "Assimilates large amounts of information",
-                "Responds flexibly and strategically to ongoing change"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Contributes to improving team relatedness, and helps build a culture of lending support",
-            "signals": [
-                "Identifies and deals with complicated situations to provide the best solutions",
-                "Demonstrates a sense of agency",
-                "Adopts a proactive approach instead of a reactive one",
-                "Demonstrates humility and patience",
-                "Demonstrates critical inquiry",
-                "Promotes exploration as a response to uncertainty"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Creates an environment that provides people with autonomy, master, and purpose, and lifts everyone up",
-            "signals": [
-                "Seeks to cultivate innovation in the face of uncertainty, both internally and externally",
-                "Offers new perspectives to overcome complexity constraints in organizations",
-                "Selects systems thinking approaches to fit with the level of complexity and the nature of the environment",
-                "Focuses on the core message or desired result of a complex plan or idea",
-                "Deals with change in an open and collaborative way to facilitate a beneficial resolution",
-                "Simplifies complexities by pulling together ideas, issues, and observations into a single concept or a clear presentation"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Lives the company values, guards healthy work environment, and defines policies that support relatedness between teams",
-            "signals": [
-                "Builds the capacity in other people to cope with complexity",
-                "Leads change strategies to facilitate human resource management",
-                "Has an holistic vision -- is driven by an holistic vision of the project outcomes",
-                "Creates an organizational architecture that facilitates a positive work environment",
-                "Helps others to move through the change curve, from resistors to adopters",
-                "Has high energy - gives energy to those around them"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "MATURITY":{
-    "milestone": "MATURITY",
-    "cohort": "DEFAULT",
-    "category": "C",
-    "displayName": "Compexity",
-    "description": "Ability to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain",
-    "milestones": [
-        {
-            "summary": "Identifies complicated situations with guidance, following best practices",
-            "signals": [
-                "Learns and exhibits Palantir core values: collaboration, bringing out the best in each other, curiosity, thinking ahead, and accessibility.",
-                "Treats colleagues and clients with respect",
-                "Objectively evaluates whether they've met their goals",
-                "Takes responsibility of own words and actions"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Integrates complicated ideas and approaches with guidance, following best practices",
-            "signals": [
-                "Brings your best self to your work, and makes space for others to do so as well",
-                "Trusts teammates, assumes good intent, and able to disagree and commit",
-                "Finds ways to ramp up and engage new hires quickly",
-                "Able to deliver their work despite inevitable distractions",
-                "Exhibits a growth mindset with regard to feedback"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Handles complicated situations and focus on learning and creativity in the organization",
-            "signals": [
-                "Self-aware of strengths and weaknesses",
-                "Embraces big challenges as opportunities for growth and learning",
-                "Uses position to raise difficult issues on someone's behalf",
-                "Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company",
-                "Able to change direction quickly based on shifting company and project needs"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Identifies and deals with complex situations by fostering innovation",
-            "signals": [
-                "Goes above and beyond, serving the team without complaint",
-                "Implements concrete action to signficantly improve team inclusivity",
-                "Builds consensus for decisions",
-                "Devotes large amount of time to helping outside direct responsibilities",
-                "Helps individuals maintain resilience in periods of change"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Helps and supports others to deal with complexity by adapating and learning continuously",
-            "signals": [
-                "Demonstrates the ability to de-escalate conflicts and build consensus between team members about technical matters",
-                "Holds individuals, teams, and leadership accountable to Palantir's values",
-                "Sets the tone, policy, and goals around maintaining an open, diverse and inclusive company",
-                "Models and engages others around developing maturity"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "LEARNING":{
-    "milestone": "LEARNING",
-    "cohort": "DEFAULT",
-    "category": "D",
-    "displayName": "Learning & Career Development",
-    "description": "Provides strategic support to individuals to help them build the career they want",
-    "milestones": [
-        {
-            "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
-            "signals": [
-                "Discusses career options and areas of interest informally",
-                "Shares opportunities for improvements and recognizes achievements",
-                "Collects and deliveres feedback"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Formally supports and advocates for one person and provides tools to help them solve career problems",
-            "signals": [
-                "Ensures a group member has an appropriate role on their team",
-                "Offers effective career advice to group members, without being prescriptive",
-                "Creates space for people to talk through challenges",
-                "Provides help on how to have difficult conversations"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
-            "signals": [
-                "Discusses career paths, and creates plans for personal and professional growth",
-                "Advocates to align people with appropriate roles within organization",
-                "Works with POD leads to elevate emerging leaders",
-                "May participate in the hiring process meeting with candidates and offering thoughts to the chapter lead",
-                "Promotes and exhibits psychological safety",
-                "Required elegibility to be a Chapter Peer POD member"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
-            "signals": [
-                "Promotes and exhibits psychological safety, facilitation and collaboration",
-                "Ensures all group members' roles are meeting their career needs",
-                "Initiates the hiring process once approval is given for a new hire",
-                "Helps the team plan and implement discipline-related learning activities",
-                "Required elegibility to be a Chapter Lead"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Supports the development of a signficant part of the management chapter, and widely viewed as an advisor",
-            "signals": [
-                "Works with others on their individual goals to understand how those goals align both with project work and Palantir service lines",
-                "Identifies leadership training opportunities for senior leadership",
-                "Pushes everyone to be as good as they can be, with empathy",
-                "Provides coaching to group leads",
-                "Supports and develops senior leaders",
-                "Serves as an advisor to the CEOs and other key company leaders"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "MENTORSHIP":{
-    "milestone": "MENTORSHIP",
-    "cohort": "DEFAULT",
-    "category": "D",
-    "displayName": "Mentorship",
-    "description": "Provides support to others, spreads knowledge, and develops the team outside formal reporting structures",
-    "milestones": [
-        {
-            "summary": "Receives support from others, assists new hires, and conveys institutional knowledge",
-            "signals": [
-                "Asks for support and advice",
-                "Open to listen and receive feedback",
-                "Act as an onboarding buddy",
-                "Finds ways to ramp up and engage new team members"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Informally mentors individuals in an ad-hoc way and contributes to Palantir's knowledge base",
-            "signals": [
-                "Takes time to understand and explain concepts and best practices",
-                "Makes themself available for informal support and advice",
-                "Provides sound advice when asked",
-                "Offers unprompted feedback to help growth, with empathy",
-                "Avoids siloing information when it can be usefully shared with others"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Teaches small groups of people and guides people to realizations rather than providing the answer",
-            "signals": [
-                "Asks questions to illuminate concepts, rather than stating them",
-                "Uses lessons learned to guide individuals and teams",
-                "Finds tools that work best for a team member's personality",
-                "Brings resources, critical readings, opportunities, or experiences to the attention of others",
-                "Act as sounding board for peers and more junior members"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Actively mentors people by providing knowledge, advice, and resources",
-            "signals": [
-                "Defines an entire curriculum for a discipline",
-                "Draws positive attention to well-modeled mentor and teaching behaviours",
-                "Provides discipline support",
-                "Exhibits enthusiasm in sharing knowledge and expertise",
-                "Demonstrates a positive attitude and acts as a positive role mode",
-                "Helps individuals to find new and challenging opportunities within the organization"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Instills and promotes a culture of learning and development within the entire team",
-            "signals": [
-                "Sets incentive structures to recognize and reward mentorship",
-                "Empowers team members to develop themselves",
-                "Role models productive and healthy mentor relationships",
-                "Open to experimenting and learning practices that are new to the field",
-                "Helps individuals to move out their comfort zone"
-            ],
-            "examples": []
-        }
-    ]
-  },
-  "INFLUENCE":{
-    "milestone": "INFLUENCE",
-    "cohort": "DEFAULT",
-    "category": "D",
-    "displayName": "Influence",
-    "description": "Impacts and promotes Palantir's culture and values positively through leadership and representation of our brand",
-    "milestones": [
-        {
-            "summary": "Represents Palantir well internally and externally, and influences individuals positively",
-            "signals": [
-                "Has project\/team-level impact",
-                "Shares personal and organizational successes with their network",
-                "Communicates genuine and honest excitement about their work externally",
-                "Represents their team well to others in the company"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Represents Palantir well internally and externally, and takes simple actions that positively influence groups of people",
-            "signals": [
-                "Takes meaningful action to introduce people to Palantir",
-                "Represents Palantir appropriately, and well aligned with our core values",
-                "Finds ways to help teammates achieve their goals. Inspires teamwork",
-                "Shares their experience and expertise to help others grow",
-                "Listens to everyone's opinion, and encourages people to speak up"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Works hard to positively influence large groups of people",
-            "signals": [
-                "Mentors or participates in a high visibility way in an external organization",
-                "Builds fruitful partnerships with clients",
-                "Convinces others about technical tradeoffs and decisions",
-                "Identifies and advocates for foundational work and practice improvements in their discipline",
-                "Starting to broaden impact. Considers effects of their work on other teams, as well as identifying and helping to resolve problems facing team",
-                "Builds network of influence to support project otucomes"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Establishes Palantir as an agile, innovative company and workplace to the whole industry",
-            "signals": [
-                "Establishes themself as an industry thought leader who attracts talent",
-                "Educates others about the work of the team",
-                "Leads initiatives across disciplines, even outside their core expertise. Coordinates large and complex projects, including with outside partners",
-                "Contributes to the foundational good of their discipline, defining patterns",
-                "Effectively considers effects of their work on other teams, as well as identifying and helping to resolve problems facing team"
-            ],
-            "examples": []
-        },
-        {
-            "summary": "Serve as a strategic advisor to have positive impact in the industry",
-            "signals": [
-                "Delivers key messages to broad, mainstream audiences",
-                "Influences people with large audiences to talk about Palantir positively",
-                "Has high impact on company's trajectory",
-                "Drives foundational work benefitting their discipline and entire organization",
-                "Serves as a strategic advisor to the CEOs and other key company leaders and be a positive and influential leader across the entire organization"
-            ],
-            "examples": []
-        }
-    ]
+      "milestone": "PLANNING",
+      "cohort": "DEFAULT",
+      "category": "B",
+      "displayName": "Plan and Coordination",
+      "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
+      "milestones": [
+          {
+              "summary": "Effectively organizes and manages delivery of individual tasks",
+              "signals": [
+                  "Commits to and completes tasks within expected time frame, holding themselves accountable",
+                  "Delivers tightly-scoped projects efficiently",
+                  "Is learning how to break down tasks and accurately estimate tasks"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Effectively organizes and manages delivery of small projects",
+              "signals": [
+                  "Is mastering the ability to break down tasks, plan, estimate, and cut scope in order to deliver on time",
+                  "Researches and considers alternative approaches",
+                  "Defines and hits interim milestones",
+                  "Prioritizes in alignment with company goals",
+                  "Consistently and accurately estimates the time a given task will take"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Effectively organizes and manages delivery a small team to deliver a project",
+              "signals": [
+                  "Can smoothly and successfully execute an initiative, set milestones for a team, and proactively ensure all core goals are hit, even if plans need to be changed to do so",
+                  "Integrates business needs into project planning",
+                  "Chooses appropriate project management strategy based on context",
+                  "Demonstrates the ability to prioritize the most important work for the company\/team",
+                  "Delegates tasks to others appropriately",
+                  "When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Effectively organizes and manages delivery of complex and\/or multi-stakeholder projects on a large team",
+              "signals": [
+                  "Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically",
+                  "Manages dependencies on other projects and teams",
+                  "Leverages recognition of repeated project patterns",
+                  "Reduces complexity and prioritizes the most important work for the company",
+                  "Helps define roadmaps and set vision for long-term projects",
+                  "Often \"sees around corners\" and addresses issues before they become critical"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Facilitates major internal and external projects delivered by multiple teams",
+              "signals": [
+                  "Plans and executes large, complex projects with interdependencies across teams and systems",
+                  "Leads teams of teams, and coordinates effective cross-functional collaboration",
+                  "Considers external constraints, opportunities, and business objectives when planning",
+                  "Can successfully manage (and adjust\/update plans for) large efforts that start out with unclear or competing goals",
+                  "Creates plans that define the direction of the whole team moving forward",
+                  "Demonstrates the ability to deal with any project or initiative that is critical to the future of the company"
+              ],
+              "examples": []
+          }
+      ]
+  },"COLLABORATION":{
+      "milestone": "COLLABORATION",
+      "cohort": "DEFAULT",
+      "category": "B",
+      "displayName": "Communication and Collaboration",
+      "description": "Focuses on teamwork, communication skills, asking for and giving feedback, collaboration, and documentation",
+      "milestones": [
+          {
+              "summary": "Communicates and collaborates effectively with close stakeholders when called upon, and incorporates constructive feedback",
+              "signals": [
+                  "Communicates project status clearly and effectively",
+                  "Is learning to work collaboratively on a team and communicate in meetings",
+                  "Proactively asks questions and reaches out for help to get unblocked",
+                  "Voices concerns or need for clarification to their project teams and, if necessary, discipline leaders or POD members",
+                  "Is developing the ability to communicate complicated concepts simply and successfully to a non-technical audience",
+                  "Accepts feedback graciously and learns from experience"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Communicates and collaborates with the wider team appropriately, focusing on timeliness and good quality information",
+              "signals": [
+                  "Communicates clearly at team and client-facing meetings, escalating blockers quickly, clarifying requirements, and sharing assumptions",
+                  "Collaborates professionally with teammates and peers",
+                  "Adapts their message for a diverse audience, choosing appropriate tools and approach for accurate and timely communication",
+                  "Seeks feedback to improve and receives it well. Gives timely, helpful feedback to peers",
+                  "Makes effective presentations to smaller audiences"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
+              "signals": [
+                  "Communicates technical issues and decisions clearly and proactively to a cross-functional audience, sharing bad news quickly as well",
+                  "Builds cross-functional relationships with project team, chapter members, and clients",
+                  "Engages in productive dialog even when there are conflicting views, both inside and outside the team. Seeks to understand other points of viewue",
+                  "Mastering ability to communicate complicated concepts simply and successfully to ensure understanding and appropriate action. Makes effective presentations to larger audiences"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
+              "signals": [
+                  "Communicates complex concepts and issues and easily makes compelling presentations to sophisticated audiences",
+                  "Works with key stakeholders effectively to solve problems and make decisions",
+                  "Demonstrates the ability to always share status with all stakeholders, and proactively remedy communication issues",
+                  "Holds others and themselves accountable for their commitments and results by receiving and giving feedback",
+                  "Spurs and facilitates meaningful discussion around complex issues",
+                  "Offers insightful perspectives"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Influences outcomes at the highest level, moves beyond mere broadcasting, and sets default practices for others",
+              "signals": [
+                  "Comfortably communicates and presents complex issues to diverse audiences inside and outside the company",
+                  "Coordinates communication among teams and stakeholders, including the right people at the right times",
+                  "Is relied upon as one of the best communicators of complicated subjects, trade-offs, and decisions",
+                  "Holds others and themselves accountable for their commitments and results by providing thoughtful feedback and openly receiving feedback",
+                  "Clearly communicates company-level objectives and how they relate to experiments and initiatives",
+                  "Proactively identifies and remedies communication gaps and issues"
+              ],
+              "examples": []
+          }
+      ]
+  },"CLIENT_VALUE":{
+      "milestone": "CLIENT_VALUE",
+      "cohort": "DEFAULT",
+      "category": "B",
+      "displayName": "Client Value",
+      "description": "Is focused on delivering repeatable value to our clients by ensuring excellent quality products and services internally and\/or externally",
+      "milestones": [
+          {
+              "summary": "Delivers, with guidance, consistently quality work focused on highest value to the client and project",
+              "signals": [
+                  "Delivers consistently good outcomes within project scope and following quality standards",
+                  "Understands how tasks impact and fit within the broader scope and objectives of the final product or service",
+                  "Shows a willingness to do what it takes to achieve the desired results",
+                  "Writes clear comments and documentation"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Able to optimize work to deliver for client value as defined by the team",
+              "signals": [
+                  "Works efficiently and puts in the time and effort necessary to deliver great outcomes",
+                  "Realizes when progress toward desired results is stalling and takes action to get back on track",
+                  "Accepts difficult tasks and gets right to work",
+                  "Devotes time to find the most effective ways to meet the commitments",
+                  "Is focused on producing high-quality work"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Helps others make good choices about how to optimize work to deliver client value",
+              "signals": [
+                  "Helps others identify the desired results of their assignments",
+                  "Gives thoughtful feedback as a domain expert",
+                  "Helps others focus on achieving results, supporting them when facing problems and issues",
+                  "Holds others accountable for their commitments, results, and successful client outcomes",
+                  "Required for eligibility to be a Project Owner",
+                  "Required eligibility to be a Consultant"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Advocates for and models how to be proactive to ensure client and team success",
+              "signals": [
+                  "Helps others maximize their potential through mentoring and coaching",
+                  "Focuses on high-level client relationships and satisfaction",
+                  "Anticipates unusual issues and problems, taking steps to minimize their impacts on results",
+                  "Holds institutional knowledge",
+                  "Required eligibility to be a Project Advocate",
+                  "Required eligibility to be a Service Line Lead"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Enables and encourages the entire organization to deliver client value as a central part of our work",
+              "signals": [
+                  "Defines policies for the organization that encourage quality work and maximize client value",
+                  "Identifies and eliminates single points of failure throughout the organization",
+                  "Secures time and resources from executive leadership to support great quality",
+                  "Connects clients to strategic and technical solutions for complex business challenges"
+              ],
+              "examples": []
+          }
+      ]
+  },"INITIATIVE":{
+      "milestone": "INITIATIVE",
+      "cohort": "DEFAULT",
+      "category": "C",
+      "displayName": "Initiative",
+      "description": "Challenges the status quo and takes ownership and initiative outside of mandated work",
+      "milestones": [
+          {
+              "summary": "Identifies opportunities for organizational change and\/or product\/service improvements",
+              "signals": [
+                  "Is becoming comfortable owning small tasks independently, but typically relies on more experienced teammates when tackling larger issues",
+                  "Typically relies on senior teammates to set project goals and break down larger projects into discrete tasks",
+                  "Asks leadership team probing questions"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Causes change to positively impact a few individuals or minor improvement to an existing product or service",
+              "signals": [
+                  "Regularly leads smaller projects or tasks, but relies on experienced teammates when working on major project investments",
+                  "Often leans on others to help problem-solve project ambiguity",
+                  "Proactively takes on executable tasks when blocked elsewhere. Seek help to get unblocked",
+                  "Often relies on others to help cut scope when necessary",
+                  "Consistently delivers on reasonably well-defined projects",
+                  "Is becoming more comfortable defining project goals for more ambiguous projects"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Causes change to positively impact an entire team or instigates a minor feature or service",
+              "signals": [
+                  "Regularly leads multiplee, large projects or initiatives",
+                  "Takes ownership of tasks that nobody owns or wants",
+                  "Seeks out others involved in a situation to learn their perspectives",
+                  "Leaves things better than when they found them",
+                  "Is comfortable with ambiguity and can be relied on to remove blockers when necessary",
+                  "Demonstrates the ability to handle major tasks from definition through execution with consistently successful outcomes"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Effects change that has a substantial positive impact on the organization or a major product\/service impact",
+              "signals": [
+                  "Develops and tests new ways to solve systemic issues",
+                  "Exemplifies grit and determination in the face of persistent obstacles",
+                  "Instigates major new company-wide initiatives",
+                  "Seeks creative and innovative ways to improve and develop what they are doing",
+                  "Can effectively cope with change"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Effects change that has a substantial positive impact on the whole company",
+              "signals": [
+                  "Champions and pioneers new approaches and ideas to solve new classes of problems",
+                  "Galvanizes the entire company and garners buy-in for new strategies",
+                  "Improves complex organizational processes",
+                  "Embraces ambiguity and a growth mindset"
+              ],
+              "examples": []
+          }
+      ]
+  },"COMPLEXITY":{
+      "milestone": "COMPLEXITY",
+      "cohort": "DEFAULT",
+      "category": "C",
+      "displayName": "Maturity",
+      "description": "Strengthens Palantir's values to create and collaborate in open, diverse, and inclusive environments",
+      "milestones": [
+          {
+              "summary": "Is available and present on current teams, and works to contribute positively to company culture",
+              "signals": [
+                  "Is learning how to integrate complicated information to identify strategies and solutions with the assistance of teammates and senior colleagues",
+                  "Breaks down complicated problems or concepts into clear and manageable components",
+                  "Effectively deals with and understands opposing views and is open to learning from feedback"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Steps up, builds connectedness, and takes concrete actions to promote an inclusive culture",
+              "signals": [
+                  "Quickly integrates complicated information to identify strategies and solutions with the assistance of teammates and senior colleagues",
+                  "Demonstrates keen insights into situations",
+                  "Assimilates large amounts of information",
+                  "Responds flexibly and strategically to ongoing change"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Contributes to improving team relatedness and helps build a culture of lending support",
+              "signals": [
+                  "Identifies and deals with complicated situations to provide the best solutions",
+                  "Demonstrates a sense of agency",
+                  "Adopts a proactive approach instead of a reactive one",
+                  "Demonstrates critical inquiry",
+                  "Promotes exploration and experimentation as a response to uncertainty"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Creates an environment that provides people with autonomy, mastery, and purpose, and lifts everyone up",
+              "signals": [
+                  "Seeks to cultivate innovation in the face of uncertainty, both internally and externally",
+                  "Offers new perspectives to overcome complexity constraints",
+                  "Selects systems thinking approaches to fit with the level of complexity and the nature of the environment",
+                  "Focuses on the core message or desired result of a complex plan or idea",
+                  "Deals with change in an open and collaborative way to facilitate a beneficial resolution",
+                  "Simplifies complexities by pulling together ideas, issues, and observations into a single concept or a clear presentation"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Lives the company values, promotes a healthy work environment, and defines policies that support cohesion between teams",
+              "signals": [
+                  "Builds the capacity in other people to cope with complexity",
+                  "Leads others through change",
+                  "Has a holistic vision ",
+                  "Creates an organizational framework that facilitates a positive work environment",
+                  "Helps others to move through the change curve, from resistors to adopters",
+                  "Has engergy and engergizes those around them"
+              ],
+              "examples": []
+          }
+      ]
+  },"MATURITY":{
+      "milestone": "MATURITY",
+      "cohort": "DEFAULT",
+      "category": "C",
+      "displayName": "Complexity",
+      "description": "Is able to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain when the outcome is emergent",
+      "milestones": [
+          {
+              "summary": "Identifies complicated situations with guidance, following best practices",
+              "signals": [
+                  "Learns and exhibits Palantir core values: collaboration, bringing out the best in each other, curiosity, thinking ahead, and accessibility",
+                  "Treats colleagues and clients with respect",
+                  "Objectively evaluates whether they've met their goals",
+                  "Takes responsibility for their own words and actions"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Integrates complicated ideas and approaches with guidance, following best practices",
+              "signals": [
+                  "Brings their best self to work and makes space for others to do so as well",
+                  "Trusts teammates, assumes good intent, and is able to disagree and commit",
+                  "Finds ways to ramp up and engage new hires quickly",
+                  "Is able to deliver their work despite inevitable distractions",
+                  "Exhibits a growth mindset with regard to feedback"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Handles complicated situations and focuses on learning and creativity in the organization",
+              "signals": [
+                  "Is aware of their own strengths and weaknesses",
+                  "Embraces big challenges as opportunities for growth and learning",
+                  "Uses their position to raise difficult issues on behalf of others",
+                  "Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company",
+                  "Is able to change direction quickly based on shifting company and project needs",
+                  "Demonstrates humility and patience"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Identifies and deals with complex situations by fostering innovation",
+              "signals": [
+                  "Goes above and beyond, serving the team without complaint",
+                  "Implements concrete actions to significantly improve team inclusivity",
+                  "Builds consensus for decisions",
+                  "Devotes significant time to helping outside of direct responsibilities",
+                  "Helps individuals maintain resilience in periods of change"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Helps and supports others to deal with complexity by adapting and learning continuously",
+              "signals": [
+                  "Demonstrates the ability to de-escalate conflicts and build consensus between team members about technical matters",
+                  "Holds individuals, teams, and leadership accountable to Palantir's values",
+                  "Sets the tone, policy, and goals around maintaining an open, diverse, and inclusive company",
+                  "Models maturity and cultivates similar development in others"
+              ],
+              "examples": []
+          }
+      ]
+  },"LEARNING":{
+      "milestone": "LEARNING",
+      "cohort": "DEFAULT",
+      "category": "D",
+      "displayName": "Learning and Career Development",
+      "description": "Provides strategic support to individuals to help them build the careers they want",
+      "milestones": [
+          {
+              "summary": "Gives insight into opportunities and helps identify individuals' strengths and weaknesses",
+              "signals": [
+                  "Shares career and professional development options and areas of interest informally",
+                  "Shares opportunities for improvements and recognizes achievements for themselves and others",
+                  "Collects and delivers feedback"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Supports and provides mentorship for one person",
+              "signals": [
+                  "Helps a group member have an appropriate role on the team",
+                  "Offers effective career advice to group members, without being prescriptive",
+                  "Creates space for people to talk through challenges",
+                  "Provides help on how to have difficult conversations",
+                  "Works closely with another to help them learn new skills or continue to improve skills"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Inspires and retains a small group of people and actively pushes them to stretch themselves",
+              "signals": [
+                  "Discusses career paths and helps create plans for others' personal and professional growth",
+                  "Advocates for aligning people with appropriate roles within organization",
+                  "Works with POD leads to elevate emerging leaders",
+                  "May participate in the hiring process meeting with candidates and offering thoughts to the discipline\/hiring lead",
+                  "Promotes and exhibits psychological safety"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Manages interactions and processes between groups, promoting best practices and setting a positive example",
+              "signals": [
+                  "Promotes and exhibits psychological safety, facilitation, and collaboration",
+                  "Ensures all group members' roles are meeting their career needs (e.g., PODs, chapter)",
+                  "Initiates and oversees the hiring process once approval is given for a new hire",
+                  "Helps the team plan and implement discipline-related learning activities"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Supports the development of a significant part of the team and is widely viewed as an advisor",
+              "signals": [
+                  "Works with others on their individual goals to understand how those goals align both with project work and Palantir service lines",
+                  "Identifies leadership training opportunities for senior leadership",
+                  "Pushes everyone to be as good as they can be, with empathy",
+                  "Provides coaching to group leaders",
+                  "Supports and develops senior leaders",
+                  "Serves as an advisor to company leaders"
+              ],
+              "examples": []
+          }
+      ]
+  },"MENTORSHIP":{
+      "milestone": "MENTORSHIP",
+      "cohort": "DEFAULT",
+      "category": "D",
+      "displayName": "Mentorship",
+      "description": "Provides support to others, spreads knowledge, and develops the team outside formal reporting structures",
+      "milestones": [
+          {
+              "summary": "Receives support from others, assists new hires, and conveys institutional knowledge",
+              "signals": [
+                  "Asks for support and advice",
+                  "Open to receiving feedback",
+                  "Act as an onboarding buddy",
+                  "Finds ways to ramp up and engage new team members"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Informally mentors individuals on an ad hoc basis and contributes to Palantir's knowledge base",
+              "signals": [
+                  "Takes time to understand and explain concepts and best practices",
+                  "Makes themself available for informal support and advice",
+                  "Provides sound advice when asked",
+                  "Offers unprompted feedback to help growth, with empathy",
+                  "Avoids siloing information when it can be usefully shared with others"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Teaches small groups of people and guides people to realizations rather than providing the answer",
+              "signals": [
+                  "Asks questions to illuminate concepts, rather than stating them",
+                  "Uses lessons learned to guide individuals and teams",
+                  "Finds approaches that work best for a team member's personality",
+                  "Brings resources, critical readings, opportunities, or experiences to the attention of others",
+                  "Acts as a sounding board for peers and more junior team members"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Actively mentors people by providing knowledge, advice, and resources",
+              "signals": [
+                  "Defines an entire curriculum for a discipline",
+                  "Draws positive attention to well-modeled mentor and teaching behaviors",
+                  "Provides discipline support",
+                  "Exhibits enthusiasm in sharing knowledge and expertise",
+                  "Demonstrates a positive attitude and acts as a positive role model",
+                  "Helps individuals find new and challenging opportunities within the organization"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Instills and promotes a culture of learning and development within the entire team",
+              "signals": [
+                  "Empowers team members to develop themselves",
+                  "Models productive and healthy mentor relationships",
+                  "Is open to experimenting and learning practices that are new to the field",
+                  "Helps individuals to move out their comfort zone"
+              ],
+              "examples": []
+          }
+      ]
+  },"INFLUENCE":{
+      "milestone": "INFLUENCE",
+      "cohort": "DEFAULT",
+      "category": "D",
+      "displayName": "Influence",
+      "description": "Impacts and promotes Palantir's culture and values positively through leadership and representation of our brand",
+      "milestones": [
+          {
+              "summary": "Represents Palantir internally and externally in a manner aligned with Palantir's values",
+              "signals": [
+                  "Has project\/team-level impact",
+                  "Shares personal and organizational successes with their network",
+                  "Communicates genuine and honest excitement about their work externally",
+                  "Represents their team well to others in the company"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Represents Palantir well internally and externally in a manner aligned with Palantir's values and takes simple actions that positively influence groups of people",
+              "signals": [
+                  "Takes meaningful action to introduce people to Palantir",
+                  "Represents Palantir appropriately and is well aligned with our core values",
+                  "Finds ways to help teammates achieve their goals. Inspires teamwork",
+                  "Shares their experience and expertise to help others grow",
+                  "Listens to everyone's opinion, and encourages people to speak up"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Works hard to positively influence large groups of people",
+              "signals": [
+                  "Acts as a highly-visible mentor or participant in organizations other than Palantir",
+                  "Builds fruitful partnerships with clients",
+                  "Uses the advice process to make decisions",
+                  "Identifies and advocates for foundational work and practice improvements in their discipline",
+                  "Starts to broaden their impact. Considers effects of their work on other team and identifies and helps resolves team issues",
+                  "Builds network of influence to support project outcomes"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Establishes Palantir as an agile, innovative company and workplace to the whole industry",
+              "signals": [
+                  "Establishes themself as an industry thought leader who attracts talent",
+                  "Educates others about the work of the team",
+                  "Leads initiatives across disciplines, even outside their core expertise. Coordinates large and complex projects, including with outside partners",
+                  "Contributes to the foundational good of their discipline, defining patterns and plays",
+                  "Effectively considers effects of their work on other teams and identifies and helps resolves team issues",
+                  "Incredibly knowledgeable in their area of experitse, often to a degree recognized far beyond our walls"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Serve as a strategic advisor to have positive impact in the industry",
+              "signals": [
+                  "Delivers key messages to broad, mainstream audiences",
+                  "Influences industry thought leaders to speak favorably about Palantir",
+                  "Has high impact on company's trajectory",
+                  "Drives foundational work benefitting their discipline and entire organization",
+                  "Serves as a strategic advisor to company leaders and is a positive and influential leader across the entire organization"
+              ],
+              "examples": []
+          }
+      ]
   },
 
 }
@@ -1180,7 +1171,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
           {
               "summary": "Helps individuals to get unblocked creating a supporting and engaging environment",
               "signals": [
-                  "Demonstrates an understanding of individuals' roles, goals and interests",
+                  "Demonstrates an understanding of individuals' roles, goals, and interests",
                   "Demonstrates concern for the well-being of people",
                   "Actively listens",
                   "Treats people with respect"
@@ -1190,7 +1181,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
           {
               "summary": "Manages expectations across teams and focus on building long-term relationships",
               "signals": [
-                  "Uses an understanding of the organization's processes, systems and policies to engage with people",
+                  "Uses an understanding of the organization's processes, systems and policies to engage with colleagues",
                   "Assumes positive intent of others, approaching every interaction with kindness and good humor",
                   "Empathetically listens",
                   "Communicates difficult or negative messages in an honest, accurate, and respectful manner"
@@ -1202,7 +1193,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Helps people develop and perform as highly as possible",
                   "Uses awareness and understanding of the organization's culture to implement change initiatives",
-                  "Is able to deeply understand and empathise with others",
+                  "Is able to deeply understand and empathize with others",
                   "Delivers persuasive and compelling messages"
               ],
               "examples": []
@@ -1213,14 +1204,14 @@ export const defaultTracks = (trackList: object[]): object[] => {
                   "Always looks to enhance the development of their team members in ways that unlock potential, creativity and sense of purpose",
                   "Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement needed changes, and resolve talent needs and issues",
                   "Informs a person affected by a decision about what is happening, ensuring that the group has all of the necessary information",
-                  "Provides visible leadership that \"walks the talk\". Sets high performance standards for self, acting as a role model for the team"
+                  "Provides visible leadership that \"walks the talk.\"  Sets high performance standards for self, acting as a role model for the team"
               ],
               "examples": []
           },
           {
               "summary": "Leads, inspires and servers others, enabling people to achieve their goals and full potential",
               "signals": [
-                  "Focus on bringuing their best self to your work, and making space for others to do so as well",
+                  "Focus on bringing their best self to your work, and making space for others to do so as well",
                   "Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation and maintenance of initiatives proposed by other executives",
                   "Uses storytelling to create a positive and engaging environment for teams and clients",
                   "Leverages relationships to best support and develop individuals"
@@ -1234,7 +1225,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
       "cohort": "MANAGEMENT",
       "category": "A",
       "displayName": "Coaching",
-      "description": "Helps people to develop their own independent thinking, guiding them through processes",
+      "description": "Helps people to develop their own independent thinking, guiding them through processes and facilitating learning",
       "milestones": [
           {
               "summary": "Helps individuals to think through the likely impacts of alternative decisions",
@@ -1256,7 +1247,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
           {
               "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
               "signals": [
-                  "Demonstrates the ability to understand what issues exist that limit individuals's ability to perform the task or accomplish the objectives",
+                  "Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives",
                   "Determines whether people need help to remove barriers or if they are able to tackle them by themselves"
               ],
               "examples": []
@@ -1271,7 +1262,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills and knowledge",
+              "summary": "Empowers and engages with others to help them improve their performance and overcome challenges to thrive at an optimal level based on their own abilities, skills, and knowledge",
               "signals": [
                   "Focuses on empowering their team members to discover solutions for themselves",
                   "Coaches senior leaders on creating positive working relationships with their teams and clients"
@@ -1285,20 +1276,19 @@ export const defaultTracks = (trackList: object[]): object[] => {
       "cohort": "MANAGEMENT",
       "category": "A",
       "displayName": "Facilitation",
-      "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+      "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
       "milestones": [
           {
               "summary": "Helps individuals resolve difficult issues, promoting an inclusive environment",
               "signals": [
-                  "Actively seeks many external views to help people gain understanding",
-                  "Creates an inclusive environment"
+                  "Actively seeks views from a range of colleagues to help gain understanding",
+                  "Contributes to creating an inclusive environment"
               ],
               "examples": []
           },
           {
               "summary": "Helps people collectively move through a process",
               "signals": [
-                  "Is able to effectively deal and understand views opposing their own views and is open to criticism and learning",
                   "Is becoming comfortable in mediating escalated conflicts",
                   "Builds consensus among people and teams"
               ],
@@ -1314,16 +1304,16 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation and full buy-in from everyone who is involved",
+              "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved",
               "signals": [
                   "Understands themselves and the individuals in the project team, what drives and motivates them personally, and their individual capabilities",
                   "Is able to facilitate difficult interactions among stakeholders to achieve outcomes",
-                  "Is focused on the big picure"
+                  "Is focused on the big picture"
               ],
               "examples": []
           },
           {
-              "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership and creativity",
+              "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
               "signals": [
                   "Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams",
                   "Serves as a positive role model for productive conflict",
@@ -1344,13 +1334,13 @@ export const defaultTracks = (trackList: object[]): object[] => {
           {
               "summary": "Fosters enthusiasm and common purpose across people",
               "signals": [
-                  "Generates commitment in individuals and the team",
+                  "Contributes to generating commitment in individuals and the team",
                   "Speaks positively and enthusiastically about the organization's products\/services and future direction"
               ],
               "examples": []
           },
           {
-              "summary": "Mobilizes individuals to develop goals, execut plans and deliver client value\t",
+              "summary": "Mobilizes individuals to develop goals, execute plans, and deliver client value        ",
               "signals": [
                   "Creates a fun and energetic environment that promotes creativity",
                   "Validates ongoing work and sustains motivation",
@@ -1359,9 +1349,9 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Inspires others to a greater effort by setting an example in his\/her own behavior of dedication",
+              "summary": "Inspires others to a greater effort by setting an example in his\/her\/their own behavior of dedication",
               "signals": [
-                  "Recognises individual and team performance, even when things go wrong",
+                  "Recognizes individual and team performance, even when things go wrong",
                   "Empowers a team to drive forward amidst uncertainty",
                   "Models excellence and enthusiasm for the work"
               ],
@@ -1371,12 +1361,12 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "summary": "Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve",
               "signals": [
                   "Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn",
-                  "Ensures that the self-realisation and practical needs of the project team are met"
+                  "Ensures that the self-realization and practical needs of the project team are met"
               ],
               "examples": []
           },
           {
-              "summary": "Enables and directs generation of energy - motivation to act - among members of the organization and clients",
+              "summary": "Enables and directs generation of energy \u2014 motivation to act \u2014 among members of the organization and clients",
               "signals": [
                   "Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions",
                   "Ability to find and use successes to celebrate progress towards the vision",
@@ -1396,15 +1386,15 @@ export const engineeringTracks = (trackList: object[]): object[] => {
       "cohort": "ENGINEERING",
       "category": "A",
       "displayName": "Foundations",
-      "description": "Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas\t",
+      "description": "Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas        ",
       "milestones": [
           {
               "summary": "Works effectively within established structures, following current best practices",
               "signals": [
                   "Is building proficiency with our tech stack and becoming comfortable with learning new technologies and skills",
-                  "Has experience with development best practices, Drupal, PHP, web accessibility, and web development frameworks",
-                  "Able to perform assigned tasks and tickets with ocassional assistance",
-                  "Able to help with the estimation of tickets while working on the refinement of that skill"
+                  "Has experience with development best practices, Palantir's chosen technology stack, web accessibility, and web development frameworks",
+                  "Is able to perform assigned tasks and tickets with occasional assistance",
+                  "Is able to hlep estimate tickets while working on refining estimation skills"
               ],
               "examples": []
           },
@@ -1412,22 +1402,22 @@ export const engineeringTracks = (trackList: object[]): object[] => {
               "summary": "Works effectively within established structures, focusing on expanding experience and proficiency",
               "signals": [
                   "Focuses on expanding experience and proficiency in our code base, with solid understanding of relevant areas",
-                  "Is well-versed with development best practices, Drupal, PHP, web accessibility, and core development tools",
-                  "Able to perform assigned tasks and tickets close to estimated time with minimal assitance",
-                  "Learns new areas of codebase and new tech very quickly",
-                  "Able to provide reliable estimates for tickets"
+                  "Is well-versed with development best practices, Palantir's chosen technology stack, web accessibility, and core development tools",
+                  "Able to perform assigned tasks and tickets close to estimated time with minimal assistance",
+                  "Learns new areas of code base and new tech very quickly",
+                  "Is able to provide reliable estimates for tickets with context"
               ],
               "examples": []
           },
           {
-              "summary": "Designs technical solutions of moderate complexity",
+              "summary": "Able to design technical solutions of moderate complexity",
               "signals": [
                   "Independently scopes and implements solutions for their project\/team",
-                  "Proficient in all relevant technical skills, and able to move quickly. Maintains awareness of industry trends and tools",
-                  "Contributes to Open Source Work",
+                  "Is proficient in all relevant technical skills, and is able to move quickly. Maintains awareness of industry trends and tools",
+                  "Contributes to open source Work",
                   "Demonstrates the ability to come up with solid technical solutions to ambiguous or open-ended problems",
                   "Often gives support to others in their areas of strongest skill",
-                  "Provides accurate estimation for tickets"
+                  "Accurately estimates ticketed work"
               ],
               "examples": []
           },
@@ -1435,20 +1425,20 @@ export const engineeringTracks = (trackList: object[]): object[] => {
               "summary": "Builds complex, technical solutions that pioneer best practices for other engineers, or multi-system services",
               "signals": [
                   "Has a deep understanding of our architecture and how their domain fits within it. Systematically thinks through potential design impacts on other teams and the company",
-                  "Expert in our processes, also helping to define them. Keeps tests up to date",
+                  "In an expert in our processes, also helps to define them. Keeps tests up to date",
                   "Independently scopes, designs, and delivers solutions for large, complex challenges",
                   "Debugs expertly within their primary focus area",
-                  "Provides oversight, coaching and guidance through code and design reviews"
+                  "Provides oversight, coaching, and guidance through code and design reviews",
+                  "Incredibly knowledgeable in their aarea of expertise, often to a degree that is recogized far beyond our walls"
               ],
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the engineering team",
+              "summary": "Is considered an expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the engineering team",
               "signals": [
-                  "Seen as a leader and contributor in the broader technical side across the organization",
-                  "Primary expert in multiple areas of our stack, incredibly knowledgable in several domains",
+                  "Is a primary expert in multiple areas of our technology stack, incredibly knowledgeable in several domains",
                   "Designs and builds industry-leading techniques to solve complex problems",
-                  "Anticipates technical challenges, exploring alternatives and tradeoffs thoroughly",
+                  "Anticipates technical challenges, thoroughly explores alternatives and trade-offs",
                   "Focuses on technical decision making, leading work that affects one or more complex systems and mission-critical areas",
                   "Explores technologies with sizable potential impact for Palantir"
               ],
@@ -1461,7 +1451,7 @@ export const engineeringTracks = (trackList: object[]): object[] => {
       "cohort": "ENGINEERING",
       "category": "A",
       "displayName": "Coding",
-      "description": "Develops expertise and proficiency in our code base, with solid understanding of relevant areas\t",
+      "description": "Develops expertise and proficiency in developing and supporting our code base, with solid understanding of relevant areas        ",
       "milestones": [
           {
               "summary": "Learning the ropes of our tech stack as well as our development practices",
@@ -1471,29 +1461,29 @@ export const engineeringTracks = (trackList: object[]): object[] => {
                   "Receives and integrates feedback from code reviews to ship high-quality code",
                   "Participates in code reviews and technical design",
                   "Receives and incorporates feedback from PR reviews",
-                  "Does small PR reviews around functional behavior"
+                  "Performs small PR reviews around functional behavior"
               ],
               "examples": []
           },
           {
-              "summary": "Often writes production-ready code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers.",
+              "summary": "Often writes production-ready code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers",
               "signals": [
                   "Writes code that usually ships promptly by receiving and successfully integrating critical input from code reviews. Work rarely needs to be rewritten before shipping",
                   "Follows style guides",
                   "Ships maintainable code that works and is understandable by teammates",
                   "Is becoming comfortable diving in and making changes to many areas of code, not just a single area of code",
                   "Provides helpful, timely code reviews",
-                  "Ability to perform code audit"
+                  "Is able to perform code audits"
               ],
               "examples": []
           },
           {
               "summary": "Writes production-ready code every day. Is beginning to master parts of our tech stack while also teaching others",
               "signals": [
-                  "Consistently delivers code that sets the standard for quality, security and maintainability",
-                  "Understands large swaths of the codebase with a deep knowledge and ability to \"reach in and touch the right levers.\" Able to move rapidly as a result",
-                  "Most input from code reviewers is at a high level - already writes reliable code",
-                  "Code review feedback is sought after, respected, and often the source of others' learning",
+                  "Consistently delivers code that sets the standard for quality, security, and maintainability",
+                  "Understands large swaths of the code base with a deep knowledge and ability to \"reach in and touch the right levers.\" Able to move rapidly as a result",
+                  "Writes consistently reliable code, so that input from code reviewers is high-level only",
+                  "Provides code review feedback that is sought after, respected, and often instructional to others",
                   "Writes meaningful code reviews",
                   "Sets the standards for performing code audits"
               ],
@@ -1502,7 +1492,7 @@ export const engineeringTracks = (trackList: object[]): object[] => {
           {
               "summary": "Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis",
               "signals": [
-                  "Uses mastery to ship quickly",
+                  "Has mastered the skills necessary to ship quickly",
                   "Has built mastery in some relevant technical skills; good understanding of full stack",
                   "Provides mentorship and technical guidance to more junior teammates",
                   "Writes highly insightful, comprehensive code reviews"
@@ -1510,13 +1500,12 @@ export const engineeringTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert, deeply knowledgeable in several domains and sets strategic developing direction for the engineering team",
+              "summary": "Is an industry-leading expert, is deeply knowledgeable in several domains, and sets strategic developing direction for the engineering team",
               "signals": [
-                  "Capable of building an entire product from scratch that starts out ill-defined and requires significant R&D effort",
-                  "Seen as a leader and contributor in the broader technical community who advances the state of the art",
+                  "Is capable of building an entire complex product from scratch and requires significant R&D effort",
+                  "Is seen as a leader who advances the state of the art and a contributor to the broader technical community",
                   "Demonstrates the ability to resolve technical problems without little context",
-                  "Constantly learning new technologies, can navigate and make legacy code maintainable",
-                  "Incredibly knowledgable in their area of expertise, often to a degree that is recognized far beyond our walls"
+                  "Constantly learning new technologies, can navigate and make legacy code maintainable"
               ],
               "examples": []
           }
@@ -1527,50 +1516,50 @@ export const engineeringTracks = (trackList: object[]): object[] => {
       "cohort": "ENGINEERING",
       "category": "A",
       "displayName": "DevOps",
-      "description": "Develops expertise and proficiency in DevOps\t",
+      "description": "Develops expertise and proficiency in DevOps        ",
       "milestones": [
           {
               "summary": "Works effectively within established DevOps practices, following current best practices",
               "signals": [
                   "Is building proficiency in creating solutions using tools and automation to improve operations",
-                  "Knowledge and understanding of common software development tools and processes, including version control, issue tracking, and continuous build processes"
+                  "Understands common software development tools and processes, including version control, issue tracking, and continuous build"
               ],
               "examples": []
           },
           {
-              "summary": "Develops new instances of existing practices, with assistance of senior engineers",
+              "summary": "Develops new instances of existing practices, with assistance from senior engineers",
               "signals": [
-                  "Focuses on expanding experience and proficiency in DevOps practices, with solid understanding of operating system",
-                  "Understanding of web application development, server deployment and upkeep, and general networking practices",
+                  "Focuses on expanding experience and proficiency in DevOps practices, with solid understanding of operating systems",
+                  "Understands web application development, server deployment and upkeep, and general networking practices",
                   "Modifies existing software to correct errors with guidance",
-                  "Supports and improves our tools for continuous integration, automated testing and release management with guidance"
+                  "Supports and improves our tools for continuous integration, automated testing, and release management with guidance"
               ],
               "examples": []
           },
           {
               "summary": "Designs standalone systems of moderate complexity",
               "signals": [
-                  "Ability to enhance and streamline operational processes though automation and integration without guidance",
-                  "Ability to deploy and administer server-hosted software solutions",
-                  "Modifies existing software to correct errors, adapt to new hardware, or to improve performance",
-                  "Ability to debug problems throughout the stack"
+                  "Enhances and streamlines operational processes through automation and integration without guidance",
+                  "Deploys and administers server-hosted software solutions",
+                  "Modifies existing software to correct errors, adapt to new hardware, or improve performance",
+                  "Is able to debug problems throughout the stack"
               ],
               "examples": []
           },
           {
-              "summary": "Designs complex solutions to take advantage of opportunities and new technologies, acting as a partner to and a team member of the Engineering chapter",
+              "summary": "Designs complex solutions to take advantage of opportunities and new technologies, collaboratively working with the engineering team",
               "signals": [
-                  "Ability to analyze user needs and software requirements to determine feasibility of design within time and cost constraints",
-                  "Responds to the needs of PM and Engineering to customize hosted tools to improve team efficiency",
-                  "Uses scientific analysis and mathematical models to predict and measure outcome and consequences of design"
+                  "Analyzes user needs and software requirements to determine feasibility of design within time and cost constraints",
+                  "Responds to the needs of project managers and engineers to customize hosted tools to improve team efficiency",
+                  "Uses scientific analysis and mathematical models to predict and measure outcomes and consequences of design"
               ],
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert, deeply knowledgeable in DevOps practices and sets strategic developing direction for the engineering team        \t",
+              "summary": "Is an industry-leading expert, is deeply knowledgeable in DevOps practices, and sets strategic developing direction for the engineering team                ",
               "signals": [
-                  "Drives capacity for triaging and handling operational issues while advising the team on the process of writing code and engineering systems that will make their entire codebase more reliable, testable, and scalable",
-                  "Seen as an expert and contributor in the broader technical community who advances the state of the art",
+                  "Drives capacity for triaging and handling operational issues while advising the team on the process of writing code and engineering systems that will make their entire code base more reliable, testable, and scalable",
+                  "Is seen as an expert who aadvances the state of the art and is a contributer to the broader technical community",
                   "Creates innovative and comprehensive tools and practices to improve deployment and testing"
               ],
               "examples": []
@@ -1585,12 +1574,12 @@ export const engineeringTracks = (trackList: object[]): object[] => {
       "description": "Embodies and promotes practices to ensure excellent quality products and services",
       "milestones": [
           {
-              "summary": "Delivers consistently good quality work\t",
+              "summary": "Delivers consistently good quality, well-made work        ",
               "signals": [
-                  "Tests new code thoroughly, both locally, and in production once shipped",
+                  "Tests new code thoroughly, both locally and in production once shipped",
                   "Writes tests for every new feature and bug fix with guidance",
                   "Writes clear comments and documentation",
-                  "Works effectively within established web client architectures, such as HTML, PHP and JavaScript, following current best practices"
+                  "Works effectively within established web client architectures such as HTML, PHP, and JavaScript, following current best practices"
               ],
               "examples": []
           },
@@ -1602,7 +1591,7 @@ export const engineeringTracks = (trackList: object[]): object[] => {
                   "Deletes unnecessary code and deprecates proactively when safe to do so",
                   "Assesses correctness and utility of existing code and avoids blind copy-pasting",
                   "Generalizes code when appropriate",
-                  "Develops new instances of existing architecture, or minor improvements to existing architecture"
+                  "Develops new instances of or minor improvements to existing architecture"
               ],
               "examples": []
           },
@@ -1611,28 +1600,26 @@ export const engineeringTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Implements systems that enable better testing",
                   "Gives thoughtful code reviews as a domain expert",
-                  "Adds tooling to improve code quality, security and maintability",
-                  "Acts as primary maintainer for existing critical systems",
-                  "Designs major new features and demonstrates a nuanced understanding of browser constraints"
+                  "Adds tooling to improve code quality, security, and maintainability"
               ],
               "examples": []
           },
           {
-              "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues\t",
+              "summary": "Proactively advocates for and models great quality and tackles difficult and subtle system issues        ",
               "signals": [
                   "Builds complex, reusable architectures that pioneer best practices and enable engineers to work more effectively",
-                  "Focuses the team on quality with regular reminders",
+                  "Consistently keeps the team focused on quality",
                   "Coordinates priorities and projects",
-                  "Iterates repeatedly to develop Palantir's underlying solution",
-                  "Designs custom domain architecture"
+                  "Iterates repeatedly to develop and refine Palantir's best practices",
+                  "Acts as primary maintainer for existing critical systems"
               ],
               "examples": []
           },
           {
-              "summary": "Enables and encourages the entire chapter to make quality a central part of the development process",
+              "summary": "Enables and encourages the entire discipline to make quality a central part of the development process",
               "signals": [
-                  "Defines policies for the engineering chapter that encourage quality work",
-                  "Identifies and eliminates single points of failure throughout the chapter",
+                  "Defines policies for the engineering discipline that encourage quality work",
+                  "Identifies and eliminates single points of failure throughout the discipline",
                   "Identifies and solves systemic problems with current architecture",
                   "Creates a compelling technical vision with company-level impact, anticipating future needs"
               ],
@@ -1640,6 +1627,7 @@ export const engineeringTracks = (trackList: object[]): object[] => {
           }
       ]
   }
+
   return trackList
 }
 
@@ -1649,16 +1637,16 @@ export const frontendTracks = (trackList: object[]): object[] => {
       "cohort": "FRONTEND",
       "category": "A",
       "displayName": "Foundations",
-      "description": "Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas\t",
+      "description": "Develops expertise and proficiency in our technical domain, with solid understanding of relevant areas        ",
       "milestones": [
           {
               "summary": "Works effectively within established structures, following current best practices",
               "signals": [
                   "Is building proficiency with our web technologies and becoming comfortable with learning new technologies and skills",
-                  "Has experience with web development frameworks, HTML, CSS, JavaScript and webiste accessibility",
-                  "Able to perform assigned tasks and tickets with ocassional assistance",
-                  "Able to help with the estimation of tickets while working on the refinement of that skill",
-                  "Has an understanding of wireframing, UX design or UI patterns",
+                  "Has experience with web development frameworks, HTML, CSS, JavaScript, and website accessibility",
+                  "Is ble to perform assigned tasks and tickets with occasional assistance",
+                  "Is able to help estimate tickets while working on refining estimation skills",
+                  "Has an understanding of wireframing, UX design, and UI patterns",
                   "Has experience developing and testing across multiple browsers"
               ],
               "examples": []
@@ -1668,43 +1656,44 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Focuses on expanding experience and proficiency in our web technology practices, with solid understanding of relevant areas",
                   "Is well versed with web development frameworks, HTML, CSS, JavaScript and website accessibility",
-                  "Able to perform assigned tasks and tickets close to estimated time with minimal assitance",
-                  "Able to provide reliable estimates for tickets",
-                  "Has an understanding of DevOps",
-                  "Ability to work with open source technology"
+                  "Is able to perform assigned tasks and tickets close to estimated time with minimal assistance",
+                  "Is able to provide reliable estimates for tickets given a complete context",
+                  "Has a practical understanding of DevOps and how it is related to their work",
+                  "Is able to make open source contributions and proactively does so"
               ],
               "examples": []
           },
           {
-              "summary": "Designs technical solutions of moderate complexity",
+              "summary": "Able to design technical solutions of moderate complexity",
               "signals": [
                   "Independently scopes and implements solutions for their project\/team",
-                  "Proficient in all relevant technical skills, and able to move quickly. Maintains awareness of industry trends and tools",
-                  "Able to complete tickets reasonably close to estimated time without needing to be prodded by the PM or Lead",
+                  "Is proficient in all relevant technical skills, and is able to move quickly. Maintains awareness of industry trends and tools",
+                  "Is able to complete tickets reasonably close to estimated time without needing to be reminded",
                   "Demonstrates the ability to come up with solid technical solutions to ambiguous or open-ended problems",
                   "Often gives support to others in their areas of strongest skill",
-                  "Provides accurate estimation for tickets"
+                  "Accurately estimates ticketed work"
               ],
               "examples": []
           },
           {
               "summary": "Builds complex, technical solutions that pioneer best practices for other FED, or multi-system services",
               "signals": [
-                  "Has a deep understanding of our architecture and how their domain fits within it. Systematically thinks through potential design impacts on other teams and the company.",
-                  "Expert in our processes, also helping to define them. Keeps tests up to date",
+                  "Has a deep understanding of our architecture and how their domain fits within it. Systematically thinks through potential design impacts on other teams and the company",
+                  "Is expert in our processes, also helping define them. Keeps tests up to date",
                   "Independently scopes, designs, and delivers solutions for large, complex challenges",
                   "Debugs expertly within their primary focus area",
-                  "Provides oversight, coaching and guidance through code and design reviews"
+                  "Provides oversight, coaching, and guidance through code and design reviews",
+                  "Incredibly knowledgeable in their area of expertise, oftern to a degree that is recongized far beyond our walls"
               ],
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic direction for the FED team",
+              "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic direction for the FED team",
               "signals": [
-                  "Seen as a leader and contributor in the broader technical side across the organization",
-                  "Primary expert in multiple areas of our stack, incredibly knowledgable in several domains",
+                  "Is seen as a leader and contributor across the organization",
+                  "Primary expert in multiple areas of our stack, incredibly knowledgeable in several domains",
                   "Designs and builds industry-leading techniques to solve complex problems",
-                  "Anticipates technical challenges, exploring alternatives and tradeoffs thoroughly",
+                  "Anticipates technical challenges and thoroughly explores alternatives and trade-offs",
                   "Focuses on technical decision making, leading work that affects one or more complex systems and mission-critical areas",
                   "Explores technologies with sizable potential impact for Palantir"
               ],
@@ -1720,7 +1709,7 @@ export const frontendTracks = (trackList: object[]): object[] => {
       "description": "Develops expertise and proficiency in our front-end code base, with solid understanding of relevant areas\t",
       "milestones": [
           {
-              "summary": "Learning the ropes of our tech stack as well as our development practices",
+              "summary": "Learns the ropes of our tech stack as well as our development practices",
               "signals": [
                   "Writes front-end code that is sometimes production-ready, but usually requires iteration before shipping",
                   "Is becoming comfortable working with one or two areas of front-end code",
@@ -1730,9 +1719,9 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Often writes production-ready front-end code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers.",
+              "summary": "Often writes production-ready front-end code. Code reviews are sometimes perfect, but sometimes require a bit of explaining and effort from reviewers",
               "signals": [
-                  "Writes front-end code that usually ships promptly by receiving and successfully integrating critical input from code reviews. Work rarely needs to be rewritten before shipping",
+                  "Writes front-end code that usually ships promptly by receiving and successfully integrating critical input from code reviews. Work rarely needs to be rewritten before delivery",
                   "Follows style guides",
                   "Ships maintainable front-end code that works and is understandable by teammates",
                   "Is becoming comfortable diving in and making changes to many areas of code, not just a single area of code",
@@ -1744,33 +1733,32 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "summary": "Writes production-ready front-end code every day. Is beginning to master parts of our tech stack while also teaching others",
               "signals": [
                   "Consistently delivers front-end code that sets the standard for quality and maintainability",
-                  "Understands large swaths of the codebase with a deep knowledge and ability to \"reach in and touch the right levers.\" Able to move rapidly as a result",
-                  "Most input from front-end code reviewers is at a high leve - already writes reliable code",
-                  "Front-end code review feedback is sought after, respected, and often the source of others' learning",
+                  "Understands large swaths of the code base with a deep knowledge and ability to \"reach in and touch the right levers.\" Able to move rapidly as a result",
+                  "Writes consistently reliable code, so input from code reviewers is high-level only",
+                  "Provides front-end code review feedback that is sought after, respected, and often instructional",
                   "Writes meaningful front-end code reviews",
-                  "Translates design solutions into high quality front-end code"
+                  "Translates design solutions into high-quality front-end code"
               ],
               "examples": []
           },
           {
               "summary": "Possesses the development skills and stack expertise necessary to build our product and gives technical support to others on a daily basis",
               "signals": [
-                  "Uses mastery to ship quickly",
-                  "Built mastery in some relevant technical skills; good understanding of full stack",
+                  "Has mastered the skills to ship quickly",
+                  "Has mastery in some relevant technical skills; good understanding of full stack",
                   "Provides mentorship and technical guidance to more junior teammates",
-                  "Code review feedback is highly insightful, addressing high-level thoughts",
+                  "Provides highly insightful code review feedback that addresses high-level thoughts",
                   "Writes highly insightful, comprehensive front-end code reviews"
               ],
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert, deeply knowledgeable in several domains and sets strategic developing direction for the engineering team",
+              "summary": "Is an industry-leading expert, is deeply knowledgeable in several domains, and sets strategic developing direction for the engineering team",
               "signals": [
                   "Builds cutting-edge web applications, with a focus on client side",
                   "Leads code testing integration and oversees quality system performance",
-                  "Seen as a leader and contributor in the broader technical community who advances the state of the art",
+                  "Is seen as a leader who advances the state of the art, and is a contributor to the broader technical community",
                   "Constantly learning new web technologies, can navigate and make legacy front-end code maintainable",
-                  "Incredibly knowledgable in their area of expertise, often to a degree that is recognized far beyond our walls",
                   "Leads code reviews and guides software architecture decisions"
               ],
               "examples": []
@@ -1782,12 +1770,12 @@ export const frontendTracks = (trackList: object[]): object[] => {
       "cohort": "FRONTEND",
       "category": "A",
       "displayName": "Web Technologies",
-      "description": "Develops expertise in web client technologies, such as HTML, CSS and JavaScript\t",
+      "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript. Contributes to relevant open source projects      ",
       "milestones": [
           {
               "summary": "Works effectively within established web client architectures, following current best practices\t",
               "signals": [
-                  "Makes minor modifications to existing screens",
+                  "Makes minor modifications to existing work",
                   "Fixes simple design quality issues",
                   "Uses CSS appropriately, following style guide"
               ],
@@ -1807,9 +1795,9 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "summary": "Designs major new features and demonstrates a nuanced understanding of browser constraints\t",
               "signals": [
                   "Provides useful design feedback and suggests feasible alternatives",
-                  "Performs systemic tasks to significantly minimise bundle size",
+                  "Performs systemic tasks to significantly minimize bundle size",
                   "Acts a caretaker for all of web client code",
-                  "Prototypes with code using modern front-end frameworks and digital pattern librarie"
+                  "Prototypes with code using modern front-end frameworks and digital pattern library"
               ],
               "examples": []
           },
@@ -1823,13 +1811,12 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in web client or sets strategic web client direction for the engineering chapter",
+              "summary": "Is an industry-leading expert and\/or sets strategic direction for the engineering discipline",
               "signals": [
-                  "Invents new techniques to innovate and overcome browser constraints",
+                  "Invents new techniques to mitigate browser constraints when feasible",
                   "Identifies and solves systemic problems with current architecture",
                   "Defines a long-term vision for web client and ensures projects are in service of it",
-                  "Able to inventive CSS in JS",
-                  "Implements omni-directional data flow to completion"
+                  "Implements omni directional data flow to completion"
               ],
               "examples": []
           }
@@ -1843,9 +1830,9 @@ export const frontendTracks = (trackList: object[]): object[] => {
       "description": "Embodies and promotes practices to ensure excellent quality products and services",
       "milestones": [
           {
-              "summary": "Delivers consistently good quality work\t",
+              "summary": "Delivers consistently quality, well-made work        ",
               "signals": [
-                  "Understands the entire web development process, including design, development, deployment with some back-end knowledge",
+                  "Understands the entire web development process, including design, development, and deployment and has some back-end knowledge as well",
                   "Builds responsive and adaptive websites with guidance of senior FED"
               ],
               "examples": []
@@ -1853,9 +1840,9 @@ export const frontendTracks = (trackList: object[]): object[] => {
           {
               "summary": "Increases the robustness and reliability of codebases, and devotes time to polishing products and systems\t",
               "signals": [
-                  "Understands and demonstrates knowledge of accessibility needs, concerns, design and best practices",
-                  "Builds semantic, accessible and maintainable front-end interfaces",
-                  "Accurately translats prototypes and design into working interfaces"
+                  "Understands and demonstrates knowledge of accessibility needs, concerns, design, and best practices",
+                  "Builds semantic, accessible, and maintainable front-end interfaces",
+                  "Accurately translates prototypes and design into working interfaces"
               ],
               "examples": []
           },
@@ -1872,20 +1859,20 @@ export const frontendTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Advocates for and models great quality with proactive actions, and tackles difficult and subtle system issues\t",
+              "summary": "Proactively advocates for and models great quality and tackles difficult and subtle system issues        ",
               "signals": [
                   "Takes the lead on browser\/device acceptance testing and bug fixing",
                   "Collaborates with UX designers to promote and achieve optimal solutions for clients",
                   "Leads client demos",
                   "Maintains and improves front-end code bases across a wide variety of projects",
-                  "Iterates repeatedly to develop Palantir's underlines solution"
+                  "Improves quality of work to meet the level of Palantir's best solutions through repeated iteration"
               ],
               "examples": []
           },
           {
-              "summary": "Enables and encourages the entire chapter to make quality a central part of the development process",
+              "summary": "Enables and encourages the entire team to make quality a central part of the development process",
               "signals": [
-                  "Defines policies for the FED chapter that encourage quality work",
+                  "Defines policies for the team that encourage quality work",
                   "Identifies and eliminates single points of failure throughout the chapter",
                   "Secures time and resources from execs to support great quality",
                   "Creates a compelling technical vision with company-level impact, anticipating future needs"
@@ -1910,40 +1897,40 @@ export const uxTracks = (trackList: object[]): object[] => {
               "summary": "Works effectively within established structures, following current best practices",
               "signals": [
                   "Is building proficiency in our user experience practice and becoming comfortable with learning new technologies and skills",
-                  "Has experience with web accessibility, usability and core development tools. Understands web design constraints",
-                  "Applies existing team patterns library, working with a more senior designer as a guide or mentor",
-                  "Has knowledge in marketing and consumer behavior trends",
-                  "Develops user-centered website strategies with guidance, in alignment with client goals and objective",
-                  "Hands-on experience with UX tools such as Sketch, InVision, prototyping tools, Google Analytics and Adobe Creative Suite"
+                  "Has experience with web accessibility, usability and core design tools. Understands web design constraints and opportunities",
+                  "Understands and applies how to use an existing pattern library to create wireframes, working with a more senior designer as a guide or mentor",
+                  "Has knowledge in marketing and consumer behavior trends applicable to their work",
+                  "Develops user-centered website strategies with guidance, in alignment with client goals and objectives",
+                  "Has hands-on experience with UX tools which may include Sketch, InVision, prototyping tools, and Google Analytics"
               ],
               "examples": []
           },
           {
               "summary": "Develops new instances for best practices, or minor improvements to existing practices and standards",
               "signals": [
-                  "Focuses on expanding experience and proficiency in our user experience practice, establishing and promoting brand guidelines, best practices and standards",
-                  "Is well-versed with web accessibility, usability and core development tools. Has a deep understanding of web design constraints",
+                  "Focuses on expanding experience and proficiency in our user experience practice, and establishing and promoting brand guidelines, best practices, and standards",
+                  "Is well-versed with web accessibility, usability, and core design tools. Has a deep understanding of web design constraints",
                   "Applies existing team pattern libraries, provides examples of patterns in the wild, and explores multiple design options",
                   "Works with other team members to understand constraints and design feasibility",
-                  "Contributes to strategic positioning, oranizational insight, and client road maps",
-                  "Is well- versed in marketing and consumer behavior trends",
-                  "Develops user-centered website strategies that supports user tasks, satisfies client goals and contributes orginal documentation for projects",
+                  "Contributes to strategic positioning, organizational insight, and client road maps",
+                  "Is well-versed in marketing and consumer behavior trends",
+                  "Develops user-centered website strategies that support user tasks, satisfy client goals, and contribute original documentation for projects",
                   "Sketches and creates wireframes",
-                  "Designs and perform competitive analyses, proactively researches examples in the wild, seeks out industry trends, and performs and analyzes usability test plans",
-                  "Collaborates with Product Management, Design and Engineering to scope time and effort involved in design projects"
+                  "Designs and performs competitive analysis, proactively researches examples in the wild, seeks out industry trends, and performs and analyzes usability test plans",
+                  "Collaborates with project managers, designers, and engineers to scope time and effort involved in design projects"
               ],
               "examples": []
           },
           {
-              "summary": "Designs complicated user experience, mastering delivery",
+              "summary": "Designs complicated user experiences, mastering delivery",
               "signals": [
-                  "Effectively leads and takes ownership of the UX process: Articulates strategy, best practices, and process collaborating with designers to inform and define the project",
-                  "Is always able to articulate the \"why\" of design decisions",
-                  "Always explores multiple options, evaluates and articulates pros and cons to choices, recommends user experience decisions, understands when to use low and high-fidelity design tools, and contributes to existing team pattern libraries",
-                  "Constantly partners with engineering to understand technology system constraints and align strategy and design work in an efficient and effective way at the project level",
+                  "Effectively leads and takes ownership of the UX process, articulates strategy, best practices, and process collaborating with designers to inform and define the project",
+                  "Is always able to articulate the \"why\" of design decisions to clients and the Palantir team",
+                  "Always explores multiple options, evaluates and articulates pros and cons of choices, recommends user experience decisions, understands when to use low- and high-fidelity design tools, and contributes to existing team pattern libraries",
+                  "Constantly partners with engineers and developers to understand technology system constraints and align strategy and design work in an efficient and effective way at the project level",
                   "Designs, performs, and analyzes usability test plans",
-                  "Ability to articulate the difference and relationship between the different IA and Content Strategy deliverables",
-                  "Collaborates with PM and Engineering to define and implement innovative solutions for the product direction"
+                  "Is able to articulate the difference and relationship between the different IA and content strategy deliverables",
+                  "Collaborates with project managers and engineers to define and implement innovative solutions for the product direction"
               ],
               "examples": []
           },
@@ -1953,20 +1940,20 @@ export const uxTracks = (trackList: object[]): object[] => {
                   "Efficiently balances and manages complex user, business, and technical requirements to make design decisions",
                   "Guides junior team members in critical, high-level, design problem solving",
                   "Strategically analyzes the risks, benefits, and opportunities of various solutions",
-                  "Seeks out chapter-wide opportunities for improvements",
-                  "Ability to understand constraints and technical feasibility prior to client presentations"
+                  "Seeks out discipline-wide opportunities for improvement",
+                  "Considers client constraints and technical feasibility of potential design solutions"
               ],
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for an UX team",
+              "summary": "Is an industry-leading expert in multiple areas of our business, is deeply knowledgeable in several domains, and sets strategic foundational direction for the UX team",
               "signals": [
-                  "Guides and directs UX team members by providing strategic direction that best honor's client's business",
+                  "Guides UX team members by providing strategic direction that best honors the client's business",
                   "Develops a unique user experience practice approach that outlines and defines activities, deliverables, and value to be used in sales and marketing initiatives",
-                  "Designs and builds industry-leading solutions to solve UX complex problems and advocates for the best user experience possible",
+                  "Designs and builds industry-leading solutions to solve complex UX problems and advocates for the best user experience possible",
                   "Serves as client focal point for all UX practices",
-                  "Anticipates technical challenges, exploring alternatives and tradeoffs thoroughly",
-                  "Seen as a leader and contributor in the broader technical side across the organization"
+                  "Anticipates technical challenges, exploring alternatives and trade-offs thoroughly",
+                  "Is recognized as a leader and contributor across the organization"
               ],
               "examples": []
           }
@@ -1976,16 +1963,16 @@ export const uxTracks = (trackList: object[]): object[] => {
       "milestone": "CHAPTER_TWO",
       "cohort": "UX",
       "category": "A",
-      "displayName": "Discovery & Definition",
+      "displayName": "Discovery and Definition",
       "description": "Comprehends the analysis of the business model, stakeholders, goals, key performance indicators, and existing technologies and workflows\t",
       "milestones": [
           {
               "summary": "Works in the discovery and definition process with guidance, following current best practices",
               "signals": [
-                  "Gather business requirements and user insights through surveys, user tests, and interviews with the assitance of senior startegists",
+                  "Gather business requirements and user insights through surveys, user tests, and interviews with the assistance of senior strategists",
                   "Uses basic feedback techniques to improve relatively simple strategy concepts and techniques",
-                  "Is building the ability to plan information validation activities and incorporate user and stakeholders into design changes by observing and interaction with senior strategists",
-                  "Understands client business\/objectives and identifies opportunities for client \"wins\" through digital design, tools and experiences"
+                  "Through observation and interaction with senior strategists, is building the skills and expertise to plan information validation activities and incorporate user and stakeholder feedback into design iterations",
+                  "Understands client business\/objectives and identifies opportunities for client \"wins\" through digital design, tools, and experiences"
               ],
               "examples": []
           },
@@ -1996,7 +1983,7 @@ export const uxTracks = (trackList: object[]): object[] => {
                   "Applies feedback techniques to improve discovery and definition strategies",
                   "Works with more senior team members to plan information validation activities and incorporate user feedback into design changes",
                   "Generates users and stakeholders interview questions and documentation",
-                  "Works with the designers to research technical documentation, APIs, integration with 3rd party technologies etc. to confirm project requirements and expectations "
+                  "Works with FEDs and engineers to research technical documentation, APIs, integration with third party technologies, etc. to confirm project requirements and expectations "
               ],
               "examples": []
           },
@@ -2005,7 +1992,7 @@ export const uxTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Plans moderately complicated requirements-gathering, analysis, design-validation, and usability-testing activities",
                   "Independently conducts information-validation activities with internal and external stakeholders",
-                  "Conducts Gap and Task analysis",
+                  "Conducts gap and task analysis",
                   "Communicates usability findings and provides recommendations for improving user-interface experience",
                   "Facilitates the planning and execution of on-site discovery workshops",
                   "Conducts comparative analysis",
@@ -2016,8 +2003,8 @@ export const uxTracks = (trackList: object[]): object[] => {
           {
               "summary": "Independently leads all aspects of the discovery and definition process",
               "signals": [
-                  "Independently conducts all aspects of complex user-research programs--from early-stage requirements to summative usability testing",
-                  "Adapts user-research techniques to inform both new and on-going, complex, product-development effort",
+                  "Independently conducts all aspects of complex user-research programs\u2014 from early-stage requirements to summative usability testing",
+                  "Adapts user-research techniques to inform both new and ongoing, complex, product-development effort",
                   "Communicates usability findings, metrics, and associated design strategies to large, distributed product teams",
                   "Discusses usability metrics and their impact on product ROI"
               ],
@@ -2026,11 +2013,11 @@ export const uxTracks = (trackList: object[]): object[] => {
           {
               "summary": "Guides and leads all stages of the discovery and definition process, developing new concepts",
               "signals": [
-                  "Expertly conducts all stages of user research--including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability--testing activities",
+                  "Expertly conducts all stages of user research\u2014 including market analysis, requirements definition, early-to-mid-stage design validations, and summative usability--testing activities",
                   "Simultaneously plans and drives multiple user-research activities across widely divergent product domains",
                   "Drives and conducts all aspects of formal summative testing, including the use of metrics and competitive benchmark testing",
-                  "Communicates usability metrics and findings to engineers, designers, PM and executives",
-                  "Clearly articulates the impacts of perpetuating usability issues, including their negative impact on the company's overall business",
+                  "Communicates usability metrics and findings to clients and the Palantir team",
+                  "Clearly provides clients with a plan, tools, behaviors, and best practices for addressing their usability issues",
                   "Creates new user-elicitation methods and techniques to suit novel research needs and requirements"
               ],
               "examples": []
@@ -2041,13 +2028,13 @@ export const uxTracks = (trackList: object[]): object[] => {
       "milestone": "CHAPTER_THREE",
       "cohort": "UX",
       "category": "A",
-      "displayName": "Strategy & Design",
-      "description": "Comprehends the analysis and creation of content strategy\t",
+      "displayName": "Strategy and Design",
+      "description": "Conducts analysis and creates content strategy",
       "milestones": [
           {
               "summary": "Works in the strategy and design process with guidance, following current best practices",
               "signals": [
-                  "Understands lessons from discovery and research to inform audience definition and identify key personas",
+                  "Understands learnings from discovery and research to inform audience definition and identify key personas",
                   "Synthesizes findings from discovery process, identifying opportunities and issues with guidance of senior strategists"
               ],
               "examples": []
@@ -2056,7 +2043,7 @@ export const uxTracks = (trackList: object[]): object[] => {
               "summary": "Works effectively in the strategy and design process with guidance, focusing on expanding experience and proficiency",
               "signals": [
                   "Synthesizes findings from discovery process, effectively identifying opportunities and issues",
-                  "Leverages lessons from discovery and research to inform audience definition and identify key personas",
+                  "Leverages learnings from discovery and research to inform audience definition and identify key personas",
                   "Demonstrates user journeys through journey mapping"
               ],
               "examples": []
@@ -2065,7 +2052,7 @@ export const uxTracks = (trackList: object[]): object[] => {
               "summary": "Effectively develops complicated content strategy",
               "signals": [
                   "Works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences",
-                  "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet the client objectives",
+                  "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives",
                   "Understands user needs and intents then translate that to information architecture and content outline(s), collaborating with designers",
                   "Collaborates with designers on design strategy and visual design application for projects",
                   "Conducts usability tests"
@@ -2075,20 +2062,20 @@ export const uxTracks = (trackList: object[]): object[] => {
           {
               "summary": "Creates high-quality complex content strategy",
               "signals": [
-                  "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet the client objectives, demonstrate a level of excellence, and may be achieved within budget",
-                  "Provides high-level sitemap and wireframes or work with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences",
-                  "Craft high-level content strategy recommendations",
-                  "Guides the creation of wireframes for key pages in the new website, and explains such wireframes to the client"
+                  "Synthesizes findings from discovery process, identifying opportunities and issues, and recommends solutions that meet client objectives, demonstrate a level of excellence, and may be achieved within budget",
+                  "Provides high-level sitemap and wireframes or works with designers as appropriate to translate strategic recommendations into wireframes and documentation that lead to intuitive user experiences",
+                  "Crafts high-level content strategy recommendations",
+                  "Guides the creation of wireframes for key pages in the new website, and explains wireframes to the client"
               ],
               "examples": []
           },
           {
               "summary": "Delivers and guides high-quality content strategy, deeply knowledgeable and sets new trends and solutions for the UX team",
               "signals": [
-                  "Demonstrates ability to generate and translat insights into actionable digital opportunities through reports\/presentations, personas, user flows, journey maps,..",
-                  "Balances creativity with structure, collaborating with designers, PM, and  engineers",
+                  "Demonstrates ability to generate and translate insights into actionable digital opportunities through reports, presentations, personas, user flows, journey maps, etc.",
+                  "Balances creativity with structure, collaborating with designers, project managers, and engineers",
                   "Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective",
-                  "Articulates a design strategy or approach that will impact the user experience across products or platforms and support own ideas with sound reasoning and\/or data"
+                  "Articulates a design strategy or approach that will impact the user experience across products or platforms and supports these ideas with sound reasoning and data"
               ],
               "examples": []
           }
@@ -2099,14 +2086,14 @@ export const uxTracks = (trackList: object[]): object[] => {
       "cohort": "UX",
       "category": "A",
       "displayName": "User-centered Design",
-      "description": "Comprehends an understanding of the end user to guide decision making for product design and development\t",
+      "description": "Relies on an understanding of the end user to guide decision making for product design and development",
       "milestones": [
           {
               "summary": "Works in the design validation process with guidance, following current best practices",
               "signals": [
                   "Conducts basic, early-stage design validations with stakeholders",
                   "Uses basic feedback techniques to improve relatively simple design concepts",
-                  "Helps to create clean and simple user-centred designs with guidance of senior teammates"
+                  "Helps create clean and simple user-centred designs with guidance of senior teammates"
               ],
               "examples": []
           },
@@ -2115,18 +2102,18 @@ export const uxTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Conducts design validations with stakeholders with assistance of a more senior designer",
                   "Applies feedback techniques to improve design concepts",
-                  "Works with more senior team members to plan design-validation activities and incorporate user feedback into design changes",
-                  "Generates user profiles, recruiting screeners, study scripts, and reports"
+                  "Works with more senior team members to plan design validation activities and incorporate user feedback into design iteration",
+                  "Generates user profiles, recruitment copy, test scripts, and reports"
               ],
               "examples": []
           },
           {
               "summary": "Effectively leads the design process",
               "signals": [
-                  "Designs and delivers wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interface",
-                  "Independently conducts design-validation activities with internal and external stakeholders",
-                  "Translates concepts into user flows, wireframes, mockups and prototypes that lead to intuitive user experiences",
-                  "Assist the front-end developers to ensure the UX design achieves design goals and meets end-user needs"
+                  "Designs and delivers wireframes, user stories, user journeys, and mockups optimized for a wide range of devices and interfaces",
+                  "Independently conducts design validation activities with internal and external stakeholders",
+                  "Translates concepts into user flows, wireframes, mockups, and prototypes that lead to intuitive user experiences",
+                  "Assists the front-end developers to ensure the UX design achieves design goals and meets end-user needs"
               ],
               "examples": []
           },
@@ -2134,17 +2121,17 @@ export const uxTracks = (trackList: object[]): object[] => {
               "summary": "Independently leads all aspects of the design process",
               "signals": [
                   "Demonstrates the ability to identify design problems and devise solutions",
-                  "Takes a user-centered design approach and rapidly test and iterate your designs",
-                  "Ensures design production is efficient and deliver at the highest quality in accordance with UX's best practices and processes"
+                  "Takes a user-centered design approach and rapidly tests and iterates the work",
+                  "Ensures design production is efficient and delivers at the highest quality in accordance with UX's best practices and processes"
               ],
               "examples": []
           },
           {
               "summary": "Guides and leads all stages of the design process, developing new concepts",
               "signals": [
-                  "Makes strategic design and user-experience decisions related to core, and new, functions and features",
-                  "Creates high quality design deliverables and executes based on UX goals and priorities, acting as an expert in the field",
-                  "Stays on top of UX design trends and looking for creative ways to inspire delightful experiences"
+                  "Makes strategic design and user experience decisions related to both core and new functions, and features",
+                  "Creates high-quality design deliverables and executes based on UX goals and priorities, acting as an expert in the field",
+                  "Stays on top of UX design trends and looks for creative ways to inspire delightful experiences"
               ],
               "examples": []
           }
@@ -2167,7 +2154,7 @@ export const uiTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Is building proficiency in our design practice and becoming comfortable with learning new technologies and skills",
                   "Has experience with web accessibility, usability and core development tools",
-                  "Understands web design constraints, including CSS, HTLM, browser usability, and crosss-platform compatibility"
+                  "Understands web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility"
               ],
               "examples": []
           },
@@ -2175,11 +2162,11 @@ export const uiTracks = (trackList: object[]): object[] => {
               "summary": "Works effectively within established structures, focusing on expanding experience and proficiency",
               "signals": [
                   "Focuses on expanding experience and proficiency in our design practice, establishing and promoting brand guidelines, best practices and standards",
-                  "Is well-versed with web accessibility, usability and core development tools",
-                  "Collaborates with PM, Strategy and Engineering to scope time and effort involved in design projects",
+                  "Is well-versed with web accessibility, usability, and core design tools",
+                  "Collaborates with project managers, strategists, and engineers to scope time and effort involved in design projects",
                   "Serves as a strategic visual design resource",
-                  "Has a deep understanding of web design constraints, including CSS, HTLM, browser usability, and crosss-platform compatibility",
-                  "Develops a web experience that's best for the user and accurately reflects the client's goals, objectives, and brand identity"
+                  "Has a deep understanding of web design constraints, including CSS, HTML, browser usability, and cross-platform compatibility",
+                  "Designs a web experience that's best for the user and accurately reflects the client's goals, objectives, and brand identity"
               ],
               "examples": []
           },
@@ -2187,12 +2174,12 @@ export const uiTracks = (trackList: object[]): object[] => {
               "summary": "Designs complicated user experience design solutions, mastering delivery",
               "signals": [
                   "Is always able to articulate the \"why\" of design decisions",
-                  "Constantly seeks input from the engineering and implementation team to validate and ensure that the design visual is executable",
-                  "Executes all visual design stages from concept to HTLM\/CSS browser",
+                  "Constantly seeks input from the engineering and implementation team to validate and ensure that the design is executable",
+                  "Executes all visual design stages from concept to HTML\/CSS browser",
                   "Has experience designing from user experience journeys, and realistic use cases to create functional and delightful designs",
                   "Drives the design process and serves as a gatekeeper and clients \"brand expert\"",
                   "Conceptualizes original ideas that bring simplicity and user friendliness to complex design roadblocks",
-                  "Collaborates with PM and Engineering to define and implement innovative solutions for the product direction, design and interactions",
+                  "Collaborates with project managers and engineers to define and implement innovative solutions for the product direction, design and interactions",
                   "Serves as a resident expert of digital tools and is skilled in developing digital design concepts"
               ],
               "examples": []
@@ -2209,14 +2196,14 @@ export const uiTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for an UI team",
+              "summary": "Is an industry-leading expert in multiple areas of business, deeply knowledgeable in several domains, and sets strategic foundational direction for the UI team",
               "signals": [
-                  "Guides and directs UI team members by providing strategic direction that best honor's client's business",
-                  "Develops a unique user experience practice approach that outlines and defines activities, deliverables, and value to be used in sales and marketing initiatives",
+                  "Guides and directs UI team members by providing strategic direction to best deliver client's business goals",
+                  "Is able to articulate a unique user experience approach that delivers client value for use in sales and marketing initiatives",
                   "Designs and builds industry-leading solutions to solve UI complex problems and advocates for the best user experience possible",
                   "Serves as client focal point for all UI practices",
-                  "Anticipates technical challenges, exploring alternatives and tradeoffs thoroughly",
-                  "Seen as a leader and contributor in the broader technical side across the organization"
+                  "Anticipates technical challenges, exploring alternatives and trade offs thoroughly",
+                  "Seen as a leader and contributor in the organization"
               ],
               "examples": []
           }
@@ -2234,7 +2221,7 @@ export const uiTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Employs basic information-architecture concepts correctly",
                   "Evaluates structural design decisions for feature sets that are well defined or limited in scope with the assistance of senior designers",
-                  "Understands the basic usability principles and tradeoffs behind their own design concepts"
+                  "Understands the basic usability principles and trade offs behind their own design concepts"
               ],
               "examples": []
           },
@@ -2252,7 +2239,7 @@ export const uiTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Explores multiple, alternative information-architecture solutions before choosing a design direction",
                   "Balances relatively complicated user, business, and technical requirements to arrive at sound information-architecture designs",
-                  "Can explain the usability rationale and tradeoffs of one information architecture versus another"
+                  "Can explain the usability rationale and trade offs of one information architecture versus another"
               ],
               "examples": []
           },
@@ -2262,7 +2249,7 @@ export const uiTracks = (trackList: object[]): object[] => {
                   "Creates new architectural design patterns for a product when necessary",
                   "Employs complex information-architecture concepts quickly and correctly",
                   "Explores multiple, alternative product information architectures to create a broad range of alternative design concepts",
-                  "Understands the usability rationale and tradeoffs for different product-level information architectures and can clearly articulate these to the team"
+                  "Understands the usability rationale and trade-offs for different product-level information architectures and can clearly articulate these to the team"
               ],
               "examples": []
           },
@@ -2273,7 +2260,7 @@ export const uiTracks = (trackList: object[]): object[] => {
                   "Creates insightful, timely, compelling information-architecture designs for highly complex problem spaces",
                   "Efficiently balances and manages complex user, business, and technical requirements to make sound information-architecture design decisions",
                   "Anticipates and thinks through the entire breadth of impacts that information-architecture decisions can have on users, product teams, and UX designers",
-                  "Understands and can compellingly articulate the usability tradeoffs of various information-architecture design approaches for entire product families and frameworks"
+                  "Understands and can compellingly articulate the usability trade-offs of various information-architecture design approaches for entire product families and frameworks"
               ],
               "examples": []
           }
@@ -2289,8 +2276,8 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Solves routine interaction-design problems effectively with guidance",
               "signals": [
-                  "Effectively solves routine interaction-design problems, gathering the information necessary to weigh a limited set of options and arrive at sound conclusions",
-                  "Escalates problems that are beyond the scope of his design capabilities for resolution by a more senior designer",
+                  "Effectively solves routine interaction design problems, gathering the information necessary to weigh a limited set of options and arrive at sound conclusions",
+                  "Escalates problems that are beyond the scope of their design capabilities for resolution by a more experienced designer",
                   "Writes select components of interaction design strategy documentation"
               ],
               "examples": []
@@ -2298,7 +2285,7 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Solves moderately difficult interaction-design problems and develops solutions with guidance",
               "signals": [
-                  "Efficiently solves moderately difficult interaction-design problems that impact people within their team or other related team",
+                  "Efficiently solves moderately difficult interaction design problems that impact people within their team or other related team",
                   "Applies existing interaction patterns, working with a more senior designer as a guide or mentor"
               ],
               "examples": []
@@ -2306,9 +2293,9 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Solves complicated interaction-design problems and creates new interaction-design patterns  with guidance",
               "signals": [
-                  "Efficiently and creatively solves complicated interaction-design problems that impact the stakeholders",
+                  "Efficiently and creatively solves complicated interaction design problems that impact the stakeholders",
                   "Looks beyond obvious solutions and experiments with different approaches to solving problems",
-                  "Develops solutions for problems that stretch his\/her design capabilities, but requests a more senior design to review and approve them",
+                  "Develops solutions for problems that stretch their own design capabilities, but requests review and approval from a more senior designer",
                   "Facilitates effective problem solving in meetings and teams"
               ],
               "examples": []
@@ -2316,21 +2303,21 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Efficiently solves complex interaction-design problems and creates new interaction-design patterns",
               "signals": [
-                  "Efficiently solves complex and difficult interaction-design problems that impact the team or entire organization",
-                  "Accurately defines the amount and kinds of information it is needed to gather for problem solving",
+                  "Efficiently solves complex and difficult interaction design problems that impact the team or entire organization",
+                  "Accurately defines the amount and kinds of information that is needed to gather for problem solving",
                   "Anticipates and proactively works to circumvent roadblocks to solutions",
-                  "Creates new interaction-design patterns for a product when necessary",
-                  "Identifies underlying or hidden problems or trends across group"
+                  "Creates new interaction design patterns for a product when necessary",
+                  "Identifies underlying or hidden problems or trends across the organization"
               ],
               "examples": []
           },
           {
               "summary": "Efficiently leads and solves high-level complex interaction-design problems and creates new interaction-design patterns",
               "signals": [
-                  "Efficiently and creatively solves even the most complex and difficult interaction-design problems that impact the team or entire company",
-                  "Creates new interaction-design patterns that impact entire product lines and user-interface frameworks",
+                  "Efficiently and creatively solves even the most complex and difficult interaction design problems that impact the team or entire company",
+                  "Creates new interaction design patterns that impact entire product lines and user interface frameworks",
                   "Asks critical, insightful questions and probes all fruitful sources for relevant information to facilitate problem solving",
-                  "Leads the team in critical, high-level, design problem solving",
+                  "Leads the team in critical, high-level design problem solving",
                   "Strategically analyzes the risks, benefits, and opportunities of various solutions"
               ],
               "examples": []
@@ -2347,15 +2334,15 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Creates basic visual elements with guidance",
               "signals": [
-                  "Competently creates basic layouts and produce mockups of designs with the guidance of senior designers",
-                  "Turns the image-based designs into a functional HTML & CSS code-based style guide"
+                  "Competently creates basic layouts and produces mockups of designs with the guidance of senior designers",
+                  "Turns image-based designs into a functional HTML and CSS code-based style guide"
               ],
               "examples": []
           },
           {
               "summary": "Creates accurate visual elements, following best practices",
               "signals": [
-                  "Builds accurate wireframes, following visual-design guidelines",
+                  "Builds accurate wireframes, following visual design guidelines",
                   "Collaborates with other visual designers to produce graphics resource files for user interfaces"
               ],
               "examples": []
@@ -2364,17 +2351,17 @@ export const uiTracks = (trackList: object[]): object[] => {
               "summary": "Creates sophisticated and complicated visual elements, following best practices\t",
               "signals": [
                   "Creates sophisticated layouts and produce mockups of designs",
-                  "Builds complicated wireframes, following visual-design guidelines",
-                  "Uses various techniques to create drafts, models and prototypes"
+                  "Builds complicated wireframes, following visual design guidelines",
+                  "Uses various techniques to create drafts, models, and prototypes"
               ],
               "examples": []
           },
           {
               "summary": "Delivers complex visual elements and guides other designers",
               "signals": [
-                  "Builds complex, accurate wireframes, following visual-design guidelines",
-                  "Collaborates with strategists, PM and engineers to understand how all aspects of a product's functionality would work within an established visual-design framework",
-                  "Maintains an awareness of trends in visual design and guides other visual designers in implementing cutting-edge, visual-design solutions for their products",
+                  "Builds complex, accurate wireframes, following visual design guidelines",
+                  "Collaborates with strategists, project managers, and engineers to understand how all aspects of a product's functionality would work within an established visual design framework",
+                  "Maintains an awareness of trends in visual design and guides other visual designers in implementing cutting-edge, visual design solutions for their products",
                   "Has a strong understanding of web design systems and helps create a standardized toolbox of components to draw from"
               ],
               "examples": []
@@ -2382,8 +2369,8 @@ export const uiTracks = (trackList: object[]): object[] => {
           {
               "summary": "Delivers and guides high-quality visual elements, deeply knowledgeable and sets new trends and solutions for the UI team",
               "signals": [
-                  "Expertly builds complex, accurate wireframes, following visual-design guidelines",
-                  "Guides and directs the UI design team to understand how all aspects of a product's functionality would work within an established visual-design framework",
+                  "Expertly builds complex, accurate wireframes, following visual design guidelines",
+                  "Guides and directs the UI design team to understand how all aspects of a product's functionality would work within an established visual design framework",
                   "Stays abreast of trends in visual design and expertly guides other visual designers in implementing cutting-edge solutions for their products",
                   "Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
               ],
@@ -2401,15 +2388,15 @@ export const pmTracks = (trackList: object[]): object[] => {
       "cohort": "PM",
       "category": "A",
       "displayName": "Foundations",
-      "description": "Develops expertise and proficiency in our PM practice, with solid understanding of relevant areas\t",
+      "description": "Develops expertise and proficiency in our project management practice, with solid understanding of relevant areas        ",
       "milestones": [
           {
               "summary": "Works effectively within established structures, following current best practices",
               "signals": [
                   "Is building proficiency in our PM practice and becoming comfortable with learning new skills",
-                  "Able to develop comprehensice projects plans with assistance of seniors project managers",
+                  "Able to develop comprehensive projects plans with assistance of seniors project managers",
                   "Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and develop according to plan",
-                  "Is well-versed with project management methodologies and Microsoft Office",
+                  "Is well-versed with project management methodologies and client collaboration tools",
                   "Actively listens, understands, and responds to clients and team members"
               ],
               "examples": []
@@ -2423,16 +2410,16 @@ export const pmTracks = (trackList: object[]): object[] => {
                   "Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, might have different responses from the client, and even different definitions of work",
                   "Monitors client satisfaction",
                   "Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders",
-                  "Able to create, manage and maitain agreements, budgets, scope of work, and timelines",
-                  "Works within the given parameteres delivered from Sales, such as problem statetment, budget,.."
+                  "Able to create, manage and maintain agreements, budgets, scope of work, and timelines",
+                  "Works within the given parameters delivered from Sales, such as problem statetment, budget"
               ],
               "examples": []
           },
           {
               "summary": "Manages project plans of moderate complexity, mastering delivery",
               "signals": [
-                  "Effectively leads and takes ownership of project from concept to completion, acting as the liaison between the project team and clients",
-                  "Facilitates team through Agile practices, including daily SCRUMS, grooming and retrospectives",
+                  "Effectively leads a project from concept to completion, acting as the liaison between the project team and clients",
+                  "Facilitates team through Agile practices, including daily scrum, grooming and retrospectives",
                   "Manages changes to the project scope, budget and timeline using appropriate verification techniques",
                   "Delegates project tasks based on junior staff members' individual strengths, skill sets and experience levels",
                   "Measures project performance using appropriate tools and techniques",
@@ -2445,7 +2432,7 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Develops complex project plans and guides other PM team members",
               "signals": [
-                  "Defines success criteria and disseminate them to involved parties throughout project and program life cycle",
+                  "Defines success criteria and disseminates them to involved parties throughout project and program life cycle",
                   "Establishes practices, templates, policies, tools and partnerships to expand and mature the PM capabilities for the organization",
                   "Sets and continually manages project expectations while delegating and managing deliverable with team members and stakeholders",
                   "Guides team members about every aspect of the project so that the team members can understand their tasks fully and act on them efficiently",
@@ -2454,13 +2441,13 @@ export const pmTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic foundational direction for a PM team",
+              "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic foundational direction for the project management team",
               "signals": [
                   "Guides and directs PM team members by providing direction to team and project success",
                   "Leverages constraints that exist for projects around resources, budget, time, quality and scope in order to meet project outcomes",
                   "Manages dilemmas and paradoxes as they occur throughout the project lifecycle by identifying and communicating trade-offs with key stakeholders",
                   "Seen as a leader and contributor in the broader technical side across the organization",
-                  "Capability to track project benefits realisation and lessons learnt activities to feed into on-going improvements"
+                  "Capability to track project benefits realization and lessons learned activities to feed into ongoing improvements"
               ],
               "examples": []
           }
@@ -2471,7 +2458,7 @@ export const pmTracks = (trackList: object[]): object[] => {
       "cohort": "PM",
       "category": "A",
       "displayName": "Plan",
-      "description": "Comprehends the processes and activities to identify, define, combine, unify, and coordinate the various elements within PM such as scope, budget, timelines and resources\t",
+      "description": "Comprehends the processes and activities to identify, define, combine, unify, and coordinate the various elements within project management such as scope, budget, timelines, and resources        ",
       "milestones": [
           {
               "summary": "Works effectively to assist the business planning, lifecycle management, reporting and performance measurement systems",
@@ -2520,7 +2507,7 @@ export const pmTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Is an industry-leading expert in multiple areas of our stack, deeply knowledgeable in several domains and sets strategic planning direction for a PM team",
+              "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic planning direction for the project management team",
               "signals": [
                   "Ensures that the project is adding to the strategic advantage of the client",
                   "Defends product integrity from misinformed decision making either externally or internally",
@@ -2536,10 +2523,10 @@ export const pmTracks = (trackList: object[]): object[] => {
       "cohort": "PM",
       "category": "A",
       "displayName": "Risk Mitigation",
-      "description": "Comprehends the ability to conduct risk planning, identification, analysis, and response planning and controlling risk on a project\t",
+      "description": "Comprehends the ability to conduct risk planning, identification, analysis, and response planning and controlling risk on a project        ",
       "milestones": [
           {
-              "summary": "Works effectively within established project risk, following quality polices, objectives and responsibilities to satisfy project requirements",
+              "summary": "Works effectively within established project risk, following quality policies, objectives and responsibilities to satisfy project requirements",
               "signals": [
                   "Determines which risks may affect the project and documents their characteristics with assistance of senior PM",
                   "Ability to understand and document potential consequences of risks as they occur",
@@ -2551,7 +2538,7 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Develops and monitors risk mitigation with guidance",
               "signals": [
-                  "Effectively determines which risks may affect the project and documents their characteristices with some assistance of senior PM",
+                  "Effectively determines which risks may affect the project and documents their characteristics with some assistance of senior PM",
                   "Conducts ongoing risk assessments with guidance",
                   "Monitors status of project risks with guidance",
                   "Audits quality requirements and results from quality control measurements with guidance"
@@ -2561,12 +2548,12 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Performs risk mitigation to minimize project risks",
               "signals": [
-                  "Oversses the risk identification and definition process",
-                  "Ability to prioritize risks for further analysis or action by assessing their probabilities of occurence and impact",
+                  "Oversees the risk identification and definition process",
+                  "Ability to prioritize risks for further analysis or action by assessing their probabilities of occurrence and impact",
                   "Develops options and actions to enhance opportunities and reduce threats to project objectives",
                   "Initiates risk response plans when necessary",
                   "Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks",
-                  "Regurlay review quality metrics with the team",
+                  "Regularly review quality metrics with the team",
                   "Establishes, updates, and utilizes key performance indicators"
               ],
               "examples": []
@@ -2587,7 +2574,7 @@ export const pmTracks = (trackList: object[]): object[] => {
               "signals": [
                   "Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response",
                   "Drives and leads creative actions to enhance opportunities and reduce threats to project objectives",
-                  "Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issue",
+                  "Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issues",
                   "Clearly articulates the risks to the client, including their negative impact on the company's overall business",
                   "Identifies quality standards for use by the team that establish performance and quality expectations"
               ],
@@ -2600,7 +2587,7 @@ export const pmTracks = (trackList: object[]): object[] => {
       "cohort": "PM",
       "category": "A",
       "displayName": "Information",
-      "description": "Comprehends the effective exchanges of accurate, appropriate and relevant information with stakeholders\t",
+      "description": "Comprehends the effective exchanges of accurate, appropriate, and relevant information with stakeholders        ",
       "milestones": [
           {
               "summary": "Actively listens, understands and responds to stakeholders",
@@ -2621,11 +2608,11 @@ export const pmTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Disseminates information effectively, egaging with stakeholders",
+              "summary": "Disseminates information effectively, engaging with stakeholders",
               "signals": [
                   "Engages with stakeholders proactively",
                   "Establishes regular interaction w\/ stakeholders, including formal and informal channels",
-                  "Uses appropriate communications method for information diseeminated",
+                  "Uses appropriate communications method for information disseminated",
                   "Appropriately matches level of formality to meetings and audience",
                   "Able to effectively summarize key points and issues in a clear and concise manner",
                   "Regularly conducts follow-up with stakeholders"
@@ -2635,7 +2622,7 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Ensures quality of information and guidance to proactive respond to stakeholders",
               "signals": [
-                  "Engages with team members in developing reports, analysing issues, evaluating progress, and option analysis",
+                  "Engages with team members in developing reports, analyzing issues, evaluating progress, and option analysis",
                   "Proactively responds to issues and concerns",
                   "Balances speed of provision of information against reliability of information",
                   "Seeks validation of information",
@@ -2646,7 +2633,7 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Effectively manages high-level information to diverse audience, ensuring stakeholder engagement",
               "signals": [
-                  "Evaluates, develops and execute responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
+                  "Evaluates, develops and executes responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
                   "Builds processes and structures that ensure transfer of information as a whole that influence strategic decisions and produce foundations for new capabilities",
                   "Continually seeks new information to assess the effectiveness of the project strategy"
               ],
