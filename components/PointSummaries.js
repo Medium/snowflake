@@ -24,7 +24,7 @@ class PointSummaries extends React.Component<Props> {
             useNext = true
           }
           else if (useNext) {
-            nextExecutionMilestone = points[0]
+            nextExecutionMilestone = points[0] - executingPoints
             useNext = false
           }
         }
@@ -37,7 +37,7 @@ class PointSummaries extends React.Component<Props> {
             useNext = true
         }
         else if (useNext) {
-            nextSkillsMilestone = points[0]
+            nextSkillsMilestone = points[0] - skillPoints
             useNext = false
         }
       }
