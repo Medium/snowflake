@@ -41,7 +41,7 @@ export const milestoneValues = (trackId: TrackId): string => {
   }
 }
 
-export const milestoneToPoints = (milestone: Milestone, trackId: TrackId): number => {
+export const milestoneToPoints = (milestone: Milestone, trackId: TrackId, limitType: false): number => {
     if (milestoneValues(trackId) == 'A') {
       switch (milestone) {
           case 0: return 0
@@ -52,6 +52,9 @@ export const milestoneToPoints = (milestone: Milestone, trackId: TrackId): numbe
           case 5: return 60
           default: return 0
       }
+    }
+    if (limitType) {
+        return 0
     }
     if (milestoneValues(trackId) == 'B') {
         switch (milestone) {
@@ -942,6 +945,10 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
   trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId))
     .reduce((sum, addend) => (sum + addend), 0)
+
+export const executingPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+    trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId, true))
+        .reduce((sum, addend) => (sum + addend), 0)
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)

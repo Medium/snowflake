@@ -1,6 +1,6 @@
 // @flow
 
-import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
+import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap, executionGate, skillsGate, executingPointsFromMilestoneMap } from '../constants'
 import type { MilestoneMap } from '../constants'
 import React from 'react'
 
@@ -11,39 +11,90 @@ type Props = {
 class PointSummaries extends React.Component<Props> {
   render() {
     const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
+    const executingPoints = executingPointsFromMilestoneMap(this.props.milestoneByTrack)
+    const skillPoints = totalPoints - executingPoints
 
-    let currentLevel, nextLevel
+    let useNext, currentLevel, color, nextLevel, levelStatus, executingStatus, skillsStatus, skillsRemaining
+    let nextExecutionMilestone, nextSkillsMilestone
+
+    useNext = false
+    Object.entries(executionGate).map((points) => {
+          if (executingPoints > points[0]) {
+            executingStatus = points[1]
+            useNext = true
+          }
+          else if (useNext) {
+            nextExecutionMilestone = points[0]
+            useNext = false
+          }
+        }
+    )
+
+    useNext = false
+    Object.entries(skillsGate).map((points, index) => {
+        if (skillPoints > points[0]) {
+            skillsStatus = points[1]
+            useNext = true
+        }
+        else if (useNext) {
+            nextSkillsMilestone = points[0]
+            useNext = false
+        }
+      }
+    )
 
     let pointsForCurrentLevel = totalPoints
+
     while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
       pointsForCurrentLevel--
     }
-
     let pointsToNextLevel = 1
     while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
-      pointsToNextLevel++
-      if (pointsToNextLevel > 135) {
-        pointsToNextLevel = 'N/A'
-        break
-      }
+        pointsToNextLevel++
+        if (pointsToNextLevel > 30) {
+            pointsToNextLevel = 'N/A'
+            break
+        }
     }
 
+    let originalLevel = currentLevel
+
+    color = '#a7d1bc'
+
+    if (parseInt(originalLevel) > parseInt(executingStatus)) {
+      currentLevel = executingStatus
+      levelStatus = 'Execution training'
+      color = '#9fc855'
+    }
+    if (parseInt(originalLevel) > parseInt(skillsStatus)) {
+      currentLevel = skillsStatus
+      levelStatus += ' Skills training'
+      color = '#11a9a1'
+      if (parseInt(originalLevel) > parseInt(executingStatus)) {
+        color = '#fb9900'
+      }
+    }
+    //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
         label: 'Current level',
-        value: currentLevel
+        value: currentLevel,
+        status: levelStatus,
       },
       {
         label: 'Total points',
-        value: totalPoints
+        value: totalPoints,
+        status: 'Next level: ' + pointsToNextLevel
       },
       {
         label: 'Execution',
-        value: pointsToNextLevel
+        value: executingPoints,
+        status: 'Next milestone: ' + nextExecutionMilestone
       },
       {
         label: 'Skills',
-        value: pointsToNextLevel
+        value: skillPoints,
+        status: 'Next milestone: ' + nextSkillsMilestone
       }
 
     ]
@@ -61,7 +112,17 @@ class PointSummaries extends React.Component<Props> {
             text-align: center;
             font-weight: normal;
             width: 120px;
+            height: 24px;
+            font-weight: bold;
+            background-color: #ccc;
           }
+          .point-summary-status {
+            font-size: 12px;
+            text-align: center;
+            font-weight: normal;
+            width: 120px;
+            height: 32px;
+          }          
           .point-summary-value {
             width: 120px;
             background: #eee;
@@ -81,11 +142,18 @@ class PointSummaries extends React.Component<Props> {
           ))}
           </tr>
           <tr>
-          {blocks.map(({value}, i) => (
-            <td key={i} className="point-summary-value">
-              {value}
-            </td>
-          ))}
+            {blocks.map(({value}, i) => (
+                <th key={i} className="point-summary-value">
+                  {value}
+                </th>
+            ))}
+          </tr>
+          <tr>
+              {blocks.map(({status}, i) => (
+                  <td key={i} className="point-summary-status" style={{"backgroundColor": color}}>
+                      {status}
+                  </td>
+              ))}
           </tr>
         </tbody>
       </table>
