@@ -144,7 +144,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             line-height: 40px;
             font-weight: bold;
             width: 380px;
-            margin-top: 140px;
+            margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 8px;
           }

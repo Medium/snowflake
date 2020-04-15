@@ -38,9 +38,14 @@ class PointSummaries extends React.Component<Props> {
         value: totalPoints
       },
       {
-        label: 'Points to next level',
+        label: 'Execution',
+        value: pointsToNextLevel
+      },
+      {
+        label: 'Skills',
         value: pointsToNextLevel
       }
+
     ]
 
     return (
