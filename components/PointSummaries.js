@@ -5,7 +5,8 @@ import type { MilestoneMap } from '../constants'
 import React from 'react'
 
 type Props = {
-  milestoneByTrack: MilestoneMap
+    milestoneByTrack: MilestoneMap,
+    level: number
 }
 
 class PointSummaries extends React.Component<Props> {
@@ -78,7 +79,7 @@ class PointSummaries extends React.Component<Props> {
     const blocks = [
       {
         label: 'Current level',
-        value: currentLevel,
+        value: this.props.level,
         status: levelStatus,
       },
       {
