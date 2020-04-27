@@ -102,7 +102,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.cohort), encodeURI(state.title), encodeURI(state.level))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.level), encodeURI(state.name), encodeURI(state.cohort), encodeURI(state.title))
   return values.join(',')
 }
 
