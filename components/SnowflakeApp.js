@@ -30,9 +30,10 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[13]) result.name = decodeURI(hashValues[13])
-  if (hashValues[14]) result.cohort = decodeURI(hashValues[14])
-  if (hashValues[15]) result.title = decodeURI(hashValues[15])
+  if (hashValues[13]) result.level = decodeURI(hashValues[13])
+  if (hashValues[14]) result.name = decodeURI(hashValues[14])
+  if (hashValues[15]) result.cohort = decodeURI(hashValues[15])
+  if (hashValues[16]) result.title = decodeURI(hashValues[16])
   return result
 }
 
@@ -179,13 +180,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
               <CohortSelector
                   currentCohort={this.state.cohort}
                   setCohortFn={(cohort) => this.setCohort(cohort)} /></div>
-              <div style={{margin: 0, 'line-height': '0.5em'}}>Title: &nbsp;&nbsp;
-              <TitleSelector
+              {/*<div style={{margin: 0, 'line-height': '0.5em'}}>Title: &nbsp;&nbsp;
+                <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
                   currentCohort={this.state.cohort}
-                  setTitleFn={(title) => this.setTitle(title)} /></div>
-              <div style={{margin: 0, 'line-height': '0.5em'}}>Level: &nbsp;&nbsp;
+                  setTitleFn={(title) => this.setTitle(title)} /></div>*/}
+              <div style={{margin: 0, 'line-height': '0.5em'}}>Current Level: &nbsp;&nbsp;
                 <LevelSelector
                     level={this.state.level}
                     setLevelFn={(level) => this.setLevel(level)} /></div>

@@ -15,11 +15,32 @@ class PointSummaries extends React.Component<Props> {
     const executingPoints = executingPointsFromMilestoneMap(this.props.milestoneByTrack)
     const skillPoints = totalPoints - executingPoints
 
-    let useNext, currentLevel, color, nextLevel, levelStatus, executingStatus, skillsStatus, skillsRemaining
+    let useNext, useNextLevel, currentLevel, color, requiredPoints, requiredSkills, requiredTotal, nextTotal, nextPoints, nextSkills, nextLevel, levelStatus, executingStatus, skillsStatus, skillsRemaining
     let nextExecutionMilestone, nextSkillsMilestone
 
     useNext = false
+    Object.entries(pointsToLevels).map((points) => {
+      if (this.props.level >= parseInt(points[1])) {
+        requiredTotal = points[0]
+        useNext = true
+      }
+      else if (useNext) {
+        nextTotal = points[0]
+        useNext = false
+      }
+    })
+    useNext = false
+    useNextLevel = false
     Object.entries(executionGate).map((points) => {
+      if (this.props.level >= parseInt(points[1])) {
+        requiredPoints = points[0]
+        useNextLevel = true
+      }
+      else if (useNextLevel) {
+        nextPoints = points[0]
+        useNextLevel = false
+      }
+
           if (executingPoints > points[0]) {
             executingStatus = points[1]
             useNext = true
@@ -32,8 +53,17 @@ class PointSummaries extends React.Component<Props> {
     )
 
     useNext = false
+    useNextLevel = false
     Object.entries(skillsGate).map((points, index) => {
-        if (skillPoints > points[0]) {
+      if (this.props.level >= parseInt(points[1])) {
+        requiredSkills = points[0]
+        useNextLevel = true
+      }
+      else if (useNextLevel) {
+        nextSkills = points[0]
+        useNextLevel = false
+      }
+      if (skillPoints > points[0]) {
             skillsStatus = points[1]
             useNext = true
         }
@@ -62,49 +92,39 @@ class PointSummaries extends React.Component<Props> {
 
     color = '#a7d1bc'
 
-    if (parseInt(originalLevel) > parseInt(executingStatus)) {
-      currentLevel = executingStatus
-      levelStatus = 'Execution training'
-      color = '#9fc855'
-    }
-    if (parseInt(originalLevel) > parseInt(skillsStatus)) {
-      currentLevel = skillsStatus
-      levelStatus += ' Skills training'
-      color = '#11a9a1'
-      if (parseInt(originalLevel) > parseInt(executingStatus)) {
-        color = '#fb9900'
-      }
-    }
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
         label: 'Current level',
-        value: this.props.level,
-        status: levelStatus,
+        level: this.props.level,
+        tier: Math.floor(this.props.level / 3) + 1,
+        core: requiredPoints + ' +',
+        tscore: requiredSkills + ' +',
+        total: requiredTotal + ' +',
       },
       {
-        label: 'Total points',
-        value: totalPoints,
-        status: 'Next level: ' + pointsToNextLevel
+        label: 'Next Level',
+        level: parseInt(currentLevel) + 1,
+        tier: Math.floor((parseInt(currentLevel) +1) / 3) + 1,
+        core: nextPoints + ' +',
+        tscore: nextSkills + ' +',
+        total: nextTotal + ' +'
       },
       {
-        label: 'Execution',
-        value: executingPoints,
-        status: 'Next milestone: ' + nextExecutionMilestone
+        label: 'Graded Level',
+        level: currentLevel,
+        tier: Math.floor(currentLevel / 3) + 1,
+        core: executingPoints,
+        tscore: skillPoints,
+        total: totalPoints
       },
-      {
-        label: 'Skills',
-        value: skillPoints,
-        status: 'Next milestone: ' + nextSkillsMilestone
-      }
-
     ]
 
     return (
       <table>
         <style jsx>{`
           table {
-            border-spacing: 3px;
+            border-spacing: 1px;
             margin-bottom: 20px;
             margin-left: -3px;
           }
@@ -112,7 +132,7 @@ class PointSummaries extends React.Component<Props> {
             font-size: 12px;
             text-align: center;
             font-weight: normal;
-            width: 120px;
+            width: 100px;
             height: 24px;
             font-weight: bold;
             background-color: #ccc;
@@ -121,21 +141,22 @@ class PointSummaries extends React.Component<Props> {
             font-size: 12px;
             text-align: center;
             font-weight: normal;
-            width: 120px;
-            height: 32px;
+            width: 100px;
+            height: 24px;
           }          
           .point-summary-value {
-            width: 120px;
+            width: 100px;
             background: #eee;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
-            line-height: 50px;
+            line-height: 24px;
             border-radius: 2px;
             text-align: center;
           }
         `}</style>
         <tbody>
           <tr>
+              <th></th>
           {blocks.map(({label}, i) => (
             <th key={i} className="point-summary-label">
               {label}
@@ -143,16 +164,42 @@ class PointSummaries extends React.Component<Props> {
           ))}
           </tr>
           <tr>
-            {blocks.map(({value}, i) => (
-                <th key={i} className="point-summary-value">
-                  {value}
-                </th>
+              <td className="point-summary-label">Level</td>
+            {blocks.map(({level}, i) => (
+                <td key={i} className="point-summary-value">
+                  {level}
+                </td>
             ))}
           </tr>
           <tr>
-              {blocks.map(({status}, i) => (
-                  <td key={i} className="point-summary-status" style={{"backgroundColor": color}}>
-                      {status}
+              <td className="point-summary-label">Tier</td>
+              {blocks.map(({tier}, i) => (
+                  <td key={i} className="point-summary-value">
+                      {tier}
+                  </td>
+              ))}
+          </tr>
+          <tr>
+              <td className="point-summary-label">Core Skills</td>
+              {blocks.map(({core}, i) => (
+                  <td key={i} className="point-summary-value">
+                      {core}
+                  </td>
+              ))}
+          </tr>
+          <tr>
+              <td className="point-summary-label">T-Skills</td>
+              {blocks.map(({tscore}, i) => (
+                  <td key={i} className="point-summary-value">
+                      {tscore}
+                  </td>
+              ))}
+          </tr>
+          <tr>
+              <td className="point-summary-label">Total</td>
+              {blocks.map(({total}, i) => (
+                  <td key={i} className="point-summary-value" style={{"backgroundColor": color}}>
+                      {total}
                   </td>
               ))}
           </tr>
