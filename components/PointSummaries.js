@@ -18,6 +18,13 @@ class PointSummaries extends React.Component<Props> {
     let useNext, useNextLevel, currentLevel, color, requiredPoints, requiredSkills, requiredTotal, nextTotal, nextPoints, nextSkills, nextLevel, levelStatus, executingStatus, skillsStatus, skillsRemaining
     let nextExecutionMilestone, nextSkillsMilestone
 
+    requiredPoints = 0
+    requiredSkills = 0
+    nextExecutionMilestone = 30
+    nextSkillsMilestone = 10
+    let executionMilestone = nextExecutionMilestone
+    let skillsMilestone = nextSkillsMilestone
+
     useNext = false
     useNextLevel = false
     Object.entries(executionGate).map((points) => {
@@ -32,6 +39,7 @@ class PointSummaries extends React.Component<Props> {
 
       if (executingPoints > points[0]) {
         executingStatus = points[1]
+        let executionMilestone = points[0]
         useNext = true
       }
       else if (useNext) {
@@ -53,15 +61,15 @@ class PointSummaries extends React.Component<Props> {
         useNextLevel = false
       }
       if (skillPoints > points[0]) {
-            skillsStatus = points[1]
-            useNext = true
-        }
-        else if (useNext) {
-            nextSkillsMilestone = points[0] - skillPoints
-            useNext = false
-        }
+        skillsStatus = points[1]
+        let skillsMilestone = points[0]
+        useNext = true
       }
-    )
+      else if (useNext) {
+        nextSkillsMilestone = points[0] - skillPoints
+        useNext = false
+      }
+    })
 
     useNext = false
     Object.entries(pointsToLevels).map((points) => {
@@ -93,12 +101,13 @@ class PointSummaries extends React.Component<Props> {
 
     if (executingStatus < currentLevel) {
       currentLevel = executingStatus
+      nextLevel = originalLevel
     }
     if (skillsStatus < currentLevel) {
       currentLevel = skillsStatus
+      nextLevel = originalLevel;
     }
 
-    nextLevel = originalLevel;
 
     color = '#a7d1bc'
 
@@ -109,16 +118,18 @@ class PointSummaries extends React.Component<Props> {
       nextRequiredPoints = nextExecutionMilestone
       nextRequiredSkills = nextSkillsMilestone
     }
+    console.log(executionMilestone)
+    console.log(skillsMilestone)
+
     // Next skill points
-    if (executingPoints >= nextRequiredPoints) {
+    if (executingPoints >= nextExecutionMilestone) {
       nextPoints = 0
     }
     else {
       nextPoints = nextRequiredPoints - executingPoints
     }
     // Next t-skills
-    // Next skill points
-    if (skillPoints >= nextRequiredSkills) {
+    if (skillPoints >= nextSkillsMilestone) {
       nextSkills = 0
     }
     else {
