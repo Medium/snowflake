@@ -19,17 +19,6 @@ class PointSummaries extends React.Component<Props> {
     let nextExecutionMilestone, nextSkillsMilestone
 
     useNext = false
-    Object.entries(pointsToLevels).map((points) => {
-      if (this.props.level >= parseInt(points[1])) {
-        requiredTotal = points[0]
-        useNext = true
-      }
-      else if (useNext) {
-        nextTotal = points[0]
-        useNext = false
-      }
-    })
-    useNext = false
     useNextLevel = false
     Object.entries(executionGate).map((points) => {
       if (this.props.level >= parseInt(points[1])) {
@@ -41,15 +30,15 @@ class PointSummaries extends React.Component<Props> {
         useNextLevel = false
       }
 
-          if (executingPoints > points[0]) {
-            executingStatus = points[1]
-            useNext = true
-          }
-          else if (useNext) {
-            nextExecutionMilestone = points[0] - executingPoints
-            useNext = false
-          }
+      if (executingPoints > points[0]) {
+        executingStatus = points[1]
+        useNext = true
+      }
+      else if (useNext) {
+        nextExecutionMilestone = points[0] - executingPoints
+        useNext = false
         }
+      }
     )
 
     useNext = false
@@ -74,6 +63,18 @@ class PointSummaries extends React.Component<Props> {
       }
     )
 
+    useNext = false
+    Object.entries(pointsToLevels).map((points) => {
+      if (this.props.level >= parseInt(points[1])) {
+        requiredTotal = points[0]
+        useNext = true
+      }
+      else if (useNext) {
+        nextTotal = points[0]
+        useNext = false
+      }
+    })
+
     let pointsForCurrentLevel = totalPoints
 
     while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
@@ -81,39 +82,71 @@ class PointSummaries extends React.Component<Props> {
     }
     let pointsToNextLevel = 1
     while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
-        pointsToNextLevel++
-        if (pointsToNextLevel > 30) {
-            pointsToNextLevel = 'N/A'
-            break
-        }
+      pointsToNextLevel++
+      if (pointsToNextLevel > 30) {
+        pointsToNextLevel = 'N/A'
+        break
+      }
     }
 
     let originalLevel = currentLevel
 
+    if (executingStatus < currentLevel) {
+      currentLevel = executingStatus
+    }
+    if (skillsStatus < currentLevel) {
+      currentLevel = skillsStatus
+    }
+
+    nextLevel = originalLevel;
+
     color = '#a7d1bc'
+
+    let nextRequiredPoints = requiredPoints
+    let nextRequiredSkills = requiredSkills
+
+    if (Math.ceil(nextLevel / 3) > Math.ceil(currentLevel / 3)) {
+      nextRequiredPoints = nextExecutionMilestone
+      nextRequiredSkills = nextSkillsMilestone
+    }
+    // Next skill points
+    if (executingPoints >= nextRequiredPoints) {
+      nextPoints = 0
+    }
+    else {
+      nextPoints = nextRequiredPoints - executingPoints
+    }
+    // Next t-skills
+    // Next skill points
+    if (skillPoints >= nextRequiredSkills) {
+      nextSkills = 0
+    }
+    else {
+      nextSkills = nextRequiredSkills - skillPoints
+    }
 
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
         label: 'Current level',
         level: this.props.level,
-        tier: Math.floor(this.props.level / 3) + 1,
+        tier: Math.ceil(this.props.level / 3),
         core: requiredPoints + ' +',
         tscore: requiredSkills + ' +',
         total: requiredTotal + ' +',
       },
       {
         label: 'Next Level',
-        level: parseInt(currentLevel) + 1,
-        tier: Math.floor((parseInt(currentLevel) +1) / 3) + 1,
-        core: nextPoints + ' +',
-        tscore: nextSkills + ' +',
-        total: nextTotal + ' +'
+        level: parseInt(nextLevel),
+        tier: Math.ceil(nextLevel / 3),
+        core: nextPoints,
+        tscore: nextSkills,
+        total: pointsToNextLevel
       },
       {
         label: 'Graded Level',
         level: currentLevel,
-        tier: Math.floor(currentLevel / 3) + 1,
+        tier: Math.ceil(currentLevel / 3),
         core: executingPoints,
         tscore: skillPoints,
         total: totalPoints
