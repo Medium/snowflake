@@ -112,7 +112,7 @@ class PointSummaries extends React.Component<Props> {
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
-        label: 'Current level',
+        label: 'Salary level',
         level: currentLevel,
         tier: currentTier,
         core: currentPoints + ' +',
@@ -128,21 +128,21 @@ class PointSummaries extends React.Component<Props> {
         total: gradedTotal,
       },
       {
-        label: 'Next Level',
+        label: 'To Next Level',
         level: nextLevel,
         tier: nextTier,
         core: improvePoints,
         tscore: improveSkills,
         total: improveTotal,
       },
-      /*{
-        label: 'Allowed Level',
-        level: allowedLevel,
-        tier: allowedTier,
-        core: improvePoints,
-        tscore: improveSkills,
-        total: improveTotal,
-      },*/
+      {
+        label: 'Requirements',
+        level: nextLevel,
+        tier: nextTier,
+        core: nextPoints + ' +',
+        tscore: nextSkills + ' +',
+        total: nextTotal + ' +',
+      },
     ]
 
     return (
