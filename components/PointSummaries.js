@@ -15,29 +15,99 @@ class PointSummaries extends React.Component<Props> {
     const executingPoints = executingPointsFromMilestoneMap(this.props.milestoneByTrack)
     const skillPoints = totalPoints - executingPoints
 
-    let currentLevel = this.props.level
-    let currentTier =	Math.ceil(parseInt(currentLevel) / 3) + 1
-    let currentMinimum = 0
+    let currentLevel = parseInt(this.props.level)
+    let currentTier =	Math.ceil(currentLevel / 3)
+    let currentTotal = 0
     let currentPoints =	0
     let currentSkills	= 0
     let gradedLevel	= 1
     let gradedTier = 1
-    let gradedTotal	= 0
-    let gradedPoints = 0
-    let gradedSkills = 0
+    let gradedTotal	= totalPoints
+    let gradedPoints = executingPoints
+    let gradedSkills = skillPoints
     let allowedLevel = 1
     let allowedTier = 1
     let allowedPointsLevel = 3
     let allowedSkillsLevel = 3
     let nextLevel = 2
     let nextTier = 1
-    let nextMinimum =	10
+    let nextTotal =	10
     let nextPoints = 0
     let nextSkills = 0
     let improveTotal = 10
     let improvePoints = 0
     let improveSkills = 0
     let color = '#a7d1bc'
+
+    // Set the graded level and tier.
+    Object.entries(pointsToLevels).map((points) => {
+      if (gradedTotal >= parseInt(points[0])) {
+        gradedLevel = parseInt(points[1])
+      }
+      if (currentLevel >= parseInt(points[1])) {
+        currentTotal = parseInt(points[0])
+      }
+    })
+    gradedTier = Math.ceil(gradedLevel / 3)
+
+    // Set the execution gate limit.
+    Object.entries(executionGate).map((points, index) => {
+      if (gradedPoints >= parseInt(points[0])) {
+        allowedPointsLevel = parseInt(points[1]) + 2
+      }
+      if (currentLevel >= parseInt(points[1])) {
+        currentPoints = parseInt(points[0])
+      }
+    })
+
+    // Set the skills gate limit.
+    Object.entries(skillsGate).map((points, index) => {
+      if (gradedSkills >= parseInt(points[0])) {
+        allowedSkillsLevel = parseInt(points[1]) + 2
+      }
+      if (currentLevel >= parseInt(points[1])) {
+        currentSkills = parseInt(points[0])
+      }
+    })
+
+    // Set the allowed level.
+    allowedLevel = Math.min(gradedLevel, allowedPointsLevel, allowedSkillsLevel)
+    allowedTier = Math.ceil(allowedLevel / 3)
+    gradedLevel = allowedLevel
+    gradedTier = allowedTier
+
+    // Set the next level milestone.
+    if (currentLevel > allowedLevel) {
+      nextLevel = currentLevel
+    }
+    else if (allowedLevel > currentLevel) {
+      nextLevel = allowedLevel
+    }
+    else {
+      nextLevel = currentLevel + 1
+    }
+    nextTier = Math.ceil(nextLevel / 3)
+
+    // Set the points needed.
+    Object.entries(pointsToLevels).map((points) => {
+      if (nextLevel >= parseInt(points[1])) {
+        nextTotal = parseInt(points[0])
+      }
+    })
+    Object.entries(executionGate).map((points) => {
+      if (nextLevel >= parseInt(points[1])) {
+        nextPoints = parseInt(points[0])
+      }
+    })
+    Object.entries(skillsGate).map((points) => {
+      if (nextLevel >= parseInt(points[1])) {
+        nextSkills = parseInt(points[0])
+      }
+    })
+    // Set the points for improvement.
+    improveTotal = (nextTotal - gradedTotal > 0) ? nextTotal - gradedTotal : 0
+    improvePoints = (nextPoints - gradedPoints > 0) ? nextPoints - gradedPoints : 0
+    improveSkills = (nextSkills - gradedSkills > 0) ? nextSkills - gradedSkills : 0
 
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
@@ -47,24 +117,32 @@ class PointSummaries extends React.Component<Props> {
         tier: currentTier,
         core: currentPoints + ' +',
         tscore: currentSkills + ' +',
-        total: currentMinimum + ' +',
-      },
-      {
-        label: 'Next Level',
-        level: nextLevel,
-        tier: nextTier,
-        core: nextPoints,
-        tscore: nextSkills,
-        total: nextMinimum,
+        total: currentTotal + ' +',
       },
       {
         label: 'Graded Level',
         level: gradedLevel,
         tier: gradedTier,
         core: gradedPoints,
-        tscore: gradedPoints,
+        tscore: gradedSkills,
         total: gradedTotal,
       },
+      {
+        label: 'Next Level',
+        level: nextLevel,
+        tier: nextTier,
+        core: improvePoints,
+        tscore: improveSkills,
+        total: improveTotal,
+      },
+      /*{
+        label: 'Allowed Level',
+        level: allowedLevel,
+        tier: allowedTier,
+        core: improvePoints,
+        tscore: improveSkills,
+        total: improveTotal,
+      },*/
     ]
 
     return (
