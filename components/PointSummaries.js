@@ -170,6 +170,7 @@ class PointSummaries extends React.Component<Props> {
             border-spacing: 1px;
             margin-bottom: 20px;
             margin-left: -3px;
+            margin-top: 20px;
           }
           .point-summary-label {
             font-size: 12px;
