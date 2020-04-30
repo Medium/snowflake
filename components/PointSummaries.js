@@ -108,7 +108,6 @@ class PointSummaries extends React.Component<Props> {
       nextLevel = originalLevel;
     }
 
-
     color = '#a7d1bc'
 
     let nextRequiredPoints = requiredPoints
