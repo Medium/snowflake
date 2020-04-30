@@ -51,7 +51,7 @@ class TrackSelector extends React.Component<Props> {
             font-size: 11px;
             font-weight: bold;
             padding: 4px;
-            background-color: #11a9a1;
+            background-color: #a7d1bc;
           }          
         `}</style>
         <tbody>

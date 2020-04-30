@@ -15,151 +15,55 @@ class PointSummaries extends React.Component<Props> {
     const executingPoints = executingPointsFromMilestoneMap(this.props.milestoneByTrack)
     const skillPoints = totalPoints - executingPoints
 
-    let useNext, useNextLevel, currentLevel, color, requiredPoints, requiredSkills, requiredTotal, nextTotal, nextPoints, nextSkills, nextLevel, levelStatus, executingStatus, skillsStatus, skillsRemaining
-    let nextExecutionMilestone, nextSkillsMilestone
-
-    requiredPoints = 0
-    requiredSkills = 0
-    nextExecutionMilestone = 30
-    nextSkillsMilestone = 10
-    let executionMilestone = nextExecutionMilestone
-    let skillsMilestone = nextSkillsMilestone
-
-    useNext = false
-    useNextLevel = false
-    Object.entries(executionGate).map((points) => {
-      if (this.props.level >= parseInt(points[1])) {
-        requiredPoints = points[0]
-        useNextLevel = true
-      }
-      else if (useNextLevel) {
-        nextPoints = points[0]
-        useNextLevel = false
-      }
-
-      if (executingPoints > points[0]) {
-        executingStatus = points[1]
-        let executionMilestone = points[0]
-        useNext = true
-      }
-      else if (useNext) {
-        nextExecutionMilestone = points[0] - executingPoints
-        useNext = false
-        }
-      }
-    )
-
-    useNext = false
-    useNextLevel = false
-    Object.entries(skillsGate).map((points, index) => {
-      if (this.props.level >= parseInt(points[1])) {
-        requiredSkills = points[0]
-        useNextLevel = true
-      }
-      else if (useNextLevel) {
-        nextSkills = points[0]
-        useNextLevel = false
-      }
-      if (skillPoints > points[0]) {
-        skillsStatus = points[1]
-        let skillsMilestone = points[0]
-        useNext = true
-      }
-      else if (useNext) {
-        nextSkillsMilestone = points[0] - skillPoints
-        useNext = false
-      }
-    })
-
-    useNext = false
-    Object.entries(pointsToLevels).map((points) => {
-      if (this.props.level >= parseInt(points[1])) {
-        requiredTotal = points[0]
-        useNext = true
-      }
-      else if (useNext) {
-        nextTotal = points[0]
-        useNext = false
-      }
-    })
-
-    let pointsForCurrentLevel = totalPoints
-
-    while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
-      pointsForCurrentLevel--
-    }
-    let pointsToNextLevel = 1
-    while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
-      pointsToNextLevel++
-      if (pointsToNextLevel > 30) {
-        pointsToNextLevel = 'N/A'
-        break
-      }
-    }
-
-    let originalLevel = currentLevel
-
-    if (executingStatus < currentLevel) {
-      currentLevel = executingStatus
-      nextLevel = originalLevel
-    }
-    if (skillsStatus < currentLevel) {
-      currentLevel = skillsStatus
-      nextLevel = originalLevel;
-    }
-
-    color = '#a7d1bc'
-
-    let nextRequiredPoints = requiredPoints
-    let nextRequiredSkills = requiredSkills
-
-    if (Math.ceil(nextLevel / 3) > Math.ceil(currentLevel / 3)) {
-      nextRequiredPoints = nextExecutionMilestone
-      nextRequiredSkills = nextSkillsMilestone
-    }
-    console.log(executionMilestone)
-    console.log(skillsMilestone)
-
-    // Next skill points
-    if (executingPoints >= nextExecutionMilestone) {
-      nextPoints = 0
-    }
-    else {
-      nextPoints = nextRequiredPoints - executingPoints
-    }
-    // Next t-skills
-    if (skillPoints >= nextSkillsMilestone) {
-      nextSkills = 0
-    }
-    else {
-      nextSkills = nextRequiredSkills - skillPoints
-    }
+    let currentLevel = this.props.level
+    let currentTier =	Math.ceil(parseInt(currentLevel) / 3) + 1
+    let currentMinimum = 0
+    let currentPoints =	0
+    let currentSkills	= 0
+    let gradedLevel	= 1
+    let gradedTier = 1
+    let gradedTotal	= 0
+    let gradedPoints = 0
+    let gradedSkills = 0
+    let allowedLevel = 1
+    let allowedTier = 1
+    let allowedPointsLevel = 3
+    let allowedSkillsLevel = 3
+    let nextLevel = 2
+    let nextTier = 1
+    let nextMinimum =	10
+    let nextPoints = 0
+    let nextSkills = 0
+    let improveTotal = 10
+    let improvePoints = 0
+    let improveSkills = 0
+    let color = '#a7d1bc'
 
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
         label: 'Current level',
-        level: this.props.level,
-        tier: Math.ceil(this.props.level / 3),
-        core: requiredPoints + ' +',
-        tscore: requiredSkills + ' +',
-        total: requiredTotal + ' +',
+        level: currentLevel,
+        tier: currentTier,
+        core: currentPoints + ' +',
+        tscore: currentSkills + ' +',
+        total: currentMinimum + ' +',
       },
       {
         label: 'Next Level',
-        level: parseInt(nextLevel),
-        tier: Math.ceil(nextLevel / 3),
+        level: nextLevel,
+        tier: nextTier,
         core: nextPoints,
         tscore: nextSkills,
-        total: pointsToNextLevel
+        total: nextMinimum,
       },
       {
         label: 'Graded Level',
-        level: currentLevel,
-        tier: Math.ceil(currentLevel / 3),
-        core: executingPoints,
-        tscore: skillPoints,
-        total: totalPoints
+        level: gradedLevel,
+        tier: gradedTier,
+        core: gradedPoints,
+        tscore: gradedPoints,
+        total: gradedTotal,
       },
     ]
 
