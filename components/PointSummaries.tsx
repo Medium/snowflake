@@ -22,7 +22,7 @@ class PointSummaries extends React.Component<Props> {
       && !(pointsToNextLevel > maxLevel)) {
       pointsToNextLevel++
     }
-    const pointsToNextLevelLabel = pointsToNextLevel > maxLevel ? 'N/A' : pointsToNextLevel;
+    const pointsToNextLevelValue = pointsToNextLevel > maxLevel ? 'N/A' : pointsToNextLevel;
 
     const blocks = [
       {
@@ -35,7 +35,7 @@ class PointSummaries extends React.Component<Props> {
       },
       {
         label: 'Points to next level',
-        value: pointsToNextLevel
+        value: pointsToNextLevelValue
       }
     ]
 

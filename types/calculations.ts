@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import { Categories, Tracks, titles, milestonesToPoints, pointsToLevels, trackDefinitions } from './definitions'
+import { Categories, Tracks, titles, milestonesToPoints, pointsToLevels, trackDefinitions, maxPointsFromCategory } from './definitions'
 
 const getEnumLabels = e =>
   Object.keys(e)
@@ -43,21 +43,28 @@ export const maxLevel = Object.keys(pointsToLevels)
 
 export const categoryPointsFromMilestoneMap = (milestoneMap: Map<Tracks, number>): Map<Categories, number> => {
   let pointsByCategory = new Map<Categories, number>();
+
   Array.from(milestoneMap.entries()).forEach(mapEntry => {
     const [trackId, milestone] = mapEntry;
-    const trackDefinition = trackDefinitions.find(x => x.track == trackId)
+
+    const trackDefinition = trackDefinitions.find(x => Tracks[x.track] == Tracks[trackId])
     if (!(trackDefinition === undefined)) {
-      const category = trackDefinition.category;
-      const currentPoints = pointsByCategory.get(category) || 0
-      pointsByCategory.set(category, currentPoints + milestoneToPoints(milestone))
+      const categoryId = trackDefinition.category;
+  
+      const currentPoints = pointsByCategory.get(categoryId) || 0
+      const newPoints = currentPoints + milestoneToPoints(milestone);
+      const adjustedNewPoints = newPoints > maxPointsFromCategory ? maxPointsFromCategory : newPoints;
+
+      pointsByCategory.set(categoryId, adjustedNewPoints)
     }
   });
+
   return pointsByCategory;
 };
     
 export const totalPointsFromMilestoneMap = (milestoneMap: Map<Tracks, number>): number =>
-  Array.from(milestoneMap.values())
-    .map(x => milestoneToPoints(x))
+  Array.from(categoryPointsFromMilestoneMap(milestoneMap))
+    .map(x => x[1])
     .reduce((sum, addend) => (sum + addend), 0);
 
 export const eligibleTitles = (milestoneMap: Map<Tracks, number>): string[] => {

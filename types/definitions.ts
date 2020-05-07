@@ -56,6 +56,8 @@ export const pointsToLevels = {
   '100': '5',
 };
 
+export const maxPointsFromCategory = 50;
+
 export const trackDefinitions: TrackDefinition[] = [
   <TrackDefinition> {
     track: Tracks.Frontend,
