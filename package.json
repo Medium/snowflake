@@ -8,15 +8,17 @@
     "d3": "^4.11.0",
     "next": "^9.0.7",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "typescript": "^3.8.3"
   },
   "scripts": {
-    "dev": "next",
-    "export": "next build && next export",
+    "dev": "npx tsc && next",
+    "export": "npx tsc && next build && next export",
     "flow": "flow"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0",
-    "flow-bin": "^0.57.2"
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34"
   }
 }

@@ -1,17 +1,15 @@
-// @flow
-
 import React from 'react'
 import * as d3 from 'd3'
-import { trackIds, milestones, tracks, categoryColorScale } from '../constants'
-import type { TrackId, Milestone, MilestoneMap } from '../constants'
+import { Tracks, trackDefinitions } from '../types/definitions'
+import { trackIds, milestones, categoryColorScale } from '../types/calculations'
 
 const width = 400
-const arcMilestones = milestones.slice(1) // we'll draw the '0' milestone with a circle, not an arc.
+const arcMilestones = milestones.slice(1); // we'll draw the '0' milestone with a circle, not an arc.
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
-  focusedTrackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  milestoneByTrack: Map<Tracks, number>,
+  focusedTrack: Tracks,
+  handleTrackMilestoneChangeFn: (Tracks, number) => void
 }
 
 class NightingaleChart extends React.Component<Props> {
@@ -19,7 +17,7 @@ class NightingaleChart extends React.Component<Props> {
   radiusScale: any
   arcFn: any
 
-  constructor(props: *) {
+  constructor(props: Props) {
     super(props)
 
     this.colorScale = d3.scaleSequential(d3.interpolateWarm)
@@ -41,7 +39,7 @@ class NightingaleChart extends React.Component<Props> {
   }
 
   render() {
-    const currentMilestoneId = this.props.milestoneByTrack[this.props.focusedTrackId]
+    const currentMilestoneId = this.props.milestoneByTrack.get(this.props.focusedTrack)
     return (
       <figure>
         <style jsx>{`
@@ -65,28 +63,31 @@ class NightingaleChart extends React.Component<Props> {
         <svg>
           <g transform={`translate(${width/2},${width/2}) rotate(-33.75)`}>
             {trackIds.map((trackId, i) => {
-              const isCurrentTrack = trackId == this.props.focusedTrackId
-              return (
+              const track = Tracks[trackId]
+              const trackDefinition = trackDefinitions.find(x => x.track == trackId);
+              const category = trackDefinition && trackDefinition.category || 0;
+              const isCurrentTrack = track === Tracks[this.props.focusedTrack]
+              return ( 
                 <g key={trackId} transform={`rotate(${i * 360 / trackIds.length})`}>
                   {arcMilestones.map((milestone) => {
                     const isCurrentMilestone = isCurrentTrack && milestone == currentMilestoneId
-                    const isMet = this.props.milestoneByTrack[trackId] >= milestone || milestone == 0
+                    const isMet = this.props.milestoneByTrack.get(Tracks[track]) >= milestone || milestone == 0
                     return (
                       <path
                           key={milestone}
                           className={'track-milestone ' + (isMet ? 'is-met ' : ' ') + (isCurrentMilestone ? 'track-milestone-current' : '')}
                           onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, milestone)}
                           d={this.arcFn(milestone)}
-                          style={{fill: isMet ? categoryColorScale(tracks[trackId].category) : undefined}} />
+                          style={{fill: isMet ? categoryColorScale(category) : undefined}} />
                     )
                   })}
                   <circle
-                      r="8"
-                      cx="0"
-                      cy="-50"
-                      style={{fill: categoryColorScale(tracks[trackId].category)}}
-                      className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
-                      onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
+                    r="8"
+                    cx="0"
+                    cy="-50"
+                    style={{fill: categoryColorScale(category)}}
+                    className={"track-milestone " + (isCurrentTrack && !currentMilestoneId ? "track-milestone-current" : "")}
+                    onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, 0)} />
                 </g>
             )})}
           </g>

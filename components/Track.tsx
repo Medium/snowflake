@@ -1,20 +1,24 @@
-// @flow
-
-import { tracks, milestones, categoryColorScale } from '../constants'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+import { trackDefinitions, Tracks } from '../types/definitions'
+import { milestones, categoryColorScale } from '../types/calculations'
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
-  trackId: TrackId,
-  handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
+  milestoneByTrack: Map<Tracks, number>,
+  track: Tracks,
+  handleTrackMilestoneChangeFn: (Tracks, number) => void
 }
 
 class Track extends React.Component<Props> {
   render() {
-    const track = tracks[this.props.trackId]
-    const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
-    const currentMilestone = track.milestones[currentMilestoneId - 1]
+    const trackDefinition = trackDefinitions.find(x => x.track === this.props.track);
+    if (!trackDefinition) return (<div></div>);
+    
+    const currentMilestoneId = this.props.milestoneByTrack.get(this.props.track)
+    const currentMilestone = trackDefinition.milestones[currentMilestoneId];
+    const displayName = (trackDefinition && trackDefinition.displayName) || Track[trackDefinition.track];
+    const description = trackDefinition.description || "";
+    const trackId = this.props.track;
+    const track = Tracks[trackId];
     return (
       <div className="track">
         <style jsx>{`
@@ -48,8 +52,8 @@ class Track extends React.Component<Props> {
             line-height: 1.5em;
           }
         `}</style>
-        <h2>{track.displayName}</h2>
-        <p className="track-description">{track.description}</p>
+        <h2>{displayName}</h2>
+        <p className="track-description">{description}</p>
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
@@ -57,8 +61,8 @@ class Track extends React.Component<Props> {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>
-                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(trackId, milestone)}
+                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(trackDefinition.category) : '#eee'}`, background: isMet ? categoryColorScale(trackDefinition.category) : undefined}}>
                       {milestone}
                     </td>
                   </tr>
@@ -71,13 +75,13 @@ class Track extends React.Component<Props> {
               <h3>{currentMilestone.summary}</h3>
               <h4>Example behaviors:</h4>
               <ul>
-                {currentMilestone.signals.map((signal, i) => (
+                {currentMilestone.signals && currentMilestone.signals.map((signal, i) => (
                   <li key={i}>{signal}</li>
                 ))}
               </ul>
               <h4>Example tasks:</h4>
               <ul>
-                {currentMilestone.examples.map((example, i) => (
+                {currentMilestone.examples && currentMilestone.examples.map((example, i) => (
                   <li key={i}>{example}</li>
                 ))}
               </ul>

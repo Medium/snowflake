@@ -1,9 +1,7 @@
-// @flow
-
 import * as d3 from 'd3'
-import { pointsToLevels, categoryPointsFromMilestoneMap, categoryColorScale, categoryIds } from '../constants'
 import React from 'react'
-import type { MilestoneMap } from '../constants'
+import { pointsToLevels, Tracks } from '../types/definitions'
+import { categoryPointsFromMilestoneMap, maxLevel, categoryColorScale } from '../types/calculations'
 
 const margins = {
   top: 30,
@@ -15,21 +13,21 @@ const height = 150
 const width = 550
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
+  milestoneByTrack: Map<Tracks, number>,
 }
 
 class LevelThermometer extends React.Component<Props> {
   pointScale: any
   topAxisFn: any
   bottomAxisFn: any
-  topAxis: *
-  bottomAxis: *
+  topAxis: any
+  bottomAxis: any
 
-  constructor(props: *) {
+  constructor(props: Props) {
     super(props)
 
     this.pointScale = d3.scaleLinear()
-      .domain([0, 135])
+      .domain([0, maxLevel])
       .rangeRound([0, width - margins.left - margins.right]);
 
     this.topAxisFn = d3.axisTop()
@@ -61,7 +59,7 @@ class LevelThermometer extends React.Component<Props> {
       .style('text-anchor', 'start')
   }
 
-  rightRoundedRect(x: *, y: *, width: *, height: *, radius: *) {
+  rightRoundedRect(x: any, y: any, width: any, height: any, radius: any) {
     return "M" + x + "," + y
          + "h" + (width - radius)
          + "a" + radius + "," + radius + " 0 0 1 " + radius + "," + radius
@@ -71,13 +69,13 @@ class LevelThermometer extends React.Component<Props> {
          + "z";
   }
   render() {
-    let categoryPoints = categoryPointsFromMilestoneMap(this.props.milestoneByTrack)
-    let lastCategoryIndex = 0
-    categoryPoints.forEach((categoryPoint, i) => {
-      if (categoryPoint.points) lastCategoryIndex = i
-    })
-    let cumulativePoints = 0
-    return (
+    const categoryPoints = Array.from(categoryPointsFromMilestoneMap(this.props.milestoneByTrack))
+      .map(x => {
+        return { categoryId: x[0], points: x[1] };
+      });
+    const lastCategoryIndex = categoryPoints.length - 1;
+    let cumulativePoints = 0;
+    return ( lastCategoryIndex > -1 &&
       <figure>
         <style jsx>{`
           figure {
@@ -119,7 +117,7 @@ class LevelThermometer extends React.Component<Props> {
           </g>
         </svg>
       </figure>
-    )
+    );
   }
 }
 

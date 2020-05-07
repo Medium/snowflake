@@ -2,3 +2,7 @@
 node_modules
 out
 yarn-error.log
+
+types/calculations.js
+types/definitions.js
+types/tracks.js

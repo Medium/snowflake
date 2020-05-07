@@ -1,11 +1,9 @@
-// @flow
-
 import React from 'react'
-import { eligibleTitles } from '../constants'
-import type { MilestoneMap } from '../constants'
+import { eligibleTitles } from '../types/calculations'
+import { Tracks } from '../types/definitions'
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
+  milestoneByTrack: Map<Tracks, number>,
   currentTitle: string,
   setTitleFn: (string) => void
 }
