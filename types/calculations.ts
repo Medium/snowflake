@@ -23,7 +23,7 @@ export const emptyTracks = trackIds
 export const highestMilestone: number = Object.keys(milestonesToPoints)
   .map(x => parseInt(x))
   .filter(x => !(x === undefined))
-  .sort()
+  .sort((a,b) => a-b)
   .reverse()
   [0] || 0;
 
@@ -37,7 +37,7 @@ export const milestoneToPoints = (milestone: number): number =>
 export const maxLevel = Object.keys(pointsToLevels)
   .map(x => parseInt(x))
   .filter(x => !(x === undefined))
-  .sort()
+  .sort((a,b) => a-b)
   .reverse()
   [0] || 0;
 

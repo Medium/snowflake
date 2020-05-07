@@ -28,12 +28,17 @@ export const titles = [
   ];
 
 export const milestonesToPoints = {
-  '0': 0,
-  '1': 1,
-  '2': 3,
-  '3': 6,
-  '4': 10,
-  '5': 15,
+  '0':  0,
+  '1':  1,
+  '2':  2,
+  '3':  3,
+  '4':  5,
+  '5':  7,
+  '6':  9,
+  '7':  12,
+  '8':  15,
+  '9':  18,
+  '10': 22,
 };
 
 export const pointsToLevels = {
@@ -83,9 +88,9 @@ export const trackDefinitions: TrackDefinition[] = [
   },
   <TrackDefinition> {
     track: Tracks.Mobile,
-    category: Categories.Technical, // 0 blank
+    category: Categories.Technical, 
     milestones: [
-        undefined,
+        undefined, // 0 blank
         <MilestoneDefinition> {
             summary: "Basic",
             examples: [
