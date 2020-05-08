@@ -3,10 +3,10 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
 import PointSummaries from '../components/PointSummaries'
 import TitleSelector from '../components/TitleSelector'
+import Attribution from './Attribution'
 import { TrackDefinition, MilestoneDefinition } from '../types/tracks';
 import { Categories, Tracks, trackDefinitions } from '../types/definitions'
 import { emptyTracks, eligibleTitles, trackIds, milestoneToPoints, highestMilestone } from '../types/calculations'
@@ -17,19 +17,6 @@ type SnowflakeAppState = {
   title: string,
   focusedTrackId: Tracks,
 }
-
-// const hashToState = (hash: String): ?SnowflakeAppState => {
-//   if (!hash) return null
-//   const result = defaultState()
-//   const hashValues = hash.split('#')[1].split(',')
-//   if (!hashValues) return null
-//   trackIds.forEach((trackId, i) => {
-//     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
-//   })
-//   if (hashValues[16]) result.name = decodeURI(hashValues[16])
-//   if (hashValues[17]) result.title = decodeURI(hashValues[17])
-//   return result
-// }
 
 const emptyState = (): SnowflakeAppState => {
   return {
@@ -44,12 +31,6 @@ const defaultState = (): SnowflakeAppState => {
   return emptyState();
 }
 
-// const stateToHash = (state: SnowflakeAppState) => {
-//   if (!state || !state.milestoneByTrack) return null
-//   const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.title))
-//   return values.join(',')
-// }
-
 type Props = {}
 
 class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
@@ -59,17 +40,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   componentDidUpdate() {
-    // const hash = stateToHash(this.state)
-    // if (hash) window.location.replace(`#${hash}`)
+    //TODO: Update URL
   }
 
   componentDidMount() {
-    // const state = hashToState(window.location.hash)
-    // if (state) {
-    //   this.setState(state)
-    // } else {
-    //   this.setState(defaultState())
-    // }
+    //TODO: Load from URL
     this.setState(defaultState());
   }
 
@@ -103,11 +78,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
-        </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
@@ -146,15 +116,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             track={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
-          <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">this version of our growth framework</a>
-            {' '}and <a href="https://medium.engineering/engineering-growth-at-medium-4935b3234d25" target="_blank">what we do currently</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
-          </div>
-        </div>
+        <Attribution />
       </main>
     )
   }
