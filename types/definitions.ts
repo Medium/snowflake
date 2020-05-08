@@ -41,16 +41,16 @@ export const milestonesToPoints = {
   "3":  3,
   "4":  5,
   "5":  7,
-  '6':  9,
-  '7':  12,
-  '8':  15,
-  '9':  18,
-  '10': 22,
+  "6":  9,
+  "7":  12,
+  "8":  15,
+  "9":  18,
+  "10": 22,
 };
 
 /**
  * For a given point value, what level is earned.
- * Sub-levels indicated by a decimal receive different compensation levels but are grouped into the same title.
+ * Sub-levels indicated by a decimal receive different compensation but are grouped into the same title.
  */
 export const pointsToLevels = {
   "0": "0",
@@ -78,6 +78,19 @@ export const levelToTitles = {
   "3": ["[E3] Senior Software Engineer", "[M3] Engineering Manager"],
   "4": ["[E4] Staff Software Engineer", "[M4] Senior Engineering Manager"],
   "5": ["[E5] Principal Software Engineer", "[M5] Director of Engineering"],
+};
+
+/**
+ * For each base level, the minimum number of points that must be earned in every category.
+ * This ensures a minimum level of performance in all areas.
+ */
+export const levelsToMinCategoryPoints = {
+  "0": 0,
+  "1": 1,
+  "2": 3,
+  "3": 6,
+  "4": 10,
+  "5": 15,
 };
 
 /**

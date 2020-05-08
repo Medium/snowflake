@@ -1,4 +1,4 @@
-import { milestoneToPoints, totalPointsFromMilestoneMap, maxLevel } from '../types/calculations'
+import { totalPointsFromMilestoneMap, maxLevel, levelFromMilestoneMap, pointsToNextLevelFromMilestoneMap } from '../types/calculations'
 import { pointsToLevels, Tracks } from '../types/definitions'
 import React from 'react'
 
@@ -9,20 +9,9 @@ type Props = {
 class PointSummaries extends React.Component<Props> {
   render() {
     const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
-
-    let currentLevel, nextLevel
-
-    let pointsForCurrentLevel = totalPoints
-    while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
-      pointsForCurrentLevel--
-    }
-
-    let pointsToNextLevel = 1
-    while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel]) 
-      && !(pointsToNextLevel > maxLevel)) {
-      pointsToNextLevel++
-    }
-    const pointsToNextLevelValue = pointsToNextLevel > maxLevel ? 'N/A' : pointsToNextLevel;
+    const currentLevel = levelFromMilestoneMap(this.props.milestoneByTrack);
+    const pointsToNextLevel = pointsToNextLevelFromMilestoneMap(this.props.milestoneByTrack);
+    const pointsToNextLevelValue = pointsToNextLevel === undefined ? 'N/A' : pointsToNextLevel;
 
     const blocks = [
       {

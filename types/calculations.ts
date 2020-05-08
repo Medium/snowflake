@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import { Categories, Tracks, milestonesToPoints, pointsToLevels, trackDefinitions, maxPointsFromCategory, levelToTitles } from './definitions'
+import { Categories, Tracks, milestonesToPoints, pointsToLevels, trackDefinitions, maxPointsFromCategory, levelToTitles, levelsToMinCategoryPoints } from './definitions'
 
 const getEnumLabels = e =>
   Object.keys(e)
@@ -10,6 +10,11 @@ const getEnumIds = e =>
     .map(x => e[x]);
 
 const numericSort = (a,b) => a-b;
+
+const baseLevelFromLevel = (level: string) => 
+  level.indexOf(".") != -1
+  ? parseInt(level.substring(0, level.indexOf(".")))
+  : parseInt(level);
 
 export const trackIds = getEnumIds(Tracks);
 
@@ -70,6 +75,7 @@ export const totalPointsFromMilestoneMap = (milestoneMap: Map<Tracks, number>): 
     .reduce((sum, addend) => (sum + addend), 0);
 
 export const levelFromMilestoneMap = (milestoneMap: Map<Tracks, number>): string => {
+  const categoryPoints = categoryPointsFromMilestoneMap(milestoneMap);
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap);
   const levelPointRequirements = Object.keys(pointsToLevels)
     .map(x => parseInt(x))
@@ -78,25 +84,49 @@ export const levelFromMilestoneMap = (milestoneMap: Map<Tracks, number>): string
 
   let result = '0';
   for (let requiredPoints of levelPointRequirements) {
-    if (totalPoints >= requiredPoints) {
-      result = pointsToLevels[requiredPoints.toString()];
+    const level = pointsToLevels[requiredPoints];
+    const baseLevel = baseLevelFromLevel(level);
+    const minCategoryPoints = levelsToMinCategoryPoints[baseLevel];
+    const allCategoriesAboveMin =
+      Array.from(categoryPoints).every(x => x[1] >= minCategoryPoints)
+
+    if (totalPoints >= requiredPoints && allCategoriesAboveMin) {
+      result = level.toString();
       break;
     }
   }
   return result;
 };
 
+export const pointsToNextLevelFromMilestoneMap = (milestoneMap: Map<Tracks, number>): number => {
+  const totalPoints = totalPointsFromMilestoneMap(milestoneMap);
+  const currentLevel = levelFromMilestoneMap(milestoneMap);
+  const currentLevelRequiredPoints = Object.entries(pointsToLevels)
+    .find(x => x[1] == currentLevel)
+    [0];
+  const nextHighestRequiredPoints = Object.entries(pointsToLevels)
+    .map(x => parseInt(x[0]))
+    .sort(numericSort)
+    .find(x => x > parseInt(currentLevelRequiredPoints));
+  console.log(`${totalPoints} @${currentLevel} >${currentLevelRequiredPoints} ^${nextHighestRequiredPoints}`)
+  if (nextHighestRequiredPoints === undefined)
+    return undefined;
+
+  if (totalPoints > nextHighestRequiredPoints)
+    return 0;
+
+  return nextHighestRequiredPoints - totalPoints;
+};
+
 export const eligibleTitles = (milestoneMap: Map<Tracks, number>): string[] => {
   const level = levelFromMilestoneMap(milestoneMap);
-  const baseLevel = level.indexOf(".") != -1
-    ? parseInt(level.substring(0, level.indexOf(".")))
-    : parseInt(level);
+  const baseLevel = baseLevelFromLevel(level);
   const titleLevelRequirements = Object.keys(levelToTitles)
   .map(x => parseInt(x))
   .sort(numericSort)
   .reverse();
 
-let result = [];
+  let result = [];
   for (let requiredLevel of titleLevelRequirements) {
     if (baseLevel >= requiredLevel) {
       result = levelToTitles[requiredLevel];
