@@ -30,6 +30,10 @@ export enum Tracks {
   Management,
 };
 
+/**
+ * For each milestone level, how many points are earned.
+ * Higher levels earn more points to reflect the increased difficulty curve when mastering a skill.
+ */
 export const milestonesToPoints = {
   "0":  0,
   "1":  1,
@@ -44,6 +48,10 @@ export const milestonesToPoints = {
   '10': 22,
 };
 
+/**
+ * For a given point value, what level is earned.
+ * Sub-levels indicated by a decimal receive different compensation levels but are grouped into the same title.
+ */
 export const pointsToLevels = {
   "0": "0",
   "6": "1.1",
@@ -59,6 +67,10 @@ export const pointsToLevels = {
   "100": "5",
 };
 
+/**
+ * For each base level, what titles are available.
+ * Maker (Engineer) and Manager tracks are created equal in order to avoid having to go into management to advance.
+ */
 export const levelToTitles = {
   "0": ["[E0] Apprentice Software Engineer"],
   "1": ["[E1] Junior Software Engineer"],
@@ -68,6 +80,10 @@ export const levelToTitles = {
   "5": ["[E5] Principal Software Engineer", "[M5] Director of Engineering"],
 };
 
+/**
+ * The maximum number of points that can be earned in a single category.
+ * Reaching the highest levels requires branching out into multiple areas of mastery.
+ */
 export const maxPointsFromCategory = 50;
 
 export const trackDefinitions: TrackDefinition[] = [
