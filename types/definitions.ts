@@ -4,28 +4,24 @@ export enum Categories {
   Technical,
   Organization,
   Professional,
-  Social,
 };
 
 export enum Tracks {
   // Technical
-  Frontend,
-  Backend,
-  Mobile,
-  Server,
+  Code,
+  Database,
+  Ops,
+  Architecture,
   // Organization
+  Independence,
+  Process,
+  ProjectManagement,
+  // Social
+  Communication,
+  Mentoring,
+  Management,
+  Recruiting,
 };
-
-export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
-  ];
 
 export const milestonesToPoints = {
   '0':  0,
@@ -56,11 +52,20 @@ export const pointsToLevels = {
   '100': '5',
 };
 
+export const levelToTitles = {
+  '0': ['Apprentice Software Engineer (E0)'],
+  '1': ['Junior Software Engineer (E1)'],
+  '2': ['Software Engineer (E2)'],
+  '3': ['Senior Software Engineer (E3)', 'Engineering Manager (M3)'],
+  '4': ['Staff Software Engineer (E4)', 'Senior Engineering Manager (M4)'],
+  '5': ['Principal Software Engineer (E5)', 'Director of Engineering (M5)'],
+};
+
 export const maxPointsFromCategory = 50;
 
 export const trackDefinitions: TrackDefinition[] = [
   <TrackDefinition> {
-    track: Tracks.Frontend,
+    track: Tracks.Code,
     category: Categories.Technical,
     milestones: [
         undefined, // 0 blank
@@ -76,7 +81,7 @@ export const trackDefinitions: TrackDefinition[] = [
     ]
   },
   <TrackDefinition> {
-    track: Tracks.Backend,
+    track: Tracks.Database,
     category: Categories.Technical,
     milestones: [
         undefined, // 0 blank
@@ -89,8 +94,112 @@ export const trackDefinitions: TrackDefinition[] = [
     ]
   },
   <TrackDefinition> {
-    track: Tracks.Mobile,
-    category: Categories.Technical, 
+    track: Tracks.Ops,
+    category: Categories.Technical,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Architecture,
+    category: Categories.Technical,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Independence,
+    category: Categories.Organization,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Process,
+    category: Categories.Organization,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.ProjectManagement,
+    category: Categories.Organization,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Communication,
+    category: Categories.Professional,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Mentoring,
+    category: Categories.Professional,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Management,
+    category: Categories.Professional,
+    milestones: [
+        undefined, // 0 blank
+        <MilestoneDefinition> {
+            summary: "Basic",
+            examples: [
+                "Does stuff",
+            ]
+        },
+    ]
+  },
+  <TrackDefinition> {
+    track: Tracks.Recruiting,
+    category: Categories.Professional,
     milestones: [
         undefined, // 0 blank
         <MilestoneDefinition> {

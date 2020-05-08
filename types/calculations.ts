@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import { Categories, Tracks, titles, milestonesToPoints, pointsToLevels, trackDefinitions, maxPointsFromCategory } from './definitions'
+import { Categories, Tracks, milestonesToPoints, pointsToLevels, trackDefinitions, maxPointsFromCategory, levelToTitles } from './definitions'
 
 const getEnumLabels = e =>
   Object.keys(e)
@@ -8,6 +8,8 @@ const getEnumLabels = e =>
 const getEnumIds = e =>
   getEnumLabels(e)
     .map(x => e[x]);
+
+const numericSort = (a,b) => a-b;
 
 export const trackIds = getEnumIds(Tracks);
 
@@ -23,7 +25,7 @@ export const emptyTracks = trackIds
 export const highestMilestone: number = Object.keys(milestonesToPoints)
   .map(x => parseInt(x))
   .filter(x => !(x === undefined))
-  .sort((a,b) => a-b)
+  .sort(numericSort)
   .reverse()
   [0] || 0;
 
@@ -37,7 +39,7 @@ export const milestoneToPoints = (milestone: number): number =>
 export const maxLevel = Object.keys(pointsToLevels)
   .map(x => parseInt(x))
   .filter(x => !(x === undefined))
-  .sort((a,b) => a-b)
+  .sort(numericSort)
   .reverse()
   [0] || 0;
 
@@ -67,11 +69,41 @@ export const totalPointsFromMilestoneMap = (milestoneMap: Map<Tracks, number>): 
     .map(x => x[1])
     .reduce((sum, addend) => (sum + addend), 0);
 
+export const levelFromMilestoneMap = (milestoneMap: Map<Tracks, number>): string => {
+  const totalPoints = totalPointsFromMilestoneMap(milestoneMap);
+  const levelPointRequirements = Object.keys(pointsToLevels)
+    .map(x => parseInt(x))
+    .sort(numericSort)
+    .reverse();
+
+  let result = '0';
+  for (let requiredPoints of levelPointRequirements) {
+    if (totalPoints >= requiredPoints) {
+      result = pointsToLevels[requiredPoints.toString()];
+      break;
+    }
+  }
+  return result;
+};
+
 export const eligibleTitles = (milestoneMap: Map<Tracks, number>): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-    .map(title => title.label)
+  const level = levelFromMilestoneMap(milestoneMap);
+  const baseLevel = level.indexOf(".") != -1
+    ? parseInt(level.substring(0, level.indexOf(".")))
+    : parseInt(level);
+  const titleLevelRequirements = Object.keys(levelToTitles)
+  .map(x => parseInt(x))
+  .sort(numericSort)
+  .reverse();
+
+let result = [];
+  for (let requiredLevel of titleLevelRequirements) {
+    if (baseLevel >= requiredLevel) {
+      result = levelToTitles[requiredLevel];
+      break;
+    }
+  }
+  return result;
 };
 
 export const categoryColorScale = d3.scaleOrdinal()

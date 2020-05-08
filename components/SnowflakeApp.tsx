@@ -36,7 +36,7 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: emptyTracks,
-    focusedTrackId: Tracks.Mobile
+    focusedTrackId: Tracks.Mentoring
   }
 }
 
