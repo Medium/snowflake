@@ -17,13 +17,14 @@ class Track extends React.Component<Props> {
     const track = trackList[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
+    const nextMilestone = track.milestones[currentMilestoneId]
     return (
       <div className="track">
         <style jsx>{`
           div.track {
-            margin: 0 0 20px 0;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
+            margin: 20px 0 0 0;
+            padding: 20px;
+            width: 100%;
           }
           h2 {
             margin: 0 0 10px 0;
@@ -49,31 +50,54 @@ class Track extends React.Component<Props> {
           ul {
             line-height: 1.5em;
           }
+          h4 {
+            margin-left: 10px;
+          }
+          .current-level {
+            padding-bottom: 10px;
+          }          
+          .next-level {
+            border-top: 2px solid #eee;
+            background-color: #eee;
+            padding-bottom: 10px;
+          }
         `}</style>
         <h2>{track.displayName}</h2>
         <p className="track-description">{track.description}</p>
-        <div style={{display: 'flex'}}>
-          <table style={{flex: 0, marginRight: 50}}>
+        <div>
+          <table style={{flex: 1}}>
             <tbody>
-              {milestones.slice().reverse().map((milestone) => {
+              <tr>
+              {milestones.slice(1).map((milestone) => {
                 const isMet = milestone <= currentMilestoneId
                 return (
-                  <tr key={milestone}>
-                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
+
+                    <td key={milestone} onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
                         style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
                       {milestone}
                     </td>
-                  </tr>
                 )
               })}
+              </tr>
             </tbody>
           </table>
           {currentMilestone ? (
-            <div style={{flex: 1}}>
-              <h3>{currentMilestone.summary}</h3>
+            <div className="current-level">
+
               <h4>Example behaviors:</h4>
               <ul>
                 {currentMilestone.signals.map((signal, i) => (
+                  <li key={i}>{signal}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+          {nextMilestone ? (
+            <div className="next-level">
+
+              <h4>Next level behaviors:</h4>
+              <ul>
+                {nextMilestone.signals.map((signal, i) => (
                   <li key={i}>{signal}</li>
                 ))}
               </ul>
