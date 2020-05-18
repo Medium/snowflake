@@ -194,7 +194,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <PointSummaries
                 milestoneByTrack={this.state.milestoneByTrack}
                 level = {this.state.level} />
-            {/*<LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />*/}
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
