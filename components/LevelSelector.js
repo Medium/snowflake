@@ -13,10 +13,10 @@ class LevelSelector extends React.Component {
         return <select value={this.props.level} onChange={e => this.trackChange(e)}>
             <style jsx>{`
         select {
-          font-size: 20px;
+          font-size: 16px;
           line-height: 20px;
           margin-bottom: 20px;
-          min-width: 80px;
+          min-width: 60px;
         }
       `}</style>
             {Object.entries(pointsToLevels).map(levels => (

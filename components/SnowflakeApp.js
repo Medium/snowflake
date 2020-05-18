@@ -145,12 +145,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             border-bottom: 2px solid #ccc;
             border-left: 2px solid #ccc;
             display: inline;
-            font-size: 24px;
+            font-size: 32px;
             line-height: 30px;
             font-weight: bold;
-            width: 300px;
+            width: 480px;
             margin-top: 10px;
             margin-bottom: 10px;
+            margin-right: 50px;
             padding-left: 8px;
           }
           .name-input:hover, .name-input:focus {
@@ -159,7 +160,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             outline: 0;
           }
           .form-input {
-            margin-right: 50px;
+            margin-right: 32px;
+            font-size: 14px;
           }
           a {
             color: #888;
@@ -172,7 +174,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
-              <span className="form-input">
               <input
                   type="text"
                   className="name-input"
@@ -180,7 +181,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              </span>
               <span className="form-input">
                 Cohort: &nbsp;
               <CohortSelector
@@ -194,10 +194,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                     setLevelFn={(level) => this.setLevel(level)} />
               </span>
             </form>
-            <PointSummaries
-                milestoneByTrack={this.state.milestoneByTrack}
-                level = {this.state.level} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             {/*<NightingaleChart
@@ -206,24 +202,37 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                 handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />*/}
           </div>
         </div>
-        <TrackSelector
-            milestoneByTrack={this.state.milestoneByTrack}
-            focusedTrackId={this.state.focusedTrackId}
-            currentCohort={this.state.cohort}
-            setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
-        <KeyboardListener
-            selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
-            selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
-            increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
-            decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
-        <Track
-            milestoneByTrack={this.state.milestoneByTrack}
-            trackId={this.state.focusedTrackId}
-            currentCohort={this.state.cohort}
-            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
+        <div style={{display: 'flex'}}>
+          <div style={{flex: 0}}>
+            <TrackSelector
+              milestoneByTrack={this.state.milestoneByTrack}
+              focusedTrackId={this.state.focusedTrackId}
+              currentCohort={this.state.cohort}
+              setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)} />
+          </div>
+          <div style={{flex: 0}}>
+            <Track
+              milestoneByTrack={this.state.milestoneByTrack}
+              trackId={this.state.focusedTrackId}
+              currentCohort={this.state.cohort}
+              handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+            <KeyboardListener
+              selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
+              selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
+              increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, 1)}
+              decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(this, -1)} />
+          </div>
+        </div>
+        <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-
+            <PointSummaries
+              milestoneByTrack={this.state.milestoneByTrack}
+              level = {this.state.level} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
+          </div>
+        </div>
+        <div style={{display: 'flex', margin: '60px'}}>
+          <div style={{flex: 1}}>
           </div>
           <div style={{flex: 2}}>
             Version {this.state.version}

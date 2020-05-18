@@ -13,10 +13,10 @@ class CohortSelector extends React.Component {
     return <select value={this.props.currentCohort} onChange={e => this.trackChange(e)}>
       <style jsx>{`
         select {
-          font-size: 20px;
+          font-size: 16px;
           line-height: 20px;
           margin-bottom: 20px;
-          min-width: 300px;
+          min-width: 180px;
         }
       `}</style>
       {cohorts.map(cohort => (
