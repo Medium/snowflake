@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import { trackIds, tracks, categoryColorScale, trackMap } from '../constants'
+import {trackIds, tracks, categoryColorScale, trackMap, pointsToLevels} from '../constants'
 import type { MilestoneMap, TrackId } from '../constants'
 
 type Props = {
@@ -14,6 +14,14 @@ type Props = {
 class TrackSelector extends React.Component<Props> {
   render() {
     const trackList = trackMap(tracks, this.props.currentCohort)
+    console.log(trackList)
+    let coreTrack = trackIds.slice(0,4)
+    let deliveringTrack = trackIds.slice(4,7)
+    let strengtheningTrack = trackIds.slice(7,10)
+    let supportingTrack = trackIds.slice(10)
+
+    console.log(coreTrack)
+    console.log(deliveringTrack)
     return (
       <table>
         <style jsx>{`
@@ -58,24 +66,20 @@ class TrackSelector extends React.Component<Props> {
         `}</style>
         <tbody>
           <tr>
-            {trackIds.map(trackId => (
+            {coreTrack.map(trackId => (
               <td key={trackId} className="track-selector-label" onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
                 {trackList[trackId].displayName}
               </td>
             ))}
           </tr>
           <tr>
-            {trackIds.map(trackId => (
+            {coreTrack.map(trackId => (
               <td key={trackId} className="track-selector-value"
                   style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(trackList[trackId].category)), background: categoryColorScale(trackList[trackId].category)}}
                   onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
                 {this.props.milestoneByTrack[trackId]}
               </td>
             ))}
-          </tr>
-          <tr>
-            <td colSpan={"4"} className="primary-skills">Core skills</td>
-            <td colSpan={"9"} className="t-skills">T-shaped skills</td>
           </tr>
         </tbody>
       </table>
