@@ -144,11 +144,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             border: 0;
             border-bottom: 2px solid #ccc;
             border-left: 2px solid #ccc;
-            display: block;
-            font-size: 30px;
-            line-height: 40px;
+            display: inline;
+            font-size: 24px;
+            line-height: 30px;
             font-weight: bold;
-            width: 380px;
+            width: 300px;
             margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 8px;
@@ -157,6 +157,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             border-bottom: 2px solid #999;
             background: #eee;
             outline: 0;
+          }
+          .form-input {
+            margin-right: 50px;
           }
           a {
             color: #888;
@@ -169,6 +172,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
+              <span className="form-input">
               <input
                   type="text"
                   className="name-input"
@@ -176,20 +180,19 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              <div style={{margin: 0, 'line-height': '0.5em'}}>Cohort: &nbsp;&nbsp;
+              </span>
+              <span className="form-input">
+                Cohort: &nbsp;
               <CohortSelector
                   currentCohort={this.state.cohort}
-                  setCohortFn={(cohort) => this.setCohort(cohort)} /></div>
-              {/*<div style={{margin: 0, 'line-height': '0.5em'}}>Title: &nbsp;&nbsp;
-                <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  currentCohort={this.state.cohort}
-                  setTitleFn={(title) => this.setTitle(title)} /></div>*/}
-              <div style={{margin: 0, 'line-height': '0.5em'}}>Current Level: &nbsp;&nbsp;
+                  setCohortFn={(cohort) => this.setCohort(cohort)} />
+              </span>
+              <span className="form-input">
+                Level: &nbsp;
                 <LevelSelector
                     level={this.state.level}
-                    setLevelFn={(level) => this.setLevel(level)} /></div>
+                    setLevelFn={(level) => this.setLevel(level)} />
+              </span>
             </form>
             <PointSummaries
                 milestoneByTrack={this.state.milestoneByTrack}
@@ -197,10 +200,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
-            <NightingaleChart
+            {/*<NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />*/}
           </div>
         </div>
         <TrackSelector
