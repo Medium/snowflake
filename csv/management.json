@@ -16,7 +16,7 @@ trackList["CHAPTER_ONE"] = {
             "examples": []
         },
         {
-            "summary": "Manages expectations across teams and focus on building long-term relationships",
+            "summary": "Manages expectations across teams and focuses on building long-term relationships",
             "signals": [
                 "Uses an understanding of the organization's processes, systems and policies to engage with colleagues",
                 "Assumes positive intent of others, approaching every interaction with kindness and good humor",
@@ -75,7 +75,7 @@ trackList["CHAPTER_TWO"] = {
         {
             "summary": "Helps individuals to act or perform in the face of challenging goals",
             "signals": [
-                "Shows confidence in other's ability and willingness to face challenges and solve problem",
+                "Shows confidence in other's ability and willingness to face challenges and solve problems",
                 "Helps people to gain awareness of current situations",
                 "Demonstrates curiosity"
             ],
@@ -85,7 +85,7 @@ trackList["CHAPTER_TWO"] = {
             "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
             "signals": [
                 "Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives",
-                "Determines whether people need help to remove barriers or if they are able to tackle them by themselves"
+                "Determines whether people need help to remove barriers or if they are able to tackle challenges by themselves"
             ],
             "examples": []
         },
@@ -169,7 +169,7 @@ trackList["CHAPTER_FOUR"] = {
     "description": "Comprehends the ability to energize people to achieve their goals",
     "milestones": [
         {
-            "summary": "Fosters enthusiasm and common purpose across people",
+            "summary": "Fosters enthusiasm and common purpose among colleagues",
             "signals": [
                 "Contributes to generating commitment in individuals and the team",
                 "Speaks positively and enthusiastically about the organization's products\/services and future direction"

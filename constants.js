@@ -25,37 +25,92 @@ export type MilestoneMap = {
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
-export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 10
-    case 4: return 20
-    case 5: return 30
-    default: return 0
+export const milestoneValues = (trackId: TrackId): string => {
+  switch (trackId) {
+      case 'CHAPTER_ONE':
+      case 'CHAPTER_TWO':
+      case 'CHAPTER_THREE':
+      case 'CHAPTER_FOUR':
+          return 'A'
+      case "PLANNING":
+      case "COLLABORATION":
+      case "CLIENT_VALUE":
+          return 'B'
+      default:
+          return 'C'
   }
 }
 
-export const pointsToLevels = {
-  '0': '1.0',
-  '20': '2.0',
-  '40': '3.0',
-  '60': '4.0',
-  '80': '5.0',
-  '110': '6.0',
-  '140': '7.0',
-  '180': '8.0',
-  '220': '9.0',
-  '270': '10.0',
-  '320': '11.0',
-  '370': '12.0',
-  '420': '13.0',
-  '470': '14.0',
-  '520': '15.0',
+export const milestoneToPoints = (milestone: Milestone, trackId: TrackId, limitType: false): number => {
+    if (milestoneValues(trackId) == 'A') {
+      switch (milestone) {
+          case 0: return 0
+          case 1: return 4
+          case 2: return 12
+          case 3: return 24
+          case 4: return 40
+          case 5: return 60
+          default: return 0
+      }
+    }
+    if (limitType) {
+        return 0
+    }
+    if (milestoneValues(trackId) == 'B') {
+        switch (milestone) {
+            case 0: return 0
+            case 1: return 2
+            case 2: return 6
+            case 3: return 12
+            case 4: return 20
+            case 5: return 30
+            default: return 0
+        }
+    }
+    switch (milestone) {
+      case 0: return 0
+      case 1: return 1
+      case 2: return 3
+      case 3: return 6
+      case 4: return 10
+      case 5: return 15
+      default: return 0
+   }
 }
 
-export const maxLevel = 135
+export const pointsToLevels = {
+  '0': '1',
+  '10': '2',
+  '20': '3',
+  '40': '4',
+  '60': '5',
+  '80': '6',
+  '100': '7',
+  '130': '8',
+  '160': '9',
+  '190': '10',
+  '230': '11',
+  '270': '12',
+  '300': '13',
+  '330': '14',
+  '360': '15',
+}
+
+export const maxLevel = 360
+
+export const executionGate = {
+  '30': '4',
+  '73': '7',
+  '133': '10',
+  '195': '13',
+}
+
+export const skillsGate = {
+  '10': '4',
+  '27': '7',
+  '57': '10',
+  '105': '13',
+}
 
 export type Track = {
   displayName: string,
@@ -85,15 +140,223 @@ type Tracks = {|
 |}
 
 export const tracks: Tracks = {
-  "CHAPTER_ONE": {"category": "A"},
-  "CHAPTER_TWO": {"category": "A"},
-  "CHAPTER_THREE": {"category": "A"},
-  "CHAPTER_FOUR": {"category": "A"},
-  "PLANNING":{
+  "CHAPTER_ONE":{
+      "milestone": "CHAPTER_ONE",
+      "cohort": "DEFAULT",
+      "category": "A",
+      "displayName": "Servant Leadership",
+      "description": "Demonstrates the capacity to engage with stakeholders both internally and externally, and to develop strong interpersonal relationships with teams and clients to unlock their potential",
+      "milestones": [
+          {
+              "summary": "Helps unblock individuals by creating a supportive and engaging environment",
+              "signals": [
+                  "Demonstrates an understanding of an individual's roles, goals, and interests",
+                  "Demonstrates concern for the well-being of colleagues",
+                  "Actively listens",
+                  "Treats others with respect"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Manages expectations across teams and focuses on building long-term relationships",
+              "signals": [
+                  "Uses an understanding of the organization's processes, systems and policies to engage with people",
+                  "Assumes positive intent of others, approaching every interaction with kindness and good humor",
+                  "Empathetically listens",
+                  "Communicates difficult or negative messages in an honest, accurate, and respectful manner"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Manages expectations and provides support for individuals and clients to perform at their highest capabilities",
+              "signals": [
+                  "Helps people develop and perform as highly as possible",
+                  "Uses awareness and understanding of the organization's culture to implement change initiatives",
+                  "Is able to deeply understand and empathize with others",
+                  "Delivers persuasive and compelling messages"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Advocates for people's needs, interests, and goals and proactively works to support and enhance growth",
+              "signals": [
+                  "Always looks to enhance the development of their team members in ways that unlock potential, creativity, and sense of purpose",
+                  "Uses an understanding of the organization's culture and environment to develop and implement strategic plans, implement necessary changes, and resolve talent needs and issues",
+                  "Is able to engage with others to seek input and advice when making a decision. Makes sure all impacted have the necessary information.",
+                  "Provides visible leadership that \"walks the talk.\" Sets high performance standards for self, acting as a role model for the team"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Leads, inspires, and serves others, enabling people to achieve their goals and full potential",
+              "signals": [
+                  "Focus on bringing their best self to your work, and making space for others to do so as well",
+                  "Uses an understanding of complex relationships among organizational leaders to facilitate the strategy, implementation, and maintenance of initiatives proposed by other leaders",
+                  "Uses storytelling to create a positive and engaging environment for teams and clients",
+                  "Leverages relationships to best support and develop individuals"
+              ],
+              "examples": []
+          }
+      ]
+  },"CHAPTER_TWO":{
+      "milestone": "CHAPTER_TWO",
+      "cohort": "DEFAULT",
+      "category": "A",
+      "displayName": "Coaching",
+      "description": "Helps people develop their own independent thinking, guiding them through processes and facilitating learning",
+      "milestones": [
+          {
+              "summary": "Helps individuals think through the likely impacts of alternative decisions",
+              "signals": [
+                  "Helps individuals think for themselves about possible impacts and solutions to a problem by asking open-ended questions",
+                  "Demonstrates a positive outlook"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Helps individuals accomplish challenging goals",
+              "signals": [
+                  "Shows confidence in others' abilities and a willingness to face challenges and solve problems",
+                  "Helps people gain awareness of current situations",
+                  "Demonstrates curiosity"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
+              "signals": [
+                  "Understands what issues exist that may limit an individual's ability to perform the task or accomplish the objectives",
+                  "Determines whether colleagues need help to remove barriers or can overcome these obstacles unaided"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Coaches and guides all level of individuals to develop and enhance on-the-job performance, knowledge, or behavior",
+              "signals": [
+                  "Partners with others to help define actions based on one's abilities and knowledge",
+                  "Supports people's progress, celebrates their wins, and encourages them to find new paths if their original plan of action does not work out as expected",
+                  "Encourages creative thinking in colleagues who are tyring to address challenges or improve their performance"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Empowers others to improve their performance, overcome challenges, and thrive at an optimal level",
+              "signals": [
+                  "Focuses on empowering their team members to discover solutions for themselves",
+                  "Coaches senior leaders on creating positive working relationships with their teams and clients"
+              ],
+              "examples": []
+          }
+      ]
+  },"CHAPTER_THREE":{
+      "milestone": "CHAPTER_THREE",
+      "cohort": "DEFAULT",
+      "category": "A",
+      "displayName": "Facilitation",
+      "description": "Comprehends the ability to lead people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
+      "milestones": [
+          {
+              "summary": "Helps individuals resolve difficult issues, promoting an inclusive environment",
+              "signals": [
+                  "Actively seeks many external views to help people gain understanding",
+                  "Creates an inclusive environment"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Helps people collectively move through a process",
+              "signals": [
+                  "Is able to effectively deal with and understand views opposing their own views and is open to criticism and learning",
+                  "Is becoming comfortable in mediating escalated conflicts",
+                  "Builds consensus among people and teams"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Mediates escalated situations, empowers people, and resolves conflict\t",
+              "signals": [
+                  "Understands intrinsic motivations of the project team, as well as their individual capabilities. Is aware of differences between the two",
+                  "Resolves and\/or mediates conflicts in a respectful, appropriate, and impartial manner",
+                  "Takes time to understand how individuals and teams are performing and working together to deliver the project outcomes"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Guides and manages individuals both internally and externally to ensure that the their objectives are met effectively, with clear thinking, good participation, and full buy-in from everyone who is involved",
+              "signals": [
+                  "Understands themselves and the individuals in the project team, what motivates them intrinsically as well as their own individual capabilities",
+                  "Is able to facilitate difficult interactions among stakeholders to achieve outcomes",
+                  "Is focused on the big picture"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Leads people through processes towards agreed-upon objectives in a manner that encourages participation, ownership, and creativity",
+              "signals": [
+                  "Uses their understanding of individuals and teams to make the project strategy tangible to individuals and teams",
+                  "Serves as a positive role model for productive conflict",
+                  "Encourages productive and respectful task-related conflict, using it to facilitate change",
+                  "Resolves complex organizational dysfunction, or persistent conflict at senior levels\t"
+              ],
+              "examples": []
+          }
+      ]
+  },"CHAPTER_FOUR":{
+      "milestone": "CHAPTER_FOUR",
+      "cohort": "DEFAULT",
+      "category": "A",
+      "displayName": "Motivation",
+      "description": "Comprehends the ability to energize people to achieve their goals",
+      "milestones": [
+          {
+              "summary": "Fosters enthusiasm and common purpose across people",
+              "signals": [
+                  "Generates commitment in individuals and the team",
+                  "Speaks positively and enthusiastically about the organization's products\/services and future direction"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Mobilizes individuals to develop goals, execute plans, and deliver client value        ",
+              "signals": [
+                  "Creates a fun and energetic environment that promotes creativity",
+                  "Validates ongoing work and sustains motivation",
+                  "Establishes challenging, yet realistic, performance goals that tap into people's interests"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Inspires others to a greater effort by setting an example in his\/her\/their own behavior of dedication",
+              "signals": [
+                  "Recognizes individual and team performance, even when things go wrong",
+                  "Empowers a team to drive forward amidst uncertainty",
+                  "Models excellence and enthusiasm for the work"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Conveys confidence in others' capabilities and appeals to others' unique needs, interests, and goals to motivate them to achieve",
+              "signals": [
+                  "Empowers the project team and individuals. Expresses positive expectations of others regarding their abilities or potentials, even in challenging cases. Believes others want to and can learn",
+                  "Ensures that the self-realization and practical needs of the project team are met"
+              ],
+              "examples": []
+          },
+          {
+              "summary": "Enables and directs generation of energy \u2014 motivation to act \u2014 among members of the organization and clients",
+              "signals": [
+                  "Demonstrates the ability to use others as a sounding board for generating ideas and plans; acknowledges their expertise or perspective when asking for their opinions",
+                  "Ability to find and use successes to celebrate progress towards the vision",
+                  "Sets clear goals and a desired future state that is compelling and realistic for stakeholders"
+              ],
+              "examples": []
+          }
+      ]
+  },"PLANNING":{
       "milestone": "PLANNING",
       "cohort": "DEFAULT",
       "category": "B",
-      "displayName": "Plan and Coordination",
+      "displayName": "Planning and Coordination",
       "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
       "milestones": [
           {
@@ -671,7 +934,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     const milestone = milestoneMap[trackId]
     const categoryId = tracks[trackId].category
     let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone, trackId))
   })
   return Array.from(categoryIds.values()).map(categoryId => {
     const points = pointsByCategory.get(categoryId)
@@ -680,8 +943,12 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 }
 
 export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
+  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId))
     .reduce((sum, addend) => (sum + addend), 0)
+
+export const executingPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+    trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId, true))
+        .reduce((sum, addend) => (sum + addend), 0)
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
@@ -1179,7 +1446,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "examples": []
           },
           {
-              "summary": "Manages expectations across teams and focus on building long-term relationships",
+              "summary": "Manages expectations across teams and focuses on building long-term relationships",
               "signals": [
                   "Uses an understanding of the organization's processes, systems and policies to engage with colleagues",
                   "Assumes positive intent of others, approaching every interaction with kindness and good humor",
@@ -1238,7 +1505,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
           {
               "summary": "Helps individuals to act or perform in the face of challenging goals",
               "signals": [
-                  "Shows confidence in other's ability and willingness to face challenges and solve problem",
+                  "Shows confidence in other's ability and willingness to face challenges and solve problems",
                   "Helps people to gain awareness of current situations",
                   "Demonstrates curiosity"
               ],
@@ -1248,7 +1515,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
               "summary": "Coaches people proactively, and guides people to realizations rather than providing the answer\t",
               "signals": [
                   "Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives",
-                  "Determines whether people need help to remove barriers or if they are able to tackle them by themselves"
+                  "Determines whether people need help to remove barriers or if they are able to tackle challenges by themselves"
               ],
               "examples": []
           },
@@ -1332,7 +1599,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
       "description": "Comprehends the ability to energize people to achieve their goals",
       "milestones": [
           {
-              "summary": "Fosters enthusiasm and common purpose across people",
+              "summary": "Fosters enthusiasm and common purpose among colleagues",
               "signals": [
                   "Contributes to generating commitment in individuals and the team",
                   "Speaks positively and enthusiastically about the organization's products\/services and future direction"
@@ -1376,6 +1643,7 @@ export const defaultTracks = (trackList: object[]): object[] => {
           }
       ]
   }
+
 
   return trackList
 }
@@ -2394,60 +2662,62 @@ export const pmTracks = (trackList: object[]): object[] => {
               "summary": "Works effectively within established structures, following current best practices",
               "signals": [
                   "Is building proficiency in our PM practice and becoming comfortable with learning new skills",
-                  "Able to develop comprehensive projects plans with assistance of seniors project managers",
-                  "Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and develop according to plan",
-                  "Is well-versed with project management methodologies and client collaboration tools",
-                  "Actively listens, understands, and responds to clients and team members"
+                  "Actively listens, understands, and responds to clients and team members",
+                  "Measures project performance using appropriate tools and techniques",
+                  "Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders",
+                  "Is able to create, manage, and maintain agreements, budgets, scope of work, and timelines",
+                  "Facilitates team through Agile practices, including daily scrums, grooming ,and retrospectives"
               ],
               "examples": []
           },
           {
               "summary": "Develops new instances for best practices, or minor improvements to existing practices and standards",
               "signals": [
-                  "Focused on expanding experience and proficiency in our PM practice, establishing and promoting brand guidelines, best practices and standards",
+                  "Is continuing to grow and establish proficiency in our project management practice, establishing and promoting best practices and standards",
+                  "Is able to develop comprehensive projects plans with assistance of senior project managers",
+                  "Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and proceed according to plan",
                   "Develops a detailed project plan to monitor and track progress",
-                  "Manages the relationship with the client and all stakeholders",
-                  "Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, might have different responses from the client, and even different definitions of work",
                   "Monitors client satisfaction",
-                  "Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders",
-                  "Able to create, manage and maintain agreements, budgets, scope of work, and timelines",
-                  "Works within the given parameters delivered from Sales, such as problem statetment, budget"
+                  "Is able to present budgets, scope of work, and timelines to the appropriate stakeholders",
+                  "Manages the relationship with the client and all stakeholders",
+                  "Provides leadership with status reporting regarding project milestones, deliverables, dependencies, risks, and issues"
               ],
               "examples": []
           },
           {
               "summary": "Manages project plans of moderate complexity, mastering delivery",
               "signals": [
-                  "Effectively leads a project from concept to completion, acting as the liaison between the project team and clients",
-                  "Facilitates team through Agile practices, including daily scrum, grooming and retrospectives",
-                  "Manages changes to the project scope, budget and timeline using appropriate verification techniques",
-                  "Delegates project tasks based on junior staff members' individual strengths, skill sets and experience levels",
-                  "Measures project performance using appropriate tools and techniques",
-                  "Participates and\/or drives feasibility studies and proposals for evaluation by appropriate key stakeholders",
+                  "Effectively leads and takes ownership of project from concept to completion, acting as the liaison between the project team and the client",
+                  "Manages changes to the project scope, budget, and timeline using appropriate verification techniques",
+                  "Delegates project tasks based on junior staff members' individual strengths, skill sets, and experience levels",
                   "Serves as an internal quality control check for the project",
-                  "Provides status reporting regarding project milestones, deliverables, dependencies, risks and issues, communicating across leadership"
+                  "Is well-versed with project management methodologies and tools",
+                  "Works within the given parameters delivered from Sales, such as problem statement, budget, deliverables, and timeline",
+                  "Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders",
+                  "Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, and even different definitions of work"
               ],
               "examples": []
           },
           {
               "summary": "Develops complex project plans and guides other PM team members",
               "signals": [
-                  "Defines success criteria and disseminates them to involved parties throughout project and program life cycle",
-                  "Establishes practices, templates, policies, tools and partnerships to expand and mature the PM capabilities for the organization",
-                  "Sets and continually manages project expectations while delegating and managing deliverable with team members and stakeholders",
-                  "Guides team members about every aspect of the project so that the team members can understand their tasks fully and act on them efficiently",
-                  "Keeps an eye of latest strategies, tools and terminologies used in project management worldwide"
+                  "Helps the client and team define success criteria and disseminates these to involved parties throughout the project and program life cycle",
+                  "Establishes practices, templates, policies, tools, and partnerships to expand and mature the project management capabilities for the organization",
+                  "Sets and continually manages project expectations while delegating and managing deliverables with team members and stakeholders",
+                  "Provides necessary context for the team so that team members can understand their roles on the project and tackle their tasks efficiently",
+                  "Keeps an eye on latest strategies, tools, and terminologies used in project management worldwide",
+                  "Accommodates project constraints around resources, budget, time, quality, and scope in order to meet desired outcomes",
+                  "Is incredibly knowledgeable in their area of expertise, often to a degree that is recognized outside the organization"
               ],
               "examples": []
           },
           {
               "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic foundational direction for the project management team",
               "signals": [
-                  "Guides and directs PM team members by providing direction to team and project success",
-                  "Leverages constraints that exist for projects around resources, budget, time, quality and scope in order to meet project outcomes",
-                  "Manages dilemmas and paradoxes as they occur throughout the project lifecycle by identifying and communicating trade-offs with key stakeholders",
-                  "Seen as a leader and contributor in the broader technical side across the organization",
-                  "Capability to track project benefits realization and lessons learned activities to feed into ongoing improvements"
+                  "Guides project management team members by providing coaching and mentoring for team and project success",
+                  "Manages dilemmas and paradoxes as they occur throughout the project life cycle by identifying and communicating trade-offs to key stakeholders",
+                  "Is seen as a leader and contributor in the broader organization",
+                  "Tracks project benefits realization and lessons learned to feed into ongoing improvements"
               ],
               "examples": []
           }
@@ -2463,21 +2733,25 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Works effectively to assist the business planning, lifecycle management, reporting and performance measurement systems",
               "signals": [
-                  "Understands all the agreements, budgets,scope of work, and timeline",
-                  "Creates and maintains comprehensive project documentation with guidance",
-                  "Assists in the definition of project scope and objectives, involving all relevant stakeholders and ensuring technical feasibility"
+                  "Understands all project agreements, budgets, scopes of work, and timelines",
+                  "With guidance, creates and maintains comprehensive project documentation",
+                  "With guidance, creates and maintains a high-level project schedule with major milestones, and makes sure that the schedule is visible and accessible to the project team and client",
+                  "With guidance, monitors and communicates project progress against scope, quality, time, and cost baselines, including approved changes",
+                  "Updates the resource forecasting tool for all members of the team, based on project needs and budget limits, on a consistent and timely basis",
+                  "Ensures resource availability and allocation"
               ],
               "examples": []
           },
           {
               "summary": "Works effectively to support the business planning, lifecycle management, reporting and performance measurement systems\t",
               "signals": [
+                  "Assists in the definition of project scope and objectives, involving all relevant stakeholders and ensuring technical feasibility",
                   "Ensures that the client and project team work together to define, document, and estimate a scope of work that fits within the budget",
-                  "Ensures whether any changes to scope and its estimates remain within the budget",
-                  "Updates the resource forecasting tool for all members of the team, based on project needs and budget limits, on a consistent and timely basis",
-                  "Monitors progress of the project against scope, quality, safety, time and cost baselines including approved changes with guidance",
-                  "Maintain a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client with guidance",
-                  "Monitors the billing schedule, and makes that schedule visible and accessible to the financial team and client"
+                  "Ensures any scope changes remain within the budget",
+                  "Monitors and communicates project progress against scope, quality, time, and cost baselines, including approved changes",
+                  "Monitors the billing schedule, and makes that schedule visible and accessible to the financial team and client",
+                  "Creates and maintains a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client",
+                  "Ensures that team members have awareness of and visibility into the amount of time they are resourced to the project each week"
               ],
               "examples": []
           },
@@ -2485,34 +2759,30 @@ export const pmTracks = (trackList: object[]): object[] => {
               "summary": "Designs and establishes the business planning, lifecycle management, reporting and performance measurement systems",
               "signals": [
                   "Develops a detailed project plan to monitor and track progress",
-                  "Manages progress of the project against scope, quality, safety, time and cost baselines including approved changes",
-                  "Categorizes needs versus wants",
-                  "Ensures that changes are tangible, strategic and achievable",
-                  "Creates and maintains a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client",
-                  "Creates and maintains a billing schedule, and makes that schedule visible and accessible to the financial team and client",
-                  "Ensures resource availability and allocation",
-                  "Develops spreadsheets, diagrams and process maps to document needs"
+                  "Manages project progress against scope, quality, time, and cost baselines, including approved changes",
+                  "Facilitates client conversations to categorize features in priority order",
+                  "Ensures that changes are tangible, strategic, and achievable",
+                  "Develops spreadsheets, diagrams, and process maps to document needs"
               ],
               "examples": []
           },
           {
               "summary": "Leads and guides the business planning, lifecycle management, reporting and performance measurement systems",
               "signals": [
-                  "Leads discussions to review and disposition scope change requests",
-                  "Ensures that change fits with the project strategy and desired outcomes",
+                  "Leads discussions to review and finalize scope change requests",
+                  "Ensures that changes fit within the project strategy and desired outcomes",
                   "Establishes a completion plan that includes all aspects of delivery of project outcomes across the entire project life cycle",
-                  "Demonstrates ability to discuss the standard project process with the team and client, in order to ensure that timelines, schedules and milestones reflect the appropriate path for the project to follow",
-                  "Ensures that team members have awareness and visibility into the amount of time they are resourced to the project each week"
+                  "Demonstrates ability to discuss the standard project process with the team and client, in order to ensure that timelines, schedules, and milestones reflect the appropriate path for the project to follow",
+                  "Ensures that the finished project is strategically beneficial to the client"
               ],
               "examples": []
           },
           {
               "summary": "Is an industry-leading expert in multiple areas of our stack, is deeply knowledgeable in several domains, and sets strategic planning direction for the project management team",
               "signals": [
-                  "Ensures that the project is adding to the strategic advantage of the client",
-                  "Defends product integrity from misinformed decision making either externally or internally",
-                  "Assists in dispute, negotiation, arbitration or litigation, as needed",
-                  "Understands what it means to run a business-driven PM plan; from strategy through execution to the realization of business benefits; with the clients at the center of it all"
+                  "Defends product integrity from misinformed decision-making both internally and externally",
+                  "Assists in dispute, negotiation, arbitration, or litigation, as needed",
+                  "Understands what it means to run a business-driven project management plan\u2014from strategy through execution to the realization of business benefits\u2014centered on the client"
               ],
               "examples": []
           }
@@ -2528,20 +2798,18 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Works effectively within established project risk, following quality policies, objectives and responsibilities to satisfy project requirements",
               "signals": [
-                  "Determines which risks may affect the project and documents their characteristics with assistance of senior PM",
-                  "Ability to understand and document potential consequences of risks as they occur",
-                  "Documents how project will demonstrate quality compliance",
-                  "Builds quality metrics and quality checklists with guidance"
+                  "Participates in ongoing risk assessments with guidance",
+                  "Determines which risks may affect the project and documents the specifics with assistance of a senior team member",
+                  "Actively seeks to understand and document potential consequences of risks as they occur"
               ],
               "examples": []
           },
           {
               "summary": "Develops and monitors risk mitigation with guidance",
               "signals": [
-                  "Effectively determines which risks may affect the project and documents their characteristics with some assistance of senior PM",
                   "Conducts ongoing risk assessments with guidance",
-                  "Monitors status of project risks with guidance",
-                  "Audits quality requirements and results from quality control measurements with guidance"
+                  "Understands and documents potential consequences of risks as they occur",
+                  "Monitors and communicates status of project risks with guidance"
               ],
               "examples": []
           },
@@ -2549,34 +2817,30 @@ export const pmTracks = (trackList: object[]): object[] => {
               "summary": "Performs risk mitigation to minimize project risks",
               "signals": [
                   "Oversees the risk identification and definition process",
-                  "Ability to prioritize risks for further analysis or action by assessing their probabilities of occurrence and impact",
+                  "Prioritizes risks for further analysis or action by assessing their probabilities of occurrence and impact",
                   "Develops options and actions to enhance opportunities and reduce threats to project objectives",
                   "Initiates risk response plans when necessary",
-                  "Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks",
-                  "Regularly review quality metrics with the team",
-                  "Establishes, updates, and utilizes key performance indicators"
+                  "Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks"
               ],
               "examples": []
           },
           {
               "summary": "Develops and guides risk mitigation effectively, advocating for quality",
               "signals": [
-                  "Develops guidance and direction on how the project risks will be managed throughout the project",
+                  "Establishes, updates, and utilizes key performance indicators",
+                  "Develops guidance and direction on how risks will be managed throughout the project",
                   "Oversees and guides the risk analysis process and the development of risk responses",
-                  "Links the outcomes to the organisational goals and the client's vision and mission statements through measurable key performance indicators and a review and assurance process",
-                  "Maintains awareness and visibility of the risks to the client and team throughout the course of the project",
-                  "Ensures audits of quality process are executed in accordance with quality management plan"
+                  "Maintains awareness and visibility of the risks to the client and team throughout the course of the project"
               ],
               "examples": []
           },
           {
               "summary": "Provides guidance and direction on project risk, fostering quality",
               "signals": [
-                  "Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response",
+                  "Expertly conducts all stages of risk mitigation\u2014including planning, identification, analysis, and response",
                   "Drives and leads creative actions to enhance opportunities and reduce threats to project objectives",
-                  "Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issues",
-                  "Clearly articulates the risks to the client, including their negative impact on the company's overall business",
-                  "Identifies quality standards for use by the team that establish performance and quality expectations"
+                  "Proactively handles project risks by identifying potential complications and conflicts and creating\/implementing timely mitigation strategies",
+                  "Clearly articulates the risks to the client, including their negative impact on the company\u2019s overall business"
               ],
               "examples": []
           }
@@ -2592,18 +2856,19 @@ export const pmTracks = (trackList: object[]): object[] => {
           {
               "summary": "Actively listens, understands and responds to stakeholders",
               "signals": [
-                  "Actively listens and understands stakeholders needs, interests, and influence for project success",
-                  "Develops and adapts communication strategies with guidance"
+                  "Actively listens to and understands stakeholders' needs, interests, and influences in order to achieve project success",
+                  "Develops and adapts communication strategies with guidance",
+                  "Provides accurate and factual information"
               ],
               "examples": []
           },
           {
               "summary": "Disseminates information effectively",
               "signals": [
-                  "Undertakes analysis, evaluation of options (as appropriate), and takes\/recommends actions",
+                  "Effectively summarizes key points and issues in a clear and concise manner",
                   "Matches level of information to stakeholder",
-                  "Provides accurate and factual information",
-                  "Develops and maintains project tracking, dashboards and information systems"
+                  "Develops and maintains project tracking, dashboards, and information systems",
+                  "Undertakes analysis, evaluation of options (as appropriate), and takes\/recommends actions"
               ],
               "examples": []
           },
@@ -2611,30 +2876,29 @@ export const pmTracks = (trackList: object[]): object[] => {
               "summary": "Disseminates information effectively, engaging with stakeholders",
               "signals": [
                   "Engages with stakeholders proactively",
-                  "Establishes regular interaction w\/ stakeholders, including formal and informal channels",
-                  "Uses appropriate communications method for information disseminated",
+                  "Establishes regular interaction with stakeholders, including formal and informal channels",
+                  "Disseminates information via appropriate communication methods",
                   "Appropriately matches level of formality to meetings and audience",
-                  "Able to effectively summarize key points and issues in a clear and concise manner",
-                  "Regularly conducts follow-up with stakeholders"
+                  "Regularly conducts follow-up with stakeholders",
+                  "Proactively responds to issues and concerns",
+                  "Seeks validation of information"
               ],
               "examples": []
           },
           {
               "summary": "Ensures quality of information and guidance to proactive respond to stakeholders",
               "signals": [
-                  "Engages with team members in developing reports, analyzing issues, evaluating progress, and option analysis",
-                  "Proactively responds to issues and concerns",
+                  "Engages with team members in developing reports, analyzing issues and options, and evaluating progress",
                   "Balances speed of provision of information against reliability of information",
-                  "Seeks validation of information",
-                  "Provides feedback on templates and guidelines including examples and methods based on experiences and lessons learned"
+                  "Provides feedback on templates and guidelines, including examples and methods based on experiences and lessons learned"
               ],
               "examples": []
           },
           {
               "summary": "Effectively manages high-level information to diverse audience, ensuring stakeholder engagement",
               "signals": [
-                  "Evaluates, develops and executes responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
-                  "Builds processes and structures that ensure transfer of information as a whole that influence strategic decisions and produce foundations for new capabilities",
+                  "Evaluates, develops, and executes responses to provide an appropriate level of information to stakeholders and maintain their engagement throughout project life cycle",
+                  "Builds processes and structures to ensure the transfer of information that influences strategic decisions and produces foundations for new capabilities",
                   "Continually seeks new information to assess the effectiveness of the project strategy"
               ],
               "examples": []

@@ -12,11 +12,13 @@ import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import CohortSelector from '../components/CohortSelector'
 import TitleSelector from '../components/TitleSelector'
+import LevelSelector from '../components/LevelSelector'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
   title: string,
+  level: number,
   focusedTrackId: TrackId,
 }
 
@@ -28,9 +30,10 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[13]) result.name = decodeURI(hashValues[13])
-  if (hashValues[14]) result.cohort = decodeURI(hashValues[14])
-  if (hashValues[15]) result.title = decodeURI(hashValues[15])
+  if (hashValues[13]) result.level = decodeURI(hashValues[13])
+  if (hashValues[14]) result.name = decodeURI(hashValues[14])
+  if (hashValues[15]) result.cohort = decodeURI(hashValues[15])
+  if (hashValues[16]) result.title = decodeURI(hashValues[16])
   return result
 }
 
@@ -52,6 +55,7 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     cohort: '',
     title: '',
+    level: 0,
     milestoneByTrack: {
       'CHAPTER_ONE': 0,
       'CHAPTER_TWO': 0,
@@ -68,7 +72,7 @@ const emptyState = (): SnowflakeAppState => {
       'MENTORSHIP': 0,
     },
     focusedTrackId: 'CHAPTER_ONE',
-    version: "1.0.0"
+    version: "1.0.2"
   }
 }
 
@@ -77,6 +81,7 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Palantiri Name',
     cohort: 'Project Management',
     title: 'Project Manager, III',
+    level: 4,
     milestoneByTrack: {
       'CHAPTER_ONE': 2,
       'CHAPTER_TWO': 2,
@@ -98,7 +103,7 @@ const defaultState = (): SnowflakeAppState => {
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
-  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.name), encodeURI(state.cohort), encodeURI(state.title))
+  const values = trackIds.map(trackId => state.milestoneByTrack[trackId]).concat(encodeURI(state.level), encodeURI(state.name), encodeURI(state.cohort), encodeURI(state.title))
   return values.join(',')
 }
 
@@ -144,7 +149,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             line-height: 40px;
             font-weight: bold;
             width: 380px;
-            margin-top: 140px;
+            margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 8px;
           }
@@ -171,18 +176,25 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
                   />
-              Cohort: &nbsp;&nbsp;
+              <div style={{margin: 0, 'line-height': '0.5em'}}>Cohort: &nbsp;&nbsp;
               <CohortSelector
                   currentCohort={this.state.cohort}
-                  setCohortFn={(cohort) => this.setCohort(cohort)} />
-              {/*}<TitleSelector
+                  setCohortFn={(cohort) => this.setCohort(cohort)} /></div>
+              {/*<div style={{margin: 0, 'line-height': '0.5em'}}>Title: &nbsp;&nbsp;
+                <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
                   currentCohort={this.state.cohort}
-                setTitleFn={(title) => this.setTitle(title)} />*/}
+                  setTitleFn={(title) => this.setTitle(title)} /></div>*/}
+              <div style={{margin: 0, 'line-height': '0.5em'}}>Current Level: &nbsp;&nbsp;
+                <LevelSelector
+                    level={this.state.level}
+                    setLevelFn={(level) => this.setLevel(level)} /></div>
             </form>
-            {/*<PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-          <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />*/}
+            <PointSummaries
+                milestoneByTrack={this.state.milestoneByTrack}
+                level = {this.state.level} />
+            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
@@ -263,6 +275,10 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     let titles = eligibleTitles(this.state.milestoneByTrack, this.state.cohort)
     title = titles.indexOf(title) == -1 ? titles[0] : title
     this.setState({ title })
+  }
+
+  setLevel(level: number) {
+    this.setState({ level })
   }
 
   getDate() {

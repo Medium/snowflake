@@ -22,8 +22,10 @@ class TrackSelector extends React.Component<Props> {
             border-spacing: 3px;
             border-bottom: 2px solid #ccc;
             padding-bottom: 20px;
+            padding-top: 20px;
             margin-bottom: 20px;
             margin-left: -3px;
+            border-top: 2px solid #ccc;
           }
           .track-selector-value {
             line-height: 62px;
@@ -39,6 +41,20 @@ class TrackSelector extends React.Component<Props> {
             text-align: center;
             font-size: 10px;
           }
+          .primary-skills {
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px;
+            background-color: #9fc855;
+          }
+          .t-skills {
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px;
+            background-color: #a7d1bc;
+          }          
         `}</style>
         <tbody>
           <tr>
@@ -56,6 +72,10 @@ class TrackSelector extends React.Component<Props> {
                 {this.props.milestoneByTrack[trackId]}
               </td>
             ))}
+          </tr>
+          <tr>
+            <td colSpan={"4"} className="primary-skills">Core skills</td>
+            <td colSpan={"9"} className="t-skills">T-shaped skills</td>
           </tr>
         </tbody>
       </table>

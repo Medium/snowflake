@@ -119,36 +119,36 @@ CHAPTER_FOUR,DEFAULT,Motivation,5,3,Sets clear goals and a desired future state 
 CHAPTER_FOUR,DEFAULT,Motivation,5,4,
 CHAPTER_FOUR,DEFAULT,Motivation,5,5,
 CHAPTER_FOUR,DEFAULT,Motivation,5,6,
-PLANNING,DEFAULT,Plan and Coordination,1,1,"Commits to and completes tasks within expected time frame, holding themselves accountable"
-PLANNING,DEFAULT,Plan and Coordination,1,2,Delivers tightly-scoped projects efficiently
-PLANNING,DEFAULT,Plan and Coordination,1,3,Is learning how to break down tasks and accurately estimate tasks
-PLANNING,DEFAULT,Plan and Coordination,1,4,
-PLANNING,DEFAULT,Plan and Coordination,1,5,
-PLANNING,DEFAULT,Plan and Coordination,1,6,
-PLANNING,DEFAULT,Plan and Coordination,2,1,"Is mastering the ability to break down tasks, plan, estimate, and cut scope in order to deliver on time"
-PLANNING,DEFAULT,Plan and Coordination,2,2,Researches and considers alternative approaches
-PLANNING,DEFAULT,Plan and Coordination,2,3,Defines and hits interim milestones
-PLANNING,DEFAULT,Plan and Coordination,2,4,Prioritizes in alignment with company goals
-PLANNING,DEFAULT,Plan and Coordination,2,5,Consistently and accurately estimates the time a given task will take
-PLANNING,DEFAULT,Plan and Coordination,2,6,
-PLANNING,DEFAULT,Plan and Coordination,3,1,"Can smoothly and successfully execute an initiative, set milestones for a team, and proactively ensure all core goals are hit, even if plans need to be changed to do so"
-PLANNING,DEFAULT,Plan and Coordination,3,2,Integrates business needs into project planning
-PLANNING,DEFAULT,Plan and Coordination,3,3,Chooses appropriate project management strategy based on context
-PLANNING,DEFAULT,Plan and Coordination,3,4,Demonstrates the ability to prioritize the most important work for the company/team
-PLANNING,DEFAULT,Plan and Coordination,3,5,Delegates tasks to others appropriately
-PLANNING,DEFAULT,Plan and Coordination,3,6,"When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
-PLANNING,DEFAULT,Plan and Coordination,4,1,"Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically"
-PLANNING,DEFAULT,Plan and Coordination,4,2,Manages dependencies on other projects and teams
-PLANNING,DEFAULT,Plan and Coordination,4,3,Leverages recognition of repeated project patterns
-PLANNING,DEFAULT,Plan and Coordination,4,4,Reduces complexity and prioritizes the most important work for the company
-PLANNING,DEFAULT,Plan and Coordination,4,5,Helps define roadmaps and set vision for long-term projects
-PLANNING,DEFAULT,Plan and Coordination,4,6,"Often ""sees around corners"" and addresses issues before they become critical"
-PLANNING,DEFAULT,Plan and Coordination,5,1,"Plans and executes large, complex projects with interdependencies across teams and systems"
-PLANNING,DEFAULT,Plan and Coordination,5,2,"Leads teams of teams, and coordinates effective cross-functional collaboration"
-PLANNING,DEFAULT,Plan and Coordination,5,3,"Considers external constraints, opportunities, and business objectives when planning"
-PLANNING,DEFAULT,Plan and Coordination,5,4,Can successfully manage (and adjust/update plans for) large efforts that start out with unclear or competing goals
-PLANNING,DEFAULT,Plan and Coordination,5,5,Creates plans that define the direction of the whole team moving forward
-PLANNING,DEFAULT,Plan and Coordination,5,6,Demonstrates the ability to deal with any project or initiative that is critical to the future of the company
+PLANNING,DEFAULT,Planning and Coordination,1,1,"Commits to and completes tasks within expected time frame, holding themselves accountable"
+PLANNING,DEFAULT,Planning and Coordination,1,2,Delivers tightly-scoped projects efficiently
+PLANNING,DEFAULT,Planning and Coordination,1,3,Is learning how to break down tasks and accurately estimate tasks
+PLANNING,DEFAULT,Planning and Coordination,1,4,
+PLANNING,DEFAULT,Planning and Coordination,1,5,
+PLANNING,DEFAULT,Planning and Coordination,1,6,
+PLANNING,DEFAULT,Planning and Coordination,2,1,"Is mastering the ability to break down tasks, plan, estimate, and cut scope in order to deliver on time"
+PLANNING,DEFAULT,Planning and Coordination,2,2,Researches and considers alternative approaches
+PLANNING,DEFAULT,Planning and Coordination,2,3,Defines and hits interim milestones
+PLANNING,DEFAULT,Planning and Coordination,2,4,Prioritizes in alignment with company goals
+PLANNING,DEFAULT,Planning and Coordination,2,5,Consistently and accurately estimates the time a given task will take
+PLANNING,DEFAULT,Planning and Coordination,2,6,
+PLANNING,DEFAULT,Planning and Coordination,3,1,"Can smoothly and successfully execute an initiative, set milestones for a team, and proactively ensure all core goals are hit, even if plans need to be changed to do so"
+PLANNING,DEFAULT,Planning and Coordination,3,2,Integrates business needs into project planning
+PLANNING,DEFAULT,Planning and Coordination,3,3,Chooses appropriate project management strategy based on context
+PLANNING,DEFAULT,Planning and Coordination,3,4,Demonstrates the ability to prioritize the most important work for the company/team
+PLANNING,DEFAULT,Planning and Coordination,3,5,Delegates tasks to others appropriately
+PLANNING,DEFAULT,Planning and Coordination,3,6,"When working on a series of related projects or an initiative, is constantly aware of the bigger picture and what they're going to be delivering in the next few projects"
+PLANNING,DEFAULT,Planning and Coordination,4,1,"Can successfully plan and execute projects involving multiple stakeholders and complex requirements, prioritizing strategically"
+PLANNING,DEFAULT,Planning and Coordination,4,2,Manages dependencies on other projects and teams
+PLANNING,DEFAULT,Planning and Coordination,4,3,Leverages recognition of repeated project patterns
+PLANNING,DEFAULT,Planning and Coordination,4,4,Reduces complexity and prioritizes the most important work for the company
+PLANNING,DEFAULT,Planning and Coordination,4,5,Helps define roadmaps and set vision for long-term projects
+PLANNING,DEFAULT,Planning and Coordination,4,6,"Often ""sees around corners"" and addresses issues before they become critical"
+PLANNING,DEFAULT,Planning and Coordination,5,1,"Plans and executes large, complex projects with interdependencies across teams and systems"
+PLANNING,DEFAULT,Planning and Coordination,5,2,"Leads teams of teams, and coordinates effective cross-functional collaboration"
+PLANNING,DEFAULT,Planning and Coordination,5,3,"Considers external constraints, opportunities, and business objectives when planning"
+PLANNING,DEFAULT,Planning and Coordination,5,4,Can successfully manage (and adjust/update plans for) large efforts that start out with unclear or competing goals
+PLANNING,DEFAULT,Planning and Coordination,5,5,Creates plans that define the direction of the whole team moving forward
+PLANNING,DEFAULT,Planning and Coordination,5,6,Demonstrates the ability to deal with any project or initiative that is critical to the future of the company
 COLLABORATION,DEFAULT,Communication and Collaboration,1,1,Communicates project status clearly and effectively
 COLLABORATION,DEFAULT,Communication and Collaboration,1,2,Is learning to work collaboratively on a team and communicate in meetings
 COLLABORATION,DEFAULT,Communication and Collaboration,1,3,Proactively asks questions and reaches out for help to get unblocked
@@ -425,14 +425,14 @@ CHAPTER_TWO,MANAGEMENT,Coaching,1,3,
 CHAPTER_TWO,MANAGEMENT,Coaching,1,4,
 CHAPTER_TWO,MANAGEMENT,Coaching,1,5,
 CHAPTER_TWO,MANAGEMENT,Coaching,1,6,
-CHAPTER_TWO,MANAGEMENT,Coaching,2,1,Shows confidence in other's ability and willingness to face challenges and solve problem
+CHAPTER_TWO,MANAGEMENT,Coaching,2,1,Shows confidence in other's ability and willingness to face challenges and solve problems
 CHAPTER_TWO,MANAGEMENT,Coaching,2,2,Helps people to gain awareness of current situations
 CHAPTER_TWO,MANAGEMENT,Coaching,2,3,Demonstrates curiosity
 CHAPTER_TWO,MANAGEMENT,Coaching,2,4,
 CHAPTER_TWO,MANAGEMENT,Coaching,2,5,
 CHAPTER_TWO,MANAGEMENT,Coaching,2,6,
 CHAPTER_TWO,MANAGEMENT,Coaching,3,1,Demonstrates the ability to understand what issues exist that limit individual's ability to perform the task or accomplish the objectives
-CHAPTER_TWO,MANAGEMENT,Coaching,3,2,Determines whether people need help to remove barriers or if they are able to tackle them by themselves
+CHAPTER_TWO,MANAGEMENT,Coaching,3,2,Determines whether people need help to remove barriers or if they are able to tackle challenges by themselves
 CHAPTER_TWO,MANAGEMENT,Coaching,3,3,
 CHAPTER_TWO,MANAGEMENT,Coaching,3,4,
 CHAPTER_TWO,MANAGEMENT,Coaching,3,5,
@@ -749,133 +749,6 @@ CHAPTER_FOUR,FRONTEND,Craft,5,3,Secures time and resources from execs to support
 CHAPTER_FOUR,FRONTEND,Craft,5,4,"Creates a compelling technical vision with company-level impact, anticipating future needs"
 CHAPTER_FOUR,FRONTEND,Craft,5,5,
 CHAPTER_FOUR,FRONTEND,Craft,5,6,
-CHAPTER_ONE,PM,Foundations,1,1,Is building proficiency in our PM practice and becoming comfortable with learning new skills
-CHAPTER_ONE,PM,Foundations,1,2,Able to develop comprehensive projects plans with assistance of seniors project managers
-CHAPTER_ONE,PM,Foundations,1,3,"Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and develop according to plan"
-CHAPTER_ONE,PM,Foundations,1,4,Is well-versed with project management methodologies and client collaboration tools
-CHAPTER_ONE,PM,Foundations,1,5,"Actively listens, understands, and responds to clients and team members"
-CHAPTER_ONE,PM,Foundations,1,6,
-CHAPTER_ONE,PM,Foundations,2,1,"Focused on expanding experience and proficiency in our PM practice, establishing and promoting brand guidelines, best practices and standards"
-CHAPTER_ONE,PM,Foundations,2,2,Develops a detailed project plan to monitor and track progress
-CHAPTER_ONE,PM,Foundations,2,3,Manages the relationship with the client and all stakeholders
-CHAPTER_ONE,PM,Foundations,2,4,"Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, might have different responses from the client, and even different definitions of work"
-CHAPTER_ONE,PM,Foundations,2,5,Monitors client satisfaction
-CHAPTER_ONE,PM,Foundations,2,6,Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders
-CHAPTER_ONE,PM,Foundations,2,7,"Able to create, manage and maintain agreements, budgets, scope of work, and timelines"
-CHAPTER_ONE,PM,Foundations,2,8,"Works within the given parameters delivered from Sales, such as problem statetment, budget"
-CHAPTER_ONE,PM,Foundations,3,1,"Effectively leads a project from concept to completion, acting as the liaison between the project team and clients"
-CHAPTER_ONE,PM,Foundations,3,2,"Facilitates team through Agile practices, including daily scrum, grooming and retrospectives"
-CHAPTER_ONE,PM,Foundations,3,3,"Manages changes to the project scope, budget and timeline using appropriate verification techniques"
-CHAPTER_ONE,PM,Foundations,3,4,"Delegates project tasks based on junior staff members' individual strengths, skill sets and experience levels"
-CHAPTER_ONE,PM,Foundations,3,5,Measures project performance using appropriate tools and techniques
-CHAPTER_ONE,PM,Foundations,3,6,Participates and/or drives feasibility studies and proposals for evaluation by appropriate key stakeholders
-CHAPTER_ONE,PM,Foundations,3,7,Serves as an internal quality control check for the project
-CHAPTER_ONE,PM,Foundations,3,8,"Provides status reporting regarding project milestones, deliverables, dependencies, risks and issues, communicating across leadership"
-CHAPTER_ONE,PM,Foundations,4,1,Defines success criteria and disseminates them to involved parties throughout project and program life cycle
-CHAPTER_ONE,PM,Foundations,4,2,"Establishes practices, templates, policies, tools and partnerships to expand and mature the PM capabilities for the organization"
-CHAPTER_ONE,PM,Foundations,4,3,Sets and continually manages project expectations while delegating and managing deliverable with team members and stakeholders
-CHAPTER_ONE,PM,Foundations,4,4,Guides team members about every aspect of the project so that the team members can understand their tasks fully and act on them efficiently
-CHAPTER_ONE,PM,Foundations,4,5,"Keeps an eye of latest strategies, tools and terminologies used in project management worldwide"
-CHAPTER_ONE,PM,Foundations,4,6,
-CHAPTER_ONE,PM,Foundations,5,1,Guides and directs PM team members by providing direction to team and project success
-CHAPTER_ONE,PM,Foundations,5,2,"Leverages constraints that exist for projects around resources, budget, time, quality and scope in order to meet project outcomes"
-CHAPTER_ONE,PM,Foundations,5,3,Manages dilemmas and paradoxes as they occur throughout the project lifecycle by identifying and communicating trade-offs with key stakeholders
-CHAPTER_ONE,PM,Foundations,5,4,Seen as a leader and contributor in the broader technical side across the organization
-CHAPTER_ONE,PM,Foundations,5,5,Capability to track project benefits realization and lessons learned activities to feed into ongoing improvements
-CHAPTER_ONE,PM,Foundations,5,6,
-CHAPTER_TWO,PM,Plan,1,1,"Understands all the agreements, budgets,scope of work, and timeline"
-CHAPTER_TWO,PM,Plan,1,2,Creates and maintains comprehensive project documentation with guidance
-CHAPTER_TWO,PM,Plan,1,3,"Assists in the definition of project scope and objectives, involving all relevant stakeholders and ensuring technical feasibility"
-CHAPTER_TWO,PM,Plan,1,4,
-CHAPTER_TWO,PM,Plan,1,5,
-CHAPTER_TWO,PM,Plan,1,6,
-CHAPTER_TWO,PM,Plan,2,1,"Ensures that the client and project team work together to define, document, and estimate a scope of work that fits within the budget"
-CHAPTER_TWO,PM,Plan,2,2,Ensures whether any changes to scope and its estimates remain within the budget
-CHAPTER_TWO,PM,Plan,2,3,"Updates the resource forecasting tool for all members of the team, based on project needs and budget limits, on a consistent and timely basis"
-CHAPTER_TWO,PM,Plan,2,4,"Monitors progress of the project against scope, quality, safety, time and cost baselines including approved changes with guidance"
-CHAPTER_TWO,PM,Plan,2,5,"Maintain a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client with guidance"
-CHAPTER_TWO,PM,Plan,2,6,"Monitors the billing schedule, and makes that schedule visible and accessible to the financial team and client"
-CHAPTER_TWO,PM,Plan,3,1,Develops a detailed project plan to monitor and track progress
-CHAPTER_TWO,PM,Plan,3,2,"Manages progress of the project against scope, quality, safety, time and cost baselines including approved changes"
-CHAPTER_TWO,PM,Plan,3,3,Categorizes needs versus wants
-CHAPTER_TWO,PM,Plan,3,4,"Ensures that changes are tangible, strategic and achievable"
-CHAPTER_TWO,PM,Plan,3,5,"Creates and maintains a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client"
-CHAPTER_TWO,PM,Plan,3,6,"Creates and maintains a billing schedule, and makes that schedule visible and accessible to the financial team and client"
-CHAPTER_TWO,PM,Plan,3,7,Ensures resource availability and allocation
-CHAPTER_TWO,PM,Plan,3,8,"Develops spreadsheets, diagrams and process maps to document needs"
-CHAPTER_TWO,PM,Plan,4,1,Leads discussions to review and disposition scope change requests
-CHAPTER_TWO,PM,Plan,4,2,Ensures that change fits with the project strategy and desired outcomes
-CHAPTER_TWO,PM,Plan,4,3,Establishes a completion plan that includes all aspects of delivery of project outcomes across the entire project life cycle
-CHAPTER_TWO,PM,Plan,4,4,"Demonstrates ability to discuss the standard project process with the team and client, in order to ensure that timelines, schedules and milestones reflect the appropriate path for the project to follow"
-CHAPTER_TWO,PM,Plan,4,5,Ensures that team members have awareness and visibility into the amount of time they are resourced to the project each week
-CHAPTER_TWO,PM,Plan,4,6,
-CHAPTER_TWO,PM,Plan,5,1,Ensures that the project is adding to the strategic advantage of the client
-CHAPTER_TWO,PM,Plan,5,2,Defends product integrity from misinformed decision making either externally or internally
-CHAPTER_TWO,PM,Plan,5,3,"Assists in dispute, negotiation, arbitration or litigation, as needed"
-CHAPTER_TWO,PM,Plan,5,4,Understands what it means to run a business-driven PM plan; from strategy through execution to the realization of business benefits; with the clients at the center of it all
-CHAPTER_TWO,PM,Plan,5,5,
-CHAPTER_TWO,PM,Plan,5,6,
-CHAPTER_THREE,PM,Risk Mitigation,1,1,Determines which risks may affect the project and documents their characteristics with assistance of senior PM
-CHAPTER_THREE,PM,Risk Mitigation,1,2,Ability to understand and document potential consequences of risks as they occur
-CHAPTER_THREE,PM,Risk Mitigation,1,3,Documents how project will demonstrate quality compliance
-CHAPTER_THREE,PM,Risk Mitigation,1,4,Builds quality metrics and quality checklists with guidance
-CHAPTER_THREE,PM,Risk Mitigation,1,5,
-CHAPTER_THREE,PM,Risk Mitigation,1,6,
-CHAPTER_THREE,PM,Risk Mitigation,2,1,Effectively determines which risks may affect the project and documents their characteristics with some assistance of senior PM
-CHAPTER_THREE,PM,Risk Mitigation,2,2,Conducts ongoing risk assessments with guidance
-CHAPTER_THREE,PM,Risk Mitigation,2,3,Monitors status of project risks with guidance
-CHAPTER_THREE,PM,Risk Mitigation,2,4,Audits quality requirements and results from quality control measurements with guidance
-CHAPTER_THREE,PM,Risk Mitigation,2,5,
-CHAPTER_THREE,PM,Risk Mitigation,2,6,
-CHAPTER_THREE,PM,Risk Mitigation,3,1,Oversees the risk identification and definition process
-CHAPTER_THREE,PM,Risk Mitigation,3,2,Ability to prioritize risks for further analysis or action by assessing their probabilities of occurrence and impact
-CHAPTER_THREE,PM,Risk Mitigation,3,3,Develops options and actions to enhance opportunities and reduce threats to project objectives
-CHAPTER_THREE,PM,Risk Mitigation,3,4,Initiates risk response plans when necessary
-CHAPTER_THREE,PM,Risk Mitigation,3,5,"Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks"
-CHAPTER_THREE,PM,Risk Mitigation,3,6,Regularly review quality metrics with the team
-CHAPTER_THREE,PM,Risk Mitigation,3,7,"Establishes, updates, and utilizes key performance indicators"
-CHAPTER_THREE,PM,Risk Mitigation,4,1,Develops guidance and direction on how the project risks will be managed throughout the project
-CHAPTER_THREE,PM,Risk Mitigation,4,2,Oversees and guides the risk analysis process and the development of risk responses
-CHAPTER_THREE,PM,Risk Mitigation,4,3,Links the outcomes to the organisational goals and the client's vision and mission statements through measurable key performance indicators and a review and assurance process
-CHAPTER_THREE,PM,Risk Mitigation,4,4,Maintains awareness and visibility of the risks to the client and team throughout the course of the project
-CHAPTER_THREE,PM,Risk Mitigation,4,5,Ensures audits of quality process are executed in accordance with quality management plan
-CHAPTER_THREE,PM,Risk Mitigation,4,6,
-CHAPTER_THREE,PM,Risk Mitigation,5,1,"Expertly conducts all stages of risk mitigation--including planning, identification, analysis, and response"
-CHAPTER_THREE,PM,Risk Mitigation,5,2,Drives and leads creative actions to enhance opportunities and reduce threats to project objectives
-CHAPTER_THREE,PM,Risk Mitigation,5,3,Deals with project risk proactively including providing advice and guidance on the identification of the factors that may affect the project and assurance of the timely resolution of novel and contentious issues
-CHAPTER_THREE,PM,Risk Mitigation,5,4,"Clearly articulates the risks to the client, including their negative impact on the company's overall business"
-CHAPTER_THREE,PM,Risk Mitigation,5,5,Identifies quality standards for use by the team that establish performance and quality expectations
-CHAPTER_THREE,PM,Risk Mitigation,5,6,
-CHAPTER_FOUR,PM,Information,1,1,"Actively listens and understands stakeholders needs, interests, and influence for project success"
-CHAPTER_FOUR,PM,Information,1,2,Develops and adapts communication strategies with guidance
-CHAPTER_FOUR,PM,Information,1,3,
-CHAPTER_FOUR,PM,Information,1,4,
-CHAPTER_FOUR,PM,Information,1,5,
-CHAPTER_FOUR,PM,Information,1,6,
-CHAPTER_FOUR,PM,Information,2,1,"Undertakes analysis, evaluation of options (as appropriate), and takes/recommends actions"
-CHAPTER_FOUR,PM,Information,2,2,Matches level of information to stakeholder
-CHAPTER_FOUR,PM,Information,2,3,Provides accurate and factual information
-CHAPTER_FOUR,PM,Information,2,4,"Develops and maintains project tracking, dashboards and information systems"
-CHAPTER_FOUR,PM,Information,2,5,
-CHAPTER_FOUR,PM,Information,2,6,
-CHAPTER_FOUR,PM,Information,3,1,Engages with stakeholders proactively
-CHAPTER_FOUR,PM,Information,3,2,"Establishes regular interaction w/ stakeholders, including formal and informal channels"
-CHAPTER_FOUR,PM,Information,3,3,Uses appropriate communications method for information disseminated
-CHAPTER_FOUR,PM,Information,3,4,Appropriately matches level of formality to meetings and audience
-CHAPTER_FOUR,PM,Information,3,5,Able to effectively summarize key points and issues in a clear and concise manner
-CHAPTER_FOUR,PM,Information,3,6,Regularly conducts follow-up with stakeholders
-CHAPTER_FOUR,PM,Information,4,1,"Engages with team members in developing reports, analyzing issues, evaluating progress, and option analysis"
-CHAPTER_FOUR,PM,Information,4,2,Proactively responds to issues and concerns
-CHAPTER_FOUR,PM,Information,4,3,Balances speed of provision of information against reliability of information
-CHAPTER_FOUR,PM,Information,4,4,Seeks validation of information
-CHAPTER_FOUR,PM,Information,4,5,Provides feedback on templates and guidelines including examples and methods based on experiences and lessons learned
-CHAPTER_FOUR,PM,Information,4,6,
-CHAPTER_FOUR,PM,Information,5,1,"Evaluates, develops and executes responses to provide appropriate level of information to stakeholders and maintain their engagement throughout project life cycle"
-CHAPTER_FOUR,PM,Information,5,2,Builds processes and structures that ensure transfer of information as a whole that influence strategic decisions and produce foundations for new capabilities
-CHAPTER_FOUR,PM,Information,5,3,Continually seeks new information to assess the effectiveness of the project strategy
-CHAPTER_FOUR,PM,Information,5,4,
-CHAPTER_FOUR,PM,Information,5,5,
-CHAPTER_FOUR,PM,Information,5,6,
 CHAPTER_ONE,UX,Foundations,1,1,Is building proficiency in our user experience practice and becoming comfortable with learning new technologies and skills
 CHAPTER_ONE,UX,Foundations,1,2,"Has experience with web accessibility, usability and core design tools. Understands web design constraints and opportunities"
 CHAPTER_ONE,UX,Foundations,1,3,"Understands and applies how to use an existing pattern library to create wireframes, working with a more senior designer as a guide or mentor"
@@ -1124,3 +997,101 @@ CHAPTER_FOUR,UI,Visual Design,5,3,Stays abreast of trends in visual design and e
 CHAPTER_FOUR,UI,Visual Design,5,4,"Advocates for pushing the limits on a project's capabilities, both from a visual and functional perspective"
 CHAPTER_FOUR,UI,Visual Design,5,5,
 CHAPTER_FOUR,UI,Visual Design,5,6,
+CHAPTER_ONE,PM,Foundations,1,1,Is building proficiency in our PM practice and becoming comfortable with learning new skills
+CHAPTER_ONE,PM,Foundations,1,2,"Actively listens, understands, and responds to clients and team members"
+CHAPTER_ONE,PM,Foundations,1,3,Measures project performance using appropriate tools and techniques
+CHAPTER_ONE,PM,Foundations,1,4,Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders
+CHAPTER_ONE,PM,Foundations,1,5,"Is able to create, manage, and maintain agreements, budgets, scope of work, and timelines"
+CHAPTER_ONE,PM,Foundations,1,6,"Facilitates team through Agile practices, including daily scrums, grooming ,and retrospectives"
+CHAPTER_ONE,PM,Foundations,2,1,"Is continuing to grow and establish proficiency in our project management practice, establishing and promoting best practices and standards"
+CHAPTER_ONE,PM,Foundations,2,2,Is able to develop comprehensive projects plans with assistance of senior project managers
+CHAPTER_ONE,PM,Foundations,2,3,"Closely monitors projects to ensure that they remain on track, meet deadlines, stay under budget, and proceed according to plan"
+CHAPTER_ONE,PM,Foundations,2,4,Develops a detailed project plan to monitor and track progress
+CHAPTER_ONE,PM,Foundations,2,5,Monitors client satisfaction
+CHAPTER_ONE,PM,Foundations,2,6,"Is able to present budgets, scope of work, and timelines to the appropriate stakeholders"
+CHAPTER_ONE,PM,Foundations,2,7,Manages the relationship with the client and all stakeholders
+CHAPTER_ONE,PM,Foundations,2,8,"Provides leadership with status reporting regarding project milestones, deliverables, dependencies, risks, and issues"
+CHAPTER_ONE,PM,Foundations,3,1,"Effectively leads and takes ownership of project from concept to completion, acting as the liaison between the project team and the client"
+CHAPTER_ONE,PM,Foundations,3,2,"Manages changes to the project scope, budget, and timeline using appropriate verification techniques"
+CHAPTER_ONE,PM,Foundations,3,3,"Delegates project tasks based on junior staff members' individual strengths, skill sets, and experience levels"
+CHAPTER_ONE,PM,Foundations,3,4,Serves as an internal quality control check for the project
+CHAPTER_ONE,PM,Foundations,3,5,Is well-versed with project management methodologies and tools
+CHAPTER_ONE,PM,Foundations,3,6,"Works within the given parameters delivered from Sales, such as problem statement, budget, deliverables, and timeline"
+CHAPTER_ONE,PM,Foundations,3,7,Creates and maintains comprehensive project documentation and presents it to the appropriate stakeholders
+CHAPTER_ONE,PM,Foundations,3,8,"Has a strong understanding of the fact that UX and Engineering use different terminology, have a different cadence to their work, provide different deliverables, and even different definitions of work"
+CHAPTER_ONE,PM,Foundations,4,1,Helps the client and team define success criteria and disseminates these to involved parties throughout the project and program life cycle
+CHAPTER_ONE,PM,Foundations,4,2,"Establishes practices, templates, policies, tools, and partnerships to expand and mature the project management capabilities for the organization"
+CHAPTER_ONE,PM,Foundations,4,3,Sets and continually manages project expectations while delegating and managing deliverables with team members and stakeholders
+CHAPTER_ONE,PM,Foundations,4,4,Provides necessary context for the team so that team members can understand their roles on the project and tackle their tasks efficiently
+CHAPTER_ONE,PM,Foundations,4,5,"Keeps an eye on latest strategies, tools, and terminologies used in project management worldwide"
+CHAPTER_ONE,PM,Foundations,4,6,"Accommodates project constraints around resources, budget, time, quality, and scope in order to meet desired outcomes"
+CHAPTER_ONE,PM,Foundations,4,7,"Is incredibly knowledgeable in their area of expertise, often to a degree that is recognized outside the organization"
+CHAPTER_ONE,PM,Foundations,5,1,Guides project management team members by providing coaching and mentoring for team and project success
+CHAPTER_ONE,PM,Foundations,5,2,Manages dilemmas and paradoxes as they occur throughout the project life cycle by identifying and communicating trade-offs to key stakeholders
+CHAPTER_ONE,PM,Foundations,5,3,Is seen as a leader and contributor in the broader organization
+CHAPTER_ONE,PM,Foundations,5,4,Tracks project benefits realization and lessons learned to feed into ongoing improvements
+CHAPTER_TWO,PM,Plan,1,1,"Understands all project agreements, budgets, scopes of work, and timelines"
+CHAPTER_TWO,PM,Plan,1,2,"With guidance, creates and maintains comprehensive project documentation"
+CHAPTER_TWO,PM,Plan,1,3,"With guidance, creates and maintains a high-level project schedule with major milestones, and makes sure that the schedule is visible and accessible to the project team and client"
+CHAPTER_TWO,PM,Plan,1,4,"With guidance, monitors and communicates project progress against scope, quality, time, and cost baselines, including approved changes"
+CHAPTER_TWO,PM,Plan,1,5,"Updates the resource forecasting tool for all members of the team, based on project needs and budget limits, on a consistent and timely basis"
+CHAPTER_TWO,PM,Plan,1,6,Ensures resource availability and allocation
+CHAPTER_TWO,PM,Plan,2,1,"Assists in the definition of project scope and objectives, involving all relevant stakeholders and ensuring technical feasibility"
+CHAPTER_TWO,PM,Plan,2,2,"Ensures that the client and project team work together to define, document, and estimate a scope of work that fits within the budget"
+CHAPTER_TWO,PM,Plan,2,3,Ensures any scope changes remain within the budget
+CHAPTER_TWO,PM,Plan,2,4,"Monitors and communicates project progress against scope, quality, time, and cost baselines, including approved changes"
+CHAPTER_TWO,PM,Plan,2,5,"Monitors the billing schedule, and makes that schedule visible and accessible to the financial team and client"
+CHAPTER_TWO,PM,Plan,2,6,"Creates and maintains a high-level project schedule with major milestones, and makes that schedule visible and accessible to the project team and client"
+CHAPTER_TWO,PM,Plan,2,7,Ensures that team members have awareness of and visibility into the amount of time they are resourced to the project each week
+CHAPTER_TWO,PM,Plan,3,1,Develops a detailed project plan to monitor and track progress
+CHAPTER_TWO,PM,Plan,3,2,"Manages project progress against scope, quality, time, and cost baselines, including approved changes"
+CHAPTER_TWO,PM,Plan,3,3,Facilitates client conversations to categorize features in priority order
+CHAPTER_TWO,PM,Plan,3,4,"Ensures that changes are tangible, strategic, and achievable"
+CHAPTER_TWO,PM,Plan,3,5,"Develops spreadsheets, diagrams, and process maps to document needs"
+CHAPTER_TWO,PM,Plan,4,1,Leads discussions to review and finalize scope change requests
+CHAPTER_TWO,PM,Plan,4,2,Ensures that changes fit within the project strategy and desired outcomes
+CHAPTER_TWO,PM,Plan,4,3,Establishes a completion plan that includes all aspects of delivery of project outcomes across the entire project life cycle
+CHAPTER_TWO,PM,Plan,4,4,"Demonstrates ability to discuss the standard project process with the team and client, in order to ensure that timelines, schedules, and milestones reflect the appropriate path for the project to follow"
+CHAPTER_TWO,PM,Plan,4,5,Ensures that the finished project is strategically beneficial to the client
+CHAPTER_TWO,PM,Plan,5,1,Defends product integrity from misinformed decision-making both internally and externally
+CHAPTER_TWO,PM,Plan,5,2,"Assists in dispute, negotiation, arbitration, or litigation, as needed"
+CHAPTER_TWO,PM,Plan,5,3,Understands what it means to run a business-driven project management plan—from strategy through execution to the realization of business benefits—centered on the client
+CHAPTER_THREE,PM,Risk Mitigation,1,1,Participates in ongoing risk assessments with guidance
+CHAPTER_THREE,PM,Risk Mitigation,1,2,Determines which risks may affect the project and documents the specifics with assistance of a senior team member
+CHAPTER_THREE,PM,Risk Mitigation,1,3,Actively seeks to understand and document potential consequences of risks as they occur
+CHAPTER_THREE,PM,Risk Mitigation,2,1,Conducts ongoing risk assessments with guidance
+CHAPTER_THREE,PM,Risk Mitigation,2,2,Understands and documents potential consequences of risks as they occur
+CHAPTER_THREE,PM,Risk Mitigation,2,3,Monitors and communicates status of project risks with guidance
+CHAPTER_THREE,PM,Risk Mitigation,3,1,Oversees the risk identification and definition process
+CHAPTER_THREE,PM,Risk Mitigation,3,2,Prioritizes risks for further analysis or action by assessing their probabilities of occurrence and impact
+CHAPTER_THREE,PM,Risk Mitigation,3,3,Develops options and actions to enhance opportunities and reduce threats to project objectives
+CHAPTER_THREE,PM,Risk Mitigation,3,4,Initiates risk response plans when necessary
+CHAPTER_THREE,PM,Risk Mitigation,3,5,"Ensures that the client is aware of the risks and understands their consequences, along with the mitigation plans for each of the risks"
+CHAPTER_THREE,PM,Risk Mitigation,4,1,"Establishes, updates, and utilizes key performance indicators"
+CHAPTER_THREE,PM,Risk Mitigation,4,2,Develops guidance and direction on how risks will be managed throughout the project
+CHAPTER_THREE,PM,Risk Mitigation,4,3,Oversees and guides the risk analysis process and the development of risk responses
+CHAPTER_THREE,PM,Risk Mitigation,4,4,Maintains awareness and visibility of the risks to the client and team throughout the course of the project
+CHAPTER_THREE,PM,Risk Mitigation,5,1,"Expertly conducts all stages of risk mitigation—including planning, identification, analysis, and response"
+CHAPTER_THREE,PM,Risk Mitigation,5,2,Drives and leads creative actions to enhance opportunities and reduce threats to project objectives
+CHAPTER_THREE,PM,Risk Mitigation,5,3,Proactively handles project risks by identifying potential complications and conflicts and creating/implementing timely mitigation strategies
+CHAPTER_THREE,PM,Risk Mitigation,5,4,"Clearly articulates the risks to the client, including their negative impact on the company’s overall business"
+CHAPTER_FOUR,PM,Information,1,1,"Actively listens to and understands stakeholders' needs, interests, and influences in order to achieve project success"
+CHAPTER_FOUR,PM,Information,1,2,Develops and adapts communication strategies with guidance
+CHAPTER_FOUR,PM,Information,1,3,Provides accurate and factual information
+CHAPTER_FOUR,PM,Information,2,1,Effectively summarizes key points and issues in a clear and concise manner
+CHAPTER_FOUR,PM,Information,2,2,Matches level of information to stakeholder
+CHAPTER_FOUR,PM,Information,2,3,"Develops and maintains project tracking, dashboards, and information systems"
+CHAPTER_FOUR,PM,Information,2,4,"Undertakes analysis, evaluation of options (as appropriate), and takes/recommends actions"
+CHAPTER_FOUR,PM,Information,3,1,Engages with stakeholders proactively
+CHAPTER_FOUR,PM,Information,3,2,"Establishes regular interaction with stakeholders, including formal and informal channels"
+CHAPTER_FOUR,PM,Information,3,3,Disseminates information via appropriate communication methods
+CHAPTER_FOUR,PM,Information,3,4,Appropriately matches level of formality to meetings and audience
+CHAPTER_FOUR,PM,Information,3,5,Regularly conducts follow-up with stakeholders
+CHAPTER_FOUR,PM,Information,3,6,Proactively responds to issues and concerns
+CHAPTER_FOUR,PM,Information,3,7,Seeks validation of information
+CHAPTER_FOUR,PM,Information,4,1,"Engages with team members in developing reports, analyzing issues and options, and evaluating progress"
+CHAPTER_FOUR,PM,Information,4,2,Balances speed of provision of information against reliability of information
+CHAPTER_FOUR,PM,Information,4,3,"Provides feedback on templates and guidelines, including examples and methods based on experiences and lessons learned"
+CHAPTER_FOUR,PM,Information,5,1,"Evaluates, develops, and executes responses to provide an appropriate level of information to stakeholders and maintain their engagement throughout project life cycle"
+CHAPTER_FOUR,PM,Information,5,2,Builds processes and structures to ensure the transfer of information that influences strategic decisions and produces foundations for new capabilities
+CHAPTER_FOUR,PM,Information,5,3,Continually seeks new information to assess the effectiveness of the project strategy
