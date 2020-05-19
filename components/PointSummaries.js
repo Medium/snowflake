@@ -126,6 +126,15 @@ class PointSummaries extends React.Component<Props> {
     improvePoints = (nextPoints - gradedPoints > 0) ? nextPoints - gradedPoints : 0
     improveSkills = (nextSkills - gradedSkills > 0) ? nextSkills - gradedSkills : 0
 
+    let gradedClass = "graded-equal"
+    if (gradedLevel < currentLevel) {
+      gradedClass = 'graded-low'
+    }
+    if (gradedLevel > currentLevel) {
+      gradedClass = 'graded-high'
+    }
+
+
     //['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     const blocks = [
       {
@@ -173,13 +182,15 @@ class PointSummaries extends React.Component<Props> {
           .right-footer {
             float: right;
             font-weight: bold;
+            margin-top: 8px;
+            text-align: right;
           }
           .left-footer h2 {
             margin: 0;
             margin-bottom: 10px;
           }
           .points-status {
-            color: #9fc855;
+            color: #6f9833;
             font-weight: bold;
           }
           .skills-status {
@@ -187,11 +198,11 @@ class PointSummaries extends React.Component<Props> {
             font-weight: bold;
           }
           .points-span {
-            font-size: 11px;
+            font-size: 13px;
             margin-left: 48px;
           }
           .skills-span {
-            font-size: 11px;
+            font-size: 13px;
             margin-left: 31px;
           }         
           table {
@@ -235,11 +246,19 @@ class PointSummaries extends React.Component<Props> {
           .skills-empty {
             background-color: #fb6500;
             opacity: 0.15;
+          }
+          .graded-equal {}
+          .graded-high {
+            color: #393;
           }           
+          .graded-low {
+            color: #f63;
+          }             
         `}</style>
 
         <div className="right-footer">
-          Current level: {currentLevel}
+          <p>Current level: {currentLevel}</p>
+          <p className={gradedClass}>Graded level: {gradedLevel}</p>
         </div>
 
         <div className="left-footer">
@@ -258,7 +277,7 @@ class PointSummaries extends React.Component<Props> {
           </tr>
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
-              var classname = (level < currentLevel) ? "total-full" : "total-empty"
+              var classname = (level < gradedLevel) ? "total-full" : "total-empty"
               return (
                 <td className={classname}> </td>
               )}

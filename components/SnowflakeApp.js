@@ -10,6 +10,7 @@ import { eligibleTitles, trackIds, milestones, milestoneToPoints, cohorts } from
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
+import CurrentLevel from '../components/CurrentLevel'
 import CohortSelector from '../components/CohortSelector'
 import TitleSelector from '../components/TitleSelector'
 import LevelSelector from '../components/LevelSelector'
@@ -72,7 +73,7 @@ const emptyState = (): SnowflakeAppState => {
       'MENTORSHIP': 0,
     },
     focusedTrackId: 'CHAPTER_ONE',
-    version: "1.0.2"
+    version: "1.0.3"
   }
 }
 
@@ -204,6 +205,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
+            <CurrentLevel
+              milestoneByTrack={this.state.milestoneByTrack}
+              level = {this.state.level} />
             <TrackSelector
               milestoneByTrack={this.state.milestoneByTrack}
               focusedTrackId={this.state.focusedTrackId}
