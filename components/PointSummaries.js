@@ -29,6 +29,8 @@ class PointSummaries extends React.Component<Props> {
     let allowedTier = 1
     let allowedPointsLevel = 3
     let allowedSkillsLevel = 3
+    let currentSkillTier = Math.ceil(allowedSkillsLevel / 3)
+    let currentPointsTier = Math.ceil(allowedPointsLevel / 3)
     let nextLevel = 2
     let nextTier = 1
     let nextTotal =	10
@@ -37,6 +39,8 @@ class PointSummaries extends React.Component<Props> {
     let improveTotal = 10
     let improvePoints = 0
     let improveSkills = 0
+    let targetPoints = 0
+    let targetSkills = 0
     let color = '#a7d1bc'
 
     // Set the graded level and tier.
@@ -75,6 +79,13 @@ class PointSummaries extends React.Component<Props> {
     allowedTier = Math.ceil(allowedLevel / 3)
     gradedLevel = allowedLevel
     gradedTier = allowedTier
+    // Set current tiers
+    currentPointsTier = Math.ceil(allowedPointsLevel / 3)
+    currentSkillTier = Math.ceil(allowedSkillsLevel / 3)
+    let nextPointsTier = currentPointsTier + 1
+    let nextSkillTier = currentSkillTier + 1
+    let targetPointsLevel = nextPointsTier * 3
+    let targetSkillLevel = nextSkillTier * 3
 
     // Set the next level milestone.
     if (currentLevel > allowedLevel) {
@@ -98,10 +109,16 @@ class PointSummaries extends React.Component<Props> {
       if (nextLevel >= parseInt(points[1])) {
         nextPoints = parseInt(points[0])
       }
+      if (targetPointsLevel >= parseInt(points[1])) {
+        targetPoints = parseInt(points[0])
+      }
     })
     Object.entries(skillsGate).map((points) => {
       if (nextLevel >= parseInt(points[1])) {
         nextSkills = parseInt(points[0])
+      }
+      if (targetSkillLevel >= parseInt(points[1])) {
+        targetSkills = parseInt(points[0])
       }
     })
     // Set the points for improvement.
@@ -144,93 +161,108 @@ class PointSummaries extends React.Component<Props> {
         total: nextTotal + ' +',
       },
     ]
-
+    // ['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     return (
-      <table>
+      <div className="footer">
         <style jsx>{`
-          table {
-            border-spacing: 1px;
-            margin-bottom: 20px;
-            margin-left: -3px;
+          .footer {
             margin-top: 20px;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
           }
-          .point-summary-label {
-            font-size: 12px;
-            text-align: center;
-            font-weight: normal;
-            width: 100px;
-            height: 24px;
+          .right-footer {
+            float: right;
+          }
+          .left-footer h2 {
+            margin: 0;
+            margin-bottom: 10px;
+          }
+          .points-status {
+            color: #9fc855;
             font-weight: bold;
-            background-color: #ccc;
           }
-          .point-summary-status {
-            font-size: 12px;
-            text-align: center;
-            font-weight: normal;
-            width: 100px;
-            height: 24px;
+          .skills-status {
+            color: #fb6500;
+            font-weight: bold;
+          }
+          .points-span {
+            font-size: 11px;
+            margin-left: 48px;
+          }
+          .skills-span {
+            font-size: 11px;
+            margin-left: 32px;
           }          
-          .point-summary-value {
-            width: 100px;
-            background: #eee;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 24px;
-            border-radius: 2px;
-            text-align: center;
-          }
         `}</style>
-        <tbody>
-          <tr>
-              <th></th>
-          {blocks.map(({label}, i) => (
-            <th key={i} className="point-summary-label">
-              {label}
-            </th>
-          ))}
-          </tr>
-          <tr>
-              <td className="point-summary-label">Level</td>
-            {blocks.map(({level}, i) => (
-                <td key={i} className="point-summary-value">
-                  {level}
-                </td>
-            ))}
-          </tr>
-          <tr>
-              <td className="point-summary-label">Tier</td>
-              {blocks.map(({tier}, i) => (
-                  <td key={i} className="point-summary-value">
-                      {tier}
-                  </td>
-              ))}
-          </tr>
-          <tr>
-              <td className="point-summary-label">Core Skills</td>
-              {blocks.map(({core}, i) => (
-                  <td key={i} className="point-summary-value">
-                      {core}
-                  </td>
-              ))}
-          </tr>
-          <tr>
-              <td className="point-summary-label">T-Skills</td>
-              {blocks.map(({tscore}, i) => (
-                  <td key={i} className="point-summary-value">
-                      {tscore}
-                  </td>
-              ))}
-          </tr>
-          <tr>
-              <td className="point-summary-label">Total</td>
-              {blocks.map(({total}, i) => (
-                  <td key={i} className="point-summary-value" style={{"backgroundColor": color}}>
-                      {total}
-                  </td>
-              ))}
-          </tr>
-        </tbody>
-      </table>
+
+        <div className="right-footer">
+          Current level: {currentLevel}
+        </div>
+
+        <div className="left-footer">
+          <h2>Career Progression</h2>
+          <p className="points-status">{targetPoints - gradedPoints} Core points required to next tier
+            <span className="points-span"> {gradedPoints} of {targetPoints} Core points</span> </p>
+          <p className="skills-status">{targetSkills - gradedSkills} T-skills points required to next tier
+            <span className="skills-span"> {gradedSkills} of {targetSkills} T-skills points</span> </p>
+        </div>
+
+
+<table>
+  <tbody>
+  <tr>
+    <th></th>
+    {blocks.map(({label}, i) => (
+      <th key={i} className="point-summary-label">
+        {label}
+      </th>
+    ))}
+  </tr>
+  <tr>
+    <td className="point-summary-label">Level</td>
+    {blocks.map(({level}, i) => (
+      <td key={i} className="point-summary-value">
+        {level}
+      </td>
+    ))}
+  </tr>
+  <tr>
+    <td className="point-summary-label">Tier</td>
+    {blocks.map(({tier}, i) => (
+      <td key={i} className="point-summary-value">
+        {tier}
+      </td>
+    ))}
+  </tr>
+  <tr>
+    <td className="point-summary-label">Core Skills</td>
+    {blocks.map(({core}, i) => (
+      <td key={i} className="point-summary-value">
+        {core}
+      </td>
+    ))}
+  </tr>
+  <tr>
+    <td className="point-summary-label">T-Skills</td>
+    {blocks.map(({tscore}, i) => (
+      <td key={i} className="point-summary-value">
+        {tscore}
+      </td>
+    ))}
+  </tr>
+  <tr>
+    <td className="point-summary-label">Total</td>
+    {blocks.map(({total}, i) => (
+      <td key={i} className="point-summary-value" style={{"backgroundColor": color}}>
+        {total}
+      </td>
+    ))}
+  </tr>
+  </tbody>
+</table>
+
+
+      </div>
     )
   }
 }
