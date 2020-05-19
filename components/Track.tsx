@@ -15,10 +15,10 @@ class Track extends React.Component<Props> {
     
     const currentMilestoneId = this.props.milestoneByTrack.get(this.props.track)
     const currentMilestone = trackDefinition.milestones[currentMilestoneId];
-    const displayName = (trackDefinition && trackDefinition.displayName) || Track[trackDefinition.track];
-    const description = trackDefinition.description || "";
     const trackId = this.props.track;
     const track = Tracks[trackId];
+    const displayName = (trackDefinition && trackDefinition.displayName) || track;
+    const description = trackDefinition.description || "";
     return (
       <div className="track">
         <style jsx>{`
@@ -75,13 +75,13 @@ class Track extends React.Component<Props> {
               <h3>{currentMilestone.summary}</h3>
               <h4>Example behaviors:</h4>
               <ul>
-                {currentMilestone.signals && currentMilestone.signals.map((signal, i) => (
+                {currentMilestone.exampleBehaviors && currentMilestone.exampleBehaviors.map((signal, i) => (
                   <li key={i}>{signal}</li>
                 ))}
               </ul>
-              <h4>Example tasks:</h4>
+              <h4>Example responsibilities:</h4>
               <ul>
-                {currentMilestone.examples && currentMilestone.examples.map((example, i) => (
+                {currentMilestone.exampleResponsibilities && currentMilestone.exampleResponsibilities.map((example, i) => (
                   <li key={i}>{example}</li>
                 ))}
               </ul>

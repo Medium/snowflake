@@ -10,6 +10,6 @@ export class TrackDefinition {
 
 export class MilestoneDefinition {
   public readonly summary: string;
-  public readonly signals: string[];
-  public readonly examples: string[];    
+  public readonly exampleBehaviors: string[];
+  public readonly exampleResponsibilities: string[];    
 }
