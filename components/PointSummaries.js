@@ -199,6 +199,7 @@ class PointSummaries extends React.Component<Props> {
             border-spacing: 0;
             text-align: center;
             width: 100%;
+            border: 1px solid #999;
           }
           td {
             height: 32px;
@@ -206,21 +207,30 @@ class PointSummaries extends React.Component<Props> {
           .level-label {
             width: 6.6666666%;
             background-color: #ccc;
-            border: 1px solid #999;
+            border-right: 1px solid #999;
+            border-bottom: 1px solid #999;
           }
           .tier-label {
             background-color: #ccc;
-            border: 1px solid #999;
+            border-right: 1px solid #999;
+            border-top: 1px solid #999;
           }          
+          .total-full{
+            background-color: #a7d1bc;
+          } 
+          .total-empty{
+            background-color: #a7d1bc;
+            opacity: 0.15;
+          } 
           .points-full{
             background-color: #9fc855;
-          } 
-          .skills-full {
-            background-color: #fb6500;
           } 
           .points-empty{
             background-color: #9fc855;
             opacity: 0.15;
+          } 
+          .skills-full {
+            background-color: #fb6500;
           } 
           .skills-empty {
             background-color: #fb6500;
@@ -248,7 +258,15 @@ class PointSummaries extends React.Component<Props> {
           </tr>
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
-                var classname = (level <= allowedPointsLevel) ? "points-full" : "points-empty"
+              var classname = (level < currentLevel) ? "total-full" : "total-empty"
+              return (
+                <td className={classname}> </td>
+              )}
+            )}
+          </tr>
+          <tr>
+            {Object.entries(pointsToLevels).map((points, level) => {
+                var classname = (level < allowedPointsLevel) ? "points-full" : "points-empty"
                 return (
                   <td className={classname}> </td>
                 )}
@@ -256,7 +274,7 @@ class PointSummaries extends React.Component<Props> {
           </tr>
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
-              var classname = (level <= allowedSkillsLevel) ? "skills-full" : "skills-empty"
+              var classname = (level < allowedSkillsLevel) ? "skills-full" : "skills-empty"
               return (
                 <td className={classname}> </td>
               )}
