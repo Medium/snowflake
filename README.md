@@ -61,11 +61,11 @@ For the revised layout, we want the following:
 
 ```
 -----------------------------------------------------------
-|   NameEntry.js • CohortSelector.js • LevelSelector.js   |
+| SnowflakeApp.js • CohortSelector.js • LevelSelector.js  |
 -----------------------------------------------------------
-|   LevelSummary.js         |   Track.js                  |
-|   TrackSelector.js        |                             |
+|   CurrentLevel.js         |   Track.js                  |
 |                           |                             |
+|   TrackSelector.js        |                             |
 |                           |                             |
 |                           |                             |
 -----------------------------------------------------------
