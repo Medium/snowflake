@@ -247,6 +247,13 @@ class PointSummaries extends React.Component<Props> {
             background-color: #fb6500;
             opacity: 0.15;
           }
+          .current-full {
+            background-color: #11a9a1;
+          } 
+          .current-empty {
+            background-color: #11a9a1;
+            opacity: 0.15;
+          }          
           .graded-equal {}
           .graded-high {
             color: #393;
@@ -270,11 +277,22 @@ class PointSummaries extends React.Component<Props> {
         </div>
 
         <table>
+          {/* Level numbers */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) =>
               <td className="level-label">{level + 1}</td>
             )}
           </tr>
+          {/* Current Level */}
+          <tr>
+            {Object.entries(pointsToLevels).map((points, level) => {
+              var classname = (level < currentLevel) ? "current-full" : "current-empty"
+              return (
+                <td className={classname}> </td>
+              )}
+            )}
+          </tr>
+          {/* Graded Level */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
               var classname = (level < gradedLevel) ? "total-full" : "total-empty"
@@ -283,6 +301,7 @@ class PointSummaries extends React.Component<Props> {
               )}
             )}
           </tr>
+          {/* Core tier */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
                 var classname = (level < allowedPointsLevel) ? "points-full" : "points-empty"
@@ -291,6 +310,7 @@ class PointSummaries extends React.Component<Props> {
                 )}
             )}
           </tr>
+          {/* T-skills tier */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
               var classname = (level < allowedSkillsLevel) ? "skills-full" : "skills-empty"
@@ -299,6 +319,7 @@ class PointSummaries extends React.Component<Props> {
               )}
             )}
           </tr>
+          {/* Tier numbers */}
           <tr>
             {[1,2,3,4,5].map((tier) =>
               <td className="tier-label" colSpan="3">{tier}</td>
