@@ -172,72 +172,97 @@ class PointSummaries extends React.Component<Props> {
     ]
     // ['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     return (
-      <div className="footer">
+      <div className="career-summary">
         <style jsx>{`
-          .footer {
-            margin-top: 20px;
-            border-top: 2px solid #ccc;
-            padding-top: 20px;
+          .career-summary__header {
+            display: flex;
           }
-          .right-footer {
-            float: right;
+          .career-summary__header-block {
+            margin: 1em 0;
+          }
+          .career-summary__key {
+            margin-top: 2em;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .career-summary__key-heading {
+            font-size: 12px;
+            display: block;
+            width: 100%;
+            margin: 0 0 8px;
+          }
+          .key {
+            padding: 5px 8px;
+            margin-right: 10px;
             font-weight: bold;
-            margin-top: 8px;
-            text-align: right;
           }
-          .left-footer h2 {
-            margin: 0;
-            margin-bottom: 10px;
+          .key__meta {
+            font-weight: normal;
+            font-size: 14px;
+            font-style: italic;
+            display: block;
           }
-          .points-status {
-            color: #6f9833;
-            font-weight: bold;
+          .key--current {
+            background-color: #7DA12F;
           }
-          .skills-status {
-            color: #fb6500;
-            font-weight: bold;
+          .key--graded {
+            background-color: #5E7B21;
           }
-          .points-span {
-            font-size: 13px;
-            margin-left: 48px;
+          .key--core {
+            background-color: #11a9a1;
           }
-          .skills-span {
-            font-size: 13px;
-            margin-left: 31px;
-          }         
+          .key--skills {
+            background-color: #fb6500;
+          }
           table {
             margin: 0;
             border-spacing: 0;
             text-align: center;
             width: 100%;
-            border: 1px solid #999;
+            border: 1px solid #4c5b67;
           }
           td {
-            height: 32px;
+            height: 30px;
           }
+          
+          td:nth-of-type(3n+1) {
+            border-left: 3px solid #4c5b67;
+          }
+          
+          td:not(:nth-of-type(3n+1)) {
+            border-left: 1px dotted #4c5b67;
+          }
+          
           .level-label {
             width: 6.6666666%;
-            background-color: #ccc;
-            border-right: 1px solid #999;
-            border-bottom: 1px solid #999;
+            background-color: transparent;
+            border-right: 1px solid #4c5b67;
+            border-bottom: 1px solid #4c5b67;
           }
           .tier-label {
-            background-color: #ccc;
-            border-right: 1px solid #999;
-            border-top: 1px solid #999;
-          }          
-          .total-full{
-            background-color: #a7d1bc;
+            background-color: transparent;
+            border-right: 1px solid #4c5b67;
+            border-top: 1px solid #4c5b67;
+          }
+          .current-full {
+            background-color: #7DA12F;
           } 
-          .total-empty{
-            background-color: #a7d1bc;
+          .current-empty {
+            background-color: #7DA12F;
+            opacity: 0.15;
+          }          
+          .graded-full{
+            background-color: #5E7B21;
+          } 
+          .graded-empty{
+            background-color: #5E7B21;
             opacity: 0.15;
           } 
-          .points-full{
-            background-color: #9fc855;
+          .core-full{
+            background-color: #11a9a1;
           } 
-          .points-empty{
-            background-color: #9fc855;
+          .core-empty{
+            background-color: #11a9a1;
             opacity: 0.15;
           } 
           .skills-full {
@@ -246,35 +271,27 @@ class PointSummaries extends React.Component<Props> {
           .skills-empty {
             background-color: #fb6500;
             opacity: 0.15;
-          }
-          .current-full {
-            background-color: #11a9a1;
-          } 
-          .current-empty {
-            background-color: #11a9a1;
-            opacity: 0.15;
-          }          
-          .graded-equal {}
-          .graded-high {
-            color: #393;
-          }           
-          .graded-low {
-            color: #f63;
+          }        
+          .graded-high::after {
+            font-size: 14px;
+            content:'Your grade is higher than your level.';
+            display: block;
+            font-style: italic;
+            font-weight: normal;
+          }      
+               
+          .graded-low::after {
+            font-size: 14px;
+            content:'Your grade is lower than your level.';
+            display: block;
+            font-style: italic;
+            font-weight: normal;
           }             
         `}</style>
 
-        <div className="right-footer">
-          <p>Current level: {currentLevel}</p>
-          <p className={gradedClass}>Graded level: {gradedLevel}</p>
-        </div>
-
-        <div className="left-footer">
+        <header className="career-summary__header">
           <h2>Career Progression</h2>
-          <p className="points-status">{targetPoints - gradedPoints} Core points required to next tier
-            <span className="points-span"> {gradedPoints} of {targetPoints} Core points</span> </p>
-          <p className="skills-status">{targetSkills - gradedSkills} T-skills points required to next tier
-            <span className="skills-span"> {gradedSkills} of {targetSkills} T-skills points</span> </p>
-        </div>
+        </header>
 
         <table>
           {/* Level numbers */}
@@ -295,7 +312,7 @@ class PointSummaries extends React.Component<Props> {
           {/* Graded Level */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
-              var classname = (level < gradedLevel) ? "total-full" : "total-empty"
+              var classname = (level < gradedLevel) ? "graded-full" : "graded-empty"
               return (
                 <td className={classname}> </td>
               )}
@@ -304,7 +321,7 @@ class PointSummaries extends React.Component<Props> {
           {/* Core tier */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) => {
-                var classname = (level < allowedPointsLevel) ? "points-full" : "points-empty"
+                var classname = (level < allowedPointsLevel) ? "core-full" : "core-empty"
                 return (
                   <td className={classname}> </td>
                 )}
@@ -326,8 +343,21 @@ class PointSummaries extends React.Component<Props> {
             )}
           </tr>
         </table>
-
-
+        
+        <div className="career-summary__key">
+          <h3 className="career-summary__key-heading">KEY</h3>
+          <div className="key key--current">Current level: {currentLevel}</div>
+          <div className="key key--graded"><span className={gradedClass}>Graded level: {gradedLevel}</span></div>
+          
+          <div className="key key--core">
+            {targetPoints - gradedPoints} Core points required to next tier
+            <span className="key__meta"> {gradedPoints} of {targetPoints} Core points</span>
+          </div>
+          <div className="key key--skills">
+            {targetSkills - gradedSkills} T-skills points required to next tier
+            <span className="key__meta"> {gradedSkills} of {targetSkills} T-skills points</span> 
+          </div>
+        </div>
       </div>
     )
   }

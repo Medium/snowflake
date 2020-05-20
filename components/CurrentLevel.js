@@ -52,49 +52,50 @@ class CurrentLevel extends React.Component<Props> {
         <style jsx>{`
           .chart {
             margin-top: 0px;
-            padding-left: 20px;
           }
           .summary {
+            display: block;
             text-align: center;
-            width: 360px;
-            margin-bottom: -20px;
             font-weight: bold;
-          }         
+          }
+          .summary__meta {
+            display: block;
+            text-align: center;
+          }     
           table {
-            margin: 0;
+            margin: 8px 0 0;
             border-spacing: 0;
-            width: 360px;
+            width: 100%;
+          }
+          tr:first-child td {
+            height: 0;
           }
           td {
-            height: 32px;
+            height: 20px;
           }
           .current-level {
+            font-size: 12px;
             text-align: left;
             padding-left: 8px;
             border-left: 1px solid #ccc;
           }
           .next-level {
+            font-size: 12px;
             text-align: right;
             padding-right: 8px;
             border-right: 1px solid #ccc;
           }          
           .total-full{
-            background-color: #a7d1bc;
+            background-color: #4c5b67;
             border-left: 1px solid #ccc;
           } 
           .total-empty{
-            background-color: #f1f7f4;
+            background-color: #E1E9EF;
             border-right: 1px solid #ccc;
-          }    
-          .graded-equal {}
-          .graded-high {
-            color: #393;
-          }           
-          .graded-low {
-            color: #f63;
-          }                  
+          }                     
         `}</style>
-        <p className="summary"><span className={gradedClass}>Graded level: {gradedLevel}</span><br /> {nextTotal - gradedTotal} overall points to next level</p>
+        <span className="summary">Graded level: {gradedLevel}</span>
+        <span className="summary__meta">{nextTotal - gradedTotal} overall points to next level</span>
         <table>
           <tr>
             <td className="levels"> </td>

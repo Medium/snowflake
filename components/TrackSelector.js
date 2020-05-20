@@ -23,19 +23,27 @@ class TrackSelector extends React.Component<Props> {
       <div className="bounding-table">
         <style jsx>{`
           .bounding-table {
-            width: 440px;
-            padding: 20px;
-            margin-right: 40px;
+            width: 100%;
+          }
+          .section {
+            margin-top: 2.5em;
+          }
+          .section__title {
+            margin-bottom: 5px;
+          }
+          .section p {
+            margin-top: 0;
           }
           table {
             width: 360px;
             margin-bottom: 20px;
+            table-layout: fixed;
           }
           .track-selector-value {
-            line-height: 62px;
-            width: 62px;
+            height: 50px;
             text-align: center;
             background: #eee;
+            color: #000;
             font-weight: bold;
             font-size: 24px;
             border-radius: 3px;
@@ -44,24 +52,12 @@ class TrackSelector extends React.Component<Props> {
           .track-selector-label {
             text-align: center;
             font-size: 10px;
-          }
-          .primary-skills {
-            text-align: center;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 4px;
-            background-color: #9fc855;
-          }
-          .t-skills {
-            text-align: center;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 4px;
-            background-color: #a7d1bc;
           }          
         `}</style>
-        <h2>Core Skills</h2>
-        <p>This is information about core skills.</p>
+        <header className="section">
+          <h2 className="section__title">Core Skills</h2>
+          <p>This is information about core skills.</p>
+        </header>
         <table>
           <tbody>
             <tr>
@@ -82,10 +78,12 @@ class TrackSelector extends React.Component<Props> {
             </tr>
           </tbody>
         </table>
-
-        <h2>T-Shaped Skills</h2>
-        <p>This is information about t-shaped skills.</p>
-
+        
+        <header className="section">
+          <h2 className="section__title">T-Shaped Skills</h2>
+          <p>This is information about t-shaped skills.</p>
+        </header>
+        
         <table>
           <th colSpan="3"><h3>Delivering</h3></th>
           <tbody>
