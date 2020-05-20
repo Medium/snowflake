@@ -1,6 +1,6 @@
 // @flow
 
-import { tracks, milestones, categoryColorScale, trackMap } from '../constants'
+import { tracks, milestones, milestoneToPoints, categoryColorScale, trackMap } from '../constants'
 import React from 'react'
 import type { MilestoneMap, TrackId, Milestone } from '../constants'
 
@@ -18,6 +18,9 @@ class Track extends React.Component<Props> {
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
     const currentMilestone = track.milestones[currentMilestoneId - 1]
     const nextMilestone = track.milestones[currentMilestoneId]
+
+    let pointsVal = milestoneToPoints(currentMilestoneId, this.props.trackId)
+
     return (
       <div className="track">
         <style jsx>{`
@@ -50,9 +53,6 @@ class Track extends React.Component<Props> {
           ul {
             line-height: 1.5em;
           }
-          h4 {
-            margin-left: 10px;
-          }
           .current-level {
             padding-bottom: 10px;
           }          
@@ -60,6 +60,10 @@ class Track extends React.Component<Props> {
             border-top: 2px solid #eee;
             background-color: #eee;
             padding-bottom: 10px;
+          }
+          .point-value {
+            font-style: italic;
+            font-size: 12px;
           }
         `}</style>
         <h2>{track.displayName}</h2>
@@ -81,6 +85,8 @@ class Track extends React.Component<Props> {
               </tr>
             </tbody>
           </table>
+          <p className="point-value">Worth {pointsVal} points</p>
+
           {currentMilestone ? (
             <div className="current-level">
 
