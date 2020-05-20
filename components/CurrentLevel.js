@@ -37,6 +37,13 @@ class CurrentLevel extends React.Component<Props> {
       }
     })
 
+    let gradedClass = "graded-equal"
+    if (gradedLevel < currentLevel) {
+      gradedClass = 'graded-low'
+    }
+    if (gradedLevel > currentLevel) {
+      gradedClass = 'graded-high'
+    }
     let roughCols = Math.floor((nextTotal - gradedTotal) / 10)
 
     // ['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
@@ -78,9 +85,16 @@ class CurrentLevel extends React.Component<Props> {
           .total-empty{
             background-color: #f1f7f4;
             border-right: 1px solid #ccc;
-          }       
+          }    
+          .graded-equal {}
+          .graded-high {
+            color: #393;
+          }           
+          .graded-low {
+            color: #f63;
+          }                  
         `}</style>
-        <p className="summary">{nextTotal - gradedTotal} overall points to next level</p>
+        <p className="summary"><span className={gradedClass}>Graded level: {gradedLevel}</span><br /> {nextTotal - gradedTotal} overall points to next level</p>
         <table>
           <tr>
             <td className="levels"> </td>
