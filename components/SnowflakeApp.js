@@ -213,11 +213,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             flex-wrap: nowrap;
           }
           .panel {
-            padding: 2em 0;
+            padding: 2em;
           }
           .panel:first-of-type {
             margin-right: 2em;
-            padding-right: 2em;
+            padding-right: 4em;
             border-right: 1px solid #E1E9EF;
           }
           .career-summary-wrapper {

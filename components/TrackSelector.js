@@ -30,12 +30,19 @@ class TrackSelector extends React.Component<Props> {
           .section__title {
             margin-bottom: 5px;
           }
+          .section__subtitle {
+            text-align: left;
+            padding-bottom: 5px;
+            margin-top: .5em;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted #E1E9EF;
+          }
           .section p {
             margin-top: 0;
           }
           table {
             width: 360px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             table-layout: fixed;
           }
           .track-selector-value {
@@ -71,7 +78,7 @@ class TrackSelector extends React.Component<Props> {
                 <td key={trackId} className="track-selector-value"
                     style={{border: '4px solid ' + (trackId == this.props.focusedTrackId ? '#000': categoryColorScale(trackList[trackId].category)), background: categoryColorScale(trackList[trackId].category)}}
                     onClick={() => this.props.setFocusedTrackIdFn(trackId)}>
-                  {this.props.milestoneByTrack[trackId]}
+                  {this.props.milestoneByTrack[trackId]}                  
                 </td>
               ))}
             </tr>
@@ -85,7 +92,7 @@ class TrackSelector extends React.Component<Props> {
 
         <table>
           <thead><tr>
-          <th colSpan="3"><h3>Delivering</h3></th>
+          <th colSpan="3"><h3 className="section__subtitle">Delivering</h3></th>
           </tr></thead>
           <tbody>
           <tr>
@@ -109,7 +116,7 @@ class TrackSelector extends React.Component<Props> {
 
         <table>
           <thead><tr>
-          <th colSpan="3"><h3>Strengthening</h3></th>
+          <th colSpan="3"><h3 className="section__subtitle">Strengthening</h3></th>
           </tr></thead>
           <tbody>
           <tr>
@@ -133,7 +140,7 @@ class TrackSelector extends React.Component<Props> {
 
         <table>
           <thead><tr>
-          <th colSpan="3"><h3>Supporting</h3></th>
+          <th colSpan="3"><h3 className="section__subtitle">Supporting</h3></th>
           </tr></thead>
           <tbody>
           <tr>

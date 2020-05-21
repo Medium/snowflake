@@ -24,69 +24,78 @@ class Track extends React.Component<Props> {
     return (
       <div className="track">
         <style jsx>{`
-          div.track {
-            margin: 20px 0 0 0;
-            padding: 20px;
-            width: 100%;
+          .track__header {
+            padding: 1em 0 .25em;
           }
-          h2 {
-            margin: 0 0 10px 0;
-          }
-          p.track-description {
+          .track__title {
             margin-top: 0;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ccc;
+            margin-bottom: 5px;
+          }
+          .track__description {
+            margin-top: 10px;
+            margin-bottom: 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #E1E9EF;
           }
           table {
+            color: #000;
             border-spacing: 3px;
+            margin-top: -4px;
+            margin-left: -4px;
           }
           td {
-            line-height: 50px;
-            width: 50px;
+            line-height: 30px;
+            width: 30px;
             text-align: center;
             background: #eee;
             font-weight: bold;
-            font-size: 24px;
-            border-radius: 3px;
+            font-size: 16px;
+            border-radius: 0px 0px 3px 3px;
             cursor: pointer;
           }
           ul {
             line-height: 1.5em;
+            padding-left: 1.25em;
           }
           .current-level {
-            padding-bottom: 10px;
+            margin-bottom: 2em;
           }          
           .next-level {
-            border-top: 2px solid #eee;
-            background-color: #eee;
-            padding-bottom: 10px;
+            font-size: .85em;
+            background-color: rgba(225, 233, 239, .5);
+            padding: .5em 1.5em;
+            border-radius: 5px;
+            margin-bottom: 2em;
           }
           .point-value {
             font-style: italic;
             font-size: 12px;
           }
         `}</style>
-        <h2>{track.displayName}</h2>
-        <p className="track-description">{track.description}</p>
-        <div>
-          <table style={{flex: 1}}>
-            <tbody>
-              <tr>
-              {milestones.slice(1).map((milestone) => {
-                const isMet = milestone <= currentMilestoneId
-                return (
+        <header className="track__header">
+          <h2 className="track__title">{track.displayName}</h2>
+          <p className="track__description">{track.description}</p>
+          <div>
+            <table style={{flex: 1}}>
+              <tbody>
+                <tr>
+                {milestones.slice(1).map((milestone) => {
+                  const isMet = milestone <= currentMilestoneId
+                  return (
 
-                    <td key={milestone} onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
-                      {milestone}
-                    </td>
-                )
-              })}
-              </tr>
-            </tbody>
-          </table>
-          <p className="point-value">Worth {pointsVal} points</p>
-
+                      <td key={milestone} onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
+                          style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                        {milestone}
+                      </td>
+                  )
+                })}
+                </tr>
+              </tbody>
+            </table>
+            <p className="point-value">Worth {pointsVal} points</p>
+          </div>
+        </header>
+        <div className="track__content">
           {currentMilestone ? (
             <div className="current-level">
 
