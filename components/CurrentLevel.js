@@ -44,7 +44,7 @@ class CurrentLevel extends React.Component<Props> {
     if (gradedLevel > currentLevel) {
       gradedClass = 'graded-high'
     }
-    let roughCols = Math.floor((nextTotal - gradedTotal) / 10)
+    let roughCols = Math.ceil((nextTotal - gradedTotal) / 10)
 
     // ['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     return (
@@ -92,11 +92,15 @@ class CurrentLevel extends React.Component<Props> {
           .total-empty{
             background-color: #E1E9EF;
             border-right: 1px solid #ccc;
-          }                     
+          }   
+          .levels {
+            width: 10%;
+          }                  
         `}</style>
         <span className="summary">Graded level: {gradedLevel}</span>
         <span className="summary__meta">{nextTotal - gradedTotal} overall points to next level</span>
         <table>
+          <tbody>
           <tr>
             <td className="levels"> </td>
             <td className="levels"> </td>
@@ -110,14 +114,15 @@ class CurrentLevel extends React.Component<Props> {
             <td className="levels"> </td>
           </tr>
           <tr>
-            <td className="total-full" colSpan={roughCols}> </td>
-            <td className="total-empty" colSpan={totalCols - roughCols}> </td>
+            <td className="total-full" colSpan={totalCols - roughCols}> </td>
+            <td className="total-empty" colSpan={roughCols}> </td>
           </tr>
           <tr>
             <td className="current-level">{gradedLevel}</td>
             <td className="levels" colSpan={totalCols - 2}> </td>
             <td className="next-level">{nextLevel}</td>
           </tr>
+        </tbody>
         </table>
       </div>
     )
