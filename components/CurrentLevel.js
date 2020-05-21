@@ -100,6 +100,7 @@ class CurrentLevel extends React.Component<Props> {
         <span className="summary">Graded level: {gradedLevel}</span>
         <span className="summary__meta">{nextTotal - gradedTotal} overall points to next level</span>
         <table>
+          <tbody>
           <tr>
             <td className="levels"> </td>
             <td className="levels"> </td>
@@ -121,6 +122,7 @@ class CurrentLevel extends React.Component<Props> {
             <td className="levels" colSpan={totalCols - 2}> </td>
             <td className="next-level">{nextLevel}</td>
           </tr>
+        </tbody>
         </table>
       </div>
     )

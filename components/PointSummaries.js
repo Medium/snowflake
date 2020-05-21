@@ -293,11 +293,11 @@ class PointSummaries extends React.Component<Props> {
           <h2>Career Progression</h2>
         </header>
 
-        <table>
+        <table><tbody>
           {/* Level numbers */}
           <tr>
             {Object.entries(pointsToLevels).map((points, level) =>
-              <td className="level-label">{level + 1}</td>
+              <td className="level-label" key={level}>{level + 1}</td>
             )}
           </tr>
           {/* Current Level */}
@@ -305,7 +305,7 @@ class PointSummaries extends React.Component<Props> {
             {Object.entries(pointsToLevels).map((points, level) => {
               var classname = (level < currentLevel) ? "current-full" : "current-empty"
               return (
-                <td className={classname}> </td>
+                <td className={classname} key={level}> </td>
               )}
             )}
           </tr>
@@ -314,7 +314,7 @@ class PointSummaries extends React.Component<Props> {
             {Object.entries(pointsToLevels).map((points, level) => {
               var classname = (level < gradedLevel) ? "graded-full" : "graded-empty"
               return (
-                <td className={classname}> </td>
+                <td className={classname} key={level}> </td>
               )}
             )}
           </tr>
@@ -323,7 +323,7 @@ class PointSummaries extends React.Component<Props> {
             {Object.entries(pointsToLevels).map((points, level) => {
                 var classname = (level < allowedPointsLevel) ? "core-full" : "core-empty"
                 return (
-                  <td className={classname}> </td>
+                  <td className={classname} key={level}> </td>
                 )}
             )}
           </tr>
@@ -332,30 +332,30 @@ class PointSummaries extends React.Component<Props> {
             {Object.entries(pointsToLevels).map((points, level) => {
               var classname = (level < allowedSkillsLevel) ? "skills-full" : "skills-empty"
               return (
-                <td className={classname}> </td>
+                <td className={classname} key={level}> </td>
               )}
             )}
           </tr>
           {/* Tier numbers */}
           <tr>
             {[1,2,3,4,5].map((tier) =>
-              <td className="tier-label" colSpan="3">{tier}</td>
+              <td className="tier-label" colSpan="3" key={tier}>{tier}</td>
             )}
           </tr>
-        </table>
-        
+        </tbody></table>
+
         <div className="career-summary__key">
           <h3 className="career-summary__key-heading">KEY</h3>
           <div className="key key--current">Current level: {currentLevel}</div>
           <div className="key key--graded"><span className={gradedClass}>Graded level: {gradedLevel}</span></div>
-          
+
           <div className="key key--core">
             {targetPoints - gradedPoints} Core points required to next tier
             <span className="key__meta"> {gradedPoints} of {targetPoints} Core points</span>
           </div>
           <div className="key key--skills">
             {targetSkills - gradedSkills} T-skills points required to next tier
-            <span className="key__meta"> {gradedSkills} of {targetSkills} T-skills points</span> 
+            <span className="key__meta"> {gradedSkills} of {targetSkills} T-skills points</span>
           </div>
         </div>
       </div>

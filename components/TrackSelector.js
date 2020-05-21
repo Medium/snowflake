@@ -84,7 +84,9 @@ class TrackSelector extends React.Component<Props> {
         </header>
 
         <table>
+          <thead><tr>
           <th colSpan="3"><h3>Delivering</h3></th>
+          </tr></thead>
           <tbody>
           <tr>
             {deliveringTrack.map(trackId => (
@@ -106,7 +108,9 @@ class TrackSelector extends React.Component<Props> {
         </table>
 
         <table>
-          <th colspan="3"><h3>Strengthening</h3></th>
+          <thead><tr>
+          <th colSpan="3"><h3>Strengthening</h3></th>
+          </tr></thead>
           <tbody>
           <tr>
             {strengtheningTrack.map(trackId => (
@@ -128,7 +132,9 @@ class TrackSelector extends React.Component<Props> {
         </table>
 
         <table>
+          <thead><tr>
           <th colSpan="3"><h3>Supporting</h3></th>
+          </tr></thead>
           <tbody>
           <tr>
             {supportingTrack.map(trackId => (
