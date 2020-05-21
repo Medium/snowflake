@@ -951,7 +951,7 @@ export const executingPointsFromMilestoneMap = (milestoneMap: MilestoneMap): num
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#11a9a1', '#FF944D', '#fb6500', '#C94C0D'])
+  .range(['#11a9a1', '#FFC59E', '#FF944D', '#fb6500'])
 
 export const cohorts = [
   {key: 'MANAGEMENT', label: 'Management'},
