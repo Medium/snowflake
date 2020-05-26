@@ -147,7 +147,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Editing the text on a page",
           "Fixing a simple bug, in any amount of time",
           "Reading documentation to learn more",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
@@ -155,32 +155,32 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Adding a new component from existing examples",
           "Fixing moderately complicated bugs",
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
           "Creating a new component from scratch, avoiding any anti-patterns",
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
-        ]
+        ],
       },
     ],
   },
@@ -196,7 +196,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Adding a field to a data model",
           "Fixing a simple bug, in any amount of time",
           "Reading documentation to learn more",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
@@ -204,33 +204,35 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Adding a new data adapter implementation from existing examples",
           "Fixing moderately complicated bugs",
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
           "Creating a new API endpoint from scratch, avoiding any anti-patterns",
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
-          "Creating a new service from scratch",
-        ]
+          "Creating a new service from scratch with specifications",
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-        ]
+          "",
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
-        ]
+          "Leading architecture for all backend systems",
+        ],
       },
     ],
   },
@@ -246,39 +248,45 @@ export const trackDefinitions: TrackDefinition[] = [
           "Making modifications to existing queries",
           "Fixing a simple bug, in any amount of time",
           "Reading documentation to learn more",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
         exampleBehaviors: technicalBehaviorsL1,
         exampleResponsibilities: [
           "Writing basic CRUD queries to retrieve and store data",
-          "Updating existing schema",
-        ]
+          "Updating existing schema with guidance",
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
-        ]
+          "Designing new tables with appropriate schema",
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
-        ]
+          "Maintaining table indexes",
+          "Optimizing data types for storage space and retrieval speed",
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-        ]
+          "Advanced performance tuning",
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
-        ]
+          "Choosing between database technologies",
+          "Designing a comprehensive data storage architecture from scratch",
+        ],
       },
     ],  },
   <TrackDefinition> {
@@ -293,37 +301,37 @@ export const trackDefinitions: TrackDefinition[] = [
           "Changing the text on a page",
           "Fixing a simple bug, in any amount of time",
           "Reading documentation to learn more",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
         exampleBehaviors: technicalBehaviorsL1,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL1,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
-        ]
+        ],
       },
     ],
   },
@@ -339,7 +347,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Running existing tests",
           "Modifying an existing test",
           "Finding critical and high severity bugs",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
@@ -347,7 +355,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Adding new tests from existing examples when updating a component",
           "Making a test plan for a dev story",
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
@@ -356,7 +364,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Creating new tests to catch obvious error paths",
           "Implementing and maintaining automated code coverage levels",
           "Making a test plan for a small epic",
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
@@ -364,7 +372,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Setting up complete functional test coverage for an entire project",
           "Mentoring other individuals in testing and QA practices",
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
@@ -372,14 +380,14 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Choosing between testing frameworks in any part of the stack",
           "Mentoring an entire team in effective testing practices",
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
           "Setting the team testing & QA process",
-        ]
+        ],
       },
     ],
   },
@@ -394,38 +402,38 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Running existing build pipelines from the instructions",
           "Reading documentation to learn more",
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
         exampleBehaviors: technicalBehaviorsL1,
         exampleResponsibilities: [
           "Debugging basic build errors",
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
-        ]
+        ],
       },
     ],
   },
@@ -447,7 +455,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Well-defined development stories",
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
@@ -457,7 +465,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Cross-boundary development stories",
           "Refactoring calls between the frontend and backend",
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
@@ -467,7 +475,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Ambiguous tech debt resolution",
           "Basic system design",
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
@@ -476,7 +484,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Advanced system design",
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
@@ -485,7 +493,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Overseeing application-wide architecture decisions",
-        ]
+        ],
       },
     ],
   },
@@ -606,7 +614,9 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 1
         summary: technicalSummaryL1,
         exampleBehaviors: [
+          "Generally shows up to meetings on time",
           "Keeps and maintains basic documentation",
+          "Does not routinely lose or misplace information",
         ],
       },
       { // 2
@@ -614,6 +624,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: [
           "Takes organized notes in meetings and discussions and references them later",
           "Keeps ordered bookmarks for everyday sites",
+          "Maintains a sensible file organization scheme for ",
         ],
       },
       { // 3
@@ -626,13 +637,15 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: [
-          ""
+          "Creates such effective documentation that it helps others stay organized",
+          "Maintains an extensive personal organizational scheme to find and reference",
         ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: [
-          "Organizes entire teams effectively",
+          "Organizes entire projects effectively",
+          "Serves as a role model for personal and professional organization",
         ],
       },
     ],
@@ -648,7 +661,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Still learning processes",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 1
         summary: technicalSummaryL1,
@@ -656,7 +669,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Reliably follows regular processes",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 2
         summary: technicalSummaryL2,
@@ -665,7 +678,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Notices when stand-up is going off track and speaks up",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 3
         summary: technicalSummaryL3,
@@ -673,7 +686,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Improves existing processes",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 4
         summary: technicalSummaryL4,
@@ -682,7 +695,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Creating and documenting a new process",
-        ]
+        ],
       },
       { // 5
         summary: technicalSummaryL5,
@@ -691,7 +704,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Designing an entire SDLC process from scratch",
-        ]
+        ],
       },
     ],
   },
@@ -711,36 +724,38 @@ export const trackDefinitions: TrackDefinition[] = [
         summary: "Basic communication",
         exampleBehaviors: [
           "Able to communicate effectively in everyday situations",
+          "May make spelling and grammar errors, but not severe enough to significantly impede understanding",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 2
         summary: "Resolving individual ambiguity",
         exampleBehaviors: [
           "Asks clarifying questions to resolve ambiguity",
-          "Explains and understands uncommonly complicated topics",
+          "Explains and understands complicated topics",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 3
         summary: "Facilitating communication between others",
         exampleBehaviors: [
-          "Stepping in to resolve a conflict",
+          "Stepping in to resolve conflict between others",
           "Rephrasing someone's point for greater clarity without making the original speaker feel upstaged",
         ],
         exampleResponsibilities: [
-        ]
+        ],
       },
       { // 4
         summary: "Targeted communication",
         exampleBehaviors: [
           "Adjusts communication style to audience",
+          "Identifies and corrects subtle but important miscommunications",
         ],
         exampleResponsibilities: [
-          "Explaining a technical topic to non-technical people",
-        ]
+          "Explaining a highly complicated technical topic to non-technical people",
+        ],
       },
       { // 5
         summary: "Advanced communication",
@@ -748,8 +763,9 @@ export const trackDefinitions: TrackDefinition[] = [
           "Speaks extemporaneously in high-pressure situations",
         ],
         exampleResponsibilities: [
+          "Create and present a workshop on effective documentation practices",
           "Give a presentation to executives or investors",
-        ]
+        ],
       },
     ],
   },
@@ -761,6 +777,7 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 0
         summary: "Professional issues",
         exampleBehaviors: [
+          "Excludes or singles out coworkers in workplace social interactions",
           "Makes inappropriate comments or jokes that make others feel uncomfortable",
           "Hygiene issues make it difficult for coworkers to be in close proximity",
         ],
@@ -785,8 +802,6 @@ export const trackDefinitions: TrackDefinition[] = [
           "Helps others who are struggling personally or professionally",
           "Shares articles or other resources to help the team become more inclusive",
         ],
-        exampleResponsibilities: [
-        ]
       },
       { // 4
         summary: "Moving culture forward",
@@ -794,8 +809,6 @@ export const trackDefinitions: TrackDefinition[] = [
           "Proactively ensures that team environments are safe and inclusive",
           "Tracks and improves team retention"
         ],
-        exampleResponsibilities: [
-        ]
       },
       { // 5
         summary: "Setting the standard",
@@ -804,8 +817,6 @@ export const trackDefinitions: TrackDefinition[] = [
           "Makes everyone feel heard and understood",
           "Organizes and leads trainings or workshops on interpersonal skills",
         ],
-        exampleResponsibilities: [
-        ]
       },
     ],
   },
@@ -815,42 +826,47 @@ export const trackDefinitions: TrackDefinition[] = [
     description: "Ability to help others resolve impediments and improve their skills",
     milestones: [
       { // 0
-        summary: "Difficulty sharing expertise with others",
+        summary: "Not applicable",
       },
       { // 1
         summary: "Mutual assitance",
         exampleBehaviors: [
-          "Pairs effectively with others on tasks"
+          "Pairs effectively with others on tasks",
+        ],
+        exampleResponsibilities: [
+          "Teaching someone how a specific component works",
         ],
       },
       { // 2
         summary: "Basic instruction",
         exampleBehaviors: [
-          "Teaches others in areas of strength"
+          "Teaches others in areas of strength",
         ],
         exampleResponsibilities: [
           "Teaching someone about a new technology",
+          "Introducing someone to a new piece of our stack",
           "Being an on-boarding buddy",
-        ]
+        ],
       },
       { // 3
         summary: "Individual mentoring",
         exampleBehaviors: [
           "Provides open-ended guidance and assistance to others",
+          "Uses PR reviews as an opportunity to teach about best practices",
         ],
         exampleResponsibilities: [
-          "Acting as a subject matter expert for PR reviews",
+          "Acting as a subject matter expert for the entire team",
           "Managing someone's professional development",
-        ]
+        ],
       },
       { // 4
         summary: "Team mentoring",
         exampleBehaviors: [
-          "Manages the entire team's knowledge and performance in areas of personal expertise",
+          "Improves the entire team's knowledge and performance in areas of personal expertise",
         ],
         exampleResponsibilities: [
           "Mentoring the team in several different areas simultaneously",
-        ]
+        ],
       },
       { // 5
         summary: "Mentoring mentors",
@@ -859,7 +875,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Teaching others how to mentor more effectively",
-        ]
+        ],
       },
     ],
   },
@@ -883,7 +899,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Having any direct reports",
           "Core people management responsibilities"
-        ]
+        ],
       },
       { // 2
         summary: "Growing people",
@@ -895,7 +911,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Managing a team of 3+ direct reports",
-        ]
+        ],
       },
       { // 3
         summary: "Advanced management",
@@ -906,7 +922,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Managing a team of 5-6 direct reports",
-        ]
+        ],
       },
       { // 4
         summary: "Leader",
@@ -915,7 +931,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Improving and standardizing annual review procedures across teams",
-        ]
+        ],
       },
       { // 5
         summary: "Role model",
@@ -926,7 +942,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Managing managers",
           "Defining a career growth framework from scratch",
           "Managing department-wide HR procedures",
-        ]
+        ],
       },
     ],
   },
