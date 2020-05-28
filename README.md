@@ -18,11 +18,11 @@ A successful engineering organization does not consist of a homogeneous group of
 
 ##### Clear path to advancement
 
-No more guesswork or fuzzy answers about what you need to do in order to get promoted.
+No more guesswork or fuzzy answers about what you need to do in order to get promoted. Pick any track on which you'd like to improve and start looking for opportunities to demonstrate the next milestone.
 
 ##### Managers and makers get equal treatment
 
-Each manager level is tied to a corresponding maker level so you don't have to go into management to advance. Forcing someone to manage people is a great way to get bad managers.
+Each manager level is tied to a corresponding maker level so you don't have to go into management to advance. Forcing someone to become a amanager is a great way to get bad managers.
 
 ##### Performance evaluation is easy
 
@@ -46,22 +46,22 @@ The dedicated `management` track will not be relevant for non-managers. It is in
 
 Milestones are defined from 0 to 5. There are specific examples in each track, but most of them follow this progression:
 
-| Milestone | Description            |
-|:---------:|:-----------------------|
-| 0         | No proven track record |
-| 1         | Basic proficiency      |
-| 2         | Reliable contributor   |
-| 3         | Starting to lead       |
-| 4         | Reliable leader        |
-| 5         | Leader of leaders      |
+| Milestone | Skill Level            | Scope of Responsibility       |
+|:---------:|:-----------------------|:------------------------------|
+| 0         | No proven track record | None                          |
+| 1         | Basic proficiency      | Simple task or component      |
+| 2         | Reliable contributor   | Complex task or component     |
+| 3         | Starting to lead       | Small team or project         |
+| 4         | Reliable leader        | Large team or milestone       |
+| 5         | Leader of leaders      | Entire organization           |
 
 For most tiers, the ratings of a well balanced team should form a normal distribution with a mode of around 2.5.
 
 ##### Tiers & Levels
 
-The role expectations for each level roughly correspond with the description of its corresponding milestone. For example, both senior engineers and engineering managers are at a place in their careers where they are starting to lead, just in different ways. However, the level math is set up so that you do not have to average a 3 across the board to get to level 3.
+The role expectations for each level roughly correspond with the description of its corresponding milestone. For example, both senior engineers and engineering managers are at a place in their careers where they are starting to lead, just in different ways. 
 
-Within each tier 
+While a 3 on a technical track is intended to approximate a "senior engineer" level of proficiency, the level math is not set up so that you do not have to average a 3 across the board to get to level 3. Most people will have some tracks above their level and some below their level, which is normal.
 
 ## Usage (for managers)
 
