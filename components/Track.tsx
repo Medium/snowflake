@@ -73,18 +73,26 @@ class Track extends React.Component<Props> {
           {currentMilestone ? (
             <div style={{flex: 1}}>
               <h3>{currentMilestone.summary}</h3>
-              <h4>Example behaviors:</h4>
-              <ul>
-                {currentMilestone.exampleBehaviors && currentMilestone.exampleBehaviors.map((signal, i) => (
-                  <li key={i}>{signal}</li>
-                ))}
-              </ul>
-              <h4>Example responsibilities:</h4>
-              <ul>
-                {currentMilestone.exampleResponsibilities && currentMilestone.exampleResponsibilities.map((example, i) => (
-                  <li key={i}>{example}</li>
-                ))}
-              </ul>
+              {currentMilestone.exampleBehaviors ? (
+                <div>
+                  <h4>Example behaviors:</h4>
+                  <ul>
+                    {currentMilestone.exampleBehaviors && currentMilestone.exampleBehaviors.map((signal, i) => (
+                      <li key={i}>{signal}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {currentMilestone.exampleResponsibilities ? (
+                <div>
+                  <h4>Example responsibilities:</h4>
+                  <ul>
+                    {currentMilestone.exampleResponsibilities && currentMilestone.exampleResponsibilities.map((example, i) => (
+                      <li key={i}>{example}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </div>
           ) : null}
         </div>
