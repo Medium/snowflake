@@ -229,9 +229,10 @@ class PointSummaries extends React.Component<Props> {
             border-left: 3px solid #4c5b67;
           }
           
-          td:not(:nth-of-type(3n+1)) {
-            border-left: 1px dotted #4c5b67;
-          }
+          # removed to allow tiers to be solid.
+          #td:not(:nth-of-type(3n+1)) {
+          #   border-left: 1px dotted #4c5b67;
+          #}
           
           .level-label {
             width: 6.6666666%;
@@ -246,31 +247,39 @@ class PointSummaries extends React.Component<Props> {
           }
           .current-full {
             background-color: #7DA12F;
+            border-left: 1px dotted #4c5b67;
           } 
           .current-empty {
             background-color: #7DA12F;
             opacity: 0.15;
+            border-left: 1px dotted #4c5b67;
           }          
           .graded-full{
             background-color: #5E7B21;
+            border-left: 1px dotted #4c5b67;
           } 
           .graded-empty{
             background-color: #5E7B21;
             opacity: 0.15;
+            border-left: 1px dotted #4c5b67;
           } 
           .core-full{
             background-color: #11a9a1;
+            border: 0;
           } 
           .core-empty{
             background-color: #11a9a1;
             opacity: 0.15;
+            border: 0;
           } 
           .skills-full {
             background-color: #fb6500;
+            border: 0;            
           } 
           .skills-empty {
             background-color: #fb6500;
             opacity: 0.15;
+            border: 0;            
           }        
           .graded-high::after {
             font-size: 14px;
