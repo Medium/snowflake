@@ -28,8 +28,6 @@ class CurrentLevel extends React.Component<Props> {
       if (gradedTotal >= parseInt(points[0])) {
         gradedLevel = parseInt(points[1])
         nextLevel = gradedLevel + 1
-      }
-      if (currentLevel >= parseInt(points[1])) {
         currentTotal = parseInt(points[0])
       }
       if (nextLevel >= parseInt(points[1])) {
@@ -44,7 +42,8 @@ class CurrentLevel extends React.Component<Props> {
     if (gradedLevel > currentLevel) {
       gradedClass = 'graded-high'
     }
-    let roughCols = Math.ceil((nextTotal - gradedTotal) / 10)
+    let colPoints = Math.ceil((nextTotal - currentTotal) / 10)
+    let roughCols = Math.floor((totalPoints - currentTotal) / colPoints)
 
     // ['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc']
     return (
@@ -114,8 +113,10 @@ class CurrentLevel extends React.Component<Props> {
             <td className="levels"> </td>
           </tr>
           <tr>
-            <td className="total-full" colSpan={totalCols - roughCols}> </td>
-            <td className="total-empty" colSpan={roughCols}> </td>
+            { roughCols > 0 &&
+              <td className="total-full" colSpan={roughCols}> </td>
+            }
+            <td className="total-empty" colSpan={totalCols - roughCols}> </td>
           </tr>
           <tr>
             <td className="current-level">{gradedLevel}</td>
