@@ -1,10 +1,13 @@
 import React from 'react'
 import { Tracks } from '../types/definitions';
 import Evaluation from '../types/evaluation';
+import { levelFromMilestoneMap, totalPointsFromMilestoneMap } from '../types/calculations';
 
 type Props = {
   name: string,
+  level: string,
   title: string,
+  totalPoints: number,
   milestoneByTrack: Map<Tracks, number>,
   loadEvaluationFn: (Evaluation) => void,
 };
@@ -31,13 +34,20 @@ class FileImportExport extends React.Component<Props> {
   }
 
   getHref() {
+    const level = levelFromMilestoneMap(this.props.milestoneByTrack);
+    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack);
     const milestones = Array.from(this.props.milestoneByTrack)
       .map(function(x): [string, number] {
           const [track, milestone] = x;
           const trackString = Tracks[track as Tracks];
           return [trackString, milestone];
         });
-    const evaluation = new Evaluation({name: this.props.name, title: this.props.title, milestones});
+    const evaluation = new Evaluation({
+      name: this.props.name, 
+      level: this.props.level,
+      title: this.props.title,
+      totalPoints: this.props.totalPoints,
+      milestones: milestones});
     const json = encodeURIComponent(JSON.stringify(evaluation));
     return `data:application/json;charset=utf-8,${json}`;
   }
