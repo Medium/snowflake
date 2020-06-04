@@ -18,44 +18,98 @@ export type MilestoneMap = {
   'INITIATIVE': Milestone,
   'MATURITY': Milestone,
   'COMPLEXITY': Milestone,
-  'MATURITY': Milestone,
   'LEARNING': Milestone,
   'INFLUENCE': Milestone,
   'MENTORSHIP': Milestone,
 }
 export const milestones = [0, 1, 2, 3, 4, 5]
 
-export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 10
-    case 4: return 20
-    case 5: return 30
-    default: return 0
+export const milestoneValues = (trackId: TrackId): string => {
+  switch (trackId) {
+      case 'CHAPTER_ONE':
+      case 'CHAPTER_TWO':
+      case 'CHAPTER_THREE':
+      case 'CHAPTER_FOUR':
+          return 'A'
+      case "PLANNING":
+      case "COLLABORATION":
+      case "CLIENT_VALUE":
+          return 'B'
+      default:
+          return 'C'
   }
 }
 
-export const pointsToLevels = {
-  '0': '1.0',
-  '20': '2.0',
-  '40': '3.0',
-  '60': '4.0',
-  '80': '5.0',
-  '110': '6.0',
-  '140': '7.0',
-  '180': '8.0',
-  '220': '9.0',
-  '270': '10.0',
-  '320': '11.0',
-  '370': '12.0',
-  '420': '13.0',
-  '470': '14.0',
-  '520': '15.0',
+export const milestoneToPoints = (milestone: Milestone, trackId: TrackId, limitType: false): number => {
+    if (milestoneValues(trackId) == 'A') {
+      switch (milestone) {
+          case 0: return 0
+          case 1: return 4
+          case 2: return 12
+          case 3: return 24
+          case 4: return 40
+          case 5: return 60
+          default: return 0
+      }
+    }
+    if (limitType) {
+        return 0
+    }
+    if (milestoneValues(trackId) == 'B') {
+        switch (milestone) {
+            case 0: return 0
+            case 1: return 2
+            case 2: return 6
+            case 3: return 12
+            case 4: return 20
+            case 5: return 30
+            default: return 0
+        }
+    }
+    switch (milestone) {
+      case 0: return 0
+      case 1: return 1
+      case 2: return 3
+      case 3: return 6
+      case 4: return 10
+      case 5: return 15
+      default: return 0
+   }
 }
 
-export const maxLevel = 135
+export const pointsToLevels = {
+  '0': '1',
+  '10': '2',
+  '20': '3',
+  '40': '4',
+  '60': '5',
+  '80': '6',
+  '100': '7',
+  '130': '8',
+  '160': '9',
+  '190': '10',
+  '230': '11',
+  '270': '12',
+  '300': '13',
+  '330': '14',
+  '360': '15',
+}
+
+export const maxLevel = 360
+
+export const executionGate = {
+  '30': '4',
+  '73': '7',
+  '133': '10',
+  '195': '13',
+}
+
+export const skillsGate = {
+  '10': '4',
+  '27': '7',
+  '57': '10',
+  '105': '13',
+}
 
 export type Track = {
   displayName: string,
@@ -77,11 +131,11 @@ type Tracks = {|
   'COLLABORATION': Track,
   'CLIENT_VALUE': Track,
   'INITIATIVE': Track,
-  'COMPLEXITY': Track,
   'MATURITY': Track,
+  'COMPLEXITY': Track,
   'LEARNING': Track,
-  'INFLUENCE': Track,
   'MENTORSHIP': Track,
+  'INFLUENCE': Track,
 |}
 
 export const tracks: Tracks = {
@@ -551,7 +605,69 @@ export const tracks: Tracks = {
               "examples": []
           }
       ]
-  },"COMPLEXITY":{
+  },"MATURITY":{
+        "milestone": "MATURITY",
+        "cohort": "DEFAULT",
+        "category": "C",
+        "displayName": "Complexity",
+        "description": "Is able to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain when the outcome is emergent",
+        "milestones": [
+            {
+                "summary": "Identifies complicated situations with guidance, following best practices",
+                "signals": [
+                    "Learns and exhibits Palantir core values: collaboration, bringing out the best in each other, curiosity, thinking ahead, and accessibility",
+                    "Treats colleagues and clients with respect",
+                    "Objectively evaluates whether they've met their goals",
+                    "Takes responsibility for their own words and actions"
+                ],
+                "examples": []
+            },
+            {
+                "summary": "Integrates complicated ideas and approaches with guidance, following best practices",
+                "signals": [
+                    "Brings their best self to work and makes space for others to do so as well",
+                    "Trusts teammates, assumes good intent, and is able to disagree and commit",
+                    "Finds ways to ramp up and engage new hires quickly",
+                    "Is able to deliver their work despite inevitable distractions",
+                    "Exhibits a growth mindset with regard to feedback"
+                ],
+                "examples": []
+            },
+            {
+                "summary": "Handles complicated situations and focuses on learning and creativity in the organization",
+                "signals": [
+                    "Is aware of their own strengths and weaknesses",
+                    "Embraces big challenges as opportunities for growth and learning",
+                    "Uses their position to raise difficult issues on behalf of others",
+                    "Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company",
+                    "Is able to change direction quickly based on shifting company and project needs",
+                    "Demonstrates humility and patience"
+                ],
+                "examples": []
+            },
+            {
+                "summary": "Identifies and deals with complex situations by fostering innovation",
+                "signals": [
+                    "Goes above and beyond, serving the team without complaint",
+                    "Implements concrete actions to significantly improve team inclusivity",
+                    "Builds consensus for decisions",
+                    "Devotes significant time to helping outside of direct responsibilities",
+                    "Helps individuals maintain resilience in periods of change"
+                ],
+                "examples": []
+            },
+            {
+                "summary": "Helps and supports others to deal with complexity by adapting and learning continuously",
+                "signals": [
+                    "Demonstrates the ability to de-escalate conflicts and build consensus between team members about technical matters",
+                    "Holds individuals, teams, and leadership accountable to Palantir's values",
+                    "Sets the tone, policy, and goals around maintaining an open, diverse, and inclusive company",
+                    "Models maturity and cultivates similar development in others"
+                ],
+                "examples": []
+            }
+        ]
+    },"COMPLEXITY":{
       "milestone": "COMPLEXITY",
       "cohort": "DEFAULT",
       "category": "C",
@@ -609,68 +725,6 @@ export const tracks: Tracks = {
                   "Creates an organizational framework that facilitates a positive work environment",
                   "Helps others to move through the change curve, from resistors to adopters",
                   "Has engergy and engergizes those around them"
-              ],
-              "examples": []
-          }
-      ]
-  },"MATURITY":{
-      "milestone": "MATURITY",
-      "cohort": "DEFAULT",
-      "category": "C",
-      "displayName": "Complexity",
-      "description": "Is able to deal with volatility, uncertainty, ambiguity, and an increasing rate of change in the Complex domain when the outcome is emergent",
-      "milestones": [
-          {
-              "summary": "Identifies complicated situations with guidance, following best practices",
-              "signals": [
-                  "Learns and exhibits Palantir core values: collaboration, bringing out the best in each other, curiosity, thinking ahead, and accessibility",
-                  "Treats colleagues and clients with respect",
-                  "Objectively evaluates whether they've met their goals",
-                  "Takes responsibility for their own words and actions"
-              ],
-              "examples": []
-          },
-          {
-              "summary": "Integrates complicated ideas and approaches with guidance, following best practices",
-              "signals": [
-                  "Brings their best self to work and makes space for others to do so as well",
-                  "Trusts teammates, assumes good intent, and is able to disagree and commit",
-                  "Finds ways to ramp up and engage new hires quickly",
-                  "Is able to deliver their work despite inevitable distractions",
-                  "Exhibits a growth mindset with regard to feedback"
-              ],
-              "examples": []
-          },
-          {
-              "summary": "Handles complicated situations and focuses on learning and creativity in the organization",
-              "signals": [
-                  "Is aware of their own strengths and weaknesses",
-                  "Embraces big challenges as opportunities for growth and learning",
-                  "Uses their position to raise difficult issues on behalf of others",
-                  "Allows everyone the opportunity to contribute, regardless of their title or how many years they've been with the company",
-                  "Is able to change direction quickly based on shifting company and project needs",
-                  "Demonstrates humility and patience"
-              ],
-              "examples": []
-          },
-          {
-              "summary": "Identifies and deals with complex situations by fostering innovation",
-              "signals": [
-                  "Goes above and beyond, serving the team without complaint",
-                  "Implements concrete actions to significantly improve team inclusivity",
-                  "Builds consensus for decisions",
-                  "Devotes significant time to helping outside of direct responsibilities",
-                  "Helps individuals maintain resilience in periods of change"
-              ],
-              "examples": []
-          },
-          {
-              "summary": "Helps and supports others to deal with complexity by adapting and learning continuously",
-              "signals": [
-                  "Demonstrates the ability to de-escalate conflicts and build consensus between team members about technical matters",
-                  "Holds individuals, teams, and leadership accountable to Palantir's values",
-                  "Sets the tone, policy, and goals around maintaining an open, diverse, and inclusive company",
-                  "Models maturity and cultivates similar development in others"
               ],
               "examples": []
           }
@@ -879,7 +933,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     const milestone = milestoneMap[trackId]
     const categoryId = tracks[trackId].category
     let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone, trackId))
   })
   return Array.from(categoryIds.values()).map(categoryId => {
     const points = pointsByCategory.get(categoryId)
@@ -888,12 +942,16 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 }
 
 export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
+  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId))
     .reduce((sum, addend) => (sum + addend), 0)
+
+export const executingPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
+    trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId], trackId, true))
+        .reduce((sum, addend) => (sum + addend), 0)
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
-  .range(['#9fc855', '#11a9a1', '#fb6500', '#a7d1bc'])
+  .range(['#11a9a1', '#FFC59E', '#FF944D', '#fb6500'])
 
 export const cohorts = [
   {key: 'MANAGEMENT', label: 'Management'},

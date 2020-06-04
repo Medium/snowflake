@@ -38,3 +38,37 @@ This will put a static version of the site in `out/`.
 
 * Load initial data from a file, to improve flexibility.
 * Add restricted job title selection and validation.
+
+# Palantir revisions
+
+## Code layout
+
+For the revised layout, we want the following:
+
+```
+---------------------------------------------
+|                   Information             |
+---------------------------------------------
+|   Grading / Rating    |   Milestones      |
+|                       |                   |
+|                       |                   |
+|                       |                   |
+---------------------------------------------
+|              Career Development           |
+---------------------------------------------
+
+```
+
+```
+-----------------------------------------------------------
+| SnowflakeApp.js • CohortSelector.js • LevelSelector.js  |
+-----------------------------------------------------------
+|   CurrentLevel.js         |   Track.js                  |
+|                           |                             |
+|   TrackSelector.js        |                             |
+|                           |                             |
+|                           |                             |
+-----------------------------------------------------------
+|                   PointSummaries.js                     |
+-----------------------------------------------------------
+```
