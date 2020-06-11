@@ -592,6 +592,9 @@ export const trackDefinitions: TrackDefinition[] = [
           "May ask for help too little and get stuck",
           "May ask for help too much rather than working independently",
         ],
+        exampleResponsibilities: [
+          "Working on a task without supervision",
+        ],
       },
       { // 2
         summary: "Maintaining course",
@@ -600,6 +603,11 @@ export const trackDefinitions: TrackDefinition[] = [
           "Resolves most task impediments without assistance",
           "Asks for help when appropriate and relevant",
           "Spontanously collaborates with others when appropriate and relevant",
+          "May occasionally still ask for help too much or too little",
+        ],
+        exampleResponsibilities: [
+          "Working on a series of tasks without supervision",
+          "Working on fairly complex tasks without supervision",
         ],
       },
       { // 3
@@ -609,12 +617,20 @@ export const trackDefinitions: TrackDefinition[] = [
           "Reliably raises appropriate issues rather than simply continuing to work as assigned",
           "Organizes others to help solve challenging problems",
         ],
+        exampleResponsibilities: [
+          "Effectively working on tasks that are not fully defined",
+          "Generating tasks from high level objectives",
+        ],
       },
       { // 4
         summary: "Leader",
         exampleBehaviors: [
           "Seeks and builds consensus where appropriate and relevant",
           "Forms and disbands groups as necessary",
+        ],
+        exampleResponsibilities: [
+          "Defining high level objectives for a project",
+          "Supervising others",
         ],
       },
       { // 5
@@ -623,19 +639,23 @@ export const trackDefinitions: TrackDefinition[] = [
           "Autonomously directs self and others without any oversight",
           "Ensures synchronization with larger business strategy",
         ],
+        exampleResponsibilities: [
+          "Defining business goals",
+          "Guiding an entire team to accomplish not-fully-defined objectives",
+        ],
       },
     ],
   },
   <TrackDefinition> {
     track: Tracks.Organization,
     category: Categories.Professional,
-    description: "Personal and professional organization and documentation",
+    description: "Personal and professional organization and documentation (at lower levels, having your shit together; at higher levels, helping others have their shit together just by being around you)",
     milestones: [
       { // 0
         summary: technicalSummaryL0,
         exampleBehaviors: [
           "Irregular punctuality for meetings",
-          "Forgetfulness or disorganization",
+          "Regular forgetfulness or disorganization",
         ],
       },
       { // 1
@@ -651,12 +671,13 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: [
           "Takes organized notes in meetings and discussions and references them later",
           "Keeps ordered bookmarks for everyday sites",
-          "Maintains a sensible file organization scheme for ",
+          "Maintains a sensible file organization scheme on their computer",
         ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: [
+          "Runs effective meetings",
           "Takes notes for the whole group in a meeting",
           "\"Refactors\" team documentation when it is disorganized",
         ],
@@ -665,7 +686,8 @@ export const trackDefinitions: TrackDefinition[] = [
         summary: technicalSummaryL4,
         exampleBehaviors: [
           "Creates such effective documentation that it helps others stay organized",
-          "Maintains an extensive personal organizational scheme to find and reference",
+          "Maintains an extensive personal organizational scheme to find and reference detailed and complete information",
+          "Creates and maintains organized meeting schedules",
         ],
       },
       { // 5
@@ -683,49 +705,47 @@ export const trackDefinitions: TrackDefinition[] = [
     description: "Abillity to understand, follow, and improve our software development process",
     milestones: [
       { // 0
-        summary: technicalSummaryL0,
-        exampleBehaviors: [
-          "Still learning processes",
-        ],
-        exampleResponsibilities: [
-        ],
+        summary: "Learning process",
       },
       { // 1
-        summary: technicalSummaryL1,
+        summary: "Follows process",
         exampleBehaviors: [
-          "Reliably follows regular processes",
-        ],
-        exampleResponsibilities: [
+          "Gives a stand-up status that follows guidelines",
+          "Usually posts for open-ended help in the team help channel rather than asking one-on-one",
+          "Fills out all required information on pull requests",
         ],
       },
       { // 2
-        summary: technicalSummaryL2,
+        summary: "Enforces process",
         exampleBehaviors: [
           "Makes sure others follow processes",
-          "Notices when stand-up is going off track and speaks up",
-        ],
-        exampleResponsibilities: [
+          "Notices when stand-up is going off track and speaks up, either publicly or privately",
+          "When reviewing a pull request, makes sure the requester provided all required information",
         ],
       },
       { // 3
-        summary: technicalSummaryL3,
+        summary: "Improves process",
         exampleBehaviors: [
-          "Improves existing processes",
+          "Offers helpful suggestions for how to make stand-up run more smoothly",
+          "Improves pull request templates to make sure requesters are prompted for required information",
+          "Proposes an expanded retro format that pulls out previously missing information",
         ],
         exampleResponsibilities: [
+          "Acting as maintainer or steward for a system or process",
         ],
       },
       { // 4
-        summary: technicalSummaryL4,
+        summary: "Creates process",
         exampleBehaviors: [
-          "Creates and maintains processes",
+          "Creates, prunes, and generally maintains processes as necessary",
         ],
         exampleResponsibilities: [
           "Creating and documenting a new process",
+          "Forming a new team without an existing process to model",
         ],
       },
       { // 5
-        summary: technicalSummaryL5,
+        summary: "Directs process creation",
         exampleBehaviors: [
           "Adjusts processes to fit broader business context",
         ],
@@ -824,9 +844,9 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
       },
       { // 2
-        summary: "Going above and beyond",
+        summary: "Maintaining positive culture",
         exampleBehaviors: [
-          "Maintains a positive demeanor in challenging situations",
+          "Maintains a positive demeanor in challenging situations like a heated debate",
           "Assumes positive intent in others",
         ],
         exampleResponsibilities: [
@@ -834,9 +854,10 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
       },
       { // 3
-        summary: "Actively reinforcing culture",
+        summary: "Actively reinforcing positive culture",
         exampleBehaviors: [
           "Helps others who are struggling personally or professionally",
+          "Actively cultivates a good reputation among teammates",
           "Shares articles or other resources to help the team become more inclusive",
         ],
         exampleResponsibilities: [
@@ -855,6 +876,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Regularly checking in with less senior folks when explaining something to ensure clarity",
           "Regularly Asking input of less senior folks on the team during meetings",
           "Giving credit to the work of others and recognizing efforts and achievements",
+          "Organizing or leading a workshop on diversity & inclusion",
         ],
       },
       { // 5
@@ -900,7 +922,7 @@ export const trackDefinitions: TrackDefinition[] = [
         summary: "Individual mentoring",
         exampleBehaviors: [
           "Provides open-ended guidance and assistance to others",
-          "Uses PR reviews as an opportunity to teach about best practices",
+          "Uses pull request reviews as an opportunity to teach about best practices",
         ],
         exampleResponsibilities: [
           "Acting as a subject matter expert for the entire team",

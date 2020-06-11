@@ -7,23 +7,32 @@ import LevelThermometer from '../components/LevelThermometer'
 import PointSummaries from '../components/PointSummaries'
 import TitleSelector from '../components/TitleSelector'
 import Attribution from './Attribution'
+import FileImportExport from './FileImportExport'
 import { TrackDefinition, MilestoneDefinition } from '../types/tracks';
 import { Categories, Tracks, trackDefinitions } from '../types/definitions'
-import { emptyTracks, eligibleTitles, trackIds, milestoneToPoints, highestMilestone } from '../types/calculations'
+import { emptyTracks, eligibleTitles, trackIds, milestoneToPoints, highestMilestone, levelFromMilestoneMap, totalPointsFromMilestoneMap, pointsToNextLevelFromMilestoneMap } from '../types/calculations'
+import NameInput from './NameInput'
+import Evaluation from '../types/evaluation'
 
 type SnowflakeAppState = {
   milestoneByTrack: Map<Tracks, number>,
   name: string,
+  level: string,
   title: string,
+  totalPoints: number,
+  pointsToNextLevel: number | undefined,
   focusedTrackId: Tracks,
 }
 
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
+    level: '0',
     title: '',
+    totalPoints: 0,
+    pointsToNextLevel: 15,
     milestoneByTrack: emptyTracks,
-    focusedTrackId: Tracks.Mentoring
+    focusedTrackId: Tracks.Frontend
   }
 }
 
@@ -39,12 +48,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     this.state = emptyState()
   }
 
-  componentDidUpdate() {
-    //TODO: Update URL
-  }
-
   componentDidMount() {
-    //TODO: Load from URL
     this.setState(defaultState());
   }
 
@@ -81,26 +85,26 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
-              <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  />
+              <NameInput
+                name={this.state.name}
+                setNameFn={this.setName.bind(this)} />
               <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} />
+                milestoneByTrack={this.state.milestoneByTrack}
+                currentTitle={this.state.title}
+                setTitleFn={this.setTitle.bind(this)} />
             </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
+            <PointSummaries 
+                level={this.state.level}
+                totalPoints={this.state.totalPoints}
+                pointsToNextLevel={this.state.pointsToNextLevel}
+                milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
           <div style={{flex: 0}}>
             <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
                 focusedTrack={this.state.focusedTrackId}
-                handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+                handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange.bind(this)} />
           </div>
         </div>
         <TrackSelector
@@ -115,7 +119,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <Track
             milestoneByTrack={this.state.milestoneByTrack}
             track={this.state.focusedTrackId}
-            handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
+            handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange.bind(this)} />
+        <FileImportExport 
+            name={this.state.name}
+            level={this.state.level}
+            title={this.state.title}
+            totalPoints={this.state.totalPoints}
+            milestoneByTrack={this.state.milestoneByTrack} 
+            loadEvaluationFn={this.loadEvaluation.bind(this)} />
         <Attribution />
       </main>
     )
@@ -125,10 +136,14 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack.set(track, milestone)
 
+    const level = levelFromMilestoneMap(milestoneByTrack);
+    const totalPoints = totalPointsFromMilestoneMap(milestoneByTrack);
+    const pointsToNextLevel = pointsToNextLevelFromMilestoneMap(milestoneByTrack);
+
     const titles = eligibleTitles(milestoneByTrack)
     const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
 
-    this.setState({ milestoneByTrack, focusedTrackId: track, title })
+    this.setState({ level, totalPoints, pointsToNextLevel, milestoneByTrack, focusedTrackId: track, title })
   }
 
   shiftFocusedTrack(delta: number) {
@@ -154,6 +169,22 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     let titles = eligibleTitles(this.state.milestoneByTrack)
     title = titles.indexOf(title) == -1 ? titles[0] : title
     this.setState({ title })
+  }
+
+  setName(name: string) {
+    this.setState({ name });
+  }
+
+  loadEvaluation(evaluation: Evaluation) {
+    if (evaluation.name) this.setName(evaluation.name);
+
+    if (evaluation.milestones) {
+      const entries = evaluation.milestones.map<[Tracks, number]>(x => [Tracks[x[0]], x[1]]);
+      const newMilestonesByTrack = new Map<Tracks, number>(entries);
+      this.setState({milestoneByTrack: newMilestonesByTrack});
+    }
+
+    if (evaluation.title) this.setTitle(evaluation.title);
   }
 }
 

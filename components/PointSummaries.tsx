@@ -3,24 +3,24 @@ import { pointsToLevels, Tracks } from '../types/definitions'
 import React from 'react'
 
 type Props = {
+  level: string,
+  totalPoints: number,
+  pointsToNextLevel: number | undefined,
   milestoneByTrack: Map<Tracks, number>
 }
 
 class PointSummaries extends React.Component<Props> {
   render() {
-    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
-    const currentLevel = levelFromMilestoneMap(this.props.milestoneByTrack);
-    const pointsToNextLevel = pointsToNextLevelFromMilestoneMap(this.props.milestoneByTrack);
-    const pointsToNextLevelValue = pointsToNextLevel === undefined ? 'N/A' : pointsToNextLevel;
+    const pointsToNextLevelValue = this.props.pointsToNextLevel === undefined ? 'N/A' : this.props.pointsToNextLevel;
 
     const blocks = [
       {
         label: 'Current level',
-        value: currentLevel
+        value: this.props.level
       },
       {
         label: 'Total points',
-        value: totalPoints
+        value: this.props.totalPoints
       },
       {
         label: 'Points to next level',
