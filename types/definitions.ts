@@ -155,6 +155,8 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Adding a new component from existing examples",
           "Fixing moderately complicated bugs",
+          "Writing effetive unit tests",
+          "Giving PR feedback that generally consists of validating acceptance criteria, and catching oversights or typeos",
         ],
       },
       { // 2
@@ -162,24 +164,35 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
           "Creating a new component from scratch, avoiding any anti-patterns",
+          "Giving substantive code review feedback at a Class-level based on code quality and best practices",
         ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
+          "Championing best practices and appropriate design patterns",
+          "Designing components and abstractions that are reusable across Classes and Applications",
+          "Giving substantive code review feedback at a System-level (Frontend Architecture)",
         ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
+          "Identifying technical debt, and frontend performance bottlenecks, bringing solutions to the table",
+          "Staying on top of emerging changes in frontend tech and brings relevant knowlege to the team",
+          "Refactoring a major part of an existing system",
+          "Designing a major component or system, breaking down large tasks and delegating"
         ],
       },
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
+          "Guiding team in decisions a la \"refactor v.s. rebuild\", or \"build v.s. buy\"",
+          "Accurately defining value, scope, impact, risk, and dependencies across application/s",
+          "Effectively breaking down frontend projects into small chunks of work and delegate",
         ],
       },
     ],
@@ -204,6 +217,8 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Adding a new data adapter implementation from existing examples",
           "Fixing moderately complicated bugs",
+          "Writing effective unit tests",
+          "Giving code review feedback that generally consists of validating Acceptance Criteria, and catching oversights or typeos",
         ],
       },
       { // 2
@@ -211,20 +226,26 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
           "Creating a new API endpoint from scratch, avoiding any anti-patterns",
+          "Giving substantive code review feedback at a Class-level based on quality and best practices",
         ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
+          "Championing best practices and appropriate design patterns",
           "Creating a new service from scratch with specifications",
+          "Giving substantive code review feedback at a System-level (Backend Architecture)",
         ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
-          "",
+          "Debugging complex system-level issues without guidance",
+          "Identifying technical debt, and API performance bottlenecks, bringing solutions to the table",
+          "Gaining expertise in security best practices and lead by example",
+          "Designing a major feature or system, breaking down large tasks and delegating",
         ],
       },
       { // 5
@@ -232,6 +253,10 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL5,
         exampleResponsibilities: [
           "Leading architecture for all backend systems",
+          "Leading security efforts across all API surface areas, communicating concerns and risk to leadership",
+          "Guides team in decisions a la \"refactor v.s. rebuild\", or \"build v.s. buy\"",
+          "Accurately define value, scope, impact, risk, and dependencies across application/s",
+          "Effectively break down frontend projects into small chunks of work and delegate",
         ],
       },
     ],
@@ -278,6 +303,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
           "Advanced performance tuning",
+          "Writing complex queries to debug and solve application data anomalies",
         ],
       },
       { // 5
@@ -286,6 +312,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleResponsibilities: [
           "Choosing between database technologies",
           "Designing a comprehensive data storage architecture from scratch",
+          "Owns upgrade and security concerns as it pertains to the architecture and querly language",
         ],
       },
     ],  },
@@ -727,6 +754,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "May make spelling and grammar errors, but not severe enough to significantly impede understanding",
         ],
         exampleResponsibilities: [
+          "Articulating logic behind technical descisions to the Engineering team",
         ],
       },
       { // 2
@@ -736,6 +764,8 @@ export const trackDefinitions: TrackDefinition[] = [
           "Explains and understands complicated topics",
         ],
         exampleResponsibilities: [
+          "Actively participating in team meetings, including Product folks, to clarify requirements",
+          "Actively participating in performance discussions with your manager to clarify feedback or guidance"
         ],
       },
       { // 3
@@ -745,6 +775,8 @@ export const trackDefinitions: TrackDefinition[] = [
           "Rephrasing someone's point for greater clarity without making the original speaker feel upstaged",
         ],
         exampleResponsibilities: [
+          "Writing documentation that provides clarity to dense or complex subjects",
+          "Recognizing when PR comments, Slack chat, or other async methods of communication might benefit from a meeting or personal discussion",
         ],
       },
       { // 4
@@ -755,6 +787,8 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Explaining a highly complicated technical topic to non-technical people",
+          "Helping to clairfy others' messages in team meetings whenever possible as you recognize a breakdown in communication",
+          "Organizing and leading meetings where you recognize the benefit of verbal or personal communication over other forms",
         ],
       },
       { // 5
@@ -795,6 +829,9 @@ export const trackDefinitions: TrackDefinition[] = [
           "Maintains a positive demeanor in challenging situations",
           "Assumes positive intent in others",
         ],
+        exampleResponsibilities: [
+          "Proactively reaches out to teammates who are newer or less senior to offer assistance or clarity",
+        ],
       },
       { // 3
         summary: "Actively reinforcing culture",
@@ -802,12 +839,22 @@ export const trackDefinitions: TrackDefinition[] = [
           "Helps others who are struggling personally or professionally",
           "Shares articles or other resources to help the team become more inclusive",
         ],
+        exampleResponsibilities: [
+          "Regularly checking in with less senior folks when explaining something to ensure clarity",
+          "Asking input of less senior folks on the team",
+          "Giving credit to the work of others and recognizing efforts and achievements",
+        ],
       },
       { // 4
         summary: "Moving culture forward",
         exampleBehaviors: [
           "Proactively ensures that team environments are safe and inclusive",
           "Tracks and improves team retention"
+        ],
+        exampleResponsibilities: [
+          "Regularly checking in with less senior folks when explaining something to ensure clarity",
+          "Regularly Asking input of less senior folks on the team during meetings",
+          "Giving credit to the work of others and recognizing efforts and achievements",
         ],
       },
       { // 5
@@ -841,6 +888,7 @@ export const trackDefinitions: TrackDefinition[] = [
         summary: "Basic instruction",
         exampleBehaviors: [
           "Teaches others in areas of strength",
+          "Proactively reaches out to others to offer assistance or guidance",
         ],
         exampleResponsibilities: [
           "Teaching someone about a new technology",
@@ -911,6 +959,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Managing a team of 3+ direct reports",
+          ""
         ],
       },
       { // 3
@@ -919,15 +968,18 @@ export const trackDefinitions: TrackDefinition[] = [
           "Consistently addresses performance issues, either by improving performance or managing employee exit",
           "Mediates conflict between team members",
           "Actively promotes diversity & inclusion on own team and others",
+          "Ensure team goals are aligned with the goals of Tech leadership and the Company",
         ],
         exampleResponsibilities: [
           "Managing a team of 5-6 direct reports",
+          "Working closely with Product or leadership to define roadmaps",
         ],
       },
       { // 4
         summary: "Leader",
         exampleBehaviors: [
-          "Consistently earns trust of direct reports"
+          "Consistently earns trust of direct reports",
+          "Improves process within team where defic"
         ],
         exampleResponsibilities: [
           "Improving and standardizing annual review procedures across teams",
