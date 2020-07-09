@@ -34,8 +34,6 @@ class FileImportExport extends React.Component<Props> {
   }
 
   getHref() {
-    const level = levelFromMilestoneMap(this.props.milestoneByTrack);
-    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack);
     const milestones = Array.from(this.props.milestoneByTrack)
       .map(function(x): [string, number] {
           const [track, milestone] = x;
@@ -57,9 +55,7 @@ class FileImportExport extends React.Component<Props> {
     const href = this.getHref();
     return (
       <span style={{display:"inline-block"}}>
-        Download: <a download={filename} href={href} target="_blank">
-          🔽
-        </a>
+        Download: <a download={filename} href={href} target="_blank">🔽</a>
         <br />
         Upload: <input type="file" onChange={this.handleFileUpload.bind(this)}>
         </input>
