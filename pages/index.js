@@ -1,5 +1,5 @@
-import SnowflakeApp from '../components/SnowflakeApp'
+import TacoApp from '../components/TacoApp'
 
 export default () => <div>
-  <SnowflakeApp />
+  <TacoApp />
 </div>

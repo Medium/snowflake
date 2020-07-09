@@ -1,11 +1,11 @@
 import React from 'react'
-import TrackSelector from '../components/TrackSelector'
-import NightingaleChart from '../components/NightingaleChart'
-import KeyboardListener from '../components/KeyboardListener'
-import Track from '../components/Track'
-import LevelThermometer from '../components/LevelThermometer'
-import PointSummaries from '../components/PointSummaries'
-import TitleSelector from '../components/TitleSelector'
+import TrackSelector from './TrackSelector'
+import NightingaleChart from './NightingaleChart'
+import KeyboardListener from './KeyboardListener'
+import Track from './Track'
+import LevelThermometer from './LevelThermometer'
+import PointSummaries from './PointSummaries'
+import TitleSelector from './TitleSelector'
 import Attribution from './Attribution'
 import FileImportExport from './FileImportExport'
 import { TrackDefinition, MilestoneDefinition } from '../types/tracks';
@@ -14,7 +14,7 @@ import { emptyTracks, eligibleTitles, trackIds, milestoneToPoints, highestMilest
 import NameInput from './NameInput'
 import Evaluation from '../types/evaluation'
 
-type SnowflakeAppState = {
+type TacoAppState = {
   milestoneByTrack: Map<Tracks, number>,
   name: string,
   level: string,
@@ -24,7 +24,7 @@ type SnowflakeAppState = {
   focusedTrackId: Tracks,
 }
 
-const emptyState = (): SnowflakeAppState => {
+const emptyState = (): TacoAppState => {
   return {
     name: '',
     level: '0',
@@ -36,13 +36,13 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
+const defaultState = (): TacoAppState => {
   return emptyState();
 }
 
 type Props = {}
 
-class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
+class TacoApp extends React.Component<Props, TacoAppState> {
   constructor(props: Props) {
     super(props)
     this.state = emptyState()
@@ -188,4 +188,4 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 }
 
-export default SnowflakeApp
+export default TacoApp

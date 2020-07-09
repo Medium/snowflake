@@ -1,6 +1,6 @@
-# Snowflake
+# TACO (Tool for Assessing Computer Operators)
 
-Snowflake started out as Medium's [career growth](https://medium.com/s/engineering-growth-framework) tool. It was compatible enough with how we do things at Forager that we forked it and adapted it for our own use.
+TACO started out as Medium's [career growth](https://medium.com/s/engineering-growth-framework) tool. It was compatible enough with how we do things at Forager that we forked it and adapted it for our own use.
 
 This is very much a work in progress and anything here many change at any time. We will continue iterating as we learn more.
 
@@ -22,7 +22,7 @@ No more guesswork or fuzzy answers about what you need to do in order to get pro
 
 ##### Managers and makers get equal treatment
 
-Each manager level is tied to a corresponding maker level so you don't have to go into management to advance. Forcing someone to become a amanager is a great way to get bad managers.
+Each manager level is tied to a corresponding maker level so you don't have to go into management to advance. Forcing someone to become a manager is a great way to get bad managers.
 
 ##### Performance evaluation is easy
 
