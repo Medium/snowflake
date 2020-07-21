@@ -1,4 +1,4 @@
-# TACO (Tool for Assessing Computer Operators)
+# Tool for Assessing Computer Operators (🌮)
 
 TACO started out as Medium's [career growth](https://medium.com/s/engineering-growth-framework) tool. It was compatible enough with how we do things at Forager that we forked it and adapted it for our own use.
 
@@ -30,21 +30,29 @@ Proponents of strong CI/CD systems argue that when deployment is easy, you will 
 
 ## Overview
 
-People are evaluated on a number of different `tracks`, such as front-end development or communication skills. Each track defines a set of advancement `milestones` which will earn you more `points`. More advanced milestones are worth more points, because  it is harder to achieve total mastery of something than to achieve a basic familiarity.
+People are evaluated on a number of different `tracks`. Each track defines a set of advancement `milestones` which will earn you more `points`. More advanced milestones are worth more points, because it is harder to achieve total mastery of something than to achieve a basic familiarity.
 
-In order to advance to the next `tier`, you must accumulate a certain number of points. Multiple tiers are grouped into a `level`, which has one or more `titles` associated with it. There are more tiers than levels so we can standardize compensation at each tier and still offer more granular advancement opportunities.
-
-The different tracks are grouped into a few high-level `categories`, such as technical skills. In addition to a points requirement, each level  advancement requires that you achieve an increasingly high minimum number of points in every category. You can't truly achieve higher levels of effectivness if some of your skills are lagging too far behind.
+In order to advance to the next `tier`, you must accumulate a certain number of points. Multiple tiers are grouped into a `level`, which has one or more `titles` associated with it. There are more tiers than levels so we can standardize compensation at each tier and still offer granular advancement opportunities.
 
 ##### Tracks & Categories
 
+Each track encapsulates a group of related skills, such as front-end development or communication skills.
+
+The different tracks are grouped into a few high-level `categories`, such as technical skills. In addition to a points requirement, each level advancement requires that you achieve an increasingly high minimum number of points in every category. You can't truly achieve higher levels of effectivness if some of your skills are lagging too far behind.
+
 Since this is an engineering career growth framework, there are intentionally more tracks available in the `technical` category.
 
-The dedicated `management` track will not be relevant for non-managers. It is intended to offset the fact that most managers become more hands-off and are not spending as much time advancing their technical skills.
+The dedicated `management` track will not be relevant for non-managers. It is intended to offset the fact that most managers become more hands-off and are not spending as much time advancing their technical skills. For non-managers, even those with management experience, this should be evaluated as a zero.
 
 ##### Milestones 
 
-Milestones are defined from 0 to 5. There are specific examples in each track, but most of them follow this progression:
+A milestone rating should represent the abilities and behaviors a person can currently and consistently produce in a given track.
+
+Having abilities that are _current_ does not necessarily require recent experience. Some engineers may not have worked on SQL for several years, but could still pick up a SQL task tomorrow at their previous level of proficiency; they should continue to be rated at their previous level of proven ability. Other engineers may be rusty after not using a skill for several years; they should be adjusted downward to match their current abilities.
+
+A milestone means _consistently_ demonstrating that level of proficiency. Many people will occasionally or sporadically demonstrate a level of proficiency one or two levels higher than they can produce reliably. No one is ever 100% perfect, but proving proficiency requires consistency.
+
+Milestones are defined from 0 to 5. The "base class" implementation of each level follow this progression:
 
 | Milestone | Skill Level            | Scope of Responsibility       |
 |:---------:|:-----------------------|:------------------------------|
@@ -55,13 +63,28 @@ Milestones are defined from 0 to 5. There are specific examples in each track, b
 | 4         | Reliable leader        | Large team or milestone       |
 | 5         | Leader of leaders      | Entire organization           |
 
+The examples provided in the tool are intended as an illustration -- not necessarily a checklist, and certainly not an exhustive list. When in doubt, use the chart above to give grounding to an evaluation.
+
+Each milestone should build upon everything from all the levels below it. For example, a milestone 3 rating implies all of the skills and abilities of milestones 1 and 2 as well.
+
 For most tiers, the ratings of a well balanced team should form a normal distribution with a mode of around 2.5.
 
 ##### Tiers & Levels
 
-The role expectations for each level roughly correspond with the description of its corresponding milestone. For example, both senior engineers and engineering managers are at a place in their careers where they are starting to lead, just in different ways. 
+Each tier earns a salary increase, while each level earns a new title:
 
-While a 3 on a technical track is intended to approximate a "senior engineer" level of proficiency, the level math is not set up so that you do not have to average a 3 across the board to get to level 3. Most people will have some tracks above their level and some below their level, which is normal.
+| Level | Maker Track Title            | Manager Track Title        |
+|:-----:|:-----------------------------|:---------------------------|
+| 0     | Apprentice Software Engineer |                            |
+| 1     | Junior Software Engineer     |                            |
+| 2     | Software Engineer            |                            |
+| 3     | Senior Software Engineer     | Engineering Manager        |
+| 4     | Staff Software Engineer      | Senior Engineering Manager |
+| 5     | Principal Software Engineer  | Director of Engineering    |
+
+The role expectations for each level roughly correspond with the description of its corresponding milestone. For example, both senior engineers and engineering managers are at a place in their careers where they are starting to lead.
+
+While a milestone rating of 3 is intended to approximate a "senior engineer" level of proficiency on the technical track, the level math is set up so that you do not have to get 3 milestones across the board to get to level 3. Everyone will have some tracks above their level and some below their level, which is normal.
 
 ## Usage (for managers)
 
@@ -69,13 +92,13 @@ You should already be having regularly scheduled 1:1s with your people every one
 
 For each track, share what milestone you each put for that track.
 
-* If the numbers are identical, you are in agreement. Don't waste any more time hashing it out unless there are questions about how to improve the rating.
-* If the numbers are different by one, ask if there's anything that needs to be discussed. Many ratings could go either way ("I think I'm a 2 or 3, so I just put 3") so there's often not any real disagreement here. Spend a minute or two reviewing the factors behind the rating and highlight why you chose what you did.
-* If the numbers are different by two or more, this is a serious disconnect. Spent several minutes reviewing the milestone definitions and discussing why each of you chose the milestone you did. It is normal for this to happen periodically, so try to resolve the misunderstanding as nonjudgmentally and objectively as possible.
+* If the numbers are identical, you are in agreement. Don't waste time hashing it out unless there are questions about how to improve the rating.
+* If the numbers are different by one, ask if there's anything that needs to be discussed. Many ratings could go either way ("I think I'm a 2 or 3, so I put 3") so there's often not any real disagreement here. Spend a minute or two naming the factors behind the rating and highlight why you each chose what you did.
+* If the numbers are different by two or more, this is a serious disconnect. However, it is normal for this to happen periodically, so resolve the misunderstanding as nonjudgmentally and objectively as possible. Spend several minutes reviewing the milestone definitions and discussing why each of you chose the milestone you did.
 
-##### Promotions (TBD)
+At the end, look at the result and discuss whether it seems like a fair and accurate assessment. This tool is a work in progress, so be sure to ask whether it missed anything and take any critical feedback seriously.
 
-##### Underperformance (TBD)
+It can be helpful to look at the "error bars" as well. Any time you or the engineer is on the fence between two numbers during the evaluation, or your initial evaluations are different, write down both numbers. Then run one version of the evaluation where you always take the higher number, and one version where you always take the lower number. This exercise can help illustrate what someone's best or worst day looks like, or what someone's near-term potential is.
 
 ## Contributions
 
