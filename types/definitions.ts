@@ -12,7 +12,6 @@ export enum Tracks {
   Frontend,
   Backend,
   Database,
-  Mobile,
   Testing,
   Ops,
   // Craft
@@ -110,7 +109,7 @@ const technicalSummaryL4 = "Advanced";
 const technicalSummaryL5 = "Expert";
 
 const technicalBehaviorsL0 = [
-  "No experience in this area",
+  "No significant experience in this area",
   "Needs daily assistance to complete tasks",
 ];
 const technicalBehaviorsL1 = [
@@ -121,17 +120,23 @@ const technicalBehaviorsL2 = [
   "Reliably completes most tasks without assistance",
 ];
 const technicalBehaviorsL3 = [
-  "Weighs pros and cons of different approaches",
+  "Weighs pros and cons of different soultions to a technical problem",
   "Resolves ambiguous tasks and clarifies for others",
+  "Identifies when refactoring is required to reduce tech debt",
 ];
 const technicalBehaviorsL4 = [
-  "Weighs pros and cons of different frameworks and libraries",
+  "Effectively weighs pros and cons of different frameworks and libraries",
   "Gained a reputation as someone anyone would want to help out in this area",
   "Resolves ambiguous product requirements and clarifies for others",
 ];
 const technicalBehaviorsL5 = [
   "Understands at least one framework top to bottom",
-  "Defines roadmap/milestone-level technical projects"
+  "Defines roadmap/milestone-level technical projects",
+];
+
+const technicalResponsibilitiesL0 = [
+  "Fixing a simple bug, in any amount of time",
+  "Reading documentation to learn more",
 ];
 
 export const trackDefinitions: TrackDefinition[] = [
@@ -145,8 +150,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL0,
         exampleResponsibilities: [
           "Editing the text on a page",
-          "Fixing a simple bug, in any amount of time",
-          "Reading documentation to learn more",
+          ...technicalResponsibilitiesL0,
         ],
       },
       { // 1
@@ -156,7 +160,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Adding a new component from existing examples",
           "Fixing moderately complicated bugs",
           "Writing effetive unit tests",
-          "Giving PR feedback that generally consists of validating acceptance criteria, and catching oversights or typeos",
+          "Giving PR feedback that generally consists of validating acceptance criteria, and catching oversights or typos",
         ],
       },
       { // 2
@@ -172,7 +176,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
           "Championing best practices and appropriate design patterns",
-          "Designing components and abstractions that are reusable across Classes and Applications",
+          "Designing components and abstractions that are reusable across classes and applications",
           "Giving substantive code review feedback at a System-level (Frontend Architecture)",
         ],
       },
@@ -183,7 +187,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Identifying technical debt, and frontend performance bottlenecks, bringing solutions to the table",
           "Staying on top of emerging changes in frontend tech and brings relevant knowlege to the team",
           "Refactoring a major part of an existing system",
-          "Designing a major component or system, breaking down large tasks and delegating"
+          "Designing a major component or system, breaking down large tasks and delegating",
         ],
       },
       { // 5
@@ -207,8 +211,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL0,
         exampleResponsibilities: [
           "Adding a field to a data model",
-          "Fixing a simple bug, in any amount of time",
-          "Reading documentation to learn more",
+          ...technicalResponsibilitiesL0,
         ],
       },
       { // 1
@@ -271,8 +274,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL0,
         exampleResponsibilities: [
           "Making modifications to existing queries",
-          "Fixing a simple bug, in any amount of time",
-          "Reading documentation to learn more",
+          ...technicalResponsibilitiesL0,
         ],
       },
       { // 1
@@ -316,52 +318,6 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
       },
     ],  },
-  <TrackDefinition> {
-    track: Tracks.Mobile,
-    category: Categories.Technical,
-    description: "Making native apps and publishing them to app stores (iOS, Android, UWP, Xamarin, Swift, ObjectiveC, Java, Kotlin, C#)",
-    milestones: [
-      { // 0
-        summary: technicalSummaryL0,
-        exampleBehaviors: technicalBehaviorsL0,
-        exampleResponsibilities: [
-          "Changing the text on a page",
-          "Fixing a simple bug, in any amount of time",
-          "Reading documentation to learn more",
-        ],
-      },
-      { // 1
-        summary: technicalSummaryL1,
-        exampleBehaviors: technicalBehaviorsL1,
-        exampleResponsibilities: [
-        ],
-      },
-      { // 2
-        summary: technicalSummaryL2,
-        exampleBehaviors: technicalBehaviorsL1,
-        exampleResponsibilities: [
-        ],
-      },
-      { // 3
-        summary: technicalSummaryL3,
-        exampleBehaviors: technicalBehaviorsL3,
-        exampleResponsibilities: [
-        ],
-      },
-      { // 4
-        summary: technicalSummaryL4,
-        exampleBehaviors: technicalBehaviorsL4,
-        exampleResponsibilities: [
-        ],
-      },
-      { // 5
-        summary: technicalSummaryL5,
-        exampleBehaviors: technicalBehaviorsL5,
-        exampleResponsibilities: [
-        ],
-      },
-    ],
-  },
   <TrackDefinition> {
     track: Tracks.Testing,
     category: Categories.Technical,
@@ -428,7 +384,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL0,
         exampleResponsibilities: [
           "Running existing build pipelines from the instructions",
-          "Reading documentation to learn more",
+          ...technicalResponsibilitiesL0,
         ],
       },
       { // 1
@@ -487,7 +443,7 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: [
-          "Demonstrates an awareness of how most of the pieces of the system fit together"
+          "Demonstrates an awareness of how most of the pieces of the system fit together",
         ],
         exampleResponsibilities: [
           "Cross-boundary development stories",
@@ -497,7 +453,7 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: [
-          "Recommends and implements reasonable changes to system architecture"
+          "Recommends and implements reasonable changes to system architecture",
         ],
         exampleResponsibilities: [
           "Ambiguous tech debt resolution",
@@ -507,7 +463,7 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: [
-          "Leads design of entire parts of the system"
+          "Leads design of entire parts of the system",
         ],
         exampleResponsibilities: [
           "Advanced system design",
@@ -516,7 +472,7 @@ export const trackDefinitions: TrackDefinition[] = [
       { // 5
         summary: technicalSummaryL5,
         exampleBehaviors: [
-          "Demonstrates deep knowledge of architectural patterns"
+          "Demonstrates deep knowledge of architectural patterns",
         ],
         exampleResponsibilities: [
           "Overseeing application-wide architecture decisions",
@@ -530,10 +486,10 @@ export const trackDefinitions: TrackDefinition[] = [
     description: "Amount of output divided by time (purely subjective for now)",
     milestones: [
       { // 0
-        summary: "Lowest 15th percentile speed"
+        summary: "Lowest 15th percentile speed",
       },
       { // 1
-        summary: ">15th percentile speed"
+        summary: ">15th percentile speed",
       },
       { // 2
         summary: ">30th percentile speed",
@@ -555,10 +511,10 @@ export const trackDefinitions: TrackDefinition[] = [
     description: "Number of bugs and errors divided by amount of output (purely subjective for now)",
     milestones: [
       { // 0
-        summary: "Highest 15th percentile bugginess"
+        summary: "Highest 15th percentile bugginess",
       },
       { // 1
-        summary: "<85th percentile bugginess"
+        summary: "<85th percentile bugginess",
       },
       { // 2
         summary: "<70th percentile bugginess",
@@ -785,7 +741,7 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Actively participating in team meetings, including Product folks, to clarify requirements",
-          "Actively participating in performance discussions with your manager to clarify feedback or guidance"
+          "Actively participating in performance discussions with your manager to clarify feedback or guidance",
         ],
       },
       { // 3
@@ -850,7 +806,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Assumes positive intent in others",
         ],
         exampleResponsibilities: [
-          "Proactively reaches out to teammates who are newer or less senior to offer assistance or clarity",
+          "Reaching out to teammates who are newer or less senior to offer assistance or clarity",
         ],
       },
       { // 3
@@ -981,7 +937,6 @@ export const trackDefinitions: TrackDefinition[] = [
         ],
         exampleResponsibilities: [
           "Managing a team of 3+ direct reports",
-          ""
         ],
       },
       { // 3
