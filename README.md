@@ -36,7 +36,7 @@ In order to advance to the next `tier`, you must accumulate a certain number of 
 
 ##### Tracks & Categories
 
-Each track encapsulates a group of related skills, such as front-end development or communication skills.
+Each track encapsulates a group of related knowledge and abilities, such as front-end development or communication skills.
 
 The different tracks are grouped into a few high-level `categories`, such as technical skills. In addition to a points requirement, each level advancement requires that you achieve an increasingly high minimum number of points in every category. You can't truly achieve higher levels of effectivness if some of your skills are lagging too far behind.
 
@@ -46,13 +46,9 @@ The dedicated `management` track will not be relevant for non-managers. It is in
 
 ##### Milestones 
 
-A milestone rating should represent the abilities and behaviors a person can currently and consistently produce in a given track.
+A milestone rating should represent the skills and behaviors a person can currently and consistently produce in a given track.
 
-Having abilities that are _current_ does not necessarily require recent experience. Some engineers may not have worked on SQL for several years, but could still pick up a SQL task tomorrow at their previous level of proficiency; they should continue to be rated at their previous level of proven ability. Other engineers may be rusty after not using a skill for several years; they should be adjusted downward to match their current abilities.
-
-A milestone means _consistently_ demonstrating that level of proficiency. Many people will occasionally or sporadically demonstrate a level of proficiency one or two levels higher than they can produce reliably. No one is ever 100% perfect, but proving proficiency requires consistency.
-
-Milestones are defined from 0 to 5. The "base class" implementation of each level follow this progression:
+Milestones are defined from 0 to 5. The "base class" implementation of each level follows this progression:
 
 | Milestone | Skill Level            | Scope of Responsibility       |
 |:---------:|:-----------------------|:------------------------------|
@@ -63,15 +59,19 @@ Milestones are defined from 0 to 5. The "base class" implementation of each leve
 | 4         | Reliable leader        | Large team or milestone       |
 | 5         | Leader of leaders      | Entire organization           |
 
+Each milestone should build upon everything from all the levels below it. For example, a milestone 3 rating implies all of the skills and behaviors of milestones 1 and 2 as well.
+
 The examples provided in the tool are intended as an illustration -- not necessarily a checklist, and certainly not an exhustive list. When in doubt, use the chart above to give grounding to an evaluation.
 
-Each milestone should build upon everything from all the levels below it. For example, a milestone 3 rating implies all of the skills and abilities of milestones 1 and 2 as well.
+Having abilities that are _current_ does not necessarily require recent experience. Some engineers may not have worked on SQL for several years, but could still pick up a SQL task tomorrow at their previous level of proficiency; they should continue to be rated at their previous level of proven ability. Other engineers may be rusty after not using a skill for several years; they should be adjusted downward to match their current abilities.
+
+Demonstrating a milestone _consistently_ means that there have been no significant lapses during the last several months. No one is ever 100% perfect, but proving proficiency requires consistency. Many people will occasionally or sporadically demonstrate a level of proficiency one or two levels higher than they can produce reliably.
 
 For most tiers, the ratings of a well balanced team should form a normal distribution with a mode of around 2.5.
 
 ##### Tiers & Levels
 
-Each tier earns a salary increase, while each level earns a new title:
+Each tier earns a base salary increase, while each level earns a new title:
 
 | Level | Maker Track Title            | Manager Track Title        |
 |:-----:|:-----------------------------|:---------------------------|
@@ -96,7 +96,7 @@ For each track, share what milestone you each put for that track.
 * If the numbers are different by one, ask if there's anything that needs to be discussed. Many ratings could go either way ("I think I'm a 2 or 3, so I put 3") so there's often not any real disagreement here. Spend a minute or two naming the factors behind the rating and highlight why you each chose what you did.
 * If the numbers are different by two or more, this is a serious disconnect. However, it is normal for this to happen periodically, so resolve the misunderstanding as nonjudgmentally and objectively as possible. Spend several minutes reviewing the milestone definitions and discussing why each of you chose the milestone you did.
 
-At the end, look at the result and discuss whether it seems like a fair and accurate assessment. This tool is a work in progress, so be sure to ask whether it missed anything and take any critical feedback seriously.
+At the end, look at the final result and discuss whether it seems like a fair and accurate assessment. This tool is a work in progress, so be sure to ask whether it missed anything and take any critical feedback seriously.
 
 It can be helpful to look at the "error bars" as well. Any time you or the engineer is on the fence between two numbers during the evaluation, or your initial evaluations are different, write down both numbers. Then run one version of the evaluation where you always take the higher number, and one version where you always take the lower number. This exercise can help illustrate what someone's best or worst day looks like, or what someone's near-term potential is.
 
