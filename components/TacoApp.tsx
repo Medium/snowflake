@@ -13,6 +13,7 @@ import { Categories, Tracks, trackDefinitions } from '../types/definitions'
 import { emptyTracks, eligibleTitles, trackIds, milestoneToPoints, highestMilestone, levelFromMilestoneMap, totalPointsFromMilestoneMap, pointsToNextLevelFromMilestoneMap } from '../types/calculations'
 import NameInput from './NameInput'
 import Evaluation from '../types/evaluation'
+import Notes from './Notes'
 
 type TacoAppState = {
   milestoneByTrack: Map<Tracks, number>,
@@ -21,6 +22,7 @@ type TacoAppState = {
   title: string,
   totalPoints: number,
   pointsToNextLevel: number | undefined,
+  notes: string | undefined,
   focusedTrackId: Tracks,
 }
 
@@ -31,6 +33,7 @@ const emptyState = (): TacoAppState => {
     title: '',
     totalPoints: 0,
     pointsToNextLevel: 15,
+    notes: undefined,
     milestoneByTrack: emptyTracks,
     focusedTrackId: Tracks.Frontend
   }
@@ -107,6 +110,9 @@ class TacoApp extends React.Component<Props, TacoAppState> {
                 handleTrackMilestoneChangeFn={this.handleTrackMilestoneChange.bind(this)} />
           </div>
         </div>
+        <Notes
+            notes={this.state.notes}
+            setNotesFn={this.setNotes.bind(this)} />
         <TrackSelector
             milestoneByTrack={this.state.milestoneByTrack}
             focusedTrack={this.state.focusedTrackId}
@@ -173,6 +179,10 @@ class TacoApp extends React.Component<Props, TacoAppState> {
 
   setName(name: string) {
     this.setState({ name });
+  }
+
+  setNotes(notes: string) {
+    this.setState({ notes });
   }
 
   loadEvaluation(evaluation: Evaluation) {

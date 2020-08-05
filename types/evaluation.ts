@@ -20,5 +20,6 @@ export default class Evaluation {
     level: string | undefined;
     title: string | undefined;
     totalPoints: number | undefined;
+    notes: string | undefined;
     milestones: Array<[string, number]> | undefined;
 }
