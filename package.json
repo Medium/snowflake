@@ -5,10 +5,10 @@
   "repository": "https://github.com/Medium/eng-growth",
   "license": "MIT",
   "dependencies": {
-    "d3": "^4.11.0",
-    "next": "^7.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "d3": "^6.2.0",
+    "next": "^9.5.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "scripts": {
     "dev": "next",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "flow-bin": "^0.91.0"
+    "flow-bin": "^0.91.0",
+    "webpack-cli": "^4.1.0"
   }
 }
