@@ -392,24 +392,30 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: technicalBehaviorsL1,
         exampleResponsibilities: [
           "Debugging basic build errors",
+          "Knows how to read error logs"
         ],
       },
       { // 2
         summary: technicalSummaryL2,
         exampleBehaviors: technicalBehaviorsL2,
         exampleResponsibilities: [
+          "Has familiarity with setting up pipelines, automated jobs test suites. Has the ability to make small changes to configuration files."        
         ],
       },
       { // 3
         summary: technicalSummaryL3,
         exampleBehaviors: technicalBehaviorsL3,
         exampleResponsibilities: [
+          "Has good flexibility skills and is able to read and execute documentation from various dev ops infrastructure apps",
+          "Is able to implement a confuration file by looking at documentation",
+          "Has the ability to implement a new check or small feature inside of a given service."
         ],
       },
       { // 4
         summary: technicalSummaryL4,
         exampleBehaviors: technicalBehaviorsL4,
         exampleResponsibilities: [
+          
         ],
       },
       { // 5
@@ -539,13 +545,14 @@ export const trackDefinitions: TrackDefinition[] = [
         summary: "Guided",
         exampleBehaviors: [
           "Requires daily check-ins to stay on track",
+          "Has little to no sense of what work should come next"
         ],
       },
       { // 1
         summary: "Some guidance",
         exampleBehaviors: [
           "Requires periodic check-ins to stay on track",
-          "May ask for help too little and get stuck",
+          "May ask for help too little, get stuck and stays stuck for an extended period of time.",
           "May ask for help too much rather than working independently",
         ],
         exampleResponsibilities: [
@@ -612,6 +619,7 @@ export const trackDefinitions: TrackDefinition[] = [
         exampleBehaviors: [
           "Irregular punctuality for meetings",
           "Regular forgetfulness or disorganization",
+          "Tasks regularly get missed or forgotten due to lack of personal organization."
         ],
       },
       { // 1
@@ -620,6 +628,7 @@ export const trackDefinitions: TrackDefinition[] = [
           "Generally shows up to meetings on time",
           "Keeps and maintains basic documentation",
           "Does not routinely lose or misplace information",
+          "Irregularly takes notes or documents"
         ],
       },
       { // 2
