@@ -121,7 +121,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     if (state) {
       this.setState(state)
     } else {
-      this.setState(defaultState())
+      this.setState(emptyState())
     }
   }
 
@@ -156,8 +156,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
+          <a href="https://thndr.app/" target="_blank">
+            <img style={{width: '100%'}} src="https://thndr.app/static/greenLogo-7835b20c31a89b662f424859ef2f260e.png"/>
           </a>
         </div>
         <div style={{display: 'flex'}}>

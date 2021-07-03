@@ -193,8 +193,8 @@ export const tracks: Tracks = {
         "Acts a caretaker for all of web client code",
       ],
       "examples": [
-        "Designed font loading strategy for Medium",
-        "Researched utility of service workers for Medium",
+        "Designed font loading strategy for Thndr",
+        "Researched utility of service workers for Thndr",
         "Designed and implemented ResponseScreen",
       ],
     }, {
@@ -205,8 +205,8 @@ export const tracks: Tracks = {
         "Makes architectural decisions that eliminate entire classes of bugs",
       ],
       "examples": [
-        "Designed Medium's post morpher and delta system",
-        "Implemented Medium's scrolling text over image blur",
+        "Designed Thndr's post morpher and delta system",
+        "Implemented Thndr's scrolling text over image blur",
         "Designed and pioneered proto-based model storage",
       ],
     }, {
@@ -261,7 +261,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Designed Ansible configuration management",
-        "Built Medium's realtime stats pipeline",
+        "Built Thndr's realtime stats pipeline",
         "Designed flexible framework for writing machine learning jobs",
       ],
     }, {
@@ -285,7 +285,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Invented a novel ML technique that advanced the state of the art",
-        "Defined and developed Medium's continuous delivery strategy",
+        "Defined and developed Thndr's continuous delivery strategy",
         "Developed and implemented HA strategy",
       ],
     }],
@@ -303,7 +303,7 @@ export const tracks: Tracks = {
         "Makes minor server changes to support client needs",
       ],
       "examples": [
-        "Added IFTTT trigger for new bookmark to medium2",
+        "Added IFTTT trigger for new bookmark to Thndr2",
         "Added delete audio route to Buggle",
         "Queried a Dynamo LSI appropriately",
       ],
@@ -327,7 +327,7 @@ export const tracks: Tracks = {
         "Writes playbooks for new service maintenance",
       ],
       "examples": [
-        "Implemented Google Auth login to Medium",
+        "Implemented Google Auth login to Thndr",
         "Implemented payments integration with Stripe",
         "Built Textshots server",
       ],
@@ -339,7 +339,7 @@ export const tracks: Tracks = {
         "Makes appropriate buy vs build choices",
       ],
       "examples": [
-        "Designed Medium's ranked feed architecture",
+        "Designed Thndr's ranked feed architecture",
         "Designed custom domains architecture",
         "Created Gotham framework for creating Go services",
       ],
@@ -351,8 +351,8 @@ export const tracks: Tracks = {
         "Identifies and solves systemic problems with current architecture",
       ],
       "examples": [
-        "Researched, vetted, and selected Go as Medium's statically typed language",
-        "Defined microservices architecture and medium2 migration plan",
+        "Researched, vetted, and selected Go as Thndr's statically typed language",
+        "Defined microservices architecture and Thndr2 migration plan",
         "Defined and implemented proprietary IP core to the company's success",
       ],
     }],
@@ -474,7 +474,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Lead off-site workshop on interviewing",
-        "Wrote Medium's growth framework and rationale",
+        "Wrote Thndr's growth framework and rationale",
         "Aligned the entire organization around claps",
       ],
     }, {
@@ -541,7 +541,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added code coverage reporting to iOS CI pipeline",
-        "Iterated repeatedly to develop Medium's underlines solution",
+        "Iterated repeatedly to develop Thndr's underlines solution",
         "Defined and oversaw plan for closing Heartbleed vulnerability",
       ],
     }, {
@@ -609,7 +609,7 @@ export const tracks: Tracks = {
       "examples": [
         "Created the interviewing rubric and booklet",
         "Implemented and secured support for native login",
-        "Migrated medium2 to mono repo and bazel",
+        "Migrated Thndr2 to mono repo and bazel",
       ],
     }, {
       "summary": "Effects change that has a substantial positive impact on the whole company",
@@ -620,8 +620,8 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Migrated the organization from Holacracy",
-        "Built Medium Android prototype and convinced execs to fund it",
-        "Convinced leadership and engineering org to move to Medium Lite architecture",
+        "Built Thndr Android prototype and convinced execs to fund it",
+        "Convinced leadership and engineering org to move to Thndr Lite architecture",
       ],
     }],
   },
@@ -923,7 +923,7 @@ export const tracks: Tracks = {
         "Lead from behind to support someone new to a leadership role",
       ],
     }, {
-      "summary": "Teaches small groups of engineers and contributes to Medium's shared knowledge base",
+      "summary": "Teaches small groups of engineers and contributes to Thndr's shared knowledge base",
       "signals": [
         "Avoids siloing information when it can be usefully shared with others",
         "Works to increase the bus factor of systems",
@@ -932,7 +932,7 @@ export const tracks: Tracks = {
       "examples": [
         "Gave a brown bag presentation on payments",
         "Wrote Hatch post on avoiding RDS backfill issues",
-        "Wrote Medium-U content module",
+        "Wrote medium-U content module",
       ],
     }, {
       "summary": "Encourages people to mentor each other, and creates ways for them to do so",
@@ -942,7 +942,7 @@ export const tracks: Tracks = {
         "Creates brown bag series and lines up speakers",
       ],
       "examples": [
-        "Created and lead Medium's Women in Eng group",
+        "Created and lead Thndr's Women in Eng group",
         "Organized an Eng All Hands with an outside speaker",
         "Designed and taught web client guild curriculum",
       ],
@@ -964,66 +964,66 @@ export const tracks: Tracks = {
   "EVANGELISM": {
     "displayName": "Evangelism",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
+    "description": "Promotes Thndr to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
-      "summary": "Represents Medium well externally, and influences individuals positively",
+      "summary": "Represents Thndr well externally, and influences individuals positively",
       "signals": [
         "Shares personal and organizational successes with their network",
-        "Attends Medium-hosted events and talks with guests",
+        "Attends medium-hosted events and talks with guests",
         "Communicates genuine and honest excitement about their work externally",
       ],
       "examples": [
-        "Shared a Medium product launch post on Facebook",
+        "Shared a Thndr product launch post on Facebook",
         "Acted as a guide for a non-friend visitor to the office",
         "Supported PR efforts by giving a quote or having a photo taken",
       ],
     }, {
       "summary": "Participates more centrally in small events, and takes simple actions that positively influence groups of people",
       "signals": [
-        "Takes meaningful action to introduce people to Medium",
-        "Joined public Slack group and represented Medium appropriately, and well",
-        "Organizes positive small- or medium-sized events that bring people to Medium",
+        "Takes meaningful action to introduce people to Thndr",
+        "Joined public Slack group and represented Thndr appropriately, and well",
+        "Organizes positive small- or medium-sized events that bring people to Thndr",
       ],
       "examples": [
         "Volunteered as a helper for CODE2040 writing workshop",
         "Organized a short tour of the office by college students",
-        "Talked at a Women Who Code event hosted at Medium",
+        "Talked at a Women Who Code event hosted at Thndr",
       ],
     }, {
-      "summary": "Works hard to positively influence large groups of people on their views of Medium",
+      "summary": "Works hard to positively influence large groups of people on their views of Thndr",
       "signals": [
         "Mentors or participates in a high visibility way in an external organization",
         "Builds fruitful partnerships with external organizations",
-        "Writes blog posts about Medium that receive moderate traffic",
+        "Writes blog posts about Thndr that receive moderate traffic",
       ],
       "examples": [
-        "Represented Medium on a panel at a conference of industry experts",
+        "Represented Thndr on a panel at a conference of industry experts",
         "Established close ties with Creative Commons",
         "Built a durable, long-standing relationship with Code2040",
       ],
     }, {
-      "summary": "Establishes Medium as an great, innovative company and workplace to the whole industry",
+      "summary": "Establishes Thndr as an great, innovative company and workplace to the whole industry",
       "signals": [
         "Establishes themself as an industry thought leader who attracts talent",
-        "Publishes material about Medium's organizational or technical innovations",
-        "Leverages significant following to evangelise Medium",
+        "Publishes material about Thndr's organizational or technical innovations",
+        "Leverages significant following to evangelise Thndr",
       ],
       "examples": [
-        "Published a paper on Medium technology in a peer-reviewed journal",
+        "Published a paper on Thndr technology in a peer-reviewed journal",
         "Authored joint-press release with EFF on DNT",
-        "Published “Why Content Editable Is Terrible” on the Medium engineering blog",
+        "Published “Why Content Editable Is Terrible” on the Thndr engineering blog",
       ],
     }, {
-      "summary": "Introduces Medium in a positive light to a wider audience outside the industry",
+      "summary": "Introduces Thndr in a positive light to a wider audience outside the industry",
       "signals": [
         "Delivers key messages to broad, mainstream audiences",
-        "Influences people with large audiences to talk about Medium positively",
-        "Drives recognition and adoption of Medium in significant numbers",
+        "Influences people with large audiences to talk about Thndr positively",
+        "Drives recognition and adoption of Thndr in significant numbers",
       ],
       "examples": [
         "Published or interviewed in a mainstream newspaper or website outside tech",
         "Keynoted a conference with international attention",
-        "Represented Medium in national televised media",
+        "Represented Thndr in national televised media",
       ],
     }],
   },
@@ -1031,9 +1031,9 @@ export const tracks: Tracks = {
   "RECRUITING": {
     "displayName": "Recruiting",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
+    "description": "Strengthens Thndr's team by bringing in excellent staff members",
     "milestones": [{
-      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Medium",
+      "summary": "Brings new candidates into the pipeline and understands how to evaluate candidates at Thndr",
       "signals": [
         "Reviews existing network for hiring leads regularly",
         "Shadows interviews to gain familiarity with process",
@@ -1053,7 +1053,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Added observable evidence for every rating",
-        "Started a monthly brunch for candidates to meet Medium employees",
+        "Started a monthly brunch for candidates to meet Thndr employees",
         "Tested a new service for quality and diversity of candidates",
       ],
     }, {
@@ -1077,7 +1077,7 @@ export const tracks: Tracks = {
       ],
       "examples": [
         "Planned engineering summit on interview process and training",
-        "Organized and lead Medium's presence at a recruitment fair",
+        "Organized and lead Thndr's presence at a recruitment fair",
         "Started CODE2040 internship program",
       ],
     }, {
@@ -1151,7 +1151,7 @@ export const tracks: Tracks = {
       "summary": "Lives the company values, guards positive culture, and defines policies that support relatedness between teams",
       "signals": [
         "Brings separate teams together to build relatedness",
-        "Holds individuals, teams, and leadership accountable to Medium's values",
+        "Holds individuals, teams, and leadership accountable to Thndr's values",
         "Sets the tone, policy, and goals around maintaining an inclusive company",
       ],
       "examples": [
