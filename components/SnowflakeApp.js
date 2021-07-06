@@ -6,7 +6,7 @@ import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
+import { eligibleTitles, trackIds, milestones } from '../constants'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
@@ -57,15 +57,9 @@ const emptyState = (): SnowflakeAppState => {
       'PROJECT_MANAGEMENT': 0,
       'COMMUNICATION': 0,
       'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      'LEADERSHIP_INITIATIVE': 0,
+      'BUSINESS_ACUMEN': 0,
+      'ANALYTICAL_THINKING': 0
     },
     focusedTrackId: 'MOBILE'
   }
@@ -83,15 +77,9 @@ const defaultState = (): SnowflakeAppState => {
       'PROJECT_MANAGEMENT': 4,
       'COMMUNICATION': 1,
       'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'LEADERSHIP_INITIATIVE': 4,
+      'BUSINESS_ACUMEN': 0,
+      'ANALYTICAL_THINKING': 3,
     },
     focusedTrackId: 'MOBILE'
   }

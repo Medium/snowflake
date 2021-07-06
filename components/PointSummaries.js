@@ -1,47 +1,55 @@
 // @flow
 
-import { pointsToLevels, milestoneToPoints, trackIds, totalPointsFromMilestoneMap } from '../constants'
-import type { MilestoneMap } from '../constants'
-import React from 'react'
+import {
+  pointsToLevels,
+  totalPointsFromMilestoneMap,
+  maxLevel,
+} from "../constants";
+import type { MilestoneMap } from "../constants";
+import React from "react";
 
 type Props = {
-  milestoneByTrack: MilestoneMap
-}
+  milestoneByTrack: MilestoneMap,
+};
 
 class PointSummaries extends React.Component<Props> {
   render() {
-    const totalPoints = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
+    const totalPoints = totalPointsFromMilestoneMap(
+      this.props.milestoneByTrack
+    );
 
-    let currentLevel, nextLevel
+    let currentLevel, nextLevel;
 
-    let pointsForCurrentLevel = totalPoints
+    let pointsForCurrentLevel = 0;
     while (!(currentLevel = pointsToLevels[pointsForCurrentLevel])) {
-      pointsForCurrentLevel--
+      pointsForCurrentLevel--;
     }
 
-    let pointsToNextLevel = 1
-    while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
-      pointsToNextLevel++
-      if (pointsToNextLevel > 135) {
-        pointsToNextLevel = 'N/A'
-        break
+    let pointsToNextLevel = 1;
+    while (
+      !(nextLevel = pointsToLevels[Math.ceil(totalPoints + pointsToNextLevel)])
+    ) {
+      pointsToNextLevel++;
+      if (pointsToNextLevel > maxLevel) {
+        pointsToNextLevel = "N/A";
+        break;
       }
     }
 
     const blocks = [
       {
-        label: 'Current level',
-        value: currentLevel
+        label: "Current level",
+        value: currentLevel,
       },
       {
-        label: 'Total points',
-        value: totalPoints
+        label: "Total points",
+        value: totalPoints,
       },
       {
-        label: 'Points to next level',
-        value: pointsToNextLevel
-      }
-    ]
+        label: "Points to next level",
+        value: pointsToNextLevel,
+      },
+    ];
 
     return (
       <table>
@@ -69,23 +77,23 @@ class PointSummaries extends React.Component<Props> {
         `}</style>
         <tbody>
           <tr>
-          {blocks.map(({label}, i) => (
-            <th key={i} className="point-summary-label">
-              {label}
-            </th>
-          ))}
+            {blocks.map(({ label }, i) => (
+              <th key={i} className="point-summary-label">
+                {label}
+              </th>
+            ))}
           </tr>
           <tr>
-          {blocks.map(({value}, i) => (
-            <td key={i} className="point-summary-value">
-              {value}
-            </td>
-          ))}
+            {blocks.map(({ value }, i) => (
+              <td key={i} className="point-summary-value">
+                {value}
+              </td>
+            ))}
           </tr>
         </tbody>
       </table>
-    )
+    );
   }
 }
 
-export default PointSummaries
+export default PointSummaries;
