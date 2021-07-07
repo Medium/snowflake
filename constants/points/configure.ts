@@ -8,7 +8,7 @@ export const TRACK_WEIGHT_MAP: Record<TrackId, number | number[]> = {
   [TrackId.FOUNDATIONS]: 1,
   [TrackId.SERVERS]: 1,
   [TrackId.PROJECT_MANAGEMENT]: 1,
-  [TrackId.COMMUNICATION]: 0.5,
+  [TrackId.COMMUNICATION]: 1,
   [TrackId.CRAFT]: 1,
   [TrackId.LEADERSHIP_INITIATIVE]: 1,
   [TrackId.ANALYTICAL_THINKING]: 1,

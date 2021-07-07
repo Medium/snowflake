@@ -30,7 +30,7 @@ export const tracks: Record<TrackId, Track> = {
     category: CategoryId.BUILD,
     specialty: SpecialtyId.BE,
     description:
-      "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
+      "Develops expertise in server side engineering, using technologies such as Go, NodeJS, Python or Scala",
   },
 
   [TrackId.PROJECT_MANAGEMENT]: {
