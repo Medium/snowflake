@@ -13,5 +13,5 @@ export interface JobTitle {
   maxPoints: number;
   minSpecialtyPoints?: Partial<SpecialtyMap>;
   minCategoryPoints?: Partial<CategoryMap>;
-  minTrackMilestone?: Partial<MilestoneMap>;
+  trackMilestoneRecommendations?: Partial<MilestoneMap>;
 }

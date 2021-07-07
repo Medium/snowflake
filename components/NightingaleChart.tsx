@@ -71,7 +71,7 @@ class NightingaleChart extends React.Component<Props> {
             fill: #eee;
             cursor: pointer;
           }
-          .track-milestone__required {
+          .track-milestone__recommended {
             fill: #f3d2a6;
           }
           .track-milestone-current,
@@ -96,9 +96,10 @@ class NightingaleChart extends React.Component<Props> {
                     const isMet =
                       this.props.milestoneByTrack[trackId] >= milestone ||
                       milestone == 0;
-                    const isRequired =
+                    const isRecommended =
                       !isMet &&
-                      (title?.minTrackMilestone?.[trackId] ?? 0) >= milestone;
+                      (title?.trackMilestoneRecommendations?.[trackId] ?? 0) >=
+                        milestone;
                     return (
                       <path
                         key={milestone}
@@ -108,7 +109,7 @@ class NightingaleChart extends React.Component<Props> {
                           (isCurrentMilestone
                             ? "track-milestone-current"
                             : "") +
-                          (isRequired ? "track-milestone__required" : "")
+                          (isRecommended ? "track-milestone__recommended" : "")
                         }
                         onClick={() =>
                           this.props.handleTrackMilestoneChangeFn(
