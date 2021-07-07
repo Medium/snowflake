@@ -1,13 +1,8 @@
-// @flow
-
 import * as d3 from "d3";
-import {
-  pointsToLevels,
-  categoryPointsFromMilestoneMap,
-  categoryColorScale,
-} from "../constants";
+import { pointsToLevels, maxPoints } from "../constants/points/points";
 import React from "react";
-import type { MilestoneMap } from "../constants";
+import { MilestoneMap, categoryColorScale } from "../constants/tracks";
+import { categoryPointsFromMilestoneMap } from "../logic/categories";
 
 const margins = {
   top: 30,
@@ -19,22 +14,22 @@ const height = 150;
 const width = 550;
 
 type Props = {
-  milestoneByTrack: MilestoneMap,
+  milestoneByTrack: MilestoneMap;
 };
 
 class LevelThermometer extends React.Component<Props> {
   pointScale: any;
   topAxisFn: any;
   bottomAxisFn: any;
-  topAxis: *;
-  bottomAxis: *;
+  topAxis: any;
+  bottomAxis: any;
 
-  constructor(props: *) {
+  constructor(props) {
     super(props);
 
     this.pointScale = d3
       .scaleLinear()
-      .domain([0, 135])
+      .domain([0, maxPoints])
       .rangeRound([0, width - margins.left - margins.right]);
 
     this.topAxisFn = d3
@@ -63,14 +58,20 @@ class LevelThermometer extends React.Component<Props> {
       .call(this.bottomAxisFn)
       .selectAll("text")
       .attr("y", 0)
-      .attr("x", 10)
+      .attr("x", 100)
       .attr("transform", "rotate(90)")
       .attr("dy", ".35em")
       .style("font-size", "12px")
       .style("text-anchor", "start");
   }
 
-  rightRoundedRect(x: *, y: *, width: *, height: *, radius: *) {
+  rightRoundedRect(
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    radius: number
+  ) {
     return (
       "M" +
       x +

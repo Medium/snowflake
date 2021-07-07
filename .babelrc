@@ -1,7 +1,28 @@
 {
   "presets": [
-    "next/babel",
-    "@babel/preset-flow"
+    "next/babel"
   ],
-  "plugins": []
+  "plugins": [
+		[
+      "module-resolver",
+      {
+        "root": ["."],
+        "extensions": [
+          ".ios.ts",
+          ".android.ts",
+          ".ts",
+          ".ios.tsx",
+          ".android.tsx",
+          ".tsx",
+          ".jsx",
+          ".js",
+          ".json",
+        ],
+        "alias": {
+          "@": "."
+        },
+        "transformFunctions": ["resolvePath"],
+      }
+    ]
+	]
 }
