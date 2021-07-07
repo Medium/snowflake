@@ -1,7 +1,8 @@
 module.exports = {
-  exportPathMap: function() {
+  target: "serverless",
+  exportPathMap: function () {
     return {
-      '/': { page: '/' }
-    }
-  }
-}
+      "/": { page: "/" },
+    };
+  },
+};
