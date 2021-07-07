@@ -1,8 +1,4 @@
-import {
-  levelPointCap,
-  levelsToPoints,
-  maxPoints,
-} from "../constants/points/points";
+import { levelPointCap, levelsToPoints, maxPoints } from "../constants/points";
 import type { MilestoneMap } from "../constants/tracks/types";
 import React from "react";
 import { totalPointsFromMilestoneMap } from "../logic/points";

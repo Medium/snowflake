@@ -1,5 +1,5 @@
 import { estimateMinPoints } from "../../logic/points";
-import { levelsToPoints } from "../points/points";
+import { levelsToPoints } from "../points";
 import { CategoryId, TrackId } from "../tracks";
 import { JobFamily, JobTitle } from "./types";
 

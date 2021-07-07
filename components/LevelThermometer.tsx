@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { pointsToLevels, maxPoints } from "../constants/points/points";
+import { pointsToLevels, maxPoints } from "../constants/points";
 import React from "react";
 import { MilestoneMap, categoryColorScale } from "../constants/tracks";
 import { categoryPointsFromMilestoneMap } from "../logic/categories";

@@ -9,7 +9,7 @@ import {
 import {
   DEFAULT_MILESTONE_POINT_MAP,
   TRACK_WEIGHT_MAP,
-} from "../constants/points/static";
+} from "../constants/points/configure";
 
 export function totalPointsFromMilestoneMap(
   milestoneMap: MilestoneMap
