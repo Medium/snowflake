@@ -95,16 +95,10 @@ const Track: React.FC<Props> = function Track(props) {
         {currentMilestone ? (
           <div style={{ flex: 1 }}>
             <h3>{currentMilestone.summary}</h3>
-            <h4>Example behaviors:</h4>
+            <h4>Examples:</h4>
             <ul>
               {currentMilestone.signals.map((signal, i) => (
                 <li key={i}>{signal}</li>
-              ))}
-            </ul>
-            <h4>Example tasks:</h4>
-            <ul>
-              {currentMilestone.examples.map((example, i) => (
-                <li key={i}>{example}</li>
               ))}
             </ul>
           </div>

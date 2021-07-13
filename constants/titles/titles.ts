@@ -55,7 +55,7 @@ export const titles: JobTitle[] = [
     minPoints: levelsToPoints["1.1"],
     maxPoints: levelsToPoints["2.1"],
     trackMilestoneRecommendations: {
-      [TrackId.FOUNDATIONS]: 2,
+      [TrackId.DEV_OPS]: 2,
       [TrackId.SERVERS]: 2,
       [TrackId.PROJECT_MANAGEMENT]: 2,
       [TrackId.CRAFT]: 1,
@@ -69,7 +69,7 @@ export const titles: JobTitle[] = [
     trackMilestoneRecommendations: {
       [TrackId.MOBILE]: 2,
       [TrackId.WEB_CLIENT]: 2,
-      [TrackId.FOUNDATIONS]: 2,
+      [TrackId.DEV_OPS]: 2,
       [TrackId.SERVERS]: 2,
       [TrackId.PROJECT_MANAGEMENT]: 2,
       [TrackId.CRAFT]: 1,
@@ -124,7 +124,7 @@ export const titles: JobTitle[] = [
     minPoints: levelsToPoints["2.1"],
     maxPoints: levelsToPoints["3.1"],
     trackMilestoneRecommendations: {
-      [TrackId.FOUNDATIONS]: 2,
+      [TrackId.DEV_OPS]: 2,
       [TrackId.SERVERS]: 2,
       [TrackId.PROJECT_MANAGEMENT]: 2,
     },
@@ -135,7 +135,7 @@ export const titles: JobTitle[] = [
     minPoints: levelsToPoints["2.1"],
     maxPoints: levelsToPoints["3.1"],
     trackMilestoneRecommendations: {
-      [TrackId.FOUNDATIONS]: 3,
+      [TrackId.DEV_OPS]: 3,
       [TrackId.SERVERS]: 1,
       [TrackId.PROJECT_MANAGEMENT]: 2,
     },
@@ -148,7 +148,7 @@ export const titles: JobTitle[] = [
     trackMilestoneRecommendations: {
       [TrackId.MOBILE]: 2,
       [TrackId.WEB_CLIENT]: 2,
-      [TrackId.FOUNDATIONS]: 2,
+      [TrackId.DEV_OPS]: 2,
       [TrackId.SERVERS]: 2,
       [TrackId.PROJECT_MANAGEMENT]: 2,
     },

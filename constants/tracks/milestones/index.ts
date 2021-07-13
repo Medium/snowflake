@@ -3,7 +3,8 @@ import analyticalThinking from "./descriptions/analytical-thinking";
 import businessAcumen from "./descriptions/business-acumen";
 import communication from "./descriptions/communication";
 import craft from "./descriptions/craft";
-import foundations from "./descriptions/foundations";
+import devOps from "./descriptions/dev-ops";
+import SWE from "./descriptions/software-engineering";
 import mobile from "./descriptions/mobile";
 import projectManagement from "./descriptions/project-management";
 import servers from "./descriptions/servers";
@@ -15,12 +16,13 @@ export const milestoneDescriptions: Record<
   {
     summary: string;
     signals: string[];
-    examples: string[];
+    examples?: string[];
   }[]
 > = {
   [TrackId.MOBILE]: mobile,
   [TrackId.WEB_CLIENT]: webClient,
-  [TrackId.FOUNDATIONS]: foundations,
+  [TrackId.SOFTWARE_ENGINEERING]: devOps,
+  [TrackId.DEV_OPS]: SWE,
   [TrackId.SERVERS]: servers,
   [TrackId.PROJECT_MANAGEMENT]: projectManagement,
   [TrackId.COMMUNICATION]: communication,

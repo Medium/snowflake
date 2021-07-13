@@ -6,7 +6,6 @@ export default [
       "Accepts and understands the product requirements.",
       "Learns to use standard problem solving tools (aka profiler/debugger, system monitoring, incident management tools",
     ],
-    examples: [],
   },
   {
     summary:
@@ -16,7 +15,6 @@ export default [
       "Can find gaps in product requirements and suggest alternate views on the requirements",
       "Discovers and incorporates tacit requirements",
     ],
-    examples: [],
   },
   {
     summary:
@@ -27,6 +25,5 @@ export default [
       "Can analyze and suggest solutions to mitigate cross system issues",
       "provides guidance on how to proceed in solving complex problems",
     ],
-    examples: [],
   },
 ];

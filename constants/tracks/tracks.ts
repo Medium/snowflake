@@ -17,8 +17,15 @@ export const tracks: Record<TrackId, Track> = {
       "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
   },
 
-  [TrackId.FOUNDATIONS]: {
-    displayName: "Foundations",
+  [TrackId.SOFTWARE_ENGINEERING]: {
+    displayName: "Software Engineering",
+    category: CategoryId.BUILD,
+    specialty: SpecialtyId.BE,
+    description:
+      "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
+  },
+  [TrackId.DEV_OPS]: {
+    displayName: "DevOps",
     category: CategoryId.BUILD,
     specialty: SpecialtyId.BE,
     description:

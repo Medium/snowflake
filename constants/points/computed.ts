@@ -10,7 +10,8 @@ export const levelPointCap = estimateMinPoints(0, 0, MAX_TRACK_TARGET);
 export const maxPoints = totalPointsFromMilestoneMap({
   [TrackId.MOBILE]: 5,
   [TrackId.WEB_CLIENT]: 5,
-  [TrackId.FOUNDATIONS]: 5,
+  [TrackId.DEV_OPS]: 5,
+  [TrackId.SOFTWARE_ENGINEERING]: 5,
   [TrackId.SERVERS]: 5,
   [TrackId.PROJECT_MANAGEMENT]: 5,
   [TrackId.COMMUNICATION]: 5,
