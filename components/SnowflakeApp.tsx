@@ -94,15 +94,12 @@ const SnowflakeApp = function SnowflakeApp() {
   const setSpecialty = useCallback((specialties: SpecialtyId[]) => {
     setState({ specialties });
   }, []);
+
   const setMilestoneForTrack = useCallback(
     (trackId, milestone) => {
       const milestoneByTrack = state.milestoneByTrack;
       milestoneByTrack[trackId] = milestone;
-
-      const titles = eligibleTitles(milestoneByTrack, state.specialties);
-      const title = titles.includes(state.title) ? titles[0] : state.title;
-
-      setState({ milestoneByTrack, title });
+      setState({ milestoneByTrack });
     },
     [state]
   );
@@ -200,7 +197,10 @@ const SnowflakeApp = function SnowflakeApp() {
             milestoneByTrack={state.milestoneByTrack}
             specialties={state.specialties}
           />
-          <LevelThermometer milestoneByTrack={state.milestoneByTrack} />
+          <LevelThermometer
+            milestoneByTrack={state.milestoneByTrack}
+            specialties={state.specialties}
+          />
         </div>
         <div style={{ flex: 0 }}>
           <NightingaleChart

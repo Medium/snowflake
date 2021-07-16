@@ -19,7 +19,7 @@ const PointSummaries: React.FC<Props> = function PointSummaries(props) {
   Object.keys(levelsToPoints).some((level, index, levels) => {
     const currentPoints = levelsToPoints[level];
     const nextPoints = levelsToPoints[levels[index + 1]] ?? maxPoints;
-    if (currentPoints <= totalPoints && totalPoints <= nextPoints) {
+    if (currentPoints <= totalPoints && totalPoints < nextPoints) {
       currentLevel = level;
       if (totalPoints > levelPointCap) {
         pointsToNextLevel = "N/A";

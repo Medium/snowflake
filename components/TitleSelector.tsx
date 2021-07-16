@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { eligibleTitles } from "../logic/titles";
 import { MilestoneMap, SpecialtyId } from "../constants/tracks";
 import Select from "react-select";
@@ -22,9 +22,21 @@ const TitleSelector: React.FC<Props> = function TitleSelector({
     value,
     label: value,
   }));
-  const value = titles.find(({ value }) => (value = currentTitle));
+
+  const value = useMemo(
+    () => titles.find(({ value }) => value === currentTitle) || titles[0],
+    [titles, currentTitle]
+  );
+
+  // useEffect(() => {
+  //   if (value.value !== currentTitle) {
+  //     setTitleFn(value);
+  //   }
+  // }, [value]);
+
   return (
     <Select
+      instanceId="title"
       value={value}
       onChange={(option) => setTitleFn(option.value)}
       options={titles}

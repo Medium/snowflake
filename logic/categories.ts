@@ -1,10 +1,9 @@
 import {
   categoryTrackIds,
   MilestoneMap,
-  specialties,
   SpecialtyId,
 } from "../constants/tracks";
-import { milestoneToPoints, totalPointsFromMilestoneMap } from "./points";
+import { totalPointsFromMilestoneMap } from "./points";
 
 export function categoryPointsFromMilestoneMap(
   milestoneMap: MilestoneMap,

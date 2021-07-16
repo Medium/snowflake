@@ -1,7 +1,11 @@
 import * as d3 from "d3";
 import { pointsToLevels, maxPoints } from "../constants/points";
 import React from "react";
-import { MilestoneMap, categoryColorScale } from "../constants/tracks";
+import {
+  MilestoneMap,
+  categoryColorScale,
+  SpecialtyId,
+} from "../constants/tracks";
 import { categoryPointsFromMilestoneMap } from "../logic/categories";
 
 const margins = {
@@ -15,6 +19,7 @@ const width = 550;
 
 type Props = {
   milestoneByTrack: MilestoneMap;
+  specialties: SpecialtyId[];
 };
 
 class LevelThermometer extends React.Component<Props> {
@@ -58,7 +63,7 @@ class LevelThermometer extends React.Component<Props> {
       .call(this.bottomAxisFn)
       .selectAll("text")
       .attr("y", 0)
-      .attr("x", 100)
+      .attr("x", 10)
       .attr("transform", "rotate(90)")
       .attr("dy", ".35em")
       .style("font-size", "12px")
@@ -104,7 +109,8 @@ class LevelThermometer extends React.Component<Props> {
   }
   render() {
     let categoryPoints = categoryPointsFromMilestoneMap(
-      this.props.milestoneByTrack
+      this.props.milestoneByTrack,
+      this.props.specialties
     );
     let lastCategoryIndex = 0;
     categoryPoints.forEach((categoryPoint, i) => {

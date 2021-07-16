@@ -25,6 +25,7 @@ const SpecialtySelector: React.FC<Props> = function SpecialtySelector(props) {
   );
   return (
     <Select
+      instanceId="specialty"
       placeholder="Specialty"
       options={specialties}
       value={values}
