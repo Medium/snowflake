@@ -28,12 +28,6 @@ const TitleSelector: React.FC<Props> = function TitleSelector({
     [titles, currentTitle]
   );
 
-  // useEffect(() => {
-  //   if (value.value !== currentTitle) {
-  //     setTitleFn(value);
-  //   }
-  // }, [value]);
-
   return (
     <Select
       instanceId="title"

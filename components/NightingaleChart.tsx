@@ -111,8 +111,8 @@ const NightingaleChart: React.FC<Props> = function NightingaleChart({
                           "track-milestone " +
                           (isMet ? "is-met " : " ") +
                           (isCurrentMilestone
-                            ? "track-milestone-current"
-                            : "") +
+                            ? "track-milestone-current "
+                            : " ") +
                           (isRecommended ? "track-milestone__recommended" : "")
                         }
                         onClick={() =>
@@ -138,7 +138,7 @@ const NightingaleChart: React.FC<Props> = function NightingaleChart({
                   className={
                     "track-milestone " +
                     (isCurrentTrack && !currentMilestoneId
-                      ? "track-milestone-current"
+                      ? "track-milestone-current "
                       : "")
                   }
                   onClick={() => handleTrackMilestoneChangeFn(trackId, 0)}
