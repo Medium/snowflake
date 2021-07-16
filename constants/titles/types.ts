@@ -6,9 +6,10 @@ export enum JobFamily {
   "PE" = "Product",
 }
 
-export interface JobTitle {
+export interface Job {
   label: string;
   family: JobFamily;
+  level: number;
   minPoints: number;
   maxPoints: number;
   minSpecialtyPoints?: Partial<SpecialtyMap>;

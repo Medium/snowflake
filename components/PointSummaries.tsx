@@ -1,14 +1,18 @@
 import { levelPointCap, levelsToPoints, maxPoints } from "../constants/points";
-import type { MilestoneMap } from "../constants/tracks/types";
+import type { MilestoneMap, SpecialtyId } from "../constants/tracks/types";
 import React from "react";
 import { totalPointsFromMilestoneMap } from "../logic/points";
 
 type Props = {
   milestoneByTrack: MilestoneMap;
+  specialties?: SpecialtyId[];
 };
 
 const PointSummaries: React.FC<Props> = function PointSummaries(props) {
-  const totalPoints = totalPointsFromMilestoneMap(props.milestoneByTrack);
+  const totalPoints = totalPointsFromMilestoneMap(
+    props.milestoneByTrack,
+    props.specialties
+  );
 
   let currentLevel, pointsToNextLevel;
 

@@ -1,41 +1,47 @@
-// @flow
-
 import TrackSelector from "./TrackSelector";
+import SpecialtySelector from "./SpecialtySelector";
 import NightingaleChart from "./NightingaleChart";
-import KeyboardListener from "./KeyboardListener";
 import Track from "./Track";
 import LevelThermometer from "./LevelThermometer";
-import { TrackId } from "../constants/tracks";
+import { SpecialtyId, TrackId } from "../constants/tracks";
 import PointSummaries from "./PointSummaries";
 import { Milestone, MilestoneMap, trackIds } from "../constants/tracks";
-import React from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useState,
+} from "react";
 import TitleSelector from "./TitleSelector";
 import { eligibleTitles } from "../logic/titles";
+import { getTracksWithSpecialties } from "../logic/tracks";
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap;
   name: string;
   title: string;
-  focusedTrackId: TrackId;
+  specialties: SpecialtyId[];
 };
 
 const hashToState = (hash: string): SnowflakeAppState => {
-  if (!hash) return null;
-  const result = defaultState();
-  const hashValues = hash.split("#")[1].split(",");
-  if (!hashValues) return null;
-  trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = Number(hashValues[i]) as Milestone;
-  });
-  if (hashValues[16]) result.name = decodeURI(hashValues[16]);
-  if (hashValues[17]) result.title = decodeURI(hashValues[17]);
-  return result;
+  const state = emptyState();
+  if (!hash) return state;
+  try {
+    const hashValue = hash.split("#")[1] || btoa("{}");
+    const hashState = JSON.parse(atob(hashValue));
+    Object.assign(state, hashState);
+    return state;
+  } catch {
+    return state;
+  }
 };
 
 const emptyState = (): SnowflakeAppState => {
   return {
     name: "",
     title: "",
+    specialties: [],
     milestoneByTrack: {
       MOBILE: 0,
       WEB_CLIENT: 0,
@@ -47,196 +53,254 @@ const emptyState = (): SnowflakeAppState => {
       CRAFT: 0,
       LEADERSHIP_INITIATIVE: 0,
       BUSINESS_ACUMEN: 0,
-      ANALYTICAL_THINKING: 0,
+      INTELLIGENCE_WISDOM: 0,
     },
-    focusedTrackId: TrackId.MOBILE,
-  };
-};
-
-const defaultState = (): SnowflakeAppState => {
-  return {
-    name: "Cersei Lannister",
-    title: "Staff Engineer",
-    milestoneByTrack: {
-      MOBILE: 1,
-      WEB_CLIENT: 2,
-      FOUNDATIONS: 3,
-      SERVERS: 2,
-      PROJECT_MANAGEMENT: 4,
-      COMMUNICATION: 1,
-      CRAFT: 1,
-      LEADERSHIP_INITIATIVE: 4,
-      BUSINESS_ACUMEN: 0,
-      ANALYTICAL_THINKING: 3,
-    },
-    focusedTrackId: TrackId.MOBILE,
   };
 };
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null;
-  const values = trackIds
-    .map<string>((trackId) => String(state.milestoneByTrack[trackId]))
-    .concat(encodeURI(state.name), encodeURI(state.title));
-  return values.join(",");
+  const query = { ...state };
+  return btoa(JSON.stringify(query));
 };
 
-type Props = {};
+const simpleStateReducer = (
+  oldState: SnowflakeAppState,
+  newState: Partial<SnowflakeAppState>
+) => ({
+  ...oldState,
+  ...newState,
+});
 
-class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
-  constructor(props: Props) {
-    super(props);
-    this.state = emptyState();
-  }
+const initialState = emptyState();
 
-  componentDidUpdate() {
-    const hash = stateToHash(this.state);
-    if (hash) window.location.replace(`#${hash}`);
-  }
+const SnowflakeApp = function SnowflakeApp() {
+  const [state, setState] = useReducer(simpleStateReducer, initialState);
 
-  componentDidMount() {
-    const state = hashToState(window.location.hash);
-    if (state) {
-      this.setState(state);
-    } else {
-      this.setState(emptyState());
+  const [canUpdateState, setCanUpdateState] = useState<boolean>(false);
+
+  const accountedTracks = useMemo(
+    () => getTracksWithSpecialties(state.specialties),
+    [state.specialties]
+  );
+
+  const setTitle = useCallback(
+    (title: string) => {
+      setState({ title });
+    },
+    [state]
+  );
+
+  const setSpecialty = useCallback((specialties: SpecialtyId[]) => {
+    setState({ specialties });
+  }, []);
+  const setMilestoneForTrack = useCallback(
+    (trackId, milestone) => {
+      const milestoneByTrack = state.milestoneByTrack;
+      milestoneByTrack[trackId] = milestone;
+
+      const titles = eligibleTitles(milestoneByTrack, state.specialties);
+      const title = titles.includes(state.title) ? titles[0] : state.title;
+
+      setState({ milestoneByTrack, title });
+    },
+    [state]
+  );
+  const getMilestoneForTrack = useCallback(
+    (trackId) => {
+      const milestoneByTrack = state.milestoneByTrack;
+      return milestoneByTrack[trackId];
+    },
+    [state]
+  );
+
+  const { focusedTrackId, handleTrackMilestoneChange, setFocusedTrackId } =
+    useFocusedTrack({
+      trackIds: accountedTracks,
+      getMilestoneForTrack,
+      setMilestoneForTrack,
+    });
+
+  useEffect(() => {
+    if (canUpdateState) {
+      const hash = stateToHash(state);
+      if (hash) window.location.replace(`#${hash}`);
     }
-  }
+  }, [state, canUpdateState]);
 
-  render() {
-    return (
-      <main>
-        <style jsx global>{`
-          body {
-            font-family: Helvetica;
-          }
-          main {
-            width: 960px;
-            margin: 0 auto;
-          }
-          .name-input {
-            border: none;
-            display: block;
-            border-bottom: 2px solid #fff;
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 380px;
-            margin-bottom: 10px;
-          }
-          .name-input:hover,
-          .name-input:focus {
-            border-bottom: 2px solid #ccc;
-            outline: 0;
-          }
-          a {
-            color: #888;
-            text-decoration: none;
-          }
-        `}</style>
-        <div style={{ margin: "19px auto 0", width: 142 }}>
-          <a href="https://thndr.app/" target="_blank">
-            <img
-              style={{ width: "100%" }}
-              src="https://thndr.app/static/greenLogo-7835b20c31a89b662f424859ef2f260e.png"
-            />
-          </a>
-        </div>
-        <div style={{ display: "flex" }}>
-          <div style={{ flex: 1 }}>
-            <form>
-              <input
-                type="text"
-                className="name-input"
-                value={this.state.name}
-                onChange={(e) => this.setState({ name: e.target.value })}
-                placeholder="Name"
-              />
-              <TitleSelector
-                milestoneByTrack={this.state.milestoneByTrack}
-                currentTitle={this.state.title}
-                setTitleFn={(title) => this.setTitle(title)}
-              />
-            </form>
-            <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
-            <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
-          </div>
-          <div style={{ flex: 0 }}>
-            <NightingaleChart
-              milestoneByTrack={this.state.milestoneByTrack}
-              focusedTrackId={this.state.focusedTrackId}
-              selectedTitle={this.state.title}
-              handleTrackMilestoneChangeFn={(track, milestone) =>
-                this.handleTrackMilestoneChange(track, milestone)
-              }
-            />
-          </div>
-        </div>
-        <TrackSelector
-          milestoneByTrack={this.state.milestoneByTrack}
-          focusedTrackId={this.state.focusedTrackId}
-          setFocusedTrackIdFn={this.setFocusedTrackId.bind(this)}
-        />
-        <KeyboardListener
-          selectNextTrackFn={this.shiftFocusedTrack.bind(this, 1)}
-          selectPrevTrackFn={this.shiftFocusedTrack.bind(this, -1)}
-          increaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(
-            this,
-            1
-          )}
-          decreaseFocusedMilestoneFn={this.shiftFocusedTrackMilestoneByDelta.bind(
-            this,
-            -1
-          )}
-        />
-        <Track
-          milestoneByTrack={this.state.milestoneByTrack}
-          trackId={this.state.focusedTrackId}
-          handleTrackMilestoneChangeFn={(track, milestone) =>
-            this.handleTrackMilestoneChange(track, milestone)
-          }
-        />
-      </main>
+  useEffect(() => {
+    setState(
+      hashToState(
+        typeof window === "undefined" ? undefined : window.location.hash
+      )
     );
-  }
+    setCanUpdateState(true);
+  }, []);
 
-  handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
-    const milestoneByTrack = this.state.milestoneByTrack;
-    milestoneByTrack[trackId] = milestone;
+  return (
+    <main>
+      <style jsx global>{`
+        body {
+          font-family: Helvetica;
+        }
+        main {
+          width: 960px;
+          margin: 0 auto;
+        }
+        .name-input {
+          border: none;
+          display: block;
+          border-bottom: 2px solid #fff;
+          font-size: 30px;
+          line-height: 40px;
+          font-weight: bold;
+          width: 380px;
+          margin-bottom: 10px;
+        }
+        .name-input:hover,
+        .name-input:focus {
+          border-bottom: 2px solid #ccc;
+          outline: 0;
+        }
+        a {
+          color: #888;
+          text-decoration: none;
+        }
+      `}</style>
+      <div style={{ margin: "19px auto 0", width: 142 }}>
+        <a href="https://thndr.app/" target="_blank">
+          <img
+            style={{ width: "100%" }}
+            src="https://thndr.app/static/greenLogo-7835b20c31a89b662f424859ef2f260e.png"
+          />
+        </a>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div style={{ flex: 1 }}>
+          <form>
+            <input
+              type="text"
+              className="name-input"
+              value={state.name}
+              onChange={(e) => setState({ name: e.target.value })}
+              placeholder="Name"
+            />
+            <TitleSelector
+              milestoneByTrack={state.milestoneByTrack}
+              specialties={state.specialties}
+              currentTitle={state.title}
+              setTitleFn={(title) => setTitle(title)}
+            />
+            <SpecialtySelector
+              specialties={state.specialties}
+              setSpecialtyFn={setSpecialty}
+            />
+          </form>
+          <PointSummaries
+            milestoneByTrack={state.milestoneByTrack}
+            specialties={state.specialties}
+          />
+          <LevelThermometer milestoneByTrack={state.milestoneByTrack} />
+        </div>
+        <div style={{ flex: 0 }}>
+          <NightingaleChart
+            milestoneByTrack={state.milestoneByTrack}
+            focusedTrackId={focusedTrackId}
+            title={state.title}
+            accountedTracks={accountedTracks}
+            handleTrackMilestoneChangeFn={(track, milestone) =>
+              handleTrackMilestoneChange(track, milestone)
+            }
+          />
+        </div>
+      </div>
+      <TrackSelector
+        milestoneByTrack={state.milestoneByTrack}
+        focusedTrackId={focusedTrackId}
+        accountedTracks={accountedTracks}
+        setFocusedTrackIdFn={setFocusedTrackId}
+      />
+      <Track
+        milestoneByTrack={state.milestoneByTrack}
+        trackId={focusedTrackId}
+        handleTrackMilestoneChangeFn={(track, milestone) =>
+          handleTrackMilestoneChange(track, milestone)
+        }
+      />
+    </main>
+  );
+};
 
-    const titles = eligibleTitles(milestoneByTrack);
-    const title =
-      titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title;
+export default SnowflakeApp;
 
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title });
-  }
+function useFocusedTrack({
+  trackIds,
+  getMilestoneForTrack,
+  setMilestoneForTrack,
+}) {
+  const [focusedTrackId, setFocusedTrackId] = useState<TrackId>(
+    TrackId.SOFTWARE_ENGINEERING
+  );
 
-  shiftFocusedTrack(delta: number) {
-    let index = trackIds.indexOf(this.state.focusedTrackId);
-    index = (index + delta + trackIds.length) % trackIds.length;
-    const focusedTrackId = trackIds[index];
-    this.setState({ focusedTrackId });
-  }
-
-  setFocusedTrackId(trackId: TrackId) {
+  function shiftFocusedTrack(trackId: TrackId, delta: number) {
     let index = trackIds.indexOf(trackId);
-    const focusedTrackId = trackIds[index];
-    this.setState({ focusedTrackId });
+    index = (index + delta + trackIds.length) % trackIds.length;
+    setFocusedTrackId(trackIds[index]);
   }
 
-  shiftFocusedTrackMilestoneByDelta(delta: number) {
-    let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId];
+  function shiftFocusedTrackMilestoneByDelta(trackId: TrackId, delta: number) {
+    let prevMilestone = getMilestoneForTrack(trackId);
     let milestone = (prevMilestone + delta) as Milestone;
     if (milestone < 0) milestone = 0;
     if (milestone > 5) milestone = 5;
-    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone);
+    handleTrackMilestoneChange(trackId, milestone);
   }
+  useKeyboardListener({
+    trackId: focusedTrackId,
+    shiftFocusedTrack,
+    shiftFocusedTrackMilestoneByDelta,
+  });
 
-  setTitle(title: string) {
-    let titles = eligibleTitles(this.state.milestoneByTrack);
-    title = titles.indexOf(title) == -1 ? titles[0] : title;
-    this.setState({ title });
-  }
+  const handleTrackMilestoneChange = (
+    trackId: TrackId,
+    milestone: Milestone
+  ) => {
+    setMilestoneForTrack(trackId, milestone);
+    setFocusedTrackId(trackId);
+  };
+
+  return {
+    focusedTrackId,
+    handleTrackMilestoneChange,
+    setFocusedTrackId,
+  };
 }
 
-export default SnowflakeApp;
+function useKeyboardListener(props: {
+  trackId: TrackId;
+  shiftFocusedTrackMilestoneByDelta: (trackId: TrackId, delta: number) => void;
+  shiftFocusedTrack: (trackId: TrackId, delta: number) => void;
+}) {
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown, { capture: false });
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [props.trackId]);
+  const handleKeyDown = (e: KeyboardEvent) => {
+    switch (e.code) {
+      case "ArrowUp":
+        props.shiftFocusedTrackMilestoneByDelta(props.trackId, 1);
+        e.preventDefault();
+        break;
+      case "ArrowRight":
+        props.shiftFocusedTrack(props.trackId, 1);
+        break;
+      case "ArrowDown":
+        props.shiftFocusedTrackMilestoneByDelta(props.trackId, -1);
+        e.preventDefault();
+        break;
+      case "ArrowLeft":
+        props.shiftFocusedTrack(props.trackId, -1);
+        break;
+    }
+  };
+}

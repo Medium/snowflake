@@ -1,11 +1,14 @@
-import { JobTitle, titles } from "../constants/titles";
-import { MilestoneMap } from "../constants/tracks";
+import { Job, jobs } from "../constants/titles";
+import { MilestoneMap, SpecialtyId } from "../constants/tracks";
 import { totalPointsFromMilestoneMap } from "./points";
 
-export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap);
+export const eligibleTitles = (
+  milestoneMap: MilestoneMap,
+  specialties: SpecialtyId[] = []
+): string[] => {
+  const totalPoints = totalPointsFromMilestoneMap(milestoneMap, specialties);
 
-  return Object.values(titles)
+  return Object.values(jobs)
     .filter(
       (title) =>
         (title.minPoints === undefined || totalPoints >= title.minPoints) &&
@@ -14,6 +17,6 @@ export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
     .map((title) => title.label);
 };
 
-export const getTitleByLabel = (label: string): JobTitle => {
-  return titles.find((title) => title.label === label);
+export const getTitleByLabel = (label: string): Job => {
+  return jobs.find((title) => title.label === label);
 };

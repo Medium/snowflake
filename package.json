@@ -5,10 +5,14 @@
   "repository": "https://github.com/thndrapp/snowflake",
   "license": "MIT",
   "dependencies": {
+    "@types/react-select": "^4.0.17",
     "d3": "^4.11.0",
     "next": "^9.0.7",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-markdown": "^6.0.2",
+    "react-select": "^4.3.1",
+    "remark-gfm": "^1.0.0"
   },
   "scripts": {
     "dev": "next",

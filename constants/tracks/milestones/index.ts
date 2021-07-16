@@ -1,5 +1,5 @@
 import leadershipInitiative from "./descriptions/leadership-initiative";
-import analyticalThinking from "./descriptions/analytical-thinking";
+import intelligenceWisdom from "./descriptions/intelligence-wisdom";
 import businessAcumen from "./descriptions/business-acumen";
 import communication from "./descriptions/communication";
 import craft from "./descriptions/craft";
@@ -15,20 +15,20 @@ export const milestoneDescriptions: Record<
   TrackId,
   {
     summary: string;
-    signals: string[];
-    examples?: string[];
+    signals: string;
+    examples?: string;
   }[]
 > = {
   [TrackId.MOBILE]: mobile,
   [TrackId.WEB_CLIENT]: webClient,
-  [TrackId.SOFTWARE_ENGINEERING]: devOps,
-  [TrackId.DEV_OPS]: SWE,
+  [TrackId.SOFTWARE_ENGINEERING]: SWE,
+  [TrackId.DEV_OPS]: devOps,
   [TrackId.SERVERS]: servers,
   [TrackId.PROJECT_MANAGEMENT]: projectManagement,
   [TrackId.COMMUNICATION]: communication,
   [TrackId.CRAFT]: craft,
   [TrackId.LEADERSHIP_INITIATIVE]: leadershipInitiative,
-  [TrackId.ANALYTICAL_THINKING]: analyticalThinking,
+  [TrackId.INTELLIGENCE_WISDOM]: intelligenceWisdom,
   [TrackId.BUSINESS_ACUMEN]: businessAcumen,
 };
 

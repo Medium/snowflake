@@ -1,24 +1,21 @@
 import {
-  categoryIds,
+  categoryTrackIds,
   MilestoneMap,
-  trackIds,
-  tracks,
+  specialties,
+  SpecialtyId,
 } from "../constants/tracks";
-import { milestoneToPoints } from "./points";
+import { milestoneToPoints, totalPointsFromMilestoneMap } from "./points";
 
-export function categoryPointsFromMilestoneMap(milestoneMap: MilestoneMap) {
-  let pointsByCategory = new Map();
-  trackIds.forEach((trackId) => {
-    const milestone = milestoneMap[trackId];
-    const categoryId = tracks[trackId].category;
-    let currentPoints = pointsByCategory.get(categoryId) || 0;
-    pointsByCategory.set(
-      categoryId,
-      currentPoints + milestoneToPoints(milestone, trackId)
+export function categoryPointsFromMilestoneMap(
+  milestoneMap: MilestoneMap,
+  specialties: SpecialtyId[] = []
+) {
+  return categoryTrackIds.map(({ categoryId, trackIds }) => {
+    const points = totalPointsFromMilestoneMap(
+      milestoneMap,
+      specialties,
+      trackIds
     );
-  });
-  return Array.from(categoryIds.values()).map((categoryId) => {
-    const points = pointsByCategory.get(categoryId) || 0;
     return { categoryId, points };
   });
 }

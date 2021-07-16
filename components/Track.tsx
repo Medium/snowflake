@@ -8,6 +8,8 @@ import {
   milestoneDescriptions,
   milestones,
 } from "../constants/tracks";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 type Props = {
   milestoneByTrack: MilestoneMap;
@@ -95,12 +97,11 @@ const Track: React.FC<Props> = function Track(props) {
         {currentMilestone ? (
           <div style={{ flex: 1 }}>
             <h3>{currentMilestone.summary}</h3>
-            <h4>Examples:</h4>
-            <ul>
-              {currentMilestone.signals.map((signal, i) => (
-                <li key={i}>{signal}</li>
-              ))}
-            </ul>
+            <h4>Signals:</h4>
+            <ReactMarkdown
+              remarkPlugins={[[gfm]]}
+              children={currentMilestone.signals}
+            />
           </div>
         ) : null}
       </div>

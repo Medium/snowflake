@@ -1,37 +1,35 @@
 // @flow
 
-import React from "react";
+import React, { useCallback } from "react";
 import { eligibleTitles } from "../logic/titles";
-import { MilestoneMap } from "../constants/tracks";
+import { MilestoneMap, SpecialtyId } from "../constants/tracks";
+import Select from "react-select";
 
 type Props = {
   milestoneByTrack: MilestoneMap;
+  specialties: SpecialtyId[];
   currentTitle: string;
   setTitleFn: (string) => void;
 };
 
-class TitleSelector extends React.Component<Props> {
-  render() {
-    const titles = eligibleTitles(this.props.milestoneByTrack);
-    return (
-      <select
-        value={this.props.currentTitle}
-        onChange={(e) => this.props.setTitleFn(e.target.value)}
-      >
-        <style jsx>{`
-          select {
-            font-size: 20px;
-            line-height: 20px;
-            margin-bottom: 20px;
-            min-width: 300px;
-          }
-        `}</style>
-        {titles.map((title) => (
-          <option key={title}>{title}</option>
-        ))}
-      </select>
-    );
-  }
-}
+const TitleSelector: React.FC<Props> = function TitleSelector({
+  currentTitle,
+  milestoneByTrack,
+  specialties,
+  setTitleFn,
+}) {
+  const titles = eligibleTitles(milestoneByTrack, specialties).map((value) => ({
+    value,
+    label: value,
+  }));
+  const value = titles.find(({ value }) => (value = currentTitle));
+  return (
+    <Select
+      value={value}
+      onChange={(option) => setTitleFn(option.value)}
+      options={titles}
+    />
+  );
+};
 
 export default TitleSelector;

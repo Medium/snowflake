@@ -1,21 +1,57 @@
 import {
+  buildSpecialtyIds,
+  excludingBuildSpecialtyTrackIds,
   Milestone,
   MilestoneMap,
   milestones,
+  SpecialtyId,
   TrackId,
   trackIds,
 } from "../constants/tracks";
 
 import {
   DEFAULT_MILESTONE_POINT_MAP,
+  SPECIALTY_POINT_MAP,
   TRACK_WEIGHT_MAP,
 } from "../constants/points/configure";
+import { getTracksWithSpecialties, include } from "./tracks";
 
 export function totalPointsFromMilestoneMap(
-  milestoneMap: MilestoneMap
+  milestoneMap: MilestoneMap,
+  specialties: SpecialtyId[] = [],
+  ids: TrackId[] = trackIds
 ): number {
-  return trackIds
-    .map((trackId) => milestoneToPoints(milestoneMap[trackId], trackId))
+  const specialtyPoints = sumSpecialtyPoints(
+    milestoneMap,
+    specialties,
+    include(buildSpecialtyIds, ids)
+  );
+
+  const mainTrackPoints = sumPoints(
+    milestoneMap,
+    include(excludingBuildSpecialtyTrackIds, ids)
+  );
+
+  return mainTrackPoints + specialtyPoints;
+}
+
+function sumSpecialtyPoints(
+  milestoneMap: MilestoneMap,
+  specialties: SpecialtyId[] = [],
+  ids: TrackId[] = buildSpecialtyIds
+) {
+  let specialtyIds = getTracksWithSpecialties(specialties, ids);
+  specialtyIds = specialtyIds.sort((a, b) => milestoneMap[b] - milestoneMap[a]);
+  const specialtyMilestones = specialtyIds.map((id) => milestoneMap[id]);
+
+  return specialtyMilestones
+    .map((m, index) => SPECIALTY_POINT_MAP?.[index]?.[m] ?? 0)
+    .reduce((sum, addend) => sum + addend, 0);
+}
+
+function sumPoints(milestoneMap: MilestoneMap, ids: TrackId[]) {
+  return ids
+    .map((id) => milestoneToPoints(milestoneMap[id], id))
     .reduce((sum, addend) => sum + addend, 0);
 }
 

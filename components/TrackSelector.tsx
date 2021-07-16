@@ -3,13 +3,13 @@ import {
   MilestoneMap,
   TrackId,
   tracks,
-  trackIds,
   categoryColorScale,
 } from "../constants/tracks";
 
 type Props = {
   milestoneByTrack: MilestoneMap;
   focusedTrackId: TrackId;
+  accountedTracks: TrackId[];
   setFocusedTrackIdFn: (TrackId) => void;
 };
 
@@ -42,7 +42,7 @@ const TrackSelector: React.FC<Props> = function TrackSelector(props) {
       `}</style>
       <tbody>
         <tr>
-          {trackIds.map((trackId) => (
+          {props.accountedTracks.map((trackId) => (
             <td
               key={trackId}
               className="track-selector-label"
@@ -53,7 +53,7 @@ const TrackSelector: React.FC<Props> = function TrackSelector(props) {
           ))}
         </tr>
         <tr>
-          {trackIds.map((trackId) => (
+          {props.accountedTracks.map((trackId) => (
             <td
               key={trackId}
               className="track-selector-value"
