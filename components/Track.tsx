@@ -22,6 +22,7 @@ const Track: React.FC<Props> = function Track(props) {
   const milestoneDescription = milestoneDescriptions[props.trackId];
   const currentMilestoneId = props.milestoneByTrack[props.trackId];
   const currentMilestone = milestoneDescription[currentMilestoneId - 1];
+  const nextMilestone = milestoneDescription[currentMilestoneId];
   return (
     <div className="track">
       <style jsx>{`
@@ -96,12 +97,26 @@ const Track: React.FC<Props> = function Track(props) {
         </table>
         {currentMilestone ? (
           <div style={{ flex: 1 }}>
-            <h3>{currentMilestone.summary}</h3>
+            <p>
+              <ReactMarkdown
+                remarkPlugins={[[gfm]]}
+                children={currentMilestone.summary}
+              />
+            </p>
             <h4>Signals:</h4>
             <ReactMarkdown
               remarkPlugins={[[gfm]]}
               children={currentMilestone.signals}
             />
+            {nextMilestone && (
+              <>
+                <h4>Next Milestone:</h4>
+                <ReactMarkdown
+                  remarkPlugins={[[gfm]]}
+                  children={nextMilestone.signals}
+                />
+              </>
+            )}
           </div>
         ) : null}
       </div>
