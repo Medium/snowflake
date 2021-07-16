@@ -5,6 +5,7 @@ export default [
 - Learns about fintech and Thndr business
 - Aware of the business unit structure of Thndr and understand the numbers presented in the all hands
 - Have an investor account
+- Has worked on at least one product in the domain (we count).
     `,
   },
   {
@@ -15,6 +16,7 @@ export default [
 - Aware of main KPIs
 - Frequently uses Thndr to services and provide valuable feedback to improve the customer's experience
 - Actively helps customers facing issues with the service when applicable, or by directing them to the right stakeholder in the company
+- Has worked on multiple products in the same domain. (we count)
     `,
   },
   {

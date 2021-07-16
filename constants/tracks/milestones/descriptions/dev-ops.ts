@@ -55,9 +55,36 @@ export default [
     summary:
       "Designs standalone systems of moderate complexity, or major new features in existing systems",
     signals: `
-- Acts as primary maintainer for existing critical systems
-- Designs moderately complex systems
-- Makes major version upgrades to libraries
+- Awareness of Service Meshes
+- Good knowledge of Security vulnerabilities and terms
+- Advanced k8s knowledge:
+	- Operators
+	- Security aspects
+- Ability to create clusters and provisioning tools
+- Ability to take architecture decisions
+- Good knowledge of Observability
+	- Tracing
+	- Logging
+	- Metrics
+- Designing SLIs, SLOs, and implementing needed metrics
+- Advanced understanding of networking and routing
+	- NAT
+	- Gateways
+	- Firewalls
+	- VPNs
+- Knowledge of cloud design patterns
+- Presence/Contribution to open-source communities
     `,
+  },
+  {
+    summary:
+      "Is an industry-leading expert in Production or sets strategic Production direction for the engineering",
+    signals: `
+- Designing drills and Role Playing scenarios
+- Introducing new SLIs and SLOs
+- Implementing Service Meshes
+- Ability to manage and moderate communicate architecture migrations and resolve technical conflict discussions
+- Ability to communicate and coordinate severity
+		`,
   },
 ];
