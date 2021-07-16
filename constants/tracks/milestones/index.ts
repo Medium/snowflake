@@ -9,7 +9,7 @@ import mobile from "./descriptions/mobile";
 import projectManagement from "./descriptions/project-management";
 import servers from "./descriptions/servers";
 import webClient from "./descriptions/web-client";
-import { TrackId } from "../types";
+import { Milestone, TrackId } from "../types";
 
 export const milestoneDescriptions: Record<
   TrackId,
@@ -32,4 +32,4 @@ export const milestoneDescriptions: Record<
   [TrackId.BUSINESS_ACUMEN]: businessAcumen,
 };
 
-export const milestones = [0, 1, 2, 3, 4, 5];
+export const milestones: Milestone[] = [0, 1, 2, 3, 4, 5];

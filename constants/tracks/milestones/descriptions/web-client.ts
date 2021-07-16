@@ -9,6 +9,9 @@ export default [
 - Have good understanding of DOM Manipulation.
 - Have good understanding of HTML semantics
 - Familiar with web accessibility.
+- Have practical experience with at least one js framework.
+- Can build medium complexity components like a date picker
+- Can perform simple animations
     `,
   },
   {
@@ -23,10 +26,17 @@ export default [
 - Familiar with best practice design patterns and design principles.
 - Have a good understanding of the whole web stack, including network protocols and web security.
 - Is able to quickly pick up new framework/technology and teach others how to use it.
-- Have practical experience with at least one js framework.
 - Makes sensible abstractions based on template and code patterns
 - Specs and builds interactive components independently
 - Prototypes simple new features quickly
+- Is up to date with JS and Web-APIs latest trends
+- Can perform preformat animations
+- Has understanding of good UI design, typography, and UX practices
+- Have excellent understanding of at least one framework and state management solution
+- Can setup project build and test environment using webpack or similar
+- Grasps the event driven and functional programing paradigm
+- Can build high complexity components like a Form or Table
+- Able to create a CLI script with Node
     `,
   },
   {
@@ -42,6 +52,13 @@ export default [
 - Provides useful design feedback and suggests feasible alternatives
 - Performs systemic tasks to significantly minimise bundle size
 - Acts a caretaker for all of web client code
+- Understands how tools like babel and webpack work
+- Grasps the reactive programming paradigm
+- Adept in functional programming
+
+- Can build highligh reusable libraries
+- Can build a state management solution
+- Can build their own framework
     `,
   },
 ];

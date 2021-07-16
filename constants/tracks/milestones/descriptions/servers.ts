@@ -13,7 +13,7 @@ export default [
 - Basic understanding of HTTP/TCP (e.g. SSO, connection pooling/CDN, TLS, Load balancing ... etc)
 - Good understanding for 12 factor apps
 - Good understanding for Design Patterns
-- Basic understanding for architure patterns
+- Basic understanding for architecture patterns
 - Good understanding of CAP (e.g. consensus algorithms)
 - Understands best practices in various backend paradigms (ex: authentication: JWT and Tokens)
 - Different Git branching techniques (ex: rebase and squash)
@@ -33,6 +33,28 @@ export default [
 - Assesses correctness and utility of existing code and avoids blind copy-pasting
 - Generalizes code when appropriate
 - Determines data needs from product requirements
+- Good Understanding of RESTful APIs
+- Understand the language internals (JS/Node/Python/Go)
+- Remote Debugging/Profiling
+- Performance Testing
+- Draft big design documents
+- Good understanding of HTTP/TCP (e.g. SSO, connection pooling/CDN, TLS, Load balancing ... etc)
+- Basic understanding for level App lever protocols
+- Good understanding for architecture patterns
+- Basic understanding for distributed systems & failure management (Ex: Load shifting, Back pressure, Circuit Breaker, Rate limiters, Graceful Shutdown/Connection Draining)
+- Good experience in Polyglot Programming
+- Good experience in Polyglot Persistance
+- CQRS
+- AuthZ/N: OpenID/OAuth
+- Git Submodules, Git Subtrees & git hooks
+- Strong Command of 3 Data Stores (K/V, Document, Relational, Graph ... etc)
+- Data Modeling @ Scale [Extendable]
+- Consistency
+- Understanding Relicas
+- Basic Database and Server Administration
+- Basic Understanding of Kafka (or others)
+- Very strong understanding of Docker
+- Good understanding of K8s
     `,
   },
   {
@@ -42,6 +64,23 @@ export default [
 - Acts as primary maintainer for existing critical systems
 - Integrates third party services effectively
 - Writes playbooks for new service maintenance
+- Good experience in APIs design/versioning/integration/deprecation
+- Strong command of multiple programming lang/paradigms
+- Distributed Debugging/Tracing/Profiling
+- Set direction of what work needs to be done
+- Good understanding for network layers from Transport to Application (e.g. AMQP, CoAP, MQTT, RPC, RTCP, UDP, TCP)
+- Good understanding for distributed systems & failure management
+- Good experience in microservices at scale
+- Code management (search, refactoring, duplication)
+- Distributed debugging, profiling and tracing
+- Decentralized authN/Z
+- Ethical Hacking (e.g. pen tests)
+- Git Centeric (e.g GitOps)
+- More Adminstration Understanding
+- Experience with Sharding
+- Eventual Consistency [across geos ..etc]
+- Advanced knoweldge of managing distributed systems
+- Advanced K8s (Administration)
     `,
   },
 ];
