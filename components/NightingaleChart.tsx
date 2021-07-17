@@ -19,6 +19,7 @@ const radiusScale = d3
   .domain(arcMilestones)
   .range([0.15 * width, 0.45 * width])
   .paddingInner(0.1);
+const SYSTEM_INFLUENCE_OFFSET = 1.04;
 
 type Props = {
   milestoneByTrack: MilestoneMap;
@@ -44,9 +45,16 @@ const NightingaleChart: React.FC<Props> = function NightingaleChart({
     () =>
       d3
         .arc()
-        .innerRadius((milestone) => radiusScale(milestone))
+        .innerRadius((milestone) =>
+          milestone > 3
+            ? radiusScale(milestone) * SYSTEM_INFLUENCE_OFFSET
+            : radiusScale(milestone)
+        )
         .outerRadius(
-          (milestone) => radiusScale(milestone) + radiusScale.bandwidth()
+          (milestone) =>
+            (milestone > 3
+              ? radiusScale(milestone) * SYSTEM_INFLUENCE_OFFSET
+              : radiusScale(milestone)) + radiusScale.bandwidth()
         )
         .startAngle(-Math.PI / accountedTracks.length)
         .endAngle(Math.PI / accountedTracks.length)

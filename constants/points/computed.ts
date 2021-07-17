@@ -55,9 +55,9 @@ export const levelsToPoints = {
   "4.3": estimateMinPoints(
     MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0,
-    MAX_TRACK_TARGET * 0.5,
-    MAX_TRACK_TARGET * 0.5,
-    MAX_TRACK_TARGET * 0
+    MAX_TRACK_TARGET * 0.6,
+    MAX_TRACK_TARGET * 0.3,
+    MAX_TRACK_TARGET * 0.1
   ),
   "5.1": estimateMinPoints(
     MAX_TRACK_TARGET * 0,
@@ -69,16 +69,16 @@ export const levelsToPoints = {
   "5.2": estimateMinPoints(
     MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0,
-    MAX_TRACK_TARGET * 0.5,
-    MAX_TRACK_TARGET * 0.3,
-    MAX_TRACK_TARGET * 0.2
+    MAX_TRACK_TARGET * 0.6,
+    MAX_TRACK_TARGET * 0.1,
+    MAX_TRACK_TARGET * 0.3
   ),
   "5.3": estimateMinPoints(
     MAX_TRACK_TARGET * 0,
-    MAX_TRACK_TARGET * 0,
-    MAX_TRACK_TARGET * 0.4,
-    MAX_TRACK_TARGET * 0.4,
-    MAX_TRACK_TARGET * 0.2
+    MAX_TRACK_TARGET * 0.1,
+    MAX_TRACK_TARGET * 0.5,
+    MAX_TRACK_TARGET * 0.2,
+    MAX_TRACK_TARGET * 0.3
   ),
   "6.1": estimateMinPoints(
     0,
@@ -88,14 +88,14 @@ export const levelsToPoints = {
     MAX_TRACK_TARGET * 0.4
   ),
   "6.2": estimateMinPoints(
-    0,
+    MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0.3,
     MAX_TRACK_TARGET * 0.3,
     MAX_TRACK_TARGET * 0.4
   ),
   "6.3": estimateMinPoints(
-    0,
+    MAX_TRACK_TARGET * 0.1,
     MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0.2,
     MAX_TRACK_TARGET * 0.4,
@@ -104,29 +104,29 @@ export const levelsToPoints = {
   "7.1": estimateMinPoints(
     0,
     MAX_TRACK_TARGET * 0,
-    MAX_TRACK_TARGET * 0.3,
     MAX_TRACK_TARGET * 0.2,
+    MAX_TRACK_TARGET * 0.3,
     MAX_TRACK_TARGET * 0.5
   ),
   "7.2": estimateMinPoints(
     0,
     MAX_TRACK_TARGET * 0,
     MAX_TRACK_TARGET * 0.2,
-    MAX_TRACK_TARGET * 0.3,
-    MAX_TRACK_TARGET * 0.5
+    MAX_TRACK_TARGET * 0.2,
+    MAX_TRACK_TARGET * 0.6
   ),
   "7.3": estimateMinPoints(
     0,
     MAX_TRACK_TARGET * 0,
+    MAX_TRACK_TARGET * 0.2,
     MAX_TRACK_TARGET * 0.1,
-    MAX_TRACK_TARGET * 0.4,
-    MAX_TRACK_TARGET * 0.5
+    MAX_TRACK_TARGET * 0.7
   ),
   "8.1": estimateMinPoints(
     0,
     0,
-    MAX_TRACK_TARGET * 0.2,
-    MAX_TRACK_TARGET * 0.1,
+    MAX_TRACK_TARGET * 0,
+    MAX_TRACK_TARGET * 0.3,
     MAX_TRACK_TARGET * 0.7
   ),
 };

@@ -51,8 +51,8 @@ export const jobs: Job[] = [
     minPoints: levelsToPoints["3.1"],
     maxPoints: levelsToPoints["4.2"],
     minCategoryPoints: {
-      [CategoryId.BUILD]: estimateMinPoints(0, 0, 2),
-      [CategoryId.EXECUTE]: estimateMinPoints(0, 0, 2),
+      [CategoryId.STR]: estimateMinPoints(0, 0, 2),
+      [CategoryId.DEX]: estimateMinPoints(0, 0, 2),
     },
   },
   {

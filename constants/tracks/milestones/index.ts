@@ -30,6 +30,8 @@ export const milestoneDescriptions: Record<
   [TrackId.LEADERSHIP_INITIATIVE]: leadershipInitiative,
   [TrackId.INTELLIGENCE_WISDOM]: intelligenceWisdom,
   [TrackId.BUSINESS_ACUMEN]: businessAcumen,
+  [TrackId.OPERATIONAL_EXCELLENCE]: [],
+  [TrackId.RECRUITMENT_EVANGELISM]: [],
 };
 
 export const milestones: Milestone[] = [0, 1, 2, 3, 4, 5];

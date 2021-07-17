@@ -1,4 +1,15 @@
-import { SpecialtyId, TrackId, trackIds, tracks } from "../constants/tracks";
+import {
+  Milestone,
+  MilestoneMap,
+  SpecialtyId,
+  TrackId,
+  trackIds,
+  tracks,
+} from "../constants/tracks";
+
+export function getInitialMilestones() {
+  return Object.fromEntries(trackIds.map((id) => [id, 0])) as MilestoneMap;
+}
 
 export function getTracksWithSpecialties(
   specialties: SpecialtyId[],

@@ -15,7 +15,10 @@ import React, {
 } from "react";
 import TitleSelector from "./TitleSelector";
 import { eligibleTitles } from "../logic/titles";
-import { getTracksWithSpecialties } from "../logic/tracks";
+import {
+  getInitialMilestones,
+  getTracksWithSpecialties,
+} from "../logic/tracks";
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap;
@@ -42,19 +45,7 @@ const emptyState = (): SnowflakeAppState => {
     name: "",
     title: "",
     specialties: [],
-    milestoneByTrack: {
-      MOBILE: 0,
-      WEB_CLIENT: 0,
-      DEV_OPS: 0,
-      SOFTWARE_ENGINEERING: 0,
-      SERVERS: 0,
-      PROJECT_MANAGEMENT: 0,
-      COMMUNICATION: 0,
-      CRAFT: 0,
-      LEADERSHIP_INITIATIVE: 0,
-      BUSINESS_ACUMEN: 0,
-      INTELLIGENCE_WISDOM: 0,
-    },
+    milestoneByTrack: getInitialMilestones(),
   };
 };
 
