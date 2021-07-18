@@ -5,7 +5,7 @@ import Track from "./Track";
 import LevelThermometer from "./LevelThermometer";
 import { SpecialtyId, TrackId } from "../constants/tracks";
 import PointSummaries from "./PointSummaries";
-import { Milestone, MilestoneMap, trackIds } from "../constants/tracks";
+import { Milestone, MilestoneMap } from "../constants/tracks";
 import React, {
   useCallback,
   useEffect,
@@ -14,10 +14,9 @@ import React, {
   useState,
 } from "react";
 import TitleSelector from "./TitleSelector";
-import { eligibleTitles } from "../logic/titles";
 import {
   getInitialMilestones,
-  getTracksWithSpecialties,
+  getTracksIncludingSpecialties,
 } from "../logic/tracks";
 
 type SnowflakeAppState = {
@@ -71,7 +70,7 @@ const SnowflakeApp = function SnowflakeApp() {
   const [canUpdateState, setCanUpdateState] = useState<boolean>(false);
 
   const accountedTracks = useMemo(
-    () => getTracksWithSpecialties(state.specialties),
+    () => getTracksIncludingSpecialties(state.specialties),
     [state.specialties]
   );
 

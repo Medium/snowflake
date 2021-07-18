@@ -7,7 +7,7 @@ export const jobs: Job[] = [
   {
     label: "Engineer I",
     level: 1,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: 0,
     maxPoints: levelsToPoints["2.2"],
     trackMilestoneRecommendations: {
@@ -20,7 +20,7 @@ export const jobs: Job[] = [
   {
     label: "Engineer II",
     level: 2,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["2.1"],
     maxPoints: levelsToPoints["3.2"],
     trackMilestoneRecommendations: {
@@ -33,7 +33,7 @@ export const jobs: Job[] = [
   {
     label: "Senior Engineer",
     level: 3,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["3.1"],
     maxPoints: levelsToPoints["4.2"],
     trackMilestoneRecommendations: {
@@ -47,7 +47,7 @@ export const jobs: Job[] = [
   {
     label: "Engineer Lead",
     level: 3,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["3.1"],
     maxPoints: levelsToPoints["4.2"],
     minCategoryPoints: {
@@ -58,56 +58,56 @@ export const jobs: Job[] = [
   {
     label: "Staff Engineer",
     level: 4,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["4.1"],
     maxPoints: levelsToPoints["5.1"],
   },
   {
     label: "Engineer Manager",
     level: 4,
-    family: JobFamily.ME,
+    family: JobFamily.SME,
     minPoints: levelsToPoints["4.1"],
     maxPoints: levelsToPoints["5.1"],
   },
   {
     label: "Senior Staff Engineer",
     level: 5,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["5.1"],
     maxPoints: levelsToPoints["6.1"],
   },
   {
     label: "Senior Engineer Manager",
     level: 5,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["5.1"],
     maxPoints: levelsToPoints["6.1"],
   },
   {
     label: "Principle Engineer",
     level: 6,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["6.1"],
     maxPoints: levelsToPoints["7.1"],
   },
   {
     label: "Engineer Director",
     level: 6,
-    family: JobFamily.ME,
+    family: JobFamily.SME,
     minPoints: levelsToPoints["6.1"],
     maxPoints: levelsToPoints["7.1"],
   },
   {
     label: "Distinguished Engineer",
     level: 7,
-    family: JobFamily.SE,
+    family: JobFamily.SWE,
     minPoints: levelsToPoints["7.1"],
     maxPoints: levelsToPoints["8.1"],
   },
   {
     label: "VP of Engineering",
     level: 7,
-    family: JobFamily.ME,
+    family: JobFamily.SME,
     minPoints: levelsToPoints["7.1"],
     maxPoints: levelsToPoints["8.1"],
   },

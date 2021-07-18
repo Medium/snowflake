@@ -13,7 +13,8 @@ import {
   DEFAULT_MILESTONE_POINT_MAP,
   TRACK_WEIGHT_MAP,
 } from "../constants/points/configure";
-import { getTracksWithSpecialties, include } from "./tracks";
+import { getTracksWithSpecialties } from "./tracks";
+import { include } from "./utils";
 
 export function totalPointsFromMilestoneMap(
   milestoneMap: MilestoneMap,
@@ -39,20 +40,16 @@ function sumSpecialtyPoints(
   specialties: SpecialtyId[] = [],
   ids: TrackId[] = buildSpecialtyIds
 ) {
-  let specialtyIds = getTracksWithSpecialties(specialties, ids);
-  specialtyIds = specialtyIds.sort(
-    (a, b) =>
-      milestoneToPoints(milestoneMap[b], b) -
-      milestoneToPoints(milestoneMap[a], a)
-  );
-  const specialtyMilestonePoints = specialtyIds.map((id) =>
+  let specialtyTrackIds = getTracksWithSpecialties(specialties, ids);
+  const specialtyMilestonePoints = specialtyTrackIds.map((id) =>
     milestoneToPoints(milestoneMap[id], id)
   );
 
   return specialtyMilestonePoints
-    .map((m, index, { length }) => m * ((length - index) / length)) // diminish return
+    .map((m, index) => m * (diminishReturn[index] || 0)) // diminish return
     .reduce((sum, added) => sum + added, 0);
 }
+const diminishReturn = [1, 0.5, 0.25];
 
 function sumPoints(milestoneMap: MilestoneMap, ids: TrackId[]) {
   return ids
@@ -60,9 +57,6 @@ function sumPoints(milestoneMap: MilestoneMap, ids: TrackId[]) {
     .reduce((sum, added) => sum + added, 0);
 }
 
-export const trackMilestonePoints = Object.fromEntries(
-  trackIds.map((id) => [id, trackToMilestoneArray(id)])
-);
 export function trackToMilestoneArray(trackId: TrackId) {
   const trackWeight = TRACK_WEIGHT_MAP?.[trackId] ?? 1;
   if (typeof trackWeight === "number") {
@@ -79,6 +73,10 @@ export function milestoneToPoints(
   return trackMilestonePoints?.[trackId]?.[milestone] ?? 0;
 }
 
+export const trackMilestonePoints = Object.fromEntries(
+  trackIds?.map((id) => [id, trackToMilestoneArray(id)]) ?? []
+);
+
 /**
  *
  * @param tracksAtMilestones an array of number representing the number of tracks at milestone skipping milestone 0
@@ -93,7 +91,7 @@ export function estimateMinPoints(...tracksAtMilestones: number[]) {
     tracksAtMilestones.reduce(
       (acc, count, milestone) =>
         acc +
-        (count % trackIds.length) *
+        (count % trackIds?.length ?? 1) *
           (averageTrackMilestonePoints[milestone] || 0),
       0
     )
@@ -103,13 +101,17 @@ export function estimateMinPoints(...tracksAtMilestones: number[]) {
 export const averageTrackMilestonePoints = averageTrackPoints();
 
 export function averageTrackPoints() {
-  return milestones
-    .map((m) => {
-      return avg(
-        excludingBuildSpecialtyTrackIds.map((tid) => milestoneToPoints(m, tid))
-      );
-    })
-    .slice(1);
+  return (
+    milestones
+      ?.map((m) => {
+        return avg(
+          excludingBuildSpecialtyTrackIds.map((tid) =>
+            milestoneToPoints(m, tid)
+          )
+        );
+      })
+      .slice(1) ?? []
+  );
 }
 
 function avg(array) {

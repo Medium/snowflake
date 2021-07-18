@@ -1,3 +1,5 @@
+import { JobFamily } from "../titles";
+
 export enum TrackId {
   "MOBILE" = "MOBILE",
   "WEB_CLIENT" = "WEB_CLIENT",
@@ -14,10 +16,10 @@ export enum TrackId {
   "OPERATIONAL_EXCELLENCE" = "OPERATIONAL_EXCELLENCE",
 }
 export enum CategoryId {
-  "STR" = "BUILD",
-  "DEX" = "EXECUTE",
-  "CHA" = "Business Strengthening Leadership",
-  "WIS" = "Knowledge, Wisdom, and Experience",
+  "STR" = "STR",
+  "DEX" = "DEX",
+  "CHA" = "CHA",
+  "WIS" = "WIS",
 }
 export enum SpecialtyId {
   "RN" = "React Native",
@@ -26,9 +28,6 @@ export enum SpecialtyId {
   "FLutter" = "Flutter",
   "MOBILE" = "Mobile",
   "WEB" = "Web",
-  "FE" = "Frontend",
-  "GO" = "Go",
-  "Python" = "Python",
   "BE" = "Backend",
   "SRE" = "Dev Ops",
 }
@@ -57,4 +56,10 @@ export type Track = {
   category: CategoryId;
   specialty?: SpecialtyId[];
   description: string;
+};
+
+export type Category = {
+  displayName: string;
+  description: string;
+  jobDescriptions?: Partial<Record<JobFamily, string>>;
 };

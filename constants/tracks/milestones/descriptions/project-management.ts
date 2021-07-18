@@ -12,7 +12,8 @@ e.g. Scope Something like a designed payment history dashboard
     `,
   },
   {
-    summary: "Able to explore and scope solutions to specified problems.",
+    summary:
+      "Able to explore, scope, and execute solutions to specified problems.",
     signals: `
 - Performs research and considers alternative approaches
 - Balances pragmatism and polish appropriately
@@ -27,7 +28,7 @@ e.g. Scope Something like a designed payment history dashboard
   },
   {
     summary:
-      "Able to define a problems, explore and communicate a specified solution",
+      "Able to define a problems, explore, communicate, and execute a specified solution",
     signals: `
 - Delegates tasks to others appropriately
 - Integrates business needs into project planning

@@ -1,6 +1,6 @@
 import { TrackId } from "../tracks/types";
 
-export const DEFAULT_MILESTONE_POINT_MAP = [0, 10, 30, 60, 100, 160];
+export const DEFAULT_MILESTONE_POINT_MAP = [0, 10, 30, 60, 100, 150];
 
 export const TRACK_WEIGHT_MAP: Record<TrackId, number | number[]> = {
   [TrackId.MOBILE]: 0.8,

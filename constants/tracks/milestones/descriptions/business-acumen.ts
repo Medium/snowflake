@@ -24,6 +24,7 @@ export default [
       "Develops solutions that support and impact the long term strategic business vision and growth (2-3 years)",
     signals: `
 - Finds ways to optimize and simplify existing systems (aka infrastructure costs) that impact operational efficiency of the business
+- Understands our competition landscape.
     `,
   },
 ];

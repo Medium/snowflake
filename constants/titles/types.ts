@@ -1,9 +1,9 @@
 import { CategoryMap, MilestoneMap, SpecialtyMap } from "../tracks";
 
 export enum JobFamily {
-  "SE" = "Software",
-  "ME" = "Managing",
-  "PE" = "Product",
+  "SWE" = "Software",
+  "SME" = "Managing",
+  "SPE" = "Product",
 }
 
 export interface Job {

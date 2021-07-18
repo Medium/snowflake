@@ -6,9 +6,7 @@ import {
   MilestoneMap,
   tracks,
   milestones,
-  trackIds,
   categoryColorScale,
-  SpecialtyId,
 } from "../constants/tracks";
 import { getTitleByLabel } from "../logic/titles";
 

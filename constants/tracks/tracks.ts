@@ -1,4 +1,4 @@
-import { exclude } from "../../logic/tracks";
+import { exclude } from "../../logic/utils";
 import { categoryIds } from "./categories";
 import { CategoryId, SpecialtyId, Track, TrackId } from "./types";
 
@@ -7,7 +7,6 @@ export const tracks: Record<TrackId, Track> = {
     displayName: "Mobile",
     category: CategoryId.STR,
     specialty: [
-      SpecialtyId.FE,
       SpecialtyId.MOBILE,
       SpecialtyId.RN,
       SpecialtyId.Android,
@@ -21,7 +20,7 @@ export const tracks: Record<TrackId, Track> = {
   [TrackId.WEB_CLIENT]: {
     displayName: "Web client",
     category: CategoryId.STR,
-    specialty: [SpecialtyId.FE, SpecialtyId.WEB],
+    specialty: [SpecialtyId.WEB],
     description:
       "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
   },
@@ -37,7 +36,7 @@ export const tracks: Record<TrackId, Track> = {
   [TrackId.SERVERS]: {
     displayName: "Servers",
     category: CategoryId.STR,
-    specialty: [SpecialtyId.BE, SpecialtyId.Python, SpecialtyId.GO],
+    specialty: [SpecialtyId.BE],
     description:
       "Develops expertise in server side engineering, using technologies such as Go, NodeJS, Python or Scala",
   },
@@ -71,7 +70,7 @@ export const tracks: Record<TrackId, Track> = {
   },
 
   [TrackId.LEADERSHIP_INITIATIVE]: {
-    displayName: "Leadership Initiative",
+    displayName: "Leadership and Initiative",
     category: CategoryId.CHA,
     description:
       "Challenges the status quo and effects positive organizational change outside of mandated work",
@@ -91,7 +90,7 @@ export const tracks: Record<TrackId, Track> = {
   },
 
   [TrackId.INTELLIGENCE_WISDOM]: {
-    displayName: "Intelligence Wisdom",
+    displayName: "Analytical Thinking and Problem Solving",
     category: CategoryId.WIS,
     description:
       "The methodical and data driven approach you demonstrate to learn, understand, analyze, solve problems, and make decisions",
@@ -113,9 +112,14 @@ export const trackIds = exclude(
   excludeTrackIds
 ) as TrackId[];
 
-export const buildSpecialtyIds = trackIds.filter((id) => {
+export const specialtyTrackIds = trackIds.filter((id) => {
   const track = tracks[id];
-  return track.category === CategoryId.STR && Boolean(track.specialty);
+  return Boolean(track.specialty);
+});
+
+export const buildSpecialtyIds = specialtyTrackIds.filter((id) => {
+  const track = tracks[id];
+  return track.category === CategoryId.STR;
 });
 
 export const excludingBuildSpecialtyTrackIds = exclude(

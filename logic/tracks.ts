@@ -1,17 +1,29 @@
 import {
-  Milestone,
   MilestoneMap,
   SpecialtyId,
   TrackId,
   trackIds,
+  specialtyTrackIds,
   tracks,
 } from "../constants/tracks";
+import { includes } from "./utils";
 
 export function getInitialMilestones() {
   return Object.fromEntries(trackIds.map((id) => [id, 0])) as MilestoneMap;
 }
 
 export function getTracksWithSpecialties(
+  specialties: SpecialtyId[],
+  ids = specialtyTrackIds
+) {
+  return (
+    specialties?.flatMap((specialtyId) => {
+      return ids.filter((id) => tracks[id].specialty?.includes(specialtyId));
+    }) ?? []
+  );
+}
+
+export function getTracksIncludingSpecialties(
   specialties: SpecialtyId[],
   ids = trackIds
 ) {
@@ -28,16 +40,4 @@ export function getTracksWithSpecialties(
 
 export function hasSpecialty(trackId: TrackId) {
   return tracks[trackId].specialty;
-}
-
-export function includes(list1: any[], list2: any[]) {
-  return list1.some((item1) => {
-    return list2.includes(item1);
-  });
-}
-export function exclude(list1: any[], list2: any[]) {
-  return list1.filter((item) => !list2.includes(item));
-}
-export function include(list1: any[], list2: any[]) {
-  return list1.filter((item) => list2.includes(item));
 }

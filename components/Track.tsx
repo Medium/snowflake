@@ -97,12 +97,10 @@ const Track: React.FC<Props> = function Track(props) {
         </table>
         {currentMilestone ? (
           <div style={{ flex: 1 }}>
-            <p>
-              <ReactMarkdown
-                remarkPlugins={[[gfm]]}
-                children={currentMilestone.summary}
-              />
-            </p>
+            <ReactMarkdown
+              remarkPlugins={[[gfm]]}
+              children={currentMilestone.summary}
+            />
             <h4>Signals:</h4>
             <ReactMarkdown
               remarkPlugins={[[gfm]]}
