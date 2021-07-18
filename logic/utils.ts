@@ -16,6 +16,10 @@ export function includes(list1: any[], list2: any[]) {
     return list2.includes(item1);
   });
 }
+
+export function unique<T>(list: T[]): T[] {
+  return Array.from(new Set(list));
+}
 export function exclude(list1: any[], list2: any[]) {
   return list1.filter((item) => !list2.includes(item));
 }

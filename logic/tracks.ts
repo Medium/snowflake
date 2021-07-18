@@ -6,7 +6,7 @@ import {
   specialtyTrackIds,
   tracks,
 } from "../constants/tracks";
-import { includes } from "./utils";
+import { includes, unique } from "./utils";
 
 export function getInitialMilestones() {
   return Object.fromEntries(trackIds.map((id) => [id, 0])) as MilestoneMap;
@@ -16,7 +16,7 @@ export function getTracksWithSpecialties(
   specialties: SpecialtyId[],
   ids = specialtyTrackIds
 ) {
-  return (
+  return unique(
     specialties?.flatMap((specialtyId) => {
       return ids.filter((id) => tracks[id].specialty?.includes(specialtyId));
     }) ?? []
