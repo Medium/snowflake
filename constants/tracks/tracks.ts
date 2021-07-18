@@ -89,13 +89,13 @@ export const tracks: Record<TrackId, Track> = {
       "Strengthen the team through promoting the business to the outside world and establishes it as an attractive and thoughtful place to work in, and recruit",
   },
 
-  [TrackId.INTELLIGENCE_WISDOM]: {
-    displayName: "Analytical Thinking and Problem Solving",
+  [TrackId.PROBLEM_SOLVING]: {
+    displayName: "Problem Solving and Analytical Thinking",
     category: CategoryId.WIS,
     description:
       "The methodical and data driven approach you demonstrate to learn, understand, analyze, solve problems, and make decisions",
   },
-  [TrackId.OPERATIONAL_EXCELLENCE]: {
+  [TrackId.OPERATIONAL_EXPERIENCE]: {
     displayName: "Operational Excellence",
     category: CategoryId.WIS,
     description: "The deep understanding of the systems they work with",
@@ -103,7 +103,7 @@ export const tracks: Record<TrackId, Track> = {
 };
 
 const excludeTrackIds = [
-  TrackId.OPERATIONAL_EXCELLENCE,
+  TrackId.OPERATIONAL_EXPERIENCE,
   TrackId.RECRUITMENT_EVANGELISM,
 ];
 

@@ -16,7 +16,7 @@ export default [
 - Checks all arguments and asserts critical assumptions in code
 - Basic error handling around code that can throw exceptions/generate errors
 - Knows their way around the interface, able to effectively use the IDE using menus.
-- Has heard about but and used one popular frameworks available for the platform.
+- Has heard about and used one popular frameworks available for the platform.
 - Has adapt grasp of their preferred programing language syntax and runtime operation model.
 - Knows Imperative or Object Oriented and declarative (SQL), bonus if you understand static vs dynamic typing, weak vs strong typing and static inferred types.
 - Knows basic database concepts, normalization, ACID, transactions and can write simple selects
@@ -24,7 +24,6 @@ export default [
 - Knows about data structures and when to use them
 - Aware of [Clean Code](https://github.com/ryanmcdermott/clean-code-javascript)
 
-- Tool knowledge limited to primary IDE
 - Basic knowledge of the code layout and how to build the system
 - Aware of popular books and blogs, bonus if an avid consumer
 - Peers can understand what is being said. Good spelling and grammar.
@@ -60,7 +59,6 @@ export default [
 - Can bootstrap a proper scalable project file structure
 - Spots performance or security issues during Code Reviews
 
-- Knows IDE keyboard shortcuts for most used operations.
 - A consumer of popular books (Design Patterns, Peopleware, Programming Pearls, Algorithm Design Manual, Pragmatic Programmer, Mythical Man month) and blogs
 - Maintains a link blog with some collection of useful articles and tools that he/she has collected
     `,

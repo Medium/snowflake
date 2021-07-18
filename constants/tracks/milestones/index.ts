@@ -1,5 +1,5 @@
 import leadershipInitiative from "./descriptions/leadership-initiative";
-import intelligenceWisdom from "./descriptions/intelligence-wisdom";
+import problemSolving from "./descriptions/problem-solving";
 import businessAcumen from "./descriptions/business-acumen";
 import communication from "./descriptions/communication";
 import craft from "./descriptions/craft";
@@ -28,9 +28,9 @@ export const milestoneDescriptions: Record<
   [TrackId.COMMUNICATION]: communication,
   [TrackId.CRAFT]: craft,
   [TrackId.LEADERSHIP_INITIATIVE]: leadershipInitiative,
-  [TrackId.INTELLIGENCE_WISDOM]: intelligenceWisdom,
+  [TrackId.PROBLEM_SOLVING]: problemSolving,
   [TrackId.BUSINESS_ACUMEN]: businessAcumen,
-  [TrackId.OPERATIONAL_EXCELLENCE]: [],
+  [TrackId.OPERATIONAL_EXPERIENCE]: [],
   [TrackId.RECRUITMENT_EVANGELISM]: [],
 };
 

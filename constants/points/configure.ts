@@ -14,6 +14,6 @@ export const TRACK_WEIGHT_MAP: Record<TrackId, number | number[]> = {
   [TrackId.LEADERSHIP_INITIATIVE]: 1,
   [TrackId.RECRUITMENT_EVANGELISM]: 1,
   [TrackId.BUSINESS_ACUMEN]: 1,
-  [TrackId.INTELLIGENCE_WISDOM]: 1,
-  [TrackId.OPERATIONAL_EXCELLENCE]: 1,
+  [TrackId.PROBLEM_SOLVING]: 1,
+  [TrackId.OPERATIONAL_EXPERIENCE]: 1,
 };
