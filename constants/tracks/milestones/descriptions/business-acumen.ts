@@ -2,10 +2,10 @@ export default [
   {
     summary: "Understands the value the features provide to the team or users",
     signals: `
-- Learns about fintech and Thndr business
+- Learns about Thndr business vision plans and culture values
 - Aware of the business unit structure of Thndr and understand the numbers presented in the all hands
 - Have an investor account
-- Has worked on at least one product in the domain (we count).
+- Understand the critical path flows for our app. (e.g. why am I even opening an account )
     `,
   },
   {
@@ -14,9 +14,9 @@ export default [
     signals: `
 - Collaborates with business teams in understanding product requirements
 - Aware of main KPIs
-- Frequently uses Thndr to services and provide valuable feedback to improve the customer's experience
+- Frequently uses Thndr services and provide valuable feedback to improve the customer's experience
 - Actively helps customers facing issues with the service when applicable, or by directing them to the right stakeholder in the company
-- Has worked on multiple products in the same domain. (we count)
+- Understands multiple domain flows across the app.
     `,
   },
   {

@@ -15,7 +15,7 @@ export default [
     summary:
       "Applies structured ways to investigate how parts of the system interact with each other or with external systems using problem solving tools",
     signals: `
-- Performs code discovery with minimal support.
+- Performs code discovery with minimal support in a timely manner.
 - Discusses the conflicts between stated requirements and problems in implementing them
 - Can find gaps in product requirements and suggest alternate views on the requirements
 - Discovers and incorporates tacit requirements

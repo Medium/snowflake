@@ -21,7 +21,7 @@ export default [
 - Seeks and takes opportunities within the team
 - Is a role model
 - Advocated on own behalf for a change in role
-- Audited web trading performance in Chrome and proposed fixes
+- Seeks performance improvement on their own. (eg. Audited web trading performance in Chrome and proposed fixes)
 - Motivates others and guides them to tackle complex problems facing them or their team(s)
 - Finds opportunities to improve processes and/or products
 - Proactively prepares for meetings to ensure a productive discussion
