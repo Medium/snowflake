@@ -95,28 +95,30 @@ const Track: React.FC<Props> = function Track(props) {
               })}
           </tbody>
         </table>
-        {currentMilestone ? (
-          <div style={{ flex: 1 }}>
-            <ReactMarkdown
-              remarkPlugins={[[gfm]]}
-              children={currentMilestone.summary}
-            />
-            <h4>Signals:</h4>
-            <ReactMarkdown
-              remarkPlugins={[[gfm]]}
-              children={currentMilestone.signals}
-            />
-            {nextMilestone && (
-              <>
-                <h4>Next Milestone:</h4>
-                <ReactMarkdown
-                  remarkPlugins={[[gfm]]}
-                  children={nextMilestone.signals}
-                />
-              </>
-            )}
-          </div>
-        ) : null}
+        <div style={{ flex: 1 }}>
+          {currentMilestone && (
+            <>
+              <ReactMarkdown
+                remarkPlugins={[[gfm]]}
+                children={currentMilestone.summary}
+              />
+              <h4>Signals:</h4>
+              <ReactMarkdown
+                remarkPlugins={[[gfm]]}
+                children={currentMilestone.signals}
+              />
+            </>
+          )}
+          {nextMilestone && (
+            <>
+              <h4>Next Milestone:</h4>
+              <ReactMarkdown
+                remarkPlugins={[[gfm]]}
+                children={nextMilestone.signals}
+              />
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

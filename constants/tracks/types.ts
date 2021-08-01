@@ -48,6 +48,43 @@ export type MilestoneMap = {
   [TrackId.BUSINESS_ACUMEN]: Milestone;
 };
 
+export type Quest = {
+  content: string;
+  created_at: string;
+  updated_at: string;
+  author_name: string;
+  completed_date: Date | null;
+  targeting_tracks: TrackId[];
+};
+
+export type Note = {
+  content: string;
+  created_at: string;
+  updated_at: string;
+  author_name: string;
+  acknowledged_by: string[];
+  at_milestone: Milestone;
+};
+
+export type MilestoneState = {
+  milestone: Milestone;
+  milestone_notes: Note[];
+};
+
+export type MilestoneStates = {
+  [TrackId.MOBILE]: MilestoneState;
+  [TrackId.WEB_CLIENT]: MilestoneState;
+  [TrackId.DEV_OPS]: MilestoneState;
+  [TrackId.SOFTWARE_ENGINEERING]: MilestoneState;
+  [TrackId.SERVERS]: MilestoneState;
+  [TrackId.PROJECT_MANAGEMENT]: MilestoneState;
+  [TrackId.COMMUNICATION]: MilestoneState;
+  [TrackId.CRAFT]: MilestoneState;
+  [TrackId.LEADERSHIP_INITIATIVE]: MilestoneState;
+  [TrackId.PROBLEM_SOLVING]: MilestoneState;
+  [TrackId.BUSINESS_ACUMEN]: MilestoneState;
+};
+
 export type CategoryMap = Record<CategoryId, number>;
 export type SpecialtyMap = Record<SpecialtyId, number>;
 

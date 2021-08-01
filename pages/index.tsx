@@ -1,7 +1,9 @@
 import SnowflakeApp from "../components/SnowflakeApp";
 
-export default () => (
-  <div>
-    <SnowflakeApp />
-  </div>
-);
+export default function Root() {
+  return (
+    <div id="page">
+      <SnowflakeApp />
+    </div>
+  );
+}

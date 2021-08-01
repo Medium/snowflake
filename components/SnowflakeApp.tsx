@@ -3,7 +3,12 @@ import SpecialtySelector from "./SpecialtySelector";
 import NightingaleChart from "./NightingaleChart";
 import Track from "./Track";
 import LevelThermometer from "./LevelThermometer";
-import { SpecialtyId, TrackId } from "../constants/tracks";
+import {
+  MilestoneStates,
+  Quest,
+  SpecialtyId,
+  TrackId,
+} from "../constants/tracks";
 import PointSummaries from "./PointSummaries";
 import { Milestone, MilestoneMap } from "../constants/tracks";
 import React, {
@@ -16,11 +21,15 @@ import React, {
 import TitleSelector from "./TitleSelector";
 import {
   getInitialMilestones,
+  getInitialMilestoneStates,
   getTracksIncludingSpecialties,
 } from "../logic/tracks";
+// import NotesDrawer from "./NotesDrawer/NotesDrawer";
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap;
+  trackStates: MilestoneStates;
+  quests: Quest[];
   name: string;
   title: string;
   specialties: SpecialtyId[];
@@ -45,6 +54,8 @@ const emptyState = (): SnowflakeAppState => {
     title: "",
     specialties: [],
     milestoneByTrack: getInitialMilestones(),
+    trackStates: getInitialMilestoneStates(),
+    quests: [],
   };
 };
 
@@ -210,6 +221,8 @@ const SnowflakeApp = function SnowflakeApp() {
         accountedTracks={accountedTracks}
         setFocusedTrackIdFn={setFocusedTrackId}
       />
+      {/* <NotesDrawer trackStates={state.trackStates} trackId={focusedTrackId} /> */}
+
       <Track
         milestoneByTrack={state.milestoneByTrack}
         trackId={focusedTrackId}

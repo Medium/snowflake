@@ -5,11 +5,17 @@ import {
   trackIds,
   specialtyTrackIds,
   tracks,
+  MilestoneStates,
 } from "../constants/tracks";
 import { includes, unique } from "./utils";
 
 export function getInitialMilestones() {
   return Object.fromEntries(trackIds.map((id) => [id, 0])) as MilestoneMap;
+}
+export function getInitialMilestoneStates() {
+  return Object.fromEntries(
+    trackIds.map((id) => [id, { milestone: 0, milestone_notes: [] }])
+  ) as MilestoneStates;
 }
 
 export function getTracksWithSpecialties(
