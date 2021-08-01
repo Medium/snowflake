@@ -3,10 +3,11 @@ export default [
     summary:
       "Leads self and Identifies opportunities for organizational change or product improvements",
     signals: `
-- Seeks relevant knowledge on related technlogy standards
+- Respects office guidelines, health, health and safety policies, leading by example. (eg. wears masks)
+- Seeks relevant knowledge on related technology standards
 - Raises meaningful tensions in tactical meetings
 - Asks leadership team probing questions at All Hands
-- Strives to be valued in the team and contrubutes connstructively
+- Strives to be valued in the team and contributes constructively
 - Suggests new tools/framework for use in development that have clear added value
 - Seeks solutions towards a hard problem facing them or their team
 - Documents a solution or piece of knowledge they found to a problem they faced for others who might encounter the same issue
