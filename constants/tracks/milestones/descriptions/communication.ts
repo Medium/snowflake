@@ -45,7 +45,7 @@ export default [
 - Anticipates and shares schedule deviations in plenty of time
 - Manages project stakeholder expectations effectively
 - Directed team response effectively during outages
-- Gave a substantial Eng All Hands presentation on React
+- Gave a substantial Eng All Hands presentation (eg. on React)
 - Gave notice of upcoming related work in Eng Briefing
 - Intently listens to understand not to reply
 - Able to support their arguments with data and facts

@@ -54,7 +54,9 @@ export default [
 - Basic Database and Server Administration
 - Basic Understanding of Kafka (or others)
 - Very strong understanding of Docker
-- Good understanding of K8s
+- Good understanding of Kubernetes distributed computation platform
+- Good understanding of container base infrastructure
+- Good understanding of database scalability patterns
     `,
   },
   {
@@ -77,10 +79,16 @@ export default [
 - Ethical Hacking (e.g. pen tests)
 - Git Centeric (e.g GitOps)
 - More Adminstration Understanding
+    `,
+  },
+  {
+    summary:
+      "Designs standalone systems of advanced complexity able to operate across countries and very highly available traffic",
+    signals: `
+- Advanced knowledge of managing distributed systems
+- Advanced K8s (Administration)
 - Experience with Sharding
 - Eventual Consistency [across geos ..etc]
-- Advanced knoweldge of managing distributed systems
-- Advanced K8s (Administration)
-    `,
+		`,
   },
 ];

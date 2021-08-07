@@ -51,9 +51,9 @@ export default [
 - Has used more than one framework in a professional capacity and is well-versed with the idioms of the frameworks.
 - Able to transfer knowledge to other platform and programing languages becoming proficient faster
 
-- Understands container base infrastructure
-- Understands the Kubernetes distributed computation platform
-- Understands database scalability patterns
+- Knows about container base infrastructure
+- Knows about the Kubernetes distributed computation platform
+- Knows about database scalability patterns
 - Can use recursion effectively to optimize algorithm performance
 - Able to use the [C4 diagram model](https://c4model.com/) to sketch architecture
 - Can bootstrap a proper scalable project file structure
@@ -81,7 +81,6 @@ export default [
 - Able to visualize and design complex systems with multiple product lines and integrations with external systems. Also should be able to design operations support systems like monitoring, reporting, fail overs etc.
 - Makes major version upgrades to libraries
 - Able to understand and communicate thoughts/design/ideas/specs in a unambiguous manner and adjusts communication as per the context
-- Compiles their own Linux kernel
 - Designs architectures on the system level
 - Knowledge of advanced data structures like B-trees, binomial and fibonacci heaps, AVL/Red Black trees, Splay Trees, Skip Lists, tries etc.
 - Able to recognize and code dynamic programming solutions, good knowledge of graph algorithms, good knowledge of numerical computation algorithms, able to identify NP problems etc.
@@ -91,4 +90,11 @@ export default [
 - Maintains a blog in which personal insights and thoughts on programming are shared
     `,
   },
+  // {
+  //   summary: "Master Software Engineering Knowledge",
+  //   signals: `
+  // 	- Compiles their own Linux kernel
+  // 	- Wrote a book on a subject
+  // `,
+  // },
 ];
