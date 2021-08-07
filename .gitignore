@@ -1,4 +1,5 @@
 .next
 node_modules
 out/*
+!out/try
 yarn-error.log
