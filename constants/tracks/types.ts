@@ -25,7 +25,6 @@ export enum SpecialtyId {
   "RN" = "React Native",
   "Android" = "Android",
   "IOS" = "IOS",
-  "FLutter" = "Flutter",
   "MOBILE" = "Mobile",
   "WEB" = "Web",
   "BE" = "Backend",

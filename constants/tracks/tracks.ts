@@ -11,7 +11,6 @@ export const tracks: Record<TrackId, Track> = {
       SpecialtyId.RN,
       SpecialtyId.Android,
       SpecialtyId.IOS,
-      SpecialtyId.FLutter,
     ],
     description:
       "Develops expertise in mobile platform engineering, such as reach native",
