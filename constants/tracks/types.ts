@@ -22,9 +22,6 @@ export enum CategoryId {
   "WIS" = "WIS",
 }
 export enum SpecialtyId {
-  "RN" = "React Native",
-  "Android" = "Android",
-  "IOS" = "IOS",
   "MOBILE" = "Mobile",
   "WEB" = "Web",
   "BE" = "Backend",

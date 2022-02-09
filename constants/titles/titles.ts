@@ -45,7 +45,7 @@ export const jobs: Job[] = [
     },
   },
   {
-    label: "Engineer Lead",
+    label: "Engineering Lead",
     level: 3,
     family: JobFamily.SWE,
     minPoints: levelsToPoints["3.1"],
@@ -63,7 +63,7 @@ export const jobs: Job[] = [
     maxPoints: levelsToPoints["5.1"],
   },
   {
-    label: "Engineer Manager",
+    label: "Engineering Manager",
     level: 4,
     family: JobFamily.SME,
     minPoints: levelsToPoints["4.1"],
@@ -77,7 +77,7 @@ export const jobs: Job[] = [
     maxPoints: levelsToPoints["6.1"],
   },
   {
-    label: "Senior Engineer Manager",
+    label: "Senior Engineering Manager",
     level: 5,
     family: JobFamily.SWE,
     minPoints: levelsToPoints["5.1"],
@@ -91,7 +91,7 @@ export const jobs: Job[] = [
     maxPoints: levelsToPoints["7.1"],
   },
   {
-    label: "Engineer Director",
+    label: "Engineering Director",
     level: 6,
     family: JobFamily.SME,
     minPoints: levelsToPoints["6.1"],
@@ -106,6 +106,13 @@ export const jobs: Job[] = [
   },
   {
     label: "VP of Engineering",
+    level: 7,
+    family: JobFamily.SME,
+    minPoints: levelsToPoints["7.1"],
+    maxPoints: levelsToPoints["8.1"],
+  },
+  {
+    label: "CTO",
     level: 7,
     family: JobFamily.SME,
     minPoints: levelsToPoints["7.1"],

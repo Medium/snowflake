@@ -8,9 +8,6 @@ export const tracks: Record<TrackId, Track> = {
     category: CategoryId.STR,
     specialty: [
       SpecialtyId.MOBILE,
-      SpecialtyId.RN,
-      SpecialtyId.Android,
-      SpecialtyId.IOS,
     ],
     description:
       "Develops expertise in mobile platform engineering, such as reach native",
@@ -37,7 +34,7 @@ export const tracks: Record<TrackId, Track> = {
     category: CategoryId.STR,
     specialty: [SpecialtyId.BE],
     description:
-      "Develops expertise in server side engineering, using technologies such as Go, NodeJS, Python or Scala",
+      "Develops expertise in server side engineering, using technologies such as NodeJS or Python",
   },
 
   [TrackId.SOFTWARE_ENGINEERING]: {
