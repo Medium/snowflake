@@ -34,19 +34,19 @@ export default [
   },
   {
     summary:
-      "Improve other’s ability to deliver Thndr’s quality standard of work by defining and introducing conventions",
+      "Improve other’s ability to deliver Plural’s quality standard of work by defining and introducing conventions",
     signals: `
 - Implements systems that enable better testing
 - Implements effective system wide guardrails for better quality, eg. eslint rules
 - Gives thoughtful code reviews as a domain expert
 - Adds tooling to improve code quality
-- Occasionally participates in end-to-end tests of Thndr's systems to identify quality issues
+- Occasionally participates in end-to-end tests of Plural's systems to identify quality issues
 - Regularly identifies technical debt and seeks to eliminate it
 - Writes test cases for detected bugs and issues before resolving them to prevent regression
     `,
   },
   {
-    summary: "Introduces and defines Thndr’s quality standard of work",
+    summary: "Introduces and defines Plural’s quality standard of work",
     signals: `
 - Designs and implements effective organizational processes to mitigate risks in quality- Enables and encourages the entire organization to make quality a central part of the development process- Builds systems so as to eliminate entire classes of programmer error- Defines policies for the engineering org that encourage quality work- Identifies and eliminates single points of failure throughout the organization- Secures time and resources from execs to support great quality
     `,

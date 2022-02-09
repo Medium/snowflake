@@ -2,7 +2,7 @@
   "name": "eng-growth",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "https://github.com/thndrapp/snowflake",
+  "repository": "https://github.com/pluralcom/snowflake",
   "license": "MIT",
   "dependencies": {
     "@types/react-select": "^4.0.17",

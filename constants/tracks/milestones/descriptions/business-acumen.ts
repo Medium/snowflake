@@ -2,8 +2,8 @@ export default [
   {
     summary: "Understands the value the features provide to the team or users",
     signals: `
-- Learns about Thndr business vision plans and culture values
-- Aware of the business unit structure of Thndr and understand the numbers presented in the all hands
+- Learns about Plural business vision plans and culture values
+- Aware of the business unit structure of Plural and understand the numbers presented in the all hands
 - Have an investor account
 - Understand the critical path flows for our app. (e.g. why am I even opening an account )
     `,
@@ -14,7 +14,7 @@ export default [
     signals: `
 - Collaborates with business teams in understanding product requirements
 - Aware of main KPIs
-- Frequently uses Thndr services and provide valuable feedback to improve the customer's experience
+- Frequently uses Plural services and provide valuable feedback to improve the customer's experience
 - Actively helps customers facing issues with the service when applicable, or by directing them to the right stakeholder in the company
 - Understands multiple domain flows across the app.
     `,

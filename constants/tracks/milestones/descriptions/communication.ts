@@ -63,11 +63,11 @@ export default [
 - Communicates project risk and tradeoffs skillfully and with nuance
 - Contextualizes and clarifies ambiguous direction and strategy for others
 - Negotiates resourcing compromises with other teams
-- Communicates effectively often and regularly with stakeholders across Thndr
+- Communicates effectively often and regularly with stakeholders across Plural
 - Communicates effectively external stakeholders
 - Drives alignment across squads, tribes and departments
 - Lead off-site workshop on interviewing
-- Wrote Thndr's growth framework and rationale
+- Wrote Plural's growth framework and rationale
 - Aligned the entire organization around a wide initiative
     `,
   },

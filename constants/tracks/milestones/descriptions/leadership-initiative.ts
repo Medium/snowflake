@@ -62,7 +62,7 @@ export default [
 - Creates a new function to solve systemic issues
 - Galvanizes the entire company and garners buy in for a new strategy
 - Changes complex organizational processes
-- Effectively spots inefficiencies across Thndr and actively seeks solving for them
+- Effectively spots inefficiencies across Plural and actively seeks solving for them
 - Helps others create time outside of their workload to tackle issues and challenges they are facing
 - Spots misalignment early and actively seeks resolving them
     `,
