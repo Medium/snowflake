@@ -1,9 +1,5 @@
 # Snowflake
 
-Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
-about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
-Our growth tool is hosted [publicly](https://snowflake.medium.com).
-
 At Plural we used this tool as a starting point and extended it to align with our career development framework
 
 ## Contributions
