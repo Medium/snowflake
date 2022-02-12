@@ -102,20 +102,20 @@ export const jobs: Job[] = [
     level: 7,
     family: JobFamily.SWE,
     minPoints: levelsToPoints["7.1"],
-    maxPoints: levelsToPoints["8.1"],
+    maxPoints: levelsToPoints["8.3"],
   },
   {
     label: "VP of Engineering",
     level: 7,
     family: JobFamily.SME,
     minPoints: levelsToPoints["7.1"],
-    maxPoints: levelsToPoints["8.1"],
+    maxPoints: levelsToPoints["8.3"],
   },
   {
     label: "CTO",
     level: 7,
     family: JobFamily.SME,
     minPoints: levelsToPoints["7.1"],
-    maxPoints: levelsToPoints["8.1"],
+    maxPoints: levelsToPoints["8.3"],
   },
 ];
