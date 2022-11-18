@@ -73,8 +73,8 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    name: 'Dwight Schrute',
+    title: 'Assistant to the Regional Manager',
     milestoneByTrack: {
       'MOBILE': 1,
       'WEB_CLIENT': 2,
@@ -156,8 +156,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
+          <a href="https://www.datacult.com/" target="_blank">
+            Data Culture
           </a>
         </div>
         <div style={{display: 'flex'}}>
